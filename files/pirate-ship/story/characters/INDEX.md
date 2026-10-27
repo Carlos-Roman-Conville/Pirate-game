@@ -19,7 +19,7 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | estj-f | ESTJ (Te-Si-Ne-Fi) | woman | (open) | quartermaster | | drafted | |
 | esfj-m | ESFJ (Fe-Si-Ne-Ti) | man | (open) | mother of the mess / cook | | drafted | |
 | esfj-f | ESFJ (Fe-Si-Ne-Ti) | woman | (open) | mother of the mess / cook | | drafted | |
-| istp-m | ISTP (Ti-Se-Ni-Fe) | man | (open) | boarder | | drafted | |
+| istp-m | ISTP (Ti-Se-Ni-Fe) | man | (open) | hunter by trade (Rex; replaces boarder) | stoic killer hunting perfection; chases ever bigger, more dangerous prey; the shark scene | idea (Rex) | [istp-m.md](istp-m.md) |
 | istp-f | ISTP (Ti-Se-Ni-Fe) | woman | (open) | boarder | | drafted | |
 | isfp-m | ISFP (Fi-Se-Ni-Te) | man | (open) | figurehead carver / carpenter | | drafted | |
 | isfp-f | ISFP (Fi-Se-Ni-Te) | woman | (open) | figurehead carver / carpenter | | drafted | |

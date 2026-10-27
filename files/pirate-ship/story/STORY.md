@@ -166,3 +166,4 @@ work lives in `../art/`, not here.
 | 2026-10-26 | Central plotline: the port is already dying, fewer pirates come, most think of leaving, some stay; the player helps it thrive again or leads it to ruin | Rex |
 | 2026-10-26 | Crew you take can be the town's toxic people; some you bring back improved. Several routes to a good or perfect ending, some secret | Rex |
 | 2026-10-26 | First character: the ENTP man who keeps leaving; letting him go on his explained departure is a secret route to the perfect ending | Rex |
+| 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |
