@@ -186,5 +186,6 @@ work lives in `../art/`, not here.
 | 2026-10-27 | An ENFJ's alignment map: OG stays, CG→OG, OE stays, CE→OE; character not yet described | Rex |
 | 2026-10-27 | The INTJ apothecary's alignment map: every path leads to orderly evil ("very INTJ"); starting alignment orderly evil | Rex |
 | 2026-10-27 | The INTJ's only path is orderly evil unless you show her that her belief is wrong; then she becomes neutral | Rex |
-| 2026-10-27 | The farm family: the INTP farmer (bodies as fertiliser) and the ESFP cook (cannibal, butcher shop; not a baker) used to be married; their daughter (Pearl-inspired killer) runs the farm with the farmer; their son (skin collector) lives with the cook. Genders of farmer and cook to confirm | Rex |
+| 2026-10-27 | The farm family: the INTP farmer (bodies as fertiliser) and the ESFP cook (cannibal, butcher shop; not a baker) used to be married; their daughter (Pearl-inspired killer) runs the farm with the farmer; their son (skin collector) lives with the cook. | Rex |
+| 2026-10-27 | The INTP farmer is a man and the ESFP cook a woman (files now `intp-m`, `esfp-f`) | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

@@ -60,8 +60,8 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | | open |
-| the ESFP cook (`esfp-m`) | `rel.esfp-m` | his mother; he lives with her and brings skins to her butcher shop; she finds it a bit abhorrent, as you shouldn't play with your food like that | Rex |
-| the INTP farmer (`intp-f`) | `rel.intp-f` | parent | Rex |
+| the ESFP cook (`esfp-f`) | `rel.esfp-f` | his mother; he lives with her and brings skins to her butcher shop; she finds it a bit abhorrent, as you shouldn't play with your food like that | Rex |
+| the INTP farmer (`intp-m`) | `rel.intp-m` | parent | Rex |
 | his sister (`farm-daughter`) | `rel.farm-daughter` | sibling | Rex |
 
 ## Heart events

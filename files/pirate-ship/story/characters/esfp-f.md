@@ -1,9 +1,9 @@
-# The ESFP baker (unnamed; file is `esfp-m.md` until Rex names them, then it becomes `<slug>.md`)
+# The ESFP baker (unnamed; file is `esfp-f.md` until Rex names them, then it becomes `<slug>.md`)
 
 Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is canon. The field keys in backticks
 follow `_TEMPLATE.md`.
 
-- **Slot:** `esfp-m`
+- **Slot:** `esfp-f` (was `esfp-m` until 2026-10-27)
 - **Status:** idea
 - **Last changed:** 2026-10-27
 
@@ -14,7 +14,7 @@ follow `_TEMPLATE.md`.
 | Name | `name` | | open |
 | Type | `type` | ESFP | Rex |
 | Function stack | `stack` | Se-Fi-Te-Ni | Rex |
-| Gender | `gender` | man (first notes) | open: Rex's 2026-10-27 family note calls the farmer "he" and the cook "her", the reverse of his first notes (farmer a woman, baker a man); to confirm |
+| Gender | `gender` | woman (confirmed 2026-10-27; first notes had a man) | Rex |
 | Pirate archetype | `archetype` | | open |
 | Ship job (posts held) | `posts` | not really a baker, more of a general cook; has a butcher shop | Rex |
 | Where they are found | `found_at` | the starting port: the bakery | Rex |
@@ -55,7 +55,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | | open |
-| the INTP farmer (`intp-f`) | `rel.intp-f` | ex-spouse; the farmer found out about the cannibalism | Rex |
+| the INTP farmer (`intp-m`) | `rel.intp-m` | ex-spouse; the farmer found out about the cannibalism | Rex |
 | their son (`farm-son`) | `rel.farm-son` | lives with the cook, collects his victims' skins and enjoys bringing them to the butcher shop; the cook finds it a bit abhorrent: you shouldn't play with your food like that | Rex |
 | their daughter (`farm-daughter`) | `rel.farm-daughter` | lives with the farmer | Rex |
 
@@ -105,3 +105,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Questline responses section added | keeper |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | Not a baker but a general cook with a butcher shop; ex-spouse of the INTP farmer; parent of the son who collects skins; gender to confirm | Rex |
+| 2026-10-27 | Gender confirmed: woman; file moved from `esfp-m.md` to `esfp-f.md` | Rex |

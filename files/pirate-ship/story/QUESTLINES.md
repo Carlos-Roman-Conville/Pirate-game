@@ -51,8 +51,8 @@ suggestion (not canon); blank = open.
 | ISTP hunter (`istp-m`) | | *possible support* | | *possible support* |
 | INTJ apothecary (`intj-f`) | **Rex: moves her to orderly evil** (*possible support*) | **Rex: moves her to orderly evil** | **Rex: stays orderly evil (loop)** (*possible support*) | **Rex: moves her to orderly evil** (*opposes*). **Rex:** all paths lead here unless you show her that her belief is wrong; then she becomes neutral |
 | ISFJ doctor (`isfj-f`) | | | | |
-| ESFP baker (`esfp-m`) | | | | |
-| INTP farmer (`intp-f`) | | | | |
+| ESFP baker (`esfp-f`) | | | | |
+| INTP farmer (`intp-m`) | | | | |
 | ESTP soldier and cook (`estp-m`) | | | | |
 | ENFJ, unnamed (`enfj.md`) | **Rex: stays orderly good (loop)** | **Rex: moves them to orderly good** | **Rex: stays orderly evil (loop)** | **Rex: moves them to orderly evil** |
 | ESTJ, undescribed (`estj.md`) | **Rex: moves them to chaotic evil** | **Rex: moves them to orderly good** | **Rex: moves them to chaotic good** | **Rex: moves them to orderly evil** |

@@ -1,9 +1,9 @@
-# The INTP farmer (unnamed; file is `intp-f.md` until Rex names them, then it becomes `<slug>.md`)
+# The INTP farmer (unnamed; file is `intp-m.md` until Rex names them, then it becomes `<slug>.md`)
 
 Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is canon. The field keys in backticks
 follow `_TEMPLATE.md`.
 
-- **Slot:** `intp-f`
+- **Slot:** `intp-m` (was `intp-f` until 2026-10-27)
 - **Status:** idea
 - **Last changed:** 2026-10-27
 
@@ -14,7 +14,7 @@ follow `_TEMPLATE.md`.
 | Name | `name` | | open |
 | Type | `type` | INTP | Rex |
 | Function stack | `stack` | Ti-Ne-Si-Fe | Rex |
-| Gender | `gender` | woman (first notes) | open: Rex's 2026-10-27 family note calls the farmer "he" and the cook "her", the reverse of his first notes (farmer a woman, baker a man); to confirm |
+| Gender | `gender` | man (confirmed 2026-10-27; first notes had a woman) | Rex |
 | Pirate archetype | `archetype` | | open |
 | Ship job (posts held) | `posts` | farmer: runs the farm in town | Rex |
 | Where they are found | `found_at` | the starting port: the farm | Rex |
@@ -60,7 +60,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | | open |
-| the ESFP cook (`esfp-m`) | `rel.esfp-m` | ex-spouse; the farmer found out about the cannibalism | Rex |
+| the ESFP cook (`esfp-f`) | `rel.esfp-f` | ex-spouse; the farmer found out about the cannibalism | Rex |
 | their daughter (`farm-daughter`) | `rel.farm-daughter` | helps run the farm | Rex |
 | their son (`farm-son`) | `rel.farm-son` | lives with the cook | Rex |
 
@@ -82,7 +82,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Look | `art.look` | based on April Ludgate (Aubrey Plaza's deadpan character in Parks and Recreation); open whether this still applies if the farmer is now a man | Rex |
+| Look | `art.look` | based on April Ludgate (Aubrey Plaza's deadpan character in Parks and Recreation); open whether this still applies now the farmer is a man | Rex |
 | Signature face | `art.signature_face` | the one expression that is theirs | open |
 | Heart-event scenes to illustrate | `art.scenes` | | open |
 
@@ -108,3 +108,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Questline responses section added | keeper |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | Bodies as fertiliser, kills passers-by for it; ex-spouse of the ESFP cook (supersedes the dead spouse); parent of the daughter and son; gender to confirm | Rex |
+| 2026-10-27 | Gender confirmed: man; file moved from `intp-f.md` to `intp-m.md` | Rex |

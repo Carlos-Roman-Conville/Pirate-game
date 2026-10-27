@@ -60,8 +60,8 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | | open |
-| the INTP farmer (`intp-f`) | `rel.intp-f` | parent; she helps run their farm | Rex |
-| the ESFP cook (`esfp-m`) | `rel.esfp-m` | parent | Rex |
+| the INTP farmer (`intp-m`) | `rel.intp-m` | parent; she helps run their farm | Rex |
+| the ESFP cook (`esfp-f`) | `rel.esfp-f` | parent | Rex |
 | her brother (`farm-son`) | `rel.farm-son` | sibling | Rex |
 
 ## Heart events
