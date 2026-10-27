@@ -14,7 +14,7 @@ follow `_TEMPLATE.md`.
 | Name | `name` | | open |
 | Type | `type` | INFP | Rex |
 | Function stack | `stack` | Fi-Ne-Si-Te | Rex |
-| Gender | `gender` | man, a femboy; pronouns open: Rex's notes say "he" once, then "she" and "her" (this file uses "she" for now) | Rex; pronouns open |
+| Gender | `gender` | man, a femboy; doesn't care about pronouns: not partial to "he" or "she", either is fine (this file uses "she") | Rex |
 | Pirate archetype | `archetype` | | open |
 | Ship job (posts held) | `posts` | works at the port's brothel; quite popular | Rex |
 | Where they are found | `found_at` | the starting port: the brothel (the tavern/brothel) | Rex |
@@ -46,7 +46,7 @@ follow `_TEMPLATE.md`.
 - **(Rex)** The backstory is simple for now.
 - **(Rex)** The statues are kept alive (with the INTJ's potions).
 - **(open)** Whether the ENTP and the INTJ know what their work is used for.
-- **(open)** Her pronouns (see Gender).
+- **(Rex)** Either pronoun is fine: she doesn't care, and isn't partial to either.
 
 ## Joining
 
@@ -107,3 +107,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 |---|---|---|
 | 2026-10-27 | Created: the INFP is a femboy | Rex |
 | 2026-10-27 | Backstory: a popular brothel worker who falls for clients and, when they try to leave, turns them into living wax statues kept in her basement; uses the ENTP's device and the INTJ's potions | Rex |
+| 2026-10-27 | Pronouns: doesn't care, either he or she | Rex |

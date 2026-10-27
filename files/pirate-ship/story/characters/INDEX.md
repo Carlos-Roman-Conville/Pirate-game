@@ -37,7 +37,7 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | enfj-f | ENFJ (Fe-Ni-Se-Ti) | woman | (open) | shantyman / recruiter | | drafted | |
 | intp-m | INTP (Ti-Ne-Si-Fe) | man | (open) | farmer (Rex) | fertilises the crops with bodies, kills passers-by for it; ex-spouse of the ESFP cook; April Ludgate (to confirm) | idea (Rex) | [intp-m.md](intp-m.md) |
 | intp-f | INTP (Ti-Ne-Si-Fe) | woman | (open) | powder master | | drafted | |
-| infp-m | INFP (Fi-Ne-Si-Te) | man | (open) | brothel worker (Rex) | a femboy; popular at the brothel; turns clients who try to leave into living wax statues in her basement (ENTP's device, INTJ's potions); pronouns open | idea (Rex) | [infp-m.md](infp-m.md) |
+| infp-m | INFP (Fi-Ne-Si-Te) | man | (open) | brothel worker (Rex) | a femboy; popular at the brothel; turns clients who try to leave into living wax statues in her basement (ENTP's device, INTJ's potions); either pronoun, doesn't care | idea (Rex) | [infp-m.md](infp-m.md) |
 | infp-f | INFP (Fi-Ne-Si-Te) | woman | (open) | captive who stayed / keeps the log | | drafted | |
 | entp-m | ENTP (Ne-Ti-Fe-Si) | man | (open) | device builder / mechanic; town weaponsmith at the shipyard (Rex) | builds killing devices for the boat and, when focused, torture devices; keeps leaving and you keep winning him back; letting him go once is a secret route to the perfect ending | idea (Rex) | [entp-m.md](entp-m.md) |
 | entp-f | ENTP (Ne-Ti-Fe-Si) | woman | (open) | card sharp / runs the den | | drafted | |
