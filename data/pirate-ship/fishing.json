@@ -49,14 +49,18 @@
     "notes": "Cone aim; higher fishing skill narrows cone and slows the line.",
     "baseConeDegrees": 45,
     "coneShrinkPerFishingSkill": 0.15,
+    "minConeHalfDegrees": 4,
     "baseLineSpeed": 1,
     "lineSlowPerFishingSkill": 0.008,
-    "lineSlowPerDexterity": 0.02
+    "lineSlowPerDexterity": 0.02,
+    "minLineSpeed": 0.12
   },
   "power": {
     "notes": "Cast power meter; strength sets how far you can throw at all.",
     "meterPeriodMs": 2000,
-    "strengthDistanceFactor": 0.12
+    "baseMaxThrowTiles": 6,
+    "strengthDistanceFactor": 0.12,
+    "distancePerPowerError": 10
   },
   "lure": {
     "notes": "Rhythm lure; patience dampens line motion in unit 5.",
