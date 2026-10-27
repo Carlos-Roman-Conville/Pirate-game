@@ -47,7 +47,7 @@ suggestion (not canon); blank = open.
 | Character | Orderly good | Chaotic good (pirate) | Orderly evil (Cthulhu) | Chaotic evil (devil) |
 |---|---|---|---|---|
 | ISTJ priest (`istj-m`) | *supports* | **Rex: no effect** (*neutral*) | **Rex: does nothing to his or anyone's alignment** (*opposes*) | **Rex: can't be corrupted; fights evil harder, moves the town toward good** (*strongly opposes*) |
-| ENTP mechanic (`entp-m`) | **Rex: moves him to chaotic good** (*neutral*) | **Rex: moves him to orderly evil** (*possible support*) | **Rex: moves him to orderly good** (*neutral*) | **Rex: he stays chaotic evil (the loop)**; **Rex: guaranteed; on return he makes something that helps turn the town chaotic evil** (*supports*). **Open:** whether it stays guaranteed or now depends on what he witnesses you do there |
+| ENTP mechanic (`entp-m`) | **Rex: moves him to chaotic good** (*neutral*) | **Rex: moves him to orderly evil** (*possible support*) | **Rex: moves him to orderly good** (*neutral*) | **Rex: his natural alignment; chaotic evil acts only reinforce him (the loop)**; **Rex: guaranteed; on return he makes something that helps turn the town chaotic evil** (*supports*). **Open:** whether it stays guaranteed or now depends on what he witnesses you do there |
 | ISTP hunter (`istp-m`) | | *possible support* | | *possible support* |
 | INTJ apothecary (`intj-f`) | *possible support* | | *possible support* | *opposes* |
 | ISFJ doctor (`isfj-f`) | | | | |

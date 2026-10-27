@@ -153,8 +153,8 @@ What the path you push him on does to his alignment (QUESTLINES.md, model point 
 For the code (`inner_rules`, action → destination):
 `{ "order_good": "chaos_good", "chaos_good": "order_evil", "order_evil": "order_good", "chaos_evil": "chaos_evil" }`
 
-- **(open)** Which alignment he wants. By rule 4 the loop marks it (being egged toward the one you want moves you
-  that way), so chaotic evil, which fits his guaranteed chaotic-evil result; Rex to confirm.
+- **(Rex, 2026-10-27)** Chaotic evil is his natural alignment. Doing chaotic evil things only reinforces his
+  behaviour (the loop).
 
 ## Change log
 
@@ -166,3 +166,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Questline responses section added (Rex's rules recorded) | keeper |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | Inner rules: his alignment map (OG→CG, CG→OE, OE→OG, CE stays) | Rex |
+| 2026-10-27 | Natural alignment: chaotic evil; chaotic evil acts only reinforce him | Rex |

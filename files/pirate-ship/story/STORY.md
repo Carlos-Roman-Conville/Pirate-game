@@ -181,4 +181,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The pirate questline is chaotic good; the priest has no effect on it | Rex |
 | 2026-10-27 | Questing model: all four paths open; conduct earns points; witnessing crew shift by inner rules. Supersedes "who you take decides" | Rex |
 | 2026-10-27 | The ENTP's alignment map: OG→CG, CG→OE, OE→OG, CE stays; per-character inner rules hold alongside points and witnessing | Rex |
+| 2026-10-27 | The ENTP's natural alignment is chaotic evil; chaotic evil acts only reinforce him | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |
