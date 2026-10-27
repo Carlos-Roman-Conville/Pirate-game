@@ -106,7 +106,11 @@ work lives in `../art/`, not here.
 
 ## Main arcs
 
-- **(open)** The main plot. Nothing is decided beyond the early game's ship-tending.
+- **(Rex, 2026-10-26) The central plotline: the starting port is dying.** It is already dying when you arrive.
+  Fewer and fewer pirates come through; everyone is thinking of abandoning it; some stay despite it.
+- **(Rex)** Your effect on it is either helping it thrive again or leading it to ruin.
+- **(open)** Why it is dying (the rival port below is one proposed cause), and what thriving or ruin looks like at
+  the end.
 - **(Rex)** Story by conditions: big storylines open when the ship's state allows them (a mutiny needs enough
   resentment, a replacement and a chance of winning), not as scripted branches (§7a, liked by Rex).
 - **(Rex)** Things happen without you: crew start romances, alliances or mutiny plots; a romance may turn out to be
@@ -131,9 +135,10 @@ work lives in `../art/`, not here.
 4. The main plot, and whether there is an antagonist (a navy, a rival crew, the port itself).
 5. Names for all 32 crew, and which of them live in the starting port.
 6. Whether anything from High Roller's world carries over into the story, or only its systems and art.
-7. Is the starting port already dying when the player arrives, or does a new event start threatening it? (Raised
-   by the outside AI, 2026-10-26.)
-8. The ports between the starting port and the rich pirate port at the top.
+7. ~~Is the starting port already dying when the player arrives, or does a new event start threatening it?~~
+   Answered 2026-10-26: already dying (Rex).
+8. Why the port is dying.
+9. The ports between the starting port and the rich pirate port at the top.
 
 ## Decisions log
 
@@ -149,3 +154,4 @@ work lives in `../art/`, not here.
 | 2026-10-26 | Story keeper set up: this folder | keeper |
 | 2026-10-26 | The starting port is a run-down, weathered small pirate haven for lowlifes, kept alive barely by its community and occasional trade; high-calibre pirates are rare (weak women and drink); the last level is a rich true pirate port | Rex |
 | 2026-10-26 | Outside AI's ideas recorded as proposed: the economic loop, reasons residents stay, the rival-port plot, the town's own trajectory, the return | proposed |
+| 2026-10-26 | Central plotline: the port is already dying, fewer pirates come, most think of leaving, some stay; the player helps it thrive again or leads it to ruin | Rex |
