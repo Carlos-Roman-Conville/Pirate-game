@@ -58,6 +58,16 @@ From PIRATE.md and the roster; these are the yardsticks `REVIEWS.md` judges agai
 - Readability: the world sprite must read by **silhouette** at 64×112 (face patch only about 14×12 px); the
   bust must carry the face, and "unhinged" must still be hot.
 
+## 3a. Places: the starting port (from `../story/STORY.md`, commit f7ccbf5)
+
+| Item | Direction | Mark |
+|---|---|---|
+| Starting port | Run down and in shambles, barely held together by passing trade | Rex |
+| Buildings | Houses old and weathered by the sea; **none of the buildings look new** | Rex |
+| Character of the place | A small pirate haven for lowlifes (criminals, ne'er-do-wells, schemers); not a bustling pirate port | Rex |
+| Contrast | The last level is the opposite: a rich, true pirate port. The art should show the climb from one to the other | Rex (the contrast); proposed (showing it as a climb) |
+| Details | Docks barely maintained; buildings repaired so often that nothing matches; salt eating every surface; a harbour of fishing boats and damaged sloops | proposed (outside AI, via the story keeper) |
+
 ## 4. Open (not decided; Rex's call)
 
 | # | Question | Notes |
@@ -79,3 +89,4 @@ From PIRATE.md and the roster; these are the yardsticks `REVIEWS.md` judges agai
 | 2026-10-25 | The combo: world sprites + per-character bust portraits + expression sheets + overpainted heart-event scenes (PIRATE.md §3) | proposed (recommended at Rex's request) |
 | 2026-10-26 | Three-quarter top-down view (the Stardew angle), square tiles, walk facing down, up and side | Rex |
 | 2026-10-26 | Art keeper set up: this file, `CHARACTER_SHEETS.md`, `REVIEWS.md` | — |
+| 2026-10-26 | Starting port look: run down, sea-weathered, nothing new, a lowlife haven; the last level a rich true pirate port (§3a). Outside AI's details recorded as proposed | Rex |
