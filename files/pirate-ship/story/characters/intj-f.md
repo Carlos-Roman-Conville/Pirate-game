@@ -138,6 +138,10 @@ For the code (`inner_rules`, action → destination):
 
 - **(Rex)** "I feel like how I designed the INTJ alignment is very INTJ."
 - **(Rex)** Starting alignment: orderly evil (on his diagram).
+- **(Rex, 2026-10-27) The one way out:** her only path is toward orderly evil, unless you show her that her
+  belief is wrong; then she becomes neutral.
+- **(open)** What shows her she's wrong (her questline's innocent victim is the outside AI's proposal), and what
+  "neutral" means on the square (the centre? a new map?).
 
 **Proposed (outside AI, 2026-10-27; not canon):**
 
@@ -165,3 +169,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | Inner rules: her alignment map, every path leads to orderly evil | Rex |
 | 2026-10-27 | Diagram image saved; starting alignment orderly evil | Rex |
+| 2026-10-27 | Only path is orderly evil unless shown her belief is wrong; then she becomes neutral | Rex |

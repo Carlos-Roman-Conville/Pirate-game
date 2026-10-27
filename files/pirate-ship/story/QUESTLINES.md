@@ -49,7 +49,7 @@ suggestion (not canon); blank = open.
 | ISTJ priest (`istj-m`) | *supports* | **Rex: no effect** (*neutral*) | **Rex: does nothing to his or anyone's alignment** (*opposes*) | **Rex: can't be corrupted; fights evil harder, moves the town toward good** (*strongly opposes*) |
 | ENTP mechanic (`entp-m`) | **Rex: moves him to chaotic good** (*neutral*) | **Rex: moves him to orderly evil** (*possible support*) | **Rex: moves him to orderly good** (*neutral*) | **Rex: his natural alignment; chaotic evil acts only reinforce him (the loop)**; **Rex: guaranteed; on return he makes something that helps turn the town chaotic evil** (*supports*). **Open:** whether it stays guaranteed or now depends on what he witnesses you do there |
 | ISTP hunter (`istp-m`) | | *possible support* | | *possible support* |
-| INTJ apothecary (`intj-f`) | **Rex: moves her to orderly evil** (*possible support*) | **Rex: moves her to orderly evil** | **Rex: stays orderly evil (loop)** (*possible support*) | **Rex: moves her to orderly evil** (*opposes*) |
+| INTJ apothecary (`intj-f`) | **Rex: moves her to orderly evil** (*possible support*) | **Rex: moves her to orderly evil** | **Rex: stays orderly evil (loop)** (*possible support*) | **Rex: moves her to orderly evil** (*opposes*). **Rex:** all paths lead here unless you show her that her belief is wrong; then she becomes neutral |
 | ISFJ doctor (`isfj-f`) | | | | |
 | ESFP baker (`esfp-m`) | | | | |
 | INTP farmer (`intp-f`) | | | | |
@@ -78,6 +78,7 @@ suggestion (not canon); blank = open.
 | 2026-10-27 | Created: questline responses as "who you take on each questline is how the game plays out"; matrix of take-them-on effects | Rex |
 | 2026-10-27 | Chaotic good is the stereotypical pirate town; the pirate questline is chaotic good, the priest has no effect on it | Rex |
 | 2026-10-27 | The INTJ's alignment map: every path leads to orderly evil | Rex |
+| 2026-10-27 | The INTJ's one way out: shown her belief is wrong, she becomes neutral | Rex |
 | 2026-10-27 | The ENFJ's alignment map (character not yet described) | Rex |
 | 2026-10-27 | The ESTJ's alignment map (character not yet described) | Rex |
 | 2026-10-27 | The ENTP's alignment map (inner rules); open A answered: per-character rules hold | Rex |
