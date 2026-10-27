@@ -155,3 +155,4 @@ they are in town.
 | 2026-10-27 | The old ESTP soldier is the secret cook; the herbalist is the daughter of the apothecary's previous owner (via the story keeper) | Rex |
 | 2026-10-27 | Town alignment replaces game-over abandonment: residents' alignments move the town on good/evil × order/chaos; four quadrant endings plus neutral; 3 residents per quadrant (`ENDINGS.md`) | Rex |
 | 2026-10-27 | Questing model: all four questlines open to the player; actions carry alignment points; witnessing crew and staying residents move the town (`ENDINGS.md`) | Rex |
+| 2026-10-27 | Neutral ending is a ghost town; residents may move on and, depending on your actions, reappear in the DLC (`ENDINGS.md`) | Rex |

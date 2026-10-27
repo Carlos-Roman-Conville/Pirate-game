@@ -73,12 +73,17 @@ keeper's: [`../story/QUESTLINES.md`](../story/QUESTLINES.md).
 | Chaotic good | `cg` | your stereotypical pirate town | Free Haven | Rex (what it becomes) |
 | Orderly evil | `oe` | corrupted by Cthulhu | Drowned Covenant | Rex (what it becomes) |
 | Chaotic evil | `ce` | residents become more killer-like and start worshipping devil magic | Devil's Anchorage | Rex (what it becomes) |
-| Neutral (centre) | `n` | stays as it is; the epilogue tells of it being abandoned | | Rex |
+| Neutral (centre) | `n` | a ghost town: the inhabitants are replaced with ghostly visions or shades (2026-10-27; was "stays as it is, the epilogue tells of it being abandoned") | | Rex |
 
 Ids `og`, `cg`, `oe`, `ce`, `n` are the keeper's, for the game to check.
 
-**(open, Rex's alternative)** Make the neutral ending a **ghost ending**: everyone replaced with ghosts, instead of
-plain abandonment.
+**(Rex, 2026-10-27) Neutral is a ghost town.** The literal inhabitants might be replaced with ghostly visions or
+shades. The people themselves might move on and go somewhere else. Depending on certain actions you took, they may
+appear in the DLC as specific characters; they also might not.
+
+- **(open)** Which actions decide whether a resident reappears in the DLC, and which residents can.
+- **(open)** Whether every resident becomes a shade, or only some (the rest having moved on).
+- **(open)** What the DLC is.
 
 ### Proposed by the outside AI (not Rex's until he says so)
 
@@ -102,7 +107,7 @@ plain abandonment.
    the quadrant, from single choices, or both.
 2. ~~Chaotic good's identity.~~ Answered 2026-10-27: your stereotypical pirate town (Rex). His "pirate questline" is
    this quadrant's plotline; the priest has no effect on it (Rex, 2026-10-27; `../story/QUESTLINES.md`).
-3. Ghost ending vs plain abandonment for neutral.
+3. ~~Ghost ending vs plain abandonment for neutral.~~ Answered 2026-10-27: a ghost town (Rex).
 4. Which 3 residents sit in each quadrant (`TOWNS.md`, Alignment).
 5. The neutral radius, and how far each choice, quest answer and resident moves the town.
 
@@ -117,7 +122,7 @@ plain abandonment.
 | `end.cg` | quadrant | open | town ends in chaotic good: a stereotypical pirate town | Rex |
 | `end.oe` | quadrant | open | town ends in orderly evil | Rex |
 | `end.ce` | quadrant | open | town ends in chaotic evil | Rex |
-| `end.n` | neutral | no | town ends within the neutral radius of the centre | Rex |
+| `end.n` | neutral | no | town ends within the neutral radius of the centre: a ghost town | Rex |
 
 How `end.perfect`, `end.good` and `end.ruin` relate to the five alignment endings is open (The town's alignment,
 Open 1).
@@ -154,3 +159,4 @@ changes how routes are built.
 | 2026-10-27 | Chaotic good is your stereotypical pirate town (via the story keeper) | Rex |
 | 2026-10-27 | The pirate questline is chaotic good's plotline; the priest has no effect on it (via the story keeper) | Rex |
 | 2026-10-27 | Questing model: all four questlines available, conduct and actions carry alignment points, witnessing crew move, town moves through residents who stay; "one plotline per quadrant, who you take decides" superseded; open A and B recorded | Rex |
+| 2026-10-27 | Neutral is a ghost town: inhabitants replaced by ghostly visions or shades; the people may move on, and depending on your actions may appear in the DLC as specific characters, or not | Rex |
