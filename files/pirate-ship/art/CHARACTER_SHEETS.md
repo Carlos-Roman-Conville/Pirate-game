@@ -7,3 +7,4 @@ unless he asks. Direction: `ART_DIRECTION.md`.
 
 | Character (id) | Type / archetype | Story doc | World sprite | Bust model | Expression sheet (7 + signature) | Heart-event scenes | Files | Last review |
 |---|---|---|---|---|---|---|---|---|
+| `intj-f` (unnamed) | INTJ / herbalist, apothecary owner | `../story/characters/intj-f.md` | — | — | — | — | concept art: 4 images shared in chat, source path not given | 2026-10-27 (design concepts) |
