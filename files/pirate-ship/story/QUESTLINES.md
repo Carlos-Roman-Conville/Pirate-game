@@ -18,7 +18,7 @@ Cells: **Rex** = his decision; *proposed* = the outside AI's suggestion (not can
 
 | Character | Orderly good (church-like) | Chaotic good (the stereotypical pirate town) | Orderly evil (Cthulhu) | Chaotic evil (killers, devil worship) |
 |---|---|---|---|---|
-| ISTJ priest (`istj-m`) | *supports* | *neutral* | **Rex: does nothing to his or anyone's alignment** (*opposes*) | **Rex: can't be corrupted; fights evil harder, moves the town toward good** (*strongly opposes*) |
+| ISTJ priest (`istj-m`) | *supports* | **Rex: no effect** (*neutral*) | **Rex: does nothing to his or anyone's alignment** (*opposes*) | **Rex: can't be corrupted; fights evil harder, moves the town toward good** (*strongly opposes*) |
 | ENTP mechanic (`entp-m`) | *neutral* | *possible support* | *neutral* | **Rex: guaranteed; on return he makes something that helps turn the town chaotic evil** (*supports*) |
 | ISTP hunter (`istp-m`) | | *possible support* | | *possible support* |
 | INTJ apothecary (`intj-f`) | *possible support* | | *possible support* | *opposes* |
@@ -28,9 +28,7 @@ Cells: **Rex** = his decision; *proposed* = the outside AI's suggestion (not can
 | ESTP soldier and cook (`estp-m`) | | | | |
 
 - **(Rex, 2026-10-27)** Chaotic good can be your stereotypical pirate town.
-- **(Rex)** The priest on the "pirate" questline: does nothing to his alignment or anyone else's. **(open, to
-  confirm)** That "pirate" means chaotic good, now that chaotic good is the pirate town; if so, his chaotic-good
-  cell is Rex's "no effect".
+- **(Rex, 2026-10-27)** The pirate questline is chaotic good. The priest has no effect on it.
 
 ## Proposed (outside AI, 2026-10-27; not canon)
 

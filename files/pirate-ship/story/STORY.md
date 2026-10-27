@@ -175,4 +175,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The old ESTP soldier is the secret cook | Rex |
 | 2026-10-27 | Questline responses: the priest can't be corrupted (devil questline pushes the town good; Cthulhu and "pirate" do nothing); the ENTP on chaotic evil guarantees a device that turns the town chaotic evil | Rex |
 | 2026-10-27 | Chaotic good can be the stereotypical pirate town | Rex |
+| 2026-10-27 | The pirate questline is chaotic good; the priest has no effect on it | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

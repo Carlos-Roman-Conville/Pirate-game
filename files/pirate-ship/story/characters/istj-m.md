@@ -90,11 +90,11 @@ matrix: `../QUESTLINES.md`). Rex's rule: a character's nature isn't corrupted by
 | Questline | Key | Response (supports / neutral / opposes, and what happens) | Mark |
 |---|---|---|---|
 | Orderly good (church-like) | `quest.order_good` |  | open (proposed: supports) |
-| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` |  | open (proposed: neutral) |
+| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | no effect: does nothing to his alignment or anyone else's; outside AI proposed: neutral | Rex |
 | Orderly evil (Cthulhu corruption) | `quest.order_evil` | does nothing to his alignment or anyone else's; outside AI proposed: opposes | Rex |
 | Chaotic evil (killers, devil worship) | `quest.chaos_evil` | he cannot be corrupted: he becomes more fervently against evil and pushes back, moving the town toward good; outside AI proposed: strongly opposes | Rex |
 
-- **(Rex)** Taken on the "pirate" questline: does nothing to his alignment or anyone else's. Which quadrant "pirate" means is **open**; probably chaotic good, now the pirate town (Rex, 2026-10-27), to confirm.
+- **(Rex, 2026-10-27)** The pirate questline is chaotic good; taking him on it does nothing to his alignment or anyone else's.
 
 ## Change log
 
@@ -102,3 +102,4 @@ matrix: `../QUESTLINES.md`). Rex's rule: a character's nature isn't corrupted by
 |---|---|---|
 | 2026-10-27 | Created: head priest of the church; despises the town; cruel by the letter of the rules | Rex |
 | 2026-10-27 | Questline responses section added (Rex's rules recorded) | keeper |
+| 2026-10-27 | Chaotic good (the pirate questline): no effect | Rex |
