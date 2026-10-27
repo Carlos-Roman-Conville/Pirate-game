@@ -47,7 +47,7 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 | Field | Key | Value | Mark |
 |---|---|---|---|
 | How recruited | `recruit` | he constantly leaves your crew; you go back into town, find him and convince him to join again, again and again | Rex |
-| What the town thinks of them | `town_view` | | open |
+| What the town thinks of them | `town_view` | many townspeople use both him and the INTJ for various things; people who use both often have to lie to each: when he brings up an interaction he had with the INTJ, the villager just agrees and goes along with it (and the same with her) | Rex |
 
 ### His arc (Rex, 2026-10-26)
 
@@ -84,6 +84,7 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | you are the one who keeps going back for him | Rex |
+| the INTJ apothecary (`intj-f`) | `rel.intj-f` | contempt, both ways: each believes the other is a hack. She thinks his work is overly crude; he thinks her occultism makes her a hack | Rex |
 | the INFP femboy (`infp-m`) | `rel.infp-m` | built the device the INFP uses to dip clients in hot wax | Rex (idea he likes) |
 | the town | `rel.town` | key to an improvement that leads to the perfect ending, if you let him go (see `../../town/UPGRADES.md`) | Rex |
 
@@ -169,3 +170,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Inner rules: his alignment map (OG→CG, CG→OE, OE→OG, CE stays) | Rex |
 | 2026-10-27 | Natural alignment: chaotic evil; chaotic evil acts only reinforce him | Rex |
 | 2026-10-27 | Tie: the INFP uses a device he built for the waxing | Rex |
+| 2026-10-27 | Tie: mutual contempt with the INTJ (each thinks the other a hack); townspeople who use both lie to each | Rex |

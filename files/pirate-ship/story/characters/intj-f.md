@@ -16,7 +16,7 @@ follow `_TEMPLATE.md`.
 | Function stack | `stack` | Ni-Te-Fi-Se | Rex |
 | Gender | `gender` | woman | Rex |
 | Pirate archetype | `archetype` | herbalist | Rex |
-| Ship job (posts held) | `posts` | herbalist; owns the apothecary in town, concocting potions, tinctures and such | Rex |
+| Ship job (posts held) | `posts` | herbalist; owns the apothecary in town, concocting potions, tinctures and such; she uses occultism in her craft (Rex, 2026-10-27) | Rex |
 | Where they are found | `found_at` | the starting port: the apothecary | Rex |
 | Resident or visitor | `town_role` | resident | Rex |
 
@@ -54,7 +54,7 @@ follow `_TEMPLATE.md`.
 | Field | Key | Value | Mark |
 |---|---|---|---|
 | How recruited | `recruit` | her questline (below) | Rex |
-| What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
+| What the town thinks of them | `town_view` | many townspeople use both her and the ENTP for various things; people who use both often have to lie to each: when she brings up an interaction she had with the ENTP, the villager just agrees and goes along with it (and the same with him) | Rex |
 
 ## Relationships
 
@@ -63,6 +63,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | | open |
+| the ENTP mechanic (`entp-m`) | `rel.entp-m` | contempt, both ways: each believes the other is a hack. He thinks her occultism makes her a hack; she thinks his work is overly crude | Rex |
 | the INFP femboy (`infp-m`) | `rel.infp-m` | made the potions the INFP uses to keep the wax statues alive | Rex (idea he likes) |
 
 ## Heart events
@@ -172,3 +173,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Diagram image saved; starting alignment orderly evil | Rex |
 | 2026-10-27 | Only path is orderly evil unless shown her belief is wrong; then she becomes neutral | Rex |
 | 2026-10-27 | Tie: her potions keep the INFP's wax statues alive | Rex |
+| 2026-10-27 | Uses occultism in her craft; tie: mutual contempt with the ENTP (each thinks the other a hack); townspeople who use both lie to each | Rex |
