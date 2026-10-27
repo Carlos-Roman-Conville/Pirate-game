@@ -24,7 +24,7 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | isfp-m | ISFP (Fi-Se-Ni-Te) | man | (open) | figurehead carver / carpenter | | drafted | |
 | isfp-f | ISFP (Fi-Se-Ni-Te) | woman | (open) | figurehead carver / carpenter | | drafted | |
 | estp-m | ESTP (Se-Ti-Fe-Ni) | man | (open) | gunner | | drafted | |
-| estp-f | ESTP (Se-Ti-Fe-Ni) | woman | (open) | veteran outdoorsman, wilderness generalist (Rex) | brutish, butch woman; gathers wood, stone, herbs, food; lives isolated in a hut away from town, rarely seen; old, very strong, a killer; open whether the locked house, fort walks and secret cook still hold | idea (Rex) | [estp-f.md](estp-f.md) |
+| estp-f | ESTP (Se-Ti-Fe-Ni) | woman | (open) | veteran outdoorsman, wilderness generalist (Rex) | brutish, butch woman; gathers wood, stone, herbs, food; lives isolated in a hut away from town, goes into the forest, rarely seen; only reliably found at the fort on a certain day; old, very strong, a killer; open whether the locked house and secret cook still hold | idea (Rex) | [estp-f.md](estp-f.md) |
 | esfp-m | ESFP (Se-Fi-Te-Ni) | man | (open) | castaway / topman | | drafted | |
 | esfp-f | ESFP (Se-Fi-Te-Ni) | woman | (open) | general cook with a butcher shop (Rex) | jolly; secretly a cannibal, humans in the food; ex-spouse of the INTP farmer | idea (Rex) | [esfp-f.md](esfp-f.md) |
 | intj-m | INTJ (Ni-Te-Fi-Se) | man | (open) | navigator | | drafted | |
