@@ -120,8 +120,11 @@ work lives in `../art/`, not here.
   the end.
 - **Endings and how the town changes:** kept by the town keeper in `../town/ENDINGS.md` and `../town/UPGRADES.md`
   (Digimon World 1-style upgrade slots whose combinations make the endings), not here.
-- **(Rex, 2026-10-27) Who you take on each of the four questlines is how the game plays out**; a character's nature
-  isn't corrupted by the quest. How each character responds: `QUESTLINES.md`.
+- **(Rex, 2026-10-27) The questing model:** all four questlines are open to you; how you handle each path earns
+  points, and crew who witness it shift alignment by their own inner rules. Details and each character's reactions:
+  `QUESTLINES.md`.
+- ~~**(Rex)** Who you take on each of the four questlines is how the game plays out.~~ Superseded 2026-10-27 by the
+  questing model above.
 - **(Rex)** Story by conditions: big storylines open when the ship's state allows them (a mutiny needs enough
   resentment, a replacement and a chance of winning), not as scripted branches (§7a, liked by Rex).
 - **(Rex)** Things happen without you: crew start romances, alliances or mutiny plots; a romance may turn out to be
@@ -176,4 +179,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | Questline responses: the priest can't be corrupted (devil questline pushes the town good; Cthulhu and "pirate" do nothing); the ENTP on chaotic evil guarantees a device that turns the town chaotic evil | Rex |
 | 2026-10-27 | Chaotic good can be the stereotypical pirate town | Rex |
 | 2026-10-27 | The pirate questline is chaotic good; the priest has no effect on it | Rex |
+| 2026-10-27 | Questing model: all four paths open; conduct earns points; witnessing crew shift by inner rules. Supersedes "who you take decides" | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

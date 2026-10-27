@@ -110,15 +110,17 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 
 ## Questline responses
 
-How taking them on each of the town's four questlines moves the town (system: `../../town/ENDINGS.md`;
-matrix: `../QUESTLINES.md`). Rex's rule: a character's nature isn't corrupted by the quest they go on.
+How they react to what they witness you do on each of the four questlines (model and matrix:
+`../QUESTLINES.md`; town system: `../../town/ENDINGS.md`; personality shifts: `../../STATS.md` §3). Rex,
+2026-10-27: conduct on each path decides alignment, and crew who witness it move by their own inner rules.
+Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
-| Questline | Key | Response (supports / neutral / opposes, and what happens) | Mark |
+| Questline | Key | Reaction to what they witness you do there | Mark |
 |---|---|---|---|
 | Orderly good (church-like) | `quest.order_good` |  | open (proposed: neutral) |
 | Chaotic good (the stereotypical pirate town) | `quest.chaos_good` |  | open (proposed: possible support) |
 | Orderly evil (Cthulhu corruption) | `quest.order_evil` |  | open (proposed: neutral) |
-| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | guaranteed: when he returns he makes something that helps transform the town toward chaotic evil; outside AI proposed: supports | Rex |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | guaranteed: when he returns he makes something that helps transform the town toward chaotic evil; outside AI proposed: supports | Rex; open: whether it stays guaranteed or now depends on what he witnesses you do there |
 
 ## Change log
 
@@ -128,3 +130,4 @@ matrix: `../QUESTLINES.md`). Rex's rule: a character's nature isn't corrupted by
 | 2026-10-27 | Lives at the shipyard; the town's weaponsmith | Rex |
 | 2026-10-26 | Defining trait: builds devices; the ship's mechanic (killing devices for the boat), his focused work is torture devices | Rex |
 | 2026-10-27 | Questline responses section added (Rex's rules recorded) | keeper |
+| 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |

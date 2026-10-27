@@ -88,10 +88,12 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 ## Questline responses
 
-How taking them on each of the town's four questlines moves the town (system: `../../town/ENDINGS.md`;
-matrix: `../QUESTLINES.md`). Rex's rule: a character's nature isn't corrupted by the quest they go on.
+How they react to what they witness you do on each of the four questlines (model and matrix:
+`../QUESTLINES.md`; town system: `../../town/ENDINGS.md`; personality shifts: `../../STATS.md` §3). Rex,
+2026-10-27: conduct on each path decides alignment, and crew who witness it move by their own inner rules.
+Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
-| Questline | Key | Response (supports / neutral / opposes, and what happens) | Mark |
+| Questline | Key | Reaction to what they witness you do there | Mark |
 |---|---|---|---|
 | Orderly good (church-like) | `quest.order_good` |  | open (proposed: possible support) |
 | Chaotic good (the stereotypical pirate town) | `quest.chaos_good` |  | open |
@@ -107,3 +109,4 @@ matrix: `../QUESTLINES.md`). Rex's rule: a character's nature isn't corrupted by
 | 2026-10-27 | Created: the herbalist who tests her potions on people she judges evil | Rex |
 | 2026-10-27 | Daughter of the apothecary's previous owner | Rex |
 | 2026-10-27 | Questline responses section added | keeper |
+| 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
