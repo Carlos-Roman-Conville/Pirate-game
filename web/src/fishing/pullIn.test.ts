@@ -26,11 +26,6 @@ describe('pull-in HUD glossary terms', () => {
     expect(PULL_IN_HUD_TERM.lineIntegrity).toBe(glossaryEn('integrity'))
     expect(PULL_IN_HUD_TERM.landingPoint).toBe(glossaryEn('progressToLand'))
   })
-
-  it('does not invent alternate English names for the new pull-in bars', () => {
-    expect(PULL_IN_HUD_TERM.lineIntegrity).not.toBe('line strength')
-    expect(PULL_IN_HUD_TERM.landingPoint).not.toBe('reel progress')
-  })
 })
 
 function configWithBreakTension(threshold: number): FishingConfig {

@@ -98,6 +98,7 @@ export class DockScene extends Phaser.Scene {
   private castMeterGfx: Phaser.GameObjects.Graphics | null = null
   private catchGfx: Phaser.GameObjects.Graphics | null = null
   private catchHudGfx: Phaser.GameObjects.Graphics | null = null
+  private pullInLabels: Phaser.GameObjects.Text[] = []
 
   constructor() { super('dock') }
 
@@ -374,6 +375,7 @@ export class DockScene extends Phaser.Scene {
     if (!this.catchView || !catchViewShowsBobber(run)) {
       this.catchGfx?.clear()
       this.catchHudGfx?.clear()
+      this.destroyPullInLabels()
       return
     }
     const now = this.time.now
@@ -396,6 +398,8 @@ export class DockScene extends Phaser.Scene {
       g.lineStyle(1, 0xa8d8f0, 0.5)
       g.strokeCircle(bob.x, bob.y, 8)
     }
+
+    if (run.stage !== 'pullIn') this.destroyPullInLabels()
 
     if (run.stage === 'lure') {
       const meter = catchViewRhythmMeter(this.catchView, this.fishingConfig)
@@ -449,10 +453,26 @@ export class DockScene extends Phaser.Scene {
       hud.fillRect(bx, by + 26, w, 6)
       hud.fillStyle(0xffe066, 0.9)
       hud.fillRect(bx + 1, by + 27, (w - 2) * t.progress, 4)
+      if (this.pullInLabels.length === 0) {
+        const style = { fontSize: '9px', color: '#e8f4ff' }
+        const mk = (text: string, y: number) =>
+          this.add.text(bx - 6, y, text, style).setOrigin(1, 0.5).setScrollFactor(0).setDepth(103)
+        this.pullInLabels = [
+          mk(t.lineTensionLabel, by + h / 2),
+          mk(t.lineIntegrityLabel, by + 19),
+          mk(t.landingPointLabel, by + 29),
+        ]
+      }
     }
   }
 
+  private destroyPullInLabels() {
+    for (const l of this.pullInLabels) l.destroy()
+    this.pullInLabels = []
+  }
+
   private clearCatchOverlay() {
+    this.destroyPullInLabels()
     this.catchGfx?.destroy()
     this.catchGfx = null
     this.catchHudGfx?.destroy()
