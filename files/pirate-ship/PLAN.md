@@ -30,8 +30,8 @@ PIRATE.md v0.1, FISHING.md, STATS.md, DUTIES.md, ROSTER.md. Open decisions in PI
 | 6 | Stage 6, the bite (FISHING.md's five beats): the bobber waits on the waves; nibbles twitch it (a strike on a nibble is a miss); the bite submerges it with a splash and a sound; a press inside the reaction window (from Reflexes) sets the hook and hands to stage 7, outside it the fish is gone; nibble timing, bite timing and the window all in `fishing.json` | composer | 5 | vitest: a press on a nibble misses, inside the window hooks, late loses the fish | done (2455) |
 | 7 | Stage 7, pulling it in: line tension; pulling too hard weakens the line; Strength, Dexterity, Calm, Patience and Endurance per FISHING.md; every threshold in `fishing.json` so Rex can make it fair | composer | 6 | vitest: the line breaks only past the data threshold | done (2456) |
 | 8 | The result and the loop: caught or got away, a short result panel, back to walking the dock (no selling or inventory yet) | composer | 7 | vitest on the loop; four checks | done (2457) |
-| 9 | Fishing screen, cast: aim target, direction cone, power meter, landing drawn in DockScene | composer | 8 | four checks | queued (2460) |
-| 10 | Fishing screen, lure, bite, pull in and result: rhythm pick/play, bobber beats with splash and tone, tension, result panel | composer | 9 | four checks | queued (2461) |
+| 9 | Fishing screen, cast: aim target, direction cone, power meter, landing drawn in DockScene | composer | 8 | four checks | done (2460) |
+| 10 | Fishing screen, lure, bite, pull in and result: rhythm pick/play, bobber beats with splash and tone, tension, result panel | composer | 9 | four checks | done (2461 lure and bite on screen; 2462 fixed the build; 2463 pull-in as several pulls) |
 | **Gate** | Rex plays the dock and the fishing loop in the browser; a desktop Sonnet session runs the smoke check (the belt can't open a browser) | | | | gate |
 
 ## Later phases (not planned yet)

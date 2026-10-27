@@ -5,8 +5,9 @@ import {
   lineSnapsAtTension,
   lineTensionAtPull,
   pullInTuning,
+  pullIntensityAtHold,
 } from './pullIn'
-import { loadFishingConfig, playerStatsFromConfig, type FishingConfig } from './machine'
+import { loadFishingConfig, playerStatsFromConfig, type FisherStats, type FishingConfig } from './machine'
 
 const config = loadFishingConfig()
 const stats = playerStatsFromConfig(config)
@@ -59,5 +60,72 @@ describe('pull-in line tension', () => {
     const step = applyPullStep(initialPullInLineState(config), 0.4, stats, config)
     expect(step.snapped).toBe(false)
     expect(step.state.integrity).toBeGreaterThan(0)
+  })
+})
+
+function withStrength(strength: number): FisherStats {
+  return { ...stats, attributes: { ...stats.attributes, strength } }
+}
+
+function pullsToLand(who: FisherStats, intensity: number): number {
+  let state = initialPullInLineState(config)
+  for (let n = 1; n <= 100; n++) {
+    const step = applyPullStep(state, intensity, who, config)
+    if (step.snapped) return Infinity
+    if (step.landed) return n
+    state = step.state
+  }
+  return Infinity
+}
+
+describe('pull-in several pulls', () => {
+  it('grows intensity with hold time up to the data cap', () => {
+    const t = pullInTuning(config)
+    expect(pullIntensityAtHold(0, config)).toBe(0)
+    expect(pullIntensityAtHold(t.holdMsToMaxIntensity / 2, config)).toBeCloseTo(t.maxPullIntensity / 2)
+    expect(pullIntensityAtHold(t.holdMsToMaxIntensity * 5, config)).toBe(t.maxPullIntensity)
+  })
+
+  it('a hard pull weakens the line and a gentle one does not', () => {
+    const t = pullInTuning(config)
+    let hard = 0
+    for (let i = 0.5; i <= 1; i += 0.01) {
+      const tension = lineTensionAtPull(i, stats, config)
+      if (tension > t.weakenTensionThreshold && tension <= t.lineBreakTension) {
+        hard = i
+        break
+      }
+    }
+    expect(hard).toBeGreaterThan(0)
+    const weak = applyPullStep(initialPullInLineState(config), hard, stats, config)
+    expect(weak.weakened).toBe(true)
+    expect(weak.snapped).toBe(false)
+    expect(weak.state.integrity).toBeLessThan(t.lineStrengthMax)
+    const gentle = applyPullStep(initialPullInLineState(config), 0.35, stats, config)
+    expect(gentle.weakened).toBe(false)
+    expect(gentle.state.integrity).toBe(t.lineStrengthMax)
+  })
+
+  it('repeated weakening pulls eventually break the line', () => {
+    let state = initialPullInLineState(config)
+    let snapped = false
+    for (let i = 0; i < 40 && !snapped; i++) {
+      const step = applyPullStep({ ...state, progress: 0 }, 0.9, stats, config)
+      snapped = step.snapped
+      state = step.state
+    }
+    expect(snapped).toBe(true)
+  })
+
+  it('gentle pulls add progress until the fish is landed', () => {
+    const n = pullsToLand(stats, 0.35)
+    expect(n).toBeGreaterThan(1)
+    expect(n).toBeLessThan(Infinity)
+  })
+
+  it('higher Strength lands the fish in fewer pulls', () => {
+    const weak = pullsToLand(withStrength(0), 0.35)
+    const strong = pullsToLand(withStrength(20), 0.35)
+    expect(strong).toBeLessThan(weak)
   })
 })

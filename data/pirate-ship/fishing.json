@@ -95,18 +95,23 @@
     "reactionWindowPerReflex": 12
   },
   "pullIn": {
-    "notes": "Line tension; Rex still deciding fairness — placeholder threshold.",
+    "notes": "Line tension and landing; every number here is a placeholder, Rex still deciding fairness. Hold Space: intensity grows with hold time up to maxPullIntensity (holdMsToMaxIntensity to reach it); release pulls. Each pull adds intensity * (baseProgressPerIntensity + strength * strengthProgressBonus) progress; progressToLand lands the fish.",
     "defaultPullIntensity": 0.35,
     "lineBreakTension": 100,
     "weakenTensionThreshold": 85,
     "lineStrengthMax": 100,
     "integrityLossPerPullOverWeaken": 8,
     "basePullTensionPerIntensity": 107,
-    "strengthPullBonus": 0.5,
+    "strengthPullBonus": 0.2,
     "calmTensionReduction": 0.02,
     "patienceTensionReduction": 0.015,
     "dexterityTensionReduction": 0.5,
-    "enduranceFightBonus": 0.03
+    "enduranceFightBonus": 0.03,
+    "progressToLand": 100,
+    "baseProgressPerIntensity": 40,
+    "strengthProgressBonus": 1.5,
+    "maxPullIntensity": 1,
+    "holdMsToMaxIntensity": 1200
   },
   "result": {
     "notes": "Short result panel before returning to the dock walk.",

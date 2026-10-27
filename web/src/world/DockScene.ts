@@ -37,7 +37,8 @@ import {
   catchViewLurePickInput,
   catchViewOnSpaceBite,
   catchViewOnSpaceLure,
-  catchViewOnSpacePull,
+  catchViewOnPullRelease,
+  catchViewPullHoldStart,
   catchViewResetPullLine,
   catchViewRhythmMeter,
   catchViewShowsBobber,
@@ -63,7 +64,7 @@ const STAGE_PROMPT: Record<string, string> = {
   lure: 'Lure — ←/→ rhythm, Space to play',
   lurePlay: 'Lure — Space on the beats',
   bite: 'Bite — Space when the bobber dives',
-  pullIn: 'Pull it in — Space (gentle)',
+  pullIn: 'Pull it in — hold Space, release to pull (gentle!)',
 }
 
 function facingStep(facing: Facing, flipX: boolean): { dx: number; dy: number } {
@@ -205,6 +206,11 @@ export class DockScene extends Phaser.Scene {
     if (Phaser.Input.Keyboard.JustDown(this.keys.space)) {
       run = this.onFishingSpace(run)
     }
+    if (run.stage === 'pullIn' && this.catchView && Phaser.Input.Keyboard.JustUp(this.keys.space)) {
+      const out = catchViewOnPullRelease(this.catchView, this.time.now, run, run.stats, this.fishingConfig)
+      this.catchView = out.state
+      run = out.run
+    }
 
     if (this.catchView && run.stage === 'lure') {
       this.catchView = catchViewLurePickInput(this.catchView, this.rhythmPickInput(), this.fishingConfig)
@@ -269,9 +275,8 @@ export class DockScene extends Phaser.Scene {
       return catchViewOnSpaceBite(run, this.biteSchedule, this.time.now, this.fishingConfig)
     }
     if (stage === 'pullIn' && this.catchView) {
-      const out = catchViewOnSpacePull(this.catchView, run, run.stats, this.fishingConfig)
-      this.catchView = out.state
-      return out.run
+      this.catchView = catchViewPullHoldStart(this.catchView, this.time.now, run)
+      return run
     }
     return run
   }
@@ -419,7 +424,7 @@ export class DockScene extends Phaser.Scene {
     }
 
     if (run.stage === 'pullIn') {
-      const t = catchViewTensionMeter(this.catchView, this.fishingConfig)
+      const t = catchViewTensionMeter(this.catchView, this.fishingConfig, this.time.now, run.stats)
       const w = 160
       const h = 12
       const bx = this.scale.width / 2 - w / 2
@@ -427,11 +432,23 @@ export class DockScene extends Phaser.Scene {
       hud.fillStyle(0x1a2838, 0.85)
       hud.fillRect(bx, by, w, h)
       const fill = Math.min(1, t.tension / t.breakAt)
-      hud.fillStyle(fill > t.weakenAt / t.breakAt ? 0xff6644 : 0x5ec8ff, 0.9)
+      hud.fillStyle(t.weakening ? 0xff6644 : 0x5ec8ff, 0.9)
       hud.fillRect(bx + 2, by + 2, (w - 4) * fill, h - 4)
+      hud.lineStyle(1, 0xffaa44, 0.9)
+      const weakMark = bx + 2 + (w - 4) * (t.weakenAt / t.breakAt)
+      hud.lineBetween(weakMark, by - 2, weakMark, by + h + 2)
       hud.lineStyle(1, 0xff4444, 0.9)
-      const mark = bx + (w - 4) * (t.breakAt / t.breakAt) - 2
+      const mark = bx + w - 2
       hud.lineBetween(mark, by - 2, mark, by + h + 2)
+      // Line integrity (weakens on hard pulls) and the fish's progress to the landing point.
+      hud.fillStyle(0x1a2838, 0.85)
+      hud.fillRect(bx, by + 16, w, 6)
+      hud.fillStyle(t.integrity < t.maxIntegrity ? 0xffaa44 : 0x88dd88, 0.9)
+      hud.fillRect(bx + 1, by + 17, (w - 2) * (t.integrity / t.maxIntegrity), 4)
+      hud.fillStyle(0x1a2838, 0.85)
+      hud.fillRect(bx, by + 26, w, 6)
+      hud.fillStyle(0xffe066, 0.9)
+      hud.fillRect(bx + 1, by + 27, (w - 2) * t.progress, 4)
     }
   }
 

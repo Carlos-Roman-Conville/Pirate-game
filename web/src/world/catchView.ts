@@ -23,6 +23,7 @@ import {
   lineSnapsAtTension,
   lineTensionAtPull,
   pullInTuning,
+  pullIntensityAtHold,
   type PullInLineState,
 } from '../fishing/pullIn'
 
@@ -41,6 +42,8 @@ export interface CatchViewState {
   lureTapsMs: number[]
   pullLine: PullInLineState
   lastPullTension: number | null
+  /** Time Space went down during pull-in; null when not holding. */
+  pullHoldStartMs: number | null
 }
 
 export interface CatchRhythmPickInput {
@@ -64,6 +67,7 @@ export function createCatchView(landing: CastLanding, tileSize: number, config: 
     lureTapsMs: [],
     pullLine: initialPullInLineState(config),
     lastPullTension: null,
+    pullHoldStartMs: null,
   }
 }
 
@@ -133,28 +137,53 @@ export function catchViewOnSpaceBite(
   return dispatchTimedHookPress(run, schedule, pressMs, config)
 }
 
+/** Space goes down during pull-in: start building intensity. */
+export function catchViewPullHoldStart(state: CatchViewState, nowMs: number, run: FishingRun): CatchViewState {
+  if (run.stage !== 'pullIn' || state.pullHoldStartMs !== null) return state
+  return { ...state, pullHoldStartMs: nowMs }
+}
+
+/** Intensity the current hold has reached (0 when not holding). */
+export function catchViewHoldIntensity(state: CatchViewState, nowMs: number, config: FishingConfig): number {
+  if (state.pullHoldStartMs === null) return 0
+  return pullIntensityAtHold(nowMs - state.pullHoldStartMs, config)
+}
+
+/** One pull at the given intensity: caught when progress reaches the landing point, got away on a snap. */
 export function catchViewOnSpacePull(
   state: CatchViewState,
   run: FishingRun,
   stats: FisherStats,
   config: FishingConfig,
+  intensity: number = pullIntensityFromConfig(config),
 ): { state: CatchViewState; run: FishingRun } {
   if (run.stage !== 'pullIn') return { state, run }
-  const intensity = pullIntensityFromConfig(config)
   const step = applyPullStep(state.pullLine, intensity, stats, config)
   const nextState: CatchViewState = {
     ...state,
     pullLine: step.state,
     lastPullTension: step.tension,
+    pullHoldStartMs: null,
   }
-  if (step.snapped) {
-    return { state: nextState, run: stubAdvanceRun(run, false) }
-  }
-  return { state: nextState, run: stubAdvanceRun(run, true) }
+  if (step.snapped) return { state: nextState, run: stubAdvanceRun(run, false) }
+  if (step.landed) return { state: nextState, run: stubAdvanceRun(run, true) }
+  return { state: nextState, run }
+}
+
+/** Space released during pull-in: pull with the intensity the hold reached. */
+export function catchViewOnPullRelease(
+  state: CatchViewState,
+  nowMs: number,
+  run: FishingRun,
+  stats: FisherStats,
+  config: FishingConfig,
+): { state: CatchViewState; run: FishingRun } {
+  if (run.stage !== 'pullIn' || state.pullHoldStartMs === null) return { state, run }
+  return catchViewOnSpacePull(state, run, stats, config, catchViewHoldIntensity(state, nowMs, config))
 }
 
 export function catchViewResetPullLine(state: CatchViewState, config: FishingConfig): CatchViewState {
-  return { ...state, pullLine: initialPullInLineState(config), lastPullTension: null }
+  return { ...state, pullLine: initialPullInLineState(config), lastPullTension: null, pullHoldStartMs: null }
 }
 
 export function catchViewCreateBiteSchedule(
@@ -240,22 +269,40 @@ export function catchViewRhythmMeter(state: CatchViewState, config: FishingConfi
 }
 
 export interface CatchTensionMeterDraw {
+  /** Live tension while holding, else the last pull's tension. */
   tension: number
   breakAt: number
   weakenAt: number
   integrity: number
   maxIntegrity: number
+  /** 0..1 of the way to the landing point. */
+  progress: number
+  holding: boolean
+  /** True while the held (or last) pull is past the weaken threshold. */
+  weakening: boolean
 }
 
-export function catchViewTensionMeter(state: CatchViewState, config: FishingConfig): CatchTensionMeterDraw {
+export function catchViewTensionMeter(
+  state: CatchViewState,
+  config: FishingConfig,
+  nowMs = 0,
+  stats?: FisherStats,
+): CatchTensionMeterDraw {
   const t = pullInTuning(config)
-  const tension = state.lastPullTension ?? 0
+  const holding = state.pullHoldStartMs !== null
+  const tension =
+    holding && stats
+      ? lineTensionAtPull(catchViewHoldIntensity(state, nowMs, config), stats, config, state.pullLine.fightTicks)
+      : (state.lastPullTension ?? 0)
   return {
     tension,
     breakAt: t.lineBreakTension,
     weakenAt: t.weakenTensionThreshold,
     integrity: state.pullLine.integrity,
     maxIntegrity: t.lineStrengthMax,
+    progress: Math.min(1, state.pullLine.progress / t.progressToLand),
+    holding,
+    weakening: tension > t.weakenTensionThreshold,
   }
 }
 
