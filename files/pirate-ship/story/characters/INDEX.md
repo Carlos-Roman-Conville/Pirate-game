@@ -28,7 +28,7 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | esfp-m | ESFP (Se-Fi-Te-Ni) | man | (open) | baker (Rex) | jolly; secretly a cannibal | idea (Rex) | [esfp-m.md](esfp-m.md) |
 | esfp-f | ESFP (Se-Fi-Te-Ni) | woman | (open) | castaway / topman | | drafted | |
 | intj-m | INTJ (Ni-Te-Fi-Se) | man | (open) | navigator | | drafted | |
-| intj-f | INTJ (Ni-Te-Fi-Se) | woman | (open) | navigator | | drafted | |
+| intj-f | INTJ (Ni-Te-Fi-Se) | woman | (open) | herbalist, apothecary owner (Rex) | tests her potions on people she judges evil; her questline: judge if it kills and if they deserve it | idea (Rex) | [intj-f.md](intj-f.md) |
 | infj-m | INFJ (Ni-Fe-Ti-Se) | man | (open) | wrecker / lookout | | drafted | |
 | infj-f | INFJ (Ni-Fe-Ti-Se) | woman | (open) | wrecker / lookout | | drafted | |
 | entj-m | ENTJ (Te-Ni-Se-Fi) | man | (open) | rival captain / first mate | | drafted | |

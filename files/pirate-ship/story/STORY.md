@@ -77,8 +77,8 @@ work lives in `../art/`, not here.
   locks you out of that group (§7b).
 - **(Rex, 2026-10-27) Its places** (layout and upgrades kept by the town keeper in `../town/`): a bakery, a farm,
   a tavern/brothel, the docks (the shipyard, the repairmen and the market; the market starts at the port and leads
-  into town), a small clinic, the church, perhaps a warehouse, the old coastal fort, and a locked house.
-- **(Rex, 2026-10-27) Its people so far** (`characters/INDEX.md`): the ISFJ doctor at the clinic, the ENTP
+  into town), a small clinic, the apothecary, the church, perhaps a warehouse, the old coastal fort, and a locked house.
+- **(Rex, 2026-10-27) Its people so far** (`characters/INDEX.md`): the ISFJ doctor at the clinic, the INTJ herbalist at the apothecary, the ENTP
   weaponsmith at the shipyard, the ISTJ head priest, the warehouse bigwig and his troubled child, the old ESTP
   soldier in the locked house, the INTP farmer, the ESFP baker.
 - **(open)** Its name, its history, who runs it.
@@ -168,4 +168,5 @@ work lives in `../art/`, not here.
 | 2026-10-26 | First character: the ENTP man who keeps leaving; letting him go on his explained departure is a secret route to the perfect ending | Rex |
 | 2026-10-26 | The ENTP's defining trait: he builds devices; the ship's mechanic (killing devices), his focused creations are torture devices | Rex |
 | 2026-10-27 | The starting port's places and first residents: ISFJ clinic doctor (recruitable, secretly sadistic), ENTP lives at the shipyard as weaponsmith, ISTJ head priest, warehouse bigwig and troubled recruitable child, old ESTP soldier (secret, locked house, weekly to the fort), INTP farmer (April Ludgate), ESFP baker (secret cannibal) | Rex |
+| 2026-10-27 | The INTJ herbalist and apothecary owner: tests potions on people she judges evil; her questline is a gamble to judge if a potion kills and if they deserve it, and to help her recover | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |
