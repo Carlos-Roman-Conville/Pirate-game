@@ -96,6 +96,7 @@
   },
   "pullIn": {
     "notes": "Line tension; Rex still deciding fairness — placeholder threshold.",
+    "defaultPullIntensity": 0.35,
     "lineBreakTension": 100,
     "weakenTensionThreshold": 85,
     "lineStrengthMax": 100,

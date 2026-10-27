@@ -1,13 +1,7 @@
 import Phaser from 'phaser'
 import dock from '../../../data/pirate-ship/maps/dock.json'
-import {
-  biteSubmergeBeat,
-  createBiteSchedule,
-  dispatchTimedHookPress,
-  syncBitePhaseToClock,
-  type BiteSchedule,
-} from '../fishing/bite'
-import { expectedBeatTimesMs, fishDrawnByLure } from '../fishing/lure'
+import { biteSubmergeBeat, syncBitePhaseToClock, type BiteSchedule } from '../fishing/bite'
+import { lureRhythmIds } from '../fishing/lure'
 import {
   applyFishingRun,
   dismissResultPanel,
@@ -19,7 +13,6 @@ import {
   tryStartFishingAtDock,
   type DockLoopState,
 } from '../fishing/loop'
-import { applyPullStep as pullStep, initialPullInLineState as pullInInitial } from '../fishing/pullIn'
 import {
   dispatch,
   loadFishingConfig,
@@ -42,6 +35,20 @@ import {
   createCastView,
   type CastViewState,
 } from './castView'
+import {
+  catchViewBobberDraw,
+  catchViewCreateBiteSchedule,
+  catchViewLurePickInput,
+  catchViewOnSpaceBite,
+  catchViewOnSpaceLure,
+  catchViewOnSpacePull,
+  catchViewResetPullLine,
+  catchViewRhythmMeter,
+  catchViewShowsBobber,
+  catchViewTensionMeter,
+  createCatchView,
+  type CatchViewState,
+} from './catchView'
 import { atDockEdge, facingOf, integerZoom, loadMap, moveBody, tileAt, type Facing, type MapData } from './map'
 
 // The dock world: three-quarter top-down, square tiles, script-drawn placeholder art (Rex's renders replace it).
@@ -57,7 +64,8 @@ const STAGE_PROMPT: Record<string, string> = {
   aim: 'Aim — Space to set target',
   direction: 'Direction — Space to set angle',
   power: 'Power — Space to cast',
-  lure: 'Lure — Space to work the rhythm',
+  lure: 'Lure — ←/→ rhythm, Space to play',
+  lurePlay: 'Lure — Space on the beats',
   bite: 'Bite — Space when the bobber dives',
   pullIn: 'Pull it in — Space (gentle)',
 }
@@ -87,10 +95,12 @@ export class DockScene extends Phaser.Scene {
   private resultHud: Phaser.GameObjects.Text | null = null
   private biteSchedule: BiteSchedule | null = null
   private biteSubmergeFxPlayed = false
-  private pullLine = pullInInitial(this.fishingConfig)
   private castView: CastViewState | null = null
+  private catchView: CatchViewState | null = null
   private castGfx: Phaser.GameObjects.Graphics | null = null
   private castMeterGfx: Phaser.GameObjects.Graphics | null = null
+  private catchGfx: Phaser.GameObjects.Graphics | null = null
+  private catchHudGfx: Phaser.GameObjects.Graphics | null = null
 
   constructor() { super('dock') }
 
@@ -200,7 +210,12 @@ export class DockScene extends Phaser.Scene {
       run = this.onFishingSpace(run)
     }
 
+    if (this.catchView && run.stage === 'lure') {
+      this.catchView = catchViewLurePickInput(this.catchView, this.rhythmPickInput(), this.fishingConfig)
+    }
+
     this.drawCastOverlay(run)
+    this.drawCatchOverlay(run)
 
     if (run.stage === 'result' && run.result) {
       this.dockLoop = applyFishingRun(this.dockLoop, run)
@@ -212,10 +227,21 @@ export class DockScene extends Phaser.Scene {
     this.dockLoop = applyFishingRun(this.dockLoop, run)
     if (run.stage === 'bite' && !this.biteSchedule) {
       this.biteSubmergeFxPlayed = false
-      this.biteSchedule = createBiteSchedule(this.time.now, run.stats, this.fishingConfig, { next: () => 0.5 }, run.lureDrawn)
+      this.biteSchedule = catchViewCreateBiteSchedule(
+        this.time.now,
+        run.stats,
+        this.fishingConfig,
+        { next: () => 0.5 },
+        run.lureDrawn,
+      )
     }
     if (run.stage !== prevStage) {
-      if (run.stage === 'pullIn') this.pullLine = pullInInitial(this.fishingConfig)
+      if (run.stage === 'lure' && this.castView?.landing) {
+        this.catchView = createCatchView(this.castView.landing, this.map.tileSize, this.fishingConfig)
+      }
+      if (run.stage === 'pullIn' && this.catchView) {
+        this.catchView = catchViewResetPullLine(this.catchView, this.fishingConfig)
+      }
       this.updateStageHud(run)
       if (run.stage === 'aim') {
         this.clearReadWaterOverlay()
@@ -238,21 +264,18 @@ export class DockScene extends Phaser.Scene {
       this.castView = out.state
       return out.run
     }
-    if (stage === 'lure') {
-      const fish = this.fishingConfig.fish.find((f) => f.id === run.fishId)!
-      const rhythm = fish.preferredRhythm
-      const taps = expectedBeatTimesMs(rhythm, this.fishingConfig)
-      const ok = fishDrawnByLure(fish, rhythm, taps, this.fishingConfig)
-      return dispatch(run, { type: 'lure', drawn: ok })
+    if (stage === 'lure' && this.catchView) {
+      const out = catchViewOnSpaceLure(this.catchView, this.time.now, run, this.fishingConfig)
+      this.catchView = out.state
+      return out.run
     }
     if (stage === 'bite' && this.biteSchedule) {
-      return dispatchTimedHookPress(run, this.biteSchedule, this.time.now, this.fishingConfig)
+      return catchViewOnSpaceBite(run, this.biteSchedule, this.time.now, this.fishingConfig)
     }
-    if (stage === 'pullIn') {
-      const step = pullStep(this.pullLine, 0.35, run.stats, this.fishingConfig)
-      this.pullLine = step.state
-      if (step.snapped) return stubAdvanceRun(run, false)
-      return stubAdvanceRun(run, true)
+    if (stage === 'pullIn' && this.catchView) {
+      const out = catchViewOnSpacePull(this.catchView, run, run.stats, this.fishingConfig)
+      this.catchView = out.state
+      return out.run
     }
     return run
   }
@@ -261,7 +284,7 @@ export class DockScene extends Phaser.Scene {
     this.clearReadWaterOverlay()
     this.biteSchedule = null
     this.biteSubmergeFxPlayed = false
-    this.pullLine = pullInInitial(this.fishingConfig)
+    this.catchView = null
     this.applyZoom(true)
     const run = this.dockLoop.run!
     const visible = visibleFishSilhouettes(run.stats, this.fishingConfig)
@@ -296,7 +319,10 @@ export class DockScene extends Phaser.Scene {
   }
 
   private updateStageHud(run: FishingRun) {
-    const prompt = STAGE_PROMPT[run.stage]
+    let prompt = STAGE_PROMPT[run.stage]
+    if (run.stage === 'lure' && this.catchView?.lurePhase === 'play') {
+      prompt = STAGE_PROMPT.lurePlay
+    }
     if (!prompt) return
     this.stageHud?.destroy()
     this.stageHud = this.add
@@ -330,8 +356,95 @@ export class DockScene extends Phaser.Scene {
   private clearFishingHud() {
     this.clearReadWaterOverlay()
     this.clearCastOverlay()
+    this.clearCatchOverlay()
     this.stageHud?.destroy()
     this.stageHud = null
+  }
+
+  private rhythmPickInput() {
+    const k = this.keys
+    return {
+      cycleLeft: Phaser.Input.Keyboard.JustDown(k.left) || Phaser.Input.Keyboard.JustDown(k.a),
+      cycleRight: Phaser.Input.Keyboard.JustDown(k.right) || Phaser.Input.Keyboard.JustDown(k.d),
+    }
+  }
+
+  private drawCatchOverlay(run: FishingRun) {
+    if (!this.catchView || !catchViewShowsBobber(run)) {
+      this.catchGfx?.clear()
+      this.catchHudGfx?.clear()
+      return
+    }
+    const now = this.time.now
+    const stats = run.stats
+    this.catchGfx ??= this.add.graphics().setDepth(23)
+    this.catchHudGfx ??= this.add.graphics().setScrollFactor(0).setDepth(102)
+    const g = this.catchGfx
+    const hud = this.catchHudGfx
+    g.clear()
+    hud.clear()
+
+    const bob = catchViewBobberDraw(this.catchView, now, run, this.biteSchedule, stats, this.fishingConfig)
+    g.fillStyle(0xff6622, bob.submerged ? 0.35 : 0.95)
+    g.fillCircle(bob.x, bob.y, bob.submerged ? 2 : 4)
+    if (!bob.submerged) {
+      g.lineStyle(1, 0xc8e8ff, 0.7)
+      g.lineBetween(bob.x, bob.y - 14, bob.x, bob.y - 3)
+    }
+    if (bob.nibbleDip) {
+      g.lineStyle(1, 0xa8d8f0, 0.5)
+      g.strokeCircle(bob.x, bob.y, 8)
+    }
+
+    if (run.stage === 'lure') {
+      const meter = catchViewRhythmMeter(this.catchView, this.fishingConfig)
+      const x = this.scale.width / 2 - 80
+      const y = 56
+      hud.fillStyle(0x1a2838, 0.85)
+      hud.fillRect(x, y, 160, 36)
+      const rhythmIds = lureRhythmIds(this.fishingConfig)
+      for (let i = 0; i < rhythmIds.length; i++) {
+        hud.fillStyle(i === this.catchView!.rhythmIndex ? 0xffe066 : 0x3a5068, meter.picking ? 0.95 : 0.5)
+        hud.fillRect(x + 8 + i * 22, y + 8, 18, 10)
+      }
+      if (!meter.picking) {
+        const span = meter.beats[meter.beats.length - 1]! + meter.periodMs
+        for (const beat of meter.beats) {
+          const bx = x + 48 + (beat / span) * 100
+          hud.fillStyle(0x5ec8ff, 0.85)
+          hud.fillCircle(bx, y + 24, 4)
+        }
+        for (const tap of meter.taps) {
+          const tx = x + 48 + (tap / span) * 100
+          hud.fillStyle(0xffe066, 0.95)
+          hud.fillCircle(tx, y + 24, 3)
+        }
+      }
+    }
+
+    if (run.stage === 'pullIn') {
+      const t = catchViewTensionMeter(this.catchView, this.fishingConfig)
+      const w = 160
+      const h = 12
+      const bx = this.scale.width / 2 - w / 2
+      const by = 48
+      hud.fillStyle(0x1a2838, 0.85)
+      hud.fillRect(bx, by, w, h)
+      const fill = Math.min(1, t.tension / t.breakAt)
+      hud.fillStyle(fill > t.weakenAt / t.breakAt ? 0xff6644 : 0x5ec8ff, 0.9)
+      hud.fillRect(bx + 2, by + 2, (w - 4) * fill, h - 4)
+      hud.lineStyle(1, 0xff4444, 0.9)
+      const mark = bx + (w - 4) * (t.breakAt / t.breakAt) - 2
+      hud.lineBetween(mark, by - 2, mark, by + h + 2)
+    }
+  }
+
+  private clearCatchOverlay() {
+    this.catchGfx?.destroy()
+    this.catchGfx = null
+    this.catchHudGfx?.destroy()
+    this.catchHudGfx = null
+    this.catchView = null
   }
 
   private castContext() {
