@@ -1,0 +1,21 @@
+{
+  "_about": "Which _template kit this repo was stamped from. Read games/_template/kits.json for the kit; kit files listed there are this game's own copies (fixes every game needs go back to the kit).",
+  "kind": "board",
+  "kit": "board-kit",
+  "stamped": "2026-10-26",
+  "template": "games/_template",
+  "docs": [
+    "_template/README.md#Board games",
+    "_template/KITS.md",
+    "lobby/TRADITIONAL_GAMES.md#5"
+  ],
+  "kit_files_in_game": [
+    "engine/Core/Boards/",
+    "engine/Core/Dice.cs",
+    "engine/Core/Search.cs",
+    "engine.tests/Conformance/",
+    "engine.tests/Kit/",
+    "server/Lobby.cs",
+    "web/src/board/"
+  ]
+}

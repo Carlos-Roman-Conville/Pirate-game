@@ -1,0 +1,20 @@
+/* The board kit's point board (PointBoard.tsx). Classes are prefixed board-; the game's own colours for seats come from
+   its stylesheet (pirate-ship-piece-0, pirate-ship-piece-1). Motion is off for prefers-reduced-motion. */
+.board-svg { width: 100%; max-width: 560px; height: auto; display: block; margin: 0 auto; touch-action: manipulation; }
+.board-edge { stroke: var(--line, #3a4150); stroke-width: 3; stroke-linecap: round; }
+.board-spot { fill: var(--line, #3a4150); }
+.board-piece { stroke: #0006; stroke-width: 2; transition: cx 0.25s ease, cy 0.25s ease; }
+.board-arrived { animation: board-pop 0.22s ease-out; transform-box: fill-box; transform-origin: center; }
+.board-last { fill: none; stroke: var(--gold, #d9b865); stroke-width: 2; stroke-dasharray: 4 4; }
+.board-hit { fill: transparent; stroke: var(--accent, #3a6ed8); stroke-width: 3; cursor: pointer; }
+.board-target:hover .board-hit, .board-target:focus-visible .board-hit { fill: #3a6ed833; }
+.board-selected .board-hit { stroke: var(--gold, #d9b865); }
+.board-point:focus { outline: none; }
+
+@keyframes board-pop { from { transform: scale(0.4); opacity: 0.3; } to { transform: scale(1); opacity: 1; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .board-piece { transition: none; }
+  .board-arrived { animation: board-fade 0.15s linear; }
+}
+@keyframes board-fade { from { opacity: 0.3; } to { opacity: 1; } }

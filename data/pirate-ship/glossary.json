@@ -1,0 +1,17 @@
+{
+ "_about": "The one place a game term gets its English name. Every keyword, zone, phase, resource, stat, card type and recurring card-text phrase gets an entry BEFORE it appears in code, UI or docs; tools/pirate-ship_cards.py fails on a card field whose term has no entry. For a non-English game 'source' is the printed term; for an English game it is the printed term too (the entry still fixes one spelling and one code). Card names are never translated. tools/pirate-ship_import.py writes files/pirate-ship/GLOSSARY.md from this file.",
+ "language": "<fr | en | de | ja>",
+ "policy": [
+  "Card names stay exactly as printed.",
+  "Brand words (the game's own coined names) are never translated.",
+  "Use the English term in every screen, log line, rule and message; show the original only in the rules help and the glossary.",
+  "A new term gets an entry here before it appears anywhere else.",
+  "One term, one code: code is the identifier used in JSON fields, enums and CSS classes."
+ ],
+ "terms": [
+  {"source": "<printed term>", "en": "<English term>", "code": "<identifier>", "kind": "keyword | zone | phase | stat | type | resource | phrase", "note": "<what it means, one line>"}
+ ],
+ "lore": [
+  {"source": "<recurring lore word>", "en": "<fixed translation>"}
+ ]
+}
