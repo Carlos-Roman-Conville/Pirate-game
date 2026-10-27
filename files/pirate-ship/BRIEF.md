@@ -29,8 +29,8 @@ PLAN.md Phase 1 (dock + fishing) not started.
 
 - **Not a board game:** `_template/check_game.py`, template-drift and the board-kit gates don't apply. The
   placeholder engine stays only so the four checks pass; no task works on it, no D-row tasks, no Ludii.
-- **Minigames are Rex's design.** Build only the stages `minigames/FISHING.md` marks as Rex's; a stage he hasn't
-  designed (the bite) is never designed or built by a task. Tunable numbers go in data, not code.
+- **Minigames are Rex's design.** Build only what `minigames/FISHING.md` says; a task never designs a stage or
+  mechanic of its own. Tunable numbers go in data, not code.
 - Never invent a game rule or mechanic; a gap is a question for Rex in HANDOFF Blocked.
 - Placeholder art is script-drawn until Rex's renders land.
 - Ask Rex before downloading anything (npm packages outside the cache too). Never push. Commit only your own

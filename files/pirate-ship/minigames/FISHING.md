@@ -17,8 +17,15 @@ the stat hooks marked **(proposed)** are for him to keep or change.
 5. **The lure (Rex).** Once the line is in the water, pick a rhythm, then play a rhythm game to lure the fish to
    bite. Different fish like different rhythms. Patience shapes the line's rhythm (a patient fisher's line moves
    less, or with more purpose).
-6. **The bite (Rex).** A showdown: press at exactly the right moment or the fish gets away or you miss the bite
-   (like Kirby's quick-draw, Digimon World 1 or Stardew). Rex is still designing this one.
+6. **The bite (Rex, designed 2026-10-26).** A bobber showdown, in five beats:
+   - **Waiting:** the bobber floats on the water, moving slightly with the waves.
+   - **Nibbling:** the bobber occasionally twitches or dips slightly. These are warning cues, not necessarily the
+     bite itself (pressing on a nibble is a false strike).
+   - **Bite:** the bobber suddenly submerges, with a splash and a distinct sound.
+   - **Hook setting:** the player presses the button within the reaction window.
+   - **Reeling:** a successful hook goes straight into stage 7, pulling it in.
+   The lure (stage 5) runs while the bobber waits: the right rhythm brings the bite sooner. Reflexes set the
+   reaction window (proposed).
 7. **Pulling it in (Rex).** Like Digimon World 1: pull too hard and the line weakens. Digimon's version could be
    needlessly hard; this one needs to be fairer (how, still open).
 
@@ -30,14 +37,13 @@ the stat hooks marked **(proposed)** are for him to keep or change.
 | Direction | Dexterity; Fishing skill (slower line, narrower cone) | accuracy is a hand skill |
 | Power | Strength (how far you can throw at all) | distance is strength |
 | The lure | Patience (slider); Fishing skill | real anglers work a lure at different cadences for different fish |
-| The bite | Reflexes | striking too early pulls the bait away, too late and the fish spits the hook |
+| The bite | Reflexes (the reaction window); Patience (not striking on a nibble) | striking too early pulls the bait away, too late and the fish spits the hook |
 | Pulling it in | Strength; Dexterity (feeling the tension); Calm and Patience (not yanking); Endurance (long fights) | playing a fish: give line when it runs, take it back when it tires |
 
 **Fish (Rex):** some sit closer to the dock or boat, some farther out; each likes certain rhythms.
 
 ## Open for Rex
 
-- The bite minigame.
 - How pulling in stays fair (not Digimon-hard).
 - Landing the big ones (a gaff or harpoon at the side, for sharks): a stage of its own, or part of pulling in.
 - Period detail, if wanted: ships of the era fished with handlines hauled by hand, not reels.

@@ -12,12 +12,11 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
 ## Next
 
 1. PLAN.md unit 1: Phaser 4 and the dock scene (three-quarter top-down, square tiles, walking).
-2. Units 2–7 in order: the fishing state machine, then each stage Rex designed.
+2. Units 2–8 in order: the fishing state machine, then each stage (all seven are now Rex's design; the bite
+   landed 2026-10-26).
 
 ## Blocked
 
-- The bite stage (FISHING.md stage 6): Rex is designing it. Until then the lure stage hands straight to pulling
-  in, and the code says so.
 - How pulling in stays fair (FISHING.md): Rex's call; the unit ships tunable numbers in data for him to set.
 - The game's real name (the repo and folder rename when Rex names it).
 
