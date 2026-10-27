@@ -45,6 +45,18 @@
     "viewTilesWide": 32,
     "viewTilesHigh": 20
   },
+  "aim": {
+    "notes": "Aim target placement along the cast line from the dock edge.",
+    "defaultDistanceTiles": 5,
+    "minDistanceTiles": 1,
+    "lateralLimitTiles": 3,
+    "nudgeDistanceTiles": 0.5,
+    "nudgeLateralTiles": 0.5
+  },
+  "castFly": {
+    "notes": "Line-in-flight presentation after the power press.",
+    "durationMs": 450
+  },
   "direction": {
     "notes": "Cone aim; higher fishing skill narrows cone and slows the line.",
     "baseConeDegrees": 45,

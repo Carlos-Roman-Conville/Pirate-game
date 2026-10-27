@@ -43,6 +43,33 @@ function normalizeFacing(facing: CastFacing): { dx: number; dy: number } {
   return { dx: facing.dx / len, dy: facing.dy / len }
 }
 
+export interface AimMarkerDraw {
+  className: typeof CAST_HUD_CLASS.aim
+  apex: Point2
+  marker: Point2
+}
+
+/** Aim reticle along the fisher's facing before direction is chosen. */
+export function aimMarkerLayout(
+  originTiles: Point2,
+  facing: CastFacing,
+  aim: AimTarget,
+  tileSize: number,
+): AimMarkerDraw {
+  const forward = normalizeFacing(facing)
+  const perp = { dx: -forward.dy, dy: forward.dx }
+  const apex = { x: originTiles.x * tileSize, y: originTiles.y * tileSize }
+  const markerTiles = {
+    x: originTiles.x + forward.dx * aim.distanceTiles + perp.dx * aim.lateralTiles,
+    y: originTiles.y + forward.dy * aim.distanceTiles + perp.dy * aim.lateralTiles,
+  }
+  return {
+    className: CAST_HUD_CLASS.aim,
+    apex,
+    marker: { x: markerTiles.x * tileSize, y: markerTiles.y * tileSize },
+  }
+}
+
 function pointOnRay(apex: Point2, angleRad: number, length: number): Point2 {
   return {
     x: apex.x + Math.sin(angleRad) * length,

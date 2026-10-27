@@ -52,6 +52,8 @@ export interface FishingConfig {
   player: FisherStats & { notes: string }
   fish: PlaceholderFish[]
   readWater: Record<string, number | string>
+  aim: Record<string, number | string>
+  castFly: Record<string, number | string>
   direction: Record<string, number | string>
   power: Record<string, number | string>
   lure: Record<string, number | string>

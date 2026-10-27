@@ -30,6 +30,18 @@ import {
   silhouetteDistanceTiles,
   visibleFishSilhouettes,
 } from '../fishing/readWater'
+import {
+  castViewAimDraw,
+  castViewAimInput,
+  castViewDirectionCone,
+  castViewFlyProgress,
+  castViewFlySegment,
+  castViewOnSpace,
+  castViewPowerMeter,
+  castViewShowsOverlay,
+  createCastView,
+  type CastViewState,
+} from './castView'
 import { atDockEdge, facingOf, integerZoom, loadMap, moveBody, tileAt, type Facing, type MapData } from './map'
 
 // The dock world: three-quarter top-down, square tiles, script-drawn placeholder art (Rex's renders replace it).
@@ -76,6 +88,9 @@ export class DockScene extends Phaser.Scene {
   private biteSchedule: BiteSchedule | null = null
   private biteSubmergeFxPlayed = false
   private pullLine = pullInInitial(this.fishingConfig)
+  private castView: CastViewState | null = null
+  private castGfx: Phaser.GameObjects.Graphics | null = null
+  private castMeterGfx: Phaser.GameObjects.Graphics | null = null
 
   constructor() { super('dock') }
 
@@ -177,9 +192,15 @@ export class DockScene extends Phaser.Scene {
       }
     }
 
+    if (this.castView && (run.stage === 'aim' || run.stage === 'direction' || run.stage === 'power')) {
+      this.castView = castViewAimInput(this.castView, this.aimKeyInput(), run.stats, this.fishingConfig)
+    }
+
     if (Phaser.Input.Keyboard.JustDown(this.keys.space)) {
       run = this.onFishingSpace(run)
     }
+
+    this.drawCastOverlay(run)
 
     if (run.stage === 'result' && run.result) {
       this.dockLoop = applyFishingRun(this.dockLoop, run)
@@ -199,14 +220,23 @@ export class DockScene extends Phaser.Scene {
       if (run.stage === 'aim') {
         this.clearReadWaterOverlay()
         this.applyZoom(false)
+        this.castView = createCastView(this.castContext(), run.stats, this.fishingConfig, this.time.now)
       }
     }
   }
 
   private onFishingSpace(run: FishingRun): FishingRun {
     const stage = run.stage
-    if (stage === 'readWater' || stage === 'aim' || stage === 'direction' || stage === 'power') {
+    if (stage === 'readWater') {
       return stubAdvanceRun(run, true)
+    }
+    if (stage === 'aim' || stage === 'direction' || stage === 'power') {
+      if (!this.castView) {
+        this.castView = createCastView(this.castContext(), run.stats, this.fishingConfig, this.time.now)
+      }
+      const out = castViewOnSpace(this.castView, this.time.now, run, run.stats, this.fishingConfig)
+      this.castView = out.state
+      return out.run
     }
     if (stage === 'lure') {
       const fish = this.fishingConfig.fish.find((f) => f.id === run.fishId)!
@@ -299,8 +329,101 @@ export class DockScene extends Phaser.Scene {
 
   private clearFishingHud() {
     this.clearReadWaterOverlay()
+    this.clearCastOverlay()
     this.stageHud?.destroy()
     this.stageHud = null
+  }
+
+  private castContext() {
+    const t = this.map.tileSize
+    const step = facingStep(this.facing, this.sideFlip)
+    return {
+      originTiles: { x: this.pos.x / t, y: this.pos.y / t },
+      facing: { dx: step.dx, dy: step.dy },
+      tileSize: t,
+    }
+  }
+
+  private aimKeyInput() {
+    const k = this.keys
+    return {
+      forward: k.up.isDown || k.w.isDown,
+      back: k.down.isDown || k.s.isDown,
+      left: k.left.isDown || k.a.isDown,
+      right: k.right.isDown || k.d.isDown,
+    }
+  }
+
+  private drawCastOverlay(run: FishingRun) {
+    if (!this.castView || !castViewShowsOverlay(run, this.castView, this.time.now, this.fishingConfig)) {
+      this.castGfx?.clear()
+      this.castMeterGfx?.clear()
+      return
+    }
+    const stats = run.stats
+    const now = this.time.now
+    const t = this.map.tileSize
+    this.castGfx ??= this.add.graphics().setDepth(22)
+    this.castMeterGfx ??= this.add.graphics().setScrollFactor(0).setDepth(101)
+    const g = this.castGfx
+    const hud = this.castMeterGfx
+    g.clear()
+    hud.clear()
+
+    const fly = castViewFlyProgress(this.castView, now, this.fishingConfig)
+    if (fly !== null) {
+      const seg = castViewFlySegment(this.castView, fly, t)
+      g.lineStyle(1, 0xc8e8ff, 0.85)
+      g.lineBetween(seg.from.x, seg.from.y, seg.bobber.x, seg.bobber.y)
+      g.fillStyle(0xff8844, 0.95)
+      g.fillCircle(seg.bobber.x, seg.bobber.y, 3)
+      if (fly > 0.85) {
+        g.fillStyle(0xffffff, 0.35)
+        g.fillCircle(seg.to.x, seg.to.y, 5)
+      }
+      return
+    }
+
+    if (run.stage === 'aim') {
+      const aim = castViewAimDraw(this.castView)
+      g.lineStyle(1, 0xffe066, 0.9)
+      g.strokeCircle(aim.marker.x, aim.marker.y, 6)
+      g.lineStyle(1, 0xffe066, 0.45)
+      g.lineBetween(aim.apex.x, aim.apex.y, aim.marker.x, aim.marker.y)
+      return
+    }
+    if (run.stage === 'direction') {
+      const cone = castViewDirectionCone(this.castView, now, stats, this.fishingConfig)
+      g.lineStyle(1, 0x88c8ff, 0.55)
+      g.lineBetween(cone.apex.x, cone.apex.y, cone.left.x, cone.left.y)
+      g.lineBetween(cone.apex.x, cone.apex.y, cone.right.x, cone.right.y)
+      g.lineStyle(2, 0xfff0a0, 0.95)
+      g.lineBetween(cone.apex.x, cone.apex.y, cone.lineEnd.x, cone.lineEnd.y)
+      return
+    }
+    if (run.stage === 'power') {
+      const meter = castViewPowerMeter(this.castView, now, stats, this.fishingConfig)
+      const w = 14
+      const h = 120
+      const x = this.scale.width - 28
+      const y = 48
+      hud.fillStyle(0x1a2838, 0.85)
+      hud.fillRect(x - w / 2, y, w, h)
+      const fillY = y + h * (1 - meter.fill)
+      hud.fillStyle(0x5ec8ff, 0.9)
+      hud.fillRect(x - w / 2 + 2, fillY, w - 4, y + h - fillY)
+      const targetY = y + h * (1 - meter.target)
+      hud.lineStyle(2, 0xffe066, 1)
+      hud.lineBetween(x - w / 2 - 4, targetY, x + w / 2 + 4, targetY)
+    }
+  }
+
+  private clearCastOverlay() {
+    this.castGfx?.destroy()
+    this.castGfx = null
+    this.castMeterGfx?.destroy()
+    this.castMeterGfx = null
+    this.castView = null
   }
 
   private clearReadWaterOverlay() {
