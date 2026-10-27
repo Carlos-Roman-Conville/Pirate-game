@@ -64,7 +64,15 @@
   },
   "lure": {
     "notes": "Rhythm lure; patience dampens line motion in unit 5.",
-    "patienceMotionScale": 0.01
+    "patienceMotionScale": 0.01,
+    "minMotionAmplitude": 0.2,
+    "rhythmHitWindowMs": 90,
+    "beatsPerRound": 4,
+    "rhythms": [
+      { "id": "steady", "periodMs": 600 },
+      { "id": "slow", "periodMs": 900 },
+      { "id": "quick", "periodMs": 380 }
+    ]
   },
   "bite": {
     "notes": "Bobber showdown timings; reaction window grows with reflexes.",
