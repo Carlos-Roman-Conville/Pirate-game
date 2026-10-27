@@ -1,4 +1,4 @@
-# The old ESTP soldier (unnamed; file is `estp-f.md` until Rex names them, then it becomes `<slug>.md`)
+# The ESTP veteran outdoorswoman (unnamed; file is `estp-f.md` until Rex names them, then it becomes `<slug>.md`)
 
 Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is canon. The field keys in backticks
 follow `_TEMPLATE.md`.
@@ -15,10 +15,10 @@ follow `_TEMPLATE.md`.
 | Type | `type` | ESTP | Rex |
 | Function stack | `stack` | Se-Ti-Fe-Ni | Rex |
 | Gender | `gender` | woman: brutish and butch (was a man until 2026-10-27) | Rex |
-| Pirate archetype | `archetype` | an old soldier | Rex |
+| Pirate archetype | `archetype` | a veteran (was "an old soldier"), now an outdoorsman: a wilderness generalist who gathers wood, stone, herbs and food. The ISTP specialises in hunting only; she does a bit of everything | Rex |
 | Ship job (posts held) | `posts` | the starting port's secret cook: she doesn't seem to know how to cook, but she is the best cook there | Rex |
-| Where they are found | `found_at` | the starting port: a locked house you can't access; once a week she leaves it toward the old coastal fort | Rex |
-| Resident or visitor | `town_role` | resident (locked house) | Rex |
+| Where they are found | `found_at` | an isolated hut away from town; rarely seen. ~~The starting port: a locked house you can't access; once a week she leaves it toward the old coastal fort~~ (whether the hut replaces the locked house is open) | Rex; locked house open |
+| Resident or visitor | `town_role` | lives apart from town, in her hut | Rex |
 
 ## The psycho
 
@@ -35,15 +35,18 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Bio | `bio` | | open |
+| Bio | `bio` | a veteran who lives isolated in a hut and is rarely seen, explained by her gathering everything she needs on her own | Rex |
 | Likes (gifts, acts) | `likes` | | open |
 | Dislikes | `dislikes` | | open |
-| Schedule | `schedule` | visits the old coastal fort one day a week; you can see her leave once a week toward the fort | Rex |
+| Schedule | `schedule` | gathers what she needs in the wild; rarely seen. Earlier: visits the old coastal fort one day a week (whether this still holds is open) | Rex; fort visits open |
 | Claims vs truth | `claims` | doesn't seem to be a cook; is the best one in town | Rex |
 
 ### Notes (Rex, 2026-10-27)
 
-- **(open)** What she does at the fort.
+- **(Rex)** Her whole thing: she lives isolated in a hut away from town and is rarely seen, because she gathers everything she needs on her own.
+- **(open)** Whether the hut replaces the locked house in town and the weekly walk to the fort.
+- **(open)** Whether she is still the secret cook who looks like your first mate.
+- **(open)** What she does at the fort, if the fort visits stay.
 - **(Rex, 2026-10-27)** She is the secret cook: the ESTP who very clearly looks like your first mate (`../../PIRATE.md` §7b).
 
 ## Joining
@@ -106,3 +109,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Questline responses section added | keeper |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | Now a woman: brutish and butch; file moved from `estp-m.md` to `estp-f.md` | Rex |
+| 2026-10-27 | A veteran turned outdoorsman: a wilderness generalist (wood, stone, herbs, food), unlike the ISTP's hunting; lives isolated in a hut away from town, rarely seen | Rex |

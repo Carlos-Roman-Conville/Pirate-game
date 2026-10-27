@@ -53,7 +53,7 @@ suggestion (not canon); blank = open.
 | ISFJ doctor (`isfj-f`) | | | | |
 | ESFP baker (`esfp-f`) | | | | |
 | INTP farmer (`intp-m`) | | | | |
-| ESTP soldier and cook (`estp-f`) | | | | |
+| ESTP veteran outdoorswoman (`estp-f`) | | | | |
 | ENFJ pretty boy (`enfj-m`) | **Rex: stays orderly good (loop)** | **Rex: moves them to orderly good** | **Rex: stays orderly evil (loop)** | **Rex: moves them to orderly evil** |
 | ESTJ, undescribed (`estj.md`) | **Rex: moves them to chaotic evil** | **Rex: moves them to orderly good** | **Rex: moves them to chaotic good** | **Rex: moves them to orderly evil** |
 

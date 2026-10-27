@@ -190,4 +190,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The INTP farmer is a man and the ESFP cook a woman (files now `intp-m`, `esfp-f`) | Rex |
 | 2026-10-27 | The ENFJ is a pretty boy (`enfj-m`); the ISTP is a tomboy, a small, petite girl who is extremely effective at hunting (`istp-f`); the ESTP is a brutish, butch woman (`estp-f`); the INFP is a femboy (`infp-m`) | Rex |
 | 2026-10-27 | The INFP femboy works at the brothel and turns clients who try to leave into living wax statues in her basement, using the ENTP's device and the INTJ's potions | Rex |
+| 2026-10-27 | The ESTP veteran becomes an outdoorsman, a wilderness generalist (wood, stone, herbs, food) living isolated in a hut away from town, rarely seen; whether the locked house, fort walks and secret cook still hold is open | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |
