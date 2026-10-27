@@ -75,13 +75,14 @@ Each place has an id in backticks (`port.<place>`). The same id is reserved as t
 | `port.docks` | The docks | the shipyard, the repairmen and the market | where you start, on your small boat; Phase 1 builds the dock (`data/pirate-ship/maps/dock.json`, placeholder) | Rex |
 | `port.shipyard` | The shipyard (on the docks) | the ENTP mechanic lives here, with a few other shipyard characters; he is the local weapon smith | | Rex |
 | `port.market` | The market | vendors | starts at the port and leads into town | Rex |
-| `port.tavern` | The tavern / brothel | the bartender (§7b) | | Rex |
+| `port.tavern` | The tavern / brothel | the bartender (§7b); the INFP works at the brothel | | Rex |
 | `port.bakery` | The butcher shop (was "the bakery"; id kept stable) | the ESFP cook; the farmer's son lives with her | Rex, 2026-10-27: the ESFP isn't really a baker, more a general cook, and has a butcher shop. Whether a bakery still exists in town: open | Rex |
 | `port.farm` | The farm | the INTP farmer and his daughter | | Rex |
 | `port.clinic` | A small clinic | the ISFJ doctor | | Rex |
 | `port.church` | The church | the ISTJ head priest | | Rex |
 | `port.warehouse` | A warehouse | a big wig who owns it and a few vendors; his troublesome son | Rex was unsure ("that requires a big wig to still be in town") | Rex (tentative) |
 | `port.apothecary` | The apothecary (herbalist's) | the INTJ herbalist, its owner | the place Rex had forgotten in his first list | Rex |
+| `port.infp_house` | The INFP's house, with a basement | the INFP brothel worker; clients kept in the basement as living wax statues | location and layout open | Rex |
 | `port.fort` | The old coastal fort | the old soldier goes there one day a week | "a great locale, love that idea" | Rex |
 | `port.soldier_house` | The old soldier's locked house | the old soldier | you can't get in; you can see her leave once a week toward the fort | Rex |
 | | Docks barely maintained; a harbour of fishing boats, damaged sloops and vessels that shouldn't still sail | | look detail | proposed (outside AI, via STORY.md) |
@@ -106,6 +107,7 @@ they are in town.
 | The warehouse big wig | `bigwig` (placeholder, outside the 32) | `port.warehouse` (owns it) | resident | open | | Rex (tentative) |
 | The big wig's child | `bigwig-child` (placeholder; type open) | `port.warehouse` | resident | yes | extremely troublesome, a real drain on the town; one of the recruitables who needs fixing to help the town; son or daughter open | Rex (tentative) |
 | The INTJ herbalist and apothecary owner | [`intj-f`](../story/characters/intj-f.md) | `port.apothecary` (owns it) | open | open | concocts potions, tinctures and such; a bit unconventional; the daughter of the apothecary's previous owner (Rex, 2026-10-27). Her psychotic trait: she has no qualms testing her concoctions on bad people, or people she perceives as evil. Part of her questline is a gamble: you work out, mostly from science and the clues you get, whether what she made will kill the person and whether they deserve it, and navigate her psychopathy to help her recover. Those who don't deserve it can't die; she has to discover naturally whether they are innocent or evil | Rex |
+| The INFP brothel worker (a femboy; pronouns open) | [`infp-m`](../story/characters/infp-m.md) | works at `port.tavern`; lives at `port.infp_house` | resident | open | quite popular; keeps clients who tried to leave as living wax statues in the basement; the rest is in their file | Rex |
 | The bartender | | `port.tavern` | resident | little reason to leave | | Rex (§7b) |
 | The blacksmith | | open | resident, has lived there his whole life | no reason to leave; could be kidnapped later | whether he is the ENTP weapon smith or someone else: open | Rex (§7b) |
 | The secret cook (an ESTP who looks like your first mate) | [`estp-f`](../story/characters/estp-f.md): the old soldier (Rex, 2026-10-27) | open | open | yes | doesn't seem to know how to cook; the best cook there | Rex |
@@ -161,3 +163,4 @@ they are in town.
 | 2026-10-27 | The ESFP is a general cook with a butcher shop, not a baker (`port.bakery` keeps its id); the INTP farmer runs the farm with her daughter; her son lives with the cook (via the story keeper) | Rex |
 | 2026-10-27 | The INTP farmer is a man (`intp-m`), the ESFP cook a woman (`esfp-f`), formerly married; children linked as `farm-daughter`, `farm-son` (via the story keeper) | Rex |
 | 2026-10-27 | The old soldier and secret cook is a woman: slug `estp-m` → `estp-f` (story keeper, 4f89757) | Rex |
+| 2026-10-27 | New place `port.infp_house`: the INFP brothel worker's house with a basement of living wax statues; location and layout open (via the story keeper, e54cf7f) | Rex |
