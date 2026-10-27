@@ -14,7 +14,6 @@ export interface FishingRng {
 export interface BiteTuning {
   waitingMs: number
   nibbleMs: number
-  submergedMs: number
 }
 
 export interface BiteSchedule {
@@ -43,7 +42,6 @@ export const BITE_FX_CLASS = {
 interface BiteConfigSection {
   waitingMs: number
   nibbleMs: number
-  submergedMs: number
 }
 
 function biteSection(config: FishingConfig): BiteConfigSection {
@@ -55,7 +53,6 @@ export function biteTuning(config: FishingConfig): BiteTuning {
   return {
     waitingMs: Number(b.waitingMs),
     nibbleMs: Number(b.nibbleMs),
-    submergedMs: Number(b.submergedMs),
   }
 }
 
@@ -74,7 +71,7 @@ export function createBiteSchedule(
   const windowMs = reactionWindowMs(stats, config)
   const nibbleBeginMs = anchorMs + t.waitingMs
   const submergedBeginMs = nibbleBeginMs + t.nibbleMs
-  const hookWindowBeginMs = submergedBeginMs + t.submergedMs
+  const hookWindowBeginMs = submergedBeginMs
   const hookWindowEndMs = hookWindowBeginMs + windowMs
   const nibbleTwitchMs = nibbleBeginMs + rng.next() * t.nibbleMs
   return {
@@ -90,7 +87,6 @@ export function createBiteSchedule(
 export function bitePhaseAt(schedule: BiteSchedule, atMs: number): BitePhase | 'expired' {
   if (atMs < schedule.nibbleBeginMs) return 'waiting'
   if (atMs < schedule.submergedBeginMs) return 'nibbling'
-  if (atMs < schedule.hookWindowBeginMs) return 'submerged'
   if (atMs <= schedule.hookWindowEndMs) return 'hookWindow'
   return 'expired'
 }
@@ -98,7 +94,6 @@ export function bitePhaseAt(schedule: BiteSchedule, atMs: number): BitePhase | '
 export function resolveHookPress(schedule: BiteSchedule, pressMs: number): HookPressOutcome {
   if (pressMs < schedule.nibbleBeginMs) return 'tooEarly'
   if (pressMs < schedule.submergedBeginMs) return 'falseStrike'
-  if (pressMs < schedule.hookWindowBeginMs) return 'tooEarly'
   if (pressMs <= schedule.hookWindowEndMs) return 'hooked'
   return 'tooLate'
 }
@@ -135,6 +130,11 @@ export function dispatchTimedHookPress(
   }
   const atPress = advanceRunToPhase(run, schedule, pressMs)
   return dispatch(atPress, { type: 'bite', event: 'hook' })
+}
+
+/** Splash and sound when the bobber submerges (FISHING.md bite beat). */
+export function biteSubmergeBeat(scene: import('phaser').Scene, worldX: number, worldY: number): void {
+  void import('../world/biteFx').then((m) => m.playBiteSubmergeFx(scene, worldX, worldY))
 }
 
 /** Advance bite phase from the clock when the schedule boundary is crossed (for UI ticks). */

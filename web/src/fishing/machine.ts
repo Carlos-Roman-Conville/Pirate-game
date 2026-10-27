@@ -156,8 +156,9 @@ function dispatchBite(run: FishingRun, event: 'advance' | 'hook'): FishingRun {
 
   if (event === 'hook') {
     if (phase === 'nibbling' || phase === 'waiting') return endRun(run, 'gotAway')
-    if (phase === 'hookWindow') return { ...run, stage: 'pullIn', bitePhase: null }
-    if (phase === 'submerged') return endRun(run, 'gotAway')
+    if (phase === 'hookWindow' || phase === 'submerged') {
+      return { ...run, stage: 'pullIn', bitePhase: null }
+    }
     return run
   }
 

@@ -126,11 +126,15 @@ export function landingDistanceTiles(
   aimDistanceTiles: number,
   targetPower: number,
   actualPower: number,
+  stats: FisherStats,
   config: FishingConfig,
 ): number {
   const t = powerTuning(config)
+  const max = maxThrowDistanceTiles(stats, config)
+  const aim = Math.min(aimDistanceTiles, max)
   const error = actualPower - targetPower
-  return aimDistanceTiles + error * t.distancePerPowerError
+  const distance = aim + error * t.distancePerPowerError
+  return Math.min(max, Math.max(0, distance))
 }
 
 function normalizeFacing(facing: CastFacing): { dx: number; dy: number } {
@@ -156,9 +160,11 @@ export function resolveCastLanding(
   const sin = Math.sin(angle)
   const castDx = forward.dx * cos - forward.dy * sin
   const castDy = forward.dx * sin + forward.dy * cos
+  const max = maxThrowDistanceTiles(stats, config)
+  const aimDistance = Math.min(aim.distanceTiles, max)
   const targetPower = targetPowerForDistance(aim.distanceTiles, stats, config)
-  const distance = landingDistanceTiles(aim.distanceTiles, targetPower, actualPower, config)
-  const lateralScale = aim.distanceTiles > 0 ? distance / aim.distanceTiles : 1
+  const distance = landingDistanceTiles(aim.distanceTiles, targetPower, actualPower, stats, config)
+  const lateralScale = aimDistance > 0 ? distance / aimDistance : 1
   const x = origin.x + castDx * distance + perp.dx * aim.lateralTiles * lateralScale
   const y = origin.y + castDy * distance + perp.dy * aim.lateralTiles * lateralScale
   return { x, y, distanceTiles: distance }

@@ -35,6 +35,18 @@ describe('bite hook press', () => {
     expect(after.result).toBe('gotAway')
   })
 
+  it('hooks on submerge instant when the player presses at submerge instant', () => {
+    const schedule = scheduleAtZero()
+    const press = schedule.submergedBeginMs
+    expect(schedule.hookWindowBeginMs).toBe(press)
+    expect(bitePhaseAt(schedule, press)).toBe('hookWindow')
+    expect(resolveHookPress(schedule, press)).toBe('hooked')
+    const run = runAtBite()
+    const after = dispatchTimedHookPress(run, schedule, press, config)
+    expect(after.stage).toBe('pullIn')
+    expect(after.bitePhase).toBeNull()
+  })
+
   it('hooks when the press lands inside the reflex reaction window', () => {
     const schedule = scheduleAtZero()
     const press = schedule.hookWindowBeginMs + 20

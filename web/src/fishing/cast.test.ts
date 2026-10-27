@@ -17,24 +17,24 @@ describe('cast landing distance', () => {
 
   it('lands on the aim distance when power matches the target spot', () => {
     const target = targetPowerForDistance(aimDistance, stats, config)
-    expect(landingDistanceTiles(aimDistance, target, target, config)).toBe(aimDistance)
+    expect(landingDistanceTiles(aimDistance, target, target, stats, config)).toBe(aimDistance)
   })
 
   it('lands past the target when power is over', () => {
     const target = targetPowerForDistance(aimDistance, stats, config)
     expect(target).toBeLessThan(1)
     const over = target + 0.15
-    expect(landingDistanceTiles(aimDistance, target, over, config)).toBeGreaterThan(aimDistance)
+    expect(landingDistanceTiles(aimDistance, target, over, stats, config)).toBeGreaterThan(aimDistance)
     const delta = Number(config.power.distancePerPowerError) * (over - target)
-    expect(landingDistanceTiles(aimDistance, target, over, config)).toBe(aimDistance + delta)
+    expect(landingDistanceTiles(aimDistance, target, over, stats, config)).toBe(aimDistance + delta)
   })
 
   it('lands short of the target when power is under', () => {
     const target = targetPowerForDistance(aimDistance, stats, config)
     const under = target - 0.15
-    expect(landingDistanceTiles(aimDistance, target, under, config)).toBeLessThan(aimDistance)
+    expect(landingDistanceTiles(aimDistance, target, under, stats, config)).toBeLessThan(aimDistance)
     const delta = Number(config.power.distancePerPowerError) * (under - target)
-    expect(landingDistanceTiles(aimDistance, target, under, config)).toBe(aimDistance + delta)
+    expect(landingDistanceTiles(aimDistance, target, under, stats, config)).toBe(aimDistance + delta)
   })
 
   it('does not throw past max range when target power is capped at 1', () => {
@@ -42,11 +42,30 @@ describe('cast landing distance', () => {
     const target = targetPowerForDistance(max + 5, stats, config)
     expect(target).toBe(1)
   })
+
+  it('lands at max throw when aim is beyond reach and power is perfect', () => {
+    const max = maxThrowDistanceTiles(stats, config)
+    const aimBeyond = max + 10
+    const target = targetPowerForDistance(aimBeyond, stats, config)
+    expect(target).toBe(1)
+    expect(landingDistanceTiles(aimBeyond, target, target, stats, config)).toBe(max)
+    const landing = resolveCastLanding(
+      { x: 0, y: 0 },
+      { dx: 0, dy: 1 },
+      { distanceTiles: aimBeyond, lateralTiles: 0 },
+      0,
+      target,
+      stats,
+      config,
+    )
+    expect(landing.distanceTiles).toBe(max)
+    expect(landing.y).toBeCloseTo(max, 5)
+  })
 })
 
 describe('resolveCastLanding', () => {
   it('reports the same distance along the cast line as landingDistanceTiles', () => {
-    const aim = { distanceTiles: 8, lateralTiles: 0 }
+    const aim = { distanceTiles: 5, lateralTiles: 0 }
     const target = targetPowerForDistance(aim.distanceTiles, stats, config)
     const landing = resolveCastLanding(
       { x: 5, y: 5 },
@@ -57,8 +76,9 @@ describe('resolveCastLanding', () => {
       stats,
       config,
     )
-    expect(landing.distanceTiles).toBe(aim.distanceTiles)
-    expect(landing.y).toBeCloseTo(5 + aim.distanceTiles, 5)
+    const expected = landingDistanceTiles(aim.distanceTiles, target, target, stats, config)
+    expect(landing.distanceTiles).toBe(expected)
+    expect(landing.y).toBeCloseTo(5 + expected, 5)
   })
 })
 

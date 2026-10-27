@@ -1,6 +1,12 @@
 import Phaser from 'phaser'
 import dock from '../../../data/pirate-ship/maps/dock.json'
-import { createBiteSchedule, dispatchTimedHookPress, syncBitePhaseToClock, type BiteSchedule } from '../fishing/bite'
+import {
+  biteSubmergeBeat,
+  createBiteSchedule,
+  dispatchTimedHookPress,
+  syncBitePhaseToClock,
+  type BiteSchedule,
+} from '../fishing/bite'
 import { expectedBeatTimesMs, fishDrawnByLure } from '../fishing/lure'
 import {
   applyFishingRun,
@@ -67,6 +73,7 @@ export class DockScene extends Phaser.Scene {
   private stageHud: Phaser.GameObjects.Text | null = null
   private resultHud: Phaser.GameObjects.Text | null = null
   private biteSchedule: BiteSchedule | null = null
+  private biteSubmergeFxPlayed = false
   private pullLine = pullInInitial(this.fishingConfig)
 
   constructor() { super('dock') }
@@ -157,7 +164,16 @@ export class DockScene extends Phaser.Scene {
     const clock = { now: () => this.time.now }
 
     if (run.stage === 'bite' && this.biteSchedule) {
+      const beforePhase = run.bitePhase
       run = syncBitePhaseToClock(run, this.biteSchedule, clock)
+      if (
+        !this.biteSubmergeFxPlayed &&
+        beforePhase === 'nibbling' &&
+        (run.bitePhase === 'submerged' || run.bitePhase === 'hookWindow')
+      ) {
+        this.biteSubmergeFxPlayed = true
+        biteSubmergeBeat(this, this.pos.x, this.pos.y + this.map.tileSize)
+      }
     }
 
     if (Phaser.Input.Keyboard.JustDown(this.keys.space)) {
@@ -173,6 +189,7 @@ export class DockScene extends Phaser.Scene {
 
     this.dockLoop = applyFishingRun(this.dockLoop, run)
     if (run.stage === 'bite' && !this.biteSchedule) {
+      this.biteSubmergeFxPlayed = false
       this.biteSchedule = createBiteSchedule(this.time.now, run.stats, this.fishingConfig, { next: () => 0.5 })
     }
     if (run.stage !== prevStage) {
@@ -212,6 +229,7 @@ export class DockScene extends Phaser.Scene {
   private enterReadWater() {
     this.clearReadWaterOverlay()
     this.biteSchedule = null
+    this.biteSubmergeFxPlayed = false
     this.pullLine = pullInInitial(this.fishingConfig)
     this.applyZoom(true)
     const run = this.dockLoop.run!

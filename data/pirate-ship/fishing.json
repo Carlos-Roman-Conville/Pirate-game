@@ -78,8 +78,6 @@
     "notes": "Bobber showdown timings; reaction window grows with reflexes.",
     "waitingMs": 800,
     "nibbleMs": 600,
-    "submergedMs": 400,
-    "hookWindowMs": 500,
     "reactionWindowBaseMs": 280,
     "reactionWindowPerReflex": 12
   },
