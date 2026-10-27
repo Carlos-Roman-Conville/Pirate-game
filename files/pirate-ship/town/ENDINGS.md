@@ -36,7 +36,9 @@ he consulted are marked as such.
   centre, you get the neutral ending: the town stays as it is, and the epilogue describes it being abandoned.
   Gameplay is fine; the story still carries the abandonment, because playing neutral when the situation needed
   action ends poorly.
-- **(Rex)** Four main plotlines, one per quadrant. Who you take on them is how the game plays out.
+- ~~**(Rex)** Four main plotlines, one per quadrant. Who you take on them is how the game plays out.~~
+  Superseded 2026-10-27 by the questing model below: all four plotlines are available, and conduct within them
+  decides.
 - **(Rex)** Each character has a clear influence toward a quadrant, a neutral one, or an opposing one. The port has
   12 people, so the plan is **3 per quadrant**.
 - **(Rex)** Your answers to quests taken in town also guide the direction.
@@ -44,6 +46,24 @@ he consulted are marked as such.
 - **(Rex)** With a 3-person crew, neutral should be hard to get unless you truly play balanced (bad things after good
   ones). The game rewards going all out in one direction. Try all four and you end up nowhere; play between them or
   combine one with another and you likely still end up in one direction.
+
+### The questing model (Rex, 2026-10-27)
+
+How the town's alignment gets moved. The character side (each character's responses, inner rules) is the story
+keeper's: [`../story/QUESTLINES.md`](../story/QUESTLINES.md).
+
+- **(Rex)** You don't pick one of the four paths. **All four questlines are available**, and you can take on each.
+- **(Rex)** How you handle each path, its mini quests and everything else determines alignment. Actions, or certain
+  sections, carry **alignment points**. On the devil's path you can destroy it (how you do it decides the points)
+  or follow it and earn devil points.
+- **(Rex)** Crew in your party see what you do, and their alignment moves by the system's inner rules (per
+  character; the story keeper's). The town then moves through the residents who stay, as recorded above.
+- **(open, A)** Whether per-character inner rules (each character steered by being egged on the way they want, and
+  veering elsewhere otherwise) still hold, or whether points plus witnessing replaced them.
+- **(open, B)** Who earns points: only the witnessing crew, or the player too.
+- **(proposed, outside AI)** The same outcome can be reached by different methods, each carrying different points.
+  The devil path example (numbers are placeholders): rescue a sacrifice: +good; destroy the hierarchy: +good +chaos;
+  outlaw the cult: +good +order; seize it for yourself: evil +order; help its rituals: evil +chaos.
 
 ### What each quadrant becomes
 
@@ -133,3 +153,4 @@ changes how routes are built.
 | 2026-10-27 | Rex's alignment model: two axes, four quadrant endings plus neutral; no game-over abandonment; outside AI's ideas as proposed; fit with `end.perfect` left open | Rex; keeper (format) |
 | 2026-10-27 | Chaotic good is your stereotypical pirate town (via the story keeper) | Rex |
 | 2026-10-27 | The pirate questline is chaotic good's plotline; the priest has no effect on it (via the story keeper) | Rex |
+| 2026-10-27 | Questing model: all four questlines available, conduct and actions carry alignment points, witnessing crew move, town moves through residents who stay; "one plotline per quadrant, who you take decides" superseded; open A and B recorded | Rex |

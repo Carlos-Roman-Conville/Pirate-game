@@ -31,6 +31,7 @@ out; the combinations of upgrades produce the endings (`ENDINGS.md`).
 | `help(<slug>)` | you helped them (what counts is per character) | Rex (verb); word proposed |
 | `return(<slug>, improved)` | you brought a crew mate back to town improved | Rex (2026-10-26, `TOWNS.md`); word proposed |
 | `rep(<town>[.<group>]) >= n` | reputation with a town or a group in it | Rex (§7b); word proposed |
+| `act(<id>) -> (g, c)` | an action, quest section or method of finishing a quest, and the alignment points it carries on good/evil (`g`) and order/chaos (`c`) | Rex (actions carry alignment points, 2026-10-27); word proposed |
 
 Words are added here only as Rex's choices need them.
 
@@ -46,8 +47,10 @@ choices change, and the town moves on two axes, good/evil and order/chaos. What 
 | `<slug>.influence` | how much they sway the town | number | proposed (outside AI) |
 | `<slug>.presence` | whether they stay in town (taking them aboard removes their pull) | in town / aboard / gone | proposed (outside AI); Rex said only residents who stay count |
 
-What moves `port.align`: your choices on each resident (Rex), your answers to town quests (Rex); town events
-(proposed). By how much: open.
+What moves `port.align` (Rex, 2026-10-27): actions and quest sections carry alignment points (`act(<id>)`); crew
+in your party who witness them move by their own inner rules (`../story/QUESTLINES.md`); the town moves through
+the residents who stay. Also Rex's: your answers to town quests. Town events: proposed. By how much: open. Whether
+the player also earns points, or only witnessing crew: open (`ENDINGS.md`, questing model, B).
 
 ### Quadrant states (proposed, outside AI)
 
@@ -128,3 +131,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-27 | Reserved slots for Rex's eleven places (`port.docks` … `port.soldier_house`), each `base` only until Rex gives states and unlocks | keeper; places Rex |
 | 2026-10-27 | Reserved `port.apothecary` (twelfth place) | keeper; place Rex |
 | 2026-10-27 | Town alignment keys (`port.align`, per-resident alignment; influence and presence proposed); outside AI's quadrant states as proposed | keeper; model Rex |
+| 2026-10-27 | Choice word `act(<id>) -> (g, c)` (proposed) for alignment points; what moves `port.align` updated to Rex's questing model | keeper; model Rex |

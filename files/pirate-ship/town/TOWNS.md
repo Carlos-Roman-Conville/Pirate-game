@@ -122,8 +122,9 @@ they are in town.
   (`ENDINGS.md`, The town's alignment). Each character has a clear influence toward a quadrant, a neutral one, or
   an opposing one.
 - **(Rex)** 12 people, **3 per quadrant**. Who sits where is open.
-- **(Rex)** Four main plotlines, one per quadrant. Each character's responses to them are in their own file (the
-  story keeper's; so far [`istj-m`](../story/characters/istj-m.md) and [`entp-m`](../story/characters/entp-m.md)).
+- **(Rex)** Four questlines, one per quadrant, all available to take on (2026-10-27: conduct within them
+  decides, `ENDINGS.md`, questing model). Each character's responses to them are in their own file and in
+  [`../story/QUESTLINES.md`](../story/QUESTLINES.md) (the story keeper's; so far [`istj-m`](../story/characters/istj-m.md) and [`entp-m`](../story/characters/entp-m.md)).
 
 | Quadrant | Residents (3) | Mark |
 |---|---|---|
@@ -153,3 +154,4 @@ they are in town.
 | 2026-10-27 | Added the apothecary (`port.apothecary`) and its owner, the INTJ herbalist who tests potions on people she sees as evil; her questline is a gamble on whether a potion kills and whether they deserve it | Rex |
 | 2026-10-27 | The old ESTP soldier is the secret cook; the herbalist is the daughter of the apothecary's previous owner (via the story keeper) | Rex |
 | 2026-10-27 | Town alignment replaces game-over abandonment: residents' alignments move the town on good/evil × order/chaos; four quadrant endings plus neutral; 3 residents per quadrant (`ENDINGS.md`) | Rex |
+| 2026-10-27 | Questing model: all four questlines open to the player; actions carry alignment points; witnessing crew and staying residents move the town (`ENDINGS.md`) | Rex |
