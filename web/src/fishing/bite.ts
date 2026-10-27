@@ -34,12 +34,6 @@ export interface BiteSchedule {
 
 export type HookPressOutcome = 'tooEarly' | 'falseStrike' | 'hooked' | 'tooLate'
 
-export const BITE_FX_CLASS = {
-  splash: 'pirate-ship-fishing-bite-splash',
-  sound: 'pirate-ship-fishing-bite-sound',
-  bobber: 'pirate-ship-fishing-bobber',
-} as const
-
 interface BiteConfigSection {
   waitingMs: number
   nibbleMs: number

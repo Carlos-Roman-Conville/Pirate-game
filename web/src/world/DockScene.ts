@@ -13,11 +13,7 @@ import {
   tryStartFishingAtDock,
   type DockLoopState,
 } from '../fishing/loop'
-import {
-  dispatch,
-  loadFishingConfig,
-  type FishingRun,
-} from '../fishing/machine'
+import { loadFishingConfig, type FishingRun } from '../fishing/machine'
 import {
   readWaterTuning,
   silhouetteDistanceTiles,
