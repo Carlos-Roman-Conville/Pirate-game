@@ -104,8 +104,11 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
 ### Inner rules: her alignment map (Rex, 2026-10-27)
 
-What the path you push her on does to her alignment (`../QUESTLINES.md`, model point 4). Rex drew it in another
-tool; the image isn't saved here yet. Every arrow ends in orderly evil:
+What the path you push her on does to her alignment (`../QUESTLINES.md`, model point 4). Rex's diagram:
+
+![The INTJ's alignment map](diagrams/intj-f-alignment.png)
+
+Every arrow ends in orderly evil:
 
 ```
               GOOD
@@ -134,7 +137,7 @@ For the code (`inner_rules`, action → destination):
 `{ "order_good": "order_evil", "chaos_good": "order_evil", "order_evil": "order_evil", "chaos_evil": "order_evil" }`
 
 - **(Rex)** "I feel like how I designed the INTJ alignment is very INTJ."
-- **(open)** Her natural alignment; the loop is orderly evil.
+- **(Rex)** Starting alignment: orderly evil (on his diagram).
 
 **Proposed (outside AI, 2026-10-27; not canon):**
 
@@ -161,3 +164,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Questline responses section added | keeper |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | Inner rules: her alignment map, every path leads to orderly evil | Rex |
+| 2026-10-27 | Diagram image saved; starting alignment orderly evil | Rex |
