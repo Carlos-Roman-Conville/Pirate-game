@@ -95,12 +95,62 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
 | Questline | Key | Reaction to what they witness you do there | Mark |
 |---|---|---|---|
-| Orderly good (church-like) | `quest.order_good` |  | open (proposed: possible support) |
-| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` |  | open |
-| Orderly evil (Cthulhu corruption) | `quest.order_evil` |  | open (proposed: possible support) |
-| Chaotic evil (killers, devil worship) | `quest.chaos_evil` |  | open (proposed: opposes) |
+| Orderly good (church-like) | `quest.order_good` | moves her to orderly evil | Rex |
+| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | moves her to orderly evil | Rex |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` | stays orderly evil (loop) | Rex |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | moves her to orderly evil | Rex |
 
 - **(proposed, outside AI)** Paired developments: ethical research vs prisoner experiments.
+
+### Inner rules: her alignment map (Rex, 2026-10-27)
+
+What the path you push her on does to her alignment (`../QUESTLINES.md`, model point 4). Rex drew it in another
+tool; the image isn't saved here yet. Every arrow ends in orderly evil:
+
+```
+              GOOD
+   +-----------------+-----------------+
+   |  ORDERLY GOOD   |  CHAOTIC GOOD   |
+   |      (OG)       |      (CG)       |
+   |       |         |     /           |
+   +-------+---------+----/------------+
+   |       v         |   /             |
+   |      (OE) <-----+--'---- (CE)     |
+   |      loop       |                 |
+   |  ORDERLY EVIL   |  CHAOTIC EVIL   |
+   +-----------------+-----------------+
+              EVIL
+   OG->OE   CG->OE   OE stays   CE->OE
+```
+
+| Pushed on (action quadrant) | She moves toward | Mark |
+|---|---|---|
+| Orderly good | orderly evil | Rex |
+| Chaotic good | orderly evil | Rex |
+| Orderly evil | orderly evil (stays: the loop) | Rex |
+| Chaotic evil | orderly evil | Rex |
+
+For the code (`inner_rules`, action → destination):
+`{ "order_good": "order_evil", "chaos_good": "order_evil", "order_evil": "order_evil", "chaos_evil": "order_evil" }`
+
+- **(Rex)** "I feel like how I designed the INTJ alignment is very INTJ."
+- **(open)** Her natural alignment; the loop is orderly evil.
+
+**Proposed (outside AI, 2026-10-27; not canon):**
+
+- What she sees in each: orderly good protecting people she judges dangerous (moral limits block necessary
+  progress); chaotic good as freedom without accountability (people can't govern themselves, so: control); orderly
+  evil as authority that enables systematic experiment (confirmation); chaotic evil as wasteful, unscientific
+  cruelty (suffering should serve a purpose).
+- The function reading: Ni keeps the vision constant and fits new things into it; Te turns everything into
+  supporting evidence; Fi makes her private moral verdicts feel objective; inferior Se is where reality finally
+  forces a confrontation.
+- Her map explains why she doesn't change, where the others' explain how they do. She isn't immune, only resistant
+  to ordinary influence.
+- An exceptional transformation condition tied to her questline: discovering through her own investigation that
+  someone she experimented on was innocent breaks her premise that she can tell who deserves it, and could unlock
+  a different map or a path toward orderly good.
+- If every character is meant to reach all four alignments through ordinary play, this map prevents it for her.
 
 ## Change log
 
@@ -110,3 +160,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Daughter of the apothecary's previous owner | Rex |
 | 2026-10-27 | Questline responses section added | keeper |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
+| 2026-10-27 | Inner rules: her alignment map, every path leads to orderly evil | Rex |

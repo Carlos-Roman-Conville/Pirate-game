@@ -184,4 +184,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The ENTP's natural alignment is chaotic evil; chaotic evil acts only reinforce him | Rex |
 | 2026-10-27 | An ESTJ's alignment map: OG→CE, CG→OG, OE→CG, CE→OE; character not yet described | Rex |
 | 2026-10-27 | An ENFJ's alignment map: OG stays, CG→OG, OE stays, CE→OE; character not yet described | Rex |
+| 2026-10-27 | The INTJ apothecary's alignment map: every path leads to orderly evil ("very INTJ") | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |
