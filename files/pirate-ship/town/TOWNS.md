@@ -65,37 +65,54 @@ town, its name changes here but its id does not.
 - **(proposed, outside AI)** Crew vs town: taking a dangerous criminal might make the town safer; taking its only
   carpenter might speed its decline; a rich merchant might revive trade but bring exploitation.
 
-### Places
+### Places (Rex, 2026-10-27)
 
-| Place | Note | Mark |
-|---|---|---|
-| The dock | where you start, on your small boat; Phase 1 builds it (`data/pirate-ship/maps/dock.json`, placeholder) | Rex (you start at the port on a small boat) |
-| A bar | implied by "the bartender" in §7b | Rex (implied); its form open |
-| A blacksmith's | implied by "the blacksmith" in §7b | Rex (implied); its form open |
-| Docks barely maintained; a harbour of fishing boats, damaged sloops and vessels that shouldn't still sail | | proposed (outside AI, via STORY.md) |
-| One tavern, one shipwright in a failing workshop, a few merchants | | proposed (outside AI, via STORY.md) |
-| A notice board | each port one small screen: dock, tavern with tables, shop, notice board (§4) | proposed |
+Each place has an id in backticks (`port.<place>`). The same id is reserved as the place's upgrade slot in
+`UPGRADES.md`, so the art keeper can key on it now; whether and how each place changes is still open.
 
-Which of these are **parts that can change** is `UPGRADES.md`'s job; none is a slot until Rex says so.
+| Id | Place | Who is there | Note | Mark |
+|---|---|---|---|---|
+| `port.docks` | The docks | the shipyard, the repairmen and the market | where you start, on your small boat; Phase 1 builds the dock (`data/pirate-ship/maps/dock.json`, placeholder) | Rex |
+| `port.shipyard` | The shipyard (on the docks) | the ENTP mechanic lives here, with a few other shipyard characters; he is the local weapon smith | | Rex |
+| `port.market` | The market | vendors | starts at the port and leads into town | Rex |
+| `port.tavern` | The tavern / brothel | the bartender (§7b) | | Rex |
+| `port.bakery` | The bakery | the ESFP baker | | Rex |
+| `port.farm` | The farm | the INTP farmer | | Rex |
+| `port.clinic` | A small clinic | the ISFJ doctor | | Rex |
+| `port.church` | The church | the ISTJ head priest | | Rex |
+| `port.warehouse` | A warehouse | a big wig who owns it and a few vendors; his troublesome son | Rex was unsure ("that requires a big wig to still be in town") | Rex (tentative) |
+| `port.fort` | The old coastal fort | the old soldier goes there one day a week | "a great locale, love that idea" | Rex |
+| `port.soldier_house` | The old soldier's locked house | the old soldier | you can't get in; you can see him leave once a week toward the fort | Rex |
+| | Docks barely maintained; a harbour of fishing boats, damaged sloops and vessels that shouldn't still sail | | look detail | proposed (outside AI, via STORY.md) |
+| | A notice board | | each port one small screen: dock, tavern with tables, shop, notice board (§4) | proposed |
 
 ### People
 
-About 12 recruitable for the 3–4-berth boat (Rex, §7b), drawn from residents and visitors. Rex designs the members
-next, then the extras.
+About 12 recruitable for the 3–4-berth boat (Rex, §7b), drawn from residents and visitors. Slugs are the story
+keeper's (`../story/characters/INDEX.md`); the character itself lives in their doc, this table only says where
+they are in town.
 
-| Who | Slug | Resident / visitor | Recruitable | Note | Mark |
-|---|---|---|---|---|---|
-| The blacksmith | | resident, has lived there his whole life | no reason to leave; could be kidnapped later | | Rex |
-| The bartender | | resident | little reason to leave | | Rex |
-| The ENTP device builder | [`entp-m`](../story/characters/entp-m.md) | open | yes, again and again: he keeps leaving and you find him back in town | key to a town improvement if let go (`UPGRADES.md`) | Rex |
-| The secret cook (an ESTP who looks like your first mate) | `estp-m` or `estp-f` (open) | open | yes | doesn't seem to know how to cook; the best cook there | Rex |
-| First mate candidates (3) | | open | yes | | Rex (three); who, open |
-| Cannoneer candidates (4) | | open | yes | one sniper-cannoneer is best for cannons alone | Rex (four); who, open |
-| Cook candidates (a few, plus the secret one) | | open | yes | overlapping, clear-cut choices | Rex |
-| Navigator, medic, sewer/clothcrafter, fisherman | | open | yes | numbers not set | Rex |
-| Cool-seeming jobs that don't fit the boat unless paired | | open | yes | they sacrifice something | Rex |
-| Low-life pirates passing through | | visitors | open | | Rex |
-| Residents with a reason they haven't moved on (sample reasons in STORY.md) | | residents | open | | proposed (outside AI) |
+| Who | Slug | Where | Resident / visitor | Recruitable | Note | Mark |
+|---|---|---|---|---|---|---|
+| The ENTP device builder, the local weapon smith | [`entp-m`](../story/characters/entp-m.md) | `port.shipyard` (lives there) | resident (lives at the shipyard) | yes, again and again: he keeps leaving and you find him back in town | key to a town improvement if let go (`UPGRADES.md` `port.entp`) | Rex |
+| The ISFJ doctor | `isfj-f` | `port.clinic` | resident: born in town; her father was the town doctor | yes | does her best to keep the townspeople going; probably a sadistic side: she gets pleasure from healing and from the pain it causes, and secretly enjoys your suffering (how she justifies it: open) | Rex |
+| The ISTJ head priest | `istj-m` | `port.church` (lives there) | resident | open | despises where he lives; especially cruel when following the rules, to a robotic degree | Rex |
+| The INTP farmer | `intp-f` (Rex: "she could be a she… she runs the farm") | `port.farm` (runs it) | resident | open | runs the farm alone since a spouse died (Rex first said "his wife"; whose spouse, open); psychopathic in some capacity; based on April Ludgate (Aubrey Plaza's deadpan secretary to Ron Swanson in Parks and Recreation) | Rex; gender settled as woman by Rex's "she runs the farm" |
+| The ESFP baker | `esfp-m` | `port.bakery` (runs it) | resident | open | jolly, with a dark side: secretly a cannibal | Rex |
+| The old soldier | `estp-m`? (open) | `port.soldier_house`; goes to `port.fort` one day a week | resident | open | a secret character; an old ESTP, very strong, a killer | Rex |
+| The warehouse big wig | (outside the 32) | `port.warehouse` (owns it) | resident | open | | Rex (tentative) |
+| The big wig's child | (open) | `port.warehouse` | resident | yes | extremely troublesome, a real drain on the town; one of the recruitables who needs fixing to help the town; son or daughter open | Rex (tentative) |
+| The bartender | | `port.tavern` | resident | little reason to leave | | Rex (§7b) |
+| The blacksmith | | open | resident, has lived there his whole life | no reason to leave; could be kidnapped later | whether he is the ENTP weapon smith or someone else: open | Rex (§7b) |
+| The secret cook (an ESTP who looks like your first mate) | `estp-m` or `estp-f` (open) | open | open | yes | doesn't seem to know how to cook; the best cook there | Rex |
+| First mate candidates (3) | | | open | yes | | Rex (three); who, open |
+| Cannoneer candidates (4) | | | open | yes | one sniper-cannoneer is best for cannons alone | Rex (four); who, open |
+| Cook candidates (a few, plus the secret one) | | | open | yes | overlapping, clear-cut choices | Rex |
+| Navigator, medic, sewer/clothcrafter, fisherman | | | open | yes | numbers not set; the ISFJ doctor may be the medic | Rex |
+| Shipyard characters (a few) | | `port.shipyard` | open | open | | Rex |
+| Market and warehouse vendors | | `port.market`, `port.warehouse` | open | open | | Rex |
+| Low-life pirates passing through | | | visitors | open | | Rex |
+| Residents with a reason they haven't moved on (sample reasons in STORY.md) | | | residents | open | | proposed (outside AI) |
 
 ### Groups (for reputation)
 
@@ -113,3 +130,4 @@ next, then the extras.
 | 2026-10-26 | Towns work like Digimon World 1: choices (recruit, let go, kidnap, help…) change certain parts, each part only certain upgrades; you can't max a town; combinations make the endings; text- and town-change based; several routes to good/perfect endings, some secret | Rex |
 | 2026-10-26 | First known secret route: letting the ENTP go on his explained departure makes him key to a town improvement that leads to the perfect ending | Rex |
 | 2026-10-26 | Story keeper handed over the endings and town-change canon (STORY.md now points here, a031580); outside AI's rival-port cause and crew-vs-town examples recorded as proposed | keeper |
+| 2026-10-27 | The starting port's places: docks (shipyard, repairmen, market), market leading into town, tavern/brothel, bakery, farm, clinic, church, warehouse (tentative), old coastal fort, the old soldier's locked house; their residents (ISFJ doctor, ISTJ priest, INTP farmer, ESFP baker, old ESTP soldier, ENTP at the shipyard as weapon smith, the warehouse big wig and his troublesome child) | Rex |

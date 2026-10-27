@@ -43,6 +43,7 @@ changes how routes are built.
 ## The shape so far
 
 - Combinations = the product of every slot's state count. Now: `port.entp` (2 states) = **2** combinations.
+  The eleven reserved place slots (2026-10-27) have only `base` so far, so they add nothing yet.
 - Each new two-state slot doubles it; ten slots of two or three states give roughly a thousand to sixty thousand.
   The endings stay a short authored list on top: each route names only the few slots it cares about, and every
   other slot can be anything.

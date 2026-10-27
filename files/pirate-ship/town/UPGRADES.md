@@ -64,21 +64,36 @@ Open on this slot:
 4. How many departures come before `explained_departure` (on his character doc; it only matters here if the
    count can be missed).
 
-### Parts not yet slots
+### Reserved slots (Rex's places, 2026-10-27)
 
-None of these is a slot until Rex says so. Listed so he can see the candidates from the docs:
+Rex named the port's places; each place's id is reserved here as its slot so ids stay stable. A reserved slot has
+only `base` until Rex says what it can become and which choices do it. "Who's tied to it" is who lives or works
+there (`TOWNS.md`), so the choices that touch it are likely about them, but no unlock is recorded until Rex gives
+one.
 
-| Candidate part | Source | Mark |
-|---|---|---|
-| The bar (the bartender's) | §7b | Rex (exists, implied) |
-| The blacksmith's | §7b | Rex (exists, implied) |
-| The docks / harbour | STORY.md; §4a | Rex (the port has a dock); its state proposed |
-| The shipwright's workshop | STORY.md | proposed (outside AI) |
-| The merchants | STORY.md | proposed (outside AI) |
-| The town's people as a whole (who stays, who leaves) | STORY.md: everyone thinking of abandoning it | Rex (the pressure); a slot for it open |
+| Slot | Part of town | Who's tied to it | States | Mark |
+|---|---|---|---|---|
+| `port.docks` | the docks (shipyard, repairmen, market) | repairmen | `base`; others open | Rex (the place) |
+| `port.shipyard` | the shipyard | `entp-m` (weapon smith), a few shipyard characters | `base`; others open | Rex (the place) |
+| `port.market` | the market, from the port into town | vendors | `base`; others open | Rex (the place) |
+| `port.tavern` | the tavern / brothel | the bartender | `base`; others open | Rex (the place) |
+| `port.bakery` | the bakery | `esfp-m` | `base`; others open | Rex (the place) |
+| `port.farm` | the farm | `intp-f` | `base`; others open | Rex (the place) |
+| `port.clinic` | the clinic | `isfj-f` | `base`; others open | Rex (the place) |
+| `port.church` | the church | `istj-m` | `base`; others open | Rex (the place) |
+| `port.warehouse` | the warehouse | the big wig, vendors, his troublesome child (a recruitable who needs fixing to help the town) | `base`; others open | Rex (tentative) |
+| `port.fort` | the old coastal fort | the old soldier (weekly) | `base`; others open | Rex (the place) |
+| `port.soldier_house` | the old soldier's locked house | the old soldier | `base` (locked); others open | Rex (the place) |
+
+`port.entp` (above) may turn out to be a state of one of these (the shipyard is his home); if so it stays its own
+id and the two are linked here, never renamed.
+
+Not yet a slot: the town's people as a whole (who stays, who leaves): the pressure is Rex's (everyone thinking of
+abandoning it); whether it's a slot is open.
 
 ## Change log
 
 | Date | Change | By |
 |---|---|---|
 | 2026-10-26 | Created: format, choice words (proposed), first slot `port.entp` from the ENTP's secret route | keeper; route Rex |
+| 2026-10-27 | Reserved slots for Rex's eleven places (`port.docks` … `port.soldier_house`), each `base` only until Rex gives states and unlocks | keeper; places Rex |
