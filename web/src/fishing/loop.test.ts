@@ -89,3 +89,39 @@ describe('dock loop', () => {
     expect(dismissResultPanel(loop)).toEqual(loop)
   })
 })
+
+describe('resultPanelMessage', () => {
+  const t = resultTuning(config)
+  const prompt = t.continuePrompt
+
+  it('shows caught headline and continue with no got-away detail', () => {
+    const msg = resultPanelMessage('caught', config)
+    expect(msg).toBe(`${t.caughtLabel}\n${prompt}`)
+    expect(msg).not.toContain(t.gotAwayLabel)
+  })
+
+  it('shows got-away headline and glossary detail for lineSnapped', () => {
+    const msg = resultPanelMessage('gotAway', config, 'lineSnapped')
+    expect(msg).toBe(`${t.gotAwayLabel}\nThe line snapped\n${prompt}`)
+  })
+
+  it('shows got-away headline and glossary detail for struckNibble', () => {
+    const msg = resultPanelMessage('gotAway', config, 'struckNibble')
+    expect(msg).toBe(`${t.gotAwayLabel}\nYou struck on a nibble\n${prompt}`)
+  })
+
+  it('shows got-away headline and glossary detail for missedBite', () => {
+    const msg = resultPanelMessage('gotAway', config, 'missedBite')
+    expect(msg).toBe(`${t.gotAwayLabel}\nToo slow on the bite\n${prompt}`)
+  })
+
+  it('shows got-away headline without detail for other', () => {
+    const msg = resultPanelMessage('gotAway', config, 'other')
+    expect(msg).toBe(`${t.gotAwayLabel}\n${prompt}`)
+  })
+
+  it('omits got-away detail when reason is omitted on a got-away result', () => {
+    const msg = resultPanelMessage('gotAway', config)
+    expect(msg).toBe(`${t.gotAwayLabel}\n${prompt}`)
+  })
+})

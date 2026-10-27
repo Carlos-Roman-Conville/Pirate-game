@@ -1,6 +1,7 @@
 import Phaser from 'phaser'
 import dock from '../../../data/pirate-ship/maps/dock.json'
 import { biteSubmergeBeat, syncBitePhaseToClock, type BiteSchedule } from '../fishing/bite'
+import { attachSubmergeSplashToWorld } from '../fishing/submergeSplash'
 import { lureRhythmIds } from '../fishing/lure'
 import {
   applyFishingRun,
@@ -218,8 +219,11 @@ export class DockScene extends Phaser.Scene {
         (run.bitePhase === 'submerged' || run.bitePhase === 'hookWindow')
       ) {
         this.biteSubmergeFxPlayed = true
-        biteSubmergeBeat(this, this.pos.x, this.pos.y + this.map.tileSize).then((splash) => {
-          this.world(splash)
+        attachSubmergeSplashToWorld(
+          biteSubmergeBeat(this, this.pos.x, this.pos.y + this.map.tileSize),
+          (splash) => this.world(splash),
+        ).catch((err) => {
+          console.warn('bite submerge fx failed', err)
         })
       }
     }
