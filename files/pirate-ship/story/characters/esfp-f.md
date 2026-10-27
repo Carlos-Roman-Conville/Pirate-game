@@ -1,4 +1,4 @@
-# The ESFP baker (unnamed; file is `esfp-f.md` until Rex names them, then it becomes `<slug>.md`)
+# The ESFP cook (unnamed; file is `esfp-f.md` until Rex names them, then it becomes `<slug>.md`)
 
 Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is canon. The field keys in backticks
 follow `_TEMPLATE.md`.
