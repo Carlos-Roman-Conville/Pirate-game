@@ -12,8 +12,8 @@ Entry shape: date, what was judged (files and versions), working, not working, t
 
 ## 2026-10-27 (later): the cast after the gender changes, the INFP and the first ties
 
-**Judged:** all 13 character files (`entp-m`, `istp-f`, `isfj-f`, `istj-m`, `estp-f`, `intj-f`, `intp-m`,
-`esfp-f`, `infp-m`, `enfj-m`, `estj`, `bigwig`, `farm-daughter`, `farm-son`) and `INDEX.md`.
+**Judged:** all 14 character files: 13 described characters plus the ESTJ, who is only an alignment map so far (`entp-m`, `istp-f`, `isfj-f`, `istj-m`, `estp-f`, `intj-f`, `intp-m`,
+`esfp-f`, `infp-m`, `enfj-m`, `estj`, `bigwig`, `farm-daughter`, `farm-son`) and `INDEX.md`. Counts below are of the 13 described. (Count corrected the same day: first written as "13 files".)
 
 **Working**
 
