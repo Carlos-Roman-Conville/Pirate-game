@@ -7,7 +7,9 @@ when it is a suggestion he hasn't stamped yet.
 Sources: `../PIRATE.md` §3 (the art combo and the three-quarter switch) and High Roller's art contract,
 `Games/Card Games/high-roller/files/high-roller/ART.md` (§1 canvas, §2 proportions, §6 shading). Characters come
 from `../story/characters/` (the story keeper's) and `../crew/ROSTER.md`. Per-character asset status is in
-`CHARACTER_SHEETS.md`; judgements of Rex's pieces are in `REVIEWS.md`.
+`CHARACTER_SHEETS.md`; judgements of Rex's pieces are in `REVIEWS.md`. Town parts change look with the player's
+choices (upgrade slots in `../town/UPGRADES.md`, the town keeper's); once that file exists, per-state art status
+goes in `TOWN_SHEETS.md`, keyed by slot id.
 
 ## 1. The style (what holds)
 
