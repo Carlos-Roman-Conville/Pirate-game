@@ -33,7 +33,7 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | infj-f | INFJ (Ni-Fe-Ti-Se) | woman | (open) | wrecker / lookout | | drafted | |
 | entj-m | ENTJ (Te-Ni-Se-Fi) | man | (open) | rival captain / first mate | | drafted | |
 | entj-f | ENTJ (Te-Ni-Se-Fi) | woman | (open) | rival captain / first mate | | drafted | |
-| enfj-m | ENFJ (Fe-Ni-Se-Ti) | man | (open) | shantyman / recruiter | a pretty boy; has an alignment map | idea (Rex) | [enfj-m.md](enfj-m.md) |
+| enfj-m | ENFJ (Fe-Ni-Se-Ti) | man | (open) | shantyman / recruiter | a pretty boy; the warehouse owner's son, badly taught; his journey into structure decides the warehouse: legit trade or stolen goods and drugs | idea (Rex) | [enfj-m.md](enfj-m.md) |
 | enfj-f | ENFJ (Fe-Ni-Se-Ti) | woman | (open) | shantyman / recruiter | | drafted | |
 | intp-m | INTP (Ti-Ne-Si-Fe) | man | (open) | farmer (Rex) | fertilises the crops with bodies, kills passers-by for it; ex-spouse of the ESFP cook; April Ludgate (to confirm) | idea (Rex) | [intp-m.md](intp-m.md) |
 | intp-f | INTP (Ti-Ne-Si-Fe) | woman | (open) | powder master | | drafted | |
@@ -55,12 +55,11 @@ as examples, unnamed).
 |---|---|---|---|---|
 | farm-daughter | the farmer and cook's daughter: helps run the farm; demented, kills livestock and people; failed actress inspired by Pearl; type open | the farm | idea (Rex) | [farm-daughter.md](farm-daughter.md) |
 | farm-son | their son: lives with the cook, collects his victims' skins for the butcher shop; type open | with the cook | idea (Rex) | [farm-son.md](farm-son.md) |
-| bigwig (placeholder) | a big wig who owns the warehouse and a few vendors (Rex, tentative: "a warehouse? hmm idk") | the starting port | idea (Rex) | |
-| bigwig-child (placeholder) | his son or daughter, extremely troubled and a legit drain on the town; a recruitable who needs fixing to help the town; type and gender open | the starting port | idea (Rex) | |
+| bigwig | the warehouse owner and a few vendors: disorganised, chaotic, warehouse in disrepair, poor alliances; father of the ENFJ; type open | the warehouse | idea (Rex) | [bigwig.md](bigwig.md) |
 
 ## Known overlaps to keep in mind (from Rex's notes, not new canon)
 
 - The starting port's secret cook is an ESTP who looks like your first mate (`../../PIRATE.md` §7b): which ESTP
   slot, and who the first mate is, are open. Settled 2026-10-27 (Rex): the cook is the old ESTP soldier, `estp-f` (a woman since 2026-10-27). Who the first mate is stays open.
 - An ESTJ has an alignment map but no description or gender yet: `estj.md` (moves to `estj-m` or `estj-f`).
-- The bigwig's child is a recruitable whose type isn't set, so their slot is open.
+- The bigwig's child is the ENFJ son, `enfj-m` (Rex, 2026-10-27).

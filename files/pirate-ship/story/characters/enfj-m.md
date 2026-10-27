@@ -1,10 +1,10 @@
-# The ENFJ pretty boy (unnamed; file is `enfj-m.md` until Rex names him)
+# The ENFJ pretty boy, the warehouse owner's son (unnamed; file is `enfj-m.md` until Rex names him)
 
 Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is canon. The field keys in backticks
 follow `_TEMPLATE.md`.
 
 - **Slot:** `enfj-m` (file was `enfj.md` until 2026-10-27)
-- **Status:** idea (only the alignment map so far)
+- **Status:** idea
 - **Last changed:** 2026-10-27
 
 ## Identity
@@ -17,8 +17,8 @@ follow `_TEMPLATE.md`.
 | Gender | `gender` | man | Rex |
 | Pirate archetype | `archetype` | | open |
 | Ship job (posts held) | `posts` | | open |
-| Where they are found | `found_at` | starting port / later port / at sea | open |
-| Resident or visitor | `town_role` | resident, visitor, looking for work | open |
+| Where they are found | `found_at` | the starting port: the warehouse, his father's | Rex |
+| Resident or visitor | `town_role` | resident | Rex |
 
 ## The psycho
 
@@ -35,11 +35,16 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Bio | `bio` | | open |
+| Bio | `bio` | son of the warehouse owner; isn't being taught well by his disorganised, chaotic father. Earlier note (the bigwig's child): extremely troubled, a legit drain on the town, a recruitable who needs fixing to help the town | Rex |
 | Likes (gifts, acts) | `likes` | | open |
 | Dislikes | `dislikes` | | open |
 | Schedule | `schedule` | their day: post, meals, the den, sleep | open |
 | Claims vs truth | `claims` | what they say they're good at, and whether it's true | open |
+
+### His journey (Rex, 2026-10-27)
+
+- **(Rex)** His journey is into making structure (Rex: "his journey into making structure is about that"; read as the son's journey, to confirm): he either turns the warehouse into a place for goods and legitimate trade, or uses it to house illegally stolen goods, drugs and such.
+- **(open)** Whether the journey is the son's or the father's.
 
 ## Joining
 
@@ -55,6 +60,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | | open |
+| his father, the warehouse owner (`bigwig`) | `rel.bigwig` | his father isn't teaching him well | Rex |
 
 ## Heart events
 
@@ -132,3 +138,4 @@ For the code (`inner_rules`, action → destination):
 |---|---|---|
 | 2026-10-27 | Created with the alignment map (OG stays, CG→OG, OE stays, CE→OE) | Rex |
 | 2026-10-27 | A man, a pretty boy; file moved from `enfj.md` to `enfj-m.md` | Rex |
+| 2026-10-27 | He is the warehouse owner's son (the bigwig's child); his journey into making structure: the warehouse for legitimate trade, or for stolen goods and drugs | Rex |

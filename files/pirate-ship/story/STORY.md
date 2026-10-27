@@ -78,7 +78,7 @@ work lives in `../art/`, not here.
   locks you out of that group (§7b).
 - **(Rex, 2026-10-27) Its places** (layout and upgrades kept by the town keeper in `../town/`): a bakery, a farm,
   a tavern/brothel, the docks (the shipyard, the repairmen and the market; the market starts at the port and leads
-  into town), a small clinic, the apothecary, the church, perhaps a warehouse, the old coastal fort, and a locked house.
+  into town), a small clinic, the apothecary, the church, the warehouse (confirmed 2026-10-27), the old coastal fort, and a locked house.
 - **(Rex, 2026-10-27) Its people so far** (`characters/INDEX.md`): the ISFJ doctor at the clinic, the INTJ herbalist at the apothecary, the ENTP
   weaponsmith at the shipyard, the ISTJ head priest, the warehouse bigwig and his troubled child, the old ESTP
   soldier in the locked house, the INTP farmer, the ESFP baker.
@@ -193,4 +193,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The ESTP veteran becomes an outdoorsman, a wilderness generalist (wood, stone, herbs, food) living isolated in a hut away from town, rarely seen; whether the locked house, fort walks and secret cook still hold is open | Rex |
 | 2026-10-27 | The ESTP: the only constant way to find her is at the fort on a certain day; she lives in the hut and goes into the forest | Rex |
 | 2026-10-27 | The ENTP and the INTJ hold each other in contempt as hacks (her occultism, his crude work); townspeople who use both lie to each and go along with whatever either says about the other | Rex |
+| 2026-10-27 | The warehouse owner is simply bad: disorganised, chaotic, the warehouse in disrepair, alliances poorly kept; his son is the ENFJ, badly taught, whose journey into making structure turns the warehouse to legitimate trade or to stolen goods and drugs | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |
