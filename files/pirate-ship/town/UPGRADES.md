@@ -114,7 +114,7 @@ one.
 | `port.church` | the church | `istj-m` | `base`; others open | Rex (the place) |
 | `port.warehouse` | the warehouse | the big wig, vendors, his troublesome child (a recruitable who needs fixing to help the town) | `base`; others open | Rex (tentative) |
 | `port.apothecary` | the apothecary | the INTJ herbalist (her potion-testing questline) | `base`; others open | Rex (the place) |
-| `port.estp_hut` | the hut away from town | `estp-f` | `base`; others open | Rex (the place); may replace `port.soldier_house` (open; if so that id is retired, never reused) |
+| `port.estp_hut` | the hut away from town | `estp-f` | `base`; others open | Rex (the place; she lives here). Whether `port.soldier_house` still exists: open (if not, that id is retired, never reused) |
 | `port.infp_house` | the INFP's house and basement | `infp-m` | `base`; others open | Rex (the place) |
 | `port.fort` | the old coastal fort | the old soldier (weekly) | `base`; others open | Rex (the place) |
 | `port.soldier_house` | the old soldier's locked house | the old soldier | `base` (locked); others open | Rex (the place) |

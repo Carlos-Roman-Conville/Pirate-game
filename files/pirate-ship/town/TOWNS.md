@@ -82,10 +82,10 @@ Each place has an id in backticks (`port.<place>`). The same id is reserved as t
 | `port.church` | The church | the ISTJ head priest | | Rex |
 | `port.warehouse` | A warehouse | a big wig who owns it and a few vendors; his troublesome son | Rex was unsure ("that requires a big wig to still be in town") | Rex (tentative) |
 | `port.apothecary` | The apothecary (herbalist's) | the INTJ herbalist, its owner | the place Rex had forgotten in his first list | Rex |
-| `port.estp_hut` | A hut away from town | the old soldier (`estp-f`), isolated, rarely seen | whether this replaces her locked house (`port.soldier_house`) and her weekly walk to the fort: open | Rex |
+| `port.estp_hut` | A hut away from town | the old soldier (`estp-f`), where she lives; isolated, rarely seen; she goes into the forest (story keeper's reading of Rex's typo, to confirm) | | Rex |
 | `port.infp_house` | The INFP's house, with a basement | the INFP brothel worker; clients kept in the basement as living wax statues | location and layout open | Rex |
 | `port.fort` | The old coastal fort | the old soldier goes there one day a week | "a great locale, love that idea" | Rex |
-| `port.soldier_house` | The old soldier's locked house | the old soldier | you can't get in; you can see her leave once a week toward the fort | Rex |
+| `port.soldier_house` | The old soldier's locked house | the old soldier | you can't get in; you could see her leave once a week toward the fort. Whether it still exists now she lives in the hut: open | Rex (2026-10-27); existence open |
 | | Docks barely maintained; a harbour of fishing boats, damaged sloops and vessels that shouldn't still sail | | look detail | proposed (outside AI, via STORY.md) |
 | | A notice board | | each port one small screen: dock, tavern with tables, shop, notice board (§4) | proposed |
 
@@ -104,7 +104,7 @@ they are in town.
 | The ESFP cook | [`esfp-f`](../story/characters/esfp-f.md) | `port.bakery`, the butcher shop (runs it) | resident | open | a woman (Rex, 2026-10-27); more a general cook than a baker; has a butcher shop; jolly, with a dark side: secretly a cannibal; the farmer's ex-spouse | Rex |
 | The farmer's daughter | [`farm-daughter`](../story/characters/farm-daughter.md) | `port.farm` (runs it with her father) | resident | open | | Rex |
 | The farmer's son | [`farm-son`](../story/characters/farm-son.md) | `port.bakery` (lives with the cook) | resident | open | | Rex |
-| The old soldier | [`estp-f`](../story/characters/estp-f.md) | `port.soldier_house`; goes to `port.fort` one day a week; or lives in `port.estp_hut` away from town, rarely seen (which: open) | resident | open | a secret character; an old ESTP woman (Rex, 2026-10-27), very strong, a killer | Rex |
+| The old soldier | [`estp-f`](../story/characters/estp-f.md) | lives at `port.estp_hut`; only reliably found at `port.fort`, on a certain day each week; goes into the forest (to confirm) | resident | open | a secret character; an old ESTP woman, very strong, a killer; also the secret cook | Rex |
 | The warehouse big wig | `bigwig` (placeholder, outside the 32) | `port.warehouse` (owns it) | resident | open | | Rex (tentative) |
 | The big wig's child | `bigwig-child` (placeholder; type open) | `port.warehouse` | resident | yes | extremely troublesome, a real drain on the town; one of the recruitables who needs fixing to help the town; son or daughter open | Rex (tentative) |
 | The INTJ herbalist and apothecary owner | [`intj-f`](../story/characters/intj-f.md) | `port.apothecary` (owns it) | open | open | concocts potions, tinctures and such; a bit unconventional; the daughter of the apothecary's previous owner (Rex, 2026-10-27). Her psychotic trait: she has no qualms testing her concoctions on bad people, or people she perceives as evil. Part of her questline is a gamble: you work out, mostly from science and the clues you get, whether what she made will kill the person and whether they deserve it, and navigate her psychopathy to help her recover. Those who don't deserve it can't die; she has to discover naturally whether they are innocent or evil | Rex |
@@ -166,3 +166,4 @@ they are in town.
 | 2026-10-27 | The old soldier and secret cook is a woman: slug `estp-m` → `estp-f` (story keeper, 4f89757) | Rex |
 | 2026-10-27 | New place `port.infp_house`: the INFP brothel worker's house with a basement of living wax statues; location and layout open (via the story keeper, e54cf7f) | Rex |
 | 2026-10-27 | New place `port.estp_hut`: the old soldier lives isolated in a hut away from town, rarely seen; whether it replaces the locked house and the weekly fort walk is open (via the story keeper, bb37f37) | Rex |
+| 2026-10-27 | The old soldier lives in the hut, is only reliably found at the fort on a certain day each week, and goes into the forest (to confirm); whether the locked house still exists is open (via the story keeper, 2d77c48) | Rex |
