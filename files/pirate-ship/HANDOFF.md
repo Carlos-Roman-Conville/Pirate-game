@@ -13,6 +13,7 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
   first beat is one period after the play press (test "first beat"); the fish silhouettes stay through aim,
   direction and power (`silhouettes.ts`); aim's arrow keys move in screen directions; rhythm boxes carry their
   names; the prompt follows the lure phase. Pull-in labels (tension, integrity, landing point) show.
+- Task 2469 fixed the bite splash also being drawn by `hudCam` (splash is tagged after its async FX loads).
 - Pull in: hold Space, intensity grows to `maxPullIntensity`, release pulls; past `weakenTensionThreshold` costs
   line integrity, past `lineBreakTension` it snaps. Strength lands fish in fewer pulls.
 - Lure and bite are separate stages; `bite.lureWaitFactor` (placeholder 0.5) shortens the wait on a lure draw.
@@ -26,7 +27,7 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
 
 - Pull-in fairness numbers (FISHING.md stage 7): Rex's call; they stay placeholders in `fishing.json`.
 - The game's real name (repo and folder rename when Rex names it): Rex's.
-- `desktop: open the dock in a browser and play a full catch` (no task has run the game in a browser).
+- Rex replays after 2468: HUD at zoom 2+, hitting the lure's first beat, aiming at visible silhouettes, screen-direction aim keys (his check, not the belt's).
 - `desktop:` check a hard pull snapping the line, the bite's sound, and a phone-size screen.
 - `desktop:` progress-page edits (`../progress/ui/pirate-ship.json`) live outside this repo.
 
