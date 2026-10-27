@@ -1,0 +1,29 @@
+{
+  "name": "dock",
+  "tileSize": 16,
+  "note": "Placeholder map. Rows are strings, one character per tile; the legend says what each character is.",
+  "legend": {
+    "~": { "name": "water", "solid": true },
+    "=": { "name": "planks", "solid": false },
+    "B": { "name": "hull", "solid": true },
+    "d": { "name": "deck", "solid": false },
+    "p": { "name": "post", "solid": true }
+  },
+  "spawn": { "x": 3, "y": 6 },
+  "rows": [
+    "~~~~~~~~~~~~~~~~~~~~~~~~",
+    "~~~~~~~~~~~~~~~~~~~~~~~~",
+    "======~~~~~~~~~~~~~~~~~~",
+    "======~~~~~~~~~~~~~~~~~~",
+    "======~~~~~~~~~~~~~~~~~~",
+    "======~~~~~~~~~~~~~~~~~~",
+    "================~~~~~~~~",
+    "================~~~~~~~~",
+    "======~~~BBBBBB~~~~~~~~~",
+    "======~~~BddddB~~~~~~~~~",
+    "======~~~BddddB~~~~~~~~~",
+    "======~~~BBBBBB~~~~~~~~~",
+    "======~~~~~~~~~~~~~~~~~~",
+    "======~~~~~~~~~~~~~~~~~~"
+  ]
+}
