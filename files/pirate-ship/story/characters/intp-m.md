@@ -44,7 +44,7 @@ follow `_TEMPLATE.md`.
 ### Notes (Rex, 2026-10-27)
 
 - **(Rex)** Based on April Ludgate from Parks and Recreation (Aubrey Plaza), the deadpan one.
-- **(open)** What her psychopathy is.
+- ~~**(open)** What her psychopathy is.~~ Answered 2026-10-27: bodies as fertiliser (see Psycho core).
 
 ## Joining
 

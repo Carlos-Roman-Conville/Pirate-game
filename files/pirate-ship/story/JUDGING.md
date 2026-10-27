@@ -10,6 +10,49 @@ specifically and honestly, judged against Rex's own goals (from `STORY.md`):
 
 Entry shape: date, what was judged (files and versions), working, not working, the one thing to fix first.
 
+## 2026-10-27 (later): the cast after the gender changes, the INFP and the first ties
+
+**Judged:** all 13 character files (`entp-m`, `istp-f`, `isfj-f`, `istj-m`, `estp-f`, `intj-f`, `intp-m`,
+`esfp-f`, `infp-m`, `enfj-m`, `estj`, `bigwig`, `farm-daughter`, `farm-son`) and `INDEX.md`.
+
+**Working**
+
+- **Interconnected crew (goal 4): went from empty to real.** Last entry's fix-first is done. There are four kinds
+  of tie now: a family (the farm household split by the cannibalism), a rivalry (ENTP vs INTJ), a supply chain
+  (the INFP uses both of them) and a parent who failed (bigwig and ENFJ).
+- **The ENTP–INTJ lie is the best new idea.** It gives the villagers behaviour, not just the two leads: anyone who
+  uses both has to play along. It's systemic, and the player can be put in the same position.
+- **The INFP ties the rivals together.** Two people who call each other hacks have their work combined in one
+  basement. Whether they know is open, and either answer is a reveal.
+- **The INFP is very type-true.** Fi's idealised love that won't let a person change or leave; the statues "acting
+  out their days" are a relationship frozen at its best moment. It is goal 3 made literal: getting close to her
+  is the danger.
+- **The ENFJ's type, map and arc agree.** His map pulls everything toward order, his journey is "making
+  structure", and the warehouse's two fates (legit trade or stolen goods) are the good/evil side of that order.
+- **"Hot" (goal 1) is on the page now.** Pretty boy, femboy, tomboy, butch woman: four distinct kinds of appeal,
+  not one type repeated.
+- **ISTP vs ESTP is a clean split.** A specialist (only the hunt) and a generalist (wood, stone, herbs, food).
+
+**Not working yet**
+
+- **The secret-monster reveal is now the majority.** The doctor, cook, farmer, son, daughter and INFP are all a
+  pleasant front over a hidden horror: six of 13. Only the ENTP, ISTP, priest and INTJ are dangerous in the open.
+- **Four horrors are about corpses.** The cook (humans in food), the son (skins), the farmer (bodies as
+  fertiliser) and the INFP (bodies in wax). Each is distinct, but goal 2 says dangerous in different ways, and
+  this is one theme four times. Three of them live in one household.
+- **Permission (goal 1) is still empty on every file.** The new characters are monstrous in any setting; nothing
+  yet says why a pirate haven lets them be.
+- **The player is missing from almost every file.** `rel.player` is blank on 11 of 13. Only the ENTP (you keep
+  going back for him) and the ISTP (at her mercy in the water) have a thread with you. Romance is the game, and it
+  has the least on the page.
+- **Two characters have no danger yet.** The ENFJ (a strong arc, but no psycho core) and the bigwig, who is "simply
+  bad": incompetent rather than psycho, which may be the point for a non-recruit.
+- **The ESTP's killer side is left over.** Her new identity (a gatherer in a hut) is a role, not a danger; "a
+  killer" has nothing behind it now. Her locked house and the secret-cook/first-mate tie are unresolved.
+- **The priest and the doctor are still unconnected** to anyone.
+
+**Fix first:** the player. For each character, what courting them looks like and how their danger turns on you.
+
 ## 2026-10-27: the cast so far
 
 **Judged:** the 8 drafted characters (`entp-m`, `istp-m`, `isfj-f`, `istj-m`, `estp-m`, `intp-f`, `esfp-m`,
