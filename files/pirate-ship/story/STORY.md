@@ -189,4 +189,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The farm family: the INTP farmer (bodies as fertiliser) and the ESFP cook (cannibal, butcher shop; not a baker) used to be married; their daughter (Pearl-inspired killer) runs the farm with the farmer; their son (skin collector) lives with the cook. | Rex |
 | 2026-10-27 | The INTP farmer is a man and the ESFP cook a woman (files now `intp-m`, `esfp-f`) | Rex |
 | 2026-10-27 | The ENFJ is a pretty boy (`enfj-m`); the ISTP is a tomboy, a small, petite girl who is extremely effective at hunting (`istp-f`); the ESTP is a brutish, butch woman (`estp-f`); the INFP is a femboy (`infp-m`) | Rex |
+| 2026-10-27 | The INFP femboy works at the brothel and turns clients who try to leave into living wax statues in her basement, using the ENTP's device and the INTJ's potions | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

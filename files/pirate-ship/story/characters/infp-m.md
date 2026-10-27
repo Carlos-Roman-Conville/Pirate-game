@@ -1,4 +1,4 @@
-# The INFP femboy (unnamed; file is `infp-m.md` until Rex names him)
+# The INFP femboy (unnamed; file is `infp-m.md` until Rex names them)
 
 Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is canon. The field keys in backticks
 follow `_TEMPLATE.md`.
@@ -14,19 +14,19 @@ follow `_TEMPLATE.md`.
 | Name | `name` | | open |
 | Type | `type` | INFP | Rex |
 | Function stack | `stack` | Fi-Ne-Si-Te | Rex |
-| Gender | `gender` | man | Rex |
+| Gender | `gender` | man, a femboy; pronouns open: Rex's notes say "he" once, then "she" and "her" (this file uses "she" for now) | Rex; pronouns open |
 | Pirate archetype | `archetype` | | open |
-| Ship job (posts held) | `posts` | | open |
-| Where they are found | `found_at` | starting port / later port / at sea | open |
-| Resident or visitor | `town_role` | resident, visitor, looking for work | open |
+| Ship job (posts held) | `posts` | works at the port's brothel; quite popular | Rex |
+| Where they are found | `found_at` | the starting port: the brothel (the tavern/brothel) | Rex |
+| Resident or visitor | `town_role` | resident; has a house with a basement | Rex |
 
 ## The psycho
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Psycho core | `psycho_core` | the type's killer form, in this character | open |
+| Psycho core | `psycho_core` | falls in love with her clients; when a client starts to pull away and tries to leave, she kidnaps them in their sleep and dips them in a vat of hot wax, turning them into wax statues. She keeps them in her basement, dressed up and acting out their days, and keeps making love to them | Rex |
 | Madness break | `madness_break` | what they do when the meter crosses the line | open |
-| Madness triggers | `madness_triggers` | | open |
+| Madness triggers | `madness_triggers` | a client she loves pulling away and trying to leave | Rex |
 | Why piracy allows it | `permission` | how the setting makes it permissible | open |
 | Their slight | `slight` | the thing that, repeated, makes them leave | open |
 | Clues to the slight | `slight_clues` | obvious, subtle, too late | open |
@@ -40,6 +40,13 @@ follow `_TEMPLATE.md`.
 | Dislikes | `dislikes` | | open |
 | Schedule | `schedule` | their day: post, meals, the den, sleep | open |
 | Claims vs truth | `claims` | what they say they're good at, and whether it's true | open |
+
+### Notes (Rex, 2026-10-27)
+
+- **(Rex)** The backstory is simple for now.
+- **(Rex)** The statues are kept alive (with the INTJ's potions).
+- **(open)** Whether the ENTP and the INTJ know what their work is used for.
+- **(open)** Her pronouns (see Gender).
 
 ## Joining
 
@@ -55,6 +62,8 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | | open |
+| the ENTP mechanic (`entp-m`) | `rel.entp-m` | she uses a device he built to do the waxing | Rex (idea he likes) |
+| the INTJ apothecary (`intj-f`) | `rel.intj-f` | she uses potions the INTJ made to keep the wax statues alive | Rex (idea he likes) |
 
 ## Heart events
 
@@ -97,3 +106,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | Date | Change | By |
 |---|---|---|
 | 2026-10-27 | Created: the INFP is a femboy | Rex |
+| 2026-10-27 | Backstory: a popular brothel worker who falls for clients and, when they try to leave, turns them into living wax statues kept in her basement; uses the ENTP's device and the INTJ's potions | Rex |

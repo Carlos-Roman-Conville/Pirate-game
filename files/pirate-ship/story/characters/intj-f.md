@@ -63,6 +63,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | | open |
+| the INFP femboy (`infp-m`) | `rel.infp-m` | made the potions the INFP uses to keep the wax statues alive | Rex (idea he likes) |
 
 ## Heart events
 
@@ -170,3 +171,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Inner rules: her alignment map, every path leads to orderly evil | Rex |
 | 2026-10-27 | Diagram image saved; starting alignment orderly evil | Rex |
 | 2026-10-27 | Only path is orderly evil unless shown her belief is wrong; then she becomes neutral | Rex |
+| 2026-10-27 | Tie: her potions keep the INFP's wax statues alive | Rex |

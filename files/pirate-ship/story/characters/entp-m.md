@@ -84,6 +84,7 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | you are the one who keeps going back for him | Rex |
+| the INFP femboy (`infp-m`) | `rel.infp-m` | built the device the INFP uses to dip clients in hot wax | Rex (idea he likes) |
 | the town | `rel.town` | key to an improvement that leads to the perfect ending, if you let him go (see `../../town/UPGRADES.md`) | Rex |
 
 ## Heart events
@@ -167,3 +168,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | Inner rules: his alignment map (OG→CG, CG→OE, OE→OG, CE stays) | Rex |
 | 2026-10-27 | Natural alignment: chaotic evil; chaotic evil acts only reinforce him | Rex |
+| 2026-10-27 | Tie: the INFP uses a device he built for the waxing | Rex |
