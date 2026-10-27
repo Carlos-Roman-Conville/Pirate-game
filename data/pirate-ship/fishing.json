@@ -41,7 +41,9 @@
     "notes": "Visible range in tiles; scaled by eyesight and fishing skill in unit 3.",
     "baseRangeTiles": 8,
     "rangePerEyesight": 0.5,
-    "rangePerFishingSkill": 0.08
+    "rangePerFishingSkill": 0.08,
+    "viewTilesWide": 32,
+    "viewTilesHigh": 20
   },
   "direction": {
     "notes": "Cone aim; higher fishing skill narrows cone and slows the line.",

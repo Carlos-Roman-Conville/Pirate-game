@@ -69,3 +69,16 @@ export function facingOf(dx: number, dy: number): Facing | null {
 export function integerZoom(width: number, height: number, tileSize: number, tilesWide = 20, tilesHigh = 12): number {
   return Math.max(1, Math.floor(Math.min(width / (tileSize * tilesWide), height / (tileSize * tilesHigh))))
 }
+
+/** On walkable dock with water next door (can cast from here). */
+export function atDockEdge(map: TileMap, x: number, y: number): boolean {
+  const t = map.tileSize
+  const tx = Math.floor(x / t)
+  const ty = Math.floor(y / t)
+  const here = tileAt(map, tx, ty)
+  if (!here || here.name === 'water') return false
+  for (const [dx, dy] of [[0, 1], [0, -1], [1, 0], [-1, 0]] as const) {
+    if (tileAt(map, tx + dx, ty + dy)?.name === 'water') return true
+  }
+  return false
+}
