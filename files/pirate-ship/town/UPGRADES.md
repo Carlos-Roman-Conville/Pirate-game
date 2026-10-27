@@ -108,8 +108,8 @@ one.
 | `port.shipyard` | the shipyard | `entp-m` (weapon smith), a few shipyard characters | `base`; others open | Rex (the place) |
 | `port.market` | the market, from the port into town | vendors | `base`; others open | Rex (the place) |
 | `port.tavern` | the tavern / brothel | the bartender | `base`; others open | Rex (the place) |
-| `port.bakery` | the bakery | `esfp-m` | `base`; others open | Rex (the place) |
-| `port.farm` | the farm | `intp-f` | `base`; others open | Rex (the place) |
+| `port.bakery` | the butcher shop (id from when it was the bakery; ids never change) | `esfp-m`, the farmer's son | `base`; others open | Rex (the place) |
+| `port.farm` | the farm | `intp-f`, her daughter | `base`; others open | Rex (the place) |
 | `port.clinic` | the clinic | `isfj-f` | `base`; others open | Rex (the place) |
 | `port.church` | the church | `istj-m` | `base`; others open | Rex (the place) |
 | `port.warehouse` | the warehouse | the big wig, vendors, his troublesome child (a recruitable who needs fixing to help the town) | `base`; others open | Rex (tentative) |
@@ -132,3 +132,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-27 | Reserved `port.apothecary` (twelfth place) | keeper; place Rex |
 | 2026-10-27 | Town alignment keys (`port.align`, per-resident alignment; influence and presence proposed); outside AI's quadrant states as proposed | keeper; model Rex |
 | 2026-10-27 | Choice word `act(<id>) -> (g, c)` (proposed) for alignment points; what moves `port.align` updated to Rex's questing model | keeper; model Rex |
+| 2026-10-27 | `port.bakery` is now the butcher shop (id unchanged); farm and butcher shop gain the farmer's children | keeper; Rex |
