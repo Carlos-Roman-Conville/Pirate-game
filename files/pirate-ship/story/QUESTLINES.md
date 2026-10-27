@@ -54,6 +54,7 @@ suggestion (not canon); blank = open.
 | ESFP baker (`esfp-m`) | | | | |
 | INTP farmer (`intp-f`) | | | | |
 | ESTP soldier and cook (`estp-m`) | | | | |
+| ENFJ, unnamed (`enfj.md`) | **Rex: stays orderly good (loop)** | **Rex: moves them to orderly good** | **Rex: stays orderly evil (loop)** | **Rex: moves them to orderly evil** |
 | ESTJ, undescribed (`estj.md`) | **Rex: moves them to chaotic evil** | **Rex: moves them to orderly good** | **Rex: moves them to chaotic good** | **Rex: moves them to orderly evil** |
 
 ## Proposed (outside AI, 2026-10-27; not canon)
@@ -76,6 +77,7 @@ suggestion (not canon); blank = open.
 |---|---|---|
 | 2026-10-27 | Created: questline responses as "who you take on each questline is how the game plays out"; matrix of take-them-on effects | Rex |
 | 2026-10-27 | Chaotic good is the stereotypical pirate town; the pirate questline is chaotic good, the priest has no effect on it | Rex |
+| 2026-10-27 | The ENFJ's alignment map (character not yet described) | Rex |
 | 2026-10-27 | The ESTJ's alignment map (character not yet described) | Rex |
 | 2026-10-27 | The ENTP's alignment map (inner rules); open A answered: per-character rules hold | Rex |
 | 2026-10-27 | New questing model: all four paths open, conduct earns points, witnessing crew shift by inner rules; "who you take" superseded; cells reread as witnessed reactions; open A, B and the ENTP's guarantee | Rex |
