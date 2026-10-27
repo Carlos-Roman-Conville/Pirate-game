@@ -39,6 +39,29 @@ work lives in `../art/`, not here.
 
 - **(Rex)** Always the same port, the game's Pelican Town (§4a).
 - **(Rex)** Run-down, full of dark characters, so low reputation is common there (§7b).
+- **(Rex, 2026-10-26) The key theme that makes it believable:** the town is run down and in shambles, weakly kept
+  together by the trade coming through, just barely. Houses are old and weathered from the sea; none of the
+  buildings look new.
+- **(Rex)** What keeps it together: a community that keeps living there, and the occasional ship that comes by to
+  trade and spend its coin.
+- **(Rex)** What keeps it afloat: it is a **small pirate haven**. It houses criminals, ne'er-do-wells and all
+  types of schemers, the perfect place for lowlifes to thrive.
+- **(Rex)** It is not a bustling port of pirates. Only low-life pirates come; a high-calibre pirate is extremely
+  rare, because the quality of the women and the drink is absurdly weak.
+- **(proposed, outside AI)** The economy as a loop: low-level pirates and fugitives come for shelter, anonymity,
+  repairs and cheap entertainment; they spend what little they have; residents survive on it but can rarely
+  improve anything; successful captains take their wealth elsewhere; the next desperate wave arrives. That is why
+  it never grows into a real pirate port.
+- **(proposed, outside AI)** The place: barely maintained docks; buildings repaired so often nothing matches;
+  salt has eaten every exposed surface; one tavern, one shipwright in a failing workshop, a few merchants. The
+  harbour holds fishing boats, damaged sloops and vessels that shouldn't still sail. A proper pirate ship arriving
+  is an event the whole town notices, because someone with money has come.
+- **(proposed, outside AI)** Most residents have a reason they haven't moved on (sample reasons: a first mate
+  disgraced by a failed mutiny, a shipwright in debt to a local criminal, a gambler too indebted to leave, a
+  surgeon who lost their licence or fled prosecution, an aspiring pirate nobody takes seriously, a raider too
+  injured to sail, a smuggler with a good arrangement, a tavern worker supporting family). Some have no tragedy:
+  they like the town, have family there, or are comfortable with its lawlessness, so not everyone is a disgraced
+  outcast.
 - **(Rex)** A real place, an ecosystem, not a hiring board: residents with no reason to leave (the blacksmith who
   has lived there his whole life; the bartender has little reason) plus visitors and people looking for work. The
   recruit pool is drawn from both (§7b).
@@ -56,6 +79,9 @@ work lives in `../art/`, not here.
 
 ### Later ports
 
+- **(Rex, 2026-10-26)** Ports have a hierarchy. The starting port is at the bottom, where low-life pirates go;
+  the last level is a true pirate port, rich from the calibre of pirates coming through. (What sits between is
+  open.)
 - **(Rex)** A bigger boat lets you reach other ports nearby and trade (§4a). Sailing on a map, ports and time at
   sea come later (§5).
 - **(proposed)** Each port one small screen: dock, tavern with tables, shop, notice board (§4).
@@ -87,6 +113,15 @@ work lives in `../art/`, not here.
   manipulation (§7a).
 - **(Rex)** Any crew mate can leave over their slight, with clues obvious, subtle or too late (§7b).
 - **(Rex)** Three ways to recruit: hire, mercenaries, kidnapping (§7b).
+- **(proposed, outside AI, 2026-10-26)** A central plot from the town's fragility: a richer pirate port starts
+  drawing away the few ships that still visit; the tavern, the shipwright and the merchants lose trade, residents
+  think of leaving, the criminals grow desperate. Residents split: attract wealthier pirates, go legitimate, raid
+  ships themselves, or one ambitious character seizes the town to make it a real haven. The player's rise
+  gradually crosses the town's fate.
+- **(proposed, outside AI)** The town has its own trajectory; the player isn't expected to fix it. You might never
+  come back, might worsen it by recruiting its most capable people, or might become its main source of trade.
+- **(proposed, outside AI)** The return: a nobody in a town of nobodies at the start; later, rich and with a big
+  crew, you come back to the same docks. The town hasn't changed; how its people see you has.
 
 ## Open threads (story-level questions for Rex)
 
@@ -96,6 +131,9 @@ work lives in `../art/`, not here.
 4. The main plot, and whether there is an antagonist (a navy, a rival crew, the port itself).
 5. Names for all 32 crew, and which of them live in the starting port.
 6. Whether anything from High Roller's world carries over into the story, or only its systems and art.
+7. Is the starting port already dying when the player arrives, or does a new event start threatening it? (Raised
+   by the outside AI, 2026-10-26.)
+8. The ports between the starting port and the rich pirate port at the top.
 
 ## Decisions log
 
@@ -109,3 +147,5 @@ work lives in `../art/`, not here.
 | 2026-10-26 | Confirmed: the ISFJ is the medic who keeps you from leaving; the ISTJ follows the rules to the letter | Rex |
 | 2026-10-26 | The secret cook: an ESTP who looks like your first mate | Rex |
 | 2026-10-26 | Story keeper set up: this folder | keeper |
+| 2026-10-26 | The starting port is a run-down, weathered small pirate haven for lowlifes, kept alive barely by its community and occasional trade; high-calibre pirates are rare (weak women and drink); the last level is a rich true pirate port | Rex |
+| 2026-10-26 | Outside AI's ideas recorded as proposed: the economic loop, reasons residents stay, the rival-port plot, the town's own trajectory, the return | proposed |
