@@ -127,8 +127,8 @@ one.
 | `legit` | a place for goods and legitimate trade | through the son's journey into making structure (`enfj-m`); which choices lead here: open | `illicit` | Rex (state); unlock open |
 | `illicit` | storage for illegally stolen goods, drugs and such | through the same journey; which choices lead here: open | `legit` | Rex (state); unlock open |
 
-State ids are the keeper's. "Either… or" is Rex's, so the two rule each other out. Open: whose journey it is (the
-son's, as the story keeper reads it, or the father's); which choices or quadrant send it each way; whether it can
+State ids are the keeper's. "Either… or" is Rex's, so the two rule each other out. The journey is the son's,
+`enfj-m` (Rex, 2026-10-27). Open: which choices or quadrant send it each way; whether it can
 stay `base` if the journey never happens (for example, if you take the son aboard).
 
 `port.entp` (above) may turn out to be a state of one of these (the shipyard is his home); if so it stays its own
@@ -151,3 +151,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-27 | Reserved `port.infp_house` (thirteenth place) | keeper; place Rex |
 | 2026-10-27 | Reserved `port.estp_hut` (fourteenth place; may replace `port.soldier_house`) | keeper; place Rex |
 | 2026-10-27 | `port.warehouse` states `legit` / `illicit` (Rex), exclusive; unlocks open | keeper; states Rex |
+| 2026-10-27 | The warehouse journey is the son's (`enfj-m`), not the father's | Rex |
