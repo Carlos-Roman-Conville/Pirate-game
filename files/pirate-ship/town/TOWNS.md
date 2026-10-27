@@ -95,16 +95,16 @@ they are in town.
 | Who | Slug | Where | Resident / visitor | Recruitable | Note | Mark |
 |---|---|---|---|---|---|---|
 | The ENTP device builder, the local weapon smith | [`entp-m`](../story/characters/entp-m.md) | `port.shipyard` (lives there) | resident (lives at the shipyard) | yes, again and again: he keeps leaving and you find him back in town | key to a town improvement if let go (`UPGRADES.md` `port.entp`) | Rex |
-| The ISFJ doctor | `isfj-f` | `port.clinic` | resident: born in town; her father was the town doctor | yes | does her best to keep the townspeople going; probably a sadistic side: she gets pleasure from healing and from the pain it causes, and secretly enjoys your suffering (how she justifies it: open) | Rex |
-| The ISTJ head priest | `istj-m` | `port.church` (lives there) | resident | open | despises where he lives; especially cruel when following the rules, to a robotic degree | Rex |
-| The INTP farmer | `intp-f` (Rex: "she could be a she… she runs the farm") | `port.farm` (runs it) | resident | open | runs the farm alone since a spouse died (Rex first said "his wife"; whose spouse, open); psychopathic in some capacity; based on April Ludgate (Aubrey Plaza's deadpan secretary to Ron Swanson in Parks and Recreation) | Rex; gender settled as woman by Rex's "she runs the farm" |
-| The ESFP baker | `esfp-m` | `port.bakery` (runs it) | resident | open | jolly, with a dark side: secretly a cannibal | Rex |
-| The old soldier | `estp-m`? (open) | `port.soldier_house`; goes to `port.fort` one day a week | resident | open | a secret character; an old ESTP, very strong, a killer | Rex |
-| The warehouse big wig | (outside the 32) | `port.warehouse` (owns it) | resident | open | | Rex (tentative) |
-| The big wig's child | (open) | `port.warehouse` | resident | yes | extremely troublesome, a real drain on the town; one of the recruitables who needs fixing to help the town; son or daughter open | Rex (tentative) |
+| The ISFJ doctor | [`isfj-f`](../story/characters/isfj-f.md) | `port.clinic` | resident: born in town; her father was the town doctor | yes | does her best to keep the townspeople going; probably a sadistic side: she gets pleasure from healing and from the pain it causes, and secretly enjoys your suffering (how she justifies it: open) | Rex |
+| The ISTJ head priest | [`istj-m`](../story/characters/istj-m.md) | `port.church` (lives there) | resident | open | despises where he lives; especially cruel when following the rules, to a robotic degree | Rex |
+| The INTP farmer | [`intp-f`](../story/characters/intp-f.md) | `port.farm` (runs it) | resident | open | runs the farm alone since a spouse died (Rex first said "his wife"; whose spouse, open); psychopathic in some capacity; based on April Ludgate (Aubrey Plaza's deadpan secretary to Ron Swanson in Parks and Recreation) | Rex; gender settled as woman by Rex's "she runs the farm" |
+| The ESFP baker | [`esfp-m`](../story/characters/esfp-m.md) | `port.bakery` (runs it) | resident | open | jolly, with a dark side: secretly a cannibal | Rex |
+| The old soldier | [`estp-m`](../story/characters/estp-m.md) | `port.soldier_house`; goes to `port.fort` one day a week | resident | open | a secret character; an old ESTP, very strong, a killer | Rex |
+| The warehouse big wig | `bigwig` (placeholder, outside the 32) | `port.warehouse` (owns it) | resident | open | | Rex (tentative) |
+| The big wig's child | `bigwig-child` (placeholder; type open) | `port.warehouse` | resident | yes | extremely troublesome, a real drain on the town; one of the recruitables who needs fixing to help the town; son or daughter open | Rex (tentative) |
 | The bartender | | `port.tavern` | resident | little reason to leave | | Rex (§7b) |
 | The blacksmith | | open | resident, has lived there his whole life | no reason to leave; could be kidnapped later | whether he is the ENTP weapon smith or someone else: open | Rex (§7b) |
-| The secret cook (an ESTP who looks like your first mate) | `estp-m` or `estp-f` (open) | open | open | yes | doesn't seem to know how to cook; the best cook there | Rex |
+| The secret cook (an ESTP who looks like your first mate) | open (`estp-m` is now the old soldier) | open | open | yes | doesn't seem to know how to cook; the best cook there | Rex |
 | First mate candidates (3) | | | open | yes | | Rex (three); who, open |
 | Cannoneer candidates (4) | | | open | yes | one sniper-cannoneer is best for cannons alone | Rex (four); who, open |
 | Cook candidates (a few, plus the secret one) | | | open | yes | overlapping, clear-cut choices | Rex |
@@ -131,3 +131,4 @@ they are in town.
 | 2026-10-26 | First known secret route: letting the ENTP go on his explained departure makes him key to a town improvement that leads to the perfect ending | Rex |
 | 2026-10-26 | Story keeper handed over the endings and town-change canon (STORY.md now points here, a031580); outside AI's rival-port cause and crew-vs-town examples recorded as proposed | keeper |
 | 2026-10-27 | The starting port's places: docks (shipyard, repairmen, market), market leading into town, tavern/brothel, bakery, farm, clinic, church, warehouse (tentative), old coastal fort, the old soldier's locked house; their residents (ISFJ doctor, ISTJ priest, INTP farmer, ESFP baker, old ESTP soldier, ENTP at the shipyard as weapon smith, the warehouse big wig and his troublesome child) | Rex |
+| 2026-10-27 | Linked residents to the story keeper's files (1d35e8c): old soldier = `estp-m`; warehouse placeholders `bigwig`, `bigwig-child` | keeper |
