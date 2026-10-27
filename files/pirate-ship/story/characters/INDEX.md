@@ -60,4 +60,5 @@ as examples, unnamed).
 
 - The starting port's secret cook is an ESTP who looks like your first mate (`../../PIRATE.md` §7b): which ESTP
   slot, and who the first mate is, are open. Settled 2026-10-27 (Rex): the cook is the old ESTP soldier, `estp-m`. Who the first mate is stays open.
+- An ESTJ has an alignment map but no description or gender yet: `estj.md` (moves to `estj-m` or `estj-f`).
 - The bigwig's child is a recruitable whose type isn't set, so their slot is open.
