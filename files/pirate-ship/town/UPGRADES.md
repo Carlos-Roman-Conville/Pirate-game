@@ -82,6 +82,7 @@ one.
 | `port.clinic` | the clinic | `isfj-f` | `base`; others open | Rex (the place) |
 | `port.church` | the church | `istj-m` | `base`; others open | Rex (the place) |
 | `port.warehouse` | the warehouse | the big wig, vendors, his troublesome child (a recruitable who needs fixing to help the town) | `base`; others open | Rex (tentative) |
+| `port.apothecary` | the apothecary | the INTJ herbalist (her potion-testing questline) | `base`; others open | Rex (the place) |
 | `port.fort` | the old coastal fort | the old soldier (weekly) | `base`; others open | Rex (the place) |
 | `port.soldier_house` | the old soldier's locked house | the old soldier | `base` (locked); others open | Rex (the place) |
 
@@ -97,3 +98,4 @@ abandoning it); whether it's a slot is open.
 |---|---|---|
 | 2026-10-26 | Created: format, choice words (proposed), first slot `port.entp` from the ENTP's secret route | keeper; route Rex |
 | 2026-10-27 | Reserved slots for Rex's eleven places (`port.docks` … `port.soldier_house`), each `base` only until Rex gives states and unlocks | keeper; places Rex |
+| 2026-10-27 | Reserved `port.apothecary` (twelfth place) | keeper; place Rex |

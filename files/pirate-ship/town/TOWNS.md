@@ -81,6 +81,7 @@ Each place has an id in backticks (`port.<place>`). The same id is reserved as t
 | `port.clinic` | A small clinic | the ISFJ doctor | | Rex |
 | `port.church` | The church | the ISTJ head priest | | Rex |
 | `port.warehouse` | A warehouse | a big wig who owns it and a few vendors; his troublesome son | Rex was unsure ("that requires a big wig to still be in town") | Rex (tentative) |
+| `port.apothecary` | The apothecary (herbalist's) | the INTJ herbalist, its owner | the place Rex had forgotten in his first list | Rex |
 | `port.fort` | The old coastal fort | the old soldier goes there one day a week | "a great locale, love that idea" | Rex |
 | `port.soldier_house` | The old soldier's locked house | the old soldier | you can't get in; you can see him leave once a week toward the fort | Rex |
 | | Docks barely maintained; a harbour of fishing boats, damaged sloops and vessels that shouldn't still sail | | look detail | proposed (outside AI, via STORY.md) |
@@ -102,6 +103,7 @@ they are in town.
 | The old soldier | [`estp-m`](../story/characters/estp-m.md) | `port.soldier_house`; goes to `port.fort` one day a week | resident | open | a secret character; an old ESTP, very strong, a killer | Rex |
 | The warehouse big wig | `bigwig` (placeholder, outside the 32) | `port.warehouse` (owns it) | resident | open | | Rex (tentative) |
 | The big wig's child | `bigwig-child` (placeholder; type open) | `port.warehouse` | resident | yes | extremely troublesome, a real drain on the town; one of the recruitables who needs fixing to help the town; son or daughter open | Rex (tentative) |
+| The INTJ herbalist and apothecary owner | `intj-f` (slot is the story keeper's call) | `port.apothecary` (owns it) | open | open | concocts potions, tinctures and such; a bit unconventional; may be the daughter of "the owner" (whose: open). Her psychotic trait: she has no qualms testing her concoctions on bad people, or people she perceives as evil. Part of her questline is a gamble: you work out, mostly from science and the clues you get, whether what she made will kill the person and whether they deserve it, and navigate her psychopathy to help her recover. Those who don't deserve it can't die; she has to discover naturally whether they are innocent or evil | Rex |
 | The bartender | | `port.tavern` | resident | little reason to leave | | Rex (§7b) |
 | The blacksmith | | open | resident, has lived there his whole life | no reason to leave; could be kidnapped later | whether he is the ENTP weapon smith or someone else: open | Rex (§7b) |
 | The secret cook (an ESTP who looks like your first mate) | open (`estp-m` is now the old soldier) | open | open | yes | doesn't seem to know how to cook; the best cook there | Rex |
@@ -132,3 +134,4 @@ they are in town.
 | 2026-10-26 | Story keeper handed over the endings and town-change canon (STORY.md now points here, a031580); outside AI's rival-port cause and crew-vs-town examples recorded as proposed | keeper |
 | 2026-10-27 | The starting port's places: docks (shipyard, repairmen, market), market leading into town, tavern/brothel, bakery, farm, clinic, church, warehouse (tentative), old coastal fort, the old soldier's locked house; their residents (ISFJ doctor, ISTJ priest, INTP farmer, ESFP baker, old ESTP soldier, ENTP at the shipyard as weapon smith, the warehouse big wig and his troublesome child) | Rex |
 | 2026-10-27 | Linked residents to the story keeper's files (1d35e8c): old soldier = `estp-m`; warehouse placeholders `bigwig`, `bigwig-child` | keeper |
+| 2026-10-27 | Added the apothecary (`port.apothecary`) and its owner, the INTJ herbalist who tests potions on people she sees as evil; her questline is a gamble on whether a potion kills and whether they deserve it | Rex |
