@@ -82,8 +82,23 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | Signature face | `art.signature_face` | the one expression that is theirs | open |
 | Heart-event scenes to illustrate | `art.scenes` | | open |
 
+## Questline responses
+
+How taking them on each of the town's four questlines moves the town (system: `../../town/ENDINGS.md`;
+matrix: `../QUESTLINES.md`). Rex's rule: a character's nature isn't corrupted by the quest they go on.
+
+| Questline | Key | Response (supports / neutral / opposes, and what happens) | Mark |
+|---|---|---|---|
+| Orderly good (church-like) | `quest.order_good` |  | open (proposed: supports) |
+| Chaotic good (undecided) | `quest.chaos_good` |  | open (proposed: neutral) |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` | does nothing to his alignment or anyone else's; outside AI proposed: opposes | Rex |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | he cannot be corrupted: he becomes more fervently against evil and pushes back, moving the town toward good; outside AI proposed: strongly opposes | Rex |
+
+- **(Rex)** Taken on the "pirate" questline: does nothing to his alignment or anyone else's. Which quadrant "pirate" means is **open**.
+
 ## Change log
 
 | Date | Change | By |
 |---|---|---|
 | 2026-10-27 | Created: head priest of the church; despises the town; cruel by the letter of the rules | Rex |
+| 2026-10-27 | Questline responses section added (Rex's rules recorded) | keeper |

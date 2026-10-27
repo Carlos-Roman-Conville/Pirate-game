@@ -108,6 +108,18 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 | Signature face | `art.signature_face` | | open |
 | Heart-event scenes to illustrate | `art.scenes` | the explained departure (candidate) | proposed |
 
+## Questline responses
+
+How taking them on each of the town's four questlines moves the town (system: `../../town/ENDINGS.md`;
+matrix: `../QUESTLINES.md`). Rex's rule: a character's nature isn't corrupted by the quest they go on.
+
+| Questline | Key | Response (supports / neutral / opposes, and what happens) | Mark |
+|---|---|---|---|
+| Orderly good (church-like) | `quest.order_good` |  | open (proposed: neutral) |
+| Chaotic good (undecided) | `quest.chaos_good` |  | open (proposed: possible support) |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` |  | open (proposed: neutral) |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | guaranteed: when he returns he makes something that helps transform the town toward chaotic evil; outside AI proposed: supports | Rex |
+
 ## Change log
 
 | Date | Change | By |
@@ -115,3 +127,4 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 | 2026-10-26 | Created: the ENTP who keeps leaving; the secret route to the perfect ending | Rex |
 | 2026-10-27 | Lives at the shipyard; the town's weaponsmith | Rex |
 | 2026-10-26 | Defining trait: builds devices; the ship's mechanic (killing devices for the boat), his focused work is torture devices | Rex |
+| 2026-10-27 | Questline responses section added (Rex's rules recorded) | keeper |

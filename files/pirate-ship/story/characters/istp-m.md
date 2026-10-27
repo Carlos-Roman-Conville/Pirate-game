@@ -111,8 +111,21 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 | Signature face | `art.signature_face` | | open |
 | Heart-event scenes to illustrate | `art.scenes` | the shark harpooning in the water (candidate) | proposed |
 
+## Questline responses
+
+How taking them on each of the town's four questlines moves the town (system: `../../town/ENDINGS.md`;
+matrix: `../QUESTLINES.md`). Rex's rule: a character's nature isn't corrupted by the quest they go on.
+
+| Questline | Key | Response (supports / neutral / opposes, and what happens) | Mark |
+|---|---|---|---|
+| Orderly good (church-like) | `quest.order_good` |  | open |
+| Chaotic good (undecided) | `quest.chaos_good` |  | open (proposed: possible support) |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` |  | open |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` |  | open (proposed: possible support) |
+
 ## Change log
 
 | Date | Change | By |
 |---|---|---|
 | 2026-10-26 | Created: the stoic ISTP hunter chasing ever bigger, more dangerous prey; the shark scene | Rex |
+| 2026-10-27 | Questline responses section added | keeper |

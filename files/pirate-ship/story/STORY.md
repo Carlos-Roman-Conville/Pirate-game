@@ -120,6 +120,8 @@ work lives in `../art/`, not here.
   the end.
 - **Endings and how the town changes:** kept by the town keeper in `../town/ENDINGS.md` and `../town/UPGRADES.md`
   (Digimon World 1-style upgrade slots whose combinations make the endings), not here.
+- **(Rex, 2026-10-27) Who you take on each of the four questlines is how the game plays out**; a character's nature
+  isn't corrupted by the quest. How each character responds: `QUESTLINES.md`.
 - **(Rex)** Story by conditions: big storylines open when the ship's state allows them (a mutiny needs enough
   resentment, a replacement and a chance of winning), not as scripted branches (§7a, liked by Rex).
 - **(Rex)** Things happen without you: crew start romances, alliances or mutiny plots; a romance may turn out to be
@@ -171,4 +173,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The starting port's places and first residents: ISFJ clinic doctor (recruitable, secretly sadistic), ENTP lives at the shipyard as weaponsmith, ISTJ head priest, warehouse bigwig and troubled recruitable child, old ESTP soldier (secret, locked house, weekly to the fort), INTP farmer (April Ludgate), ESFP baker (secret cannibal) | Rex |
 | 2026-10-27 | The INTJ herbalist and apothecary owner: tests potions on people she judges evil; her questline is a gamble to judge if a potion kills and if they deserve it, and to help her recover | Rex |
 | 2026-10-27 | The old ESTP soldier is the secret cook | Rex |
+| 2026-10-27 | Questline responses: the priest can't be corrupted (devil questline pushes the town good; Cthulhu and "pirate" do nothing); the ENTP on chaotic evil guarantees a device that turns the town chaotic evil | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |
