@@ -29,7 +29,8 @@ Fit with the stats: personality moves only through what someone sees and how the
 
 ### Open (Rex's)
 
-- **A.** Whether point 4 still holds, or whether points plus witnessing (2–3) replaced it.
+- ~~**A.** Whether point 4 still holds, or whether points plus witnessing (2–3) replaced it.~~ Answered
+  2026-10-27: it holds alongside them; the ENTP's alignment map is the first (`characters/entp-m.md`).
 - **B.** Who earns points: only the crew who witness an action, or the player too.
 
 ### Superseded
@@ -46,7 +47,7 @@ suggestion (not canon); blank = open.
 | Character | Orderly good | Chaotic good (pirate) | Orderly evil (Cthulhu) | Chaotic evil (devil) |
 |---|---|---|---|---|
 | ISTJ priest (`istj-m`) | *supports* | **Rex: no effect** (*neutral*) | **Rex: does nothing to his or anyone's alignment** (*opposes*) | **Rex: can't be corrupted; fights evil harder, moves the town toward good** (*strongly opposes*) |
-| ENTP mechanic (`entp-m`) | *neutral* | *possible support* | *neutral* | **Rex: guaranteed; on return he makes something that helps turn the town chaotic evil** (*supports*). **Open:** whether it stays guaranteed or now depends on what he witnesses you do there |
+| ENTP mechanic (`entp-m`) | **Rex: moves him to chaotic good** (*neutral*) | **Rex: moves him to orderly evil** (*possible support*) | **Rex: moves him to orderly good** (*neutral*) | **Rex: he stays chaotic evil (the loop)**; **Rex: guaranteed; on return he makes something that helps turn the town chaotic evil** (*supports*). **Open:** whether it stays guaranteed or now depends on what he witnesses you do there |
 | ISTP hunter (`istp-m`) | | *possible support* | | *possible support* |
 | INTJ apothecary (`intj-f`) | *possible support* | | *possible support* | *opposes* |
 | ISFJ doctor (`isfj-f`) | | | | |
@@ -74,4 +75,5 @@ suggestion (not canon); blank = open.
 |---|---|---|
 | 2026-10-27 | Created: questline responses as "who you take on each questline is how the game plays out"; matrix of take-them-on effects | Rex |
 | 2026-10-27 | Chaotic good is the stereotypical pirate town; the pirate questline is chaotic good, the priest has no effect on it | Rex |
+| 2026-10-27 | The ENTP's alignment map (inner rules); open A answered: per-character rules hold | Rex |
 | 2026-10-27 | New questing model: all four paths open, conduct earns points, witnessing crew shift by inner rules; "who you take" superseded; cells reread as witnessed reactions; open A, B and the ENTP's guarantee | Rex |

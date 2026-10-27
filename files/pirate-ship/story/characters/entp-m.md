@@ -122,6 +122,40 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | Orderly evil (Cthulhu corruption) | `quest.order_evil` |  | open (proposed: neutral) |
 | Chaotic evil (killers, devil worship) | `quest.chaos_evil` | guaranteed: when he returns he makes something that helps transform the town toward chaotic evil; outside AI proposed: supports | Rex; open: whether it stays guaranteed or now depends on what he witnesses you do there |
 
+### Inner rules: his alignment map (Rex, 2026-10-27)
+
+What the path you push him on does to his alignment (QUESTLINES.md, model point 4). Rex's diagram:
+
+![The ENTP's alignment map](diagrams/entp-m-alignment.png)
+
+```
+              GOOD
+   +-----------------+-----------------+
+   |  ORDERLY GOOD   |  CHAOTIC GOOD   |
+   |      (OG) ------+----> (CG)       |
+   |       ^         |    /            |
+   |       |         |   /             |
+   +-------+---------+--/--------------+
+   |       |         | /               |
+   |      (OE) <-----+'      (CE) <-+  |
+   |  ORDERLY EVIL   |  CHAOTIC EVIL \_/ |
+   +-----------------+-----------------+
+              EVIL
+```
+
+| Pushed on (action quadrant) | He moves toward | Mark |
+|---|---|---|
+| Orderly good | chaotic good | Rex |
+| Chaotic good | orderly evil | Rex |
+| Orderly evil | orderly good | Rex |
+| Chaotic evil | chaotic evil (stays: the loop) | Rex |
+
+For the code (`inner_rules`, action → destination):
+`{ "order_good": "chaos_good", "chaos_good": "order_evil", "order_evil": "order_good", "chaos_evil": "chaos_evil" }`
+
+- **(open)** Which alignment he wants. By rule 4 the loop marks it (being egged toward the one you want moves you
+  that way), so chaotic evil, which fits his guaranteed chaotic-evil result; Rex to confirm.
+
 ## Change log
 
 | Date | Change | By |
@@ -131,3 +165,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-26 | Defining trait: builds devices; the ship's mechanic (killing devices for the boat), his focused work is torture devices | Rex |
 | 2026-10-27 | Questline responses section added (Rex's rules recorded) | keeper |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
+| 2026-10-27 | Inner rules: his alignment map (OG→CG, CG→OE, OE→OG, CE stays) | Rex |
