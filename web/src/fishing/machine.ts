@@ -78,11 +78,14 @@ export interface FishingRun {
   stats: FisherStats
   fishId: string
   bitePhase: BitePhase | null
+  /** Set by the lure stage: the right rhythm played well draws the fish, so the bite comes sooner. */
+  lureDrawn: boolean
   result: FishingResult | null
 }
 
 export type FishingAction =
   | { type: 'stub'; success: boolean }
+  | { type: 'lure'; drawn: boolean }
   | { type: 'bite'; event: 'advance' | 'hook' }
 
 export function loadFishingConfig(raw: FishingConfig = fishingData as unknown as FishingConfig): FishingConfig {
@@ -131,6 +134,7 @@ export function startFishing(
     stats,
     fishId,
     bitePhase: null,
+    lureDrawn: false,
     result: null,
   }
 }
@@ -176,6 +180,11 @@ export function dispatch(run: FishingRun, action: FishingAction): FishingRun {
       return action.success ? endRun(run, 'caught') : endRun(run, 'gotAway')
     }
     return completePlayStage(run, action.success)
+  }
+
+  if (action.type === 'lure') {
+    if (run.stage !== 'lure') return run
+    return { ...run, stage: 'bite', bitePhase: 'waiting', lureDrawn: action.drawn }
   }
 
   if (action.type === 'bite') return dispatchBite(run, action.event)

@@ -14,6 +14,7 @@ export interface FishingRng {
 export interface BiteTuning {
   waitingMs: number
   nibbleMs: number
+  lureWaitFactor: number
 }
 
 export interface BiteSchedule {
@@ -42,6 +43,7 @@ export const BITE_FX_CLASS = {
 interface BiteConfigSection {
   waitingMs: number
   nibbleMs: number
+  lureWaitFactor: number
 }
 
 function biteSection(config: FishingConfig): BiteConfigSection {
@@ -53,6 +55,7 @@ export function biteTuning(config: FishingConfig): BiteTuning {
   return {
     waitingMs: Number(b.waitingMs),
     nibbleMs: Number(b.nibbleMs),
+    lureWaitFactor: Number(b.lureWaitFactor),
   }
 }
 
@@ -66,10 +69,11 @@ export function createBiteSchedule(
   stats: FisherStats,
   config: FishingConfig,
   rng: FishingRng,
+  lureDrawn = false,
 ): BiteSchedule {
   const t = biteTuning(config)
   const windowMs = reactionWindowMs(stats, config)
-  const nibbleBeginMs = anchorMs + t.waitingMs
+  const nibbleBeginMs = anchorMs + (lureDrawn ? t.waitingMs * t.lureWaitFactor : t.waitingMs)
   const submergedBeginMs = nibbleBeginMs + t.nibbleMs
   const hookWindowBeginMs = submergedBeginMs
   const hookWindowEndMs = hookWindowBeginMs + windowMs

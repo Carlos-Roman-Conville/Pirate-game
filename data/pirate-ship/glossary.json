@@ -1,6 +1,6 @@
 {
  "_about": "The one place a game term gets its English name. Every keyword, zone, phase, resource, stat, card type and recurring card-text phrase gets an entry BEFORE it appears in code, UI or docs; tools/pirate-ship_cards.py fails on a card field whose term has no entry. For a non-English game 'source' is the printed term; for an English game it is the printed term too (the entry still fixes one spelling and one code). Card names are never translated. tools/pirate-ship_import.py writes files/pirate-ship/GLOSSARY.md from this file.",
- "language": "<fr | en | de | ja>",
+ "language": "en",
  "policy": [
   "Card names stay exactly as printed.",
   "Brand words (the game's own coined names) are never translated.",
@@ -9,9 +9,130 @@
   "One term, one code: code is the identifier used in JSON fields, enums and CSS classes."
  ],
  "terms": [
-  {"source": "<printed term>", "en": "<English term>", "code": "<identifier>", "kind": "keyword | zone | phase | stat | type | resource | phrase", "note": "<what it means, one line>"}
+  {
+   "source": "read the water",
+   "en": "read the water",
+   "code": "readWater",
+   "kind": "phase",
+   "note": "Stage 1: the view widens and fish show as silhouettes."
+  },
+  {
+   "source": "silhouette",
+   "en": "silhouette",
+   "code": "silhouette",
+   "kind": "phrase",
+   "note": "A fish seen under the water, within the fisher's visible range."
+  },
+  {
+   "source": "aim",
+   "en": "aim",
+   "code": "aim",
+   "kind": "phase",
+   "note": "Stage 2: place the cast target."
+  },
+  {
+   "source": "direction cone",
+   "en": "direction cone",
+   "code": "direction",
+   "kind": "phase",
+   "note": "Stage 3: a moving line sweeps the cone; its stop sets the cast heading."
+  },
+  {
+   "source": "power meter",
+   "en": "power meter",
+   "code": "power",
+   "kind": "phase",
+   "note": "Stage 4: up-and-down meter; its target spot sets the cast distance."
+  },
+  {
+   "source": "lure",
+   "en": "lure",
+   "code": "lure",
+   "kind": "phase",
+   "note": "Stage 5: pick a rhythm and play it to draw the fish."
+  },
+  {
+   "source": "rhythm",
+   "en": "rhythm",
+   "code": "rhythm",
+   "kind": "phrase",
+   "note": "A beat pattern the lure plays; each fish prefers one."
+  },
+  {
+   "source": "bobber",
+   "en": "bobber",
+   "code": "bobber",
+   "kind": "phrase",
+   "note": "The float that waits, twitches and submerges during the bite."
+  },
+  {
+   "source": "nibble",
+   "en": "nibble",
+   "code": "nibble",
+   "kind": "phrase",
+   "note": "A twitch of the bobber before the bite; striking on it is a miss."
+  },
+  {
+   "source": "false strike",
+   "en": "false strike",
+   "code": "falseStrike",
+   "kind": "phrase",
+   "note": "A hook press during a nibble: the fish is lost."
+  },
+  {
+   "source": "bite",
+   "en": "bite",
+   "code": "bite",
+   "kind": "phase",
+   "note": "Stage 6: the bobber submerges with a splash and a sound."
+  },
+  {
+   "source": "hook setting",
+   "en": "hook setting",
+   "code": "hook",
+   "kind": "phrase",
+   "note": "The press that sets the hook once the bobber submerges."
+  },
+  {
+   "source": "reaction window",
+   "en": "reaction window",
+   "code": "reactionWindow",
+   "kind": "stat",
+   "note": "Time after the bite in which a press still hooks; grows with Reflexes."
+  },
+  {
+   "source": "pull in",
+   "en": "pull in",
+   "code": "pullIn",
+   "kind": "phase",
+   "note": "Stage 7: reel the fish in against line tension."
+  },
+  {
+   "source": "line tension",
+   "en": "line tension",
+   "code": "tension",
+   "kind": "stat",
+   "note": "Strain on the line; past the break threshold it snaps."
+  },
+  {
+   "source": "got away",
+   "en": "got away",
+   "code": "gotAway",
+   "kind": "phrase",
+   "note": "Result: the fish was lost."
+  },
+  {
+   "source": "caught",
+   "en": "caught",
+   "code": "caught",
+   "kind": "phrase",
+   "note": "Result: the fish was landed."
+  }
  ],
  "lore": [
-  {"source": "<recurring lore word>", "en": "<fixed translation>"}
+  {
+   "source": "<recurring lore word>",
+   "en": "<fixed translation>"
+  }
  ]
 }

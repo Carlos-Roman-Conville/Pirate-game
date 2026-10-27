@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
-import { loadFishingConfig, playerStatsFromConfig } from './machine'
+import { createBiteSchedule } from './bite'
+import { dispatch, loadFishingConfig, playerStatsFromConfig, startFishing } from './machine'
 import {
   expectedBeatTimesMs,
   fishDrawnByLure,
@@ -36,6 +37,27 @@ describe('rhythm play', () => {
     const beats = expectedBeatTimesMs(rhythm, config)
     const late = beats.map((t) => t + Number(config.lure.rhythmHitWindowMs) + 50)
     expect(rhythmPlaySucceeded(late, rhythm, config)).toBe(false)
+  })
+})
+
+describe('lure hands its result to the bite', () => {
+  it('bites sooner after the right rhythm than after a wrong one', () => {
+    const right = minnow.preferredRhythm
+    const wrong = bass.preferredRhythm
+    const drawn = fishDrawnByLure(minnow, right, expectedBeatTimesMs(right, config), config)
+    const missed = fishDrawnByLure(minnow, wrong, expectedBeatTimesMs(wrong, config), config)
+    let run = startFishing(config)
+    for (let i = 0; i < 4; i++) run = dispatch(run, { type: 'stub', success: true })
+    expect(run.stage).toBe('lure')
+    const drawnRun = dispatch(run, { type: 'lure', drawn: drawn })
+    const missedRun = dispatch(run, { type: 'lure', drawn: missed })
+    expect(drawnRun.stage).toBe('bite')
+    expect(missedRun.stage).toBe('bite')
+    const rng = { next: () => 0.5 }
+    const sooner = createBiteSchedule(0, stats, config, rng, drawnRun.lureDrawn)
+    const normal = createBiteSchedule(0, stats, config, rng, missedRun.lureDrawn)
+    expect(sooner.nibbleBeginMs).toBeLessThan(normal.nibbleBeginMs)
+    expect(sooner.submergedBeginMs).toBeLessThan(normal.submergedBeginMs)
   })
 })
 

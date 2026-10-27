@@ -21,6 +21,7 @@ import {
 } from '../fishing/loop'
 import { applyPullStep as pullStep, initialPullInLineState as pullInInitial } from '../fishing/pullIn'
 import {
+  dispatch,
   loadFishingConfig,
   type FishingRun,
 } from '../fishing/machine'
@@ -190,7 +191,7 @@ export class DockScene extends Phaser.Scene {
     this.dockLoop = applyFishingRun(this.dockLoop, run)
     if (run.stage === 'bite' && !this.biteSchedule) {
       this.biteSubmergeFxPlayed = false
-      this.biteSchedule = createBiteSchedule(this.time.now, run.stats, this.fishingConfig, { next: () => 0.5 })
+      this.biteSchedule = createBiteSchedule(this.time.now, run.stats, this.fishingConfig, { next: () => 0.5 }, run.lureDrawn)
     }
     if (run.stage !== prevStage) {
       if (run.stage === 'pullIn') this.pullLine = pullInInitial(this.fishingConfig)
@@ -212,7 +213,7 @@ export class DockScene extends Phaser.Scene {
       const rhythm = fish.preferredRhythm
       const taps = expectedBeatTimesMs(rhythm, this.fishingConfig)
       const ok = fishDrawnByLure(fish, rhythm, taps, this.fishingConfig)
-      return stubAdvanceRun(run, ok)
+      return dispatch(run, { type: 'lure', drawn: ok })
     }
     if (stage === 'bite' && this.biteSchedule) {
       return dispatchTimedHookPress(run, this.biteSchedule, this.time.now, this.fishingConfig)

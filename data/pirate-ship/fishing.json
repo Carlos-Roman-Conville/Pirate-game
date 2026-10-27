@@ -75,8 +75,9 @@
     ]
   },
   "bite": {
-    "notes": "Bobber showdown timings; reaction window grows with reflexes.",
+    "notes": "Bobber showdown timings; reaction window grows with reflexes. lureWaitFactor (placeholder, Rex to set): waitingMs is multiplied by it when the lure drew the fish, so the bobber bites sooner.",
     "waitingMs": 800,
+    "lureWaitFactor": 0.5,
     "nibbleMs": 600,
     "reactionWindowBaseMs": 280,
     "reactionWindowPerReflex": 12

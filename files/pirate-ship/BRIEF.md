@@ -8,7 +8,7 @@ Three-quarter top-down (the Stardew view), High Roller's art style. Play money o
 is only **the dock and the fishing minigame**; everything else is later.
 
 **State (dated).** 2026-10-26: stamped (board kit, placeholder engine only); design docs in this folder;
-PLAN.md unit 1 done (Phaser 4 dock world, walking, vitest); units 2-8 (fishing) not started.
+PLAN.md units 1-8 done (dock world, fishing machine and stages, result loop); units 9-10 (fishing screens) queued.
 
 ## Where things are
 

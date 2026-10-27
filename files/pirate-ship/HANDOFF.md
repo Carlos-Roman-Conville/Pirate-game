@@ -1,33 +1,36 @@
-# Pirate Ship: handoff (2026-10-26, rewritten by the setup session)
+# Pirate Ship: handoff (2026-10-26, rewritten by task 2459)
 
 Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or something is parked.
 
 ## State
 
-- Stamped from the board kit (`_template/new_game.py --kind board`, ports 5308 / 5320). The placeholder engine
-  (three in a row) is left in place only so the four checks pass; this is not a board game.
-- Design docs moved in: `PIRATE.md`, `DUTIES.md`, `STATS.md`, `crew/ROSTER.md`, `minigames/FISHING.md`.
-- PLAN.md unit 1 done (2026-10-26): Phaser 4.2.1 and vitest 5 installed offline. The screen
-  (`web/src/games/pirate-ship/index.tsx`) is a Phaser world: `web/src/world/DockScene.ts` draws script-made tiles
-  and a placeholder player (arrows/WASD, down/up/side mirrored, integer zoom, camera follows). Map and collision are
-  pure TS in `web/src/world/map.ts` (tests beside it), map data in `data/pirate-ship/maps/dock.json` (rows of
-  characters, legend says which are solid). The old board kit files in `web/src/board/` are unused now.
-- Not browser-checked (the belt has no browser); the Gate's desktop smoke check covers it.
+- Stamped from the board kit; the placeholder engine (three in a row) stays only so the four checks pass. This is
+  not a board game. Design docs: `PIRATE.md`, `DUTIES.md`, `STATS.md`, `crew/ROSTER.md`, `minigames/FISHING.md`.
+- PLAN units 1-8 done (tasks 2450-2457): Phaser dock world (`web/src/world/DockScene.ts`, `map.ts`); the fishing
+  machine and every stage as pure TS in `web/src/fishing/` (readWater, cast, lure, bite, pullIn, loop), each with
+  vitest; numbers in `data/pirate-ship/fishing.json`; result panel and return to walking.
+- Machine order (2459): lure and bite stay separate stages. The `lure` action hands `lureDrawn` to the run, and
+  `createBiteSchedule` shortens the waiting beat by `bite.lureWaitFactor` (placeholder 0.5, Rex's to set). Test:
+  "bites sooner" in `lure.test.ts`. A wrong rhythm no longer ends the run; the bite just waits its full time.
+- `glossary.json` filled with the fishing terms. Never browser-checked (the belt has no browser).
 
 ## Next
 
-1. Units 2–8 in order: the fishing state machine (pure TS in `web/src/fishing/`), then each stage (all seven are
-   Rex's design; the bite landed 2026-10-26).
-2. Tick the UI piece in `../progress/ui/pirate-ship.json` when a screen piece is truly done.
+1. Units 9 (2460, fishing screen: cast) and 10 (2461, fishing screen: lure, bite, pull in, result) are queued; the
+   scene still drives stages with stub presses.
+2. Desktop live check of the dock and fishing loop in the browser; tick `../progress/ui/pirate-ship.json` when a
+   screen piece is truly done.
 
 ## Blocked
 
-- How pulling in stays fair (FISHING.md): Rex's call; the unit ships tunable numbers in data for him to set.
-- The game's real name (the repo and folder rename when Rex names it).
+- Pull-in fairness numbers (FISHING.md): Rex's call; they stay placeholders in `fishing.json`.
+- The game's real name (repo and folder rename when Rex names it): Rex's.
+- `desktop:` browser smoke check of the dock; progress-page edits live outside this repo.
 
 ## Gotchas
 
 - The folder is `Games/RPG's/pirate-ship`: the apostrophe breaks unquoted Git Bash paths. Gates run inside the
   repo with relative paths.
 - Every game's server is `Archive.Server.exe`: stop yours by path or preview_stop, never by name (ISSUES I-073).
-- Phaser 4.2.1 and vitest 5 are in the npm cache (High Roller uses them): `npm install --offline`.
+- Phaser 4.2.1 and vitest 5 are in the npm cache: `npm install --offline`.
+- `web/src/board/` is unused kit code; leave it.
