@@ -76,8 +76,8 @@ Each place has an id in backticks (`port.<place>`). The same id is reserved as t
 | `port.shipyard` | The shipyard (on the docks) | the ENTP mechanic lives here, with a few other shipyard characters; he is the local weapon smith | | Rex |
 | `port.market` | The market | vendors | starts at the port and leads into town | Rex |
 | `port.tavern` | The tavern / brothel | the bartender (§7b) | | Rex |
-| `port.bakery` | The butcher shop (was "the bakery"; id kept stable) | the ESFP cook; the farmer's son lives with him | Rex, 2026-10-27: the ESFP isn't really a baker, more a general cook, and has a butcher shop. Whether a bakery still exists in town: open | Rex |
-| `port.farm` | The farm | the INTP farmer and her daughter | | Rex |
+| `port.bakery` | The butcher shop (was "the bakery"; id kept stable) | the ESFP cook; the farmer's son lives with her | Rex, 2026-10-27: the ESFP isn't really a baker, more a general cook, and has a butcher shop. Whether a bakery still exists in town: open | Rex |
+| `port.farm` | The farm | the INTP farmer and his daughter | | Rex |
 | `port.clinic` | A small clinic | the ISFJ doctor | | Rex |
 | `port.church` | The church | the ISTJ head priest | | Rex |
 | `port.warehouse` | A warehouse | a big wig who owns it and a few vendors; his troublesome son | Rex was unsure ("that requires a big wig to still be in town") | Rex (tentative) |
@@ -98,10 +98,10 @@ they are in town.
 | The ENTP device builder, the local weapon smith | [`entp-m`](../story/characters/entp-m.md) | `port.shipyard` (lives there) | resident (lives at the shipyard) | yes, again and again: he keeps leaving and you find him back in town | key to a town improvement if let go (`UPGRADES.md` `port.entp`) | Rex |
 | The ISFJ doctor | [`isfj-f`](../story/characters/isfj-f.md) | `port.clinic` | resident: born in town; her father was the town doctor | yes | does her best to keep the townspeople going; probably a sadistic side: she gets pleasure from healing and from the pain it causes, and secretly enjoys your suffering (how she justifies it: open) | Rex |
 | The ISTJ head priest | [`istj-m`](../story/characters/istj-m.md) | `port.church` (lives there) | resident | open | despises where he lives; especially cruel when following the rules, to a robotic degree | Rex |
-| The INTP farmer | [`intp-f`](../story/characters/intp-f.md) | `port.farm` (runs it) | resident | open | runs the farm alone since a spouse died (Rex first said "his wife"; whose spouse, open); psychopathic in some capacity; based on April Ludgate (Aubrey Plaza's deadpan secretary to Ron Swanson in Parks and Recreation) | Rex; gender settled as woman by Rex's "she runs the farm" |
-| The ESFP cook | [`esfp-m`](../story/characters/esfp-m.md) | `port.bakery`, the butcher shop (runs it) | resident | open | more a general cook than a baker; has a butcher shop; jolly, with a dark side: secretly a cannibal | Rex |
-| The farmer's daughter | (open) | `port.farm` (runs it with her mother) | resident | open | | Rex |
-| The farmer's son | (open) | `port.bakery` (lives with the cook) | resident | open | | Rex |
+| The INTP farmer | [`intp-m`](../story/characters/intp-m.md) | `port.farm` (runs it with his daughter) | resident | open | a man (Rex, 2026-10-27); the ESFP cook's ex-spouse; psychopathic; the rest is in his file | Rex |
+| The ESFP cook | [`esfp-f`](../story/characters/esfp-f.md) | `port.bakery`, the butcher shop (runs it) | resident | open | a woman (Rex, 2026-10-27); more a general cook than a baker; has a butcher shop; jolly, with a dark side: secretly a cannibal; the farmer's ex-spouse | Rex |
+| The farmer's daughter | [`farm-daughter`](../story/characters/farm-daughter.md) | `port.farm` (runs it with her father) | resident | open | | Rex |
+| The farmer's son | [`farm-son`](../story/characters/farm-son.md) | `port.bakery` (lives with the cook) | resident | open | | Rex |
 | The old soldier | [`estp-m`](../story/characters/estp-m.md) | `port.soldier_house`; goes to `port.fort` one day a week | resident | open | a secret character; an old ESTP, very strong, a killer | Rex |
 | The warehouse big wig | `bigwig` (placeholder, outside the 32) | `port.warehouse` (owns it) | resident | open | | Rex (tentative) |
 | The big wig's child | `bigwig-child` (placeholder; type open) | `port.warehouse` | resident | yes | extremely troublesome, a real drain on the town; one of the recruitables who needs fixing to help the town; son or daughter open | Rex (tentative) |
@@ -159,3 +159,4 @@ they are in town.
 | 2026-10-27 | Questing model: all four questlines open to the player; actions carry alignment points; witnessing crew and staying residents move the town (`ENDINGS.md`) | Rex |
 | 2026-10-27 | Neutral ending is a ghost town; residents may move on and, depending on your actions, reappear in the DLC (`ENDINGS.md`) | Rex |
 | 2026-10-27 | The ESFP is a general cook with a butcher shop, not a baker (`port.bakery` keeps its id); the INTP farmer runs the farm with her daughter; her son lives with the cook (via the story keeper) | Rex |
+| 2026-10-27 | The INTP farmer is a man (`intp-m`), the ESFP cook a woman (`esfp-f`), formerly married; children linked as `farm-daughter`, `farm-son` (via the story keeper) | Rex |
