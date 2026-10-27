@@ -80,7 +80,7 @@ Each place has an id in backticks (`port.<place>`). The same id is reserved as t
 | `port.farm` | The farm | the INTP farmer and his daughter | | Rex |
 | `port.clinic` | A small clinic | the ISFJ doctor | | Rex |
 | `port.church` | The church | the ISTJ head priest | | Rex |
-| `port.warehouse` | A warehouse | a big wig who owns it and a few vendors; his troublesome son | Rex was unsure ("that requires a big wig to still be in town") | Rex (tentative) |
+| `port.warehouse` | A warehouse, in disrepair | the owner (`bigwig`), a few vendors, his son (`enfj-m`) | confirmed 2026-10-27; it changes with the son's journey (`UPGRADES.md`) | Rex |
 | `port.apothecary` | The apothecary (herbalist's) | the INTJ herbalist, its owner | the place Rex had forgotten in his first list | Rex |
 | `port.estp_hut` | A hut away from town | the old soldier (`estp-f`), where she lives; isolated, rarely seen; she goes into the forest (story keeper's reading of Rex's typo, to confirm) | | Rex |
 | `port.infp_house` | The INFP's house, with a basement | the INFP brothel worker; clients kept in the basement as living wax statues | location and layout open | Rex |
@@ -105,8 +105,8 @@ they are in town.
 | The farmer's daughter | [`farm-daughter`](../story/characters/farm-daughter.md) | `port.farm` (runs it with her father) | resident | open | | Rex |
 | The farmer's son | [`farm-son`](../story/characters/farm-son.md) | `port.bakery` (lives with the cook) | resident | open | | Rex |
 | The old soldier | [`estp-f`](../story/characters/estp-f.md) | lives at `port.estp_hut`; only reliably found at `port.fort`, on a certain day each week; goes into the forest (to confirm) | resident | open | a secret character; an old ESTP woman, very strong, a killer; also the secret cook | Rex |
-| The warehouse big wig | `bigwig` (placeholder, outside the 32) | `port.warehouse` (owns it) | resident | open | | Rex (tentative) |
-| The big wig's child | `bigwig-child` (placeholder; type open) | `port.warehouse` | resident | yes | extremely troublesome, a real drain on the town; one of the recruitables who needs fixing to help the town; son or daughter open | Rex (tentative) |
+| The warehouse owner | [`bigwig`](../story/characters/bigwig.md) (placeholder, outside the 32) | `port.warehouse` (owns it) | resident | open | disorganised and chaotic; his alliances are poorly kept; isn't teaching his son well | Rex |
+| The owner's son (the ENFJ) | [`enfj-m`](../story/characters/enfj-m.md) (was the `bigwig-child` placeholder) | `port.warehouse` | resident | yes | extremely troublesome, a real drain on the town; a recruitable who needs fixing to help the town; his journey is into making structure | Rex |
 | The INTJ herbalist and apothecary owner | [`intj-f`](../story/characters/intj-f.md) | `port.apothecary` (owns it) | open | open | concocts potions, tinctures and such; a bit unconventional; the daughter of the apothecary's previous owner (Rex, 2026-10-27). Her psychotic trait: she has no qualms testing her concoctions on bad people, or people she perceives as evil. Part of her questline is a gamble: you work out, mostly from science and the clues you get, whether what she made will kill the person and whether they deserve it, and navigate her psychopathy to help her recover. Those who don't deserve it can't die; she has to discover naturally whether they are innocent or evil | Rex |
 | The INFP brothel worker (a femboy; pronouns open) | [`infp-m`](../story/characters/infp-m.md) | works at `port.tavern`; lives at `port.infp_house` | resident | open | quite popular; keeps clients who tried to leave as living wax statues in the basement; the rest is in their file | Rex |
 | The bartender | | `port.tavern` | resident | little reason to leave | | Rex (§7b) |
@@ -167,3 +167,4 @@ they are in town.
 | 2026-10-27 | New place `port.infp_house`: the INFP brothel worker's house with a basement of living wax statues; location and layout open (via the story keeper, e54cf7f) | Rex |
 | 2026-10-27 | New place `port.estp_hut`: the old soldier lives isolated in a hut away from town, rarely seen; whether it replaces the locked house and the weekly fort walk is open (via the story keeper, bb37f37) | Rex |
 | 2026-10-27 | The old soldier lives in the hut, is only reliably found at the fort on a certain day each week, and goes into the forest (to confirm); whether the locked house still exists is open (via the story keeper, 2d77c48) | Rex |
+| 2026-10-27 | Warehouse confirmed: in disrepair, owner disorganised and chaotic; his son is the ENFJ (`enfj-m`), whose journey into structure turns it to legitimate trade or illegal storage (via the story keeper, 9eb1e15) | Rex |

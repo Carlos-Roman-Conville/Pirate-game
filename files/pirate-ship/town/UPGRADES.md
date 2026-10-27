@@ -112,12 +112,24 @@ one.
 | `port.farm` | the farm | `intp-m`, `farm-daughter` | `base`; others open | Rex (the place) |
 | `port.clinic` | the clinic | `isfj-f` | `base`; others open | Rex (the place) |
 | `port.church` | the church | `istj-m` | `base`; others open | Rex (the place) |
-| `port.warehouse` | the warehouse | the big wig, vendors, his troublesome child (a recruitable who needs fixing to help the town) | `base`; others open | Rex (tentative) |
+| `port.warehouse` | the warehouse | `bigwig`, vendors, `enfj-m` | `base`, `legit`, `illicit` (below) | Rex (2026-10-27) |
 | `port.apothecary` | the apothecary | the INTJ herbalist (her potion-testing questline) | `base`; others open | Rex (the place) |
 | `port.estp_hut` | the hut away from town | `estp-f` | `base`; others open | Rex (the place; she lives here). Whether `port.soldier_house` still exists: open (if not, that id is retired, never reused) |
 | `port.infp_house` | the INFP's house and basement | `infp-m` | `base`; others open | Rex (the place) |
 | `port.fort` | the old coastal fort | the old soldier (weekly) | `base`; others open | Rex (the place) |
 | `port.soldier_house` | the old soldier's locked house | the old soldier | `base` (locked); others open | Rex (the place) |
+
+#### `port.warehouse` (Rex, 2026-10-27)
+
+| State | What it is | Unlock | Rules out | Mark |
+|---|---|---|---|---|
+| `base` | in disrepair; the owner is disorganised and chaotic, his alliances poorly kept | start | | Rex |
+| `legit` | a place for goods and legitimate trade | through the son's journey into making structure (`enfj-m`); which choices lead here: open | `illicit` | Rex (state); unlock open |
+| `illicit` | storage for illegally stolen goods, drugs and such | through the same journey; which choices lead here: open | `legit` | Rex (state); unlock open |
+
+State ids are the keeper's. "Either… or" is Rex's, so the two rule each other out. Open: whose journey it is (the
+son's, as the story keeper reads it, or the father's); which choices or quadrant send it each way; whether it can
+stay `base` if the journey never happens (for example, if you take the son aboard).
 
 `port.entp` (above) may turn out to be a state of one of these (the shipyard is his home); if so it stays its own
 id and the two are linked here, never renamed.
@@ -138,3 +150,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-27 | Slugs updated: `intp-m`, `esfp-f`, `farm-daughter`, `farm-son` | keeper |
 | 2026-10-27 | Reserved `port.infp_house` (thirteenth place) | keeper; place Rex |
 | 2026-10-27 | Reserved `port.estp_hut` (fourteenth place; may replace `port.soldier_house`) | keeper; place Rex |
+| 2026-10-27 | `port.warehouse` states `legit` / `illicit` (Rex), exclusive; unlocks open | keeper; states Rex |
