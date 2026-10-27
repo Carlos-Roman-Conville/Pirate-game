@@ -48,13 +48,13 @@ suggestion (not canon); blank = open.
 |---|---|---|---|---|
 | ISTJ priest (`istj-m`) | *supports* | **Rex: no effect** (*neutral*) | **Rex: does nothing to his or anyone's alignment** (*opposes*) | **Rex: can't be corrupted; fights evil harder, moves the town toward good** (*strongly opposes*) |
 | ENTP mechanic (`entp-m`) | **Rex: moves him to chaotic good** (*neutral*) | **Rex: moves him to orderly evil** (*possible support*) | **Rex: moves him to orderly good** (*neutral*) | **Rex: his natural alignment; chaotic evil acts only reinforce him (the loop)**; **Rex: guaranteed; on return he makes something that helps turn the town chaotic evil** (*supports*). **Open:** whether it stays guaranteed or now depends on what he witnesses you do there |
-| ISTP hunter (`istp-m`) | | *possible support* | | *possible support* |
+| ISTP hunter (`istp-f`) | | *possible support* | | *possible support* |
 | INTJ apothecary (`intj-f`) | **Rex: moves her to orderly evil** (*possible support*) | **Rex: moves her to orderly evil** | **Rex: stays orderly evil (loop)** (*possible support*) | **Rex: moves her to orderly evil** (*opposes*). **Rex:** all paths lead here unless you show her that her belief is wrong; then she becomes neutral |
 | ISFJ doctor (`isfj-f`) | | | | |
 | ESFP baker (`esfp-f`) | | | | |
 | INTP farmer (`intp-m`) | | | | |
-| ESTP soldier and cook (`estp-m`) | | | | |
-| ENFJ, unnamed (`enfj.md`) | **Rex: stays orderly good (loop)** | **Rex: moves them to orderly good** | **Rex: stays orderly evil (loop)** | **Rex: moves them to orderly evil** |
+| ESTP soldier and cook (`estp-f`) | | | | |
+| ENFJ pretty boy (`enfj-m`) | **Rex: stays orderly good (loop)** | **Rex: moves them to orderly good** | **Rex: stays orderly evil (loop)** | **Rex: moves them to orderly evil** |
 | ESTJ, undescribed (`estj.md`) | **Rex: moves them to chaotic evil** | **Rex: moves them to orderly good** | **Rex: moves them to chaotic good** | **Rex: moves them to orderly evil** |
 
 ## Proposed (outside AI, 2026-10-27; not canon)
@@ -83,3 +83,4 @@ suggestion (not canon); blank = open.
 | 2026-10-27 | The ESTJ's alignment map (character not yet described) | Rex |
 | 2026-10-27 | The ENTP's alignment map (inner rules); open A answered: per-character rules hold | Rex |
 | 2026-10-27 | New questing model: all four paths open, conduct earns points, witnessing crew shift by inner rules; "who you take" superseded; cells reread as witnessed reactions; open A, B and the ENTP's guarantee | Rex |
+| 2026-10-27 | The ISTP and ESTP are now women (`istp-f`, `estp-f`); the ENFJ is a man (`enfj-m`) | Rex |

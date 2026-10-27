@@ -1,9 +1,9 @@
-# The ENFJ (unnamed; file is `enfj.md` until Rex sets the gender and name)
+# The ENFJ pretty boy (unnamed; file is `enfj-m.md` until Rex names him)
 
 Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is canon. The field keys in backticks
 follow `_TEMPLATE.md`.
 
-- **Slot:** `enfj-m` or `enfj-f` (gender open)
+- **Slot:** `enfj-m` (file was `enfj.md` until 2026-10-27)
 - **Status:** idea (only the alignment map so far)
 - **Last changed:** 2026-10-27
 
@@ -14,7 +14,7 @@ follow `_TEMPLATE.md`.
 | Name | `name` | | open |
 | Type | `type` | ENFJ | Rex |
 | Function stack | `stack` | Fe-Ni-Se-Ti | Rex (type) |
-| Gender | `gender` | | open |
+| Gender | `gender` | man | Rex |
 | Pirate archetype | `archetype` | | open |
 | Ship job (posts held) | `posts` | | open |
 | Where they are found | `found_at` | starting port / later port / at sea | open |
@@ -74,7 +74,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Look | `art.look` | build, face, hair, scars, outfit, colours | open |
+| Look | `art.look` | a pretty boy | Rex |
 | Signature face | `art.signature_face` | the one expression that is theirs | open |
 | Heart-event scenes to illustrate | `art.scenes` | | open |
 
@@ -131,3 +131,4 @@ For the code (`inner_rules`, action → destination):
 | Date | Change | By |
 |---|---|---|
 | 2026-10-27 | Created with the alignment map (OG stays, CG→OG, OE stays, CE→OE) | Rex |
+| 2026-10-27 | A man, a pretty boy; file moved from `enfj.md` to `enfj-m.md` | Rex |

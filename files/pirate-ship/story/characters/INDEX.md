@@ -19,12 +19,12 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | estj-f | ESTJ (Te-Si-Ne-Fi) | woman | (open) | quartermaster | | drafted | |
 | esfj-m | ESFJ (Fe-Si-Ne-Ti) | man | (open) | mother of the mess / cook | | drafted | |
 | esfj-f | ESFJ (Fe-Si-Ne-Ti) | woman | (open) | mother of the mess / cook | | drafted | |
-| istp-m | ISTP (Ti-Se-Ni-Fe) | man | (open) | hunter by trade (Rex; replaces boarder) | stoic killer hunting perfection; chases ever bigger, more dangerous prey; the shark scene | idea (Rex) | [istp-m.md](istp-m.md) |
-| istp-f | ISTP (Ti-Se-Ni-Fe) | woman | (open) | boarder | | drafted | |
+| istp-m | ISTP (Ti-Se-Ni-Fe) | man | (open) | boarder | | drafted | |
+| istp-f | ISTP (Ti-Se-Ni-Fe) | woman | (open) | hunter by trade (Rex; replaces boarder) | a tomboy, small and petite, extremely effective at hunting; stoic killer hunting perfection; chases ever bigger, more dangerous prey; the shark scene | idea (Rex) | [istp-f.md](istp-f.md) |
 | isfp-m | ISFP (Fi-Se-Ni-Te) | man | (open) | figurehead carver / carpenter | | drafted | |
 | isfp-f | ISFP (Fi-Se-Ni-Te) | woman | (open) | figurehead carver / carpenter | | drafted | |
-| estp-m | ESTP (Se-Ti-Fe-Ni) | man | (open) | old soldier; the secret cook (Rex) | looks like your first mate; secret character; locked house, walks to the old fort weekly; old, very strong, a killer | idea (Rex) | [estp-m.md](estp-m.md) |
-| estp-f | ESTP (Se-Ti-Fe-Ni) | woman | (open) | gunner | | drafted | |
+| estp-m | ESTP (Se-Ti-Fe-Ni) | man | (open) | gunner | | drafted | |
+| estp-f | ESTP (Se-Ti-Fe-Ni) | woman | (open) | old soldier; the secret cook (Rex) | brutish, butch woman; looks like your first mate; secret character; locked house, walks to the old fort weekly; old, very strong, a killer | idea (Rex) | [estp-f.md](estp-f.md) |
 | esfp-m | ESFP (Se-Fi-Te-Ni) | man | (open) | castaway / topman | | drafted | |
 | esfp-f | ESFP (Se-Fi-Te-Ni) | woman | (open) | general cook with a butcher shop (Rex) | jolly; secretly a cannibal, humans in the food; ex-spouse of the INTP farmer | idea (Rex) | [esfp-f.md](esfp-f.md) |
 | intj-m | INTJ (Ni-Te-Fi-Se) | man | (open) | navigator | | drafted | |
@@ -33,11 +33,11 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | infj-f | INFJ (Ni-Fe-Ti-Se) | woman | (open) | wrecker / lookout | | drafted | |
 | entj-m | ENTJ (Te-Ni-Se-Fi) | man | (open) | rival captain / first mate | | drafted | |
 | entj-f | ENTJ (Te-Ni-Se-Fi) | woman | (open) | rival captain / first mate | | drafted | |
-| enfj-m | ENFJ (Fe-Ni-Se-Ti) | man | (open) | shantyman / recruiter | | drafted | |
+| enfj-m | ENFJ (Fe-Ni-Se-Ti) | man | (open) | shantyman / recruiter | a pretty boy; has an alignment map | idea (Rex) | [enfj-m.md](enfj-m.md) |
 | enfj-f | ENFJ (Fe-Ni-Se-Ti) | woman | (open) | shantyman / recruiter | | drafted | |
 | intp-m | INTP (Ti-Ne-Si-Fe) | man | (open) | farmer (Rex) | fertilises the crops with bodies, kills passers-by for it; ex-spouse of the ESFP cook; April Ludgate (to confirm) | idea (Rex) | [intp-m.md](intp-m.md) |
 | intp-f | INTP (Ti-Ne-Si-Fe) | woman | (open) | powder master | | drafted | |
-| infp-m | INFP (Fi-Ne-Si-Te) | man | (open) | captive who stayed / keeps the log | | drafted | |
+| infp-m | INFP (Fi-Ne-Si-Te) | man | (open) | captive who stayed / keeps the log | a femboy | idea (Rex) | [infp-m.md](infp-m.md) |
 | infp-f | INFP (Fi-Ne-Si-Te) | woman | (open) | captive who stayed / keeps the log | | drafted | |
 | entp-m | ENTP (Ne-Ti-Fe-Si) | man | (open) | device builder / mechanic; town weaponsmith at the shipyard (Rex) | builds killing devices for the boat and, when focused, torture devices; keeps leaving and you keep winning him back; letting him go once is a secret route to the perfect ending | idea (Rex) | [entp-m.md](entp-m.md) |
 | entp-f | ENTP (Ne-Ti-Fe-Si) | woman | (open) | card sharp / runs the den | | drafted | |
@@ -61,7 +61,6 @@ as examples, unnamed).
 ## Known overlaps to keep in mind (from Rex's notes, not new canon)
 
 - The starting port's secret cook is an ESTP who looks like your first mate (`../../PIRATE.md` §7b): which ESTP
-  slot, and who the first mate is, are open. Settled 2026-10-27 (Rex): the cook is the old ESTP soldier, `estp-m`. Who the first mate is stays open.
-- An ENFJ has an alignment map but no description or gender yet: `enfj.md` (moves to `enfj-m` or `enfj-f`).
+  slot, and who the first mate is, are open. Settled 2026-10-27 (Rex): the cook is the old ESTP soldier, `estp-f` (a woman since 2026-10-27). Who the first mate is stays open.
 - An ESTJ has an alignment map but no description or gender yet: `estj.md` (moves to `estj-m` or `estj-f`).
 - The bigwig's child is a recruitable whose type isn't set, so their slot is open.

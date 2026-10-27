@@ -1,9 +1,9 @@
-# The old ESTP soldier (unnamed; file is `estp-m.md` until Rex names them, then it becomes `<slug>.md`)
+# The INFP femboy (unnamed; file is `infp-m.md` until Rex names him)
 
 Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is canon. The field keys in backticks
 follow `_TEMPLATE.md`.
 
-- **Slot:** `estp-m`
+- **Slot:** `infp-m`
 - **Status:** idea
 - **Last changed:** 2026-10-27
 
@@ -12,19 +12,19 @@ follow `_TEMPLATE.md`.
 | Field | Key | Value | Mark |
 |---|---|---|---|
 | Name | `name` | | open |
-| Type | `type` | ESTP | Rex |
-| Function stack | `stack` | Se-Ti-Fe-Ni | Rex |
+| Type | `type` | INFP | Rex |
+| Function stack | `stack` | Fi-Ne-Si-Te | Rex |
 | Gender | `gender` | man | Rex |
-| Pirate archetype | `archetype` | an old soldier | Rex |
-| Ship job (posts held) | `posts` | the starting port's secret cook: he doesn't seem to know how to cook, but he is the best cook there | Rex |
-| Where they are found | `found_at` | the starting port: a locked house you can't access; once a week he leaves it toward the old coastal fort | Rex |
-| Resident or visitor | `town_role` | resident (locked house) | Rex |
+| Pirate archetype | `archetype` | | open |
+| Ship job (posts held) | `posts` | | open |
+| Where they are found | `found_at` | starting port / later port / at sea | open |
+| Resident or visitor | `town_role` | resident, visitor, looking for work | open |
 
 ## The psycho
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Psycho core | `psycho_core` | old, very strong, and a killer | Rex |
+| Psycho core | `psycho_core` | the type's killer form, in this character | open |
 | Madness break | `madness_break` | what they do when the meter crosses the line | open |
 | Madness triggers | `madness_triggers` | | open |
 | Why piracy allows it | `permission` | how the setting makes it permissible | open |
@@ -38,19 +38,14 @@ follow `_TEMPLATE.md`.
 | Bio | `bio` | | open |
 | Likes (gifts, acts) | `likes` | | open |
 | Dislikes | `dislikes` | | open |
-| Schedule | `schedule` | visits the old coastal fort one day a week; you can see him leave once a week toward the fort | Rex |
-| Claims vs truth | `claims` | doesn't seem to be a cook; is the best one in town | Rex |
-
-### Notes (Rex, 2026-10-27)
-
-- **(open)** What he does at the fort.
-- **(Rex, 2026-10-27)** He is the secret cook: the ESTP who very clearly looks like your first mate (`../../PIRATE.md` §7b).
+| Schedule | `schedule` | their day: post, meals, the den, sleep | open |
+| Claims vs truth | `claims` | what they say they're good at, and whether it's true | open |
 
 ## Joining
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | a secret character; whether and how he joins is open | Rex (secret); rest open |
+| How recruited | `recruit` | hire / mercenary / kidnap; what they need first (rep, proof, gift, questline) | open |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -79,7 +74,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Look | `art.look` | he very clearly looks like your first mate (`../../PIRATE.md` §7b) | Rex |
+| Look | `art.look` | a femboy | Rex |
 | Signature face | `art.signature_face` | the one expression that is theirs | open |
 | Heart-event scenes to illustrate | `art.scenes` | | open |
 
@@ -101,7 +96,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
 | Date | Change | By |
 |---|---|---|
-| 2026-10-27 | Created: a secret character: an old soldier who walks to the old coastal fort once a week | Rex |
-| 2026-10-27 | He is the secret cook who looks like your first mate | Rex |
-| 2026-10-27 | Questline responses section added | keeper |
-| 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
+| 2026-10-27 | Created: the INFP is a femboy | Rex |

@@ -70,8 +70,8 @@ work lives in `../art/`, not here.
   - First mate: a choice between three.
   - Cannoneer (the sniper/mechanic slot): four options; one sniper-cannoneer is best for cannons alone.
   - Cook: a few overlapping options, plus one secret: someone who doesn't seem to know how to cook but is the best
-    cook there, an ESTP who very clearly looks like your first mate. He is the old ESTP soldier (Rex, 2026-10-27;
-    `characters/estp-m.md`).
+    cook there, an ESTP who very clearly looks like your first mate. The old ESTP soldier (Rex, 2026-10-27), now a brutish, butch woman
+    (`characters/estp-f.md`).
   - Others: navigator, medic, sewer/clothcrafter, fisherman (numbers not set).
 - **(Rex)** It has some recruits but not the full picture (§4a).
 - **(Rex)** The town keeps a reputation with you, and the groups inside it do too; kidnapping someone a group liked
@@ -188,4 +188,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The INTJ's only path is orderly evil unless you show her that her belief is wrong; then she becomes neutral | Rex |
 | 2026-10-27 | The farm family: the INTP farmer (bodies as fertiliser) and the ESFP cook (cannibal, butcher shop; not a baker) used to be married; their daughter (Pearl-inspired killer) runs the farm with the farmer; their son (skin collector) lives with the cook. | Rex |
 | 2026-10-27 | The INTP farmer is a man and the ESFP cook a woman (files now `intp-m`, `esfp-f`) | Rex |
+| 2026-10-27 | The ENFJ is a pretty boy (`enfj-m`); the ISTP is a tomboy, a small, petite girl who is extremely effective at hunting (`istp-f`); the ESTP is a brutish, butch woman (`estp-f`); the INFP is a femboy (`infp-m`) | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |
