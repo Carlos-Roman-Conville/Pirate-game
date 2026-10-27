@@ -15,8 +15,8 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 | Type | `type` | ENTP | Rex |
 | Function stack | `stack` | Ne-Ti-Fe-Si | Rex (type) |
 | Gender | `gender` | man | Rex |
-| Pirate archetype | `archetype` | the card sharp (ROSTER draft) | proposed |
-| Ship job (posts held) | `posts` | runs the den (ROSTER draft) | proposed |
+| Pirate archetype | `archetype` | a builder of devices (replaces the ROSTER draft's "card sharp" for him) | Rex |
+| Ship job (posts held) | `posts` | mechanic: he builds interesting, effective killing devices for the boat | Rex |
 | Where they are found | `found_at` | the starting port: each time he leaves, you find him back in town | Rex |
 | Resident or visitor | `town_role` | | open |
 
@@ -24,7 +24,7 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Psycho core | `psycho_core` | | open |
+| Psycho core | `psycho_core` | his defining trait: he constructs devices, and some are truly terrifying means of torturing life. His work for the boat is killing devices; his more focused creations are clearly devices of torture | Rex |
 | Madness break | `madness_break` | | open |
 | Madness triggers | `madness_triggers` | | open |
 | Why piracy allows it | `permission` | | open |
@@ -112,3 +112,4 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 | Date | Change | By |
 |---|---|---|
 | 2026-10-26 | Created: the ENTP who keeps leaving; the secret route to the perfect ending | Rex |
+| 2026-10-26 | Defining trait: builds devices; the ship's mechanic (killing devices for the boat), his focused work is torture devices | Rex |
