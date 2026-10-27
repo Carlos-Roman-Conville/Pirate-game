@@ -94,7 +94,7 @@ matrix: `../QUESTLINES.md`). Rex's rule: a character's nature isn't corrupted by
 | Questline | Key | Response (supports / neutral / opposes, and what happens) | Mark |
 |---|---|---|---|
 | Orderly good (church-like) | `quest.order_good` |  | open (proposed: possible support) |
-| Chaotic good (undecided) | `quest.chaos_good` |  | open |
+| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` |  | open |
 | Orderly evil (Cthulhu corruption) | `quest.order_evil` |  | open (proposed: possible support) |
 | Chaotic evil (killers, devil worship) | `quest.chaos_evil` |  | open (proposed: opposes) |
 
