@@ -80,8 +80,8 @@ plain abandonment.
    endings by quadrant. Not resolved here: whether `end.perfect` is a quadrant ending (and which), sits on top of
    one, or is replaced; whether `end.good` and `end.ruin` become quadrants; whether slots now take their states from
    the quadrant, from single choices, or both.
-2. ~~Chaotic good's identity.~~ Answered 2026-10-27: your stereotypical pirate town (Rex). Whether his "pirate
-   questline" is this quadrant's plotline is open (see `../story/QUESTLINES.md`).
+2. ~~Chaotic good's identity.~~ Answered 2026-10-27: your stereotypical pirate town (Rex). His "pirate questline" is
+   this quadrant's plotline; the priest has no effect on it (Rex, 2026-10-27; `../story/QUESTLINES.md`).
 3. Ghost ending vs plain abandonment for neutral.
 4. Which 3 residents sit in each quadrant (`TOWNS.md`, Alignment).
 5. The neutral radius, and how far each choice, quest answer and resident moves the town.
@@ -132,3 +132,4 @@ changes how routes are built.
 | 2026-10-26 | Created: format; `end.perfect` with the ENTP's secret route R1; good and ruin recorded as open | keeper; route Rex |
 | 2026-10-27 | Rex's alignment model: two axes, four quadrant endings plus neutral; no game-over abandonment; outside AI's ideas as proposed; fit with `end.perfect` left open | Rex; keeper (format) |
 | 2026-10-27 | Chaotic good is your stereotypical pirate town (via the story keeper) | Rex |
+| 2026-10-27 | The pirate questline is chaotic good's plotline; the priest has no effect on it (via the story keeper) | Rex |
