@@ -86,9 +86,14 @@
   "pullIn": {
     "notes": "Line tension; Rex still deciding fairness — placeholder threshold.",
     "lineBreakTension": 100,
+    "weakenTensionThreshold": 85,
+    "lineStrengthMax": 100,
+    "integrityLossPerPullOverWeaken": 8,
+    "basePullTensionPerIntensity": 107,
     "strengthPullBonus": 0.5,
     "calmTensionReduction": 0.02,
     "patienceTensionReduction": 0.015,
+    "dexterityTensionReduction": 0.5,
     "enduranceFightBonus": 0.03
   }
 }
