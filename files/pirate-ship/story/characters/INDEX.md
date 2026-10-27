@@ -23,7 +23,7 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | istp-f | ISTP (Ti-Se-Ni-Fe) | woman | (open) | boarder | | drafted | |
 | isfp-m | ISFP (Fi-Se-Ni-Te) | man | (open) | figurehead carver / carpenter | | drafted | |
 | isfp-f | ISFP (Fi-Se-Ni-Te) | woman | (open) | figurehead carver / carpenter | | drafted | |
-| estp-m | ESTP (Se-Ti-Fe-Ni) | man | (open) | old soldier (Rex) | secret character; locked house, walks to the old fort weekly; old, very strong, a killer | idea (Rex) | [estp-m.md](estp-m.md) |
+| estp-m | ESTP (Se-Ti-Fe-Ni) | man | (open) | old soldier; the secret cook (Rex) | looks like your first mate; secret character; locked house, walks to the old fort weekly; old, very strong, a killer | idea (Rex) | [estp-m.md](estp-m.md) |
 | estp-f | ESTP (Se-Ti-Fe-Ni) | woman | (open) | gunner | | drafted | |
 | esfp-m | ESFP (Se-Fi-Te-Ni) | man | (open) | baker (Rex) | jolly; secretly a cannibal | idea (Rex) | [esfp-m.md](esfp-m.md) |
 | esfp-f | ESFP (Se-Fi-Te-Ni) | woman | (open) | castaway / topman | | drafted | |
@@ -59,6 +59,5 @@ as examples, unnamed).
 ## Known overlaps to keep in mind (from Rex's notes, not new canon)
 
 - The starting port's secret cook is an ESTP who looks like your first mate (`../../PIRATE.md` §7b): which ESTP
-  slot, and who the first mate is, are open. The old ESTP soldier now holds `estp-m`, so the cook is either the
-  ESTP woman or a second ESTP man.
+  slot, and who the first mate is, are open. Settled 2026-10-27 (Rex): the cook is the old ESTP soldier, `estp-m`. Who the first mate is stays open.
 - The bigwig's child is a recruitable whose type isn't set, so their slot is open.

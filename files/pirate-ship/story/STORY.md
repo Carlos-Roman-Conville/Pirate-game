@@ -70,7 +70,8 @@ work lives in `../art/`, not here.
   - First mate: a choice between three.
   - Cannoneer (the sniper/mechanic slot): four options; one sniper-cannoneer is best for cannons alone.
   - Cook: a few overlapping options, plus one secret: someone who doesn't seem to know how to cook but is the best
-    cook there, an ESTP who very clearly looks like your first mate.
+    cook there, an ESTP who very clearly looks like your first mate. He is the old ESTP soldier (Rex, 2026-10-27;
+    `characters/estp-m.md`).
   - Others: navigator, medic, sewer/clothcrafter, fisherman (numbers not set).
 - **(Rex)** It has some recruits but not the full picture (§4a).
 - **(Rex)** The town keeps a reputation with you, and the groups inside it do too; kidnapping someone a group liked
@@ -169,4 +170,5 @@ work lives in `../art/`, not here.
 | 2026-10-26 | The ENTP's defining trait: he builds devices; the ship's mechanic (killing devices), his focused creations are torture devices | Rex |
 | 2026-10-27 | The starting port's places and first residents: ISFJ clinic doctor (recruitable, secretly sadistic), ENTP lives at the shipyard as weaponsmith, ISTJ head priest, warehouse bigwig and troubled recruitable child, old ESTP soldier (secret, locked house, weekly to the fort), INTP farmer (April Ludgate), ESFP baker (secret cannibal) | Rex |
 | 2026-10-27 | The INTJ herbalist and apothecary owner: tests potions on people she judges evil; her questline is a gamble to judge if a potion kills and if they deserve it, and to help her recover | Rex |
+| 2026-10-27 | The old ESTP soldier is the secret cook | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

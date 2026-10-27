@@ -16,7 +16,7 @@ follow `_TEMPLATE.md`.
 | Function stack | `stack` | Se-Ti-Fe-Ni | Rex |
 | Gender | `gender` | man | Rex |
 | Pirate archetype | `archetype` | an old soldier | Rex |
-| Ship job (posts held) | `posts` | | open |
+| Ship job (posts held) | `posts` | the starting port's secret cook: he doesn't seem to know how to cook, but he is the best cook there | Rex |
 | Where they are found | `found_at` | the starting port: a locked house you can't access; once a week he leaves it toward the old coastal fort | Rex |
 | Resident or visitor | `town_role` | resident (locked house) | Rex |
 
@@ -39,12 +39,12 @@ follow `_TEMPLATE.md`.
 | Likes (gifts, acts) | `likes` | | open |
 | Dislikes | `dislikes` | | open |
 | Schedule | `schedule` | visits the old coastal fort one day a week; you can see him leave once a week toward the fort | Rex |
-| Claims vs truth | `claims` | what they say they're good at, and whether it's true | open |
+| Claims vs truth | `claims` | doesn't seem to be a cook; is the best one in town | Rex |
 
 ### Notes (Rex, 2026-10-27)
 
 - **(open)** What he does at the fort.
-- **(open)** Which slot he takes: the starting port's secret cook is also an ESTP (one who looks like your first mate), gender not set.
+- **(Rex, 2026-10-27)** He is the secret cook: the ESTP who very clearly looks like your first mate (`../../PIRATE.md` §7b).
 
 ## Joining
 
@@ -79,7 +79,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Look | `art.look` | build, face, hair, scars, outfit, colours | open |
+| Look | `art.look` | he very clearly looks like your first mate (`../../PIRATE.md` §7b) | Rex |
 | Signature face | `art.signature_face` | the one expression that is theirs | open |
 | Heart-event scenes to illustrate | `art.scenes` | | open |
 
@@ -88,3 +88,4 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | Date | Change | By |
 |---|---|---|
 | 2026-10-27 | Created: a secret character: an old soldier who walks to the old coastal fort once a week | Rex |
+| 2026-10-27 | He is the secret cook who looks like your first mate | Rex |
