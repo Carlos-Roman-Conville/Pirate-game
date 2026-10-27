@@ -17,7 +17,7 @@ follow `_TEMPLATE.md`.
 | Gender | `gender` | woman: brutish and butch (was a man until 2026-10-27) | Rex |
 | Pirate archetype | `archetype` | a veteran (was "an old soldier"), now an outdoorsman: a wilderness generalist who gathers wood, stone, herbs and food. The ISTP specialises in hunting only; she does a bit of everything | Rex |
 | Ship job (posts held) | `posts` | the starting port's secret cook: she doesn't seem to know how to cook, but she is the best cook there | Rex |
-| Where they are found | `found_at` | the only constant way to find her is at the old coastal fort on a certain day of the week. She lives in an isolated hut away from town and goes into the forest (Rex wrote "goes itn othe first", read as "into the forest"; to confirm). Earlier: a locked house in town you can't access (whether it still exists is open) | Rex; forest reading and locked house open |
+| Where they are found | `found_at` | the only constant way to find her is at the old coastal fort on a certain day of the week. She lives in an isolated hut away from town and goes into the forest. Earlier: a locked house in town you can't access (whether it still exists is open) | Rex; locked house open |
 | Resident or visitor | `town_role` | lives apart from town, in her hut | Rex |
 
 ## The psycho
@@ -112,3 +112,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Now a woman: brutish and butch; file moved from `estp-m.md` to `estp-f.md` | Rex |
 | 2026-10-27 | A veteran turned outdoorsman: a wilderness generalist (wood, stone, herbs, food), unlike the ISTP's hunting; lives isolated in a hut away from town, rarely seen | Rex |
 | 2026-10-27 | The fort day holds: the only constant way to find her; she lives in the hut and goes into the forest | Rex |
+| 2026-10-27 | Confirmed: she goes into the forest | Rex |
