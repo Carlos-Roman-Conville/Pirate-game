@@ -9,12 +9,12 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 
 ## The 32
 
-| Slot | Type (stack) | Gender | Name | Archetype / job (ROSTER draft) | What Rex has confirmed | Status | File |
+| Slot | Type (stack) | Gender | Name | Archetype / job (ROSTER draft) | What Rex has said | Status | File |
 |---|---|---|---|---|---|---|---|
-| istj-m | ISTJ (Si-Te-Fi-Ne) | man | (open) | keeper of the articles / bosun | follows the rules to the letter | drafted | |
+| istj-m | ISTJ (Si-Te-Fi-Ne) | man | (open) | head priest of the church (Rex) | follows the rules to the letter; despises the town; cruel by the rules | idea (Rex) | [istj-m.md](istj-m.md) |
 | istj-f | ISTJ (Si-Te-Fi-Ne) | woman | (open) | keeper of the articles / bosun | follows the rules to the letter | drafted | |
 | isfj-m | ISFJ (Si-Fe-Ti-Ne) | man | (open) | surgeon who won't let you go / surgeon | the medic who keeps you from leaving | drafted | |
-| isfj-f | ISFJ (Si-Fe-Ti-Ne) | woman | (open) | surgeon who won't let you go / surgeon | the medic who keeps you from leaving | drafted | |
+| isfj-f | ISFJ (Si-Fe-Ti-Ne) | woman | (open) | town doctor at the clinic (Rex) | born here, her father the town doctor; recruitable; secretly enjoys the pain healing causes | idea (Rex) | [isfj-f.md](isfj-f.md) |
 | estj-m | ESTJ (Te-Si-Ne-Fi) | man | (open) | quartermaster | | drafted | |
 | estj-f | ESTJ (Te-Si-Ne-Fi) | woman | (open) | quartermaster | | drafted | |
 | esfj-m | ESFJ (Fe-Si-Ne-Ti) | man | (open) | mother of the mess / cook | | drafted | |
@@ -23,9 +23,9 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | istp-f | ISTP (Ti-Se-Ni-Fe) | woman | (open) | boarder | | drafted | |
 | isfp-m | ISFP (Fi-Se-Ni-Te) | man | (open) | figurehead carver / carpenter | | drafted | |
 | isfp-f | ISFP (Fi-Se-Ni-Te) | woman | (open) | figurehead carver / carpenter | | drafted | |
-| estp-m | ESTP (Se-Ti-Fe-Ni) | man | (open) | gunner | | drafted | |
+| estp-m | ESTP (Se-Ti-Fe-Ni) | man | (open) | old soldier (Rex) | secret character; locked house, walks to the old fort weekly; old, very strong, a killer | idea (Rex) | [estp-m.md](estp-m.md) |
 | estp-f | ESTP (Se-Ti-Fe-Ni) | woman | (open) | gunner | | drafted | |
-| esfp-m | ESFP (Se-Fi-Te-Ni) | man | (open) | castaway / topman | | drafted | |
+| esfp-m | ESFP (Se-Fi-Te-Ni) | man | (open) | baker (Rex) | jolly; secretly a cannibal | idea (Rex) | [esfp-m.md](esfp-m.md) |
 | esfp-f | ESFP (Se-Fi-Te-Ni) | woman | (open) | castaway / topman | | drafted | |
 | intj-m | INTJ (Ni-Te-Fi-Se) | man | (open) | navigator | | drafted | |
 | intj-f | INTJ (Ni-Te-Fi-Se) | woman | (open) | navigator | | drafted | |
@@ -36,10 +36,10 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | enfj-m | ENFJ (Fe-Ni-Se-Ti) | man | (open) | shantyman / recruiter | | drafted | |
 | enfj-f | ENFJ (Fe-Ni-Se-Ti) | woman | (open) | shantyman / recruiter | | drafted | |
 | intp-m | INTP (Ti-Ne-Si-Fe) | man | (open) | powder master | | drafted | |
-| intp-f | INTP (Ti-Ne-Si-Fe) | woman | (open) | powder master | | drafted | |
+| intp-f | INTP (Ti-Ne-Si-Fe) | woman | (open) | farmer (Rex) | widowed, runs the farm alone; psychopathic somehow; based on April Ludgate | idea (Rex) | [intp-f.md](intp-f.md) |
 | infp-m | INFP (Fi-Ne-Si-Te) | man | (open) | captive who stayed / keeps the log | | drafted | |
 | infp-f | INFP (Fi-Ne-Si-Te) | woman | (open) | captive who stayed / keeps the log | | drafted | |
-| entp-m | ENTP (Ne-Ti-Fe-Si) | man | (open) | device builder / mechanic (Rex; replaces card sharp) | builds killing devices for the boat and, when focused, torture devices; keeps leaving and you keep winning him back; letting him go once is a secret route to the perfect ending | idea (Rex) | [entp-m.md](entp-m.md) |
+| entp-m | ENTP (Ne-Ti-Fe-Si) | man | (open) | device builder / mechanic; town weaponsmith at the shipyard (Rex) | builds killing devices for the boat and, when focused, torture devices; keeps leaving and you keep winning him back; letting him go once is a secret route to the perfect ending | idea (Rex) | [entp-m.md](entp-m.md) |
 | entp-f | ENTP (Ne-Ti-Fe-Si) | woman | (open) | card sharp / runs the den | | drafted | |
 | enfp-m | ENFP (Ne-Fi-Te-Si) | man | (open) | turncoat / pilot and interpreter | | drafted | |
 | enfp-f | ENFP (Ne-Fi-Te-Si) | woman | (open) | turncoat / pilot and interpreter | | drafted | |
@@ -53,8 +53,12 @@ as examples, unnamed).
 
 | Slug | Who | Where | Status | File |
 |---|---|---|---|---|
+| bigwig (placeholder) | a big wig who owns the warehouse and a few vendors (Rex, tentative: "a warehouse? hmm idk") | the starting port | idea (Rex) | |
+| bigwig-child (placeholder) | his son or daughter, extremely troubled and a legit drain on the town; a recruitable who needs fixing to help the town; type and gender open | the starting port | idea (Rex) | |
 
 ## Known overlaps to keep in mind (from Rex's notes, not new canon)
 
 - The starting port's secret cook is an ESTP who looks like your first mate (`../../PIRATE.md` §7b): which ESTP
-  slot, and who the first mate is, are open.
+  slot, and who the first mate is, are open. The old ESTP soldier now holds `estp-m`, so the cook is either the
+  ESTP woman or a second ESTP man.
+- The bigwig's child is a recruitable whose type isn't set, so their slot is open.

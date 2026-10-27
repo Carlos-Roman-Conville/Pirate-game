@@ -75,7 +75,13 @@ work lives in `../art/`, not here.
 - **(Rex)** It has some recruits but not the full picture (§4a).
 - **(Rex)** The town keeps a reputation with you, and the groups inside it do too; kidnapping someone a group liked
   locks you out of that group (§7b).
-- **(open)** Its name, its members (Rex designs them next, §7b), its history, who runs it.
+- **(Rex, 2026-10-27) Its places** (layout and upgrades kept by the town keeper in `../town/`): a bakery, a farm,
+  a tavern/brothel, the docks (the shipyard, the repairmen and the market; the market starts at the port and leads
+  into town), a small clinic, the church, perhaps a warehouse, the old coastal fort, and a locked house.
+- **(Rex, 2026-10-27) Its people so far** (`characters/INDEX.md`): the ISFJ doctor at the clinic, the ENTP
+  weaponsmith at the shipyard, the ISTJ head priest, the warehouse bigwig and his troubled child, the old ESTP
+  soldier in the locked house, the INTP farmer, the ESFP baker.
+- **(open)** Its name, its history, who runs it.
 
 ### Later ports
 
@@ -161,4 +167,5 @@ work lives in `../art/`, not here.
 | 2026-10-26 | Endings and town-change rules move to the town keeper (`../town/`); this file keeps a pointer | keeper |
 | 2026-10-26 | First character: the ENTP man who keeps leaving; letting him go on his explained departure is a secret route to the perfect ending | Rex |
 | 2026-10-26 | The ENTP's defining trait: he builds devices; the ship's mechanic (killing devices), his focused creations are torture devices | Rex |
+| 2026-10-27 | The starting port's places and first residents: ISFJ clinic doctor (recruitable, secretly sadistic), ENTP lives at the shipyard as weaponsmith, ISTJ head priest, warehouse bigwig and troubled recruitable child, old ESTP soldier (secret, locked house, weekly to the fort), INTP farmer (April Ludgate), ESFP baker (secret cannibal) | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

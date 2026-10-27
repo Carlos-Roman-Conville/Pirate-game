@@ -16,9 +16,9 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 | Function stack | `stack` | Ne-Ti-Fe-Si | Rex (type) |
 | Gender | `gender` | man | Rex |
 | Pirate archetype | `archetype` | a builder of devices (replaces the ROSTER draft's "card sharp" for him) | Rex |
-| Ship job (posts held) | `posts` | mechanic: he builds interesting, effective killing devices for the boat | Rex |
-| Where they are found | `found_at` | the starting port: each time he leaves, you find him back in town | Rex |
-| Resident or visitor | `town_role` | | open |
+| Ship job (posts held) | `posts` | mechanic: he builds interesting, effective killing devices for the boat. In town: the local weaponsmith | Rex |
+| Where they are found | `found_at` | the starting port: he lives at the shipyard (a few other shipyard characters live there too); each time he leaves, you find him back in town | Rex |
+| Resident or visitor | `town_role` | resident (the shipyard) | Rex |
 
 ## The psycho
 
@@ -113,4 +113,5 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 | Date | Change | By |
 |---|---|---|
 | 2026-10-26 | Created: the ENTP who keeps leaving; the secret route to the perfect ending | Rex |
+| 2026-10-27 | Lives at the shipyard; the town's weaponsmith | Rex |
 | 2026-10-26 | Defining trait: builds devices; the ship's mechanic (killing devices for the boat), his focused work is torture devices | Rex |
