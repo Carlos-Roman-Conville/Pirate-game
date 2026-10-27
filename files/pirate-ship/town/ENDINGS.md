@@ -19,6 +19,72 @@ Kept by the town keeper; Rex writes the endings. Marks as in `TOWNS.md`: **(Rex)
 - **(open)** What thriving and ruin look like at the end; whether endings are per town or one for the game; what
   "the end" is (a day count, a story event, leaving the port behind for good).
 
+## The town's alignment (Rex, 2026-10-27)
+
+This is how the town changes and ends, as of 2026-10-27. Rex's own words, recorded; proposals from the outside AI
+he consulted are marked as such.
+
+### How it works (Rex)
+
+- **(Rex)** No separate game-over-style abandonment ending: it makes players feel they should restart.
+- **(Rex)** The town has an **alignment**. Each resident who **stays** in town has their alignment changed by your
+  choices, and that is what alters the town. The mechanism is influence: when morality is high, people start veering
+  back toward society; when evil is high, they become openly evil.
+- **(Rex)** Two axes, **good/evil** and **order/chaos**, giving four quadrants: orderly good, chaotic good, orderly
+  evil, chaotic evil. The first town uses this quad system; later towns could go to three or eight (a true cube).
+- **(Rex)** **Neutral is not a quadrant; it means no change.** If the town's position stays within a radius of the
+  centre, you get the neutral ending: the town stays as it is, and the epilogue describes it being abandoned.
+  Gameplay is fine; the story still carries the abandonment, because playing neutral when the situation needed
+  action ends poorly.
+- **(Rex)** Four main plotlines, one per quadrant. Who you take on them is how the game plays out.
+- **(Rex)** Each character has a clear influence toward a quadrant, a neutral one, or an opposing one. The port has
+  12 people, so the plan is **3 per quadrant**.
+- **(Rex)** Your answers to quests taken in town also guide the direction.
+- **(Rex)** You can still get, say, an evil ending, but it will be a specific one such as chaotic evil.
+- **(Rex)** With a 3-person crew, neutral should be hard to get unless you truly play balanced (bad things after good
+  ones). The game rewards going all out in one direction. Try all four and you end up nowhere; play between them or
+  combine one with another and you likely still end up in one direction.
+
+### What each quadrant becomes
+
+| Quadrant | Id | The town becomes | Name (proposed, outside AI) | Mark |
+|---|---|---|---|---|
+| Orderly good | `og` | more church-like | Sanctified Port | Rex (what it becomes) |
+| Chaotic good | `cg` | open | Free Haven | open |
+| Orderly evil | `oe` | corrupted by Cthulhu | Drowned Covenant | Rex (what it becomes) |
+| Chaotic evil | `ce` | residents become more killer-like and start worshipping devil magic | Devil's Anchorage | Rex (what it becomes) |
+| Neutral (centre) | `n` | stays as it is; the epilogue tells of it being abandoned | | Rex |
+
+Ids `og`, `cg`, `oe`, `ce`, `n` are the keeper's, for the game to check.
+
+**(open, Rex's alternative)** Make the neutral ending a **ghost ending**: everyone replaced with ghosts, instead of
+plain abandonment.
+
+### Proposed by the outside AI (not Rex's until he says so)
+
+- **(proposed)** Three separate numbers per resident: **alignment** (what they promote), **influence** (how much they
+  sway the town), **presence** (whether they stay in town). A popular baker could outweigh a priest few people
+  listen to. Taking an influential resident aboard removes their pull from the town.
+- **(proposed)** Town shift = quest decisions + character contributions + town events, each moving the town on both
+  axes.
+- **(proposed)** Internally tell apart low influence from high-but-conflicting influence, even though both give
+  neutral, so the epilogue can say which happened.
+- **(proposed)** Seed traces of all four futures in the starting town: the chapel, a maritime cult under the ruined
+  fort, the tavern's criminals, residents who still help each other.
+- **(proposed)** The same buildings transform differently per quadrant (`UPGRADES.md`, Quadrant states).
+
+### Open
+
+1. **How this fits what's already recorded.** Rex's 2026-10-26 model has upgrade slots changed by single choices
+   (`port.entp = improved` when you let the ENTP go) and `end.perfect` reached by routes; the 2026-10-27 model has
+   endings by quadrant. Not resolved here: whether `end.perfect` is a quadrant ending (and which), sits on top of
+   one, or is replaced; whether `end.good` and `end.ruin` become quadrants; whether slots now take their states from
+   the quadrant, from single choices, or both.
+2. Chaotic good's identity.
+3. Ghost ending vs plain abandonment for neutral.
+4. Which 3 residents sit in each quadrant (`TOWNS.md`, Alignment).
+5. The neutral radius, and how far each choice, quest answer and resident moves the town.
+
 ## Endings
 
 | Id | Kind | Secret | Routes | Mark |
@@ -26,6 +92,14 @@ Kept by the town keeper; Rex writes the endings. Marks as in `TOWNS.md`: **(Rex)
 | `end.perfect` | perfect | at least one route is | R1 below; others open | Rex (it exists, with several methods); id the keeper's |
 | `end.good` | good | open | open | Rex (good endings exist) |
 | `end.ruin` | other | open | open | Rex ("leading it to ruin"); whether it is an ending, open |
+| `end.og` | quadrant | open | town ends in orderly good | Rex |
+| `end.cg` | quadrant | open | town ends in chaotic good | Rex (the quadrant); what it is, open |
+| `end.oe` | quadrant | open | town ends in orderly evil | Rex |
+| `end.ce` | quadrant | open | town ends in chaotic evil | Rex |
+| `end.n` | neutral | no | town ends within the neutral radius of the centre | Rex |
+
+How `end.perfect`, `end.good` and `end.ruin` relate to the five alignment endings is open (The town's alignment,
+Open 1).
 
 ### `end.perfect`
 
@@ -42,6 +116,8 @@ changes how routes are built.
 
 ## The shape so far
 
+- (Alignment model, 2026-10-27) The town ends in one of five places (four quadrants or the centre), so the
+  endings are five plus whatever routes sit inside them; the counts below are for the slot model.
 - Combinations = the product of every slot's state count. Now: `port.entp` (2 states) = **2** combinations.
   The twelve reserved place slots (2026-10-27) have only `base` so far, so they add nothing yet.
 - Each new two-state slot doubles it; ten slots of two or three states give roughly a thousand to sixty thousand.
@@ -53,3 +129,4 @@ changes how routes are built.
 | Date | Change | By |
 |---|---|---|
 | 2026-10-26 | Created: format; `end.perfect` with the ENTP's secret route R1; good and ruin recorded as open | keeper; route Rex |
+| 2026-10-27 | Rex's alignment model: two axes, four quadrant endings plus neutral; no game-over abandonment; outside AI's ideas as proposed; fit with `end.perfect` left open | Rex; keeper (format) |

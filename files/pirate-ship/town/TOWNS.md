@@ -103,10 +103,10 @@ they are in town.
 | The old soldier | [`estp-m`](../story/characters/estp-m.md) | `port.soldier_house`; goes to `port.fort` one day a week | resident | open | a secret character; an old ESTP, very strong, a killer | Rex |
 | The warehouse big wig | `bigwig` (placeholder, outside the 32) | `port.warehouse` (owns it) | resident | open | | Rex (tentative) |
 | The big wig's child | `bigwig-child` (placeholder; type open) | `port.warehouse` | resident | yes | extremely troublesome, a real drain on the town; one of the recruitables who needs fixing to help the town; son or daughter open | Rex (tentative) |
-| The INTJ herbalist and apothecary owner | [`intj-f`](../story/characters/intj-f.md) | `port.apothecary` (owns it) | open | open | concocts potions, tinctures and such; a bit unconventional; may be the daughter of "the owner" (whose: open). Her psychotic trait: she has no qualms testing her concoctions on bad people, or people she perceives as evil. Part of her questline is a gamble: you work out, mostly from science and the clues you get, whether what she made will kill the person and whether they deserve it, and navigate her psychopathy to help her recover. Those who don't deserve it can't die; she has to discover naturally whether they are innocent or evil | Rex |
+| The INTJ herbalist and apothecary owner | [`intj-f`](../story/characters/intj-f.md) | `port.apothecary` (owns it) | open | open | concocts potions, tinctures and such; a bit unconventional; the daughter of the apothecary's previous owner (Rex, 2026-10-27). Her psychotic trait: she has no qualms testing her concoctions on bad people, or people she perceives as evil. Part of her questline is a gamble: you work out, mostly from science and the clues you get, whether what she made will kill the person and whether they deserve it, and navigate her psychopathy to help her recover. Those who don't deserve it can't die; she has to discover naturally whether they are innocent or evil | Rex |
 | The bartender | | `port.tavern` | resident | little reason to leave | | Rex (§7b) |
 | The blacksmith | | open | resident, has lived there his whole life | no reason to leave; could be kidnapped later | whether he is the ENTP weapon smith or someone else: open | Rex (§7b) |
-| The secret cook (an ESTP who looks like your first mate) | open (`estp-m` is now the old soldier) | open | open | yes | doesn't seem to know how to cook; the best cook there | Rex |
+| The secret cook (an ESTP who looks like your first mate) | [`estp-m`](../story/characters/estp-m.md): the old soldier (Rex, 2026-10-27) | open | open | yes | doesn't seem to know how to cook; the best cook there | Rex |
 | First mate candidates (3) | | | open | yes | | Rex (three); who, open |
 | Cannoneer candidates (4) | | | open | yes | one sniper-cannoneer is best for cannons alone | Rex (four); who, open |
 | Cook candidates (a few, plus the secret one) | | | open | yes | overlapping, clear-cut choices | Rex |
@@ -115,6 +115,22 @@ they are in town.
 | Market and warehouse vendors | | `port.market`, `port.warehouse` | open | open | | Rex |
 | Low-life pirates passing through | | | visitors | open | | Rex |
 | Residents with a reason they haven't moved on (sample reasons in STORY.md) | | | residents | open | | proposed (outside AI) |
+
+### Alignment (Rex, 2026-10-27)
+
+- **(Rex)** Each resident who stays has an alignment that your choices change; that is what alters the town
+  (`ENDINGS.md`, The town's alignment). Each character has a clear influence toward a quadrant, a neutral one, or
+  an opposing one.
+- **(Rex)** 12 people, **3 per quadrant**. Who sits where is open.
+- **(Rex)** Four main plotlines, one per quadrant. Each character's responses to them are in their own file (the
+  story keeper's; so far [`istj-m`](../story/characters/istj-m.md) and [`entp-m`](../story/characters/entp-m.md)).
+
+| Quadrant | Residents (3) | Mark |
+|---|---|---|
+| Orderly good (`og`) | | open |
+| Chaotic good (`cg`) | | open |
+| Orderly evil (`oe`) | | open |
+| Chaotic evil (`ce`) | | open |
 
 ### Groups (for reputation)
 
@@ -135,3 +151,5 @@ they are in town.
 | 2026-10-27 | The starting port's places: docks (shipyard, repairmen, market), market leading into town, tavern/brothel, bakery, farm, clinic, church, warehouse (tentative), old coastal fort, the old soldier's locked house; their residents (ISFJ doctor, ISTJ priest, INTP farmer, ESFP baker, old ESTP soldier, ENTP at the shipyard as weapon smith, the warehouse big wig and his troublesome child) | Rex |
 | 2026-10-27 | Linked residents to the story keeper's files (1d35e8c): old soldier = `estp-m`; warehouse placeholders `bigwig`, `bigwig-child` | keeper |
 | 2026-10-27 | Added the apothecary (`port.apothecary`) and its owner, the INTJ herbalist who tests potions on people she sees as evil; her questline is a gamble on whether a potion kills and whether they deserve it | Rex |
+| 2026-10-27 | The old ESTP soldier is the secret cook; the herbalist is the daughter of the apothecary's previous owner (via the story keeper) | Rex |
+| 2026-10-27 | Town alignment replaces game-over abandonment: residents' alignments move the town on good/evil × order/chaos; four quadrant endings plus neutral; 3 residents per quadrant (`ENDINGS.md`) | Rex |

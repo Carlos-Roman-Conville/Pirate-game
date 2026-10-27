@@ -34,6 +34,34 @@ out; the combinations of upgrades produce the endings (`ENDINGS.md`).
 
 Words are added here only as Rex's choices need them.
 
+## Town alignment (Rex, 2026-10-27)
+
+Rex's model of 2026-10-27 (`ENDINGS.md`, The town's alignment): each resident who stays has an alignment your
+choices change, and the town moves on two axes, good/evil and order/chaos. What the game checks:
+
+| Key | What | Values | Mark |
+|---|---|---|---|
+| `port.align` | the town's position | a point on good/evil × order/chaos; read as `og`, `cg`, `oe`, `ce`, or `n` within the neutral radius | Rex (axes, quadrants, neutral); ids and the point the keeper's; radius open |
+| `<slug>.align` | a resident's alignment | the same two axes; changed by your choices | Rex |
+| `<slug>.influence` | how much they sway the town | number | proposed (outside AI) |
+| `<slug>.presence` | whether they stay in town (taking them aboard removes their pull) | in town / aboard / gone | proposed (outside AI); Rex said only residents who stay count |
+
+What moves `port.align`: your choices on each resident (Rex), your answers to town quests (Rex); town events
+(proposed). By how much: open.
+
+### Quadrant states (proposed, outside AI)
+
+The same building transforms differently per quadrant. If Rex keeps this, a slot's states become its quadrant forms
+(`og`, `cg`, `oe`, `ce`, and `base` for neutral):
+
+| Slot | `og` | `cg` | `oe` | `ce` | Mark |
+|---|---|---|---|---|---|
+| `port.church` | cathedral | meeting hall | eldritch temple | desecrated ruin | proposed (outside AI said "the chapel") |
+| `port.docks` | merchant harbour | free pirate port | cult harbour | raiding base | proposed |
+| `port.fort` | shared by all four paths | | | | proposed |
+
+Open: whether slot states now follow the quadrant, single choices (`port.entp`), or both (`ENDINGS.md`, Open 1).
+
 ## `port`: the starting port
 
 ### Slots
@@ -99,3 +127,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-26 | Created: format, choice words (proposed), first slot `port.entp` from the ENTP's secret route | keeper; route Rex |
 | 2026-10-27 | Reserved slots for Rex's eleven places (`port.docks` … `port.soldier_house`), each `base` only until Rex gives states and unlocks | keeper; places Rex |
 | 2026-10-27 | Reserved `port.apothecary` (twelfth place) | keeper; place Rex |
+| 2026-10-27 | Town alignment keys (`port.align`, per-resident alignment; influence and presence proposed); outside AI's quadrant states as proposed | keeper; model Rex |
