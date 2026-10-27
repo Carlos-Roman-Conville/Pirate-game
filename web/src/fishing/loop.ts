@@ -1,5 +1,6 @@
 // Dock activity loop: walk the dock, fish through the run, short result panel, back to walking.
 
+import glossary from '../../../data/pirate-ship/glossary.json'
 import {
   dispatch,
   loadFishingConfig,
@@ -7,6 +8,7 @@ import {
   type FishingConfig,
   type FishingResult,
   type FishingRun,
+  type GotAwayReason,
 } from './machine'
 
 export type DockMode = 'walking' | 'fishing' | 'showingResult'
@@ -44,10 +46,27 @@ export function resultTuning(config: FishingConfig): ResultTuning {
   }
 }
 
-export function resultPanelMessage(result: FishingResult, config: FishingConfig): string {
+function glossaryEn(code: string): string {
+  const entry = glossary.terms.find((term) => term.code === code)
+  if (!entry) throw new Error(`missing glossary code: ${code}`)
+  return entry.en
+}
+
+function gotAwayDetailLine(reason: GotAwayReason | null | undefined): string | null {
+  if (!reason || reason === 'other') return null
+  return glossaryEn(reason)
+}
+
+export function resultPanelMessage(
+  result: FishingResult,
+  config: FishingConfig,
+  gotAwayReason?: GotAwayReason | null,
+): string {
   const t = resultTuning(config)
   const headline = result === 'caught' ? t.caughtLabel : t.gotAwayLabel
-  return `${headline}\n${t.continuePrompt}`
+  const detail = result === 'gotAway' ? gotAwayDetailLine(gotAwayReason) : null
+  const lines = detail ? [headline, detail, t.continuePrompt] : [headline, t.continuePrompt]
+  return lines.join('\n')
 }
 
 export function initialDockLoop(): DockLoopState {

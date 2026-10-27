@@ -17,6 +17,8 @@ export type BitePhase = 'waiting' | 'nibbling' | 'submerged' | 'hookWindow'
 
 export type FishingResult = 'caught' | 'gotAway'
 
+export type GotAwayReason = 'lineSnapped' | 'struckNibble' | 'missedBite' | 'other'
+
 export interface FisherAttributes {
   strength: number
   dexterity: number
@@ -83,12 +85,13 @@ export interface FishingRun {
   /** Set by the lure stage: the right rhythm played well draws the fish, so the bite comes sooner. */
   lureDrawn: boolean
   result: FishingResult | null
+  gotAwayReason: GotAwayReason | null
 }
 
 export type FishingAction =
-  | { type: 'stub'; success: boolean }
+  | { type: 'stub'; success: boolean; gotAwayReason?: GotAwayReason }
   | { type: 'lure'; drawn: boolean }
-  | { type: 'bite'; event: 'advance' | 'hook' }
+  | { type: 'bite'; event: 'advance' | 'hook' | 'expired' }
 
 export function loadFishingConfig(raw: FishingConfig = fishingData as unknown as FishingConfig): FishingConfig {
   return raw
@@ -111,8 +114,14 @@ function nextStage(stage: FishingStage): FishingStage {
   return PLAY_STAGES[i + 1]
 }
 
-function endRun(run: FishingRun, result: FishingResult): FishingRun {
-  return { ...run, stage: 'result', bitePhase: null, result }
+function endRun(run: FishingRun, result: FishingResult, gotAwayReason?: GotAwayReason): FishingRun {
+  return {
+    ...run,
+    stage: 'result',
+    bitePhase: null,
+    result,
+    gotAwayReason: result === 'gotAway' ? (gotAwayReason ?? 'other') : null,
+  }
 }
 
 const BITE_PHASE_ORDER: readonly BitePhase[] = ['waiting', 'nibbling', 'submerged', 'hookWindow']
@@ -138,12 +147,13 @@ export function startFishing(
     bitePhase: null,
     lureDrawn: false,
     result: null,
+    gotAwayReason: null,
   }
 }
 
 function completePlayStage(run: FishingRun, success: boolean): FishingRun {
   if (run.stage === 'result') return run
-  if (!success) return endRun(run, 'gotAway')
+  if (!success) return endRun(run, 'gotAway', 'other')
   const stage = run.stage
   if (stage === 'bite') return run
   const next = nextStage(stage)
@@ -156,12 +166,14 @@ function completePlayStage(run: FishingRun, success: boolean): FishingRun {
   return { ...run, stage: next, bitePhase: null }
 }
 
-function dispatchBite(run: FishingRun, event: 'advance' | 'hook'): FishingRun {
+function dispatchBite(run: FishingRun, event: 'advance' | 'hook' | 'expired'): FishingRun {
   if (run.stage !== 'bite' || run.bitePhase === null) return run
   const phase = run.bitePhase
 
+  if (event === 'expired') return endRun(run, 'gotAway', 'missedBite')
+
   if (event === 'hook') {
-    if (phase === 'nibbling' || phase === 'waiting') return endRun(run, 'gotAway')
+    if (phase === 'nibbling' || phase === 'waiting') return endRun(run, 'gotAway', 'struckNibble')
     if (phase === 'hookWindow') {
       return { ...run, stage: 'pullIn', bitePhase: null }
     }
@@ -179,7 +191,9 @@ export function dispatch(run: FishingRun, action: FishingAction): FishingRun {
   if (action.type === 'stub') {
     if (run.stage === 'bite') return run
     if (run.stage === 'pullIn') {
-      return action.success ? endRun(run, 'caught') : endRun(run, 'gotAway')
+      return action.success
+        ? endRun(run, 'caught')
+        : endRun(run, 'gotAway', action.gotAwayReason ?? 'other')
     }
     return completePlayStage(run, action.success)
   }

@@ -97,7 +97,7 @@ export function resolveHookPress(schedule: BiteSchedule, pressMs: number): HookP
 }
 
 function endGotAway(run: FishingRun): FishingRun {
-  return { ...run, stage: 'result', bitePhase: null, result: 'gotAway' }
+  return dispatch(run, { type: 'bite', event: 'expired' })
 }
 
 function advanceRunToPhase(run: FishingRun, schedule: BiteSchedule, atMs: number): FishingRun {

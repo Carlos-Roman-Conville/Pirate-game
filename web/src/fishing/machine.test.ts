@@ -86,6 +86,7 @@ describe('outcomes', () => {
     const run = passThrough(startFishing(config))
     expect(run.stage).toBe('result')
     expect(run.result).toBe('caught')
+    expect(run.gotAwayReason).toBeNull()
   })
 
   it('ends got away when a stub stage fails', () => {
@@ -97,7 +98,7 @@ describe('outcomes', () => {
     expect(run.bitePhase).toBeNull()
   })
 
-  it('ends got away when the hook is set on a nibble', () => {
+  it('got away reason struckNibble when the hook is set on a nibble', () => {
     let run = startFishing(config)
     run = dispatch(run, { type: 'stub', success: true })
     run = dispatch(run, { type: 'stub', success: true })
@@ -108,6 +109,22 @@ describe('outcomes', () => {
     expect(run.bitePhase).toBe('nibbling')
     run = dispatch(run, { type: 'bite', event: 'hook' })
     expect(run.result).toBe('gotAway')
+    expect(run.gotAwayReason).toBe('struckNibble')
+  })
+
+  it('got away reason missedBite when the hook window expires', () => {
+    let run = startFishing(config)
+    run = { ...run, stage: 'bite', bitePhase: 'hookWindow' }
+    run = dispatch(run, { type: 'bite', event: 'expired' })
+    expect(run.result).toBe('gotAway')
+    expect(run.gotAwayReason).toBe('missedBite')
+  })
+
+  it('got away reason lineSnapped when pull-in snaps the line', () => {
+    let run = reachPullIn(startFishing(config))
+    run = dispatch(run, { type: 'stub', success: false, gotAwayReason: 'lineSnapped' })
+    expect(run.result).toBe('gotAway')
+    expect(run.gotAwayReason).toBe('lineSnapped')
   })
 
   it('ends got away when pull-in fails', () => {

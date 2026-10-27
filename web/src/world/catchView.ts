@@ -166,7 +166,9 @@ export function catchViewOnSpacePull(
     lastPullTension: step.tension,
     pullHoldStartMs: null,
   }
-  if (step.snapped) return { state: nextState, run: stubAdvanceRun(run, false) }
+  if (step.snapped) {
+    return { state: nextState, run: dispatch(run, { type: 'stub', success: false, gotAwayReason: 'lineSnapped' }) }
+  }
   if (step.landed) return { state: nextState, run: stubAdvanceRun(run, true) }
   return { state: nextState, run }
 }

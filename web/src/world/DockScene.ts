@@ -47,6 +47,7 @@ import {
   type CatchViewState,
 } from './catchView'
 import { silhouettesClearAt } from './silhouettes'
+import { mapCameraBounds } from './camera'
 import { atDockEdge, facingOf, integerZoom, loadMap, moveBody, tileAt, type Facing, type MapData } from './map'
 
 // The dock world: three-quarter top-down, square tiles, script-drawn placeholder art (Rex's renders replace it).
@@ -142,7 +143,6 @@ export class DockScene extends Phaser.Scene {
     } as typeof this.keys
 
     const cam = this.cameras.main
-    cam.setBounds(0, 0, this.map.width * t, this.map.height * t)
     cam.startFollow(this.player, true)
     cam.setRoundPixels(true)
     this.scale.on('resize', () => {
@@ -255,7 +255,7 @@ export class DockScene extends Phaser.Scene {
     if (run.stage === 'result' && run.result) {
       this.dockLoop = applyFishingRun(this.dockLoop, run)
       this.clearFishingHud()
-      this.showResultPanel(run.result)
+      this.showResultPanel(run)
       return
     }
 
@@ -373,9 +373,9 @@ export class DockScene extends Phaser.Scene {
     this.readWaterLabel = null
   }
 
-  private showResultPanel(result: 'caught' | 'gotAway') {
+  private showResultPanel(run: FishingRun) {
     this.resultHud?.destroy()
-    const body = resultPanelMessage(result, this.fishingConfig)
+    const body = resultPanelMessage(run.result!, this.fishingConfig, run.gotAwayReason)
     this.resultHud = this.hud(
       this.add
         .text(8, 8, body, {
@@ -646,7 +646,12 @@ export class DockScene extends Phaser.Scene {
     const view = readWaterTuning(this.fishingConfig)
     const wide = readWater ? view.viewTilesWide : 20
     const high = readWater ? view.viewTilesHigh : 12
-    this.cameras.main.setZoom(integerZoom(this.scale.width, this.scale.height, t, wide, high))
+    const cam = this.cameras.main
+    cam.setZoom(integerZoom(this.scale.width, this.scale.height, t, wide, high))
+    const mapW = this.map.width * t
+    const mapH = this.map.height * t
+    const b = mapCameraBounds(mapW, mapH, this.scale.width, this.scale.height, cam.zoom)
+    cam.setBounds(b.x, b.y, b.width, b.height)
   }
 
   private drawTextures(t: number) {

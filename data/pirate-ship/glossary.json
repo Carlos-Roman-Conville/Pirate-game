@@ -141,6 +141,27 @@
    "code": "caught",
    "kind": "phrase",
    "note": "Result: the fish was landed."
+  },
+  {
+   "source": "The line snapped",
+   "en": "The line snapped",
+   "code": "lineSnapped",
+   "kind": "phrase",
+   "note": "Got-away detail: pull-in tension broke the line."
+  },
+  {
+   "source": "You struck on a nibble",
+   "en": "You struck on a nibble",
+   "code": "struckNibble",
+   "kind": "phrase",
+   "note": "Got-away detail: hook press during a nibble or too early."
+  },
+  {
+   "source": "Too slow on the bite",
+   "en": "Too slow on the bite",
+   "code": "missedBite",
+   "kind": "phrase",
+   "note": "Got-away detail: the hook window closed with no hook set."
   }
  ],
  "lore": [
