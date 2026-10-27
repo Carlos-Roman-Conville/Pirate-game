@@ -1,0 +1,80 @@
+{
+  "notes": "Tuning for the fishing minigame. Placeholder values until Rex sets fairness numbers.",
+  "player": {
+    "notes": "Placeholder captain stats for dock fishing until saves exist.",
+    "attributes": {
+      "strength": 10,
+      "dexterity": 10,
+      "reflexes": 10,
+      "eyesight": 10,
+      "endurance": 10
+    },
+    "skills": {
+      "fishing": 25
+    },
+    "personality": {
+      "patience": 50,
+      "calm": 50
+    }
+  },
+  "fish": [
+    {
+      "id": "placeholder-minnow",
+      "notes": "Placeholder test fish.",
+      "distanceBand": [2, 6],
+      "preferredRhythm": "steady"
+    },
+    {
+      "id": "placeholder-bass",
+      "notes": "Placeholder test fish.",
+      "distanceBand": [5, 12],
+      "preferredRhythm": "slow"
+    },
+    {
+      "id": "placeholder-mackerel",
+      "notes": "Placeholder test fish.",
+      "distanceBand": [8, 18],
+      "preferredRhythm": "quick"
+    }
+  ],
+  "readWater": {
+    "notes": "Visible range in tiles; scaled by eyesight and fishing skill in unit 3.",
+    "baseRangeTiles": 8,
+    "rangePerEyesight": 0.5,
+    "rangePerFishingSkill": 0.08
+  },
+  "direction": {
+    "notes": "Cone aim; higher fishing skill narrows cone and slows the line.",
+    "baseConeDegrees": 45,
+    "coneShrinkPerFishingSkill": 0.15,
+    "baseLineSpeed": 1,
+    "lineSlowPerFishingSkill": 0.008,
+    "lineSlowPerDexterity": 0.02
+  },
+  "power": {
+    "notes": "Cast power meter; strength sets how far you can throw at all.",
+    "meterPeriodMs": 2000,
+    "strengthDistanceFactor": 0.12
+  },
+  "lure": {
+    "notes": "Rhythm lure; patience dampens line motion in unit 5.",
+    "patienceMotionScale": 0.01
+  },
+  "bite": {
+    "notes": "Bobber showdown timings; reaction window grows with reflexes.",
+    "waitingMs": 800,
+    "nibbleMs": 600,
+    "submergedMs": 400,
+    "hookWindowMs": 500,
+    "reactionWindowBaseMs": 280,
+    "reactionWindowPerReflex": 12
+  },
+  "pullIn": {
+    "notes": "Line tension; Rex still deciding fairness — placeholder threshold.",
+    "lineBreakTension": 100,
+    "strengthPullBonus": 0.5,
+    "calmTensionReduction": 0.02,
+    "patienceTensionReduction": 0.015,
+    "enduranceFightBonus": 0.03
+  }
+}
