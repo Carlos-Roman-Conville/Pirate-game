@@ -43,8 +43,8 @@ follow `_TEMPLATE.md`.
 
 ### His journey (Rex, 2026-10-27)
 
-- **(Rex)** His journey is into making structure (Rex: "his journey into making structure is about that"; read as the son's journey, to confirm): he either turns the warehouse into a place for goods and legitimate trade, or uses it to house illegally stolen goods, drugs and such.
-- **(open)** Whether the journey is the son's or the father's.
+- **(Rex)** His journey is into making structure: he either turns the warehouse into a place for goods and legitimate trade, or uses it to house illegally stolen goods, drugs and such.
+- **(Rex)** The journey is the son's (confirmed 2026-10-27).
 
 ## Joining
 
@@ -139,3 +139,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Created with the alignment map (OG stays, CG→OG, OE stays, CE→OE) | Rex |
 | 2026-10-27 | A man, a pretty boy; file moved from `enfj.md` to `enfj-m.md` | Rex |
 | 2026-10-27 | He is the warehouse owner's son (the bigwig's child); his journey into making structure: the warehouse for legitimate trade, or for stolen goods and drugs | Rex |
+| 2026-10-27 | Confirmed: the journey into making structure is his | Rex |
