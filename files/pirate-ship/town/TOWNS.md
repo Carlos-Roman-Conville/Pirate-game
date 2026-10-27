@@ -60,6 +60,10 @@ town, its name changes here but its id does not.
 - **(Rex)** Who you take changes the town: some of the crew you take are key toxic people causing the town issues;
   some you bring back improved.
 - **(open)** Why it is dying (STORY.md open thread 8), who runs it, its history.
+- **(proposed, outside AI)** Why it is dying: a richer pirate port nearby is drawing away the few ships that still
+  visit.
+- **(proposed, outside AI)** Crew vs town: taking a dangerous criminal might make the town safer; taking its only
+  carpenter might speed its decline; a rich merchant might revive trade but bring exploitation.
 
 ### Places
 
@@ -108,3 +112,4 @@ next, then the extras.
 | 2026-10-26 | Town keeper set up: this folder; starting port seeded from PIRATE.md §4a/§7b, STORY.md and ART_DIRECTION.md §3a; id `port` | keeper |
 | 2026-10-26 | Towns work like Digimon World 1: choices (recruit, let go, kidnap, help…) change certain parts, each part only certain upgrades; you can't max a town; combinations make the endings; text- and town-change based; several routes to good/perfect endings, some secret | Rex |
 | 2026-10-26 | First known secret route: letting the ENTP go on his explained departure makes him key to a town improvement that leads to the perfect ending | Rex |
+| 2026-10-26 | Story keeper handed over the endings and town-change canon (STORY.md now points here, a031580); outside AI's rival-port cause and crew-vs-town examples recorded as proposed | keeper |

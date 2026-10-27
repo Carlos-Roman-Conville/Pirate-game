@@ -29,7 +29,7 @@ out; the combinations of upgrades produce the endings (`ENDINGS.md`).
 | `let_go(<slug>[@event])` | you let them leave (at a named event, when it matters) | Rex (verb); word proposed |
 | `keep(<slug>[@event])` | you went back and convinced them to stay | Rex (the ENTP's choice); word proposed |
 | `help(<slug>)` | you helped them (what counts is per character) | Rex (verb); word proposed |
-| `return(<slug>, improved)` | you brought a crew mate back to town improved | Rex (STORY.md, Main arcs); word proposed |
+| `return(<slug>, improved)` | you brought a crew mate back to town improved | Rex (2026-10-26, `TOWNS.md`); word proposed |
 | `rep(<town>[.<group>]) >= n` | reputation with a town or a group in it | Rex (§7b); word proposed |
 
 Words are added here only as Rex's choices need them.
