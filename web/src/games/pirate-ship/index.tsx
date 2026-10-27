@@ -31,7 +31,7 @@ export default function PirateShip({ onExit }: GameProps) {
     <div className="pirate-ship-table">
       <header className="pirate-ship-bar">
         <b>Pirate Ship</b>
-        <span className="dim">Arrow keys or WASD to walk</span>
+        <span className="dim">Arrow keys or WASD to walk · F to fish at the pier's end</span>
         <span className="pirate-ship-spacer" />
         <button onClick={() => setRules(true)}>Rules</button>
         <button onClick={onExit}>Menu</button>

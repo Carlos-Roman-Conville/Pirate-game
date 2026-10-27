@@ -7,6 +7,7 @@ import {
   isRhythmMatchForFish,
   lineMotionAmplitude,
   lineMotionOffset,
+  rhythmById,
   rhythmPlaySucceeded,
 } from './lure'
 
@@ -32,6 +33,18 @@ describe('fish drawn by rhythm', () => {
 })
 
 describe('rhythm play', () => {
+  it('counts a tap one period after the start as the first beat, a tap at once not', () => {
+    const rhythm = minnow.preferredRhythm
+    const period = rhythmById(rhythm, config).periodMs
+    const beats = expectedBeatTimesMs(rhythm, config)
+    expect(beats[0]).toBe(period)
+    const onTime = [...beats]
+    expect(rhythmPlaySucceeded(onTime, rhythm, config)).toBe(true)
+    const atOnce = [0, ...beats.slice(1)]
+    expect(rhythmPlaySucceeded(atOnce, rhythm, config)).toBe(false)
+  })
+
+
   it('fails when taps miss the beat window', () => {
     const rhythm = minnow.preferredRhythm
     const beats = expectedBeatTimesMs(rhythm, config)

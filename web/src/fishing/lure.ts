@@ -69,11 +69,11 @@ export function lineMotionOffset(
   return amp * Math.sin(phase)
 }
 
-/** Beat times (ms from round start) the player should match for one lure round. */
+/** Beat times (ms after the Space press that starts play): beat i lands (i + 1) periods in, so the first beat is not the press itself. */
 export function expectedBeatTimesMs(rhythmId: string, config: FishingConfig): number[] {
   const { beatsPerRound } = lureTuning(config)
   const period = rhythmById(rhythmId, config).periodMs
-  return Array.from({ length: beatsPerRound }, (_, i) => i * period)
+  return Array.from({ length: beatsPerRound }, (_, i) => (i + 1) * period)
 }
 
 /** Whether tap times land on each expected beat within the config window. */

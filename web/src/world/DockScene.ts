@@ -46,6 +46,7 @@ import {
   createCatchView,
   type CatchViewState,
 } from './catchView'
+import { silhouettesClearAt } from './silhouettes'
 import { atDockEdge, facingOf, integerZoom, loadMap, moveBody, tileAt, type Facing, type MapData } from './map'
 
 // The dock world: three-quarter top-down, square tiles, script-drawn placeholder art (Rex's renders replace it).
@@ -99,20 +100,38 @@ export class DockScene extends Phaser.Scene {
   private catchGfx: Phaser.GameObjects.Graphics | null = null
   private catchHudGfx: Phaser.GameObjects.Graphics | null = null
   private pullInLabels: Phaser.GameObjects.Text[] = []
+  private rhythmLabels: Phaser.GameObjects.Text[] = []
+  private hudKey = ''
+  /** Zoom-1 camera that draws only the HUD; the main camera (zoomed, following the player) draws only the world. */
+  private hudCam!: Phaser.Cameras.Scene2D.Camera
 
   constructor() { super('dock') }
 
+  /** World objects are hidden from the HUD camera. */
+  private world<T extends Phaser.GameObjects.GameObject>(obj: T): T {
+    this.hudCam.ignore(obj)
+    return obj
+  }
+
+  /** HUD objects are hidden from the zoomed main camera and drawn in screen pixels. */
+  private hud<T extends Phaser.GameObjects.GameObject>(obj: T): T {
+    this.cameras.main.ignore(obj)
+    return obj
+  }
+
   create() {
+    this.hudCam = this.cameras.add(0, 0, this.scale.width, this.scale.height)
+    this.hudCam.setZoom(1)
     const t = this.map.tileSize
     this.drawTextures(t)
     for (let y = 0; y < this.map.height; y++) {
       for (let x = 0; x < this.map.width; x++) {
         const kind = this.map.data.legend[this.map.data.rows[y][x]].name
-        this.add.image(x * t, y * t, `tile-${kind}`).setOrigin(0, 0)
+        this.world(this.add.image(x * t, y * t, `tile-${kind}`).setOrigin(0, 0))
       }
     }
     this.pos = { x: (this.map.data.spawn.x + 0.5) * t, y: (this.map.data.spawn.y + 0.5) * t }
-    this.player = this.add.image(this.pos.x, this.pos.y, 'player-down').setOrigin(0.5, 0.85).setDepth(10)
+    this.player = this.world(this.add.image(this.pos.x, this.pos.y, 'player-down').setOrigin(0.5, 0.85).setDepth(10))
 
     const kb = this.input.keyboard!
     this.keys = {
@@ -126,7 +145,10 @@ export class DockScene extends Phaser.Scene {
     cam.setBounds(0, 0, this.map.width * t, this.map.height * t)
     cam.startFollow(this.player, true)
     cam.setRoundPixels(true)
-    this.scale.on('resize', () => this.applyZoom())
+    this.scale.on('resize', () => {
+      this.hudCam.setSize(this.scale.width, this.scale.height)
+      this.applyZoom(this.fishSilhouettes.length > 0)
+    })
     this.applyZoom()
   }
 
@@ -196,7 +218,9 @@ export class DockScene extends Phaser.Scene {
         (run.bitePhase === 'submerged' || run.bitePhase === 'hookWindow')
       ) {
         this.biteSubmergeFxPlayed = true
+        const before = this.children.list.length
         biteSubmergeBeat(this, this.pos.x, this.pos.y + this.map.tileSize)
+        for (const o of this.children.list.slice(before)) this.world(o)
       }
     }
 
@@ -219,6 +243,14 @@ export class DockScene extends Phaser.Scene {
 
     this.drawCastOverlay(run)
     this.drawCatchOverlay(run)
+
+    if (this.fishSilhouettes.length > 0) {
+      const flying = this.castView ? castViewFlyProgress(this.castView, this.time.now, this.fishingConfig) !== null : false
+      if (silhouettesClearAt(run.stage, flying)) {
+        this.clearSilhouettes()
+        this.applyZoom(false)
+      }
+    }
 
     if (run.stage === 'result' && run.result) {
       this.dockLoop = applyFishingRun(this.dockLoop, run)
@@ -245,12 +277,14 @@ export class DockScene extends Phaser.Scene {
       if (run.stage === 'pullIn' && this.catchView) {
         this.catchView = catchViewResetPullLine(this.catchView, this.fishingConfig)
       }
-      this.updateStageHud(run)
       if (run.stage === 'aim') {
-        this.clearReadWaterOverlay()
-        this.applyZoom(false)
         this.castView = createCastView(this.castContext(), run.stats, this.fishingConfig, this.time.now)
       }
+    }
+    const key = `${run.stage}:${this.catchView?.lurePhase ?? ''}`
+    if (key !== this.hudKey) {
+      this.hudKey = key
+      this.updateStageHud(run)
     }
   }
 
@@ -284,6 +318,7 @@ export class DockScene extends Phaser.Scene {
 
   private enterReadWater() {
     this.clearReadWaterOverlay()
+    this.hudKey = 'readWater:'
     this.biteSchedule = null
     this.biteSubmergeFxPlayed = false
     this.catchView = null
@@ -307,17 +342,18 @@ export class DockScene extends Phaser.Scene {
           if (tileAt(this.map, tx, ty)?.name === 'water') break
         }
       }
-      const img = this.add
-        .image((tx + 0.5) * t, (ty + 0.5) * t, 'fish-silhouette')
-        .setDepth(5)
-        .setAlpha(0.85)
+      const img = this.world(
+        this.add.image((tx + 0.5) * t, (ty + 0.5) * t, 'fish-silhouette').setDepth(5).setAlpha(0.85),
+      )
       this.fishSilhouettes.push(img)
     })
 
-    this.readWaterLabel = this.add
-      .text(8, 8, STAGE_PROMPT.readWater, { fontSize: '11px', color: '#e8f4ff', backgroundColor: '#00000088' })
-      .setScrollFactor(0)
-      .setDepth(100)
+    this.readWaterLabel = this.hud(
+      this.add
+        .text(8, 8, STAGE_PROMPT.readWater, { fontSize: '11px', color: '#e8f4ff', backgroundColor: '#00000088' })
+        .setScrollFactor(0)
+        .setDepth(100),
+    )
   }
 
   private updateStageHud(run: FishingRun) {
@@ -327,10 +363,12 @@ export class DockScene extends Phaser.Scene {
     }
     if (!prompt) return
     this.stageHud?.destroy()
-    this.stageHud = this.add
-      .text(8, 8, prompt, { fontSize: '11px', color: '#e8f4ff', backgroundColor: '#00000088' })
-      .setScrollFactor(0)
-      .setDepth(100)
+    this.stageHud = this.hud(
+      this.add
+        .text(8, 8, prompt, { fontSize: '11px', color: '#e8f4ff', backgroundColor: '#00000088' })
+        .setScrollFactor(0)
+        .setDepth(100),
+    )
     this.readWaterLabel?.destroy()
     this.readWaterLabel = null
   }
@@ -338,15 +376,17 @@ export class DockScene extends Phaser.Scene {
   private showResultPanel(result: 'caught' | 'gotAway') {
     this.resultHud?.destroy()
     const body = resultPanelMessage(result, this.fishingConfig)
-    this.resultHud = this.add
-      .text(8, 8, body, {
-        fontSize: '12px',
-        color: '#ffe8a0',
-        backgroundColor: '#000000aa',
-      })
-      .setName(RESULT_PANEL_CLASS)
-      .setScrollFactor(0)
-      .setDepth(110)
+    this.resultHud = this.hud(
+      this.add
+        .text(8, 8, body, {
+          fontSize: '12px',
+          color: '#ffe8a0',
+          backgroundColor: '#000000aa',
+        })
+        .setName(RESULT_PANEL_CLASS)
+        .setScrollFactor(0)
+        .setDepth(110),
+    )
   }
 
   private clearResultPanel() {
@@ -376,12 +416,13 @@ export class DockScene extends Phaser.Scene {
       this.catchGfx?.clear()
       this.catchHudGfx?.clear()
       this.destroyPullInLabels()
+      this.destroyRhythmLabels()
       return
     }
     const now = this.time.now
     const stats = run.stats
-    this.catchGfx ??= this.add.graphics().setDepth(23)
-    this.catchHudGfx ??= this.add.graphics().setScrollFactor(0).setDepth(102)
+    this.catchGfx ??= this.world(this.add.graphics().setDepth(23))
+    this.catchHudGfx ??= this.hud(this.add.graphics().setScrollFactor(0).setDepth(102))
     const g = this.catchGfx
     const hud = this.catchHudGfx
     g.clear()
@@ -400,29 +441,41 @@ export class DockScene extends Phaser.Scene {
     }
 
     if (run.stage !== 'pullIn') this.destroyPullInLabels()
+    if (run.stage !== 'lure') this.destroyRhythmLabels()
 
     if (run.stage === 'lure') {
       const meter = catchViewRhythmMeter(this.catchView, this.fishingConfig)
-      const x = this.scale.width / 2 - 80
+      const rhythmIds = lureRhythmIds(this.fishingConfig)
+      const boxW = 50
+      const gap = 4
+      const panelW = rhythmIds.length * (boxW + gap) + gap
+      const x = Math.round(this.scale.width / 2 - panelW / 2)
       const y = 56
       hud.fillStyle(0x1a2838, 0.85)
-      hud.fillRect(x, y, 160, 36)
-      const rhythmIds = lureRhythmIds(this.fishingConfig)
+      hud.fillRect(x, y, panelW, 54)
+      if (this.rhythmLabels.length === 0) {
+        this.rhythmLabels = rhythmIds.map((id) =>
+          this.hud(this.add.text(0, 0, id, { fontSize: '9px', color: '#e8f4ff' }).setOrigin(0.5).setScrollFactor(0).setDepth(103)),
+        )
+      }
       for (let i = 0; i < rhythmIds.length; i++) {
-        hud.fillStyle(i === this.catchView!.rhythmIndex ? 0xffe066 : 0x3a5068, meter.picking ? 0.95 : 0.5)
-        hud.fillRect(x + 8 + i * 22, y + 8, 18, 10)
+        const bx = x + gap + i * (boxW + gap)
+        const picked = i === this.catchView!.rhythmIndex
+        hud.fillStyle(picked ? 0xffe066 : 0x3a5068, meter.picking ? 0.95 : 0.5)
+        hud.fillRect(bx, y + 6, boxW, 16)
+        this.rhythmLabels[i]?.setPosition(bx + boxW / 2, y + 14).setColor(picked ? '#1a2838' : '#e8f4ff')
       }
       if (!meter.picking) {
         const span = meter.beats[meter.beats.length - 1]! + meter.periodMs
+        const lx = x + 8
+        const lw = panelW - 16
         for (const beat of meter.beats) {
-          const bx = x + 48 + (beat / span) * 100
           hud.fillStyle(0x5ec8ff, 0.85)
-          hud.fillCircle(bx, y + 24, 4)
+          hud.fillCircle(lx + (beat / span) * lw, y + 38, 4)
         }
         for (const tap of meter.taps) {
-          const tx = x + 48 + (tap / span) * 100
           hud.fillStyle(0xffe066, 0.95)
-          hud.fillCircle(tx, y + 24, 3)
+          hud.fillCircle(lx + (tap / span) * lw, y + 38, 3)
         }
       }
     }
@@ -455,15 +508,18 @@ export class DockScene extends Phaser.Scene {
       hud.fillRect(bx + 1, by + 27, (w - 2) * t.progress, 4)
       if (this.pullInLabels.length === 0) {
         const style = { fontSize: '9px', color: '#e8f4ff' }
-        const mk = (text: string, y: number) =>
-          this.add.text(bx - 6, y, text, style).setOrigin(1, 0.5).setScrollFactor(0).setDepth(103)
-        this.pullInLabels = [
-          mk(t.lineTensionLabel, by + h / 2),
-          mk(t.lineIntegrityLabel, by + 19),
-          mk(t.landingPointLabel, by + 29),
-        ]
+        this.pullInLabels = [t.lineTensionLabel, t.lineIntegrityLabel, t.landingPointLabel].map((text) =>
+          this.hud(this.add.text(0, 0, text, style).setOrigin(1, 0.5).setScrollFactor(0).setDepth(103)),
+        )
       }
+      const rows = [by + h / 2, by + 19, by + 29]
+      this.pullInLabels.forEach((l, i) => l.setPosition(bx - 6, rows[i]!))
     }
+  }
+
+  private destroyRhythmLabels() {
+    for (const l of this.rhythmLabels) l.destroy()
+    this.rhythmLabels = []
   }
 
   private destroyPullInLabels() {
@@ -473,6 +529,7 @@ export class DockScene extends Phaser.Scene {
 
   private clearCatchOverlay() {
     this.destroyPullInLabels()
+    this.destroyRhythmLabels()
     this.catchGfx?.destroy()
     this.catchGfx = null
     this.catchHudGfx?.destroy()
@@ -491,13 +548,14 @@ export class DockScene extends Phaser.Scene {
   }
 
   private aimKeyInput() {
+    // Keys move the target in screen directions; map them onto the cast's forward/sideways axes.
     const k = this.keys
-    return {
-      forward: k.up.isDown || k.w.isDown,
-      back: k.down.isDown || k.s.isDown,
-      left: k.left.isDown || k.a.isDown,
-      right: k.right.isDown || k.d.isDown,
-    }
+    const sx = (k.right.isDown || k.d.isDown ? 1 : 0) - (k.left.isDown || k.a.isDown ? 1 : 0)
+    const sy = (k.down.isDown || k.s.isDown ? 1 : 0) - (k.up.isDown || k.w.isDown ? 1 : 0)
+    const f = facingStep(this.facing, this.sideFlip)
+    const fwd = sx * f.dx + sy * f.dy
+    const side = -sx * f.dy + sy * f.dx
+    return { forward: fwd > 0, back: fwd < 0, left: side < 0, right: side > 0 }
   }
 
   private drawCastOverlay(run: FishingRun) {
@@ -509,8 +567,8 @@ export class DockScene extends Phaser.Scene {
     const stats = run.stats
     const now = this.time.now
     const t = this.map.tileSize
-    this.castGfx ??= this.add.graphics().setDepth(22)
-    this.castMeterGfx ??= this.add.graphics().setScrollFactor(0).setDepth(101)
+    this.castGfx ??= this.world(this.add.graphics().setDepth(22))
+    this.castMeterGfx ??= this.hud(this.add.graphics().setScrollFactor(0).setDepth(101))
     const g = this.castGfx
     const hud = this.castMeterGfx
     g.clear()
@@ -572,9 +630,13 @@ export class DockScene extends Phaser.Scene {
     this.castView = null
   }
 
-  private clearReadWaterOverlay() {
+  private clearSilhouettes() {
     for (const img of this.fishSilhouettes) img.destroy()
     this.fishSilhouettes = []
+  }
+
+  private clearReadWaterOverlay() {
+    this.clearSilhouettes()
     this.readWaterLabel?.destroy()
     this.readWaterLabel = null
   }

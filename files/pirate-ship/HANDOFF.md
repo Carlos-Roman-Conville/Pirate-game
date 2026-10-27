@@ -1,4 +1,4 @@
-# Pirate Ship: handoff (2026-10-26, rewritten by task 2463)
+# Pirate Ship: handoff (2026-10-26, rewritten by task 2468)
 
 Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or something is parked.
 
@@ -9,15 +9,17 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
 - PLAN units 1-10 done (tasks 2450-2463). The dock (`web/src/world/DockScene.ts`, `catchView.ts`) plays every
   fishing stage: read water, aim, direction, power, lure rhythm, bite, pull in, result. Logic is pure TS in
   `web/src/fishing/`, numbers in `data/pirate-ship/fishing.json` (all placeholders).
-- Pull in (2463): hold Space, intensity grows with hold time to `maxPullIntensity`, release pulls. Each pull adds
-  progress (`baseProgressPerIntensity` + Strength x `strengthProgressBonus`) until `progressToLand`; a pull past
-  `weakenTensionThreshold` costs line integrity, past `lineBreakTension` it snaps. Strength lands fish in fewer
-  pulls (test "fewer pulls"); its tension effect was cut to 0.2. The HUD shows tension, integrity and progress.
+- Playtest fixes (2468) are in: a second zoom-1 camera (`hudCam`) draws all HUD so it shows at any zoom; the lure's
+  first beat is one period after the play press (test "first beat"); the fish silhouettes stay through aim,
+  direction and power (`silhouettes.ts`); aim's arrow keys move in screen directions; rhythm boxes carry their
+  names; the prompt follows the lure phase. Pull-in labels (tension, integrity, landing point) show.
+- Pull in: hold Space, intensity grows to `maxPullIntensity`, release pulls; past `weakenTensionThreshold` costs
+  line integrity, past `lineBreakTension` it snaps. Strength lands fish in fewer pulls.
 - Lure and bite are separate stages; `bite.lureWaitFactor` (placeholder 0.5) shortens the wait on a lure draw.
 
 ## Next
 
-1. Rex plays the dock and sets the fairness numbers; then the planner queues the next PLAN rows.
+1. Rex replays the full catch on desktop and reports what still feels wrong.
 2. Tick `../progress/ui/pirate-ship.json` pieces only after a real browser check.
 
 ## Blocked
@@ -25,6 +27,7 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
 - Pull-in fairness numbers (FISHING.md stage 7): Rex's call; they stay placeholders in `fishing.json`.
 - The game's real name (repo and folder rename when Rex names it): Rex's.
 - `desktop: open the dock in a browser and play a full catch` (no task has run the game in a browser).
+- `desktop:` check a hard pull snapping the line, the bite's sound, and a phone-size screen.
 - `desktop:` progress-page edits (`../progress/ui/pirate-ship.json`) live outside this repo.
 
 ## Gotchas
