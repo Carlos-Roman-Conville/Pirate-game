@@ -26,6 +26,8 @@ the stat hooks marked **(proposed)** are for him to keep or change.
    - **Reeling:** a successful hook goes straight into stage 7, pulling it in.
    The lure (stage 5) runs while the bobber waits: the right rhythm brings the bite sooner. Reflexes set the
    reaction window (proposed).
+   **Why it got away (Rex, 2026-10-26):** the result says so: "The line snapped", "You struck on a nibble", "Too
+   slow on the bite", and "You struck too early" for a strike while the bobber is still waiting.
 7. **Pulling it in (Rex).** Like Digimon World 1: pull too hard and the line weakens. Digimon's version could be
    needlessly hard; this one needs to be fairer (how, still open).
 
