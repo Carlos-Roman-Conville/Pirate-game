@@ -114,6 +114,7 @@ one.
 | `port.church` | the church | `istj-m` | `base`; others open | Rex (the place) |
 | `port.warehouse` | the warehouse | the big wig, vendors, his troublesome child (a recruitable who needs fixing to help the town) | `base`; others open | Rex (tentative) |
 | `port.apothecary` | the apothecary | the INTJ herbalist (her potion-testing questline) | `base`; others open | Rex (the place) |
+| `port.estp_hut` | the hut away from town | `estp-f` | `base`; others open | Rex (the place); may replace `port.soldier_house` (open; if so that id is retired, never reused) |
 | `port.infp_house` | the INFP's house and basement | `infp-m` | `base`; others open | Rex (the place) |
 | `port.fort` | the old coastal fort | the old soldier (weekly) | `base`; others open | Rex (the place) |
 | `port.soldier_house` | the old soldier's locked house | the old soldier | `base` (locked); others open | Rex (the place) |
@@ -136,3 +137,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-27 | `port.bakery` is now the butcher shop (id unchanged); farm and butcher shop gain the farmer's children | keeper; Rex |
 | 2026-10-27 | Slugs updated: `intp-m`, `esfp-f`, `farm-daughter`, `farm-son` | keeper |
 | 2026-10-27 | Reserved `port.infp_house` (thirteenth place) | keeper; place Rex |
+| 2026-10-27 | Reserved `port.estp_hut` (fourteenth place; may replace `port.soldier_house`) | keeper; place Rex |
