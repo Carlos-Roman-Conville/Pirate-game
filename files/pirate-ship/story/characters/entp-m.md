@@ -56,6 +56,7 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 - **(Rex)** On one particular departure he gives you an explanation first. This time you have a choice:
   - **Go back and convince him:** he never leaves you again, but his contribution to the town never happens.
   - **Let him go:** he is key to a certain improvement in the town that leads to the perfect ending.
+- **Town link:** what his contribution unlocks is kept in `../../town/UPGRADES.md` (town keeper).
 - **(Rex)** This is a **secret method** to the perfect ending. Rex intends several methods of getting a perfect or
   good ending; this is one, not the only one.
 - **(open)** What he does for the town when he stays behind.
@@ -83,7 +84,7 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | you are the one who keeps going back for him | Rex |
-| the town | `rel.town` | key to an improvement that leads to the perfect ending, if you let him go | Rex |
+| the town | `rel.town` | key to an improvement that leads to the perfect ending, if you let him go (see `../../town/UPGRADES.md`) | Rex |
 
 ## Heart events
 
