@@ -31,7 +31,7 @@ function biteSplashTone(at: number) {
 }
 
 /** Radial splash rings at the bobber when the fish bites (script art). */
-export function playBiteSplash(scene: Phaser.Scene, x: number, y: number): void {
+export function playBiteSplash(scene: Phaser.Scene, x: number, y: number): Phaser.GameObjects.Container {
   const container = scene.add.container(x, y).setDepth(25)
   container.setName(BITE_SPLASH_CLASS)
   const core = scene.add.circle(0, 0, 3, 0xe8f8ff, 0.95)
@@ -51,6 +51,7 @@ export function playBiteSplash(scene: Phaser.Scene, x: number, y: number): void 
     ease: 'Quad.easeOut',
     onComplete: () => container.destroy(),
   })
+  return container
 }
 
 /** Short bite cue; uses AudioContext only (no samples). */
@@ -65,7 +66,8 @@ export function playBiteSound(): void {
   biteSplashTone(a.currentTime + 0.01)
 }
 
-export function playBiteSubmergeFx(scene: Phaser.Scene, x: number, y: number): void {
-  playBiteSplash(scene, x, y)
+export function playBiteSubmergeFx(scene: Phaser.Scene, x: number, y: number): Phaser.GameObjects.Container {
+  const container = playBiteSplash(scene, x, y)
   playBiteSound()
+  return container
 }

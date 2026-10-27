@@ -218,9 +218,9 @@ export class DockScene extends Phaser.Scene {
         (run.bitePhase === 'submerged' || run.bitePhase === 'hookWindow')
       ) {
         this.biteSubmergeFxPlayed = true
-        const before = this.children.list.length
-        biteSubmergeBeat(this, this.pos.x, this.pos.y + this.map.tileSize)
-        for (const o of this.children.list.slice(before)) this.world(o)
+        biteSubmergeBeat(this, this.pos.x, this.pos.y + this.map.tileSize).then((splash) => {
+          this.world(splash)
+        })
       }
     }
 

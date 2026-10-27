@@ -131,8 +131,12 @@ export function dispatchTimedHookPress(
 }
 
 /** Splash and sound when the bobber submerges (FISHING.md bite beat). */
-export function biteSubmergeBeat(scene: import('phaser').Scene, worldX: number, worldY: number): void {
-  void import('../world/biteFx').then((m) => m.playBiteSubmergeFx(scene, worldX, worldY))
+export function biteSubmergeBeat(
+  scene: import('phaser').Scene,
+  worldX: number,
+  worldY: number,
+): Promise<import('phaser').GameObjects.Container> {
+  return import('../world/biteFx').then((m) => m.playBiteSubmergeFx(scene, worldX, worldY))
 }
 
 /** Advance bite phase from the clock when the schedule boundary is crossed (for UI ticks). */

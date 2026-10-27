@@ -1,6 +1,14 @@
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
+
+const playBiteSubmergeFx = vi.hoisted(() => vi.fn())
+
+vi.mock('../world/biteFx', () => ({
+  playBiteSubmergeFx: (...args: unknown[]) => playBiteSubmergeFx(...args),
+}))
+
 import {
   bitePhaseAt,
+  biteSubmergeBeat,
   createBiteSchedule,
   dispatchTimedHookPress,
   resolveHookPress,
@@ -23,6 +31,23 @@ function runAtBite() {
   expect(r.stage).toBe('bite')
   return r
 }
+
+describe('biteSubmergeBeat', () => {
+  it('biteSubmergeBeat resolves after playBiteSubmergeFx has run', async () => {
+    const order: string[] = []
+    const fakeContainer = { name: 'splash' }
+    playBiteSubmergeFx.mockImplementation(() => {
+      order.push('fx')
+      return fakeContainer
+    })
+    const scene = {} as import('phaser').Scene
+    await biteSubmergeBeat(scene, 12, 34).then(() => {
+      order.push('resolve')
+    })
+    expect(playBiteSubmergeFx).toHaveBeenCalledWith(scene, 12, 34)
+    expect(order).toEqual(['fx', 'resolve'])
+  })
+})
 
 describe('bite hook press', () => {
   it('misses when the player strikes on a nibble', () => {
