@@ -35,7 +35,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Bio | `bio` | she could be the daughter of the owner (which owner is open); a bit unconventional | Rex |
+| Bio | `bio` | the daughter of the apothecary's previous owner; a bit unconventional | Rex |
 | Likes (gifts, acts) | `likes` | | open |
 | Dislikes | `dislikes` | | open |
 | Schedule | `schedule` | their day: post, meals, the den, sleep | open |
@@ -47,7 +47,7 @@ follow `_TEMPLATE.md`.
 - **(Rex)** Your job is to determine whether what she's made will kill the person, and whether they deserve it. It is based mostly on science and the clues you receive.
 - **(Rex)** Your job is to navigate her psychopathy to help her recover.
 - **(Rex)** People she gives potions to who don't deserve it can't die; she needs to discover naturally that they are innocent, or not evil.
-- **(open)** Whose daughter she is: the apothecary's previous owner, or another owner in town (the warehouse bigwig?).
+- **(Rex, 2026-10-27)** She is the daughter of the apothecary's previous owner.
 
 ## Joining
 
@@ -91,3 +91,4 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | Date | Change | By |
 |---|---|---|
 | 2026-10-27 | Created: the herbalist who tests her potions on people she judges evil | Rex |
+| 2026-10-27 | Daughter of the apothecary's previous owner | Rex |
