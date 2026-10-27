@@ -39,7 +39,7 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | intp-f | INTP (Ti-Ne-Si-Fe) | woman | (open) | powder master | | drafted | |
 | infp-m | INFP (Fi-Ne-Si-Te) | man | (open) | captive who stayed / keeps the log | | drafted | |
 | infp-f | INFP (Fi-Ne-Si-Te) | woman | (open) | captive who stayed / keeps the log | | drafted | |
-| entp-m | ENTP (Ne-Ti-Fe-Si) | man | (open) | card sharp / runs the den | | drafted | |
+| entp-m | ENTP (Ne-Ti-Fe-Si) | man | (open) | card sharp / runs the den | keeps leaving and you keep winning him back; letting him go once is a secret route to the perfect ending | idea (Rex) | [entp-m.md](entp-m.md) |
 | entp-f | ENTP (Ne-Ti-Fe-Si) | woman | (open) | card sharp / runs the den | | drafted | |
 | enfp-m | ENFP (Ne-Fi-Te-Si) | man | (open) | turncoat / pilot and interpreter | | drafted | |
 | enfp-f | ENFP (Ne-Fi-Te-Si) | woman | (open) | turncoat / pilot and interpreter | | drafted | |

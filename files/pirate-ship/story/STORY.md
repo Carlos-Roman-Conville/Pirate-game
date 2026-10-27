@@ -111,6 +111,15 @@ work lives in `../art/`, not here.
 - **(Rex)** Your effect on it is either helping it thrive again or leading it to ruin.
 - **(open)** Why it is dying (the rival port below is one proposed cause), and what thriving or ruin looks like at
   the end.
+- **(Rex, 2026-10-26) Who you take changes the town:** some of the crew you take should be key toxic people who are
+  causing the town issues, while you also bring back some who need improvement.
+- **(Rex) Endings:** several methods of getting a perfect or good ending. Some are secret. First known secret
+  route: let the ENTP who keeps leaving go on his explained departure (`characters/entp-m.md`).
+- **(proposed, outside AI)** The broader tension: building the strongest crew vs the strongest town. Recruiting a
+  dangerous criminal might make the town safer; recruiting its only competent carpenter might speed its decline;
+  a wealthy merchant might revive trade and bring exploitation; helping someone stand on their own might lose you a
+  companion. Each route's contribution satisfies one of several conditions for reviving the port, so keeping a
+  character never silently locks you out of the best ending.
 - **(Rex)** Story by conditions: big storylines open when the ship's state allows them (a mutiny needs enough
   resentment, a replacement and a chance of winning), not as scripted branches (§7a, liked by Rex).
 - **(Rex)** Things happen without you: crew start romances, alliances or mutiny plots; a romance may turn out to be
@@ -155,3 +164,5 @@ work lives in `../art/`, not here.
 | 2026-10-26 | The starting port is a run-down, weathered small pirate haven for lowlifes, kept alive barely by its community and occasional trade; high-calibre pirates are rare (weak women and drink); the last level is a rich true pirate port | Rex |
 | 2026-10-26 | Outside AI's ideas recorded as proposed: the economic loop, reasons residents stay, the rival-port plot, the town's own trajectory, the return | proposed |
 | 2026-10-26 | Central plotline: the port is already dying, fewer pirates come, most think of leaving, some stay; the player helps it thrive again or leads it to ruin | Rex |
+| 2026-10-26 | Crew you take can be the town's toxic people; some you bring back improved. Several routes to a good or perfect ending, some secret | Rex |
+| 2026-10-26 | First character: the ENTP man who keeps leaving; letting him go on his explained departure is a secret route to the perfect ending | Rex |
