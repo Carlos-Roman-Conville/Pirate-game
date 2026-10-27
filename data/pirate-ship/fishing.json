@@ -95,5 +95,11 @@
     "patienceTensionReduction": 0.015,
     "dexterityTensionReduction": 0.5,
     "enduranceFightBonus": 0.03
+  },
+  "result": {
+    "notes": "Short result panel before returning to the dock walk.",
+    "caughtLabel": "Caught!",
+    "gotAwayLabel": "Got away",
+    "continuePrompt": "Press Space to return to the dock"
   }
 }

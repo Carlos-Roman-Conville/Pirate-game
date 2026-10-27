@@ -1,8 +1,21 @@
 import Phaser from 'phaser'
 import dock from '../../../data/pirate-ship/maps/dock.json'
+import { createBiteSchedule, dispatchTimedHookPress, syncBitePhaseToClock, type BiteSchedule } from '../fishing/bite'
+import { expectedBeatTimesMs, fishDrawnByLure } from '../fishing/lure'
+import {
+  applyFishingRun,
+  dismissResultPanel,
+  dockAllowsWalking,
+  initialDockLoop,
+  resultPanelMessage,
+  RESULT_PANEL_CLASS,
+  stubAdvanceRun,
+  tryStartFishingAtDock,
+  type DockLoopState,
+} from '../fishing/loop'
+import { applyPullStep as pullStep, initialPullInLineState as pullInInitial } from '../fishing/pullIn'
 import {
   loadFishingConfig,
-  startFishing,
   type FishingRun,
 } from '../fishing/machine'
 import {
@@ -20,6 +33,16 @@ const HALF = { hw: 4, hh: 3 }   // the feet box
 
 const PALETTE: Record<string, number> = { water: 0x2f6f9f, planks: 0x9a7448, hull: 0x5b3a22, deck: 0xb08a58, post: 0x3b2a1a }
 
+const STAGE_PROMPT: Record<string, string> = {
+  readWater: 'Reading the water… Space to cast',
+  aim: 'Aim — Space to set target',
+  direction: 'Direction — Space to set angle',
+  power: 'Power — Space to cast',
+  lure: 'Lure — Space to work the rhythm',
+  bite: 'Bite — Space when the bobber dives',
+  pullIn: 'Pull it in — Space (gentle)',
+}
+
 function facingStep(facing: Facing, flipX: boolean): { dx: number; dy: number } {
   if (facing === 'down') return { dx: 0, dy: 1 }
   if (facing === 'up') return { dx: 0, dy: -1 }
@@ -30,7 +53,7 @@ export class DockScene extends Phaser.Scene {
   private map = loadMap(dock as MapData)
   private fishingConfig = loadFishingConfig()
   private keys!: Record<
-    'up' | 'down' | 'left' | 'right' | 'w' | 'a' | 's' | 'd' | 'f',
+    'up' | 'down' | 'left' | 'right' | 'w' | 'a' | 's' | 'd' | 'f' | 'space',
     Phaser.Input.Keyboard.Key
   >
   private player!: Phaser.GameObjects.Image
@@ -38,9 +61,13 @@ export class DockScene extends Phaser.Scene {
   private facing: Facing = 'down'
   private sideFlip = false
   private walked = 0
-  private fishingRun: FishingRun | null = null
+  private dockLoop: DockLoopState = initialDockLoop()
   private fishSilhouettes: Phaser.GameObjects.Image[] = []
   private readWaterLabel: Phaser.GameObjects.Text | null = null
+  private stageHud: Phaser.GameObjects.Text | null = null
+  private resultHud: Phaser.GameObjects.Text | null = null
+  private biteSchedule: BiteSchedule | null = null
+  private pullLine = pullInInitial(this.fishingConfig)
 
   constructor() { super('dock') }
 
@@ -61,6 +88,7 @@ export class DockScene extends Phaser.Scene {
       ...kb.createCursorKeys(),
       w: kb.addKey('W'), a: kb.addKey('A'), s: kb.addKey('S'), d: kb.addKey('D'),
       f: kb.addKey('F'),
+      space: kb.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE),
     } as typeof this.keys
 
     const cam = this.cameras.main
@@ -73,13 +101,33 @@ export class DockScene extends Phaser.Scene {
 
   update(_time: number, delta: number) {
     if (Phaser.Input.Keyboard.JustDown(this.keys.f)) {
-      if (!this.fishingRun && atDockEdge(this.map, this.pos.x, this.pos.y)) {
-        this.fishingRun = startFishing(this.fishingConfig)
+      this.dockLoop = tryStartFishingAtDock(
+        this.dockLoop,
+        atDockEdge(this.map, this.pos.x, this.pos.y),
+        this.fishingConfig,
+      )
+      if (this.dockLoop.mode === 'fishing' && this.dockLoop.run) {
         this.enterReadWater()
       }
     }
 
-    if (this.fishingRun?.stage === 'readWater') {
+    if (this.dockLoop.mode === 'showingResult') {
+      if (Phaser.Input.Keyboard.JustDown(this.keys.space)) {
+        this.clearResultPanel()
+        this.dockLoop = dismissResultPanel(this.dockLoop)
+        this.applyZoom(false)
+      }
+      this.player.setPosition(Math.round(this.pos.x), Math.round(this.pos.y))
+      return
+    }
+
+    if (this.dockLoop.mode === 'fishing' && this.dockLoop.run) {
+      this.tickFishing(delta)
+      this.player.setPosition(Math.round(this.pos.x), Math.round(this.pos.y))
+      return
+    }
+
+    if (!dockAllowsWalking(this.dockLoop)) {
       this.player.setPosition(Math.round(this.pos.x), Math.round(this.pos.y))
       return
     }
@@ -99,15 +147,74 @@ export class DockScene extends Phaser.Scene {
     this.player.setTexture(`player-${this.facing}`)
     this.player.setFlipX(this.facing === 'side' && this.sideFlip)
     if (moved) this.walked += delta
-    // A two-pixel bob while walking stands in for a walk cycle.
     const bob = moved ? Math.round(Math.sin(this.walked / 90)) : 0
     this.player.setPosition(Math.round(this.pos.x), Math.round(this.pos.y) + bob)
   }
 
+  private tickFishing(_delta: number) {
+    let run = this.dockLoop.run!
+    const prevStage = run.stage
+    const clock = { now: () => this.time.now }
+
+    if (run.stage === 'bite' && this.biteSchedule) {
+      run = syncBitePhaseToClock(run, this.biteSchedule, clock)
+    }
+
+    if (Phaser.Input.Keyboard.JustDown(this.keys.space)) {
+      run = this.onFishingSpace(run)
+    }
+
+    if (run.stage === 'result' && run.result) {
+      this.dockLoop = applyFishingRun(this.dockLoop, run)
+      this.clearFishingHud()
+      this.showResultPanel(run.result)
+      return
+    }
+
+    this.dockLoop = applyFishingRun(this.dockLoop, run)
+    if (run.stage === 'bite' && !this.biteSchedule) {
+      this.biteSchedule = createBiteSchedule(this.time.now, run.stats, this.fishingConfig, { next: () => 0.5 })
+    }
+    if (run.stage !== prevStage) {
+      if (run.stage === 'pullIn') this.pullLine = pullInInitial(this.fishingConfig)
+      this.updateStageHud(run)
+      if (run.stage === 'aim') {
+        this.clearReadWaterOverlay()
+        this.applyZoom(false)
+      }
+    }
+  }
+
+  private onFishingSpace(run: FishingRun): FishingRun {
+    const stage = run.stage
+    if (stage === 'readWater' || stage === 'aim' || stage === 'direction' || stage === 'power') {
+      return stubAdvanceRun(run, true)
+    }
+    if (stage === 'lure') {
+      const fish = this.fishingConfig.fish.find((f) => f.id === run.fishId)!
+      const rhythm = fish.preferredRhythm
+      const taps = expectedBeatTimesMs(rhythm, this.fishingConfig)
+      const ok = fishDrawnByLure(fish, rhythm, taps, this.fishingConfig)
+      return stubAdvanceRun(run, ok)
+    }
+    if (stage === 'bite' && this.biteSchedule) {
+      return dispatchTimedHookPress(run, this.biteSchedule, this.time.now, this.fishingConfig)
+    }
+    if (stage === 'pullIn') {
+      const step = pullStep(this.pullLine, 0.35, run.stats, this.fishingConfig)
+      this.pullLine = step.state
+      if (step.snapped) return stubAdvanceRun(run, false)
+      return stubAdvanceRun(run, true)
+    }
+    return run
+  }
+
   private enterReadWater() {
     this.clearReadWaterOverlay()
+    this.biteSchedule = null
+    this.pullLine = pullInInitial(this.fishingConfig)
     this.applyZoom(true)
-    const run = this.fishingRun!
+    const run = this.dockLoop.run!
     const visible = visibleFishSilhouettes(run.stats, this.fishingConfig)
     const step = facingStep(this.facing, this.sideFlip)
     const t = this.map.tileSize
@@ -134,9 +241,47 @@ export class DockScene extends Phaser.Scene {
     })
 
     this.readWaterLabel = this.add
-      .text(8, 8, 'Reading the water…', { fontSize: '11px', color: '#e8f4ff', backgroundColor: '#00000088' })
+      .text(8, 8, STAGE_PROMPT.readWater, { fontSize: '11px', color: '#e8f4ff', backgroundColor: '#00000088' })
       .setScrollFactor(0)
       .setDepth(100)
+  }
+
+  private updateStageHud(run: FishingRun) {
+    const prompt = STAGE_PROMPT[run.stage]
+    if (!prompt) return
+    this.stageHud?.destroy()
+    this.stageHud = this.add
+      .text(8, 8, prompt, { fontSize: '11px', color: '#e8f4ff', backgroundColor: '#00000088' })
+      .setScrollFactor(0)
+      .setDepth(100)
+    this.readWaterLabel?.destroy()
+    this.readWaterLabel = null
+  }
+
+  private showResultPanel(result: 'caught' | 'gotAway') {
+    this.resultHud?.destroy()
+    const body = resultPanelMessage(result, this.fishingConfig)
+    this.resultHud = this.add
+      .text(8, 8, body, {
+        fontSize: '12px',
+        color: '#ffe8a0',
+        backgroundColor: '#000000aa',
+      })
+      .setName(RESULT_PANEL_CLASS)
+      .setScrollFactor(0)
+      .setDepth(110)
+  }
+
+  private clearResultPanel() {
+    this.resultHud?.destroy()
+    this.resultHud = null
+    this.biteSchedule = null
+  }
+
+  private clearFishingHud() {
+    this.clearReadWaterOverlay()
+    this.stageHud?.destroy()
+    this.stageHud = null
   }
 
   private clearReadWaterOverlay() {
@@ -164,13 +309,12 @@ export class DockScene extends Phaser.Scene {
     }
     g.clear().fillStyle(0x0a1520).fillEllipse(t / 2, t / 2, t - 4, t - 6)
     g.generateTexture('fish-silhouette', t, t)
-    // The placeholder pirate: red coat, a face that shows only when facing down or side.
     for (const face of ['down', 'up', 'side'] as const) {
       g.clear()
-      g.fillStyle(0x222222).fillRect(4, 0, 8, 3)                  // hat
-      g.fillStyle(face === 'up' ? 0x6b4a2a : 0xe0b48a).fillRect(4, 3, 8, 5)   // head
-      g.fillStyle(0xaa2222).fillRect(3, 8, 10, 6)                 // coat
-      g.fillStyle(0x333366).fillRect(4, 14, 3, 2).fillRect(9, 14, 3, 2)   // boots
+      g.fillStyle(0x222222).fillRect(4, 0, 8, 3)
+      g.fillStyle(face === 'up' ? 0x6b4a2a : 0xe0b48a).fillRect(4, 3, 8, 5)
+      g.fillStyle(0xaa2222).fillRect(3, 8, 10, 6)
+      g.fillStyle(0x333366).fillRect(4, 14, 3, 2).fillRect(9, 14, 3, 2)
       if (face === 'down') g.fillStyle(0x000000).fillRect(5, 5, 1, 1).fillRect(10, 5, 1, 1)
       if (face === 'side') g.fillStyle(0x000000).fillRect(10, 5, 1, 1)
       g.generateTexture(`player-${face}`, t, t)

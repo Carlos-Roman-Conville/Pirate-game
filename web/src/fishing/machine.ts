@@ -57,6 +57,7 @@ export interface FishingConfig {
   lure: Record<string, number | string>
   bite: Record<string, number | string>
   pullIn: Record<string, number | string>
+  result: Record<string, number | string>
 }
 
 export const FISHING_STAGE_ORDER: readonly FishingStage[] = [
