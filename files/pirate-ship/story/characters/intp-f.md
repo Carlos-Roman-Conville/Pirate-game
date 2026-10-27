@@ -14,7 +14,7 @@ follow `_TEMPLATE.md`.
 | Name | `name` | | open |
 | Type | `type` | INTP | Rex |
 | Function stack | `stack` | Ti-Ne-Si-Fe | Rex |
-| Gender | `gender` | woman | Rex |
+| Gender | `gender` | woman (first notes) | open: Rex's 2026-10-27 family note calls the farmer "he" and the cook "her", the reverse of his first notes (farmer a woman, baker a man); to confirm |
 | Pirate archetype | `archetype` | | open |
 | Ship job (posts held) | `posts` | farmer: runs the farm in town | Rex |
 | Where they are found | `found_at` | the starting port: the farm | Rex |
@@ -24,7 +24,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Psycho core | `psycho_core` | psychopathic in some capacity | Rex |
+| Psycho core | `psycho_core` | secretly uses dead, decomposing bodies as fertiliser and has been known to kill passers-by for it; the longer the crops go without a body, the more determined the farmer becomes to find one | Rex |
 | Madness break | `madness_break` | what they do when the meter crosses the line | open |
 | Madness triggers | `madness_triggers` | | open |
 | Why piracy allows it | `permission` | how the setting makes it permissible | open |
@@ -35,7 +35,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Bio | `bio` | her spouse died and she runs the farm herself again (Rex first wrote "his wife", then made the farmer a woman; the spouse's gender is open) | Rex |
+| Bio | `bio` | used to be married to the ESFP cook; found out about the cook eating humans and using them in the food, when the farmer made perfectly good food from the farm's own crops. Their daughter helps run the farm. (Supersedes "the spouse died") | Rex |
 | Likes (gifts, acts) | `likes` | | open |
 | Dislikes | `dislikes` | | open |
 | Schedule | `schedule` | their day: post, meals, the den, sleep | open |
@@ -60,6 +60,9 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | | open |
+| the ESFP cook (`esfp-m`) | `rel.esfp-m` | ex-spouse; the farmer found out about the cannibalism | Rex |
+| their daughter (`farm-daughter`) | `rel.farm-daughter` | helps run the farm | Rex |
+| their son (`farm-son`) | `rel.farm-son` | lives with the cook | Rex |
 
 ## Heart events
 
@@ -79,7 +82,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Look | `art.look` | based on April Ludgate (Aubrey Plaza's deadpan character in Parks and Recreation) | Rex |
+| Look | `art.look` | based on April Ludgate (Aubrey Plaza's deadpan character in Parks and Recreation); open whether this still applies if the farmer is now a man | Rex |
 | Signature face | `art.signature_face` | the one expression that is theirs | open |
 | Heart-event scenes to illustrate | `art.scenes` | | open |
 
@@ -104,3 +107,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Created: runs the farm alone since her spouse died; deadpan, based on April Ludgate | Rex |
 | 2026-10-27 | Questline responses section added | keeper |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
+| 2026-10-27 | Bodies as fertiliser, kills passers-by for it; ex-spouse of the ESFP cook (supersedes the dead spouse); parent of the daughter and son; gender to confirm | Rex |

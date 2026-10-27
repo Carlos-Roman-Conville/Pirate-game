@@ -25,7 +25,7 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | isfp-f | ISFP (Fi-Se-Ni-Te) | woman | (open) | figurehead carver / carpenter | | drafted | |
 | estp-m | ESTP (Se-Ti-Fe-Ni) | man | (open) | old soldier; the secret cook (Rex) | looks like your first mate; secret character; locked house, walks to the old fort weekly; old, very strong, a killer | idea (Rex) | [estp-m.md](estp-m.md) |
 | estp-f | ESTP (Se-Ti-Fe-Ni) | woman | (open) | gunner | | drafted | |
-| esfp-m | ESFP (Se-Fi-Te-Ni) | man | (open) | baker (Rex) | jolly; secretly a cannibal | idea (Rex) | [esfp-m.md](esfp-m.md) |
+| esfp-m | ESFP (Se-Fi-Te-Ni) | man? (to confirm) | (open) | general cook with a butcher shop (Rex) | jolly; secretly a cannibal, humans in the food; ex-spouse of the INTP farmer | idea (Rex) | [esfp-m.md](esfp-m.md) |
 | esfp-f | ESFP (Se-Fi-Te-Ni) | woman | (open) | castaway / topman | | drafted | |
 | intj-m | INTJ (Ni-Te-Fi-Se) | man | (open) | navigator | | drafted | |
 | intj-f | INTJ (Ni-Te-Fi-Se) | woman | (open) | herbalist, apothecary owner (Rex) | tests her potions on people she judges evil; her questline: judge if it kills and if they deserve it | idea (Rex) | [intj-f.md](intj-f.md) |
@@ -36,7 +36,7 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | enfj-m | ENFJ (Fe-Ni-Se-Ti) | man | (open) | shantyman / recruiter | | drafted | |
 | enfj-f | ENFJ (Fe-Ni-Se-Ti) | woman | (open) | shantyman / recruiter | | drafted | |
 | intp-m | INTP (Ti-Ne-Si-Fe) | man | (open) | powder master | | drafted | |
-| intp-f | INTP (Ti-Ne-Si-Fe) | woman | (open) | farmer (Rex) | widowed, runs the farm alone; psychopathic somehow; based on April Ludgate | idea (Rex) | [intp-f.md](intp-f.md) |
+| intp-f | INTP (Ti-Ne-Si-Fe) | woman? (to confirm) | (open) | farmer (Rex) | fertilises the crops with bodies, kills passers-by for it; ex-spouse of the ESFP cook; April Ludgate (to confirm) | idea (Rex) | [intp-f.md](intp-f.md) |
 | infp-m | INFP (Fi-Ne-Si-Te) | man | (open) | captive who stayed / keeps the log | | drafted | |
 | infp-f | INFP (Fi-Ne-Si-Te) | woman | (open) | captive who stayed / keeps the log | | drafted | |
 | entp-m | ENTP (Ne-Ti-Fe-Si) | man | (open) | device builder / mechanic; town weaponsmith at the shipyard (Rex) | builds killing devices for the boat and, when focused, torture devices; keeps leaving and you keep winning him back; letting him go once is a secret route to the perfect ending | idea (Rex) | [entp-m.md](entp-m.md) |
@@ -53,6 +53,8 @@ as examples, unnamed).
 
 | Slug | Who | Where | Status | File |
 |---|---|---|---|---|
+| farm-daughter | the farmer and cook's daughter: helps run the farm; demented, kills livestock and people; failed actress inspired by Pearl; type open | the farm | idea (Rex) | [farm-daughter.md](farm-daughter.md) |
+| farm-son | their son: lives with the cook, collects his victims' skins for the butcher shop; type open | with the cook | idea (Rex) | [farm-son.md](farm-son.md) |
 | bigwig (placeholder) | a big wig who owns the warehouse and a few vendors (Rex, tentative: "a warehouse? hmm idk") | the starting port | idea (Rex) | |
 | bigwig-child (placeholder) | his son or daughter, extremely troubled and a legit drain on the town; a recruitable who needs fixing to help the town; type and gender open | the starting port | idea (Rex) | |
 

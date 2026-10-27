@@ -14,9 +14,9 @@ follow `_TEMPLATE.md`.
 | Name | `name` | | open |
 | Type | `type` | ESFP | Rex |
 | Function stack | `stack` | Se-Fi-Te-Ni | Rex |
-| Gender | `gender` | man | Rex |
+| Gender | `gender` | man (first notes) | open: Rex's 2026-10-27 family note calls the farmer "he" and the cook "her", the reverse of his first notes (farmer a woman, baker a man); to confirm |
 | Pirate archetype | `archetype` | | open |
-| Ship job (posts held) | `posts` | baker: runs the bakery in town | Rex |
+| Ship job (posts held) | `posts` | not really a baker, more of a general cook; has a butcher shop | Rex |
 | Where they are found | `found_at` | the starting port: the bakery | Rex |
 | Resident or visitor | `town_role` | resident | Rex |
 
@@ -24,7 +24,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Psycho core | `psycho_core` | jolly, with a dark side: he is secretly a cannibal | Rex |
+| Psycho core | `psycho_core` | jolly, with a dark side: secretly a cannibal, eating humans and using them in the food | Rex |
 | Madness break | `madness_break` | what they do when the meter crosses the line | open |
 | Madness triggers | `madness_triggers` | | open |
 | Why piracy allows it | `permission` | how the setting makes it permissible | open |
@@ -35,7 +35,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Bio | `bio` | | open |
+| Bio | `bio` | used to be married to the INTP farmer, who found out about the humans in the food when the farmer made perfectly good food from the farm's own crops; their son lives with the cook | Rex |
 | Likes (gifts, acts) | `likes` | | open |
 | Dislikes | `dislikes` | | open |
 | Schedule | `schedule` | their day: post, meals, the den, sleep | open |
@@ -55,6 +55,9 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | | open |
+| the INTP farmer (`intp-f`) | `rel.intp-f` | ex-spouse; the farmer found out about the cannibalism | Rex |
+| their son (`farm-son`) | `rel.farm-son` | lives with the cook, collects his victims' skins and enjoys bringing them to the butcher shop; the cook finds it a bit abhorrent: you shouldn't play with your food like that | Rex |
+| their daughter (`farm-daughter`) | `rel.farm-daughter` | lives with the farmer | Rex |
 
 ## Heart events
 
@@ -101,3 +104,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Created: the jolly baker who is secretly a cannibal | Rex |
 | 2026-10-27 | Questline responses section added | keeper |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
+| 2026-10-27 | Not a baker but a general cook with a butcher shop; ex-spouse of the INTP farmer; parent of the son who collects skins; gender to confirm | Rex |
