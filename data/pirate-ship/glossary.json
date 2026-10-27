@@ -115,6 +115,20 @@
    "note": "Strain on the line; past the break threshold it snaps."
   },
   {
+   "source": "line integrity",
+   "en": "line integrity",
+   "code": "integrity",
+   "kind": "stat",
+   "note": "Remaining line strength during pull in; hard pulls past the weaken threshold drain it until the line snaps."
+  },
+  {
+   "source": "landing point",
+   "en": "landing point",
+   "code": "progressToLand",
+   "kind": "stat",
+   "note": "How far the fish must be drawn in during pull in; the HUD bar fills as pulls add progress."
+  },
+  {
    "source": "got away",
    "en": "got away",
    "code": "gotAway",

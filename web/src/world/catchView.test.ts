@@ -9,7 +9,7 @@ import {
   tryStartFishingAtDock,
 } from '../fishing/loop'
 import { dispatch, loadFishingConfig, playerStatsFromConfig, startFishing } from '../fishing/machine'
-import { initialPullInLineState, pullInTuning } from '../fishing/pullIn'
+import { initialPullInLineState, PULL_IN_HUD_TERM, pullInTuning } from '../fishing/pullIn'
 import type { CastLanding } from '../fishing/cast'
 import {
   catchViewCreateBiteSchedule,
@@ -176,6 +176,13 @@ describe('catchView pulling it in over several pulls', () => {
     const out = catchViewOnPullRelease(state, 1000 + 600, run, stats, config)
     expect(out.state.pullHoldStartMs).toBeNull()
     expect(out.state.pullLine.fightTicks).toBe(1)
+  })
+
+  it('exposes pull-in HUD labels from the glossary terms', () => {
+    const meter = catchViewTensionMeter(createCatchView(landing, 16, config), config)
+    expect(meter.lineIntegrityLabel).toBe(PULL_IN_HUD_TERM.lineIntegrity)
+    expect(meter.landingPointLabel).toBe(PULL_IN_HUD_TERM.landingPoint)
+    expect(meter.lineTensionLabel).toBe(PULL_IN_HUD_TERM.lineTension)
   })
 
   it('shows the weakening state after a hard pull and snaps when held to the cap', () => {

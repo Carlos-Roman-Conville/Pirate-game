@@ -1,9 +1,11 @@
 import { describe, expect, it } from 'vitest'
+import glossary from '../../../data/pirate-ship/glossary.json'
 import {
   applyPullStep,
   initialPullInLineState,
   lineSnapsAtTension,
   lineTensionAtPull,
+  PULL_IN_HUD_TERM,
   pullInTuning,
   pullIntensityAtHold,
 } from './pullIn'
@@ -11,6 +13,25 @@ import { loadFishingConfig, playerStatsFromConfig, type FisherStats, type Fishin
 
 const config = loadFishingConfig()
 const stats = playerStatsFromConfig(config)
+
+function glossaryEn(code: string): string {
+  const entry = glossary.terms.find((t) => t.code === code)
+  if (!entry) throw new Error(`missing glossary code: ${code}`)
+  return entry.en
+}
+
+describe('pull-in HUD glossary terms', () => {
+  it('matches data/pirate-ship/glossary.json for tension, integrity and landing point', () => {
+    expect(PULL_IN_HUD_TERM.lineTension).toBe(glossaryEn('tension'))
+    expect(PULL_IN_HUD_TERM.lineIntegrity).toBe(glossaryEn('integrity'))
+    expect(PULL_IN_HUD_TERM.landingPoint).toBe(glossaryEn('progressToLand'))
+  })
+
+  it('does not invent alternate English names for the new pull-in bars', () => {
+    expect(PULL_IN_HUD_TERM.lineIntegrity).not.toBe('line strength')
+    expect(PULL_IN_HUD_TERM.landingPoint).not.toBe('reel progress')
+  })
+})
 
 function configWithBreakTension(threshold: number): FishingConfig {
   return {

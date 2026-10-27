@@ -2,6 +2,13 @@
 
 import type { FisherStats, FishingConfig } from './machine'
 
+/** Player-facing pull-in HUD names (must match data/pirate-ship/glossary.json). */
+export const PULL_IN_HUD_TERM = {
+  lineTension: 'line tension',
+  lineIntegrity: 'line integrity',
+  landingPoint: 'landing point',
+} as const
+
 export interface PullInTuning {
   lineBreakTension: number
   weakenTensionThreshold: number

@@ -22,6 +22,7 @@ import {
   initialPullInLineState,
   lineSnapsAtTension,
   lineTensionAtPull,
+  PULL_IN_HUD_TERM,
   pullInTuning,
   pullIntensityAtHold,
   type PullInLineState,
@@ -280,6 +281,9 @@ export interface CatchTensionMeterDraw {
   holding: boolean
   /** True while the held (or last) pull is past the weaken threshold. */
   weakening: boolean
+  lineTensionLabel: (typeof PULL_IN_HUD_TERM)['lineTension']
+  lineIntegrityLabel: (typeof PULL_IN_HUD_TERM)['lineIntegrity']
+  landingPointLabel: (typeof PULL_IN_HUD_TERM)['landingPoint']
 }
 
 export function catchViewTensionMeter(
@@ -303,6 +307,9 @@ export function catchViewTensionMeter(
     progress: Math.min(1, state.pullLine.progress / t.progressToLand),
     holding,
     weakening: tension > t.weakenTensionThreshold,
+    lineTensionLabel: PULL_IN_HUD_TERM.lineTension,
+    lineIntegrityLabel: PULL_IN_HUD_TERM.lineIntegrity,
+    landingPointLabel: PULL_IN_HUD_TERM.landingPoint,
   }
 }
 
