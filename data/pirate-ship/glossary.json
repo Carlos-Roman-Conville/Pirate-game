@@ -281,6 +281,20 @@
    "code": "unlocked",
    "kind": "phrase",
    "note": "CharacterState.unlocked: true at start unless the character has story: true in gates.json; the unlock command sets it when the story grants recruit permission."
+  },
+  {
+   "source": "ALIGNMENT.md §5",
+   "en": "develop condition",
+   "code": "DevelopCondition",
+   "kind": "phrase",
+   "note": "A rule on an institution slot: develop is blocked until every item listed in supply has been recorded as supplied (today port.farm and port.bakery need bodies)."
+  },
+  {
+   "source": "ALIGNMENT.md §5",
+   "en": "supply",
+   "code": "supply",
+   "kind": "phrase",
+   "note": "The alignment command that records an item as supplied for a slot, clearing that item from the develop condition check."
   }
  ],
  "lore": [
