@@ -195,4 +195,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The ENTP and the INTJ hold each other in contempt as hacks (her occultism, his crude work); townspeople who use both lie to each and go along with whatever either says about the other | Rex |
 | 2026-10-27 | The warehouse owner is simply bad: disorganised, chaotic, the warehouse in disrepair, alliances poorly kept; his son is the ENFJ, badly taught, whose journey into making structure turns the warehouse to legitimate trade or to stolen goods and drugs | Rex |
 | 2026-10-27 | The farm son, farm daughter and warehouse owner are not recruitable; the recruitable list (about 12) is only for recruitables, non-recruitables kept separate; a kidnapping mechanic for other characters is an idea for later | Rex |
+| 2026-10-27 | The ESFJ is a failed merchant, his look based on MrBeast (`esfj-m`); the ESTJ is an old privateer who lost his crew at sea (`estj-m`) | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

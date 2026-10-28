@@ -55,7 +55,7 @@ suggestion (not canon); blank = open.
 | INTP farmer (`intp-m`) | | | | |
 | ESTP veteran outdoorswoman (`estp-f`) | | | | |
 | ENFJ pretty boy (`enfj-m`) | **Rex: stays orderly good (loop)** | **Rex: moves them to orderly good** | **Rex: stays orderly evil (loop)** | **Rex: moves them to orderly evil** |
-| ESTJ, undescribed (`estj.md`) | **Rex: moves them to chaotic evil** | **Rex: moves them to orderly good** | **Rex: moves them to chaotic good** | **Rex: moves them to orderly evil** |
+| ESTJ old privateer (`estj-m`) | **Rex: moves them to chaotic evil** | **Rex: moves them to orderly good** | **Rex: moves them to chaotic good** | **Rex: moves them to orderly evil** |
 
 ## Proposed (outside AI, 2026-10-27; not canon)
 
@@ -84,3 +84,4 @@ suggestion (not canon); blank = open.
 | 2026-10-27 | The ENTP's alignment map (inner rules); open A answered: per-character rules hold | Rex |
 | 2026-10-27 | New questing model: all four paths open, conduct earns points, witnessing crew shift by inner rules; "who you take" superseded; cells reread as witnessed reactions; open A, B and the ENTP's guarantee | Rex |
 | 2026-10-27 | The ISTP and ESTP are now women (`istp-f`, `estp-f`); the ENFJ is a man (`enfj-m`) | Rex |
+| 2026-10-27 | The ESTJ is an old privateer, a man (`estj-m`) | Rex |
