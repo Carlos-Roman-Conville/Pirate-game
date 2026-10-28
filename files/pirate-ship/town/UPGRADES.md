@@ -125,7 +125,11 @@ for control of the town hall."
   to ghosts; **one recruited** → their place develops, the rival's drifts to ghosts; **both recruited** → both
   develop. The secret duel stays the food pair's (`event.food_duel`). Every sector's places therefore get the states
   `base`, developed (by alignment form) and `ghosted`; added per slot as Rex fills them.
-- **(open)** What "developed" needs beyond recruiting; when a place turns `ghosted`; whether `ghosted` is its own slot
+- **(Rex, 2026-10-28)** "Recruiting alone doesn't develop a place; it takes more (a sub quest or supplying what they
+  need, like the farm's bodies), so a recruited character's place can stay undeveloped." A developed state's unlock
+  is `recruit(x) AND <x's develop condition>`. The food pair's condition is the bodies; every other character's is
+  open (per character, Rex's).
+- **(open)** When a place turns `ghosted`; whether `ghosted` is its own slot
   state (as recorded for the farm and the butcher shop) or something else.
 - **(Rex, 2026-10-28) The goal:** "I'd like it so that there is a route toward a perfectly working town by the end
   but that requires a complicated set of choices. Meaning you can't recruit everyone but who you choose to develop
@@ -220,10 +224,10 @@ As slot states (ids the keeper's):
 | Slot | State | Unlock | Rules out | Mark |
 |---|---|---|---|---|
 | `port.farm` | `base` | start | | keeper (format) |
-| `port.farm` | `improved` | `recruit(intp-m)`; the business improves from the bodies you supply; the daughter runs it | `ghosted` | Rex (tentative) |
+| `port.farm` | `improved` | `recruit(intp-m)` AND you supply the bodies (Rex, 2026-10-28: recruiting alone doesn't develop it); the daughter runs it | `ghosted` | Rex |
 | `port.farm` | `ghosted` | farmer not recruited (by the end, or when: open) | `improved` | Rex (tentative) |
 | `port.bakery` | `base` | start | | keeper (format) |
-| `port.bakery` | `improved` | `recruit(esfp-f)`; the business improves from the bodies you supply; the son runs it | `ghosted` | Rex (tentative) |
+| `port.bakery` | `improved` | `recruit(esfp-f)` AND you supply the bodies (Rex, 2026-10-28); the son runs it | `ghosted` | Rex |
 | `port.bakery` | `ghosted` | cook not recruited (by the end, or when: open) | `improved` | Rex (tentative) |
 | (event) `event.food_duel` | | `recruit(intp-m)` AND `recruit(esfp-f)` | | Rex (tentative; secret; not designed) |
 
@@ -234,7 +238,8 @@ Open:
 
 1. "Overtaken by ghosts" (neither) vs "drifts toward ghosthood" (the other one): the same end state, or a slower or
    partial one.
-2. Whether `improved` needs you to keep supplying bodies, and what happens if you stop.
+2. ~~Whether `improved` needs bodies.~~ Yes: recruiting alone doesn't develop it (Rex, 2026-10-28). Still open: how
+   many, whether you must keep supplying them, and what happens if you stop.
 3. When a slot turns `ghosted`: at a set point, gradually, or only at the end.
 4. Both owners are gated (reputation plus sub quests, `TOWNS.md`), so missing a gate means `ghosted`.
 
@@ -288,3 +293,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-28 | `port.align` is a (−100..+100)² point read as nine regions; institution keys `<slot>.align`, `<slot>.pending`; transformation rule; quadrant-form shape now Rex's (via the balance keeper) | Rex |
 | 2026-10-28 | `port.align` = mean of developed institutions' positions (via the balance keeper) | Rex |
 | 2026-10-28 | Decided: the ghost rule (neither → both ghosted, one → it develops and the rival ghosts, both → both develop) applies to all eight pairs; the duel stays food's (via the balance keeper) | Rex |
+| 2026-10-28 | Recruiting alone doesn't develop a place: developed = `recruit(x) AND` x's develop condition (food: the bodies; others open) (via the balance keeper) | Rex |
