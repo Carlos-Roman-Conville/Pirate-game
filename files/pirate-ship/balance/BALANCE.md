@@ -15,11 +15,20 @@ Sources read 2026-10-27: `../town/ENDINGS.md`, `../town/UPGRADES.md`, `../town/T
 Files here:
 
 - `BALANCE.md`: this file.
-- `maps.json`: a copy of each character's alignment map, start and limits, plus the sectors. The story keeper's
-  files are the source; update this copy when they change.
-- `reach.py`: computes the reachability table from `maps.json` (Python, no installs). Run `python reach.py`; it
-  writes `TABLE.md`.
-- `TABLE.md`: the generated table. Never edit by hand.
+- `ALIGNMENT.md`: the alignment system spec the engine is built from (Rex's rules, marked).
+- (retired 2026-10-28: `maps.json`, `reach.py`, `TABLE.md`; the engine's `data/pirate-ship/alignment/charts.json`
+  and `web/src/alignment/sim` answer the same questions from one source.)
+
+## The simulator's first answer (2026-10-28, after the belt built the engine)
+
+`cd web && npx vitest run src/alignment/sim` (the real engine, `web/src/alignment/`, Rex's rules of 2026-10-28,
+placeholder numbers): **every perfect town is reachable.** Perfect OG in 55 steps, CG 62, OE 43, CE 51 (a step =
+one engine command: recruit, party, event, leave, develop, sleep). Each route is printed by the smoke test. Two
+limits of this first answer: the simulator doesn't yet know the story's joining gates (the ISFJ needing the ESTP
+aboard, the reputation gates), so its OG route recruits the doctor directly; and the develop conditions (what each
+character needs beyond recruiting) aren't data yet, so `develop` is sent freely. Both come in as data from Rex; the
+engine won't change. `reach.py`, `maps.json` and `TABLE.md` are retired: `charts.json` and `charts.ts` are the one
+source now (ALIGNMENT.md's build rule).
 
 ## Where it stands (2026-10-28)
 
@@ -398,3 +407,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | The OG hospital (ISFJ via the ESTP, alongside the ISTP) is an earned hidden route by design; bypass options withdrawn; the keeper guards only that it stays possible | Rex |
 | 2026-10-28 | Ghost rule b chosen (every pair, both improve); with all-developed counting, the OG hospital route closes and orderly good has no perfect route unless "developed" needs more than recruiting; flagged for Rex | Rex; keeper (finding) |
 | 2026-10-28 | Recruiting alone doesn't develop a place (Rex): the OG hospital route is open again; flagged closure withdrawn | Rex; keeper |
+| 2026-10-28 | The engine and simulator are built (belt tasks 2474–2485); all four perfect towns reachable under Rex's rules with placeholder numbers; reach.py, maps.json and TABLE.md retired | keeper |
