@@ -136,7 +136,7 @@ What the path you push him on does to his alignment (`../QUESTLINES.md`, model p
    |  ORDERLY EVIL   |  CHAOTIC EVIL   |
    +-----------------+-----------------+
               EVIL
-   OG->OE   CG->OG   OE no change   CE->OE
+   OG->OE   CG->OG   OE lean   CE->OE
 ```
 
 | Pushed on (action quadrant) | He moves toward | Mark |
