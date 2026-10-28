@@ -128,6 +128,8 @@ For the code (`inner_rules`, action → destination):
 
 - **(open)** Their natural alignment. Unlike the ENTP's map, no quadrant loops back to itself.
 
+- **(Rex, 2026-10-28, for now)** Starting alignment: orderly evil. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
+
 ## Change log
 
 | Date | Change | By |
@@ -138,3 +140,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Why she joins: after you prove your skill in a series of pub games, she sees potential and joins to fix your boat and crew | Rex |
 | 2026-10-28 | Competes with someone (to come) for control of the town hall | Rex |
 | 2026-10-28 | Her town hall rival: Rex is thinking an ENFP (tentative) | Rex |
+| 2026-10-28 | Starting alignment for now: orderly evil | Rex |

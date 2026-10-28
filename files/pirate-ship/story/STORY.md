@@ -222,4 +222,5 @@ work lives in `../art/`, not here.
 | 2026-10-28 | Alignment maps: the INFP (OG→CG, CG→OE, OE lean, CE→OE; every path ends in orderly evil); the tentative ISFP, her brothel rival (OG→CE, CG→OG, OE→CE, CE lean; every path ends in chaotic evil; gender open, `isfp.md`) | Rex (via the balance keeper) |
 | 2026-10-28 | The INFJ mechanic's alignment map (OG lean, CG→OG, OE→OG, CE→OG): every path ends in orderly good | Rex (via the balance keeper) |
 | 2026-10-28 | The ISTP hunter's alignment map (OG→CG, CG→OE, OE→CE, CE→OG): a full cycle with no leans | Rex (via the balance keeper) |
+| 2026-10-28 | The alignment system (`balance/ALIGNMENT.md`): the player earns alignment too; three sources of change (dialogue, quests, independent actions), only those present witness, a continuous square, alignment persists through rotation; starting positions for now set for all 16 charted characters | Rex (via the balance keeper) |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

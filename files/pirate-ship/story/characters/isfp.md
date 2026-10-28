@@ -126,7 +126,7 @@ For the code (`inner_rules`, action → destination):
 
 - **(Rex)** Dashed ring: committing that action leans them that way; kept up, the lean carries them all the way into that quadrant.
 - Every path ends in chaotic evil: chaotic good passes through orderly good on the way.
-- **(open)** Starting alignment: to figure out later. The diagram highlights chaotic evil; Rex hasn't said whether that marks their start.
+- **(Rex, 2026-10-28, for now)** Starting alignment: chaotic evil. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
 - **(open)** Gender, name, story; whether they are recruitable (not counted among the 12).
 
 ## Change log
@@ -134,3 +134,4 @@ For the code (`inner_rules`, action → destination):
 | Date | Change | By |
 |---|---|---|
 | 2026-10-28 | Created (tentative): the INFP's rival for the brothel; alignment map (OG→CE, CG→OG, OE→CE, CE lean) | Rex |
+| 2026-10-28 | Starting alignment for now: chaotic evil | Rex |

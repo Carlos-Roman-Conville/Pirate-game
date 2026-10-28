@@ -159,7 +159,7 @@ For the code (`inner_rules`, action → destination):
 
 - A full cycle with no leans: orderly good → chaotic good → orderly evil → chaotic evil → orderly good. Nothing holds her.
 - The outside AI's earlier proposals (possible support on chaotic good and chaotic evil) stay in `../QUESTLINES.md` as proposals.
-- **(open)** Starting alignment: to figure out later. The diagram highlights orderly good (on the OG→CG arrow); Rex hasn't said whether that marks her start.
+- **(Rex, 2026-10-28, for now)** Starting alignment: neutral. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
 
 ## Change log
 
@@ -171,3 +171,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Now a woman: a tomboy, a small, petite girl who is extremely effective at hunting; file moved from `istp-m.md` to `istp-f.md` | Rex |
 | 2026-10-27 | Backstory: her husband was killed by a massive shark she failed to kill; never forgave herself, hunts alone; broke, needs cash for alcohol; joins easily since no work has come through town in months | Rex |
 | 2026-10-28 | Inner rules: her alignment map (OG→CG, CG→OE, OE→CE, CE→OG): a full cycle | Rex |
+| 2026-10-28 | Starting alignment for now: neutral | Rex |

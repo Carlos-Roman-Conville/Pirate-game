@@ -132,7 +132,7 @@ For the code (`inner_rules`, action → destination):
 
 - **(Rex)** Dashed ring: committing that action leans him that way; kept up, the lean carries him all the way into that quadrant.
 - Every path ends in orderly good: the INTJ's all-roads-to-orderly-evil shape, mirrored onto orderly good.
-- **(open)** Starting alignment: to figure out later. The diagram highlights orderly good (every arrow is selected); Rex hasn't said whether that marks his start.
+- **(Rex, 2026-10-28, for now)** Starting alignment: orderly good. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
 
 ## Change log
 
@@ -140,3 +140,4 @@ For the code (`inner_rules`, action → destination):
 |---|---|---|
 | 2026-10-28 | Created: a newcomer mechanic whose inventions outclass the ENTP's; milking the town for money before leaving for a big project in the next town over | Rex |
 | 2026-10-28 | Inner rules: his alignment map (OG lean, CG→OG, OE→OG, CE→OG): every path ends in orderly good | Rex |
+| 2026-10-28 | Starting alignment for now: orderly good | Rex |

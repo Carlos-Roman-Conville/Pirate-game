@@ -143,7 +143,7 @@ For the code (`inner_rules`, action → destination):
 
 - **(Rex)** The dashed ring: committing that action leans her in that direction. **(Rex, 2026-10-28)** If you keep doing those actions, the lean eventually carries her all the way into that quadrant.
 - The other three form a loop: chaotic good → chaotic evil → orderly evil → chaotic good. Only orderly good holds her.
-- **(open)** Starting alignment: to figure out later. The diagram highlights chaotic evil (on the CE→OE arrow); Rex hasn't said whether that marks her start (on the ESTP's and ESFP's charts the highlight didn't).
+- **(Rex, 2026-10-28, for now)** Starting alignment: orderly good. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
 
 ## Change log
 
@@ -156,3 +156,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Why she joins: only with the ESTP in your party. The odd triangle: wait out her infatuation with the ESTP; romanceable after their breaking point | Rex |
 | 2026-10-28 | Inner rules: her alignment map (OG no change, CG→CE, OE→CG, CE→OE); tie: her clinic competes with the INTJ's apothecary for the town's healing; the church and clinic kept separate | Rex |
 | 2026-10-28 | Dashed ring clarified: the lean toward orderly good, kept up, eventually carries her all the way into it | Rex |
+| 2026-10-28 | Starting alignment for now: orderly good | Rex |

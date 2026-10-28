@@ -35,7 +35,20 @@ Fit with the stats: personality moves only through what someone sees and how the
 
 - ~~**A.** Whether point 4 still holds, or whether points plus witnessing (2–3) replaced it.~~ Answered
   2026-10-27: it holds alongside them; the ENTP's alignment map is the first (`characters/entp-m.md`).
-- **B.** Who earns points: only the crew who witness an action, or the player too.
+- ~~**B.** Who earns points: only the crew who witness an action, or the player too.~~ Answered 2026-10-28: the
+  player earns alignment too; the player's own position moves by the event's category, witnesses by their charts.
+
+### The alignment system (Rex, 2026-10-28; full spec in `../balance/ALIGNMENT.md`)
+
+- **(Rex)** Three sources of change, each minor or major: dialogue choices, quest decisions, independent actions
+  (kidnap, heal, steal, help…). Every event has a category: OG, CG, OE or CE.
+- **(Rex)** Only characters present (aboard, in the party) witness an event. Whether absent characters learn of it
+  later is open. Alignment persists through crew rotation: leaving doesn't reset it.
+- **(Rex)** Alignment is a continuous square (±100 on each axis), so characters drift gradually; a dashed ring is a
+  smaller step toward that quadrant.
+- **(Rex, for now)** Starting positions, independent of the charts: ENTP CE; INTP OE; ENTJ evil priest OE; INTJ OE;
+  ENFJ neutral; INFJ mechanic OG; ENFP CG; INFP OE; ESTJ OE; ISTJ OG; ESFJ CG; ISFJ OG; ESTP neutral; ISTP neutral;
+  ESFP CE; ISFP CE. Each is also in the character's file.
 
 ### Superseded
 
@@ -109,3 +122,4 @@ suggestion (not canon); blank = open.
 | 2026-10-28 | Alignment maps: the INFP (OG→CG, CG→OE, OE lean, CE→OE); the tentative ISFP (OG→CE, CG→OG, OE→CE, CE lean) | Rex |
 | 2026-10-28 | The INFJ mechanic's alignment map (OG lean, CG→OG, OE→OG, CE→OG) | Rex |
 | 2026-10-28 | The ISTP hunter's alignment map (OG→CG, CG→OE, OE→CE, CE→OG): a full cycle | Rex |
+| 2026-10-28 | Open B answered (the player earns alignment too); the alignment system summarised (sources, witnesses, continuous square); starting positions for now | Rex |

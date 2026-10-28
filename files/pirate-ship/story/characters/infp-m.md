@@ -135,7 +135,7 @@ For the code (`inner_rules`, action → destination):
 
 - **(Rex)** Dashed ring: committing that action leans her that way; kept up, the lean carries her all the way into that quadrant.
 - Every path ends in orderly evil: orderly good passes through chaotic good on the way.
-- **(open)** Starting alignment: to figure out later. The diagram highlights chaotic evil (on the CE→OE arrow); Rex hasn't said whether that marks her start.
+- **(Rex, 2026-10-28, for now)** Starting alignment: orderly evil. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
 - **(open)** The chart image, for `diagrams/infp-m-alignment.png`.
 
 ## Change log
@@ -149,3 +149,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-28 | Competes with someone (to come) for control of the brothel | Rex |
 | 2026-10-28 | Her brothel rival: Rex is thinking an ISFP (tentative) | Rex |
 | 2026-10-28 | Inner rules: her alignment map (OG→CG, CG→OE, OE lean, CE→OE); her brothel rival is the tentative ISFP (`isfp.md`) | Rex |
+| 2026-10-28 | Starting alignment for now: orderly evil | Rex |

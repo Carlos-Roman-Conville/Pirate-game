@@ -124,7 +124,7 @@ For the code (`inner_rules`, action → destination):
 
 - The chart draws two double-headed arrows (OG↔CG, OE↔CE), read as each side sending them to the other; to confirm.
 - Order and chaos always flip; good or evil never changes.
-- **(open)** Starting alignment: to figure out later. The diagram highlights chaotic evil (on the CE→OE arrow); Rex hasn't said whether that marks their start.
+- **(Rex, 2026-10-28, for now)** Starting alignment: chaotic good. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
 - **(open)** Gender, name, story; whether they are recruitable (not counted among the 12).
 
 ## Change log
@@ -132,3 +132,4 @@ For the code (`inner_rules`, action → destination):
 | Date | Change | By |
 |---|---|---|
 | 2026-10-28 | Created (tentative): the ESTJ's rival for the town hall; alignment map (OG→CG, CG→OG, OE→CE, CE→OE) | Rex |
+| 2026-10-28 | Starting alignment for now: chaotic good | Rex |

@@ -151,7 +151,7 @@ For the code (`inner_rules`, action → destination):
 
 - **(Rex)** The dashed ring: committing that action leans him in that direction. **(Rex, 2026-10-28)** If you keep doing those actions, the lean eventually carries him all the way into that quadrant.
 - Every path ends in orderly evil: chaotic good passes through orderly good on the way.
-- **(open)** Starting alignment: to figure out later (the highlight on the diagram doesn't mark it).
+- **(Rex, 2026-10-28, for now)** Starting alignment: orderly evil. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
 
 ## Change log
 
@@ -168,3 +168,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Confirmed: taking neither sends both the farm and the cook's shop to ghosts | Rex |
 | 2026-10-27 | Why they join: to see the world and get a break from the island, as long as they can come back for more bodies (distinct from the other parent's reason later) | Rex |
 | 2026-10-28 | Dashed ring clarified: the lean toward orderly evil, kept up, eventually carries him all the way into it | Rex |
+| 2026-10-28 | Starting alignment for now: orderly evil | Rex |

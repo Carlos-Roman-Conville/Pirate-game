@@ -159,6 +159,8 @@ For the code (`inner_rules`, action → destination):
 - **(Rex, 2026-10-27)** Chaotic evil is his natural alignment. Doing chaotic evil things only reinforces his
   behaviour (the loop).
 
+- **(Rex, 2026-10-28, for now)** Starting alignment: chaotic evil. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
+
 ## Change log
 
 | Date | Change | By |
@@ -175,3 +177,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Why he joins: convinced through dialogue; he's tinkered for two years and isn't sure his weaponry is ready to be tested | Rex |
 | 2026-10-28 | No longer the INTJ's economic rival (stores don't compete; the contempt stays); Rex will make a new mechanical character to compete with him | Rex |
 | 2026-10-28 | His mechanical rival is the INFJ, a newcomer (`infj-m`) | Rex |
+| 2026-10-28 | Starting alignment for now: chaotic evil | Rex |

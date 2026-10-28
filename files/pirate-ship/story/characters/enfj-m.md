@@ -133,6 +133,8 @@ For the code (`inner_rules`, action → destination):
 - **(open)** Their natural alignment. This map has two loops (orderly good and orderly evil): everything pulls
   them toward order, and the good/evil side follows what you do.
 
+- **(Rex, 2026-10-28, for now)** Starting alignment: neutral. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
+
 ## Change log
 
 | Date | Change | By |
@@ -142,3 +144,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | He is the warehouse owner's son (the bigwig's child); his journey into making structure: the warehouse for legitimate trade, or for stolen goods and drugs | Rex |
 | 2026-10-27 | Confirmed: the journey into making structure is his | Rex |
 | 2026-10-27 | Why he joins: despises his parents and wants to get away | Rex |
+| 2026-10-28 | Starting alignment for now: neutral | Rex |

@@ -128,7 +128,7 @@ For the code (`inner_rules`, action → destination):
 
 - **(Rex)** Dashed ring: committing that action leans him that way; kept up, the lean carries him all the way into that quadrant.
 - Every path ends in evil: the mirror of the ISTJ priest, whose every path ends in good.
-- **(open)** Starting alignment: to figure out later. The diagram highlights chaotic good (on the CG→OE arrow); Rex hasn't said whether that marks his start.
+- **(Rex, 2026-10-28, for now)** Starting alignment: orderly evil. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
 - **(open)** Whether he is recruitable or romanceable (the 12 recruitables are 6 men and 6 women); until Rex says, he is not counted among them.
 
 ## Change log
@@ -136,3 +136,4 @@ For the code (`inner_rules`, action → destination):
 | Date | Change | By |
 |---|---|---|
 | 2026-10-28 | Created: the evil ENTJ priest, who competes with the ISTJ priest for the church; alignment map (OG→CE, CG→OE, OE lean, CE lean) | Rex |
+| 2026-10-28 | Starting alignment for now: orderly evil | Rex |

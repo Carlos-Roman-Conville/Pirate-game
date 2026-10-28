@@ -136,7 +136,7 @@ For the code (`inner_rules`, action → destination):
 - Everything pulls her toward chaos, and the good/evil side follows what you do (the mirror of the ENFJ's map,
   which pulls toward order).
 - **(Rex, 2026-10-27)** The highlight on orderly evil doesn't mark her starting alignment.
-- **(open)** Her starting alignment: to figure out later.
+- **(Rex, 2026-10-28, for now)** Starting alignment: neutral. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
 
 ## Change log
 
@@ -154,3 +154,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | The diagram's highlight isn't her starting alignment; starting alignment left for later | Rex |
 | 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |
 | 2026-10-27 | Why she joins: trusts and needs no one; joins only after you help with a few things too difficult for her alone. Tie: the ISFJ's infatuation | Rex |
+| 2026-10-28 | Starting alignment for now: neutral | Rex |

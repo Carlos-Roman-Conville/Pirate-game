@@ -140,7 +140,7 @@ For the code (`inner_rules`, action → destination):
 `{ "order_good": "order_evil", "chaos_good": "order_evil", "order_evil": "order_evil", "chaos_evil": "order_evil" }`
 
 - **(Rex)** "I feel like how I designed the INTJ alignment is very INTJ."
-- **(Rex)** Starting alignment: orderly evil (on his diagram).
+- **(Rex, 2026-10-28, for now)** Starting alignment: orderly evil. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
 - **(Rex, 2026-10-27) The one way out:** her only path is toward orderly evil, unless you show her that her
   belief is wrong; then she becomes neutral.
 - **(open)** What shows her she's wrong (her questline's innocent victim is the outside AI's proposal), and what
@@ -178,3 +178,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Why she joins: you're part of her path toward her plans; she offers without saying why | Rex |
 | 2026-10-27 | Joining dialogue: complex like the ENTP's, but every path leads to her joining; no wrong choice, only the perception of one | Rex |
 | 2026-10-28 | No longer the ENTP's economic rival (stores don't compete; the contempt stays); now competes with the ISFJ's clinic for the town's healing | Rex |
+| 2026-10-28 | Starting alignment for now: orderly evil | Rex |

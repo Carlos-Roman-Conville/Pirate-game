@@ -129,7 +129,7 @@ For the code (`inner_rules`, action → destination):
 - No quadrant holds him: every action moves him somewhere else. The good quadrants send him diagonally to the
   opposite corner; the evil ones send him straight up to the good side of the same column.
 - The dotted ring on chaotic good in the diagram marks the destination of the selected arrow, not "no change".
-- **(open)** Starting alignment: none yet (Rex, 2026-10-27).
+- **(Rex, 2026-10-28, for now)** Starting alignment: chaotic good. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
 
 ### His mentality: progressivism (Rex, 2026-10-27)
 
@@ -191,3 +191,4 @@ Why his map moves the way it does.
 | 2026-10-27 | Outside AI's follow-up on the term (progressivism vs liberalism; a satirical caricature), kept as proposals | Rex (pasted) |
 | 2026-10-27 | Why he joins: broke; you fund his rare-goods shop or stall, it fails, he can't repay, so he joins and still sells you rare goods for a price | Rex |
 | 2026-10-28 | Still counts for commerce after his shop fails: he keeps selling rare goods from the ship | Rex |
+| 2026-10-28 | Starting alignment for now: chaotic good | Rex |

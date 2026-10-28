@@ -133,7 +133,7 @@ For the code (`inner_rules`, action → destination):
 - **(Rex)** Dashed ring: committing that action leans him that way; kept up, the lean carries him all the way into that quadrant.
 - Every path ends in good: the map never lands on orderly evil or chaotic evil, which fits "he cannot be corrupted".
 - **(open, for Rex)** The map differs from the earlier cells above: chaotic good was "no effect" (the map: a lean toward chaotic good); orderly evil "does nothing to his alignment or anyone else's" (the map: moves him to chaotic good); chaotic evil "fights evil harder" (the map: moves him to orderly good; the part about moving the town toward good may still hold). Which stands is Rex's call.
-- **(open)** Starting alignment: to figure out later. The diagram highlights chaotic evil (on the CE→OG arrow); Rex hasn't said whether that marks his start.
+- **(Rex, 2026-10-28, for now)** Starting alignment: orderly good. Starting position and chart are independent (`../../balance/ALIGNMENT.md`).
 
 ## Change log
 
@@ -146,3 +146,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | An old pirate who gave up the life; joins of his own offer, to help you, take your measure and try to bring you to God | Rex |
 | 2026-10-28 | Inner rules: his alignment map (OG lean, CG lean, OE→CG, CE→OG); where it differs from the earlier cells is open for Rex | Rex |
 | 2026-10-28 | Tie: the evil ENTJ priest competes with him for the church | Rex |
+| 2026-10-28 | Starting alignment for now: orderly good | Rex |
