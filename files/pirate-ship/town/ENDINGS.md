@@ -87,7 +87,9 @@ its endings). The town side, in short:
   not perfect. Perfect endings should be hard but achievable wherever the rules permit.
 - **(Rex, 2026-10-28)** "Town position = the mean of the developed institutions' positions." A plain average; the
   outside AI's influence weighting is not used.
-- **(open)** Which institutions count toward perfection (the losing half of a pair, ghosted buildings).
+- **(Rex, 2026-10-28)** "Every developed place counts toward a perfect town, including the loser of a pair if it was
+  developed." So a sector where both rivals' places were developed needs both to match.
+- **(open)** Whether a ghosted building counts (it isn't developed, so for now it doesn't).
 
 ### What each quadrant becomes
 
@@ -197,3 +199,4 @@ changes how routes are built.
 | 2026-10-27 | Open 6 added: how the fully developed town (sectors) relates to the endings | keeper |
 | 2026-10-28 | Rex's square: the town's alignment comes from its developed institutions (supersedes residents who stay); nine endings with hybrids (`end.og_oe` Twisted Virtue); perfect = all relevant institutions in one alignment; spec in `../balance/ALIGNMENT.md` (via the balance keeper) | Rex |
 | 2026-10-28 | Town position = the mean of the developed institutions' positions; no influence weighting (via the balance keeper) | Rex |
+| 2026-10-28 | Every developed place counts toward a perfect town, including a pair's loser if developed; ghosted buildings open (via the balance keeper) | Rex |
