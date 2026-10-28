@@ -221,13 +221,20 @@
       "mark": "proposed (outside AI)"
     },
     {
-      "id": "society",
-      "name": "society / power (privateer vs courtesan)",
+      "id": "brothel",
+      "name": "brothel: INFP vs a competitor (not made)",
       "pair": [
-        "estj-f",
         "infp-m"
       ],
-      "mark": "proposed (outside AI; flagged weak by it)"
+      "mark": "Rex (2026-10-28: control of the brothel; competitor open)"
+    },
+    {
+      "id": "town_hall",
+      "name": "town hall: ESTJ vs a competitor (not made)",
+      "pair": [
+        "estj-f"
+      ],
+      "mark": "Rex (2026-10-28: control of the town hall; competitor open)"
     }
   ]
 }
