@@ -346,6 +346,29 @@ The square, the charts, the player's movement, the overnight rule, the mean and 
   the siege is a read of the same slots. **Combat itself is outside the alignment engine** and outside this
   keeper's lane: a separate module (`web/src/combat/`?) with its own data and sim, owned by no keeper yet.
 
+### Third run-down, the same day: the six factions (Rex; recorded, nothing built)
+
+- **(Rex)** "The six factions for the game", for the map and the storyline. Rex's own list: **pirates** who love
+  freedom and cooperation and just want to be free; **evil criminal pirates**, gangs, thieves and ne'er-do-wells
+  (Rex: this can be more closely associated with a demonic, Cthulhu-like force); the **church or holy forces**;
+  the **ghost forces** (darkness, or a spooky green force); and a sixth, **oppression**: a Spanish-crown-like
+  kingdom coming to crush and take over.
+- **(proposed, outside AI; Rex called the result "the six factions")** ChatGPT's six, which split Rex's criminals
+  from the demonic force: Free Pirates (freedom, cooperation; conflict: resisting domination), Criminal Pirates
+  (wealth, exploitation; the pirate economy), Abyssal Cult (awakening an ancient oceanic force, possibly behind the
+  town's decline; infiltrates church, wilderness, docks), Holy Order (faith, purification; some protect, some demand
+  conformity), Ghost Fleet (unfinished business; bound to the island by a betrayal; green spectres to oppressive
+  darkness), Imperial Crown (sovereignty, imposed order; stability with occupation). None identical to one
+  alignment. Map: the port central and contested, each faction strongest in a surrounding territory, no fixed
+  order. The Crown as the first siege's antagonist (15–25%). Shifting alliances (Holy Order with Crown against
+  piracy; both pirate factions against an invasion; the Ghost Fleet an ally if its cause is resolved; the Cult
+  infiltrating the rest). Next structural choice: which faction is the antagonist at each stage.
+- **(keeper)** Factions are not alignment: a faction is who a character or region belongs to, alignment is where
+  they stand on the square, and the two can disagree (ChatGPT's "support the Free Pirates while building an
+  Orderly Evil town"). For the engine that means a faction tag per character and region (data), faction reputation
+  for the player (`STATS.md` §7b already has per-group reputation; a faction is a group), and nothing in the
+  square. Whether faction outcomes become endings beside the nine is open.
+
 ## Change log
 
 | Date | Change | By |
@@ -363,3 +386,4 @@ The square, the charts, the player's movement, the overnight rule, the mean and 
 | 2026-10-28 | Develop conditions into the simulator as data (`conditions.json`, `supply` command): the food pair's bodies from the story; the rest open | Rex (decision); keeper |
 | 2026-10-28 | §10: the scope change (108 characters, locales and relationships, influence carried home, character ghosts, three neutral endings, build locale by locale) recorded with the engine changes it implies; nothing built | Rex (scope); keeper (reading) |
 | 2026-10-28 | §10 second run-down: twelve locales (tavern, docks, fort added), the fort as a Stardew-style fill-in, the attack at 15–25%, turn-based combat of 4 units converting to tactical battles, a world map coming | Rex (scope); keeper |
+| 2026-10-28 | §10 third run-down: the six factions (free pirates, criminal pirates, abyssal cult, holy order, ghost fleet, imperial crown); factions kept apart from alignment | Rex (scope); keeper |

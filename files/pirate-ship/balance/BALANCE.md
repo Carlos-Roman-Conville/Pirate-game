@@ -200,6 +200,18 @@ nothing is built. The current simulator verdicts (OG 61, CG 68, OE 49, CE 57) st
 15. **The world map** isn't designed; recruits are found by region, so joining gates may gain "reached region X"
     conditions (data in `gates.json`, no engine change).
 
+16. **Factions vs the square.** The six factions sit near quadrants (free pirates ~ chaotic good, crown ~ orderly,
+    holy order ~ orderly good, criminals ~ chaotic evil, cult ~ evil, ghosts ~ the ghost ending) but Rex's own note
+    and ChatGPT both keep them apart from alignment. If a faction ever *moves* the square (joining the Crown shifts
+    the town orderly), that's a new event source and needs a rule; if it only gates recruits, regions and the siege,
+    it's data (faction tags, per-group reputation) and the engine doesn't change. Rex's call.
+17. **Criminals and the cult: one faction or two.** Rex's words associated the criminal pirates with the demonic
+    force; ChatGPT split them and Rex took "the six". The split matters for routes: an evil ending through greed
+    (criminals) and one through corruption (cult) are two chaotic-evil stories or one; the town's evil forms (the
+    chthonic church) belong to the cult or to both.
+18. **Factions and the endings.** Whether "who rules the port" (a faction outcome) is a dimension beside the nine
+    alignment endings and the three neutrals, or folded into them, decides how many endings the sim must reach.
+
 ## Are the alignment maps on file?
 
 **Yes.** Rex's maps are recorded by the story keeper as Rex (each character file's "Inner rules" section and the
@@ -499,3 +511,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | Third simulator answer with the develop conditions as data: all four perfect towns still reachable (OG 61, CG 68, OE 49, CE 57); only the food pair's bodies are known conditions | keeper; Rex (conditions in) |
 | 2026-10-28 | C5: the scope change's collisions and open rules (pairs vs locales, points vs adopt, influence, death, three neutrals, empty town, scale, novices, sequence, other keepers) | keeper |
 | 2026-10-28 | C5 items 11–15: twelve locales vs pairs, which count, siege fates, combat unowned, world map | keeper |
+| 2026-10-28 | C5 items 16–18: factions vs the square, criminals vs cult, factions and endings | keeper |

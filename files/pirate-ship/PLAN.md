@@ -79,6 +79,7 @@ rule stays data.
 | 29 | The siege as an event that reads the developed slots and writes fates (killed, ghosted) and damage; losable | codex | 21, 28, Rex's rule | one test per contribution and outcome | scope |
 | 30 | Combat: turn-based RPG, 4 units a side (enemy count open), converting to a turn-based tactical RPG for invasions; **a separate module with its own data and sim, not the alignment engine; no keeper owns it yet** | codex | Rex's combat design | its own smoke test | scope |
 | 31 | World map: regions where recruits are found; Rex designs it first | — | Rex's map | — | scope |
+| 32 | Factions as data: a faction tag per character and region; faction reputation as a §7b group; faction alliances per stage (Rex's storyline) | composer | 31, Rex's storyline | shape test | scope |
 | **Gate** | Rex decides the rules above (BALANCE.md C5), locale by locale, starting with the farm; the balance keeper then writes the tasks | | | | gate |
 
 ## Later phases (not planned yet)
