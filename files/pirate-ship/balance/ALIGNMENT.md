@@ -399,6 +399,54 @@ The square, the charts, the player's movement, the overnight rule, the mean and 
   **each of the six Act II antagonists must have a realistic route**, equal opportunity not equal chance, which the
   world sim must prove the way the town sim proves the four perfect towns.
 
+### Fifth run-down, the same day: the map, travel, the ocean, and the economy (Rex; recorded, nothing built)
+
+- **(Rex)** **The Caribbean as the base.** One land mass you can't see past (Florida); lower land masses where
+  you can travel only to the port towns; the islands are most of the game, with artistic licence to add chains and
+  regions so it isn't empty; the full density of islands is too vast for a whole game.
+- **(Rex)** **Travel like the Elder Scrolls, not Wind Waker:** a map, fast travel to a region, days pass, the
+  voyage shown as dots moving on a screen (FF10's cutscenes); an attack on the way stops the dots and starts a
+  battle. This prevents discovering regions too early and forces progression to what's allowed to be seen; an open
+  world is beyond scope; it also allows nearly limitless places, some you just can't reach or don't have access to.
+- **(Rex)** **Ocean locales:** learn from a town or someone that ships travel to a certain place in the ocean, and
+  that place becomes a locale you can travel to and **wait** at for any number of days depending on your
+  provisions; plunderable if ships go by. Attack enough companies, or a specific one, and they begin bringing in
+  their own defences.
+- **(Rex)** **Map design and the economy are next.** The system gathers the normal resources one would need, costs,
+  weights, how much ships can take and where they get it, and makes a simulation; **the simulation is the basis for
+  Rex's other games too**, a useful first step there and life for this game.
+- **(Rex)** **Start small; the scope is set by economic need.** First a goods list. Every town needs certain goods,
+  in three types: **base/general goods** (lumber, stone: every civilisation needs them, doesn't always have them,
+  demand steady); **specialty goods** (only a specific region can make them from knowledge it has; desired by some
+  towns, not needed by others); **cultural goods** (valued only by the civilisation in question; others may make
+  them but value them less or not at all). A region has an **input and an output** factor; inputs (demand) carry a
+  **consumption unit** that depends on community size and on who in the community consumes it.
+- **(Rex)** **Two metrics per good per settlement:** a **cache** (how much the region already possesses) and a
+  **consumption** metric (how much it eats), giving the cost. Raw iron vs iron tools: the garrison town with a
+  blacksmith has steady demand for iron; the fishing village pays a high price for iron tools when low but little
+  for iron itself.
+- **(proposed, outside AI)** Node-based travel: destination → voyage with days → interrupting events → encounter →
+  compact level; discovery states (unknown, rumoured, discovered, accessible, blocked, occupied), revealed by
+  recruits (a navigator's routes, a smuggler's ports); three map layers (world, region, playable destination); the
+  same level reused with a different faction's NPCs; voyage time and crew skills (navigation, seamanship, lookout)
+  mattering; interruptions rare on ordinary routes. Ocean locales (shipping lane, strait, cove, fishing grounds,
+  wreck, patrol zone, treasure waters) with encounter tables; companies escalate (unprotected → caution → convoys →
+  retaliation → strategic response), differently per organisation and tied to the six factions; **local heat** vs
+  **company hostility** as two values; scheduled major convoys plus probabilistic ordinary traffic. Economy: a
+  reusable engine (resources, recipes, supply and demand, transport network, organisations, decisions, events) with
+  the pirate content as data; ~12–16 resources with weight, base price, production, consumption, spoilage,
+  legality; ports as economic nodes; ships as actors with capacity, speed, crew, provisions, cost, defence, owner,
+  route; cargo conserved (captured cargo never arrives); strategic vs detailed simulation; start with three ports,
+  three goods, two companies. Rex's two metrics extended to five per settlement-good: stock, consumption per day,
+  target reserve, production per day, base price; price from shortage (illustrative formula base × (0.7 + 2.3 ×
+  shortage)); need vs willingness vs ability to pay, later.
+- **(keeper)** The economy is a third engine, and Rex wants it shared across games: it should live where shared
+  code lives (the Toolchain or a package the games import), with `data/pirate-ship/economy/` holding this game's
+  goods, ports and companies, so the pirate game is its first client and not its owner. Its balance (no runaway
+  prices, every region viable, piracy's escalation fair) is a lane of its own; this keeper's question is only how
+  the economy feeds the town and the world (a shortage as an event; a company's retaliation as a faction's
+  influence), which are commands between modules, not shared state.
+
 ## Change log
 
 | Date | Change | By |
@@ -418,3 +466,4 @@ The square, the charts, the player's movement, the overnight rule, the mean and 
 | 2026-10-28 | §10 second run-down: twelve locales (tavern, docks, fort added), the fort as a Stardew-style fill-in, the attack at 15–25%, turn-based combat of 4 units converting to tactical battles, a world map coming | Rex (scope); keeper |
 | 2026-10-28 | §10 third run-down: the six factions (free pirates, criminal pirates, abyssal cult, holy order, ghost fleet, imperial crown); factions kept apart from alignment | Rex (scope); keeper |
 | 2026-10-28 | §10 fourth run-down: the world answers to the player's actions (power vacuums, regional takeovers), the last fight engineered from it; two acts (the town, then liberating the lands from the faction that took over) | Rex (scope); keeper |
+| 2026-10-28 | §10 fifth run-down: the Caribbean map, fast travel with days and dots, ocean locales and waiting, companies that respond, and the economy as a reusable simulation (three goods types, cache and consumption per settlement) | Rex (scope); keeper |

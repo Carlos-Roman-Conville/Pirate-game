@@ -83,6 +83,9 @@ rule stays data.
 | 33 | World module: regions as data (controlling faction, per-faction influence, the variables Rex keeps), a reducer over world commands, evaluation at a tick; the same pattern as the alignment engine, its own folder | codex | 31, 32, Rex's region list and transition rules | one test per rule; replays | scope |
 | 34 | World sim: is each of the six factions reachable as the Act II antagonist under the data; prints a route per faction | codex | 33 | six verdicts printed | scope |
 | 35 | Act I finale evaluation (fixed milestone vs threshold: Rex) and the Act II liberation state carrying Act I's consequences | codex | 33, Rex's rule | one test per rule | scope |
+| 36 | Goods list as data: Rex's three types (base, specialty, cultural), per settlement-good stock, consumption per day, target reserve, production per day, base price; weight and ship capacity | composer | Rex's goods list | shape test | scope |
+| 37 | Economy engine, shared across Rex's games: resources, recipes, supply and demand, transport network, organisations, decisions, events; a reducer and a tick; the pirate game's goods, ports and companies as its data; starts with three ports, three goods, two companies | codex | 36; where shared code lives (Rex) | one test per rule; the three-port sim prints prices and shortages over days | scope |
+| 38 | Map and travel as data: regions, destinations with discovery states, routes with days, ocean locales with waiting and provisions, companies' escalation (local heat, company hostility) | codex | 31, 37, Rex's map | one test per rule; a voyage replays | scope |
 | **Gate** | Rex decides the rules above (BALANCE.md C5), locale by locale, starting with the farm; the balance keeper then writes the tasks | | | | gate |
 
 ## Later phases (not planned yet)

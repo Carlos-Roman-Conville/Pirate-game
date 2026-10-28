@@ -232,6 +232,21 @@ nothing is built. The current simulator verdicts (OG 61, CG 68, OE 49, CE 57) st
     sim keeps running unchanged while the world is built, and the two are joined only through the commands they
     exchange (a region's fall can send an event to the town; a town's state can gate a region).
 
+24. **Where the economy lives.** Rex wants the simulation as the basis for his other games, so it shouldn't be
+    born inside `pirate-ship/web/src/`; a shared package (Toolchain, or a games-wide module the clients import)
+    with this game's goods, ports and companies as data under `data/pirate-ship/economy/`. Decide the home before
+    the first task, or the first version gets welded to this repo.
+25. **Three engines, three ticks.** Town (sleep), world (time passing), economy (days). They have to agree on one
+    clock (the voyage's days are the economy's days are the town's sleeps), and they should talk only by commands
+    (a shortage → a town event; captured cargo → a company's hostility → a faction's influence). Shared state
+    between them is the thing that makes the sims untestable apart.
+26. **Economic viability is a balance question nobody owns yet.** Every region must be able to feed itself or
+    trade for it, piracy's escalation must be beatable, prices must not run away; the economy sim proves it the way
+    the town sim proves endings, but it's a lane of its own, not this one.
+27. **Ocean waiting and provisions.** Waiting at a lane burns provisions and world days, so a player can starve
+    the town's clock while fishing for convoys; whether a town's institutions can ghost from neglect while the
+    player is away is the same open as "when a slot turns ghosted" (UPGRADES.md). Decide together.
+
 ## Are the alignment maps on file?
 
 **Yes.** Rex's maps are recorded by the story keeper as Rex (each character file's "Inner rules" section and the
@@ -533,3 +548,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | C5 items 11–15: twelve locales vs pairs, which count, siege fates, combat unowned, world map | keeper |
 | 2026-10-28 | C5 items 16–18: factions vs the square, criminals vs cult, factions and endings | keeper |
 | 2026-10-28 | C5 items 19–23: six antagonists reachable, milestone vs threshold, regional rules as data, endings multiply, world module apart | keeper |
+| 2026-10-28 | C5 items 24–27: where the economy lives, three engines one clock, economic viability unowned, ocean waiting vs town neglect | keeper |
