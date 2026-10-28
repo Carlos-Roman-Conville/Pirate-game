@@ -1,0 +1,7 @@
+{
+  "notes": "Source: ALIGNMENT.md §5; Rex 2026-10-28; town/UPGRADES.md food source. Open: how many bodies, whether supply must continue, and every other character's condition. Placeholder: once is enough.",
+  "conditions": {
+    "port.farm": { "supply": ["bodies"] },
+    "port.bakery": { "supply": ["bodies"] }
+  }
+}

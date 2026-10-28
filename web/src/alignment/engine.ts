@@ -4,6 +4,7 @@ import { classify, quadrantAnchors, step, type Quadrant } from './square'
 import { loadAlignmentThresholds, type AlignedPosition, type AlignmentState, type AlignmentThresholds, type Command } from './state'
 import { develop, markReturned, sleep } from './institutions'
 import { canRecruit, loadGates, unlock, type Gates } from './gates'
+import { canDevelop, loadConditions, supply, type Conditions } from './conditions'
 import { townPosition } from './town'
 
 export interface AlignmentConfig {
@@ -11,6 +12,7 @@ export interface AlignmentConfig {
   charts: Record<string, Chart>
   events: EventDef[]
   gates: Gates
+  conditions: Conditions
 }
 
 export const UNRESOLVED: string[] = [
@@ -30,7 +32,7 @@ export const UNRESOLVED: string[] = [
 ]
 
 export function loadAlignmentConfig(): AlignmentConfig {
-  return { thresholds: loadAlignmentThresholds(), charts: loadCharts(), events: loadEvents(), gates: loadGates() }
+  return { thresholds: loadAlignmentThresholds(), charts: loadCharts(), events: loadEvents(), gates: loadGates(), conditions: loadConditions() }
 }
 
 function character(state: AlignmentState, slug: string) {
@@ -104,7 +106,13 @@ export function reduce(state: AlignmentState, command: Command, config: Alignmen
     case 'unlock': next = unlock(state, command.slug); break
     case 'party': next = party(state, command.slugs); break
     case 'leave': next = markReturned(leave(state, command.slug), command.slug); break
-    case 'develop': next = develop(state, command.slot, config.thresholds); break
+    case 'supply': next = supply(state, command.slot, command.what, config.conditions); break
+    case 'develop': {
+      const refusal = canDevelop(state, command.slot, config.conditions)
+      if (refusal) throw new Error(refusal)
+      next = develop(state, command.slot, config.thresholds)
+      break
+    }
     case 'sleep': {
       const result = sleep(state, config.thresholds)
       next = result.state

@@ -21,6 +21,7 @@ export type Command =
   | { type: 'party'; slugs: string[] }
   | { type: 'leave'; slug: string }
   | { type: 'develop'; slot: string }
+  | { type: 'supply'; slot: string; what: string }
   | { type: 'sleep' }
 
 export interface AlignmentState {
@@ -29,6 +30,7 @@ export interface AlignmentState {
   player: AlignedPosition
   characters: Record<string, CharacterState>
   slots: Record<string, InstitutionSlot>
+  supplied: Record<string, string[]>
   slotTransformedAt: Record<string, number>
   town: AlignedPosition
   log: Command[]
@@ -62,6 +64,7 @@ export function initialState(starts: Starts, thresholds: AlignmentThresholds, ga
       slug, { ...place(category), location: 'town', inParty: false, unlocked: !gates[slug]?.story },
     ])),
     slots: initialSlots(),
+    supplied: {},
     slotTransformedAt: {},
     town: place('neutral'),
     log: [],

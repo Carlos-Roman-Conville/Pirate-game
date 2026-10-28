@@ -1,5 +1,5 @@
 import {
-  canRecruit, loadAlignmentConfig, reachable, respond,
+  canDevelop, canRecruit, loadAlignmentConfig, reachable, respond,
   type AlignmentConfig, type Command, type Quadrant,
 } from '../index'
 import { checkLimit, Cursor, eventCommand } from './scenario'
@@ -91,7 +91,12 @@ export function greedyToward(quadrant: Quadrant, config = loadAlignmentConfig(),
       const arrived = cursor.state.characters[slug].region === quadrant
       if (!arrived) cursor.issues.push(`steering limit or missing event: ${slug} -> ${quadrant}`)
       cursor.apply({ type: 'leave', slug })
-      if (arrived) cursor.apply({ type: 'develop', slot: id })
+      if (arrived) {
+        for (const what of config.conditions[id]?.supply ?? []) {
+          if (!cursor.state.supplied[id]?.includes(what)) cursor.apply({ type: 'supply', slot: id, what })
+        }
+        cursor.apply({ type: 'develop', slot: id })
+      }
     }
     for (const [slug, who] of Object.entries(cursor.state.characters)) {
       if (who.location === 'aboard') cursor.apply({ type: 'leave', slug })
@@ -124,8 +129,13 @@ export function random(seed: number, config: AlignmentConfig = loadAlignmentConf
     commands.push(...aboard.map((slug): Command => ({ type: 'leave', slug })))
     commands.push({ type: 'party', slugs: aboard.filter(() => draw() < 0.5) })
     commands.push(...config.events.map((event) => eventCommand(event.id)))
+    for (const [slot, condition] of Object.entries(config.conditions)) {
+      for (const what of condition.supply) {
+        if (!cursor.state.supplied[slot]?.includes(what)) commands.push({ type: 'supply', slot, what })
+      }
+    }
     commands.push(...Object.entries(cursor.state.slots)
-      .filter(([, slot]) => !slot.developed && cursor.route.some((command) =>
+      .filter(([id, slot]) => !slot.developed && canDevelop(cursor.state, id, config.conditions) === null && cursor.route.some((command) =>
         command.type === 'recruit' && command.slug === slot.owner))
       .map(([slot]): Command => ({ type: 'develop', slot })))
     cursor.apply(commands[Math.floor(draw() * commands.length)])

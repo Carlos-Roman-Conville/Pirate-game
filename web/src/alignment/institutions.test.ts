@@ -23,6 +23,7 @@ function developed(id = church, state = fresh()) {
   }
   if (config.gates[slug]?.story) state = run(state, { type: 'unlock', slug })
   if (state.characters[slug].location !== 'aboard') state = run(state, { type: 'recruit', slug })
+  for (const what of config.conditions[id]?.supply ?? []) state = run(state, { type: 'supply', slot: id, what })
   return run(state, { type: 'develop', slot: id })
 }
 
