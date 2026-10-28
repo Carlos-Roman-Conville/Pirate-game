@@ -68,6 +68,29 @@ Open: whether slot states now follow the quadrant, single choices (`port.entp`),
 
 ## `port`: the starting port
 
+### Sectors (Rex, 2026-10-27)
+
+Some parts of town are equivalent and compete. **Six facilities, two options each, two characters per facility;
+only one of each pair needs to succeed; each has two potential outcomes.** Balance analysis is the balance keeper's:
+[`../balance/BALANCE.md`](../balance/BALANCE.md) (its P1–P6 touch the slots below).
+
+| Sector | Option A (slot, character) | Option B (slot, character) | Mark |
+|---|---|---|---|
+| `sec.faith` (church vs clinic) | `port.church`, `istj-m` | `port.clinic`, `isfj-f` | Rex (the pair); sector id the keeper's |
+| `sec.food` (butcher shop vs farm) | `port.bakery`, `esfp-f` | `port.farm`, `intp-m` | Rex |
+| `sec.hunt` (hunting / gathering) | open (no place yet), `estp-f` | open (no place yet), `istp-f` | Rex (the pair); places open |
+| `sec.invent` (inventions) | `port.shipyard`, `entp-m` | `port.apothecary`, `intj-f` | Rex (the pair); slots read from where each lives |
+| (fifth) | | | open |
+| (sixth) | | | open |
+
+- **(proposed, outside AI)** Commerce: `port.warehouse` (`enfj-m`) vs `port.esfj_shop` (`esfj-m`).
+- **(proposed, outside AI; it flagged this one as weak)** Society/power: the ESTJ privateer (`estj-f`) vs the INFP
+  courtesan (`infp-m`).
+- **(proposed, outside AI)** Both institutions in a sector can succeed with extra work (they compete for time,
+  slots, resources); track sector completion, institution development and town alignment separately.
+- **(open)** What "succeed" means for a sector, as a slot state.
+- **(open)** Whether the food rule's "the other drifts toward ghosthood" applies to every pair (balance keeper's P1).
+
 ### Slots
 
 | Slot | Part of town | States | Mark |
@@ -207,3 +230,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-27 | Food source rule (tentative): `port.farm` / `port.bakery` `improved` if their owner is recruited, `ghosted` if not; `event.food_duel` if both (via the story keeper, 653c8d0) | keeper; rule Rex |
 | 2026-10-27 | Confirmed: recruit neither the farmer nor the cook and both places go to ghosts | Rex |
 | 2026-10-27 | Reserved `port.esfj_shop` (temporary): `base` → `open` on `fund(esfj-m)` → `failed`, then he joins; choice word `fund(<slug>)` (proposed) | keeper; rule Rex |
+| 2026-10-27 | Sectors table: `sec.faith`, `sec.food`, `sec.hunt`, `sec.invent` (Rex); two open; outside AI's commerce and society pairs as proposed | keeper; pairs Rex |

@@ -110,6 +110,8 @@ appear in the DLC as specific characters; they also might not.
 3. ~~Ghost ending vs plain abandonment for neutral.~~ Answered 2026-10-27: a ghost town (Rex).
 4. Which 3 residents sit in each quadrant (`TOWNS.md`, Alignment).
 5. The neutral radius, and how far each choice, quest answer and resident moves the town.
+6. How a "fully developed town" (Rex, 2026-10-27: reachable with a 3-member crew, one success per sector pair,
+   `UPGRADES.md` Sectors) relates to the quadrant endings and `end.perfect`.
 
 ## Endings
 
@@ -161,3 +163,4 @@ changes how routes are built.
 | 2026-10-27 | The pirate questline is chaotic good's plotline; the priest has no effect on it (via the story keeper) | Rex |
 | 2026-10-27 | Questing model: all four questlines available, conduct and actions carry alignment points, witnessing crew move, town moves through residents who stay; "one plotline per quadrant, who you take decides" superseded; open A and B recorded | Rex |
 | 2026-10-27 | Neutral is a ghost town: inhabitants replaced by ghostly visions or shades; the people may move on, and depending on your actions may appear in the DLC as specific characters, or not | Rex |
+| 2026-10-27 | Open 6 added: how the fully developed town (sectors) relates to the endings | keeper |

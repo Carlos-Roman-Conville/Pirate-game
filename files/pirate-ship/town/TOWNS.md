@@ -35,6 +35,14 @@ town, its name changes here but its id does not.
 - **(Rex)** Ports have a hierarchy: the starting port at the bottom, where low-life pirates go; the last level a
   true pirate port, rich from the calibre of pirates coming through (STORY.md, The world).
 
+- **(Rex, 2026-10-27)** With a 3-member crew, your actions should be able to lead to a **fully developed town**,
+  and every option should be achievable.
+- **(Rex, 2026-10-27)** Crew rotation is a progressive storyline: crew storylines develop or end, and you logically
+  fill the empty spot (not always forced).
+- **(Rex, 2026-10-27)** Some parts of town are equivalent and compete: **six facilities (sectors), two options each,
+  two characters per facility**; only one of each pair needs to succeed; each has two potential outcomes
+  (`UPGRADES.md`, Sectors). Balance side: [`../balance/BALANCE.md`](../balance/BALANCE.md) (the balance keeper's).
+
 ## Towns
 
 | Id | Town | Tier | Mark |
@@ -182,3 +190,4 @@ they are in town.
 | 2026-10-27 | Recruitment gate: INTP, ESTP, ESFP and ISFJ need higher reputation plus their completed sub quests; maybe a fifth; which reputation and level open (via the story keeper, e034754) | Rex |
 | 2026-10-27 | Food source (tentative): the farm and the cook's shop go to ghosts unless their owner is recruited; recruited, the business improves from bodies you supply, run by their child; both recruited → a secret duel (`UPGRADES.md`) | Rex |
 | 2026-10-27 | Temporary place `port.esfj_shop`: fund the ESFJ and he opens a rare-goods shop in town or a stall in the port (which: open); it fails, then he joins your crew (via the story keeper) | Rex |
+| 2026-10-27 | Six competing sectors, two options each, only one per pair needs to succeed; a 3-member crew can reach a fully developed town; crew rotation is a progressive storyline (via the balance keeper) | Rex |
