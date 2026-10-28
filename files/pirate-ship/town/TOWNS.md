@@ -203,3 +203,4 @@ they are in town.
 | 2026-10-28 | Commerce sector confirmed: ENFJ warehouse heir vs ESFJ merchant (via the balance keeper) | Rex |
 | 2026-10-28 | Tentative ("thinking"): an ENFP competes with the ESTJ for the town hall, an ISFP with the INFP for the brothel; both new characters (via the balance keeper) | Rex |
 | 2026-10-28 | The ghost rule covers every competing pair, not only food (`UPGRADES.md`, Sectors) | Rex |
+| 2026-10-28 | Withdrawn by Rex: the ghost rule for every pair (open again). Goal: a perfectly working town is reachable through a complicated set of choices; you can't recruit everyone | Rex |

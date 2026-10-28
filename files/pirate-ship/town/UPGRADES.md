@@ -108,11 +108,15 @@ for control of the town hall."
 - **(open)** What "succeed" means for a sector, as a slot state.
 - **(Rex, 2026-10-28)** `port.esfj_shop` still ends `failed`, but commerce isn't lost with it: the merchant still counts
   for commerce because he keeps selling rare goods from the ship.
-- **(Rex, 2026-10-28) The ghost rule applies to every pair:** "recruiting one character makes their rival's place
-  drift toward ghosts." It covers all eight sectors above. Each sector's places therefore need a `ghosted` state
-  like `port.farm` and `port.bakery` (not yet added to the other slots; their other states are still open).
-- **(open)** Whether the food rule's other rows also apply to every pair: neither recruited → both ghosted; both
-  recruited → both improve, plus a duel event (the balance keeper is asking Rex about the "both" row).
+- ~~**(Rex, 2026-10-28)** The ghost rule applies to every pair: "recruiting one character makes their rival's place
+  drift toward ghosts."~~ Withdrawn the same day. Rex: "Whether every rival becomes a ghost I'm still not actually
+  sure, I just said yes because I had a gut feeling."
+- **(open)** Whether the food-source ghost rule (food pair only, tentative) reaches any other pair, and with which
+  rows (one recruited, neither, both).
+- **(Rex, 2026-10-28) The goal:** "I'd like it so that there is a route toward a perfectly working town by the end
+  but that requires a complicated set of choices. Meaning you can't recruit everyone but who you choose to develop
+  can help you get there."
+- **(Rex, 2026-10-28)** He is open to adding a third or fourth person to any competition.
 - **(Rex, 2026-10-28)** The evil ENTJ priest competes with the ISTJ priest for the church. Per the balance keeper,
   the ENTJ's alignment chart reaches `oe` and `ce` and the ISTJ's `og` and `cg`, so the church sector can take all
   four quadrants. (This answers the earlier open question about the church's evil forms.)
@@ -266,3 +270,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-28 | `sec.commerce` confirmed (ENFJ warehouse heir vs ESFJ merchant); all eight sectors Rex's (via the balance keeper) | Rex |
 | 2026-10-28 | The ESFJ still counts for commerce after his shop fails (sells rare goods from the ship); tentative competitors: ISFP for the brothel, ENFP for the town hall (via the balance keeper) | Rex |
 | 2026-10-28 | The ghost rule applies to every sector pair: recruiting one drifts the rival's place toward ghosts (via the balance keeper) | Rex |
+| 2026-10-28 | Withdrawn: the ghost rule for every pair (back to open; food pair only, tentative). Rex's goal: a route to a perfectly working town through a complicated set of choices; open to a third or fourth person per competition (via the balance keeper) | Rex |
