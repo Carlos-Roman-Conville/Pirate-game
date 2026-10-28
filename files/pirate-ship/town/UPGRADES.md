@@ -44,6 +44,7 @@ choices change, and the town moves on two axes, good/evil and order/chaos. What 
 | Key | What | Values | Mark |
 |---|---|---|---|
 | `port.align` | the town's position | a point on good/evil × order/chaos; read as `og`, `cg`, `oe`, `ce`, or `n` within the neutral radius | Rex (axes, quadrants, neutral); ids and the point the keeper's; radius open |
+| `port.cash` | the town's money | amount; nearly out when the game starts (Rex, 2026-10-28: why the INFJ mechanic is leaving) | Rex (the town has cash running out); key and units the keeper's; how it moves: open |
 | `<slug>.align` | a resident's alignment | the same two axes; changed by your choices | Rex |
 | `<slug>.influence` | how much they sway the town | number | proposed (outside AI) |
 | `<slug>.presence` | whether they stay in town (taking them aboard removes their pull) | in town / aboard / gone | proposed (outside AI); Rex said only residents who stay count |
@@ -93,8 +94,8 @@ Retired id: `sec.faith` (church vs clinic, 2026-10-27), split on 2026-10-28; nev
   outclasses the ENTP's. He is milking the town for money and getting ready to leave soon, because the town is
   nearly out of cash; he's been invited to the next town over for someone's big project, and has stayed this long
   out of nostalgia.
-- **(Rex) Town event `event.infj_leaves`** (id the keeper's): the INFJ mechanic leaves for the next town. Open: when
-  it fires (a day, the town's money, a choice of yours), whether you can stop it or take him aboard first, and what
+- **(Rex) Town event `event.infj_leaves`** (id the keeper's): the INFJ mechanic leaves for the next town, because the
+  town is nearly out of cash (`port.cash`). Open: when it fires (a day, a `port.cash` level, a choice of yours), whether you can stop it or take him aboard first, and what
   `sec.invent` and the shipyard look like after he goes.
 - **(proposed, outside AI)** Both institutions in a sector can succeed with extra work (they compete for time,
   slots, resources); track sector completion, institution development and town alignment separately.
@@ -247,3 +248,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-28 | Sectors changed: `sec.faith` retired; `sec.heal` (clinic vs apothecary); `sec.invent` is the ENTP vs a new mechanic; `sec.church` alone for now; commerce and society still proposed (via the balance keeper) | Rex |
 | 2026-10-28 | `sec.church`: the evil ENTJ priest competes with the ISTJ priest (via the balance keeper) | Rex |
 | 2026-10-28 | `sec.invent`: the INFJ mechanic (a visitor) competes with the ENTP; his departure is `event.infj_leaves`; ENTJ linked to `entj-m` (via the balance keeper) | Rex |
+| 2026-10-28 | `port.cash` (the town's money) added; `event.infj_leaves` tied to it (via the story keeper) | keeper; Rex |

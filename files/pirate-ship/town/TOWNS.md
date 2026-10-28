@@ -48,6 +48,7 @@ town, its name changes here but its id does not.
 | Id | Town | Tier | Mark |
 |---|---|---|---|
 | `port` | The starting port (unnamed) | bottom | Rex (the port); id is the keeper's |
+| | The next town over | one up from the start (where exactly: open) | Rex (exists: someone there has a big project and invited the INFJ mechanic, 2026-10-28); name and everything else open |
 | | Ports between | | open |
 | | The true pirate port | top | Rex (that it exists); everything else open |
 
@@ -120,7 +121,7 @@ they are in town.
 | The INFP brothel worker (a femboy; pronouns open) | [`infp-m`](../story/characters/infp-m.md) | works at `port.tavern`; lives at `port.infp_house` | resident | open | quite popular; keeps clients who tried to leave as living wax statues in the basement; the rest is in their file | Rex |
 | The ESFJ merchant (a failed merchant) | [`esfj-m`](../story/characters/esfj-m.md) | `port.esfj_shop` once funded; before that: open | open | yes: after the shop fails, he joins your crew | the rest is in his file | Rex |
 | The evil ENTJ priest | [`entj-m`](../story/characters/entj-m.md) | competes with the ISTJ priest for `port.church`; where they live: open | open | open | the church's competitor; reaches orderly and chaotic evil | Rex (2026-10-28) |
-| The INFJ mechanic | (open; the story keeper's) | where he works or lives: open | visitor (a newcomer) | open | machinery outclasses the ENTP's; milking the town for money; will leave soon for a big project in the next town (`event.infj_leaves`); stayed out of nostalgia | Rex (2026-10-28) |
+| The INFJ mechanic | [`infj-m`](../story/characters/infj-m.md) | where he works or lives: open | visitor (a newcomer) | open | machinery outclasses the ENTP's; milking the town for money; will leave soon for a big project in the next town (`event.infj_leaves`); stayed out of nostalgia | Rex (2026-10-28) |
 | The bartender | | `port.tavern` | resident | little reason to leave | | Rex (§7b) |
 | The blacksmith | | open | resident, has lived there his whole life | no reason to leave; could be kidnapped later | whether he is the ENTP weapon smith or someone else: open | Rex (§7b) |
 | The secret cook (an ESTP who looks like your first mate) | [`estp-f`](../story/characters/estp-f.md): the old soldier (Rex, 2026-10-27) | open | open | yes | doesn't seem to know how to cook; the best cook there | Rex |
@@ -196,3 +197,4 @@ they are in town.
 | 2026-10-28 | Sector pairs changed: church and clinic separate; clinic vs apothecary for healing; ENTP vs a new mechanical character (to come); a church competitor may come (via the balance keeper) | Rex |
 | 2026-10-28 | New resident: the evil ENTJ priest, competing with the ISTJ priest for the church; home and recruitability open (via the balance keeper) | Rex |
 | 2026-10-28 | New visitor: the INFJ mechanic, the ENTP's competitor, about to leave for the next town (via the balance keeper) | Rex |
+| 2026-10-28 | "The next town over" exists (someone there invited the INFJ mechanic to a big project); INFJ linked to `infj-m` (via the story keeper) | Rex |
