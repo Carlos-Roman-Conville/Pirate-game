@@ -33,9 +33,9 @@ make new characters.
 | Food (farm vs butcher shop) | nothing | |
 | Hunting (outdoorswoman vs hunter) | **OG and OE** | the hunter's (ISTP) diagram lands on OG and OE |
 | Inventions (ENTP vs INFJ mechanic) | nothing; the ENTP alone reaches all four | the INFJ's chart has no constraint |
-| Commerce (ENFJ vs ESFJ) | nothing on paper; CG and CE vanish if the merchant's always-failing shop means he can't "succeed" | Rex says whether the merchant counts without his shop (P4) |
-| Brothel (INFP vs a competitor not made) | **all four**: the INFP's chart isn't made and there's no competitor yet | the INFP's chart and the competitor's together land on all four (either one alone can do it) |
-| Town hall (ESTJ vs a competitor not made) | nothing; the ESTJ reaches all four | the competitor has no constraint |
+| Commerce (ENFJ vs ESFJ) | nothing: the merchant still counts after his shop fails (Rex, 2026-10-28) | |
+| Brothel (INFP vs ISFP, tentative) | **all four**: neither chart is made | the INFP's and ISFP's charts together land on all four (either one alone can do it) |
+| Town hall (ESTJ vs ENFP, tentative) | nothing; the ESTJ reaches all four | the ENFP's chart has no constraint |
 
 ## Are the alignment maps on file?
 
@@ -92,8 +92,8 @@ everyone except the INTJ (OE) and the ENTP (CE).
 | Inventions | The ENTP vs the INFJ mechanic (a newcomer, below). The INTJ is no longer his competitor: their stores don't compete economically. They still don't respect each other, a rivalry that isn't direct | Rex (2026-10-28) |
 | Commerce | The ENFJ warehouse heir vs the ESFJ merchant | Rex (2026-10-28; first proposed by the outside AI) |
 | ~~Society / power~~ | ~~The ESTJ privateer vs the INFP courtesan~~ (outside AI's proposal). Replaced 2026-10-28 by the two rows below | superseded |
-| Brothel | Control of the brothel: the INFP vs a competitor (not made yet) | Rex (2026-10-28) |
-| Town hall | Control of the town hall: the ESTJ vs a competitor (not made yet). The town hall is a new place | Rex (2026-10-28) |
+| Brothel | Control of the brothel: the INFP vs an ISFP ("thinking": tentative) | Rex (2026-10-28) |
+| Town hall | Control of the town hall: the ESTJ vs an ENFP ("thinking": tentative). The town hall is a new place | Rex (2026-10-28) |
 | Both can succeed | Both institutions in a sector can succeed with extra work; pairs compete for time, crew slots and resources, not by excluding each other (consistent with Rex's rule that recruiting the farmer and the cook can trigger a secret duel) | proposed (outside AI) |
 | Three tracks | Track sector completion, institution development and town alignment separately | proposed (outside AI) |
 | Crew size | 3 slots to start (a 4th can sleep on deck, `../PIRATE.md` §4a) | Rex |
@@ -165,8 +165,8 @@ out.
 | hunting / gathering | ESTP / ISTP | Rex | **open only** (ISTP map?, ESTP start?) | yes: ESTP | **open only** (ISTP map?, ESTP start?) | yes: ESTP |
 | inventions | ENTP / INFJ mechanic | Rex | yes: ENTP | yes: ENTP | yes: ENTP | yes: ENTP |
 | commerce | ENFJ / ESFJ | Rex | yes: ENFJ, ESFJ | yes: ESFJ alone | yes: ENFJ, ESFJ | yes: ESFJ alone |
-| brothel | INFP (competitor not made) | Rex | **open only** (INFP map?) | **open only** (INFP map?) | **open only** (INFP map?) | **open only** (INFP map?) |
-| town hall | ESTJ (competitor not made) | Rex | yes: ESTJ | yes: ESTJ | yes: ESTJ | yes: ESTJ |
+| brothel | INFP / ISFP (tentative) | Rex | **open only** (INFP map?) | **open only** (INFP map?) | **open only** (INFP map?) | **open only** (INFP map?) |
+| town hall | ESTJ / ENFP (tentative) | Rex | yes: ESTJ | yes: ESTJ | yes: ESTJ | yes: ESTJ |
 
 ### Per ending
 
@@ -180,13 +180,13 @@ out.
 
 **Two things left, as of 2026-10-28 (the brothel split):**
 
-1. **The brothel**: no ending reaches it yet, because the INFP's chart isn't made and their competitor doesn't exist.
+1. **The brothel**: no ending reaches it yet, because neither the INFP's chart nor the ISFP's is made.
    Until it's filled, no ending has a full-town route (that's why every "routes now" is 0).
 2. **Hunting's orderly side**: orderly good and orderly evil wait on the ISTP's chart.
 
 Fill the brothel and chaotic good and chaotic evil are complete (every other sector already reaches them: for CG
 priest, doctor, cook, outdoorswoman, ENTP, merchant, ESTJ; for CE the same with the ENTJ priest instead of the
-ISTJ). Fill both and all four are. Commerce still carries P4.
+ISTJ). Fill both and all four are.
 
 Chance, for the record only (not a problem): OE has the most characters (7) and the INTJ falls into OE from every
 action, so OE is the likeliest ending a player drifts into. Rex hasn't asked for chance to be balanced.
@@ -234,7 +234,12 @@ Options:
 Rex: if you keep doing those actions, the lean eventually carries her all the way into that quadrant. Healing now
 covers all four. (It costs more time than an arrow: chance, not opportunity.)
 
-### P4. If "succeed" means the institution, commerce via the ESFJ can't succeed
+### P4. ~~If "succeed" means the institution, commerce via the ESFJ can't succeed~~ Closed 2026-10-28
+
+Rex: the merchant still counts for commerce after his shop fails, since he keeps selling rare goods from the ship.
+Commerce covers all four. Kept below for the record.
+
+#### As it stood
 
 Rex's rule: the ESFJ's shop always fails, and then he joins you. In the proposed commerce pair he is the only one
 who reaches CG and CE. If a sector needs an *institution* to succeed, CG and CE commerce have no route.
@@ -251,8 +256,8 @@ Not gaps; each is one character carrying a sector's whole route to an ending, so
   even with a chart his window may be short. Rex's rule: keep him at his explained departure and
   "his contribution to the town never happens". If that contribution is the inventions sector, every inventions
   route needs you to let him go at that one event, with his alignment frozen there. The new mechanic removes this.
-- Town hall: the ESTJ alone, until their competitor exists.
-- Commerce CG/CE: the ESFJ alone (and P4).
+- Town hall: the ESTJ alone, until the ENFP's chart exists.
+- Commerce CG/CE: the ESFJ alone.
 - Healing OG, CG, CE: the ISFJ alone (the INTJ is OE only).
 
 ### P6. Structural opens that change every count above
@@ -281,8 +286,8 @@ Not filled-in maps; Rex makes them.
 | ISTJ `istj-m` | made (Rex, 2026-10-28): OG, CG | OE, CE (Rex: can't be corrupted) | P1 |
 | ISTP `istp-f` | **OG and OE** | nothing | P2 |
 | INFJ mechanic `infj-m` (slug placeholder) | nothing | nothing | the ENTP reaches all four; any map helps P5 |
-| INFP `infp-m` + brothel competitor | **together, all four** (OG, CG, OE, CE); either can carry any of them | nothing | the brothel has no other character |
-| Town hall competitor (ESTJ's) | nothing | nothing | the ESTJ reaches all four |
+| INFP `infp-m` + ISFP (tentative) | **together, all four** (OG, CG, OE, CE); either can carry any of them | nothing | the brothel has no other character |
+| ENFP (tentative, the ESTJ's rival) | nothing | nothing | the ESTJ reaches all four |
 | ISFJ `isfj-f` | made (Rex, 2026-10-28); covers all four | | P3 closed |
 | Any new character | together with their sector partner, all four | | the strict reading |
 
@@ -294,7 +299,7 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
   alignments (whether the ISFJ's and ISTJ's highlighted CE squares are their starts).
 - Whether the priest's chart replaces his earlier OE and CE words (OE "does nothing"; CE "moves the town toward good").
 - Eight sectors now (church, healing, food, hunting, inventions, commerce, brothel, town hall).
-- The brothel's and the town hall's competitors; what the town hall is and who else is there.
+- The ENFP and ISFP: confirmed or not, gender, slug, charts; what the town hall is and who else is there.
 - Whether both institutions in a sector can succeed (proposed), and whether the food rule's "the other drifts
   toward ghosthood" applies to every pair.
 - What "succeed" means for a sector: the institution developed, the character's storyline done, or both.
@@ -314,3 +319,5 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | The INFJ mechanic: a newcomer who outclasses the ENTP without trying, milking the town before leaving for the next town's big project; the ENTP's competitor for inventions; chart not made | Rex |
 | 2026-10-28 | The proposed society pair is replaced by two of Rex's sectors: the brothel (INFP vs a competitor) and the town hall (ESTJ vs a competitor); the brothel is now the main gap | Rex |
 | 2026-10-28 | Commerce kept: the ENFJ warehouse heir vs the ESFJ merchant (now Rex's); P4 still open | Rex |
+| 2026-10-28 | The merchant still counts for commerce after his shop fails (he keeps selling rare goods from the ship); P4 closed | Rex |
+| 2026-10-28 | Rivals, tentative ("thinking"): the ESTJ vs an ENFP for the town hall, the INFP vs an ISFP for the brothel | Rex |

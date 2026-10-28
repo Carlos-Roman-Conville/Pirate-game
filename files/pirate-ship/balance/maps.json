@@ -163,6 +163,28 @@
       "start": null,
       "never": [],
       "mark": "Rex (character, 2026-10-28): the INFJ mechanic, a newcomer, the ENTP's competitor. Map not made"
+    },
+    "enfp": {
+      "map": {
+        "og": null,
+        "cg": null,
+        "oe": null,
+        "ce": null
+      },
+      "start": null,
+      "never": [],
+      "mark": "Rex (tentative, 2026-10-28: 'thinking'): the ESTJ's rival for the town hall. Gender and slug open; map not made"
+    },
+    "isfp": {
+      "map": {
+        "og": null,
+        "cg": null,
+        "oe": null,
+        "ce": null
+      },
+      "start": null,
+      "never": [],
+      "mark": "Rex (tentative, 2026-10-28: 'thinking'): the INFP's rival for the brothel. Gender and slug open; map not made"
     }
   },
   "sectors": [
@@ -222,19 +244,21 @@
     },
     {
       "id": "brothel",
-      "name": "brothel: INFP vs a competitor (not made)",
+      "name": "brothel: INFP vs ISFP (tentative)",
       "pair": [
-        "infp-m"
+        "infp-m",
+        "isfp"
       ],
-      "mark": "Rex (2026-10-28: control of the brothel; competitor open)"
+      "mark": "Rex (2026-10-28; the ISFP tentative)"
     },
     {
       "id": "town_hall",
-      "name": "town hall: ESTJ vs a competitor (not made)",
+      "name": "town hall: ESTJ vs ENFP (tentative)",
       "pair": [
-        "estj-f"
+        "estj-f",
+        "enfp"
       ],
-      "mark": "Rex (2026-10-28: control of the town hall; competitor open)"
+      "mark": "Rex (2026-10-28; the ENFP tentative)"
     }
   ]
 }

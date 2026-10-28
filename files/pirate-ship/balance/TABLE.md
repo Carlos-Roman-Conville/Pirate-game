@@ -18,6 +18,8 @@
 | `infp-m` | map? | map? | map? | map? | open: map not made |
 | `entj-priest` | start? | start? | yes | yes | Rex (new character and chart, 2026-10-28): the evil ENTJ priest, the church competitor. OG->CE, CG->OE, OE and CE dashed rings (lean). Slug is a placeholder until the story keeper assigns one; gender open. Highlighted CG square: start open |
 | `infj-m` | map? | map? | map? | map? | Rex (character, 2026-10-28): the INFJ mechanic, a newcomer, the ENTP's competitor. Map not made |
+| `enfp` | map? | map? | map? | map? | Rex (tentative, 2026-10-28: 'thinking'): the ESTJ's rival for the town hall. Gender and slug open; map not made |
+| `isfp` | map? | map? | map? | map? | Rex (tentative, 2026-10-28: 'thinking'): the INFP's rival for the brothel. Gender and slug open; map not made |
 
 ## Per sector (a sector covers an ending if either of its pair can reach it)
 
@@ -29,14 +31,14 @@
 | hunting / gathering | estp-f / istp-f | Rex | **open only: estp-f (start?), istp-f (map?)** | yes: estp-f (+ istp-f (map?)) | **open only: estp-f (start?), istp-f (map?)** | yes: estp-f (+ istp-f (map?)) |
 | inventions: ENTP vs INFJ mechanic | entp-m / infj-m | Rex (2026-10-28: the INTJ no longer competes; the INFJ mechanic does) | yes: entp-m (+ infj-m (map?)) | yes: entp-m (+ infj-m (map?)) | yes: entp-m (+ infj-m (map?)) | yes: entp-m (+ infj-m (map?)) |
 | commerce (warehouse vs merchant) | enfj-m / esfj-m | Rex (2026-10-28; first proposed by the outside AI) | yes: enfj-m, esfj-m | yes: esfj-m (+ enfj-m (start?)) | yes: enfj-m, esfj-m | yes: esfj-m (+ enfj-m (start?)) |
-| brothel: INFP vs a competitor (not made) | infp-m | Rex (2026-10-28: control of the brothel; competitor open) | **open only: infp-m (map?)** | **open only: infp-m (map?)** | **open only: infp-m (map?)** | **open only: infp-m (map?)** |
-| town hall: ESTJ vs a competitor (not made) | estj-f | Rex (2026-10-28: control of the town hall; competitor open) | yes: estj-f | yes: estj-f | yes: estj-f | yes: estj-f |
+| brothel: INFP vs ISFP (tentative) | infp-m / isfp | Rex (2026-10-28; the ISFP tentative) | **open only: infp-m (map?), isfp (map?)** | **open only: infp-m (map?), isfp (map?)** | **open only: infp-m (map?), isfp (map?)** | **open only: infp-m (map?), isfp (map?)** |
+| town hall: ESTJ vs ENFP (tentative) | estj-f / enfp | Rex (2026-10-28; the ENFP tentative) | yes: estj-f (+ enfp (map?)) | yes: estj-f (+ enfp (map?)) | yes: estj-f (+ enfp (map?)) | yes: estj-f (+ enfp (map?)) |
 
 ## Per ending
 
 | Ending | Characters who can reach it (yes) | Could, through something open | Sectors covered now | Sectors resting only on something open | Starved sectors | Routes now | Routes if open maps allow |
 |---|---|---|---|---|---|---|---|
-| Orderly good | entp-m, intp-m, esfj-m, enfj-m, estj-f, istj-m, isfj-f (7) | esfp-f (start?), estp-f (start?), istp-f (map?), infp-m (map?), entj-priest (start?), infj-m (map?) | 6/8 | hunting / gathering, brothel: INFP vs a competitor (not made) | - | 0 | 32 |
-| Chaotic good | entp-m, esfp-f, estp-f, esfj-m, estj-f, istj-m, isfj-f (7) | intp-m (start?), enfj-m (start?), istp-f (map?), infp-m (map?), entj-priest (start?), infj-m (map?) | 7/8 | brothel: INFP vs a competitor (not made) | - | 0 | 32 |
-| Orderly evil | entp-m, intj-f, intp-m, esfj-m, enfj-m, estj-f, isfj-f, entj-priest (8) | esfp-f (start?), estp-f (start?), istp-f (map?), infp-m (map?), infj-m (map?) | 6/8 | hunting / gathering, brothel: INFP vs a competitor (not made) | - | 0 | 32 |
-| Chaotic evil | entp-m, esfp-f, estp-f, esfj-m, estj-f, isfj-f, entj-priest (7) | intp-m (start?), enfj-m (start?), istp-f (map?), infp-m (map?), infj-m (map?) | 7/8 | brothel: INFP vs a competitor (not made) | - | 0 | 16 |
+| Orderly good | entp-m, intp-m, esfj-m, enfj-m, estj-f, istj-m, isfj-f (7) | esfp-f (start?), estp-f (start?), istp-f (map?), infp-m (map?), entj-priest (start?), infj-m (map?), enfp (map?), isfp (map?) | 6/8 | hunting / gathering, brothel: INFP vs ISFP (tentative) | - | 0 | 128 |
+| Chaotic good | entp-m, esfp-f, estp-f, esfj-m, estj-f, istj-m, isfj-f (7) | intp-m (start?), enfj-m (start?), istp-f (map?), infp-m (map?), entj-priest (start?), infj-m (map?), enfp (map?), isfp (map?) | 7/8 | brothel: INFP vs ISFP (tentative) | - | 0 | 128 |
+| Orderly evil | entp-m, intj-f, intp-m, esfj-m, enfj-m, estj-f, isfj-f, entj-priest (8) | esfp-f (start?), estp-f (start?), istp-f (map?), infp-m (map?), infj-m (map?), enfp (map?), isfp (map?) | 6/8 | hunting / gathering, brothel: INFP vs ISFP (tentative) | - | 0 | 128 |
+| Chaotic evil | entp-m, esfp-f, estp-f, esfj-m, estj-f, isfj-f, entj-priest (7) | intp-m (start?), enfj-m (start?), istp-f (map?), infp-m (map?), infj-m (map?), enfp (map?), isfp (map?) | 7/8 | brothel: INFP vs ISFP (tentative) | - | 0 | 64 |
