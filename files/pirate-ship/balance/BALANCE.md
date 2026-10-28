@@ -42,6 +42,17 @@ and the ESTP goes home undeveloped (her hunting slot is the ghost, C1 b). What t
 develop conditions (sub quests, the farm's bodies), which reputation and what level the gates need (open, town
 keeper), and whether "in your party" means the crew or the event party (placeholder: the crew).
 
+## The third answer: with the develop conditions (2026-10-28, later still)
+
+Rex chose to put the develop conditions the story gives into the simulator as data (`conditions.json`, `supply`
+command; ALIGNMENT.md §5; built by the belt, 2487). The only conditions the story gives so far: the farm and the
+butcher shop need the bodies supplied (Rex, 2026-10-28; how many and whether it must continue: open; placeholder
+once). Every other character's `develops_place` is open, so those slots still develop on the command alone; that's
+the open state, not a rule. Rerun: **every perfect town is still reachable.** OG 61 steps, CG 68, OE 49, CE 57; one
+more step each, the supply of bodies to whichever food place the route develops. The simulator now carries every
+rule Rex has given; what remains before the counts mean anything is Rex's tuning of the placeholder numbers
+(ALIGNMENT.md §8) and the open conditions as he writes them.
+
 ## Where it stands (2026-10-28)
 
 **Every ending has a route.** All 8 sectors reach all four quadrants, and every character's chart is made. Full-town
@@ -421,3 +432,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | Recruiting alone doesn't develop a place (Rex): the OG hospital route is open again; flagged closure withdrawn | Rex; keeper |
 | 2026-10-28 | The engine and simulator are built (belt tasks 2474–2485); all four perfect towns reachable under Rex's rules with placeholder numbers; reach.py, maps.json and TABLE.md retired | keeper |
 | 2026-10-28 | Second simulator answer with the joining gates as data: all four perfect towns still reachable (OG 60, CG 67, OE 48, CE 56); OG earns the doctor through the ESTP | keeper; Rex (gates in) |
+| 2026-10-28 | Third simulator answer with the develop conditions as data: all four perfect towns still reachable (OG 61, CG 68, OE 49, CE 57); only the food pair's bodies are known conditions | keeper; Rex (conditions in) |
