@@ -54,7 +54,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | With | Key | What it is | Mark |
 |---|---|---|---|
-| a rival for the town hall (to come) | `rel.rival` | competes with her for control of the town hall; who is open | Rex |
+| a rival for the town hall (to come) | `rel.rival` | competes with her for control of the town hall; Rex is thinking an ENFP (tentative; gender open) | Rex (ENFP tentative) |
 | the player | `rel.player` | tests you at the pub; sees some potential in you; joins to fix your boat and crew | Rex |
 
 ## Heart events
@@ -137,3 +137,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Now a woman: a pirate lady in her 40s, once part of a powerful crew, who lost everyone; file moved from `estj-m.md` to `estj-f.md` | Rex |
 | 2026-10-27 | Why she joins: after you prove your skill in a series of pub games, she sees potential and joins to fix your boat and crew | Rex |
 | 2026-10-28 | Competes with someone (to come) for control of the town hall | Rex |
+| 2026-10-28 | Her town hall rival: Rex is thinking an ENFP (tentative) | Rex |

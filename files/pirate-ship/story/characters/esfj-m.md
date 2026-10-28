@@ -176,6 +176,10 @@ Why his map moves the way it does.
   he intends.
 - **(open)** Whether Rex keeps "satire / caricature" as the framing.
 
+### Commerce (Rex, 2026-10-28)
+
+- **(Rex)** He still counts for commerce after his shop fails, since he keeps selling rare goods from the ship.
+
 ## Change log
 
 | Date | Change | By |
@@ -186,3 +190,4 @@ Why his map moves the way it does.
 | 2026-10-27 | Outside AI on the term: progressivism over liberalism; a caricature of an extreme anti-establishment progressive (proposed) | Rex (pasted) |
 | 2026-10-27 | Outside AI's follow-up on the term (progressivism vs liberalism; a satirical caricature), kept as proposals | Rex (pasted) |
 | 2026-10-27 | Why he joins: broke; you fund his rare-goods shop or stall, it fails, he can't repay, so he joins and still sells you rare goods for a price | Rex |
+| 2026-10-28 | Still counts for commerce after his shop fails: he keeps selling rare goods from the ship | Rex |

@@ -61,7 +61,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | With | Key | What it is | Mark |
 |---|---|---|---|
-| a rival for the brothel (to come) | `rel.rival` | competes with her for control of the brothel; who is open | Rex |
+| a rival for the brothel (to come) | `rel.rival` | competes with her for control of the brothel; Rex is thinking an ISFP (tentative; gender open) | Rex (ISFP tentative) |
 | the player | `rel.player` | a client: after about three paid visits she becomes enamoured with you | Rex (tentative) |
 | the ENTP mechanic (`entp-m`) | `rel.entp-m` | she uses a device he built to do the waxing | Rex (idea he likes) |
 | the INTJ apothecary (`intj-f`) | `rel.intj-f` | she uses potions the INTJ made to keep the wax statues alive | Rex (idea he likes) |
@@ -111,3 +111,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Pronouns: doesn't care, either he or she | Rex |
 | 2026-10-27 | Why she joins (tentative): you pay for her services; after about three visits she's enamoured with you | Rex |
 | 2026-10-28 | Competes with someone (to come) for control of the brothel | Rex |
+| 2026-10-28 | Her brothel rival: Rex is thinking an ISFP (tentative) | Rex |
