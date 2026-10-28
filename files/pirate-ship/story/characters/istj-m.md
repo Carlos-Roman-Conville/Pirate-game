@@ -35,7 +35,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Bio | `bio` | he despises where he lives | Rex |
+| Bio | `bio` | an old pirate who has given up his pirate life; he despises where he lives | Rex |
 | Likes (gifts, acts) | `likes` | | open |
 | Dislikes | `dislikes` | | open |
 | Schedule | `schedule` | their day: post, meals, the den, sleep | open |
@@ -49,7 +49,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | whether he is recruitable | open |
+| How recruited | `recruit` | recruitable: he offers to join. He sees you as floundering in skills and a bit pathetic, so he joins to help you out, to take measure of you, and hopefully to bring you to God, though he knows you likely won't come | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -58,7 +58,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | With | Key | What it is | Mark |
 |---|---|---|---|
-| the player | `rel.player` | | open |
+| the player | `rel.player` | sees you as floundering and a bit pathetic; wants to take your measure and bring you to God, expecting to fail | Rex |
 
 ## Heart events
 
@@ -106,3 +106,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Questline responses section added (Rex's rules recorded) | keeper |
 | 2026-10-27 | Chaotic good (the pirate questline): no effect | Rex |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
+| 2026-10-27 | An old pirate who gave up the life; joins of his own offer, to help you, take your measure and try to bring you to God | Rex |

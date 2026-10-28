@@ -11,7 +11,7 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 
 | Slot | Type (stack) | Gender | Name | Archetype / job (ROSTER draft) | What Rex has said | Status | File |
 |---|---|---|---|---|---|---|---|
-| istj-m | ISTJ (Si-Te-Fi-Ne) | man | (open) | head priest of the church (Rex) | follows the rules to the letter; despises the town; cruel by the rules | idea (Rex) | [istj-m.md](istj-m.md) |
+| istj-m | ISTJ (Si-Te-Fi-Ne) | man | (open) | head priest of the church (Rex) | an old pirate who gave up the life; follows the rules to the letter; despises the town; cruel by the rules; offers to join to help you and bring you to God | idea (Rex) | [istj-m.md](istj-m.md) |
 | istj-f | ISTJ (Si-Te-Fi-Ne) | woman | (open) | keeper of the articles / bosun | follows the rules to the letter | drafted | |
 | isfj-m | ISFJ (Si-Fe-Ti-Ne) | man | (open) | surgeon who won't let you go / surgeon | the medic who keeps you from leaving | drafted | |
 | isfj-f | ISFJ (Si-Fe-Ti-Ne) | woman | (open) | town doctor at the clinic (Rex) | born here, her father the town doctor; recruitable; secretly enjoys the pain healing causes | idea (Rex) | [isfj-f.md](isfj-f.md) |

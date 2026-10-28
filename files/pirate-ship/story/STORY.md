@@ -204,4 +204,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The ESFJ's alignment map: OG→CE, CG→OE, OE→OG, CE→CG; starting point not set | Rex |
 | 2026-10-27 | Why they join: the farmer and cook to see the world and get a break, as long as they can come back for bodies; the ESTP only after you help with things too hard for her alone; the ISFJ only with the ESTP in your party. The ISFJ–ESTP odd triangle: wait out the ISFJ's infatuation; she's romanceable after their breaking point | Rex |
 | 2026-10-27 | The ISTP: lost her husband to a massive shark she failed to kill; never forgave herself, so she hunts alone; broke and needing cash for alcohol, she joins easily (no work in town for months) | Rex |
+| 2026-10-27 | The ISTJ priest is an old pirate who gave up the life; he offers to join because you're floundering and a bit pathetic: to help, to take your measure, and to try to bring you to God | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |
