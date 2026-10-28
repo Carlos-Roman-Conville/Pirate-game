@@ -35,13 +35,21 @@ routes (one character per sector who can reach the ending):
 
 No gaps remain under the keeper's strict reading.
 
-**One rule could still break orderly good.** Healing's only OG character is the ISFJ (the INTJ reaches OE only),
-and the ISFJ only joins if the ESTP is in your party. So every OG town has the ESTP recruited, while its hunting
-must come from the ISTP (the ESTP can't reach OG). If Rex's food rule ("recruit one and the other's place drifts
-toward ghosthood") applies to every pair, recruiting the ESTP would ghost the ISTP's side, and OG would have no
-route. Orderly evil avoids it (the INTJ can take healing). Rex's answer to "does the ghost rule cover every pair, or
-only farm and butcher shop" settles it. What could still change this is in P6 (how crew alignment
-reaches the town, and the other structural opens) and the single carriers in P5.
+**The ghost rule covers every pair (Rex, 2026-10-28):** recruiting one character makes their rival's place drift
+toward ghosts. What that means for the routes:
+
+- Every full-town route has to **recruit each sector's winner** at some point (recruiting is what develops a place
+  and keeps its rival's from winning). That's 8 recruits through 3 slots, so rotation is required, as Rex designed.
+- **Orderly good now hangs on the "both" case.** Healing's only OG character is the ISFJ, and she only joins with
+  the ESTP in your party. The ESTP can't reach OG, so OG hunting must come from the ISTP, which means recruiting
+  *both* hunters. In the food pair, recruiting both makes both places improve (plus a secret duel; that row is
+  still tentative). If that "both" case also applies to every pair, OG keeps its routes: the ISTP's place improves
+  in OG, alongside an ESTP place that can only be chaotic. If recruiting both doesn't save the ISTP's side, **orderly
+  good has no route.**
+- The other three endings are unaffected: CG and CE use the ESTP for hunting anyway, and OE can take healing from
+  the INTJ instead of the ISFJ.
+- Also open: in a fully developed OG town, does a second, chaotic hunting place (the ESTP's) count against it? Rex
+  said only one of each pair needs to succeed, so the keeper reads it as fine, but that's Rex's call.
 
 ## Are the alignment maps on file?
 
@@ -235,7 +243,7 @@ Options:
   ESFP the chaos side).
 - (a) Set the ESTP's starting alignment on an orderly quadrant. Weak: it only holds if you never act in front of her.
 - (c) Add an orderly hunter or gatherer.
-- (e) Say the food rule's "the other drifts toward ghosthood" applies only to the food pair.
+- (e) Say the food rule's "the other drifts toward ghosthood" applies only to the food pair. (Rex, 2026-10-28: it applies to every pair; see Where it stands.)
 
 ### P3. ~~Healing reaches OG only by the ISFJ's lean~~ Closed 2026-10-28
 
@@ -307,8 +315,8 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 - Whether the priest's chart replaces his earlier OE and CE words (OE "does nothing"; CE "moves the town toward good").
 - Eight sectors now (church, healing, food, hunting, inventions, commerce, brothel, town hall).
 - The ENFP and ISFP: confirmed or not, gender, slug; whether the ENFP's highlighted CE square is a start; what the town hall is and who else is there.
-- Whether both institutions in a sector can succeed (proposed), and whether the food rule's "the other drifts
-  toward ghosthood" applies to every pair.
+- Whether both institutions in a sector can succeed (proposed). The ghost rule applies to every pair (Rex,
+  2026-10-28); whether its "recruit both, both improve" case does too decides orderly good.
 - What "succeed" means for a sector: the institution developed, the character's storyline done, or both.
 - P6.1 to P6.5.
 - Whether the keeper's strict reading (every sector in X for a full X town) is what Rex means, or the loose one.
@@ -333,3 +341,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | The INFP's chart (OG→CG, CG→OE, OE lean, CE→OE): brothel complete; chaotic good and chaotic evil complete; only hunting OG/OE (the ISTP) left | Rex |
 | 2026-10-28 | The INFJ mechanic's chart: every action leads to orderly good; inventions gains a second OG carrier; only the ISTP left | Rex |
 | 2026-10-28 | The ISTP's chart (OG→CG, CG→OE, OE→CE, CE→OG): hunting complete; every sector reaches every ending; routes OG 8, CG 4, OE 8, CE 4 | Rex |
+| 2026-10-28 | The ghost rule applies to every pair; orderly good now depends on whether recruiting both of a pair lets both improve (the ISFJ needs the ESTP; OG hunting needs the ISTP) | Rex; keeper (finding) |
