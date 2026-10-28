@@ -152,6 +152,17 @@
       "start": null,
       "never": [],
       "mark": "Rex (new character and chart, 2026-10-28): the evil ENTJ priest, the church competitor. OG->CE, CG->OE, OE and CE dashed rings (lean). Slug is a placeholder until the story keeper assigns one; gender open. Highlighted CG square: start open"
+    },
+    "infj-m": {
+      "map": {
+        "og": null,
+        "cg": null,
+        "oe": null,
+        "ce": null
+      },
+      "start": null,
+      "never": [],
+      "mark": "Rex (character, 2026-10-28): the INFJ mechanic, a newcomer, the ENTP's competitor. Map not made"
     }
   },
   "sectors": [
@@ -193,11 +204,12 @@
     },
     {
       "id": "inventions",
-      "name": "inventions (ENTP vs a new mechanic, not made)",
+      "name": "inventions: ENTP vs INFJ mechanic",
       "pair": [
-        "entp-m"
+        "entp-m",
+        "infj-m"
       ],
-      "mark": "Rex (2026-10-28: the INTJ is no longer the ENTP's competitor; Rex will make a new mechanical character)"
+      "mark": "Rex (2026-10-28: the INTJ no longer competes; the INFJ mechanic does)"
     },
     {
       "id": "commerce",

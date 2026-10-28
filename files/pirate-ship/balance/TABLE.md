@@ -17,6 +17,7 @@
 | `istp-f` | map? | map? | map? | map? | open: map not made |
 | `infp-m` | map? | map? | map? | map? | open: map not made |
 | `entj-priest` | start? | start? | yes | yes | Rex (new character and chart, 2026-10-28): the evil ENTJ priest, the church competitor. OG->CE, CG->OE, OE and CE dashed rings (lean). Slug is a placeholder until the story keeper assigns one; gender open. Highlighted CG square: start open |
+| `infj-m` | map? | map? | map? | map? | Rex (character, 2026-10-28): the INFJ mechanic, a newcomer, the ENTP's competitor. Map not made |
 
 ## Per sector (a sector covers an ending if either of its pair can reach it)
 
@@ -26,7 +27,7 @@
 | healing: clinic vs apothecary | isfj-f / intj-f | Rex (2026-10-28) | yes: isfj-f | yes: isfj-f | yes: isfj-f, intj-f | yes: isfj-f |
 | farm vs butcher shop | intp-m / esfp-f | Rex | yes: intp-m (+ esfp-f (start?)) | yes: esfp-f (+ intp-m (start?)) | yes: intp-m (+ esfp-f (start?)) | yes: esfp-f (+ intp-m (start?)) |
 | hunting / gathering | estp-f / istp-f | Rex | **open only: estp-f (start?), istp-f (map?)** | yes: estp-f (+ istp-f (map?)) | **open only: estp-f (start?), istp-f (map?)** | yes: estp-f (+ istp-f (map?)) |
-| inventions (ENTP vs a new mechanic, not made) | entp-m | Rex (2026-10-28: the INTJ is no longer the ENTP's competitor; Rex will make a new mechanical character) | yes: entp-m | yes: entp-m | yes: entp-m | yes: entp-m |
+| inventions: ENTP vs INFJ mechanic | entp-m / infj-m | Rex (2026-10-28: the INTJ no longer competes; the INFJ mechanic does) | yes: entp-m (+ infj-m (map?)) | yes: entp-m (+ infj-m (map?)) | yes: entp-m (+ infj-m (map?)) | yes: entp-m (+ infj-m (map?)) |
 | commerce (warehouse vs merchant) | enfj-m / esfj-m | proposed (outside AI) | yes: enfj-m, esfj-m | yes: esfj-m (+ enfj-m (start?)) | yes: enfj-m, esfj-m | yes: esfj-m (+ enfj-m (start?)) |
 | society / power (privateer vs courtesan) | estj-f / infp-m | proposed (outside AI; flagged weak by it) | yes: estj-f (+ infp-m (map?)) | yes: estj-f (+ infp-m (map?)) | yes: estj-f (+ infp-m (map?)) | yes: estj-f (+ infp-m (map?)) |
 
@@ -34,7 +35,7 @@
 
 | Ending | Characters who can reach it (yes) | Could, through something open | Sectors covered now | Sectors resting only on something open | Starved sectors | Routes now | Routes if open maps allow |
 |---|---|---|---|---|---|---|---|
-| Orderly good | entp-m, intp-m, esfj-m, enfj-m, estj-f, istj-m, isfj-f (7) | esfp-f (start?), estp-f (start?), istp-f (map?), infp-m (map?), entj-priest (start?) | 6/7 | hunting / gathering | - | 0 | 32 |
-| Chaotic good | entp-m, esfp-f, estp-f, esfj-m, estj-f, istj-m, isfj-f (7) | intp-m (start?), enfj-m (start?), istp-f (map?), infp-m (map?), entj-priest (start?) | 7/7 | - | - | 1 | 32 |
-| Orderly evil | entp-m, intj-f, intp-m, esfj-m, enfj-m, estj-f, isfj-f, entj-priest (8) | esfp-f (start?), estp-f (start?), istp-f (map?), infp-m (map?) | 6/7 | hunting / gathering | - | 0 | 32 |
-| Chaotic evil | entp-m, esfp-f, estp-f, esfj-m, estj-f, isfj-f, entj-priest (7) | intp-m (start?), enfj-m (start?), istp-f (map?), infp-m (map?) | 7/7 | - | - | 1 | 16 |
+| Orderly good | entp-m, intp-m, esfj-m, enfj-m, estj-f, istj-m, isfj-f (7) | esfp-f (start?), estp-f (start?), istp-f (map?), infp-m (map?), entj-priest (start?), infj-m (map?) | 6/7 | hunting / gathering | - | 0 | 64 |
+| Chaotic good | entp-m, esfp-f, estp-f, esfj-m, estj-f, istj-m, isfj-f (7) | intp-m (start?), enfj-m (start?), istp-f (map?), infp-m (map?), entj-priest (start?), infj-m (map?) | 7/7 | - | - | 1 | 64 |
+| Orderly evil | entp-m, intj-f, intp-m, esfj-m, enfj-m, estj-f, isfj-f, entj-priest (8) | esfp-f (start?), estp-f (start?), istp-f (map?), infp-m (map?), infj-m (map?) | 6/7 | hunting / gathering | - | 0 | 64 |
+| Chaotic evil | entp-m, esfp-f, estp-f, esfj-m, estj-f, isfj-f, entj-priest (7) | intp-m (start?), enfj-m (start?), istp-f (map?), infp-m (map?), infj-m (map?) | 7/7 | - | - | 1 | 32 |

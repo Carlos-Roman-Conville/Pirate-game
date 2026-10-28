@@ -32,7 +32,7 @@ make new characters.
 | Healing (clinic vs apothecary) | nothing (OG by the doctor's lean, which Rex ruled arrives, 2026-10-28) | |
 | Food (farm vs butcher shop) | nothing | |
 | Hunting (outdoorswoman vs hunter) | **OG and OE** | the hunter's (ISTP) diagram lands on OG and OE |
-| Inventions (ENTP vs a new mechanic) | nothing; the ENTP alone reaches all four | the new mechanic has no constraint |
+| Inventions (ENTP vs INFJ mechanic) | nothing; the ENTP alone reaches all four | the INFJ's chart has no constraint |
 | Commerce (proposed pair) | nothing on paper; CG and CE vanish if the merchant's always-failing shop means he can't "succeed" | Rex confirms the pair, and whether the merchant counts without his shop |
 | Society (proposed pair) | nothing; the privateer reaches all four | Rex confirms the pair |
 
@@ -88,7 +88,7 @@ everyone except the INTJ (OE) and the ENTP (CE).
 | Healing | The ISFJ's clinic vs the INTJ's apothecary compete for the town's healing | Rex (2026-10-28) |
 | Food | The INTP farmer's farm vs the ESFP cook's butcher shop | Rex |
 | Hunting / gathering | The ESTP vs the ISTP | Rex |
-| Inventions | The ENTP vs a new mechanical character Rex will make. The INTJ is no longer his competitor: their stores don't compete economically. They still don't respect each other, a rivalry that isn't direct | Rex (2026-10-28) |
+| Inventions | The ENTP vs the INFJ mechanic (a newcomer, below). The INTJ is no longer his competitor: their stores don't compete economically. They still don't respect each other, a rivalry that isn't direct | Rex (2026-10-28) |
 | Commerce | The ENFJ warehouse heir vs the ESFJ merchant | proposed (outside AI) |
 | Society / power | The ESTJ privateer vs the INFP courtesan; the outside AI flagged it weak (no shared town function) | proposed (outside AI) |
 | Both can succeed | Both institutions in a sector can succeed with extra work; pairs compete for time, crew slots and resources, not by excluding each other (consistent with Rex's rule that recruiting the farmer and the cook can trigger a secret duel) | proposed (outside AI) |
@@ -96,6 +96,21 @@ everyone except the INTJ (OE) and the ENTP (CE).
 | Crew size | 3 slots to start (a 4th can sleep on deck, `../PIRATE.md` §4a) | Rex |
 | Crew rotation | A progressive storyline: crew storylines develop or end, and you logically fill the empty spot with someone else; not always forced, but it should feel logical | Rex (2026-10-27) |
 | Rex's levers | He is willing to add characters per location, or increase the crew size, if balance needs it | Rex |
+
+### The INFJ mechanic (Rex, 2026-10-28)
+
+- **(Rex)** A newcomer to town. His inventions blow the ENTP's out of the water: he clearly dominates without trying
+  hard. He's really trying to get in so he can be lazy, milk everyone for their money, and leave when they can't
+  pay him any more.
+- **(Rex)** He's getting ready to leave soon: the town is nearly out of cash. He has only stayed so long out of
+  nostalgia, and someone has invited him to the next town over to be part of their big project.
+- **(Rex)** The competition: he has done this his whole life; the ENTP started 2 years ago. The INFJ makes more
+  consistently effective machinery; the ENTP's weapons have more devastating potential, if he can work out the bugs.
+- **(open)** His alignment chart; whether he can be kept in town or recruited before he leaves, and what happens to
+  the inventions sector if he leaves; whether he's one of the recruitables (the cast was 12, 6 men and 6 women).
+- Balance note (keeper): no gap either way, because the ENTP reaches all four. His leaving soon only matters if his
+  chart is meant to give inventions a second route to an ending; then the player needs a realistic window to reach
+  him before he goes.
 
 That makes **seven** sectors as of 2026-10-28 (five Rex's, two proposed), not the six of 2026-10-27, because the
 church left the clinic's pair. Whether Rex still wants six: open.
@@ -135,6 +150,7 @@ out.
 | evil ENTJ priest | start? | start? | yes (lean) | yes (lean) |
 | `istp-f` | map? | map? | map? | map? |
 | `infp-m` | map? | map? | map? | map? |
+| `infj-m` | map? | map? | map? | map? |
 
 ### Per sector
 
@@ -144,7 +160,7 @@ out.
 | healing | ISFJ / INTJ | Rex | yes: ISFJ (lean) | yes: ISFJ | yes: ISFJ, INTJ | yes: ISFJ |
 | food | INTP / ESFP | Rex | yes: INTP | yes: ESFP | yes: INTP | yes: ESFP |
 | hunting / gathering | ESTP / ISTP | Rex | **open only** (ISTP map?, ESTP start?) | yes: ESTP | **open only** (ISTP map?, ESTP start?) | yes: ESTP |
-| inventions | ENTP (new mechanic to come) | Rex | yes: ENTP | yes: ENTP | yes: ENTP | yes: ENTP |
+| inventions | ENTP / INFJ mechanic | Rex | yes: ENTP | yes: ENTP | yes: ENTP | yes: ENTP |
 | commerce | ENFJ / ESFJ | proposed | yes: ENFJ, ESFJ | yes: ESFJ alone | yes: ENFJ, ESFJ | yes: ESFJ alone |
 | society / power | ESTJ / INFP | proposed | yes: ESTJ (INFP map?) | yes: ESTJ (INFP map?) | yes: ESTJ (INFP map?) | yes: ESTJ (INFP map?) |
 
@@ -152,10 +168,10 @@ out.
 
 | Ending | Characters who can reach it now | Sectors covered now | Resting only on something open | Starved | Full-town routes now | If every open item lands well |
 |---|---|---|---|---|---|---|
-| Orderly good | ENTP, INTP, ESFJ, ENFJ, ESTJ, ISTJ, ISFJ (7) | 6 / 7 | hunting | none | **0** | 32 |
-| Chaotic good | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISTJ, ISFJ (7) | **7 / 7** | none | none | **1** | 32 |
-| Orderly evil | ENTP, INTJ, INTP, ESFJ, ENFJ, ESTJ, ISFJ, ENTJ priest (8) | 6 / 7 | hunting | none | **0** | 32 |
-| Chaotic evil | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISFJ, ENTJ priest (7) | **7 / 7** | none | none | **1** | 16 |
+| Orderly good | ENTP, INTP, ESFJ, ENFJ, ESTJ, ISTJ, ISFJ (7) | 6 / 7 | hunting | none | **0** | 64 |
+| Chaotic good | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISTJ, ISFJ (7) | **7 / 7** | none | none | **1** | 64 |
+| Orderly evil | ENTP, INTJ, INTP, ESFJ, ENFJ, ESTJ, ISFJ, ENTJ priest (8) | 6 / 7 | hunting | none | **0** | 64 |
+| Chaotic evil | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISFJ, ENTJ priest (7) | **7 / 7** | none | none | **1** | 32 |
 | Neutral | not a quadrant: reached by staying near the centre; the INTJ's "shown she's wrong" also lands her there | n/a | | | | |
 
 **Chaotic good is the first ending with a fully decided route** (2026-10-28): priest, doctor, cook, outdoorswoman,
@@ -226,7 +242,8 @@ carry the chaotic or evil side if its form follows the town.
 
 Not gaps; each is one character carrying a sector's whole route to an ending, so losing them loses the ending.
 
-- Inventions: the ENTP alone, until the new mechanic exists. Rex's rule: keep him at his explained departure and
+- Inventions: the ENTP alone, until the INFJ mechanic's chart exists. The INFJ is about to leave town (below), so
+  even with a chart his window may be short. Rex's rule: keep him at his explained departure and
   "his contribution to the town never happens". If that contribution is the inventions sector, every inventions
   route needs you to let him go at that one event, with his alignment frozen there. The new mechanic removes this.
 - Society: the ESTJ alone (the INFP's map is blank).
@@ -258,7 +275,7 @@ Not filled-in maps; Rex makes them.
 | Evil ENTJ priest | made (Rex, 2026-10-28): OE, CE | | P1 closed |
 | ISTJ `istj-m` | made (Rex, 2026-10-28): OG, CG | OE, CE (Rex: can't be corrupted) | P1 |
 | ISTP `istp-f` | **OG and OE** | nothing | P2 |
-| New mechanic (ENTP's competitor) | nothing | nothing | the ENTP reaches all four; any map helps P5 |
+| INFJ mechanic `infj-m` (slug placeholder) | nothing | nothing | the ENTP reaches all four; any map helps P5 |
 | INFP `infp-m` | nothing, while the ESTJ is their pair | nothing | P5; recompute if Rex re-pairs society |
 | ISFJ `isfj-f` | made (Rex, 2026-10-28); covers all four | | P3 closed |
 | Any new character | together with their sector partner, all four | | the strict reading |
@@ -267,7 +284,7 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 
 ## 5. What's open
 
-- The ISTP and INFP maps; the new mechanic; the evil ENTJ priest's slug, gender, starting alignment, and whether they're recruitable (the cast was 12 recruitables, 6 men and 6 women); 10 starting
+- The ISTP, INFP and INFJ mechanic maps; the evil ENTJ priest's slug, gender, starting alignment, and whether they're recruitable (the cast was 12 recruitables, 6 men and 6 women); 10 starting
   alignments (whether the ISFJ's and ISTJ's highlighted CE squares are their starts).
 - Whether the priest's chart replaces his earlier OE and CE words (OE "does nothing"; CE "moves the town toward good").
 - Seven sectors now, or does Rex want six; whether the proposed commerce and society pairs stand.
@@ -287,3 +304,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | A dashed ring's lean, kept up, carries the character all the way into that quadrant; healing now covers all four (P3 closed) | Rex |
 | 2026-10-28 | The ISTJ priest's chart: OG and CG rings, OE→CG, CE→OG; the church covers OG and CG; chaotic good has its first decided route; conflict with his earlier OE/CE words left open | Rex |
 | 2026-10-28 | New character, the evil ENTJ priest (OG→CE, CG→OE, OE and CE rings), competes with the ISTJ for the church; church covers all four (P1 closed); chaotic evil has its first decided route; only gap: hunting OG/OE (the ISTP) | Rex |
+| 2026-10-28 | The INFJ mechanic: a newcomer who outclasses the ENTP without trying, milking the town before leaving for the next town's big project; the ENTP's competitor for inventions; chart not made | Rex |
