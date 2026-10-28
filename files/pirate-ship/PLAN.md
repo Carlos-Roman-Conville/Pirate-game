@@ -56,6 +56,26 @@ reachable" (Rex: "design this as the actual backend so we don't program the syst
 | 19 | Develop conditions as data: `conditions.json` (farm and butcher shop need `supply bodies`; others open), `conditions.ts`, `supply` command, `develop` refuses an unmet slot; the sim supplies before developing; rerun | codex | 18 | vitest: one test per condition rule; the four verdicts reprinted | done (2487) |
 | **Gate** | Rex reads the simulator's routes and tunes the placeholders in `thresholds.json`; the balance keeper reruns the sims | | | | gate |
 
+## Phase 3: Locales, influence and the three neutrals (scope recorded 2026-10-28; not planned; nothing built)
+
+Rex's new scope (his ChatGPT conversation, 2026-10-28; recorded in `balance/ALIGNMENT.md` §10 and the issues in
+`balance/BALANCE.md` C5): ~108 characters, Suikoden-style, 16 novice slots first; locales built one at a time
+(the farm first) and interconnected as he goes; characters carry points home; combinations of characters kill,
+expel or ghost others; two more neutral endings (ghost, living). Rex: "Don't alter anything just yet." The units
+below are the shape of the work, not tasks; each needs Rex's decision on its rule before it's queued, and every
+rule stays data.
+
+| # | Unit (outline) | Model | Needs | Done when | Status |
+|---|---|---|---|---|---|
+| 20 | Data shape: `institutions.json` sectors → locales with N characters; `relationships.json` (locale ↔ locale, on which event, what effect); the ghost rule's new home (per relationship or per sector, Rex) | composer | Rex's locale list (the farm first) | shape test; the 16 current owners still load | scope |
+| 21 | Character fate in state (`alive | dead | ghost`), distinct from institutional ghosts; a `die`/`ghost` outcome as a sleep transformation | codex | Rex: when a death happens | one test per rule | scope |
+| 22 | Influence carried home: deposit-once or daily-influence model (Rex decides), several characters per locale resolved by a rule, `influence` per character if Rex keeps it separate from alignment | codex | Rex's model | the §5 tests rewritten to the model; routes still replay | scope |
+| 23 | Combos: support/relationship links and the outcomes they trigger (expel, kill, ghost), as data per locale | codex | 21, 22, Rex's first combo (the paladin) | one test per outcome | scope |
+| 24 | Endings: the neutral region split into ordinary / ghost / living by fates, with a priority order and the `relevantCharacters` rule; `emptyTown` key explicit | codex | 21 | one test per ending | scope |
+| 25 | Simulator: searches for ghost neutral and living neutral; sequence rules ("X before Y") as data | codex | 23, 24 | four perfect verdicts plus two neutral verdicts printed | scope |
+| 26 | The 16 novice slots: starts and charts only for those who move the town (Rex draws the charts); crew-only novices stay out of the alignment data | composer | Rex's charts | shape test | scope |
+| **Gate** | Rex decides the rules above (BALANCE.md C5), locale by locale, starting with the farm; the balance keeper then writes the tasks | | | | gate |
+
 ## Later phases (not planned yet)
 
 Selling fish and money, the gambling NPC, saves, the bigger boat and the first recruit (PIRATE.md §11 step 0).

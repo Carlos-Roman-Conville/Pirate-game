@@ -256,6 +256,67 @@ web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fi
 - `balance/reach.py` keeps answering the quick opportunity question from `maps.json` only until `charts.ts`
   exists; then both are retired (the build rule: nothing twice).
 
+## 10. Scope change (Rex, 2026-10-28, from his ChatGPT conversation; recorded, nothing built)
+
+Rex: "Don't alter anything just yet; change the plan and scope docs so you can later reference this." So this
+section records the new scope and what it will change in the engine when Rex says go. Marks: **(Rex)** his own
+words; **(proposed, outside AI)** ChatGPT's suggestions he pasted, adopted only when he says so.
+
+### What Rex wants (Rex)
+
+- An RPG with Stardew minigame elements and no Stardew combat. One dock as the base you upgrade; journeys to other
+  regions, where you find recruits (Digimon World style); other docks are a later DLC.
+- **Suikoden-style recruiting:** ~108 characters (like the 108 Stars), divided unevenly among the sectors; the
+  sectors can be expanded when it's logical. 16 new character slots first, for novice-level recruits.
+- **Morality-driven base:** recruit a bunch of holy people while upgrading the church chthonic and some leave, some
+  get sacrificed; Dark Souls-style, you can't save everyone, and trying has effects.
+- **Point flow:** actions, dialogue and quest choices change the crew's points; when you return home those affect
+  their locales; the allies and recruits you bring back carry points too; "characters carry these points" and the
+  next day the upgrades show (the overnight rule of §5 stands). Certain combinations of characters produce specific
+  outcomes: a paladin with enough supporters kills an evil character; a monstrosity pretending to be good makes the
+  good doctors disappear.
+- **Character ghosts:** each person who dies this way becomes a ghost, preserving who they are and their placement
+  and giving the town dread. A full-ghost ending could be a goal.
+- **Two more neutral endings:** ordinary neutral (you didn't pick well: some dead, some alive); ghost neutral
+  (everyone died); living neutral (a specific set of choices let every character exist in the town alive);
+  "certain outcomes will happen unless you do X first or Y, Z first" (sequence matters).
+- **Build by zooming in:** one locale at a time, built up fully, then interconnected as he goes, not a grand web at
+  once. Maybe the farmer and the butcher aren't in competition but two locales with history whose choices affect
+  each other (that would make 9 locales). Start with the farm.
+
+### What ChatGPT proposed (proposed, outside AI; not adopted until Rex says)
+
+- Locale (a place that develops) vs sector (a function) vs relationship (how two places influence each other);
+  locales develop independently, with explicit relationships added only when a quest, resource or history
+  justifies one.
+- Characters carry **influence** home, distinct from their alignment (a strongly OG nobody vs a respected priest);
+  competing influences on one locale resolve by strength, relationships and support; outcomes include compromise,
+  expulsion, death, ghosthood. **The one rule to decide first:** deposit once on return, or keep influencing every
+  day in residence.
+- Two ghost kinds kept distinct: institutional (neglect) and character (killed in town conflicts).
+- Instability derived from relationships and unresolved conflicts, no separate stat; the perfect-town rule kept.
+- Ending priority once the town is neutral: everyone dead → ghost neutral; everyone alive and present → living
+  neutral; else ordinary neutral. An empty town reads as neutral explicitly. Living neutral should not be reachable
+  by keeping everyone's values low.
+- Three kinds of contribution per character: crew (skills), resident (services, upgrades), influence
+  (institutions and relationships); a deep core cast, a middle tier with short arcs, utility recruits.
+- Per-locale design sheet: purpose, characters, recruitment, skills, alignment forms, development, failure, secrets.
+
+### What it changes in the engine (keeper's reading; none of it built; each item is a Rex decision first)
+
+| Area | Today | Needed for the new scope |
+|---|---|---|
+| `institutions.json` | 8 sectors × 2 slots; the pair is implicit; the ghost rule is per pair | locales with any number of characters; `relationships` as data (which locale affects which, on what event); the ghost rule becomes a relationship rule or stays per sector: open |
+| Character state | `location: town | aboard | departed`, `pos`, `unlocked` | a fate (`alive | dead | ghost`), optional `influence`, support/relationship links |
+| Transformation (§5) | a slot adopts its owner's position at sleep | a deposit or daily-influence model (open); several characters per locale resolved by a rule (open); conflict outcomes at sleep: depart, die, ghost |
+| `town.ts` | mean of developed slots; empty town → (0, 0), implicit | make the empty-town reading an explicit key (`emptyTown: neutral`) if ghost neutral depends on it |
+| `endings.ts` | 9 regions, perfect flag | neutral splits three ways by character fates, with a priority order and a `relevantCharacters` rule (recruited only? everyone?) |
+| Data per character | 16 charts, 16 starts | every character who moves the town needs a chart and a start (Rex's creative work); novices who only crew need none |
+| Sequence rules | the command log already carries order | "X before Y" outcomes as data (per locale), so the sim can test living neutral |
+| Simulator | perfect-town search per quadrant | searches for ghost neutral and living neutral; relationship and fate rules as data |
+
+The square, the charts, the player's movement, the overnight rule, the mean and the perfect check all stay.
+
 ## Change log
 
 | Date | Change | By |
@@ -271,3 +332,4 @@ web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fi
 | 2026-10-28 | Build with the placeholder numbers; Rex tunes after the simulator runs | Rex |
 | 2026-10-28 | Joining gates into the simulator as data (`gates.json`, `unlock` command): Rex's facts from the story and town keepers; the representation proposed | Rex (decision); keeper |
 | 2026-10-28 | Develop conditions into the simulator as data (`conditions.json`, `supply` command): the food pair's bodies from the story; the rest open | Rex (decision); keeper |
+| 2026-10-28 | §10: the scope change (108 characters, locales and relationships, influence carried home, character ghosts, three neutral endings, build locale by locale) recorded with the engine changes it implies; nothing built | Rex (scope); keeper (reading) |

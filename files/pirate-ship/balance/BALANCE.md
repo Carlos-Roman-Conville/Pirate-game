@@ -136,6 +136,52 @@ A perfect town recruits each sector's winner at least once (if recruiting is wha
 rule): 8 recruits, plus the ESTP as the ISFJ's key on doctor routes, through 3 slots and rotation. Open: is there a
 limit on total recruits (time, storylines ending, a cap), and does it leave room for 8 or 9?
 
+### C5. The scope change (Rex, 2026-10-28): what has to be decided before any of it is coded
+
+Rex's new scope is recorded in `ALIGNMENT.md` §10 and PLAN Phase 3. These are the places where it collides with
+rules already decided, or where the engine can't move without a rule. Each is Rex's call; none is urgent while
+nothing is built. The current simulator verdicts (OG 61, CG 68, OE 49, CE 57) stand until these change the model.
+
+1. **Pairs vs locales (collides with C1 b).** The ghost rule, "one recruited → the rival's place ghosts", assumes
+   pairs. If the farm and the butcher shop become two locales with history that develop independently **(Rex,
+   considering)**, that sector no longer has a rival to ghost; and the question follows for the other seven. If
+   rivals stop ghosting each other, the scarcity that makes routes earned ("you can't recruit everyone") has to come
+   from somewhere else: crew slots, departures, deaths. Options: (a) keep C1 b for every sector except food; (b)
+   the ghost rule becomes a per-relationship rule, written locale by locale; (c) drop rival-ghosting; ghosts come
+   only from neglect and from deaths.
+2. **Points carried home vs the slot adopting its owner's position.** Today a developed place simply takes its
+   owner's alignment at sleep. "Characters carry points" could mean the same thing, or a deposit that accumulates
+   (several carriers add up), or a daily influence while they live there. ChatGPT's "decide this first" is right:
+   the engine's §5 is rewritten differently for each. Options: (a) adopt (today); (b) deposit once on return, summed
+   over everyone returning to that locale; (c) daily influence from residents while they stay.
+3. **Influence as its own number.** "A strongly OG nobody vs a respected priest" needs a per-character influence
+   with a source (STATS.md proposed `<slug>.influence`; Rex chose a plain mean for the town on 2026-10-28). If it
+   returns, it's a new quantity every one of 108 characters carries. Options: (a) none, alignment only; (b) a fixed
+   number per character in data; (c) derived from reputation/hearts (the story and stats keepers' systems).
+4. **Death doesn't exist in the engine.** `location` is town, aboard or departed. Character ghosts need a fate,
+   a trigger (which combinations, at which sleep), and an answer to "do ghosts still influence the town". The
+   paladin combo needs support data (who backs whom, how many is enough). All story data; the engine only needs the
+   verbs (`die`, `ghost`) and the resolution rule.
+5. **The three neutrals need two things the square can't give:** who counts ("every relevant character": the
+   recruited ones, or all 108, or the town's residents), and the fates. Living neutral also needs the town's mean
+   inside the neutral band with everyone alive: developed places in pure quadrants have to cancel (OG against CE,
+   CG against OE); the simulator can test it once the fate rules exist. ChatGPT's "not reachable by keeping values
+   low" is a rule only if Rex states it.
+6. **An empty town reads (0, 0) today, implicitly** (`town.ts`). If ghost neutral depends on it, it should be an
+   explicit key so no one later "fixes" it.
+7. **Perfect towns scale with locales.** Under "every developed place counts", a 108-character town is perfect only
+   if every developed locale shares one quadrant; the more locales, the harder. That matches earned routes, but the
+   count is a tuning lever Rex should set knowingly (perhaps a minimum number developed, perhaps only locales).
+8. **The 16 novice slots.** Only characters who move the town need a start and a chart, and charts are Rex's
+   drawing. If novices carry points home too, that's 16 more charts before the sim can include them; if they're
+   crew only, they stay out of the alignment data and nothing changes.
+9. **Sequence rules are data, and they're the living-neutral puzzle.** The command log already preserves order, so
+   "X before Y" costs nothing in the engine; but each such rule is story the keepers haven't written, and the sim
+   can only test living neutral against the rules that exist.
+10. **Other keepers' files are touched by this and I haven't told them** (Rex: alter nothing yet): `town/TOWNS.md`
+    and `UPGRADES.md` (pairs, slots), `crew/ROSTER.md` (32 → 108), `town/ENDINGS.md` (three neutrals), `STATS.md`
+    (influence). Say when to send it.
+
 ## Are the alignment maps on file?
 
 **Yes.** Rex's maps are recorded by the story keeper as Rex (each character file's "Inner rules" section and the
@@ -433,3 +479,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | The engine and simulator are built (belt tasks 2474–2485); all four perfect towns reachable under Rex's rules with placeholder numbers; reach.py, maps.json and TABLE.md retired | keeper |
 | 2026-10-28 | Second simulator answer with the joining gates as data: all four perfect towns still reachable (OG 60, CG 67, OE 48, CE 56); OG earns the doctor through the ESTP | keeper; Rex (gates in) |
 | 2026-10-28 | Third simulator answer with the develop conditions as data: all four perfect towns still reachable (OG 61, CG 68, OE 49, CE 57); only the food pair's bodies are known conditions | keeper; Rex (conditions in) |
+| 2026-10-28 | C5: the scope change's collisions and open rules (pairs vs locales, points vs adopt, influence, death, three neutrals, empty town, scale, novices, sequence, other keepers) | keeper |
