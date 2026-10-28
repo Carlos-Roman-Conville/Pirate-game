@@ -202,3 +202,4 @@ they are in town.
 | 2026-10-28 | New place: the town hall (`port.townhall`); sectors for control of the brothel (INFP vs ?) and the town hall (ESTJ vs ?), competitors not made yet (via the balance keeper) | Rex |
 | 2026-10-28 | Commerce sector confirmed: ENFJ warehouse heir vs ESFJ merchant (via the balance keeper) | Rex |
 | 2026-10-28 | Tentative ("thinking"): an ENFP competes with the ESTJ for the town hall, an ISFP with the INFP for the brothel; both new characters (via the balance keeper) | Rex |
+| 2026-10-28 | The ghost rule covers every competing pair, not only food (`UPGRADES.md`, Sectors) | Rex |

@@ -108,7 +108,11 @@ for control of the town hall."
 - **(open)** What "succeed" means for a sector, as a slot state.
 - **(Rex, 2026-10-28)** `port.esfj_shop` still ends `failed`, but commerce isn't lost with it: the merchant still counts
   for commerce because he keeps selling rare goods from the ship.
-- **(open)** Whether the food rule's "the other drifts toward ghosthood" applies to every pair (balance keeper's P1).
+- **(Rex, 2026-10-28) The ghost rule applies to every pair:** "recruiting one character makes their rival's place
+  drift toward ghosts." It covers all eight sectors above. Each sector's places therefore need a `ghosted` state
+  like `port.farm` and `port.bakery` (not yet added to the other slots; their other states are still open).
+- **(open)** Whether the food rule's other rows also apply to every pair: neither recruited → both ghosted; both
+  recruited → both improve, plus a duel event (the balance keeper is asking Rex about the "both" row).
 - **(Rex, 2026-10-28)** The evil ENTJ priest competes with the ISTJ priest for the church. Per the balance keeper,
   the ENTJ's alignment chart reaches `oe` and `ce` and the ISTJ's `og` and `cg`, so the church sector can take all
   four quadrants. (This answers the earlier open question about the church's evil forms.)
@@ -261,3 +265,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-28 | `sec.brothel` (INFP vs a competitor to come) and `sec.townhall` (ESTJ vs a competitor to come) replace the proposed `sec.society`; reserved `port.townhall` (via the balance keeper) | Rex |
 | 2026-10-28 | `sec.commerce` confirmed (ENFJ warehouse heir vs ESFJ merchant); all eight sectors Rex's (via the balance keeper) | Rex |
 | 2026-10-28 | The ESFJ still counts for commerce after his shop fails (sells rare goods from the ship); tentative competitors: ISFP for the brothel, ENFP for the town hall (via the balance keeper) | Rex |
+| 2026-10-28 | The ghost rule applies to every sector pair: recruiting one drifts the rival's place toward ghosts (via the balance keeper) | Rex |
