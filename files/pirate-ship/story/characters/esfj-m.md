@@ -153,6 +153,17 @@ Why his map moves the way it does.
   direction, not the label he gives himself.
 - Still to explain: why he reacts differently to orderly good and chaotic good.
 
+**Proposed (outside AI, 2026-10-27, second reply; not canon):**
+
+- "Progressivism" is the more precise term than liberalism: liberalism stresses individual rights, liberty and
+  equality; progressivism stresses social reform, systemic inequality and correcting perceived injustice.
+- His extreme version: perceived victimhood matters so much that he excuses destructive behaviour or condemns
+  institutions that do good. Not inherent to progressivism, but a recognisable extreme to use for political satire.
+- So: a caricature of an extreme, reflexively anti-establishment progressive, not simply a liberal. His square
+  reflects it: he judges the moral standing of people and institutions in ways that produce the opposite of what
+  he intends.
+- **(open)** Whether Rex keeps "satire / caricature" as the framing.
+
 ## Change log
 
 | Date | Change | By |
@@ -160,3 +171,4 @@ Why his map moves the way it does.
 | 2026-10-27 | Created: a failed merchant, his look based on MrBeast | Rex |
 | 2026-10-27 | Inner rules: his alignment map (OG→CE, CG→OE, OE→OG, CE→CG); no starting point yet | Rex |
 | 2026-10-27 | His mentality: progressivism; Rex's reasoning for OG→CE, with an outside AI's reading as proposals | Rex |
+| 2026-10-27 | Outside AI on the term: progressivism over liberalism; a caricature of an extreme anti-establishment progressive (proposed) | Rex (pasted) |
