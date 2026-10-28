@@ -14,11 +14,9 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
 - ghostRule is decided: every-pair-both-improve (Rex, task 2481; ALIGNMENT.md §8).
 - Numbers: `data/pirate-ship/alignment/` (`thresholds.json` holds every §8 key; `charts.json`, `starts.json`,
   `institutions.json`, `events.json` placeholder events only). All placeholders.
-- Simulator: `cd web && npx vitest run src/alignment/sim`. Verdicts after 2481:
-  - `perfect og: reachable (55 steps)`
-  - `perfect cg: reachable (62 steps)`
-  - `perfect oe: reachable (43 steps)`
-  - `perfect ce: reachable (51 steps)`
+- Simulator: `cd web && npx vitest run src/alignment/sim`. Joining gates are in the sim (`gates.json`,
+  `unlock`; ISFJ needs the ESTP aboard; INTP, ESTP, ESFP and ISFJ are story-gated) and all four perfect towns are
+  still reachable with gates on (og 60, cg 67, oe 48, ce 56 steps).
 
 ## Next
 
@@ -31,7 +29,7 @@ Rex's to decide (not tasks):
 - No-previous diagonal tie inside the ring: e.g. (20,20) reads the plain quadrant though under `pure` 30. Can't
   happen from today's starts.
 - Ghost state beyond undeveloped; hybrid ending names.
-- Story joining gates in the sim; two simultaneous winners-only transformations (no tie rule).
+- Two simultaneous winners-only transformations (no tie rule).
 - Any §8 key still undecided: `step.minor/major/anchor`, `step.metric/overshoot`, `startCoords`,
   `pendingWhenAboard`, `undevelopedCounts`, `leanFactor`, `witnesses` (absent learning), `institutionLock`, the
   INTJ "becomes neutral" case.
