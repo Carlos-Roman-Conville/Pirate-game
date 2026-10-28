@@ -14,7 +14,7 @@
 | `estj-f` | yes | yes | yes | yes | Rex; start open |
 | `istj-m` | yes | yes | no | no | Rex (chart 2026-10-28): OG and CG dashed rings (lean, arrives); OE->CG; CE->OG. Can't be corrupted (Rex). Earlier text cells (OE 'does nothing', CE 'moves the town toward good') differ from the chart: which stands is open. Highlighted CE square: start open |
 | `isfj-f` | yes | yes | yes | yes | Rex (chart 2026-10-28): OG dashed ring = no change, leans her OG; CG->CE, OE->CG, CE->OE. The highlighted CE square: whether it is her start is open |
-| `istp-f` | map? | map? | map? | map? | open: map not made |
+| `istp-f` | yes | yes | yes | yes | Rex (chart 2026-10-28): OG->CG, CG->OE, OE->CE, CE->OG (no loops). Highlighted OG square: start open |
 | `infp-m` | start? | yes | yes | start? | Rex (chart 2026-10-28): OG->CG, CG->OE, OE dashed ring (lean), CE->OE. Highlighted CE square: start open |
 | `entj-priest` | start? | start? | yes | yes | Rex (new character and chart, 2026-10-28): the evil ENTJ priest, the church competitor. OG->CE, CG->OE, OE and CE dashed rings (lean). Slug is a placeholder until the story keeper assigns one; gender open. Highlighted CG square: start open |
 | `infj-m` | yes | start? | start? | start? | Rex (chart 2026-10-28): every action leads to orderly good (OG dashed ring, CG/OE/CE -> OG). Highlighted OG: start open |
@@ -28,7 +28,7 @@
 | church: priest vs evil priest | istj-m / entj-priest | Rex (2026-10-28: kept separate from the clinic; the evil ENTJ priest competes) | yes: istj-m (+ entj-priest (start?)) | yes: istj-m (+ entj-priest (start?)) | yes: entj-priest | yes: entj-priest |
 | healing: clinic vs apothecary | isfj-f / intj-f | Rex (2026-10-28) | yes: isfj-f | yes: isfj-f | yes: isfj-f, intj-f | yes: isfj-f |
 | farm vs butcher shop | intp-m / esfp-f | Rex | yes: intp-m (+ esfp-f (start?)) | yes: esfp-f (+ intp-m (start?)) | yes: intp-m (+ esfp-f (start?)) | yes: esfp-f (+ intp-m (start?)) |
-| hunting / gathering | estp-f / istp-f | Rex | **open only: estp-f (start?), istp-f (map?)** | yes: estp-f (+ istp-f (map?)) | **open only: estp-f (start?), istp-f (map?)** | yes: estp-f (+ istp-f (map?)) |
+| hunting / gathering | estp-f / istp-f | Rex | yes: istp-f (+ estp-f (start?)) | yes: estp-f, istp-f | yes: istp-f (+ estp-f (start?)) | yes: estp-f, istp-f |
 | inventions: ENTP vs INFJ mechanic | entp-m / infj-m | Rex (2026-10-28: the INTJ no longer competes; the INFJ mechanic does) | yes: entp-m, infj-m | yes: entp-m (+ infj-m (start?)) | yes: entp-m (+ infj-m (start?)) | yes: entp-m (+ infj-m (start?)) |
 | commerce (warehouse vs merchant) | enfj-m / esfj-m | Rex (2026-10-28; first proposed by the outside AI) | yes: enfj-m, esfj-m | yes: esfj-m (+ enfj-m (start?)) | yes: enfj-m, esfj-m | yes: esfj-m (+ enfj-m (start?)) |
 | brothel: INFP vs ISFP (tentative) | infp-m / isfp | Rex (2026-10-28; the ISFP tentative) | yes: isfp (+ infp-m (start?)) | yes: infp-m (+ isfp (start?)) | yes: infp-m (+ isfp (start?)) | yes: isfp (+ infp-m (start?)) |
@@ -38,7 +38,7 @@
 
 | Ending | Characters who can reach it (yes) | Could, through something open | Sectors covered now | Sectors resting only on something open | Starved sectors | Routes now | Routes if open maps allow |
 |---|---|---|---|---|---|---|---|
-| Orderly good | entp-m, intp-m, esfj-m, enfj-m, estj-f, istj-m, isfj-f, infj-m, enfp, isfp (10) | esfp-f (start?), estp-f (start?), istp-f (map?), infp-m (start?), entj-priest (start?) | 7/8 | hunting / gathering | - | 0 | 128 |
-| Chaotic good | entp-m, esfp-f, estp-f, esfj-m, estj-f, istj-m, isfj-f, infp-m, enfp (9) | intp-m (start?), enfj-m (start?), istp-f (map?), entj-priest (start?), infj-m (start?), isfp (start?) | 8/8 | - | - | 2 | 128 |
-| Orderly evil | entp-m, intj-f, intp-m, esfj-m, enfj-m, estj-f, isfj-f, infp-m, entj-priest, enfp (10) | esfp-f (start?), estp-f (start?), istp-f (map?), infj-m (start?), isfp (start?) | 7/8 | hunting / gathering | - | 0 | 128 |
-| Chaotic evil | entp-m, esfp-f, estp-f, esfj-m, estj-f, isfj-f, entj-priest, enfp, isfp (9) | intp-m (start?), enfj-m (start?), istp-f (map?), infp-m (start?), infj-m (start?) | 8/8 | - | - | 2 | 64 |
+| Orderly good | entp-m, intp-m, esfj-m, enfj-m, estj-f, istj-m, isfj-f, istp-f, infj-m, enfp, isfp (11) | esfp-f (start?), estp-f (start?), infp-m (start?), entj-priest (start?) | 8/8 | - | - | 8 | 128 |
+| Chaotic good | entp-m, esfp-f, estp-f, esfj-m, estj-f, istj-m, isfj-f, istp-f, infp-m, enfp (10) | intp-m (start?), enfj-m (start?), entj-priest (start?), infj-m (start?), isfp (start?) | 8/8 | - | - | 4 | 128 |
+| Orderly evil | entp-m, intj-f, intp-m, esfj-m, enfj-m, estj-f, isfj-f, istp-f, infp-m, entj-priest, enfp (11) | esfp-f (start?), estp-f (start?), infj-m (start?), isfp (start?) | 8/8 | - | - | 8 | 128 |
+| Chaotic evil | entp-m, esfp-f, estp-f, esfj-m, estj-f, isfj-f, istp-f, entj-priest, enfp, isfp (10) | intp-m (start?), enfj-m (start?), infp-m (start?), infj-m (start?) | 8/8 | - | - | 4 | 64 |

@@ -122,14 +122,14 @@
     },
     "istp-f": {
       "map": {
-        "og": null,
-        "cg": null,
-        "oe": null,
-        "ce": null
+        "og": "cg",
+        "cg": "oe",
+        "oe": "ce",
+        "ce": "og"
       },
       "start": null,
       "never": [],
-      "mark": "open: map not made"
+      "mark": "Rex (chart 2026-10-28): OG->CG, CG->OE, OE->CE, CE->OG (no loops). Highlighted OG square: start open"
     },
     "infp-m": {
       "map": {

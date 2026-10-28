@@ -21,27 +21,33 @@ Files here:
   writes `TABLE.md`.
 - `TABLE.md`: the generated table. Never edit by hand.
 
-## The gaps, in short (2026-10-28)
+## Where it stands (2026-10-28)
 
-What no character can reach yet, sector by sector, and what would close it. Rex will either draw new diagrams or
-make new characters.
+**Every ending has a route.** All 8 sectors reach all four quadrants, and every character's chart is made. Full-town
+routes (one character per sector who can reach the ending):
 
-| Sector | Missing | What closes it |
+| Ending | Full-town routes | Example route (church, healing, food, hunting, inventions, commerce, brothel, town hall) |
 |---|---|---|
-| Church (priest vs evil ENTJ priest) | nothing: the ISTJ covers OG and CG, the ENTJ priest OE and CE (2026-10-28) | |
-| Healing (clinic vs apothecary) | nothing (OG by the doctor's lean, which Rex ruled arrives, 2026-10-28) | |
-| Food (farm vs butcher shop) | nothing | |
-| Hunting (outdoorswoman vs hunter) | **OG and OE** | the hunter's (ISTP) diagram lands on OG and OE |
-| Inventions (ENTP vs INFJ mechanic) | nothing; the ENTP reaches all four, the INFJ (chart 2026-10-28) OG only | |
-| Commerce (ENFJ vs ESFJ) | nothing: the merchant still counts after his shop fails (Rex, 2026-10-28) | |
-| Brothel (INFP vs ISFP, tentative) | nothing: the ISFP reaches OG and CE, the INFP CG and OE (charts 2026-10-28) | |
-| Town hall (ESTJ vs ENFP, tentative) | nothing; the ESTJ and the ENFP (chart 2026-10-28) each reach all four | |
+| Orderly good | 8 | ISTJ, ISFJ, INTP, ISTP, ENTP or INFJ, ENFJ or ESFJ, ISFP, ESTJ or ENFP |
+| Chaotic good | 4 | ISTJ, ISFJ, ESFP, ESTP or ISTP, ENTP, ESFJ, INFP, ESTJ or ENFP |
+| Orderly evil | 8 | ENTJ priest, ISFJ or INTJ, INTP, ISTP, ENTP, ENFJ or ESFJ, INFP, ESTJ or ENFP |
+| Chaotic evil | 4 | ENTJ priest, ISFJ, ESFP, ESTP or ISTP, ENTP, ESFJ, ISFP, ESTJ or ENFP |
+
+No gaps remain under the keeper's strict reading.
+
+**One rule could still break orderly good.** Healing's only OG character is the ISFJ (the INTJ reaches OE only),
+and the ISFJ only joins if the ESTP is in your party. So every OG town has the ESTP recruited, while its hunting
+must come from the ISTP (the ESTP can't reach OG). If Rex's food rule ("recruit one and the other's place drifts
+toward ghosthood") applies to every pair, recruiting the ESTP would ghost the ISTP's side, and OG would have no
+route. Orderly evil avoids it (the INTJ can take healing). Rex's answer to "does the ghost rule cover every pair, or
+only farm and butcher shop" settles it. What could still change this is in P6 (how crew alignment
+reaches the town, and the other structural opens) and the single carriers in P5.
 
 ## Are the alignment maps on file?
 
 **Yes.** Rex's maps are recorded by the story keeper as Rex (each character file's "Inner rules" section and the
-matrix in `../story/QUESTLINES.md`), except the ISFJ's, which Rex gave here on 2026-10-28 and which has been sent to
-the story keeper. The reachable sets the outside AI quoted for 8 characters all agree with Rex's maps.
+matrix in `../story/QUESTLINES.md`). The charts Rex gave here on 2026-10-28 (ISFJ, ISTJ, ENTJ priest, ENFP, ISFP,
+INFP, INFJ, ISTP) have been sent to the story keeper. The reachable sets the outside AI quoted for 8 characters all agree with Rex's maps.
 
 | Character | Rex's map (action you do in front of them → where they move) | Can reach | Outside AI quoted |
 |---|---|---|---|
@@ -59,6 +65,7 @@ the story keeper. The reachable sets the outside AI quoted for 8 characters all 
 | INFJ mechanic (Rex, 2026-10-28) | OG no change (leans OG), CG→OG, OE→OG, CE→OG: every action leads to orderly good (the INTJ's map mirrored onto OG) | OG | n/a |
 | INFP `infp-m` (Rex, 2026-10-28) | OG→CG, CG→OE, OE no change (leans OE), CE→OE | CG, OE | n/a |
 | ISFP (tentative; Rex's chart, 2026-10-28) | OG→CE, CG→OG, OE→CE, CE no change (leans CE) | OG, CE | n/a |
+| ISTP `istp-f` (Rex, 2026-10-28) | OG→CG, CG→OE, OE→CE, CE→OG (a full cycle, no loops) | all four | n/a |
 | ISFJ `isfj-f` (Rex, 2026-10-28) | OG no change (dashed ring: leans OG), CG→CE, OE→CG, CE→OE | all four (OG by leaning, which arrives) | n/a |
 
 **The ISTJ priest's chart (Rex, 2026-10-28):** OG dashed ring (leans OG), CG dashed ring (leans CG), OE→CG,
@@ -73,8 +80,7 @@ keeper. Either way he never reaches OE or CE, so the balance result is the same.
 On the ISFJ's chart the chaotic evil square is highlighted. On the ESTP's and ESFP's charts Rex said the highlight
 isn't the starting alignment, so it isn't read as hers either: **(open)**.
 
-Not made: **ISTP** (the only one left), the new mechanic, a possible church competitor. Starting alignments are open for
-everyone except the INTJ (OE) and the ENTP (CE).
+Every chart is made (2026-10-28). Starting alignments are open for everyone except the INTJ (OE) and the ENTP (CE).
 
 ## 1. The model
 
@@ -155,7 +161,7 @@ out.
 | `istj-m` | yes (lean) | yes (lean) | **no** (Rex: can't be corrupted) | **no** |
 | `isfj-f` | yes (lean) | yes | yes | yes |
 | evil ENTJ priest | start? | start? | yes (lean) | yes (lean) |
-| `istp-f` | map? | map? | map? | map? |
+| `istp-f` | yes | yes | yes | yes |
 | `infp-m` | start? | yes | yes (lean) | start? |
 | `infj-m` | yes | no | no | no |
 
@@ -166,7 +172,7 @@ out.
 | church | ISTJ / evil ENTJ priest | Rex | yes: ISTJ | yes: ISTJ | yes: ENTJ priest | yes: ENTJ priest |
 | healing | ISFJ / INTJ | Rex | yes: ISFJ (lean) | yes: ISFJ | yes: ISFJ, INTJ | yes: ISFJ |
 | food | INTP / ESFP | Rex | yes: INTP | yes: ESFP | yes: INTP | yes: ESFP |
-| hunting / gathering | ESTP / ISTP | Rex | **open only** (ISTP map?, ESTP start?) | yes: ESTP | **open only** (ISTP map?, ESTP start?) | yes: ESTP |
+| hunting / gathering | ESTP / ISTP | Rex | yes: ISTP | yes: ESTP, ISTP | yes: ISTP | yes: ESTP, ISTP |
 | inventions | ENTP / INFJ mechanic | Rex | yes: ENTP, INFJ | yes: ENTP | yes: ENTP | yes: ENTP |
 | commerce | ENFJ / ESFJ | Rex | yes: ENFJ, ESFJ | yes: ESFJ alone | yes: ENFJ, ESFJ | yes: ESFJ alone |
 | brothel | INFP / ISFP (tentative) | Rex | yes: ISFP | yes: INFP | yes: INFP | yes: ISFP |
@@ -176,22 +182,17 @@ out.
 
 | Ending | Characters who can reach it now | Sectors covered now | Resting only on something open | Starved | Full-town routes now | If every open item lands well |
 |---|---|---|---|---|---|---|
-| Orderly good | ENTP, INTP, ESFJ, ENFJ, ESTJ, ISTJ, ISFJ, ENFP, ISFP, INFJ (10) | 7 / 8 | hunting | none | **0** | 128 |
-| Chaotic good | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISTJ, ISFJ, INFP, ENFP (9) | **8 / 8** | none | none | **2** | 128 |
-| Orderly evil | ENTP, INTJ, INTP, ESFJ, ENFJ, ESTJ, ISFJ, INFP, ENTJ priest, ENFP (10) | 7 / 8 | hunting | none | **0** | 128 |
-| Chaotic evil | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISFJ, ENTJ priest, ENFP, ISFP (9) | **8 / 8** | none | none | **2** | 64 |
+| Orderly good | ENTP, INTP, ESFJ, ENFJ, ESTJ, ISTJ, ISFJ, ENFP, ISFP, INFJ, ISTP (11) | **8 / 8** | none | none | **8** | 8 |
+| Chaotic good | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISTJ, ISFJ, INFP, ENFP, ISTP (10) | **8 / 8** | none | none | **4** | 4 |
+| Orderly evil | ENTP, INTJ, INTP, ESFJ, ENFJ, ESTJ, ISFJ, INFP, ENTJ priest, ENFP, ISTP (11) | **8 / 8** | none | none | **8** | 8 |
+| Chaotic evil | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISFJ, ENTJ priest, ENFP, ISFP, ISTP (10) | **8 / 8** | none | none | **4** | 4 |
 | Neutral | not a quadrant: reached by staying near the centre; the INTJ's "shown she's wrong" also lands her there | n/a | | | | |
 
-**Chaotic good and chaotic evil are complete** (2026-10-28, with the ISFP's and INFP's charts): every sector
-reaches them, 2 routes each (the town hall's ESTJ or ENFP).
+**All four endings are complete** (2026-10-28, with the ISTP's chart). Orderly good and orderly evil have 8
+full-town routes each, chaotic good and chaotic evil 4 each. ("If every open item lands well" now equals "now":
+only starting alignments remain open, and the table doesn't count them as routes.)
 
-- Chaotic good, one route: ISTJ priest, doctor, cook, outdoorswoman, ENTP, merchant, INFP, ESTJ.
-- Chaotic evil, one route: ENTJ priest, doctor, cook, outdoorswoman, ENTP, merchant, ISFP, ESTJ.
-
-**The only gap left: hunting's orderly side.** Orderly good and orderly evil both wait on the ISTP's chart landing
-on OG and OE. With it, all four endings are complete.
-
-Chance, for the record only (not a problem): OE has the most characters (10) and the INTJ falls into OE from every
+Chance, for the record only (not a problem): OG and OE have the most characters (11 each) and twice the routes of CG and CE; and the INTJ falls into OE from every
 action, so OE is the likeliest ending a player drifts into. Rex hasn't asked for chance to be balanced.
 
 ## 3. Problems found, ranked
@@ -217,7 +218,11 @@ Options:
 - (e) A church that stands empty or falls in an evil town counts as the church's evil outcome (Rex's call whether
   "fully developed" allows that).
 
-### P2. Hunting has no orderly side except the ISTP, whose map isn't made (OG, OE)
+### P2. ~~Hunting has no orderly side except the ISTP~~ Closed 2026-10-28
+
+The ISTP's chart reaches all four, so hunting has OG and OE. One part stays open (below, the food rule's reach).
+
+#### As it stood
 
 The ESTP reaches only CG and CE. On top of that, the ISFJ only joins if the ESTP is in your party, so routes using
 the clinic need the ESTP recruited. If recruiting one of a pair pushes the other's institution toward ghosthood (as
@@ -277,7 +282,7 @@ Not gaps; each is one character carrying a sector's whole route to an ending, so
    as good/evil only.
 5. **Starting alignments.** Open for 10 of 12. They decide the `start?` cells and Rex's "3 per quadrant".
 
-## 4. Constraints for the unfinished maps and characters
+## 4. Constraints for the maps (all made as of 2026-10-28)
 
 The minimum each must or must not include for every ending to keep at least one full-town route (strict reading).
 Not filled-in maps; Rex makes them.
@@ -286,7 +291,7 @@ Not filled-in maps; Rex makes them.
 |---|---|---|---|
 | Evil ENTJ priest | made (Rex, 2026-10-28): OE, CE | | P1 closed |
 | ISTJ `istj-m` | made (Rex, 2026-10-28): OG, CG | OE, CE (Rex: can't be corrupted) | P1 |
-| ISTP `istp-f` | **OG and OE** | nothing | P2 |
+| ISTP `istp-f` | made (Rex, 2026-10-28): all four | | P2 closed |
 | INFJ mechanic `infj-m` (slug placeholder) | made (Rex, 2026-10-28): OG | | |
 | INFP `infp-m` | made (Rex, 2026-10-28): CG, OE | | brothel complete |
 | ENFP (tentative, the ESTJ's rival) | made (Rex, 2026-10-28): all four | nothing | the ESTJ reaches all four |
@@ -297,7 +302,7 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 
 ## 5. What's open
 
-- The ISTP's map; the evil ENTJ priest's slug, gender, starting alignment, and whether they're recruitable (the cast was 12 recruitables, 6 men and 6 women); 10 starting
+- The evil ENTJ priest's slug, gender, starting alignment, and whether they're recruitable (the cast was 12 recruitables, 6 men and 6 women); 10 starting
   alignments (whether the ISFJ's and ISTJ's highlighted CE squares are their starts).
 - Whether the priest's chart replaces his earlier OE and CE words (OE "does nothing"; CE "moves the town toward good").
 - Eight sectors now (church, healing, food, hunting, inventions, commerce, brothel, town hall).
@@ -327,3 +332,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | The ISFP's chart (OG→CE, CG→OG, OE→CE, CE lean): reaches OG and CE; the INFP must reach CG and OE | Rex |
 | 2026-10-28 | The INFP's chart (OG→CG, CG→OE, OE lean, CE→OE): brothel complete; chaotic good and chaotic evil complete; only hunting OG/OE (the ISTP) left | Rex |
 | 2026-10-28 | The INFJ mechanic's chart: every action leads to orderly good; inventions gains a second OG carrier; only the ISTP left | Rex |
+| 2026-10-28 | The ISTP's chart (OG→CG, CG→OE, OE→CE, CE→OG): hunting complete; every sector reaches every ending; routes OG 8, CG 4, OE 8, CE 4 | Rex |
