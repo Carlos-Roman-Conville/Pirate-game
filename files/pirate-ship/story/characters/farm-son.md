@@ -3,7 +3,7 @@
 Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is canon. The field keys in backticks
 follow `_TEMPLATE.md`.
 
-- **Slot:** type open; in the 32 or an extra is open
+- **Slot:** `extra` (not recruitable; type open)
 - **Status:** idea
 - **Last changed:** 2026-10-27
 
@@ -44,13 +44,14 @@ follow `_TEMPLATE.md`.
 ### Notes (Rex, 2026-10-27)
 
 - **(Rex)** "His mother's butcher shop": this note makes the ESFP cook the mother.
-- **(open)** His type; whether he's recruitable.
+- **(open)** His type.
+- **(Rex, 2026-10-27)** Not recruitable.
 
 ## Joining
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | hire / mercenary / kidnap; what they need first (rep, proof, gift, questline) | open |
+| How recruited | `recruit` | not recruitable; kept separate from the recruitable list (a kidnapping mechanic for non-recruitables is an idea for later, not decided) | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -105,3 +106,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | Date | Change | By |
 |---|---|---|
 | 2026-10-27 | Created: the cook's son: collects his victims' skins and brings them to his mother's butcher shop | Rex |
+| 2026-10-27 | Not recruitable; kept separate from the recruitables | Rex |

@@ -46,16 +46,17 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 
 "Drafted" here means drafted in ROSTER.md, not by Rex; each moves to a file and its own status as Rex writes it.
 
-## Characters outside the 32
+## Non-recruitable characters (kept separate)
 
-Town residents, rivals and anyone else Rex creates (the starting port's blacksmith and bartender exist in the spec
-as examples, unnamed).
+**(Rex, 2026-10-27)** The recruitable list is only for recruitables; these are kept apart from it. A kidnapping
+mechanic for other characters is an idea for later, not decided. Also town residents, rivals and anyone else Rex
+creates (the starting port's blacksmith and bartender exist in the spec as examples, unnamed).
 
 | Slug | Who | Where | Status | File |
 |---|---|---|---|---|
 | farm-daughter | the farmer and cook's daughter: helps run the farm; demented, kills livestock and people; failed actress inspired by Pearl; type open | the farm | idea (Rex) | [farm-daughter.md](farm-daughter.md) |
-| farm-son | their son: lives with the cook, collects his victims' skins for the butcher shop; type open | with the cook | idea (Rex) | [farm-son.md](farm-son.md) |
-| bigwig | the warehouse owner and a few vendors: disorganised, chaotic, warehouse in disrepair, poor alliances; father of the ENFJ; type open | the warehouse | idea (Rex) | [bigwig.md](bigwig.md) |
+| farm-son | their son: lives with the cook, collects his victims' skins for the butcher shop; not recruitable; type open | with the cook | idea (Rex) | [farm-son.md](farm-son.md) |
+| bigwig | the warehouse owner and a few vendors: disorganised, chaotic, warehouse in disrepair, poor alliances; father of the ENFJ; not recruitable; type open | the warehouse | idea (Rex) | [bigwig.md](bigwig.md) |
 
 ## Known overlaps to keep in mind (from Rex's notes, not new canon)
 

@@ -45,13 +45,14 @@ follow `_TEMPLATE.md`.
 
 - **(Rex)** Rex wrote "dscirdnated", read as disorganised (discoordinated); to confirm.
 - **(Rex)** The warehouse's fate (legitimate trade, or stolen goods and drugs) rides on his son's journey (see `enfj-m.md`).
-- **(open)** His type; whether he's recruitable.
+- **(open)** His type.
+- **(Rex, 2026-10-27)** Not recruitable.
 
 ## Joining
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | hire / mercenary / kidnap; what they need first (rep, proof, gift, questline) | open |
+| How recruited | `recruit` | not recruitable; kept separate from the recruitable list (a kidnapping mechanic for non-recruitables is an idea for later, not decided) | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -104,3 +105,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | Date | Change | By |
 |---|---|---|
 | 2026-10-27 | Created: the warehouse owner, disorganised and chaotic, warehouse in disrepair, poor alliances; father of the ENFJ | Rex |
+| 2026-10-27 | Not recruitable; kept separate from the recruitables | Rex |
