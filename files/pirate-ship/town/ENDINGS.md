@@ -85,7 +85,8 @@ its endings). The town side, in short:
 - **(Rex) Perfect town:** every relevant institution developed into the **same** alignment. Consistency, not
   goodness: a perfect chaotic evil town is perfect. Eight developed institutions in four alignments is prosperous,
   not perfect. Perfect endings should be hard but achievable wherever the rules permit.
-- **(open)** The formula combining institutions into the town's position (placeholder in code: the mean). Rex's.
+- **(Rex, 2026-10-28)** "Town position = the mean of the developed institutions' positions." A plain average; the
+  outside AI's influence weighting is not used.
 - **(open)** Which institutions count toward perfection (the losing half of a pair, ghosted buildings).
 
 ### What each quadrant becomes
@@ -195,3 +196,4 @@ changes how routes are built.
 | 2026-10-27 | Neutral is a ghost town: inhabitants replaced by ghostly visions or shades; the people may move on, and depending on your actions may appear in the DLC as specific characters, or not | Rex |
 | 2026-10-27 | Open 6 added: how the fully developed town (sectors) relates to the endings | keeper |
 | 2026-10-28 | Rex's square: the town's alignment comes from its developed institutions (supersedes residents who stay); nine endings with hybrids (`end.og_oe` Twisted Virtue); perfect = all relevant institutions in one alignment; spec in `../balance/ALIGNMENT.md` (via the balance keeper) | Rex |
+| 2026-10-28 | Town position = the mean of the developed institutions' positions; no influence weighting (via the balance keeper) | Rex |

@@ -43,12 +43,12 @@ choices change, and the town moves on two axes, good/evil and order/chaos. What 
 
 | Key | What | Values | Mark |
 |---|---|---|---|
-| `port.align` | the town's position | (x, y), each −100..+100 (x orderly − / chaotic +, y evil − / good +); read as one of nine regions (`og`, `cg`, `oe`, `ce`, `og_cg`, `oe_ce`, `og_oe`, `cg_ce`, `n`) | Rex (2026-10-28); combined from the developed institutions by a formula still open (placeholder: mean) |
+| `port.align` | the town's position | (x, y), each −100..+100 (x orderly − / chaotic +, y evil − / good +); read as one of nine regions (`og`, `cg`, `oe`, `ce`, `og_cg`, `oe_ce`, `og_oe`, `cg_ce`, `n`) | Rex (2026-10-28); the mean of the developed institutions' positions (Rex, 2026-10-28) |
 | `<slot>.align` | an institution's current alignment | (x, y) | Rex (2026-10-28) |
 | `<slot>.pending` | a pending transformation: the owner has returned to town and resumed responsibility; applied in the overnight update when you sleep | yes / no, and the target form | Rex (2026-10-28) |
 | `port.cash` | the town's money | amount; nearly out when the game starts (Rex, 2026-10-28: why the INFJ mechanic is leaving) | Rex (the town has cash running out); key and units the keeper's; how it moves: open |
 | `<slug>.align` | a resident's alignment | the same two axes; changed by your choices | Rex |
-| `<slug>.influence` | how much they sway the town | number | proposed (outside AI) |
+| `<slug>.influence` | how much they sway the town | number | proposed (outside AI); not used for the town's position (Rex chose a plain mean, 2026-10-28) |
 | `<slug>.presence` | whether they stay in town (taking them aboard removes their pull) | in town / aboard / gone | proposed (outside AI); Rex said only residents who stay count |
 
 **Transformation rule (Rex, 2026-10-28):** a character's alignment doesn't change their institution at once. When
@@ -281,3 +281,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-28 | The ghost rule applies to every sector pair: recruiting one drifts the rival's place toward ghosts (via the balance keeper) | Rex |
 | 2026-10-28 | Withdrawn: the ghost rule for every pair (back to open; food pair only, tentative). Rex's goal: a route to a perfectly working town through a complicated set of choices; open to a third or fourth person per competition (via the balance keeper) | Rex |
 | 2026-10-28 | `port.align` is a (−100..+100)² point read as nine regions; institution keys `<slot>.align`, `<slot>.pending`; transformation rule; quadrant-form shape now Rex's (via the balance keeper) | Rex |
+| 2026-10-28 | `port.align` = mean of developed institutions' positions (via the balance keeper) | Rex |
