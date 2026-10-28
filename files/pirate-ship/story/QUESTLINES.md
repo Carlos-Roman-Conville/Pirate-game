@@ -51,8 +51,8 @@ suggestion (not canon); blank = open.
 | ISTP hunter (`istp-f`) | | *possible support* | | *possible support* |
 | INTJ apothecary (`intj-f`) | **Rex: moves her to orderly evil** (*possible support*) | **Rex: moves her to orderly evil** | **Rex: stays orderly evil (loop)** (*possible support*) | **Rex: moves her to orderly evil** (*opposes*). **Rex:** all paths lead here unless you show her that her belief is wrong; then she becomes neutral |
 | ISFJ doctor (`isfj-f`) | | | | |
-| ESFP baker (`esfp-f`) | | | | |
-| INTP farmer (`intp-m`) | | | | |
+| ESFP cook (`esfp-f`) | **Rex: moves her to chaotic good** | **Rex: stays chaotic good (loop)** | **Rex: moves her to chaotic evil** | **Rex: stays chaotic evil (loop)** |
+| INTP farmer (`intp-m`) | **Rex: moves him to orderly evil** | **Rex: moves him to orderly good** | **Rex: stays orderly evil (loop)** | **Rex: moves him to chaotic good** |
 | ESTP veteran outdoorswoman (`estp-f`) | **Rex: moves her to chaotic good** | **Rex: stays chaotic good (loop)** | **Rex: moves her to chaotic evil** | **Rex: stays chaotic evil (loop)** |
 | ENFJ pretty boy (`enfj-m`) | **Rex: stays orderly good (loop)** | **Rex: moves them to orderly good** | **Rex: stays orderly evil (loop)** | **Rex: moves them to orderly evil** |
 | ESTJ privateer pirate (`estj-f`) | **Rex: moves them to chaotic evil** | **Rex: moves them to orderly good** | **Rex: moves them to chaotic good** | **Rex: moves them to orderly evil** |
@@ -87,3 +87,4 @@ suggestion (not canon); blank = open.
 | 2026-10-27 | The ESTJ is an old privateer, a man (`estj-m`) | Rex |
 | 2026-10-27 | The ESTJ is a woman, a pirate lady in her 40s (`estj-f`) | Rex |
 | 2026-10-27 | The ESTP's alignment map (OG→CG, CG stays, OE→CE, CE stays) | Rex |
+| 2026-10-27 | The ESFP's map (OG→CG, CG stays, OE→CE, CE stays) and the INTP's map (OG→OE, CG→OG, OE stays, CE→CG); loops read from dashed rings, to confirm | Rex |

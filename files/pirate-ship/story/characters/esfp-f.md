@@ -90,12 +90,47 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
 | Questline | Key | Reaction to what they witness you do there | Mark |
 |---|---|---|---|
-| Orderly good (church-like) | `quest.order_good` |  | open |
-| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` |  | open |
-| Orderly evil (Cthulhu corruption) | `quest.order_evil` |  | open |
-| Chaotic evil (killers, devil worship) | `quest.chaos_evil` |  | open |
+| Orderly good (church-like) | `quest.order_good` | moves her to chaotic good | Rex |
+| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | stays chaotic good (loop) | Rex |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` | moves her to chaotic evil | Rex |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | stays chaotic evil (loop) | Rex |
 
 - **(proposed, outside AI)** Paired developments: beloved provider vs hospitality as cover.
+
+### Inner rules: her alignment map (Rex, 2026-10-27)
+
+What the path you push her on does to her alignment (`../QUESTLINES.md`, model point 4). Rex's diagram:
+
+![The ESFP's alignment map](diagrams/esfp-f-alignment.png)
+
+```
+              GOOD
+   +-----------------+-----------------+
+   |  ORDERLY GOOD   |  CHAOTIC GOOD   |
+   |      (OG) ------+----> (CG)       |
+   |                 |      ( )        |
+   +-----------------+-----------------+
+   |      (OE) ------+----> (CE)       |
+   |                 |      ( )        |
+   |  ORDERLY EVIL   |  CHAOTIC EVIL   |
+   +-----------------+-----------------+
+              EVIL
+   OG->CG   CG stays   OE->CE   CE stays
+```
+
+| Pushed on (action quadrant) | She moves toward | Mark |
+|---|---|---|
+| Orderly good | chaotic good | Rex |
+| Chaotic good | chaotic good (stays: a loop) | Rex; loop read from the dashed ring, to confirm |
+| Orderly evil | chaotic evil | Rex |
+| Chaotic evil | chaotic evil (stays: a loop) | Rex; loop read from the dashed ring, to confirm |
+
+For the code (`inner_rules`, action → destination):
+`{ "order_good": "chaos_good", "chaos_good": "chaos_good", "order_evil": "chaos_evil", "chaos_evil": "chaos_evil" }`
+
+- **(Rex's diagram)** A dashed ring with no curl marks chaotic good and chaotic evil: read as staying put (a loop), as on the ESTP's map where the rings carry a curl; to confirm.
+- Same arrows as the ESTP's map: everything pulls her toward chaos, and good/evil follows what you do.
+- **(open)** Starting alignment: to figure out later (the highlight on the diagram doesn't mark it).
 
 ## Change log
 
@@ -107,3 +142,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Not a baker but a general cook with a butcher shop; ex-spouse of the INTP farmer; parent of the son who collects skins; gender to confirm | Rex |
 | 2026-10-27 | Gender confirmed: woman; file moved from `esfp-m.md` to `esfp-f.md` | Rex |
 | 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |
+| 2026-10-27 | Inner rules: her alignment map (OG→CG, CG stays, OE→CE, CE stays) | Rex |
