@@ -132,8 +132,11 @@ invented.
   good (the INFJ, `ownerDeparted` [freeze]); a pending institution whose owner is aboard again at sleep
   (`pendingWhenAboard` [keep]); a developed place whose owner hasn't slept yet, `pos` null, in the town's mean
   (`undevelopedCounts` [skip]).
-- **(open)** What "developed" means, and the ghost rule beyond the food pair (`BALANCE.md` C1): config
-  `ghostRule: food-only | every-pair-both-improve | every-pair-duel | every-pair-one-ghosts`.
+- **(Rex, 2026-10-28) The ghost rule applies to every pair**, as the food rule does: recruit neither → both
+  places go to ghosts; recruit one → it develops, the rival's drifts toward ghosts; recruit both → both develop
+  (`ghostRule: every-pair-both-improve`). The food pair's secret duel on "both" stays the food pair's (not designed).
+  **(open)** what "developed" needs beyond recruiting (the food pair needs bodies supplied); when a place turns
+  ghosted; whether a ghosted place is the undeveloped state or its own state.
 
 ## 6. The town and its endings
 
@@ -174,7 +177,7 @@ invented.
 | `leanFactor` | 0.5 | open |
 | `witnesses` | present only; absent learning off | Rex (for now) / open |
 | `institutionLock` | re-read each sleep while owner in town | open |
-| `ghostRule` | food-only | open (C1) |
+| `ghostRule` | every-pair-both-improve | Rex (2026-10-28) |
 | `townAggregate` | mean | Rex (2026-10-28) |
 | `perfectCounts` | all-developed | Rex (2026-10-28) |
 | INTJ "becomes neutral" | not built | open |
@@ -223,3 +226,4 @@ web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fi
 | 2026-10-28 | Town position = the mean of the developed institutions' positions | Rex |
 | 2026-10-28 | An exact diagonal tie keeps the previous region (no snap) | Rex |
 | 2026-10-28 | Every developed place counts toward a perfect town, the loser of a pair included | Rex |
+| 2026-10-28 | The ghost rule applies to every pair; recruiting both lets both develop | Rex |

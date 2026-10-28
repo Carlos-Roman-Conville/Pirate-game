@@ -46,13 +46,15 @@ The keeper lays these out; Rex picks. Nothing here is decided.
 ### C1. What happens to a rival when you recruit one of a pair (the ghost rule)
 
 Rex's food rule (farm vs butcher shop, tentative): recruit neither → both places go to ghosts; recruit one → it
-improves, the rival's drifts toward ghosts; recruit both → both improve, plus a secret duel. Whether it reaches
-the other seven pairs is **open** (Rex, 2026-10-28: his first "yes, every pair" was a gut feeling, not a decision).
+improves, the rival's drifts toward ghosts; recruit both → both improve, plus a secret duel. **Decided
+(Rex, 2026-10-28, after the options below): option b, every pair, and recruiting both lets both improve.** With
+"every developed place counts toward a perfect town" (also Rex, 2026-10-28), recruiting both is allowed but costs:
+both places must end in the same quadrant.
 
 | Option | What it means | Effect on balance |
 |---|---|---|
 | a. Food pair only | Other rivals aren't harmed by recruiting their competitor | No ending loses a route. The other pairs compete only for time and slots |
-| b. Every pair, with "recruit both, both improve" | The full food rule everywhere | All four endings keep their routes, but a perfect OG town needs both hunters recruited (C2) |
+| **b. Every pair, with "recruit both, both improve"** (chosen) | The full food rule everywhere | All four endings keep their routes; a perfect OG town needs both hunters recruited, and the ESTP's place must then also reach OG, which her chart can't (C2) |
 | c. Every pair, recruiting both still costs one (for example the duel's loser ghosts) | Recruiting both is a gamble | Orderly good survives only if the player can steer the hunters' duel to the ISTP |
 | d. Every pair, no "both" case | Recruit one, the other ghosts, full stop | **Orderly good has no route** (C2) |
 
@@ -65,8 +67,14 @@ option defeats the purpose. So the knot is the design, not a problem:
 - hunting in OG must be the ISTP (the ESTP never reaches OG);
 - so a perfect OG town means bringing the ESTP aboard as the doctor's key while still developing the ISTP's side.
 
-The keeper's only job here is to keep that route **possible**, not easy. It stays possible under ghost rule a, b,
-or c (if the player can steer the hunters' duel); **option d closes it** (C1). No third healer, third hunter or
+The keeper's only job here is to keep that route **possible**, not easy. **Under the two rules Rex chose on
+2026-10-28 (ghost rule b; every developed place counts), the OG hospital route is closed:** the ESTP must be
+recruited for the doctor, so her hunting place develops, and a developed place must match the town for perfection,
+but her chart never reaches OG. A perfect OG town then can't have the clinic. Orderly good still has routes without
+it: healing in OG through the INTJ is impossible (her chart), so **orderly good has no perfect route at all** under
+these two rules unless one of: the ESTP's place can be left undeveloped despite recruiting her (a "developed needs
+more than recruiting" rule, open in ALIGNMENT.md §5); a departed or ghosted place doesn't count; or Rex accepts
+the earned hospital as closed for OG. The simulator will show this exactly; flagged, not fixed. No third healer, third hunter or
 other bypass is proposed: those would give the route away.
 
 ### C3. Lopsided pairs: where one side never has to win
@@ -389,3 +397,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | ~~The ghost rule applies to every pair~~ withdrawn the same day: Rex's "yes" was a gut feeling, not a decision; ghost rule beyond the food pair is open (C1) | Rex |
 | 2026-10-28 | Rex's goal: a route to a perfectly working town through a complicated set of choices; open to a third or fourth person per competition. Choices C1–C4 laid out (ghost rule options, the ISFJ–ESTP knot, lopsided pairs, recruit limit) | Rex; keeper (options) |
 | 2026-10-28 | The OG hospital (ISFJ via the ESTP, alongside the ISTP) is an earned hidden route by design; bypass options withdrawn; the keeper guards only that it stays possible | Rex |
+| 2026-10-28 | Ghost rule b chosen (every pair, both improve); with all-developed counting, the OG hospital route closes and orderly good has no perfect route unless "developed" needs more than recruiting; flagged for Rex | Rex; keeper (finding) |
