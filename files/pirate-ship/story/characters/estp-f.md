@@ -134,8 +134,8 @@ For the code (`inner_rules`, action → destination):
 
 - Everything pulls her toward chaos, and the good/evil side follows what you do (the mirror of the ENFJ's map,
   which pulls toward order).
-- **(open)** Orderly evil is highlighted on the diagram. On the INTJ's diagram the highlight marked her starting
-  alignment; whether it means the same here is open.
+- **(Rex, 2026-10-27)** The highlight on orderly evil doesn't mark her starting alignment.
+- **(open)** Her starting alignment: to figure out later.
 
 ## Change log
 
@@ -150,3 +150,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | The fort day holds: the only constant way to find her; she lives in the hut and goes into the forest | Rex |
 | 2026-10-27 | Confirmed: she goes into the forest | Rex |
 | 2026-10-27 | Inner rules: her alignment map (OG→CG, CG stays, OE→CE, CE stays) | Rex |
+| 2026-10-27 | The diagram's highlight isn't her starting alignment; starting alignment left for later | Rex |
