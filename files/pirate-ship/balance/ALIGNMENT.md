@@ -128,10 +128,11 @@ invented.
   sector's winner is derived, so "both of a pair developed" (C1 b) and `perfectCounts` are expressible. Each
   slot's forms per quadrant are data (`forms`, names open: the town keeper's). `sleep` returns the list of
   transformations, so the waking screen can show them; the day counter lives in state.
-- **(open)** Three more cases the review found, each a config key, placeholder in brackets: an owner who leaves for
-  good (the INFJ, `ownerDeparted` [freeze]); a pending institution whose owner is aboard again at sleep
-  (`pendingWhenAboard` [keep]); a developed place whose owner hasn't slept yet, `pos` null, in the town's mean
-  (`undevelopedCounts` [skip]).
+- **(Rex, 2026-10-28)** A place whose owner leaves for good **freezes at whatever alignment it had**
+  (`ownerDeparted: freeze`; the INFJ is the case).
+- **(open)** Two cases the review found, each a config key, placeholder in brackets: a pending institution whose
+  owner is aboard again at sleep (`pendingWhenAboard` [keep]); a developed place whose owner hasn't slept yet, `pos`
+  null, in the town's mean (`undevelopedCounts` [skip]).
 - **(Rex, 2026-10-28) The ghost rule applies to every pair**, as the food rule does: recruit neither → both
   places go to ghosts; recruit one → it develops, the rival's drifts toward ghosts; recruit both → both develop
   (`ghostRule: every-pair-both-improve`). The food pair's secret duel on "both" stays the food pair's (not designed).
@@ -176,7 +177,8 @@ invented.
 | `step.metric`, `step.overshoot` | fixed distance; stop at anchor | open |
 | `startCoords` | (±50, ±50); neutral (0, 0) | open |
 | `crewSlots` | 3 | Rex |
-| `ownerDeparted`, `pendingWhenAboard`, `undevelopedCounts` | freeze, keep, skip | open |
+| `ownerDeparted` | freeze | Rex (2026-10-28) |
+| `pendingWhenAboard`, `undevelopedCounts` | keep, skip | open |
 | `leanFactor` | 0.5 | open |
 | `witnesses` | present only; absent learning off | Rex (for now) / open |
 | `institutionLock` | re-read each sleep while owner in town | open |
@@ -231,3 +233,4 @@ web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fi
 | 2026-10-28 | Every developed place counts toward a perfect town, the loser of a pair included | Rex |
 | 2026-10-28 | The ghost rule applies to every pair; recruiting both lets both develop | Rex |
 | 2026-10-28 | Recruiting alone doesn't develop a place; it takes a sub quest or supplying what they need; develop is its own command | Rex |
+| 2026-10-28 | A place whose owner leaves for good freezes at the alignment it had | Rex |
