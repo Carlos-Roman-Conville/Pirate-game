@@ -137,8 +137,8 @@ they are in town.
 
 ### Alignment (Rex, 2026-10-27)
 
-- **(Rex)** Each resident who stays has an alignment that your choices change; that is what alters the town
-  (`ENDINGS.md`, The town's alignment). Each character has a clear influence toward a quadrant, a neutral one, or
+- **(Rex, 2026-10-28)** The town's alignment comes from its developed institutions, each reflecting the character
+  who shapes it (`ENDINGS.md`, The square and the institutions). (Before: from each resident who stays.) Each character has a clear influence toward a quadrant, a neutral one, or
   an opposing one.
 - **(Rex)** 12 people, **3 per quadrant**. Who sits where is open.
 - **(Rex)** Four questlines, one per quadrant, all available to take on (2026-10-27: conduct within them
@@ -204,3 +204,4 @@ they are in town.
 | 2026-10-28 | Tentative ("thinking"): an ENFP competes with the ESTJ for the town hall, an ISFP with the INFP for the brothel; both new characters (via the balance keeper) | Rex |
 | 2026-10-28 | The ghost rule covers every competing pair, not only food (`UPGRADES.md`, Sectors) | Rex |
 | 2026-10-28 | Withdrawn by Rex: the ghost rule for every pair (open again). Goal: a perfectly working town is reachable through a complicated set of choices; you can't recruit everyone | Rex |
+| 2026-10-28 | The town's alignment comes from its developed institutions; nine endings; perfect = every relevant institution in one alignment; institutions transform overnight after their owner returns (`ENDINGS.md`, `UPGRADES.md`) | Rex |

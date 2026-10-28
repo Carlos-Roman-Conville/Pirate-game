@@ -27,8 +27,9 @@ he consulted are marked as such.
 ### How it works (Rex)
 
 - **(Rex)** No separate game-over-style abandonment ending: it makes players feel they should restart.
-- **(Rex)** The town has an **alignment**. Each resident who **stays** in town has their alignment changed by your
-  choices, and that is what alters the town. The mechanism is influence: when morality is high, people start veering
+- ~~**(Rex)** The town has an **alignment**. Each resident who **stays** in town has their alignment changed by your
+  choices, and that is what alters the town.~~ Superseded 2026-10-28: the town's alignment is determined by its
+  **developed institutions** (The square and the institutions, below). The mechanism is influence: when morality is high, people start veering
   back toward society; when evil is high, they become openly evil.
 - **(Rex)** Two axes, **good/evil** and **order/chaos**, giving four quadrants: orderly good, chaotic good, orderly
   evil, chaotic evil. The first town uses this quad system; later towns could go to three or eight (a true cube).
@@ -57,13 +58,35 @@ keeper's: [`../story/QUESTLINES.md`](../story/QUESTLINES.md).
   sections, carry **alignment points**. On the devil's path you can destroy it (how you do it decides the points)
   or follow it and earn devil points.
 - **(Rex)** Crew in your party see what you do, and their alignment moves by the system's inner rules (per
-  character; the story keeper's). The town then moves through the residents who stay, as recorded above.
+  character; the story keeper's). ~~The town then moves through the residents who stay.~~ Since 2026-10-28 the town
+  moves through its developed institutions, each reflecting the character who shapes it (below).
 - **(open, A)** Whether per-character inner rules (each character steered by being egged on the way they want, and
   veering elsewhere otherwise) still hold, or whether points plus witnessing replaced them.
 - **(open, B)** Who earns points: only the witnessing crew, or the player too.
 - **(proposed, outside AI)** The same outcome can be reached by different methods, each carrying different points.
   The devil path example (numbers are placeholders): rescue a sacrifice: +good; destroy the hierarchy: +good +chaos;
   outlaw the cult: +good +order; seize it for yourself: evil +order; help its rituals: evil +chaos.
+
+### The square and the institutions (Rex, 2026-10-28)
+
+Rex adopted an outside AI's full spec ("everything the AI has said I'm in agreement with"); the balance keeper
+records it in [`../balance/ALIGNMENT.md`](../balance/ALIGNMENT.md) (§1 the square, §5 institutions, §6 the town and
+its endings). The town side, in short:
+
+- **(Rex)** The town's alignment is determined by the alignments of its **developed institutions** (one per sector,
+  `UPGRADES.md`), each reflecting the character who ultimately shapes it.
+- **(Rex)** A continuous square, each axis −100 to +100 (x: orderly − to chaotic +; y: evil − to good +). Everyone
+  (player, characters, institutions, the town) has a position; a quadrant is a reading of a position.
+- **(Rex) Nine town endings:** four pure quadrants, four hybrids along the dividing axes, and neutral at the centre
+  (the ghost town). Provisional thresholds (the outside AI's, kept until Rex tunes them): neutral |x|, |y| < 15;
+  pure |x|, |y| ≥ 30; hybrid bands within 30 of an axis. How the transitional ring between them reads: ALIGNMENT.md §1.
+- **(Rex) Hybrid endings have real width:** a town strongly orderly but split good/evil is Twisted Virtue, a mixed
+  society, not a transition.
+- **(Rex) Perfect town:** every relevant institution developed into the **same** alignment. Consistency, not
+  goodness: a perfect chaotic evil town is perfect. Eight developed institutions in four alignments is prosperous,
+  not perfect. Perfect endings should be hard but achievable wherever the rules permit.
+- **(open)** The formula combining institutions into the town's position (placeholder in code: the mean). Rex's.
+- **(open)** Which institutions count toward perfection (the losing half of a pair, ghosted buildings).
 
 ### What each quadrant becomes
 
@@ -126,9 +149,15 @@ appear in the DLC as specific characters; they also might not.
 | `end.oe` | quadrant | open | town ends in orderly evil | Rex |
 | `end.ce` | quadrant | open | town ends in chaotic evil | Rex |
 | `end.n` | neutral | no | town ends within the neutral radius of the centre: a ghost town | Rex |
+| `end.og_cg` | hybrid | open | upper band (orderly good + chaotic good); name open | Rex (2026-10-28) |
+| `end.oe_ce` | hybrid | open | lower band (orderly evil + chaotic evil); name open | Rex (2026-10-28) |
+| `end.og_oe` | hybrid | open | middle-left band (orderly good + orderly evil): **Twisted Virtue** | Rex (2026-10-28) |
+| `end.cg_ce` | hybrid | open | middle-right band (chaotic good + chaotic evil); name open | Rex (2026-10-28) |
 
-How `end.perfect`, `end.good` and `end.ruin` relate to the five alignment endings is open (The town's alignment,
-Open 1).
+Nine town endings (Rex, 2026-10-28): `end.og`, `end.cg`, `end.oe`, `end.ce`, the four hybrids and `end.n`. Hybrid
+ids are the keeper's. **Perfect** is now defined (Rex, 2026-10-28) as every relevant institution in the same
+alignment, so a perfect version can exist for any ending that rules permit. Still open: how the ENTP's secret route
+R1 below fits that definition, and whether `end.good` and `end.ruin` survive as kinds or are replaced by the nine.
 
 ### `end.perfect`
 
@@ -145,8 +174,8 @@ changes how routes are built.
 
 ## The shape so far
 
-- (Alignment model, 2026-10-27) The town ends in one of five places (four quadrants or the centre), so the
-  endings are five plus whatever routes sit inside them; the counts below are for the slot model.
+- (Alignment model, 2026-10-28) The town ends in one of nine regions (four pure, four hybrid, neutral), each with
+  a perfect version where every relevant institution agrees; the counts below are for the slot model.
 - Combinations = the product of every slot's state count. Now: `port.entp` (2 states) = **2** combinations.
   `port.warehouse`, `port.farm`, `port.bakery` and `port.esfj_shop` have 3 states each (2026-10-27), so
   2 × 3 × 3 × 3 × 3 = **162** combinations (fewer in practice: `port.esfj_shop` always ends `failed` once funded); the other reserved place slots have only `base` so far, so they add nothing yet.
@@ -165,3 +194,4 @@ changes how routes are built.
 | 2026-10-27 | Questing model: all four questlines available, conduct and actions carry alignment points, witnessing crew move, town moves through residents who stay; "one plotline per quadrant, who you take decides" superseded; open A and B recorded | Rex |
 | 2026-10-27 | Neutral is a ghost town: inhabitants replaced by ghostly visions or shades; the people may move on, and depending on your actions may appear in the DLC as specific characters, or not | Rex |
 | 2026-10-27 | Open 6 added: how the fully developed town (sectors) relates to the endings | keeper |
+| 2026-10-28 | Rex's square: the town's alignment comes from its developed institutions (supersedes residents who stay); nine endings with hybrids (`end.og_oe` Twisted Virtue); perfect = all relevant institutions in one alignment; spec in `../balance/ALIGNMENT.md` (via the balance keeper) | Rex |

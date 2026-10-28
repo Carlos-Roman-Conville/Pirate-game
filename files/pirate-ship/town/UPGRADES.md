@@ -43,21 +43,30 @@ choices change, and the town moves on two axes, good/evil and order/chaos. What 
 
 | Key | What | Values | Mark |
 |---|---|---|---|
-| `port.align` | the town's position | a point on good/evil × order/chaos; read as `og`, `cg`, `oe`, `ce`, or `n` within the neutral radius | Rex (axes, quadrants, neutral); ids and the point the keeper's; radius open |
+| `port.align` | the town's position | (x, y), each −100..+100 (x orderly − / chaotic +, y evil − / good +); read as one of nine regions (`og`, `cg`, `oe`, `ce`, `og_cg`, `oe_ce`, `og_oe`, `cg_ce`, `n`) | Rex (2026-10-28); combined from the developed institutions by a formula still open (placeholder: mean) |
+| `<slot>.align` | an institution's current alignment | (x, y) | Rex (2026-10-28) |
+| `<slot>.pending` | a pending transformation: the owner has returned to town and resumed responsibility; applied in the overnight update when you sleep | yes / no, and the target form | Rex (2026-10-28) |
 | `port.cash` | the town's money | amount; nearly out when the game starts (Rex, 2026-10-28: why the INFJ mechanic is leaving) | Rex (the town has cash running out); key and units the keeper's; how it moves: open |
 | `<slug>.align` | a resident's alignment | the same two axes; changed by your choices | Rex |
 | `<slug>.influence` | how much they sway the town | number | proposed (outside AI) |
 | `<slug>.presence` | whether they stay in town (taking them aboard removes their pull) | in town / aboard / gone | proposed (outside AI); Rex said only residents who stay count |
 
-What moves `port.align` (Rex, 2026-10-27): actions and quest sections carry alignment points (`act(<id>)`); crew
+**Transformation rule (Rex, 2026-10-28):** a character's alignment doesn't change their institution at once. When
+they return to town and resume responsibility for it, it becomes eligible; it transforms in the overnight update
+when you sleep, and you see the new form on waking. Character alignment, institution alignment and pending
+transformations are tracked separately; one mechanism for every institution. Open: when an institution locks its
+alignment. Full spec: [`../balance/ALIGNMENT.md`](../balance/ALIGNMENT.md) §5.
+
+Before 2026-10-28: What moves `port.align` (Rex, 2026-10-27): actions and quest sections carry alignment points (`act(<id>)`); crew
 in your party who witness them move by their own inner rules (`../story/QUESTLINES.md`); the town moves through
 the residents who stay. Also Rex's: your answers to town quests. Town events: proposed. By how much: open. Whether
 the player also earns points, or only witnessing crew: open (`ENDINGS.md`, questing model, B).
 
-### Quadrant states (proposed, outside AI)
+### Quadrant states (shape Rex, 2026-10-28; the forms below proposed)
 
-The same building transforms differently per quadrant. If Rex keeps this, a slot's states become its quadrant forms
-(`og`, `cg`, `oe`, `ce`, and `base` for neutral):
+**(Rex, 2026-10-28)** Each institution develops into alignment-specific forms: an orderly good church looks, works
+and behaves differently from a chaotic evil one. So a sector's slot states are its alignment forms. The forms in
+this table are still the outside AI's (proposed); hybrid forms, if any, are open:
 
 | Slot | `og` | `cg` | `oe` | `ce` | Mark |
 |---|---|---|---|---|---|
@@ -271,3 +280,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-28 | The ESFJ still counts for commerce after his shop fails (sells rare goods from the ship); tentative competitors: ISFP for the brothel, ENFP for the town hall (via the balance keeper) | Rex |
 | 2026-10-28 | The ghost rule applies to every sector pair: recruiting one drifts the rival's place toward ghosts (via the balance keeper) | Rex |
 | 2026-10-28 | Withdrawn: the ghost rule for every pair (back to open; food pair only, tentative). Rex's goal: a route to a perfectly working town through a complicated set of choices; open to a third or fourth person per competition (via the balance keeper) | Rex |
+| 2026-10-28 | `port.align` is a (−100..+100)² point read as nine regions; institution keys `<slot>.align`, `<slot>.pending`; transformation rule; quadrant-form shape now Rex's (via the balance keeper) | Rex |
