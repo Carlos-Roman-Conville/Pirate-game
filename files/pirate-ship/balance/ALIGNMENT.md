@@ -142,6 +142,18 @@ invented.
   character, Rex's); `recruit` never develops. **(open)** when a place turns ghosted; whether ghosted is its own
   slot state.
 
+- **(Rex, 2026-10-28; `town/UPGRADES.md` food source, `story/characters/*.md` `develops_place`)** The develop
+  conditions the story gives so far: the farm (`port.farm`, INTP) and the butcher shop (`port.bakery`, ESFP) develop
+  only if you **supply the bodies** (how many, whether you must keep supplying, what happens if you stop: open).
+  Every other character's condition is **open** (their `develops_place` field).
+- **(proposed, keeper, 2026-10-28; Rex: "put the develop conditions into the simulator as data next, the ones the
+  story already gives")** `conditions.json`: per slot, the list of things that must be supplied before `develop`
+  is accepted, e.g. `"port.farm": { "supply": ["bodies"] }`. A `supply { slot, what }` command marks one as
+  supplied (the game issues it from whatever system hands over the goods; the engine doesn't know what bodies are);
+  `develop` refuses a slot with an unmet supply. Placeholder reading: supplying once is enough. A slot absent from
+  the file has no known condition and develops on the command alone, which is the open state, not a rule; when
+  Rex writes a character's condition it goes in here as data and the engine doesn't change.
+
 ## 6. The town and its endings
 
 - **(Rex)** The town's alignment is determined by the alignments of its developed institutions. Each contributes its
@@ -202,6 +214,7 @@ step); Rex tunes after the simulator runs.
 | `townAggregate` | mean | Rex (2026-10-28) |
 | `perfectCounts` | all-developed | Rex (2026-10-28) |
 | INTJ "becomes neutral" | not built | open |
+| `conditions.json` (develop conditions) | farm and butcher shop need `supply bodies`; all other slots open | Rex (facts, 2026-10-28); representation proposed |
 | `gates.json` (joining gates) | ISFJ needs ESTP aboard; INTP, ESTP, ESFP, ISFJ story-gated (`unlock`) | Rex (facts, 2026-10-27); representation proposed |
 
 ## 9. Architecture (keeper's, after the Cursor Opus review of 2026-10-28; built by the belt)
@@ -209,7 +222,7 @@ step); Rex tunes after the simulator runs.
 Separate pieces, like the card games' `effects` (data) and engine (verbs): a change to content never touches the
 engine, and a change to one engine piece doesn't touch the others. **One entry point:** the engine is a reducer,
 `reduce(state, command, config) → { state, log }`, over a command union (`event | recruit | party | leave |
-develop | sleep | unlock`). The game's screens, the server's replay and undo, saves, and the simulator all fold the same
+develop | sleep | unlock | supply`). The game's screens, the server's replay and undo, saves, and the simulator all fold the same
 command log through it; nothing re-sequences the verbs by hand.
 
 ```
@@ -220,6 +233,7 @@ data/pirate-ship/alignment/          content and tunables (Rex's numbers, placeh
   institutions.json                  8 sectors, each with two slots: slot id, owner slug, forms per quadrant (open)
   events.json                        EventDefs: placeholder test events only; Rex's real content comes later
   gates.json                         joining gates (§7): aboard conditions and story-gated slugs
+  conditions.json                    develop conditions (§5): what a slot needs supplied before develop
 web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fishing/)
   square.ts                          positions, clamp, classify → one of 9 regions, anchors, step
   charts.ts                          chart types, respond(), reachable(chart, quadrant)
@@ -228,6 +242,7 @@ web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fi
                                      slots (pos, region, pending), town; initialState(); JSON-safe for saves
   engine.ts                          reduce(): the ONE function the game and sim call; crew and event commands
   gates.ts                           joining gates: canRecruit(state, slug, gates), unlock
+  conditions.ts                      develop conditions: canDevelop(state, slot, conditions), supply
   institutions.ts                    develop, leave → eligible, sleep → transforms (returned), the §5 config keys
   town.ts                            aggregate slots → town position; perfect check
   endings.ts                         town position → ending id (9), with perfect flag
@@ -255,3 +270,4 @@ web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fi
 | 2026-10-28 | A place whose owner leaves for good freezes at the alignment it had | Rex |
 | 2026-10-28 | Build with the placeholder numbers; Rex tunes after the simulator runs | Rex |
 | 2026-10-28 | Joining gates into the simulator as data (`gates.json`, `unlock` command): Rex's facts from the story and town keepers; the representation proposed | Rex (decision); keeper |
+| 2026-10-28 | Develop conditions into the simulator as data (`conditions.json`, `supply` command): the food pair's bodies from the story; the rest open | Rex (decision); keeper |
