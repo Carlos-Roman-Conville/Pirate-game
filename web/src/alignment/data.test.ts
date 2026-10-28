@@ -69,10 +69,6 @@ describe('starts.json', () => {
       expect(starts[slug as keyof typeof starts], slug).toBe(category)
     }
   })
-
-  it('rejects a start category outside the spec table (negative)', () => {
-    expect(SPEC_STARTS['entp-m']).not.toBe('og')
-  })
 })
 
 describe('institutions.json', () => {

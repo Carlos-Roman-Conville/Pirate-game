@@ -195,6 +195,7 @@ describe('§6 town and endings', () => {
   })
 
   it('four OG and four OE average into hybrid_order named Twisted Virtue from data', () => {
+    expect(endingNames.hybrid_order).toBe('Twisted Virtue')
     const state = town(['og', 'og', 'og', 'og', 'oe', 'oe', 'oe', 'oe'])
     expect(townPosition(state, config)).toEqual({ x: -config.thresholds.startCoords.x, y: 0 })
     expect(ending(state, config)).toEqual({ id: 'hybrid_order', perfect: false, name: endingNames.hybrid_order })
