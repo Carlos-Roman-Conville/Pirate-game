@@ -52,6 +52,7 @@ reachable" (Rex: "design this as the actual backend so we don't program the syst
 | 15 | The simulator `sim/`: scenario runner (recruit, leave, event, return, sleep), strategies, bounded reachability search for perfect towns per ending × config; smoke tests that print each ending's verdict and route | codex | 14 | vitest `src/alignment/sim` prints a verdict for all four perfect towns | done (2478) |
 | 16 | Docs: this table's statuses, HANDOFF State/Next, BRIEF state line, glossary terms for the square | sonnet | 15 | HANDOFF under 4 KB with the four headings; glossary has the alignment terms | done (2479) |
 | 17 | Check: every ALIGNMENT.md §1–§7 rule has a test named after it; the misses listed in `files/pirate-ship/ALIGNMENT_COVERAGE.md` | haiku | 16 | the coverage file exists and names each rule | done (2480) |
+| 18 | Joining gates as data: `gates.json` (ISFJ needs the ESTP aboard; INTP, ESTP, ESFP, ISFJ story-gated), `gates.ts`, `unlock` command, `recruit` refuses a gated character; the sim's strategies unlock and bring the key aboard; rerun | codex | 15 | vitest: one test per gate rule; the four verdicts reprinted with gates on | queued (2486) |
 | **Gate** | Rex reads the simulator's routes and tunes the placeholders in `thresholds.json`; the balance keeper reruns the sims | | | | gate |
 
 ## Later phases (not planned yet)

@@ -166,6 +166,19 @@ invented.
   `location` (`town | aboard | departed`) and `inParty`, with crew commands `recruit`, `party`, `leave` (leave =
   return to town, §5) and a `crewSlots` number in data. Why someone joins or leaves (gates, storylines) is story,
   outside the engine; the engine only refuses a fourth aboard.
+- **(Rex, 2026-10-27; `town/TOWNS.md`, `story/characters/INDEX.md`)** Joining gates: the INTP farmer, the old ESTP
+  soldier, the ESFP cook and the ISFJ doctor need **higher reputation plus their completed sub quests** before
+  they'll consider joining (which reputation and what level: open; a fifth gated recruit: open). The ISFJ joins
+  **only if you have the ESTP in your party** (`isfj-f.md`).
+- **(proposed, keeper, 2026-10-28; Rex: "put the known joining gates into the simulator as data")** The gates are
+  data, `gates.json`, one entry per gated slug with two kinds of condition. `aboard: [slugs]` the engine checks
+  itself: `recruit` refuses unless every listed character is aboard (placeholder reading of "in your party" as
+  aboard, i.e. in the crew; **(open)** whether Rex means the event party instead). `story: true` stands for the
+  reputation and sub quests, which live outside the engine (`STATS.md`, `TOWNS.md`): the game sends an
+  `unlock { slug }` command when the story grants them, `recruit` refuses a story-gated character who hasn't been
+  unlocked, and `unlocked` is kept per character in state. In the simulator an unlock is one step, so every route
+  shows and counts the earning instead of skipping it. Nothing in the engine knows what reputation or a sub quest
+  is; when those are built, their systems issue the unlock.
 
 ## 8. What stays configurable or unresolved (never invented)
 
@@ -189,13 +202,14 @@ step); Rex tunes after the simulator runs.
 | `townAggregate` | mean | Rex (2026-10-28) |
 | `perfectCounts` | all-developed | Rex (2026-10-28) |
 | INTJ "becomes neutral" | not built | open |
+| `gates.json` (joining gates) | ISFJ needs ESTP aboard; INTP, ESTP, ESFP, ISFJ story-gated (`unlock`) | Rex (facts, 2026-10-27); representation proposed |
 
 ## 9. Architecture (keeper's, after the Cursor Opus review of 2026-10-28; built by the belt)
 
 Separate pieces, like the card games' `effects` (data) and engine (verbs): a change to content never touches the
 engine, and a change to one engine piece doesn't touch the others. **One entry point:** the engine is a reducer,
 `reduce(state, command, config) → { state, log }`, over a command union (`event | recruit | party | leave |
-develop | sleep`). The game's screens, the server's replay and undo, saves, and the simulator all fold the same
+develop | sleep | unlock`). The game's screens, the server's replay and undo, saves, and the simulator all fold the same
 command log through it; nothing re-sequences the verbs by hand.
 
 ```
@@ -205,6 +219,7 @@ data/pirate-ship/alignment/          content and tunables (Rex's numbers, placeh
   starts.json                        starting categories (§4)
   institutions.json                  8 sectors, each with two slots: slot id, owner slug, forms per quadrant (open)
   events.json                        EventDefs: placeholder test events only; Rex's real content comes later
+  gates.json                         joining gates (§7): aboard conditions and story-gated slugs
 web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fishing/)
   square.ts                          positions, clamp, classify → one of 9 regions, anchors, step
   charts.ts                          chart types, respond(), reachable(chart, quadrant)
@@ -212,6 +227,7 @@ web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fi
   state.ts                           versioned state: day, player, characters (pos, location, inParty),
                                      slots (pos, region, pending), town; initialState(); JSON-safe for saves
   engine.ts                          reduce(): the ONE function the game and sim call; crew and event commands
+  gates.ts                           joining gates: canRecruit(state, slug, gates), unlock
   institutions.ts                    develop, leave → eligible, sleep → transforms (returned), the §5 config keys
   town.ts                            aggregate slots → town position; perfect check
   endings.ts                         town position → ending id (9), with perfect flag
@@ -238,3 +254,4 @@ web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fi
 | 2026-10-28 | Recruiting alone doesn't develop a place; it takes a sub quest or supplying what they need; develop is its own command | Rex |
 | 2026-10-28 | A place whose owner leaves for good freezes at the alignment it had | Rex |
 | 2026-10-28 | Build with the placeholder numbers; Rex tunes after the simulator runs | Rex |
+| 2026-10-28 | Joining gates into the simulator as data (`gates.json`, `unlock` command): Rex's facts from the story and town keepers; the representation proposed | Rex (decision); keeper |
