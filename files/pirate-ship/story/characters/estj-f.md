@@ -45,7 +45,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | hire / mercenary / kidnap; what they need first (rep, proof, gift, questline) | open |
+| How recruited | `recruit` | after a sub quest: you prove your skill to her through a series of games she has you play at the pub. She then sees some potential in you and decides to join, to fix your messed-up boat and crew you up (which games is open) | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -54,7 +54,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | With | Key | What it is | Mark |
 |---|---|---|---|
-| the player | `rel.player` | | open |
+| the player | `rel.player` | tests you at the pub; sees some potential in you; joins to fix your boat and crew | Rex |
 
 ## Heart events
 
@@ -134,3 +134,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Created with the alignment map (OG→CE, CG→OG, OE→CG, CE→OE) | Rex |
 | 2026-10-27 | An old privateer who lost his crew at sea; a man; file moved from `estj.md` to `estj-m.md` | Rex |
 | 2026-10-27 | Now a woman: a pirate lady in her 40s, once part of a powerful crew, who lost everyone; file moved from `estj-m.md` to `estj-f.md` | Rex |
+| 2026-10-27 | Why she joins: after you prove your skill in a series of pub games, she sees potential and joins to fix your boat and crew | Rex |
