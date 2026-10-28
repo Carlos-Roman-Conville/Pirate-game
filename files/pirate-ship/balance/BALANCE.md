@@ -34,7 +34,7 @@ make new characters.
 | Hunting (outdoorswoman vs hunter) | **OG and OE** | the hunter's (ISTP) diagram lands on OG and OE |
 | Inventions (ENTP vs INFJ mechanic) | nothing; the ENTP alone reaches all four | the INFJ's chart has no constraint |
 | Commerce (ENFJ vs ESFJ) | nothing: the merchant still counts after his shop fails (Rex, 2026-10-28) | |
-| Brothel (INFP vs ISFP, tentative) | **all four**: neither chart is made | the INFP's and ISFP's charts together land on all four (either one alone can do it) |
+| Brothel (INFP vs ISFP, tentative) | nothing: the ISFP reaches OG and CE, the INFP CG and OE (charts 2026-10-28) | |
 | Town hall (ESTJ vs ENFP, tentative) | nothing; the ESTJ and the ENFP (chart 2026-10-28) each reach all four | |
 
 ## Are the alignment maps on file?
@@ -56,6 +56,8 @@ the story keeper. The reachable sets the outside AI quoted for 8 characters all 
 | ISTJ `istj-m` (Rex, 2026-10-28) | OG no change (leans OG), CG no change (leans CG), OE→CG, CE→OG | OG, CG | n/a |
 | Evil ENTJ priest (new, Rex, 2026-10-28; slug not assigned yet) | OG→CE, CG→OE, OE no change (leans OE), CE no change (leans CE) | OE, CE | n/a |
 | ENFP (tentative; Rex's chart, 2026-10-28) | OG→CG, CG→OG, OE→CE, CE→OE (two double-headed arrows: good acts swap them across the good row, evil acts across the evil row; keeper's reading) | all four | n/a |
+| INFP `infp-m` (Rex, 2026-10-28) | OG→CG, CG→OE, OE no change (leans OE), CE→OE | CG, OE | n/a |
+| ISFP (tentative; Rex's chart, 2026-10-28) | OG→CE, CG→OG, OE→CE, CE no change (leans CE) | OG, CE | n/a |
 | ISFJ `isfj-f` (Rex, 2026-10-28) | OG no change (dashed ring: leans OG), CG→CE, OE→CG, CE→OE | all four (OG by leaning, which arrives) | n/a |
 
 **The ISTJ priest's chart (Rex, 2026-10-28):** OG dashed ring (leans OG), CG dashed ring (leans CG), OE→CG,
@@ -70,7 +72,7 @@ keeper. Either way he never reaches OE or CE, so the balance result is the same.
 On the ISFJ's chart the chaotic evil square is highlighted. On the ESTP's and ESFP's charts Rex said the highlight
 isn't the starting alignment, so it isn't read as hers either: **(open)**.
 
-Not made: **ISTP, INFP**, the new mechanic, a possible church competitor. Starting alignments are open for
+Not made: **ISTP**, the new mechanic, a possible church competitor. Starting alignments are open for
 everyone except the INTJ (OE) and the ENTP (CE).
 
 ## 1. The model
@@ -153,7 +155,7 @@ out.
 | `isfj-f` | yes (lean) | yes | yes | yes |
 | evil ENTJ priest | start? | start? | yes (lean) | yes (lean) |
 | `istp-f` | map? | map? | map? | map? |
-| `infp-m` | map? | map? | map? | map? |
+| `infp-m` | start? | yes | yes (lean) | start? |
 | `infj-m` | map? | map? | map? | map? |
 
 ### Per sector
@@ -166,30 +168,29 @@ out.
 | hunting / gathering | ESTP / ISTP | Rex | **open only** (ISTP map?, ESTP start?) | yes: ESTP | **open only** (ISTP map?, ESTP start?) | yes: ESTP |
 | inventions | ENTP / INFJ mechanic | Rex | yes: ENTP | yes: ENTP | yes: ENTP | yes: ENTP |
 | commerce | ENFJ / ESFJ | Rex | yes: ENFJ, ESFJ | yes: ESFJ alone | yes: ENFJ, ESFJ | yes: ESFJ alone |
-| brothel | INFP / ISFP (tentative) | Rex | **open only** (INFP map?) | **open only** (INFP map?) | **open only** (INFP map?) | **open only** (INFP map?) |
+| brothel | INFP / ISFP (tentative) | Rex | yes: ISFP | yes: INFP | yes: INFP | yes: ISFP |
 | town hall | ESTJ / ENFP (tentative) | Rex | yes: ESTJ, ENFP | yes: ESTJ, ENFP | yes: ESTJ, ENFP | yes: ESTJ, ENFP |
 
 ### Per ending
 
 | Ending | Characters who can reach it now | Sectors covered now | Resting only on something open | Starved | Full-town routes now | If every open item lands well |
 |---|---|---|---|---|---|---|
-| Orderly good | ENTP, INTP, ESFJ, ENFJ, ESTJ, ISTJ, ISFJ (7) | 6 / 8 | hunting, brothel | none | **0** | 32 |
-| Chaotic good | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISTJ, ISFJ (7) | 7 / 8 | brothel | none | **0** | 32 |
-| Orderly evil | ENTP, INTJ, INTP, ESFJ, ENFJ, ESTJ, ISFJ, ENTJ priest (8) | 6 / 8 | hunting, brothel | none | **0** | 32 |
-| Chaotic evil | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISFJ, ENTJ priest (7) | 7 / 8 | brothel | none | **0** | 16 |
+| Orderly good | ENTP, INTP, ESFJ, ENFJ, ESTJ, ISTJ, ISFJ, ENFP, ISFP (9) | 7 / 8 | hunting | none | **0** | 128 |
+| Chaotic good | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISTJ, ISFJ, INFP, ENFP (9) | **8 / 8** | none | none | **2** | 128 |
+| Orderly evil | ENTP, INTJ, INTP, ESFJ, ENFJ, ESTJ, ISFJ, INFP, ENTJ priest, ENFP (10) | 7 / 8 | hunting | none | **0** | 128 |
+| Chaotic evil | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISFJ, ENTJ priest, ENFP, ISFP (9) | **8 / 8** | none | none | **2** | 64 |
 | Neutral | not a quadrant: reached by staying near the centre; the INTJ's "shown she's wrong" also lands her there | n/a | | | | |
 
-**Two things left, as of 2026-10-28 (the brothel split):**
+**Chaotic good and chaotic evil are complete** (2026-10-28, with the ISFP's and INFP's charts): every sector
+reaches them, 2 routes each (the town hall's ESTJ or ENFP).
 
-1. **The brothel**: no ending reaches it yet, because neither the INFP's chart nor the ISFP's is made.
-   Until it's filled, no ending has a full-town route (that's why every "routes now" is 0).
-2. **Hunting's orderly side**: orderly good and orderly evil wait on the ISTP's chart.
+- Chaotic good, one route: ISTJ priest, doctor, cook, outdoorswoman, ENTP, merchant, INFP, ESTJ.
+- Chaotic evil, one route: ENTJ priest, doctor, cook, outdoorswoman, ENTP, merchant, ISFP, ESTJ.
 
-Fill the brothel and chaotic good and chaotic evil are complete (every other sector already reaches them: for CG
-priest, doctor, cook, outdoorswoman, ENTP, merchant, ESTJ; for CE the same with the ENTJ priest instead of the
-ISTJ). Fill both and all four are.
+**The only gap left: hunting's orderly side.** Orderly good and orderly evil both wait on the ISTP's chart landing
+on OG and OE. With it, all four endings are complete.
 
-Chance, for the record only (not a problem): OE has the most characters (7) and the INTJ falls into OE from every
+Chance, for the record only (not a problem): OE has the most characters (10) and the INTJ falls into OE from every
 action, so OE is the likeliest ending a player drifts into. Rex hasn't asked for chance to be balanced.
 
 ## 3. Problems found, ranked
@@ -286,7 +287,7 @@ Not filled-in maps; Rex makes them.
 | ISTJ `istj-m` | made (Rex, 2026-10-28): OG, CG | OE, CE (Rex: can't be corrupted) | P1 |
 | ISTP `istp-f` | **OG and OE** | nothing | P2 |
 | INFJ mechanic `infj-m` (slug placeholder) | nothing | nothing | the ENTP reaches all four; any map helps P5 |
-| INFP `infp-m` + ISFP (tentative) | **together, all four** (OG, CG, OE, CE); either can carry any of them | nothing | the brothel has no other character |
+| INFP `infp-m` | made (Rex, 2026-10-28): CG, OE | | brothel complete |
 | ENFP (tentative, the ESTJ's rival) | made (Rex, 2026-10-28): all four | nothing | the ESTJ reaches all four |
 | ISFJ `isfj-f` | made (Rex, 2026-10-28); covers all four | | P3 closed |
 | Any new character | together with their sector partner, all four | | the strict reading |
@@ -295,11 +296,11 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 
 ## 5. What's open
 
-- The ISTP, INFP and INFJ mechanic maps; the evil ENTJ priest's slug, gender, starting alignment, and whether they're recruitable (the cast was 12 recruitables, 6 men and 6 women); 10 starting
+- The ISTP and INFJ mechanic maps; the evil ENTJ priest's slug, gender, starting alignment, and whether they're recruitable (the cast was 12 recruitables, 6 men and 6 women); 10 starting
   alignments (whether the ISFJ's and ISTJ's highlighted CE squares are their starts).
 - Whether the priest's chart replaces his earlier OE and CE words (OE "does nothing"; CE "moves the town toward good").
 - Eight sectors now (church, healing, food, hunting, inventions, commerce, brothel, town hall).
-- The ENFP and ISFP: confirmed or not, gender, slug; the ISFP's chart; whether the ENFP's highlighted CE square is a start; what the town hall is and who else is there.
+- The ENFP and ISFP: confirmed or not, gender, slug; whether the ENFP's highlighted CE square is a start; what the town hall is and who else is there.
 - Whether both institutions in a sector can succeed (proposed), and whether the food rule's "the other drifts
   toward ghosthood" applies to every pair.
 - What "succeed" means for a sector: the institution developed, the character's storyline done, or both.
@@ -322,3 +323,5 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | The merchant still counts for commerce after his shop fails (he keeps selling rare goods from the ship); P4 closed | Rex |
 | 2026-10-28 | Rivals, tentative ("thinking"): the ESTJ vs an ENFP for the town hall, the INFP vs an ISFP for the brothel | Rex |
 | 2026-10-28 | The ENFP's chart (OG↔CG, OE↔CE): reaches all four; the town hall has two carriers | Rex |
+| 2026-10-28 | The ISFP's chart (OG→CE, CG→OG, OE→CE, CE lean): reaches OG and CE; the INFP must reach CG and OE | Rex |
+| 2026-10-28 | The INFP's chart (OG→CG, CG→OE, OE lean, CE→OE): brothel complete; chaotic good and chaotic evil complete; only hunting OG/OE (the ISTP) left | Rex |

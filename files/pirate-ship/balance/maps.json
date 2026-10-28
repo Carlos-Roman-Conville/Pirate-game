@@ -133,14 +133,14 @@
     },
     "infp-m": {
       "map": {
-        "og": null,
-        "cg": null,
-        "oe": null,
-        "ce": null
+        "og": "cg",
+        "cg": "oe",
+        "oe": "lean",
+        "ce": "oe"
       },
       "start": null,
       "never": [],
-      "mark": "open: map not made"
+      "mark": "Rex (chart 2026-10-28): OG->CG, CG->OE, OE dashed ring (lean), CE->OE. Highlighted CE square: start open"
     },
     "entj-priest": {
       "map": {
@@ -177,14 +177,14 @@
     },
     "isfp": {
       "map": {
-        "og": null,
-        "cg": null,
-        "oe": null,
-        "ce": null
+        "og": "ce",
+        "cg": "og",
+        "oe": "ce",
+        "ce": "lean"
       },
       "start": null,
       "never": [],
-      "mark": "Rex (tentative, 2026-10-28: 'thinking'): the INFP's rival for the brothel. Gender and slug open; map not made"
+      "mark": "Rex (chart 2026-10-28; the character tentative): the INFP's rival for the brothel. OG->CE, CG->OG, OE->CE, CE dashed ring (lean). Highlighted CE square: start open. Gender and slug open"
     }
   },
   "sectors": [
