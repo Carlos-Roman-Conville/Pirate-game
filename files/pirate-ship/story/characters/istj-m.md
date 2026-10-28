@@ -58,6 +58,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | With | Key | What it is | Mark |
 |---|---|---|---|
+| the evil ENTJ priest (`entj-m`) | `rel.entj-m` | rivals: the ENTJ competes with him for the church | Rex |
 | the player | `rel.player` | sees you as floundering and a bit pathetic; wants to take your measure and bring you to God, expecting to fail | Rex |
 
 ## Heart events
@@ -144,3 +145,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | An old pirate who gave up the life; joins of his own offer, to help you, take your measure and try to bring you to God | Rex |
 | 2026-10-28 | Inner rules: his alignment map (OG lean, CG lean, OE→CG, CE→OG); where it differs from the earlier cells is open for Rex | Rex |
+| 2026-10-28 | Tie: the evil ENTJ priest competes with him for the church | Rex |

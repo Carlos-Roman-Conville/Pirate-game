@@ -108,7 +108,7 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | Chaotic evil (killers, devil worship) | `quest.chaos_evil` | moves her to orderly evil | Rex |
 
 - **(proposed, outside AI)** Paired developments: compassionate care vs cruelty as treatment.
-- **(Rex, 2026-10-28)** The church and the clinic are kept separate (not competitors). Rex may make a new character to compete with the church.
+- **(Rex, 2026-10-28)** The church and the clinic are kept separate (not competitors). Rex may make a new character to compete with the church (done the same day: the evil ENTJ priest, `entj-m`, competes with the ISTJ for it).
 
 ### Inner rules: her alignment map (Rex, 2026-10-28)
 
