@@ -29,7 +29,11 @@ invented.
 - **(Rex)** Every position must classify; the thresholds leave a transitional ring (for example (20, 20): neither
   pure nor clearly one band), and it must be handled explicitly.
 - **(proposed, keeper)** Transitional rule: the axis with the larger |value| decides the band (|x| > |y| → a
-  left/right band; |y| > |x| → an upper/lower band); an exact tie reads as neutral. Configurable (`tieBreak`).
+  left/right band; |y| > |x| → an upper/lower band). **(open)** What an exact tie (|x| = |y|) reads as: config
+  `tieBreak`, placeholder `neutral`. The Cursor Opus review (2026-10-28) found that with anchors on the diagonal
+  (±70, ±70) a character walking from the centre sits on |x| = |y| at every step, so with `neutral` the three
+  neutral starters jump from neutral straight to pure and never cross a hybrid band. Rex decides what a tie reads
+  as; the step metric and the start coordinates (§8) also move this.
   Rex's own sketch (2026-10-28) shows a small neutral square at the centre and "at least a quarter past the
   middle is choosing something"; the 15 and 30 are the outside AI's provisional numbers, kept until Rex tunes them.
 
@@ -39,14 +43,17 @@ invented.
   questline), **independent actions** (things you do outside quests: kidnap, heal, steal, help…).
 - **(Rex)** Each source's items are **minor** or **major**; the designation sets how much influence they carry.
 - **(Rex)** Every event has an alignment category: OG, CG, OE or CE.
-- **(Rex)** All three go through **one shared engine** as events. An event record (keeper's shape, proposed):
-  `{ id, source: dialogue|quest|action, category: og|cg|oe|ce, weight: minor|major, witnesses: [slugs],
-  playerActs: bool }`. The content of events (which dialogue line is what) is Rex's writing and lives in data; the
-  engine only knows the record.
+- **(Rex)** All three go through **one shared engine** as events. Two records (keeper's shape, proposed, after the
+  Cursor Opus review): the **definition** is data, `EventDef { id, source: dialogue|quest|action, category:
+  og|cg|oe|ce, weight: minor|major }` (Rex's writing, in `events.json`); the **occurrence** is runtime,
+  `EventOccurrence { defId, witnesses: [slugs], playerActs: bool, day }`, filled by the game (who was present) or
+  the simulator. The engine only knows the records.
 - **(Rex)** Alignment **accumulates**: a minor event moves a little, a major one more; repeated events carry someone
   across the square. Nothing changes instantly.
-- **(open)** The step sizes. Placeholders in data: minor 10, major 25 on the ±100 square, movement as a step toward
-  the destination quadrant's anchor point (anchor (±70, ±70), also a placeholder). Rex tunes.
+- **(open)** The step sizes and the step itself. Placeholders in data: minor 10, major 25 on the ±100 square,
+  movement as a step toward the destination quadrant's anchor point (anchor (±70, ±70), also a placeholder);
+  `step.metric` = a fixed Euclidean distance toward the anchor (not a fraction of the remaining distance, so a lean
+  can arrive); `step.overshoot` = stop at the anchor. Rex tunes; the engine never hard-codes any of it.
 
 ## 3. The player
 
@@ -68,6 +75,8 @@ invented.
 - **(Rex)** Alignment **persists through crew rotation**: a character who leaves keeps their position; recruiting
   them again doesn't reset it. Required by the progressive storyline.
 - **(Rex)** A character's nature isn't corrupted by the quest they go on; the chart is the only thing that moves them.
+- **(proposed, keeper)** `reachable(chart, quadrant)` lives in the engine's `charts.ts` (the question `reach.py`
+  answers); once it exists `reach.py` and `maps.json` are retired, so the rule isn't written twice.
 - **(Rex, special case)** The INTJ: shown her belief is wrong, she becomes neutral (`intj-f.md`). **(open)** what
   "neutral" does in the engine (a jump to the centre? a new chart?). Parked as an unresolved verb, not built.
 
@@ -92,8 +101,9 @@ invented.
 | `esfp-f` | ESFP cook | CE |
 | `isfp` (slug placeholder) | ISFP brothel rival | CE |
 
-- **(open)** The coordinates a category maps to (placeholder: a pure quadrant = its anchor (±70, ±70); neutral =
-  (0, 0)). Starting category and chart are independent (Rex).
+- **(open)** The coordinates a category maps to: config `startCoords`, its own key, not the movement anchor
+  (placeholder (±50, ±50) for a pure quadrant, (0, 0) for neutral; starting on the anchor would make a lean a
+  no-op from turn one). Starting category and chart are independent (Rex).
 
 ## 5. Institutions
 
@@ -113,6 +123,14 @@ invented.
 - **(open)** The precise rule for when an institution adopts or locks its alignment (every sleep after a return?
   once? only on a developed institution?). Config `institutionLock`, default unresolved-but-runnable: re-read the
   owner's region at every sleep while they're in town.
+- **(proposed, keeper)** State is kept **per slot** (two places per sector, `institutions.json` `slots`), and the
+  sector's winner is derived, so "both of a pair developed" (C1 b) and `perfectCounts` are expressible. Each
+  slot's forms per quadrant are data (`forms`, names open: the town keeper's). `sleep` returns the list of
+  transformations, so the waking screen can show them; the day counter lives in state.
+- **(open)** Three more cases the review found, each a config key, placeholder in brackets: an owner who leaves for
+  good (the INFJ, `ownerDeparted` [freeze]); a pending institution whose owner is aboard again at sleep
+  (`pendingWhenAboard` [keep]); a developed place whose owner hasn't slept yet, `pos` null, in the town's mean
+  (`undevelopedCounts` [skip]).
 - **(open)** What "developed" means, and the ghost rule beyond the food pair (`BALANCE.md` C1): config
   `ghostRule: food-only | every-pair-both-improve | every-pair-duel | every-pair-one-ghosts`.
 
@@ -134,17 +152,22 @@ invented.
 
 ## 7. The crew (unchanged, for the engine's state)
 
-- **(Rex)** 3 crew slots to start; rotation is a progressive storyline. The engine tracks who is aboard, who is in
-  the party for an event, who is in town. Recruiting and leaving are state changes the game (or the simulator)
-  makes; their reasons (gates, storylines) are story rules outside the engine.
+- **(Rex)** 3 crew slots to start; rotation is a progressive storyline. The engine tracks each character's
+  `location` (`town | aboard | departed`) and `inParty`, with crew commands `recruit`, `party`, `leave` (leave =
+  return to town, §5) and a `crewSlots` number in data. Why someone joins or leaves (gates, storylines) is story,
+  outside the engine; the engine only refuses a fourth aboard.
 
 ## 8. What stays configurable or unresolved (never invented)
 
 | Key | Default (placeholder) | Status |
 |---|---|---|
 | `thresholds.neutral`, `thresholds.pure` | 15, 30 | Rex (provisional) |
-| `tieBreak` | larger axis; tie → neutral | proposed |
+| `tieBreak` (|x| = |y| in the ring) | neutral | open (see §1: the cliff) |
 | `step.minor`, `step.major`, `anchor` | 10, 25, (±70, ±70) | open |
+| `step.metric`, `step.overshoot` | fixed distance; stop at anchor | open |
+| `startCoords` | (±50, ±50); neutral (0, 0) | open |
+| `crewSlots` | 3 | Rex |
+| `ownerDeparted`, `pendingWhenAboard`, `undevelopedCounts` | freeze, keep, skip | open |
 | `leanFactor` | 0.5 | open |
 | `witnesses` | present only; absent learning off | Rex (for now) / open |
 | `institutionLock` | re-read each sleep while owner in town | open |
@@ -153,39 +176,44 @@ invented.
 | `perfectCounts` | winners-only | open |
 | INTJ "becomes neutral" | not built | open |
 
-## 9. Architecture (keeper's, built by the belt)
+## 9. Architecture (keeper's, after the Cursor Opus review of 2026-10-28; built by the belt)
 
 Separate pieces, like the card games' `effects` (data) and engine (verbs): a change to content never touches the
-engine, and a change to one engine piece doesn't touch the others.
+engine, and a change to one engine piece doesn't touch the others. **One entry point:** the engine is a reducer,
+`reduce(state, command, config) → { state, log }`, over a command union (`event | recruit | party | leave |
+develop | sleep`). The game's screens, the server's replay and undo, saves, and the simulator all fold the same
+command log through it; nothing re-sequences the verbs by hand.
 
 ```
 data/pirate-ship/alignment/          content and tunables (Rex's numbers, placeholders marked)
-  thresholds.json                    square thresholds, steps, anchors, leanFactor, config keys of §8
-  charts.json                        the 16 response charts (from story/characters; maps.json is a copy)
+  thresholds.json                    thresholds, steps, anchors, startCoords, leanFactor, crewSlots, §8 keys
+  charts.json                        the 16 response charts (from story/characters)
   starts.json                        starting categories (§4)
-  institutions.json                  the 8 sectors: id, slot ids, the pair, which character owns which slot
-  events.json                        placeholder test events only; Rex's real dialogue/quests come later
+  institutions.json                  8 sectors, each with two slots: slot id, owner slug, forms per quadrant (open)
+  events.json                        EventDefs: placeholder test events only; Rex's real content comes later
 web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fishing/)
-  square.ts                          positions, clamp, classify → one of 9 regions, anchors
-  charts.ts                          chart types, lookup (category → destination | lean | stay)
-  events.ts                          the event record and its validation
-  state.ts                           player, characters (position, aboard, inParty, inTown), institutions, town
-  engine.ts                          applyEvent(state, event, config): the ONE function the game and sim call
-  institutions.ts                    return → eligible; sleep(state) → transforms; pending list
-  town.ts                            aggregate institutions → town position; perfect check
+  square.ts                          positions, clamp, classify → one of 9 regions, anchors, step
+  charts.ts                          chart types, respond(), reachable(chart, quadrant)
+  events.ts                          EventDef, EventOccurrence, validation
+  state.ts                           versioned state: day, player, characters (pos, location, inParty),
+                                     slots (pos, region, pending), town; initialState(); JSON-safe for saves
+  engine.ts                          reduce(): the ONE function the game and sim call; crew and event commands
+  institutions.ts                    develop, leave → eligible, sleep → transforms (returned), the §5 config keys
+  town.ts                            aggregate slots → town position; perfect check
   endings.ts                         town position → ending id (9), with perfect flag
-  sim/                               strategies, scenario runner, reachability search, smoke tests, a CLI
+  index.ts                           the only surface scenes and the sim import
+  sim/                               scenario runner, strategies, reachability search, smoke tests
 ```
 
 - Every rule in §1–§7 gets one vitest test named after it; every number comes from data.
 - The simulator: `npx vitest run src/alignment/sim` answers "is a perfect X town reachable under config Y", prints
-  the route it found, and can play N random games for frequency (chance) when asked. The game's screens will call
-  `engine.applyEvent` and `institutions.sleep` the same way.
-- `balance/reach.py` keeps answering the quick opportunity question from `maps.json` until `charts.json` exists;
-  then it reads `charts.json` and `maps.json` is retired.
+  the route it found, and can play N random games for frequency (chance) when asked.
+- `balance/reach.py` keeps answering the quick opportunity question from `maps.json` only until `charts.ts`
+  exists; then both are retired (the build rule: nothing twice).
 
 ## Change log
 
 | Date | Change | By |
 |---|---|---|
 | 2026-10-28 | Created from Rex's run-down and the outside AI's spec he adopted: square, events, player, characters, starts, institutions, town, open keys, architecture | Rex; keeper (marks, architecture) |
+| 2026-10-28 | Cursor Opus design review folded in: reduce() over a command log, EventDef vs EventOccurrence, per-slot institutions, crew commands, reachable() in the engine; four forced inventions became open keys (tieBreak cliff, step metric/overshoot, startCoords, ownerDeparted/pendingWhenAboard/undevelopedCounts) | keeper; review Cursor Opus |
