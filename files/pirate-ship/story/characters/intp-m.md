@@ -62,8 +62,7 @@ Shared with the other parent's file (`intp-m.md` / `esfp-f.md`); kept the same i
   - **Both:** both improve, but a secret duel event happens (what it is, is open).
 - **(open)** Rex wasn't sure at first whether the institution improves or declines, or what taking both does; the
   outcomes above are his answer as he thought it through.
-- **(open)** "Both" is read as the farm and the cook's shop; "that institution" with neither is read as both
-  businesses going to ghosts. To confirm.
+- **(Rex, 2026-10-27)** Confirmed: taking neither sends both the farm and the cook's shop to ghosts.
 
 ## Joining
 
@@ -166,3 +165,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |
 | 2026-10-27 | Inner rules: his alignment map (OG→OE, CG→OG, OE no change, CE→OE); replaces an earlier wrong chart sent the same day | Rex |
 | 2026-10-27 | Food-source consequences: bodies as the prerequisite quest; their child runs the business; neither → ghosts, one → improves and the other toward ghosthood, both → both improve plus a secret duel | Rex |
+| 2026-10-27 | Confirmed: taking neither sends both the farm and the cook's shop to ghosts | Rex |
