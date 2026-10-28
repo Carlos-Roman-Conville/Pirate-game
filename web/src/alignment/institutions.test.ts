@@ -6,7 +6,6 @@ import {
 } from './index'
 
 const config = loadAlignmentConfig()
-config.thresholds.ghostRule = 'every-pair-both-improve'
 const fresh = () => initialState(loadStarts(), config.thresholds)
 const run = (state: AlignmentState, command: Command) => reduce(state, command, config).state
 const church = 'port.church'

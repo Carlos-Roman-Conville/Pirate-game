@@ -21,7 +21,6 @@ export const UNRESOLVED: string[] = [
   'witnesses: present-only; absent learning is unresolved',
   'pendingWhenAboard / undevelopedCounts: placeholder keep / skip; ownerDeparted is freeze (Rex)',
   'institutionLock: placeholder reread-each-sleep-while-owner-in-town',
-  'ghostRule: data still says food-only; callers must select every-pair-both-improve',
   'Ghost timing and a distinct ghost state are undefined; undeveloped slots stay undeveloped',
   'Missing port slot IDs use internal sector:owner keys until content supplies IDs',
   'winners-only simultaneous transformations: no tie-breaking rule is defined',

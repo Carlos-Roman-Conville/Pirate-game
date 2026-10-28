@@ -187,12 +187,15 @@ describe('alignment engine rules', () => {
     command.occurrence.witnesses.push('istj-m')
     expect((state.log[0] as typeof command).occurrence.witnesses).toEqual(['entp-m'])
   })
-  it('§9 sleep advances the day; unsupported ghostRule still rejects development', () => {
+  it('§9 sleep advances the day; the data default allows development after recruitment', () => {
     expect(reduce(fresh(), { type: 'sleep' }, config).state.day).toBe(1)
-    expect(() => reduce(fresh(), { type: 'develop', slot: 'port.church' }, config)).toThrow('unresolved ghostRule')
+    const recruited = reduce(fresh(), { type: 'recruit', slug: 'istj-m' }, config).state
+    expect(reduce(recruited, { type: 'develop', slot: 'port.church' }, config).state.slots['port.church'])
+      .toMatchObject({ developed: true, pending: true, pos: null })
   })
   it('§8 exports named unresolved rules and placeholder keys', () => {
     const text = UNRESOLVED.join(' ')
+    expect(text).not.toContain('ghostRule')
     for (const key of ['INTJ', 'step.minor', 'step.major', 'anchor', 'startCoords', 'leanFactor', 'institutionLock',
       'ownerDeparted', 'pendingWhenAboard', 'undevelopedCounts', 'step.metric', 'step.overshoot', 'witnesses']) expect(text).toContain(key)
   })

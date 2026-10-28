@@ -1,5 +1,5 @@
 {
-  "notes": "Every number and config key from ALIGNMENT.md section 8. ALL values are placeholders until Rex tunes them: bound, thresholds (Rex, provisional), tieBreak (Rex, 2026-10-28), step, anchor, startCoords, crewSlots, ownerDeparted, pendingWhenAboard, undevelopedCounts, leanFactor, witnesses, institutionLock, ghostRule, townAggregate, perfectCounts.",
+  "notes": "ALIGNMENT.md section 8: Rex has decided tieBreak, crewSlots, ownerDeparted, ghostRule, townAggregate and perfectCounts. thresholds.neutral and thresholds.pure are Rex's provisional boundaries; witnesses is present-only for now, with absent learning unresolved. Placeholders still open: step.minor, step.major, step.metric, step.overshoot, anchor, startCoords, pendingWhenAboard, undevelopedCounts, leanFactor and institutionLock. INTJ becomes neutral remains unresolved and is not built. Placeholder numbers stay until Rex tunes them.",
   "bound": 100,
   "thresholds": { "neutral": 15, "pure": 30 },
   "tieBreak": "keep-previous",
@@ -13,7 +13,7 @@
   "leanFactor": 0.5,
   "witnesses": "present-only",
   "institutionLock": "reread-each-sleep-while-owner-in-town",
-  "ghostRule": "food-only",
+  "ghostRule": "every-pair-both-improve",
   "townAggregate": "mean",
   "perfectCounts": "all-developed"
 }
