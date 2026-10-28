@@ -28,7 +28,7 @@ make new characters.
 
 | Sector | Missing | What closes it |
 |---|---|---|
-| Church (the priest alone) | **OE and CE: impossible** (the priest can't be corrupted). OG and CG: undecided (his OG arrow isn't drawn; CG is "no effect") | a church competitor whose diagram lands on OE and CE (and on OG/CG if the priest's don't); or the priest's open OG arrow landing on OG for that side |
+| Church (the priest alone) | **OE and CE: impossible** (the priest can't be corrupted). OG and CG: covered by his chart (2026-10-28) | a church competitor whose diagram lands on OE and CE; or the church changing with the town rather than the priest (P1) |
 | Healing (clinic vs apothecary) | nothing (OG by the doctor's lean, which Rex ruled arrives, 2026-10-28) | |
 | Food (farm vs butcher shop) | nothing | |
 | Hunting (outdoorswoman vs hunter) | **OG and OE** | the hunter's (ISTP) diagram lands on OG and OE |
@@ -52,11 +52,17 @@ the story keeper. The reachable sets the outside AI quoted for 8 characters all 
 | ENFJ `enfj-m` | OG stays, CG→OG, OE stays, CE→OE | OG, OE | OG, OE ✓ |
 | ESFJ `esfj-m` | OG→CE, CG→OE, OE→OG, CE→CG | all four | all four ✓ |
 | ESTJ `estj-f` | OG→CE, CG→OG, OE→CG, CE→OE | all four | all four ✓ |
+| ISTJ `istj-m` (Rex, 2026-10-28) | OG no change (leans OG), CG no change (leans CG), OE→CG, CE→OG | OG, CG | n/a |
 | ISFJ `isfj-f` (Rex, 2026-10-28) | OG no change (dashed ring: leans OG), CG→CE, OE→CG, CE→OE | all four (OG by leaning, which arrives) | n/a |
 
-Also on file: **the ISTJ priest's partial map (Rex).** CG: no effect. OE: does nothing to his or anyone's
-alignment. CE: he can't be corrupted; he fights evil harder and moves the *town* toward good. OG: open (outside AI
-proposed "supports"). So the ISTJ can never reach OE or CE.
+**The ISTJ priest's chart (Rex, 2026-10-28):** OG dashed ring (leans OG), CG dashed ring (leans CG), OE→CG,
+CE→OG. He reaches OG and CG, never OE or CE, which fits Rex's "he can't be corrupted". The chaotic evil square is
+highlighted; whether that's his start is open, as with the others.
+
+**(open) The chart differs from Rex's earlier words for the priest** (in `../story/QUESTLINES.md` and his file):
+OE "does nothing to his or anyone's alignment" (the chart: OE→CG), and CE "moves the *town* toward good" (the
+chart: CE moves *him* to OG; both could hold). The chart is newer; which stands is Rex's, recorded by the story
+keeper. Either way he never reaches OE or CE, so the balance result is the same.
 
 On the ISFJ's chart the chaotic evil square is highlighted. On the ESTP's and ESFP's charts Rex said the highlight
 isn't the starting alignment, so it isn't read as hers either: **(open)**.
@@ -123,7 +129,7 @@ out.
 | `esfj-m` | yes | yes | yes | yes |
 | `enfj-m` | yes | start? | yes | start? |
 | `estj-f` | yes | yes | yes | yes |
-| `istj-m` | map? | map? | **no** (Rex: can't be corrupted) | **no** |
+| `istj-m` | yes (lean) | yes (lean) | **no** (Rex: can't be corrupted) | **no** |
 | `isfj-f` | yes (lean) | yes | yes | yes |
 | `istp-f` | map? | map? | map? | map? |
 | `infp-m` | map? | map? | map? | map? |
@@ -132,7 +138,7 @@ out.
 
 | Sector | Characters | Mark | OG | CG | OE | CE |
 |---|---|---|---|---|---|---|
-| church | ISTJ (competitor maybe) | Rex | **open only** (ISTJ map?) | **open only** (ISTJ map?) | **STARVED** | **STARVED** |
+| church | ISTJ (competitor maybe) | Rex | yes: ISTJ | yes: ISTJ | **STARVED** | **STARVED** |
 | healing | ISFJ / INTJ | Rex | yes: ISFJ (lean) | yes: ISFJ | yes: ISFJ, INTJ | yes: ISFJ |
 | food | INTP / ESFP | Rex | yes: INTP | yes: ESFP | yes: INTP | yes: ESFP |
 | hunting / gathering | ESTP / ISTP | Rex | **open only** (ISTP map?, ESTP start?) | yes: ESTP | **open only** (ISTP map?, ESTP start?) | yes: ESTP |
@@ -144,11 +150,16 @@ out.
 
 | Ending | Characters who can reach it now | Sectors covered now | Resting only on something open | Starved | Full-town routes now | If every open item lands well |
 |---|---|---|---|---|---|---|
-| Orderly good | ENTP, INTP, ESFJ, ENFJ, ESTJ, ISFJ (6) | 5 / 7 | church, hunting | none | **0** | 16 |
-| Chaotic good | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISFJ (6) | 6 / 7 | church | none | **0** | 16 |
+| Orderly good | ENTP, INTP, ESFJ, ENFJ, ESTJ, ISTJ, ISFJ (7) | 6 / 7 | hunting | none | **0** | 16 |
+| Chaotic good | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISTJ, ISFJ (7) | **7 / 7** | none | none | **1** | 16 |
 | Orderly evil | ENTP, INTJ, INTP, ESFJ, ENFJ, ESTJ, ISFJ (7) | 5 / 7 | hunting | **church** | **0** | **0** |
 | Chaotic evil | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISFJ (6) | 6 / 7 | none | **church** | **0** | **0** |
 | Neutral | not a quadrant: reached by staying near the centre; the INTJ's "shown she's wrong" also lands her there | n/a | | | | |
+
+**Chaotic good is the first ending with a fully decided route** (2026-10-28): priest, doctor, cook, outdoorswoman,
+ENTP, merchant, privateer. It counts the two proposed pairs, and the merchant's shop always failing (P4). It fits
+the doctor's joining rule: the outdoorswoman she needs aboard is already on this route. Orderly good waits only on
+the hunter.
 
 **Since the church left the clinic's pair, the evil endings are starved:** under the strict reading, no fully
 developed orderly evil or chaotic evil town exists, because the church's only character can't be corrupted. Chaotic
@@ -165,13 +176,11 @@ character to a location, (d) widen the crew, (e) a non-character route such as a
 ### P1. The church can't be evil (starved: OE, CE)
 
 The priest is the church's only character and can't be corrupted (Rex). With the church now its own sector, no one
-can take it to OE or CE. His OG arrow isn't drawn and his CG is "no effect", so even the good side isn't decided.
+can take it to OE or CE. His chart (2026-10-28) covers OG and CG.
 
 Options:
 
-- (c) **A church competitor** (Rex has said he may make one) whose diagram lands on OE and CE. If the priest's OG
-  arrow stays undrawn, the competitor also needs OG and CG.
-- (a) The priest's open OG arrow lands on OG: closes OG only.
+- (c) **A church competitor** (Rex has said he may make one) whose diagram lands on OE and CE.
 - (e) Let the church change with the town rather than with the priest: the outside AI's proposed quadrant states
   already have `port.church` become an eldritch temple (OE) or a desecrated ruin (CE). This fits "he can't be
   corrupted" and "his nature isn't corrupted by the quest".
@@ -240,8 +249,8 @@ Not filled-in maps; Rex makes them.
 
 | Map | Must include | Must not | Why |
 |---|---|---|---|
-| Church competitor (if made) | **OE and CE**; also OG and CG unless the priest's own arrows land there | nothing | P1 |
-| ISTJ `istj-m` (OG arrow, start) | nothing strictly, if a competitor covers all four; OG if he is to carry the good side | **OE, CE** (Rex: can't be corrupted) | P1 |
+| Church competitor (if made) | **OE and CE** | nothing | P1 |
+| ISTJ `istj-m` | made (Rex, 2026-10-28): OG, CG | OE, CE (Rex: can't be corrupted) | P1 |
 | ISTP `istp-f` | **OG and OE** | nothing | P2 |
 | New mechanic (ENTP's competitor) | nothing | nothing | the ENTP reaches all four; any map helps P5 |
 | INFP `infp-m` | nothing, while the ESTJ is their pair | nothing | P5; recompute if Rex re-pairs society |
@@ -252,8 +261,9 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 
 ## 5. What's open
 
-- The ISTP and INFP maps; the ISTJ's OG arrow; the new mechanic; whether there's a church competitor; 10 starting
-  alignments (whether the ISFJ's highlighted CE square is her start).
+- The ISTP and INFP maps; the new mechanic; whether there's a church competitor; 10 starting
+  alignments (whether the ISFJ's and ISTJ's highlighted CE squares are their starts).
+- Whether the priest's chart replaces his earlier OE and CE words (OE "does nothing"; CE "moves the town toward good").
 - Seven sectors now, or does Rex want six; whether the proposed commerce and society pairs stand.
 - Whether both institutions in a sector can succeed (proposed), and whether the food rule's "the other drifts
   toward ghosthood" applies to every pair.
@@ -269,3 +279,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-27 | Created: model, reachability table and script, problems P1–P6, constraints, opens. Rex's six-facility design and crew rotation recorded; the outside AI's commerce and society pairs, "both can succeed" and the three tracks as proposed | keeper; design Rex |
 | 2026-10-28 | The church is kept separate from the clinic (a competitor may come); healing = the ISFJ's clinic vs the INTJ's apothecary; the ENTP and INTJ no longer compete (indirect rivalry stays); the ENTP's competitor will be a new mechanic; the ISFJ's map. Gaps summary added; problems re-ranked: church evil starved (P1), hunting (P2), healing OG by lean only (P3) | Rex; keeper (table) |
 | 2026-10-28 | A dashed ring's lean, kept up, carries the character all the way into that quadrant; healing now covers all four (P3 closed) | Rex |
+| 2026-10-28 | The ISTJ priest's chart: OG and CG rings, OE→CG, CE→OG; the church covers OG and CG; chaotic good has its first decided route; conflict with his earlier OE/CE words left open | Rex |

@@ -97,17 +97,17 @@
     },
     "istj-m": {
       "map": {
-        "og": null,
-        "cg": "stay",
-        "oe": "stay",
-        "ce": "stay"
+        "og": "lean",
+        "cg": "lean",
+        "oe": "cg",
+        "ce": "og"
       },
       "start": null,
       "never": [
         "oe",
         "ce"
       ],
-      "mark": "Rex: CG and OE no effect; CE he can't be corrupted (fights evil, moves the town toward good). OG cell open (outside AI proposed: supports). Start open"
+      "mark": "Rex (chart 2026-10-28): OG and CG dashed rings (lean, arrives); OE->CG; CE->OG. Can't be corrupted (Rex). Earlier text cells (OE 'does nothing', CE 'moves the town toward good') differ from the chart: which stands is open. Highlighted CE square: start open"
     },
     "isfj-f": {
       "map": {

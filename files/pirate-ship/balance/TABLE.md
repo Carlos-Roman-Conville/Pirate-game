@@ -12,7 +12,7 @@
 | `esfj-m` | yes | yes | yes | yes | Rex; start open |
 | `enfj-m` | yes | start? | yes | start? | Rex; start open |
 | `estj-f` | yes | yes | yes | yes | Rex; start open |
-| `istj-m` | map? | map? | no | no | Rex: CG and OE no effect; CE he can't be corrupted (fights evil, moves the town toward good). OG cell open (outside AI proposed: supports). Start open |
+| `istj-m` | yes | yes | no | no | Rex (chart 2026-10-28): OG and CG dashed rings (lean, arrives); OE->CG; CE->OG. Can't be corrupted (Rex). Earlier text cells (OE 'does nothing', CE 'moves the town toward good') differ from the chart: which stands is open. Highlighted CE square: start open |
 | `isfj-f` | yes | yes | yes | yes | Rex (chart 2026-10-28): OG dashed ring = no change, leans her OG; CG->CE, OE->CG, CE->OE. The highlighted CE square: whether it is her start is open |
 | `istp-f` | map? | map? | map? | map? | open: map not made |
 | `infp-m` | map? | map? | map? | map? | open: map not made |
@@ -21,7 +21,7 @@
 
 | Sector | Pair | Mark | OG | CG | OE | CE |
 |---|---|---|---|---|---|---|
-| church (no competitor yet) | istj-m | Rex (2026-10-28: kept separate from the clinic; a competitor may come) | **open only: istj-m (map?)** | **open only: istj-m (map?)** | **STARVED** | **STARVED** |
+| church (no competitor yet) | istj-m | Rex (2026-10-28: kept separate from the clinic; a competitor may come) | yes: istj-m | yes: istj-m | **STARVED** | **STARVED** |
 | healing: clinic vs apothecary | isfj-f / intj-f | Rex (2026-10-28) | yes: isfj-f | yes: isfj-f | yes: isfj-f, intj-f | yes: isfj-f |
 | farm vs butcher shop | intp-m / esfp-f | Rex | yes: intp-m (+ esfp-f (start?)) | yes: esfp-f (+ intp-m (start?)) | yes: intp-m (+ esfp-f (start?)) | yes: esfp-f (+ intp-m (start?)) |
 | hunting / gathering | estp-f / istp-f | Rex | **open only: estp-f (start?), istp-f (map?)** | yes: estp-f (+ istp-f (map?)) | **open only: estp-f (start?), istp-f (map?)** | yes: estp-f (+ istp-f (map?)) |
@@ -33,7 +33,7 @@
 
 | Ending | Characters who can reach it (yes) | Could, through something open | Sectors covered now | Sectors resting only on something open | Starved sectors | Routes now | Routes if open maps allow |
 |---|---|---|---|---|---|---|---|
-| Orderly good | entp-m, intp-m, esfj-m, enfj-m, estj-f, isfj-f (6) | esfp-f (start?), estp-f (start?), istj-m (map?), istp-f (map?), infp-m (map?) | 5/7 | church (no competitor yet), hunting / gathering | - | 0 | 16 |
-| Chaotic good | entp-m, esfp-f, estp-f, esfj-m, estj-f, isfj-f (6) | intp-m (start?), enfj-m (start?), istj-m (map?), istp-f (map?), infp-m (map?) | 6/7 | church (no competitor yet) | - | 0 | 16 |
+| Orderly good | entp-m, intp-m, esfj-m, enfj-m, estj-f, istj-m, isfj-f (7) | esfp-f (start?), estp-f (start?), istp-f (map?), infp-m (map?) | 6/7 | hunting / gathering | - | 0 | 16 |
+| Chaotic good | entp-m, esfp-f, estp-f, esfj-m, estj-f, istj-m, isfj-f (7) | intp-m (start?), enfj-m (start?), istp-f (map?), infp-m (map?) | 7/7 | - | - | 1 | 16 |
 | Orderly evil | entp-m, intj-f, intp-m, esfj-m, enfj-m, estj-f, isfj-f (7) | esfp-f (start?), estp-f (start?), istp-f (map?), infp-m (map?) | 5/7 | hunting / gathering | church (no competitor yet) | 0 | 0 |
 | Chaotic evil | entp-m, esfp-f, estp-f, esfj-m, estj-f, isfj-f (6) | intp-m (start?), enfj-m (start?), istp-f (map?), infp-m (map?) | 6/7 | - | church (no competitor yet) | 0 | 0 |
