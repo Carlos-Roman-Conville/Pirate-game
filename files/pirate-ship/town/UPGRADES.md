@@ -120,8 +120,13 @@ for control of the town hall."
 - ~~**(Rex, 2026-10-28)** The ghost rule applies to every pair: "recruiting one character makes their rival's place
   drift toward ghosts."~~ Withdrawn the same day. Rex: "Whether every rival becomes a ghost I'm still not actually
   sure, I just said yes because I had a gut feeling."
-- **(open)** Whether the food-source ghost rule (food pair only, tentative) reaches any other pair, and with which
-  rows (one recruited, neither, both).
+- **(Rex, 2026-10-28, decided) The ghost rule applies to every pair:** "The ghost rule applies to every pair, and
+  recruiting both of a pair lets both places improve." For all eight sectors: **neither recruited** → both places go
+  to ghosts; **one recruited** → their place develops, the rival's drifts to ghosts; **both recruited** → both
+  develop. The secret duel stays the food pair's (`event.food_duel`). Every sector's places therefore get the states
+  `base`, developed (by alignment form) and `ghosted`; added per slot as Rex fills them.
+- **(open)** What "developed" needs beyond recruiting; when a place turns `ghosted`; whether `ghosted` is its own slot
+  state (as recorded for the farm and the butcher shop) or something else.
 - **(Rex, 2026-10-28) The goal:** "I'd like it so that there is a route toward a perfectly working town by the end
   but that requires a complicated set of choices. Meaning you can't recruit everyone but who you choose to develop
   can help you get there."
@@ -282,3 +287,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-28 | Withdrawn: the ghost rule for every pair (back to open; food pair only, tentative). Rex's goal: a route to a perfectly working town through a complicated set of choices; open to a third or fourth person per competition (via the balance keeper) | Rex |
 | 2026-10-28 | `port.align` is a (−100..+100)² point read as nine regions; institution keys `<slot>.align`, `<slot>.pending`; transformation rule; quadrant-form shape now Rex's (via the balance keeper) | Rex |
 | 2026-10-28 | `port.align` = mean of developed institutions' positions (via the balance keeper) | Rex |
+| 2026-10-28 | Decided: the ghost rule (neither → both ghosted, one → it develops and the rival ghosts, both → both develop) applies to all eight pairs; the duel stays food's (via the balance keeper) | Rex |
