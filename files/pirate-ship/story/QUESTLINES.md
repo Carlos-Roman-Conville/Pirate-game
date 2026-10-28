@@ -52,7 +52,7 @@ suggestion (not canon); blank = open.
 |---|---|---|---|---|
 | ISTJ priest (`istj-m`) | **Rex (map): leans him toward orderly good (kept up, all the way)** (*supports*) | **Rex: no effect**; **map: leans him toward chaotic good (kept up, all the way)**; conflict open (*neutral*) | **Rex: does nothing to his or anyone's alignment**; **map: moves him to chaotic good**; conflict open (*opposes*) | **Rex: can't be corrupted; fights evil harder, moves the town toward good**; **map: moves him to orderly good** (*strongly opposes*) |
 | ENTP mechanic (`entp-m`) | **Rex: moves him to chaotic good** (*neutral*) | **Rex: moves him to orderly evil** (*possible support*) | **Rex: moves him to orderly good** (*neutral*) | **Rex: his natural alignment; chaotic evil acts only reinforce him (the loop)**; **Rex: guaranteed; on return he makes something that helps turn the town chaotic evil** (*supports*). **Open:** whether it stays guaranteed or now depends on what he witnesses you do there |
-| ISTP hunter (`istp-f`) | | *possible support* | | *possible support* |
+| ISTP hunter (`istp-f`) | **Rex: moves her to chaotic good** | **Rex: moves her to orderly evil** (*possible support*) | **Rex: moves her to chaotic evil** | **Rex: moves her to orderly good** (*possible support*) |
 | INTJ apothecary (`intj-f`) | **Rex: moves her to orderly evil** (*possible support*) | **Rex: moves her to orderly evil** | **Rex: stays orderly evil (loop)** (*possible support*) | **Rex: moves her to orderly evil** (*opposes*). **Rex:** all paths lead here unless you show her that her belief is wrong; then she becomes neutral |
 | ISFJ doctor (`isfj-f`) | **Rex: leans her toward orderly good (kept up, all the way)** | **Rex: moves her to chaotic evil** | **Rex: moves her to chaotic good** | **Rex: moves her to orderly evil** |
 | ESFP cook (`esfp-f`) | **Rex: moves her to chaotic good** | **Rex: moves her to chaotic evil** | **Rex: moves her to chaotic evil** | **Rex: leans her toward chaotic evil (kept up, all the way)** |
@@ -108,3 +108,4 @@ suggestion (not canon); blank = open.
 | 2026-10-28 | The ENFP's alignment map (OG→CG, CG→OG, OE→CE, CE→OE; double-headed arrows, to confirm) | Rex |
 | 2026-10-28 | Alignment maps: the INFP (OG→CG, CG→OE, OE lean, CE→OE); the tentative ISFP (OG→CE, CG→OG, OE→CE, CE lean) | Rex |
 | 2026-10-28 | The INFJ mechanic's alignment map (OG lean, CG→OG, OE→OG, CE→OG) | Rex |
+| 2026-10-28 | The ISTP hunter's alignment map (OG→CG, CG→OE, OE→CE, CE→OG): a full cycle | Rex |

@@ -121,10 +121,45 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
 | Questline | Key | Reaction to what they witness you do there | Mark |
 |---|---|---|---|
-| Orderly good (church-like) | `quest.order_good` |  | open |
-| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` |  | open (proposed: possible support) |
-| Orderly evil (Cthulhu corruption) | `quest.order_evil` |  | open |
-| Chaotic evil (killers, devil worship) | `quest.chaos_evil` |  | open (proposed: possible support) |
+| Orderly good (church-like) | `quest.order_good` | moves her to chaotic good | Rex |
+| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | moves her to orderly evil | Rex |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` | moves her to chaotic evil | Rex |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | moves her to orderly good | Rex |
+
+### Inner rules: her alignment map (Rex, 2026-10-28)
+
+What the path you push her on does to her alignment (`../QUESTLINES.md`, model point 4). Rex's diagram:
+
+![The ISTP's alignment map](diagrams/istp-f-alignment.png)
+
+```
+              GOOD
+   +-----------------+-----------------+
+   |  ORDERLY GOOD   |  CHAOTIC GOOD   |
+   |      (OG) ------+-----> (CG)      |
+   |        ^        |      /          |
+   +---------\-------+-----/-----------+
+   |          \      |    /            |
+   |      (OE) \-----+---/-> (CE)      |
+   |  ORDERLY EVIL   |  CHAOTIC EVIL   |
+   +-----------------+-----------------+
+              EVIL
+   OG->CG   CG->OE   OE->CE   CE->OG
+```
+
+| Pushed on (action quadrant) | She moves toward | Mark |
+|---|---|---|
+| Orderly good | chaotic good | Rex |
+| Chaotic good | orderly evil | Rex |
+| Orderly evil | chaotic evil | Rex |
+| Chaotic evil | orderly good | Rex |
+
+For the code (`inner_rules`, action → destination):
+`{ "order_good": "chaos_good", "chaos_good": "order_evil", "order_evil": "chaos_evil", "chaos_evil": "order_good" }`
+
+- A full cycle with no leans: orderly good → chaotic good → orderly evil → chaotic evil → orderly good. Nothing holds her.
+- The outside AI's earlier proposals (possible support on chaotic good and chaotic evil) stay in `../QUESTLINES.md` as proposals.
+- **(open)** Starting alignment: to figure out later. The diagram highlights orderly good (on the OG→CG arrow); Rex hasn't said whether that marks her start.
 
 ## Change log
 
@@ -135,3 +170,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | Now a woman: a tomboy, a small, petite girl who is extremely effective at hunting; file moved from `istp-m.md` to `istp-f.md` | Rex |
 | 2026-10-27 | Backstory: her husband was killed by a massive shark she failed to kill; never forgave herself, hunts alone; broke, needs cash for alcohol; joins easily since no work has come through town in months | Rex |
+| 2026-10-28 | Inner rules: her alignment map (OG→CG, CG→OE, OE→CE, CE→OG): a full cycle | Rex |
