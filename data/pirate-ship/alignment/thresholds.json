@@ -1,0 +1,19 @@
+{
+  "notes": "Every number and config key from ALIGNMENT.md section 8. ALL values are placeholders until Rex tunes them: bound, thresholds (Rex, provisional), tieBreak (Rex, 2026-10-28), step, anchor, startCoords, crewSlots, ownerDeparted, pendingWhenAboard, undevelopedCounts, leanFactor, witnesses, institutionLock, ghostRule, townAggregate, perfectCounts.",
+  "bound": 100,
+  "thresholds": { "neutral": 15, "pure": 30 },
+  "tieBreak": "keep-previous",
+  "step": { "minor": 10, "major": 25, "metric": "euclidean-fixed", "overshoot": "stop-at-anchor" },
+  "anchor": { "x": 70, "y": 70 },
+  "startCoords": { "x": 50, "y": 50, "neutral": { "x": 0, "y": 0 } },
+  "crewSlots": 3,
+  "ownerDeparted": "freeze",
+  "pendingWhenAboard": "keep",
+  "undevelopedCounts": "skip",
+  "leanFactor": 0.5,
+  "witnesses": "present-only",
+  "institutionLock": "reread-each-sleep-while-owner-in-town",
+  "ghostRule": "food-only",
+  "townAggregate": "mean",
+  "perfectCounts": "all-developed"
+}
