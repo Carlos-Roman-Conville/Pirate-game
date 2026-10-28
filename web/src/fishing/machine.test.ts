@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest'
+import { resultPanelMessage } from './loop'
 import {
   dispatch,
   FISHING_STAGE_ORDER,
@@ -96,6 +97,18 @@ describe('outcomes', () => {
     expect(run.stage).toBe('result')
     expect(run.result).toBe('gotAway')
     expect(run.bitePhase).toBeNull()
+  })
+
+  it('got away reason struckEarly when the hook is set too early while waiting', () => {
+    let run = startFishing(config)
+    for (let i = 0; i < 5; i++) {
+      run = dispatch(run, { type: 'stub', success: true })
+    }
+    expect(run.bitePhase).toBe('waiting')
+    run = dispatch(run, { type: 'bite', event: 'hook' })
+    expect(run.result).toBe('gotAway')
+    expect(run.gotAwayReason).toBe('struckEarly')
+    expect(resultPanelMessage('gotAway', config, 'struckEarly')).toContain('You struck too early')
   })
 
   it('got away reason struckNibble when the hook is set on a nibble', () => {

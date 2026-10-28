@@ -17,7 +17,7 @@ export type BitePhase = 'waiting' | 'nibbling' | 'submerged' | 'hookWindow'
 
 export type FishingResult = 'caught' | 'gotAway'
 
-export type GotAwayReason = 'lineSnapped' | 'struckNibble' | 'missedBite' | 'other'
+export type GotAwayReason = 'lineSnapped' | 'struckEarly' | 'struckNibble' | 'missedBite' | 'other'
 
 export interface FisherAttributes {
   strength: number
@@ -173,7 +173,8 @@ function dispatchBite(run: FishingRun, event: 'advance' | 'hook' | 'expired'): F
   if (event === 'expired') return endRun(run, 'gotAway', 'missedBite')
 
   if (event === 'hook') {
-    if (phase === 'nibbling' || phase === 'waiting') return endRun(run, 'gotAway', 'struckNibble')
+    if (phase === 'waiting') return endRun(run, 'gotAway', 'struckEarly')
+    if (phase === 'nibbling') return endRun(run, 'gotAway', 'struckNibble')
     if (phase === 'hookWindow') {
       return { ...run, stage: 'pullIn', bitePhase: null }
     }

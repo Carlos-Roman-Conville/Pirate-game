@@ -150,11 +150,18 @@
    "note": "Got-away detail: pull-in tension broke the line."
   },
   {
+   "source": "You struck too early",
+   "en": "You struck too early",
+   "code": "struckEarly",
+   "kind": "phrase",
+   "note": "Got-away detail: hook press before any nibble."
+  },
+  {
    "source": "You struck on a nibble",
    "en": "You struck on a nibble",
    "code": "struckNibble",
    "kind": "phrase",
-   "note": "Got-away detail: hook press during a nibble or too early."
+   "note": "Got-away detail: hook press during a nibble."
   },
   {
    "source": "Too slow on the bite",

@@ -105,6 +105,11 @@ describe('resultPanelMessage', () => {
     expect(msg).toBe(`${t.gotAwayLabel}\nThe line snapped\n${prompt}`)
   })
 
+  it('shows got-away headline and glossary detail for struckEarly', () => {
+    const msg = resultPanelMessage('gotAway', config, 'struckEarly')
+    expect(msg).toBe(`${t.gotAwayLabel}\nYou struck too early\n${prompt}`)
+  })
+
   it('shows got-away headline and glossary detail for struckNibble', () => {
     const msg = resultPanelMessage('gotAway', config, 'struckNibble')
     expect(msg).toBe(`${t.gotAwayLabel}\nYou struck on a nibble\n${prompt}`)
