@@ -84,8 +84,8 @@ balance keeper's: [`../balance/BALANCE.md`](../balance/BALANCE.md).
 | `sec.invent` (inventions) | `port.shipyard`, `entp-m` | the INFJ mechanic (slug: the story keeper's, not yet filed; where he works: open) | Rex (2026-10-28) |
 | `sec.church` | `port.church`, `istj-m` | `port.church`, the evil ENTJ priest, [`entj-m`](../story/characters/entj-m.md) | Rex (2026-10-28) |
 | `sec.commerce` | `port.warehouse`, `enfj-m` | `port.esfj_shop`, `esfj-m` | Rex (2026-10-28: "Keep commerce as ENFJ warehouse heir vs ESFJ merchant"; first proposed by the outside AI) |
-| `sec.brothel` (control of the brothel) | `port.tavern`, `infp-m` | a competitor not made yet | Rex (2026-10-28) |
-| `sec.townhall` (control of the town hall) | `port.townhall`, `estj-f` | a competitor not made yet | Rex (2026-10-28) |
+| `sec.brothel` (control of the brothel) | `port.tavern`, `infp-m` | an ISFP, a new character (tentative: Rex is "thinking") | Rex (2026-10-28); the ISFP tentative |
+| `sec.townhall` (control of the town hall) | `port.townhall`, `estj-f` | an ENFP, a new character (tentative: Rex is "thinking") | Rex (2026-10-28); the ENFP tentative |
 
 Retired id: `sec.faith` (church vs clinic, 2026-10-27), split on 2026-10-28; never reused.
 Rejected proposal: `sec.society` (ESTJ vs INFP, outside AI), replaced on 2026-10-28 by Rex's `sec.brothel` and
@@ -106,8 +106,8 @@ for control of the town hall."
 - **(proposed, outside AI)** Both institutions in a sector can succeed with extra work (they compete for time,
   slots, resources); track sector completion, institution development and town alignment separately.
 - **(open)** What "succeed" means for a sector, as a slot state.
-- **(open)** `port.esfj_shop` always ends `failed`. Whether the merchant's side of commerce can still succeed without
-  the shop (for example, he keeps selling rare goods from your ship) is open (balance keeper's note).
+- **(Rex, 2026-10-28)** `port.esfj_shop` still ends `failed`, but commerce isn't lost with it: the merchant still counts
+  for commerce because he keeps selling rare goods from the ship.
 - **(open)** Whether the food rule's "the other drifts toward ghosthood" applies to every pair (balance keeper's P1).
 - **(Rex, 2026-10-28)** The evil ENTJ priest competes with the ISTJ priest for the church. Per the balance keeper,
   the ENTJ's alignment chart reaches `oe` and `ce` and the ISTJ's `og` and `cg`, so the church sector can take all
@@ -260,3 +260,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-28 | `port.cash` (the town's money) added; `event.infj_leaves` tied to it (via the story keeper) | keeper; Rex |
 | 2026-10-28 | `sec.brothel` (INFP vs a competitor to come) and `sec.townhall` (ESTJ vs a competitor to come) replace the proposed `sec.society`; reserved `port.townhall` (via the balance keeper) | Rex |
 | 2026-10-28 | `sec.commerce` confirmed (ENFJ warehouse heir vs ESFJ merchant); all eight sectors Rex's (via the balance keeper) | Rex |
+| 2026-10-28 | The ESFJ still counts for commerce after his shop fails (sells rare goods from the ship); tentative competitors: ISFP for the brothel, ENFP for the town hall (via the balance keeper) | Rex |
