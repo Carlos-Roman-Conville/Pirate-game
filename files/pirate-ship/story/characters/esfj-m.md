@@ -131,9 +131,32 @@ For the code (`inner_rules`, action → destination):
 - The dotted ring on chaotic good in the diagram marks the destination of the selected arrow, not "no change".
 - **(open)** Starting alignment: none yet (Rex, 2026-10-27).
 
+### His mentality: progressivism (Rex, 2026-10-27)
+
+Why his map moves the way it does.
+
+- **(Rex)** Orderly good → chaotic evil makes sense for him. Rex's example: America is orderly good, yet a
+  liberal would defend a terrorist. Living inside an order he sees as broadly good, he fixes on its perceived
+  injustices until he defends people who set out to destroy it.
+- **(Rex)** Keep the arrows as they are.
+
+**Proposed (outside AI, 2026-10-27; not canon):**
+
+- The two upward responses (evil → good) fit his sympathy for people he sees as victims; the two downward ones
+  (good → evil) fit his suspicion of apparently benevolent people and institutions.
+- His central contradiction: so determined to challenge perceived injustice that he ends up supporting something
+  worse. The turn is from "people deserve compassion" to "their suffering justifies whatever they do".
+- Function reading: Fe identifies a group he believes suffers under the order; Si compares its treatment with how
+  people ought to be treated; Ne imagines explanations that cast the condemned as victims; inferior Ti fails to
+  reconcile the sympathy with what the group actually does.
+- He doesn't see himself becoming evil; he believes he's correcting an injustice. The arrows show his real
+  direction, not the label he gives himself.
+- Still to explain: why he reacts differently to orderly good and chaotic good.
+
 ## Change log
 
 | Date | Change | By |
 |---|---|---|
 | 2026-10-27 | Created: a failed merchant, his look based on MrBeast | Rex |
 | 2026-10-27 | Inner rules: his alignment map (OG→CE, CG→OE, OE→OG, CE→CG); no starting point yet | Rex |
+| 2026-10-27 | His mentality: progressivism; Rex's reasoning for OG→CE, with an outside AI's reading as proposals | Rex |
