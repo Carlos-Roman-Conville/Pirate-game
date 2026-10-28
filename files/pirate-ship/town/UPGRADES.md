@@ -80,8 +80,8 @@ balance keeper's: [`../balance/BALANCE.md`](../balance/BALANCE.md).
 | `sec.heal` (the town's healing) | `port.clinic`, `isfj-f` | `port.apothecary`, `intj-f` | Rex (2026-10-28) |
 | `sec.food` (butcher shop vs farm) | `port.bakery`, `esfp-f` | `port.farm`, `intp-m` | Rex |
 | `sec.hunt` (hunting / gathering) | open (no place yet), `estp-f` | open (no place yet), `istp-f` | Rex (the pair); places open |
-| `sec.invent` (inventions) | `port.shipyard`, `entp-m` | a new mechanical character Rex will make | Rex (2026-10-28); the competitor open |
-| `sec.church` | `port.church`, `istj-m` | `port.church`, the evil ENTJ priest (slug: the story keeper's, not yet filed) | Rex (2026-10-28) |
+| `sec.invent` (inventions) | `port.shipyard`, `entp-m` | the INFJ mechanic (slug: the story keeper's, not yet filed; where he works: open) | Rex (2026-10-28) |
+| `sec.church` | `port.church`, `istj-m` | `port.church`, the evil ENTJ priest, [`entj-m`](../story/characters/entj-m.md) | Rex (2026-10-28) |
 | `sec.commerce` | `port.warehouse`, `enfj-m` | `port.esfj_shop`, `esfj-m` | proposed (outside AI) |
 | `sec.society` | the ESTJ privateer, `estj-f` | the INFP courtesan, `infp-m` | proposed (outside AI; it flagged this one as weak) |
 
@@ -89,6 +89,13 @@ Retired id: `sec.faith` (church vs clinic, 2026-10-27), split on 2026-10-28; nev
 
 - **(Rex, 2026-10-28)** The ENTP and the INTJ no longer compete: their stores don't compete economically. They still
   dislike each other, an indirect rivalry (character side: the story keeper's).
+- **(Rex, 2026-10-28)** The INFJ mechanic is a newcomer (a visitor, not a lifelong resident) whose machinery
+  outclasses the ENTP's. He is milking the town for money and getting ready to leave soon, because the town is
+  nearly out of cash; he's been invited to the next town over for someone's big project, and has stayed this long
+  out of nostalgia.
+- **(Rex) Town event `event.infj_leaves`** (id the keeper's): the INFJ mechanic leaves for the next town. Open: when
+  it fires (a day, the town's money, a choice of yours), whether you can stop it or take him aboard first, and what
+  `sec.invent` and the shipyard look like after he goes.
 - **(proposed, outside AI)** Both institutions in a sector can succeed with extra work (they compete for time,
   slots, resources); track sector completion, institution development and town alignment separately.
 - **(open)** What "succeed" means for a sector, as a slot state.
@@ -239,3 +246,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-27 | Sectors table: `sec.faith`, `sec.food`, `sec.hunt`, `sec.invent` (Rex); two open; outside AI's commerce and society pairs as proposed | keeper; pairs Rex |
 | 2026-10-28 | Sectors changed: `sec.faith` retired; `sec.heal` (clinic vs apothecary); `sec.invent` is the ENTP vs a new mechanic; `sec.church` alone for now; commerce and society still proposed (via the balance keeper) | Rex |
 | 2026-10-28 | `sec.church`: the evil ENTJ priest competes with the ISTJ priest (via the balance keeper) | Rex |
+| 2026-10-28 | `sec.invent`: the INFJ mechanic (a visitor) competes with the ENTP; his departure is `event.infj_leaves`; ENTJ linked to `entj-m` (via the balance keeper) | Rex |
