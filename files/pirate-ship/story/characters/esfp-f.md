@@ -91,7 +91,7 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | Questline | Key | Reaction to what they witness you do there | Mark |
 |---|---|---|---|
 | Orderly good (church-like) | `quest.order_good` | moves her to chaotic good | Rex |
-| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | no change: leans her toward chaotic good | Rex |
+| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | moves her to chaotic evil | Rex |
 | Orderly evil (Cthulhu corruption) | `quest.order_evil` | moves her to chaotic evil | Rex |
 | Chaotic evil (killers, devil worship) | `quest.chaos_evil` | no change: leans her toward chaotic evil | Rex |
 
@@ -108,28 +108,28 @@ What the path you push her on does to her alignment (`../QUESTLINES.md`, model p
    +-----------------+-----------------+
    |  ORDERLY GOOD   |  CHAOTIC GOOD   |
    |      (OG) ------+----> (CG)       |
-   |                 |      ( )        |
-   +-----------------+-----------------+
-   |      (OE) ------+----> (CE)       |
-   |                 |      ( )        |
+   |                 |        |        |
+   +-----------------+--------+--------+
+   |                 |        v        |
+   |      (OE) ------+----> (CE) ( )   |
    |  ORDERLY EVIL   |  CHAOTIC EVIL   |
    +-----------------+-----------------+
               EVIL
-   OG->CG   CG stays   OE->CE   CE stays
+   OG->CG   CG->CE   OE->CE   CE no change
 ```
 
 | Pushed on (action quadrant) | She moves toward | Mark |
 |---|---|---|
 | Orderly good | chaotic good | Rex |
-| Chaotic good | chaotic good (no change: just leans that way) | Rex |
+| Chaotic good | chaotic evil | Rex |
 | Orderly evil | chaotic evil | Rex |
 | Chaotic evil | chaotic evil (no change: just leans that way) | Rex |
 
 For the code (`inner_rules`, action → destination):
-`{ "order_good": "chaos_good", "chaos_good": "chaos_good", "order_evil": "chaos_evil", "chaos_evil": "chaos_evil" }`
+`{ "order_good": "chaos_good", "chaos_good": "chaos_evil", "order_evil": "chaos_evil", "chaos_evil": "chaos_evil" }`
 
-- **(Rex, 2026-10-27)** The dashed ring means no change: if you commit that action, it just leans her in that direction. It marks chaotic good and chaotic evil.
-- Same arrows as the ESTP's map: everything pulls her toward chaos, and good/evil follows what you do.
+- **(Rex)** The dashed ring means no change: if you commit that action, it just leans her in that direction.
+- Every path ends in chaotic evil: orderly good passes through chaotic good on the way.
 - **(open)** Starting alignment: to figure out later (the highlight on the diagram doesn't mark it).
 
 ## Change log
@@ -142,5 +142,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Not a baker but a general cook with a butcher shop; ex-spouse of the INTP farmer; parent of the son who collects skins; gender to confirm | Rex |
 | 2026-10-27 | Gender confirmed: woman; file moved from `esfp-m.md` to `esfp-f.md` | Rex |
 | 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |
-| 2026-10-27 | Inner rules: her alignment map (OG→CG, CG stays, OE→CE, CE stays) | Rex |
-| 2026-10-27 | The dashed ring means no change; the action just leans her that way | Rex |
+| 2026-10-27 | Inner rules: her alignment map (OG→CG, CG→CE, OE→CE, CE no change); replaces an earlier wrong chart sent the same day | Rex |

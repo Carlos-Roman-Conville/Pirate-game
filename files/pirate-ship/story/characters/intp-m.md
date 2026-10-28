@@ -98,7 +98,7 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | Orderly good (church-like) | `quest.order_good` | moves him to orderly evil | Rex |
 | Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | moves him to orderly good | Rex |
 | Orderly evil (Cthulhu corruption) | `quest.order_evil` | no change: leans him toward orderly evil | Rex |
-| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | moves him to chaotic good | Rex |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | moves him to orderly evil | Rex |
 
 ### Inner rules: his alignment map (Rex, 2026-10-27)
 
@@ -111,15 +111,14 @@ What the path you push him on does to his alignment (`../QUESTLINES.md`, model p
    +-----------------+-----------------+
    |  ORDERLY GOOD   |  CHAOTIC GOOD   |
    |      (OG) <-----+------ (CG)      |
-   |       |         |        ^        |
-   +-------+---------+--------+--------+
-   |       v         |        |        |
-   |      (OE)       |       (CE)      |
-   |      ( )        |                 |
+   |       |         |                 |
+   +-------+---------+-----------------+
+   |       v         |                 |
+   |  ( ) (OE) <-----+------ (CE)      |
    |  ORDERLY EVIL   |  CHAOTIC EVIL   |
    +-----------------+-----------------+
               EVIL
-   OG->OE   CG->OG   OE stays   CE->CG
+   OG->OE   CG->OG   OE no change   CE->OE
 ```
 
 | Pushed on (action quadrant) | He moves toward | Mark |
@@ -127,13 +126,13 @@ What the path you push him on does to his alignment (`../QUESTLINES.md`, model p
 | Orderly good | orderly evil | Rex |
 | Chaotic good | orderly good | Rex |
 | Orderly evil | orderly evil (no change: just leans that way) | Rex |
-| Chaotic evil | chaotic good | Rex |
+| Chaotic evil | orderly evil | Rex |
 
 For the code (`inner_rules`, action → destination):
-`{ "order_good": "order_evil", "chaos_good": "order_good", "order_evil": "order_evil", "chaos_evil": "chaos_good" }`
+`{ "order_good": "order_evil", "chaos_good": "order_good", "order_evil": "order_evil", "chaos_evil": "order_evil" }`
 
-- **(Rex, 2026-10-27)** The dashed ring means no change: if you commit that action, it just leans him in that direction. It marks orderly evil.
-- A chain: chaotic evil → chaotic good → orderly good → orderly evil, where it stops.
+- **(Rex)** The dashed ring means no change: if you commit that action, it just leans him in that direction.
+- Every path ends in orderly evil: chaotic good passes through orderly good on the way.
 - **(open)** Starting alignment: to figure out later (the highlight on the diagram doesn't mark it).
 
 ## Change log
@@ -146,5 +145,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Bodies as fertiliser, kills passers-by for it; ex-spouse of the ESFP cook (supersedes the dead spouse); parent of the daughter and son; gender to confirm | Rex |
 | 2026-10-27 | Gender confirmed: man; file moved from `intp-f.md` to `intp-m.md` | Rex |
 | 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |
-| 2026-10-27 | Inner rules: his alignment map (OG→OE, CG→OG, OE stays, CE→CG) | Rex |
-| 2026-10-27 | The dashed ring means no change; the action just leans him that way | Rex |
+| 2026-10-27 | Inner rules: his alignment map (OG→OE, CG→OG, OE no change, CE→OE); replaces an earlier wrong chart sent the same day | Rex |
