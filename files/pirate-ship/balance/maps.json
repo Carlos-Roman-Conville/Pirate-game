@@ -141,16 +141,28 @@
       "start": null,
       "never": [],
       "mark": "open: map not made"
+    },
+    "entj-priest": {
+      "map": {
+        "og": "ce",
+        "cg": "oe",
+        "oe": "lean",
+        "ce": "lean"
+      },
+      "start": null,
+      "never": [],
+      "mark": "Rex (new character and chart, 2026-10-28): the evil ENTJ priest, the church competitor. OG->CE, CG->OE, OE and CE dashed rings (lean). Slug is a placeholder until the story keeper assigns one; gender open. Highlighted CG square: start open"
     }
   },
   "sectors": [
     {
       "id": "church",
-      "name": "church (no competitor yet)",
+      "name": "church: priest vs evil priest",
       "pair": [
-        "istj-m"
+        "istj-m",
+        "entj-priest"
       ],
-      "mark": "Rex (2026-10-28: kept separate from the clinic; a competitor may come)"
+      "mark": "Rex (2026-10-28: kept separate from the clinic; the evil ENTJ priest competes)"
     },
     {
       "id": "healing",
