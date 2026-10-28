@@ -1,0 +1,135 @@
+[
+  {
+    "id": "church",
+    "name": "church: priest vs evil priest",
+    "slots": [
+      {
+        "slot": "port.church",
+        "owner": "istj-m",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null }
+      },
+      {
+        "slot": null,
+        "owner": "entj-priest",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null },
+        "note": "No separate port slot yet; competes with istj-m for the church (UPGRADES.md sec.church)."
+      }
+    ]
+  },
+  {
+    "id": "healing",
+    "name": "healing: clinic vs apothecary",
+    "slots": [
+      {
+        "slot": "port.clinic",
+        "owner": "isfj-f",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null }
+      },
+      {
+        "slot": "port.apothecary",
+        "owner": "intj-f",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null }
+      }
+    ]
+  },
+  {
+    "id": "food",
+    "name": "farm vs butcher shop",
+    "slots": [
+      {
+        "slot": "port.farm",
+        "owner": "intp-m",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null }
+      },
+      {
+        "slot": "port.bakery",
+        "owner": "esfp-f",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null }
+      }
+    ]
+  },
+  {
+    "id": "hunting",
+    "name": "hunting / gathering",
+    "slots": [
+      {
+        "slot": "port.estp_hut",
+        "owner": "estp-f",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null }
+      },
+      {
+        "slot": null,
+        "owner": "istp-f",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null },
+        "note": "No port slot yet (UPGRADES.md sec.hunt: place open for istp-f)."
+      }
+    ]
+  },
+  {
+    "id": "inventions",
+    "name": "inventions: ENTP vs INFJ mechanic",
+    "slots": [
+      {
+        "slot": "port.shipyard",
+        "owner": "entp-m",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null }
+      },
+      {
+        "slot": null,
+        "owner": "infj-m",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null },
+        "note": "INFJ mechanic's workplace port id not filed yet (UPGRADES.md sec.invent)."
+      }
+    ]
+  },
+  {
+    "id": "commerce",
+    "name": "commerce (warehouse vs merchant)",
+    "slots": [
+      {
+        "slot": "port.warehouse",
+        "owner": "enfj-m",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null }
+      },
+      {
+        "slot": "port.esfj_shop",
+        "owner": "esfj-m",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null }
+      }
+    ]
+  },
+  {
+    "id": "brothel",
+    "name": "brothel: INFP vs ISFP (tentative)",
+    "slots": [
+      {
+        "slot": "port.tavern",
+        "owner": "infp-m",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null }
+      },
+      {
+        "slot": null,
+        "owner": "isfp",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null },
+        "note": "ISFP rival place not assigned a port slot yet (UPGRADES.md sec.brothel)."
+      }
+    ]
+  },
+  {
+    "id": "town_hall",
+    "name": "town hall: ESTJ vs ENFP (tentative)",
+    "slots": [
+      {
+        "slot": "port.townhall",
+        "owner": "estj-f",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null }
+      },
+      {
+        "slot": null,
+        "owner": "enfp",
+        "forms": { "og": null, "cg": null, "oe": null, "ce": null },
+        "note": "ENFP town-hall rival has no port slot yet (UPGRADES.md sec.townhall)."
+      }
+    ]
+  }
+]

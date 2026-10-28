@@ -1,0 +1,114 @@
+{
+  "entp-m": {
+    "og": "cg",
+    "cg": "oe",
+    "oe": "og",
+    "ce": "ce",
+    "mark": "Rex (map, natural alignment chaotic evil)"
+  },
+  "intj-f": {
+    "og": "oe",
+    "cg": "oe",
+    "oe": "oe",
+    "ce": "oe",
+    "mark": "Rex (map, start); also neutral if shown her belief is wrong"
+  },
+  "intp-m": {
+    "og": "oe",
+    "cg": "og",
+    "oe": "lean",
+    "ce": "oe",
+    "mark": "Rex (corrected chart); start open"
+  },
+  "esfp-f": {
+    "og": "cg",
+    "cg": "ce",
+    "oe": "ce",
+    "ce": "lean",
+    "mark": "Rex (corrected chart); start open"
+  },
+  "estp-f": {
+    "og": "cg",
+    "cg": "cg",
+    "oe": "ce",
+    "ce": "ce",
+    "mark": "Rex; start open"
+  },
+  "esfj-m": {
+    "og": "ce",
+    "cg": "oe",
+    "oe": "og",
+    "ce": "cg",
+    "mark": "Rex; start open"
+  },
+  "enfj-m": {
+    "og": "og",
+    "cg": "og",
+    "oe": "oe",
+    "ce": "oe",
+    "mark": "Rex; start open"
+  },
+  "estj-f": {
+    "og": "ce",
+    "cg": "og",
+    "oe": "cg",
+    "ce": "oe",
+    "mark": "Rex; start open"
+  },
+  "istj-m": {
+    "og": "lean",
+    "cg": "lean",
+    "oe": "cg",
+    "ce": "og",
+    "mark": "Rex (chart 2026-10-28): OG and CG dashed rings (lean, arrives); OE->CG; CE->OG. Can't be corrupted (Rex). Earlier text cells (OE 'does nothing', CE 'moves the town toward good') differ from the chart: which stands is open. Highlighted CE square: start open"
+  },
+  "isfj-f": {
+    "og": "lean",
+    "cg": "ce",
+    "oe": "cg",
+    "ce": "oe",
+    "mark": "Rex (chart 2026-10-28): OG dashed ring = no change, leans her OG; CG->CE, OE->CG, CE->OE. The highlighted CE square: whether it is her start is open"
+  },
+  "istp-f": {
+    "og": "cg",
+    "cg": "oe",
+    "oe": "ce",
+    "ce": "og",
+    "mark": "Rex (chart 2026-10-28): OG->CG, CG->OE, OE->CE, CE->OG (no loops). Highlighted OG square: start open"
+  },
+  "infp-m": {
+    "og": "cg",
+    "cg": "oe",
+    "oe": "lean",
+    "ce": "oe",
+    "mark": "Rex (chart 2026-10-28): OG->CG, CG->OE, OE dashed ring (lean), CE->OE. Highlighted CE square: start open"
+  },
+  "entj-priest": {
+    "og": "ce",
+    "cg": "oe",
+    "oe": "lean",
+    "ce": "lean",
+    "mark": "Rex (new character and chart, 2026-10-28): the evil ENTJ priest, the church competitor. OG->CE, CG->OE, OE and CE dashed rings (lean). Slug is a placeholder until the story keeper assigns one; gender open. Highlighted CG square: start open"
+  },
+  "infj-m": {
+    "og": "lean",
+    "cg": "og",
+    "oe": "og",
+    "ce": "og",
+    "mark": "Rex (chart 2026-10-28): every action leads to orderly good (OG dashed ring, CG/OE/CE -> OG). Highlighted OG: start open"
+  },
+  "enfp": {
+    "og": "cg",
+    "cg": "og",
+    "oe": "ce",
+    "ce": "oe",
+    "mark": "Rex (chart 2026-10-28; the character tentative): the ESTJ's rival for the town hall. Two double-headed arrows read as OG->CG, CG->OG, OE->CE, CE->OE (keeper's reading). Highlighted CE square: start open. Gender and slug open"
+  },
+  "isfp": {
+    "og": "ce",
+    "cg": "og",
+    "oe": "ce",
+    "ce": "lean",
+    "mark": "Rex (chart 2026-10-28; the character tentative): the INFP's rival for the brothel. OG->CE, CG->OG, OE->CE, CE dashed ring (lean). Highlighted CE square: start open. Gender and slug open"
+  }
+}
