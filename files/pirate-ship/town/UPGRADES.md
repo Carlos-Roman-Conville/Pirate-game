@@ -140,7 +140,7 @@ Rex's rule, as given:
 
 | You recruit | The farm | The cook's shop | Also |
 |---|---|---|---|
-| neither | overtaken by ghosts | overtaken by ghosts | |
+| neither | overtaken by ghosts | overtaken by ghosts | confirmed by Rex (2026-10-27); the other rows still tentative |
 | the farmer only | keeps improving from the bodies you supply, run by the daughter | drifts toward ghosthood | |
 | the cook only | drifts toward ghosthood | keeps improving from the bodies you supply, run by the son | |
 | both | improves (run by the daughter) | improves (run by the son) | a secret duel event (not designed yet) |
@@ -190,3 +190,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-27 | `port.warehouse` states `legit` / `illicit` (Rex), exclusive; unlocks open | keeper; states Rex |
 | 2026-10-27 | The warehouse journey is the son's (`enfj-m`), not the father's | Rex |
 | 2026-10-27 | Food source rule (tentative): `port.farm` / `port.bakery` `improved` if their owner is recruited, `ghosted` if not; `event.food_duel` if both (via the story keeper, 653c8d0) | keeper; rule Rex |
+| 2026-10-27 | Confirmed: recruit neither the farmer nor the cook and both places go to ghosts | Rex |
