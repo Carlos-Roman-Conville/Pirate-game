@@ -56,23 +56,18 @@ the other seven pairs is **open** (Rex, 2026-10-28: his first "yes, every pair" 
 | c. Every pair, recruiting both still costs one (for example the duel's loser ghosts) | Recruiting both is a gamble | Orderly good survives only if the player can steer the hunters' duel to the ISTP |
 | d. Every pair, no "both" case | Recruit one, the other ghosts, full stop | **Orderly good has no route** (C2) |
 
-### C2. The one knot: the doctor needs the outdoorswoman
+### C2. The orderly good hospital is an earned route (Rex, 2026-10-28)
 
-The ISFJ only joins if the ESTP is in your party (Rex). In a perfect OG town:
+**(Rex)** The hidden way to an orderly good hospital is supposed to be earned. Giving it away through another
+option defeats the purpose. So the knot is the design, not a problem:
 
-- healing must be the ISFJ (the INTJ never reaches OG);
-- hunting must be the ISTP (the ESTP never reaches OG);
-- so you recruit the ESTP only as the doctor's key, and under C1 b–d she harms the ISTP's place.
+- healing in OG can only be the ISFJ (the INTJ never reaches OG), and she only joins with the ESTP in your party;
+- hunting in OG must be the ISTP (the ESTP never reaches OG);
+- so a perfect OG town means bringing the ESTP aboard as the doctor's key while still developing the ISTP's side.
 
-CG and CE don't hit this (the ESTP can be their hunter); OE avoids it (the INTJ can take healing). Ways out, any one
-is enough:
-
-1. **A third healer** who reaches OG, without the ESTP gate.
-2. **A third hunter** who reaches OG and OE, so the ISTP isn't the only orderly hunter.
-3. **The INTJ's way out reaches OG**: Rex's rule is that shown her belief is wrong she becomes neutral; if that
-   exit led to OG instead, healing has an OG route that skips the ISFJ.
-4. **Another way to win the ISFJ** that doesn't need the ESTP aboard (story change; the character keeper's).
-5. **Ghost rule a or b** (C1).
+The keeper's only job here is to keep that route **possible**, not easy. It stays possible under ghost rule a, b,
+or c (if the player can steer the hunters' duel); **option d closes it** (C1). No third healer, third hunter or
+other bypass is proposed: those would give the route away.
 
 ### C3. Lopsided pairs: where one side never has to win
 
@@ -91,8 +86,8 @@ perfect town of each ending ("either" = both can):
 | brothel | ISFP | INFP | INFP | ISFP | none: an even split |
 | town hall | either | either | either | either | **both overlap fully**: either always works |
 
-Church, food and brothel are clean splits (each rival owns two endings). The other five lean to one side. If Rex
-wants every rival to matter, the fixes are a third person who takes the dominant one's place in some endings, or
+Church, food and brothel are clean splits (each rival owns two endings). The other five lean to one side. Some of
+that may be deliberate, as with C2; listed only so Rex can see it. If Rex wants a rival to matter more, the fixes are a third person who takes the dominant one's place in some endings, or
 the dominant one's chart giving some quadrants up (charts are Rex's; the keeper doesn't touch them). Not a gap: no
 ending loses a route.
 
@@ -393,3 +388,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | The ISTP's chart (OG→CG, CG→OE, OE→CE, CE→OG): hunting complete; every sector reaches every ending; routes OG 8, CG 4, OE 8, CE 4 | Rex |
 | 2026-10-28 | ~~The ghost rule applies to every pair~~ withdrawn the same day: Rex's "yes" was a gut feeling, not a decision; ghost rule beyond the food pair is open (C1) | Rex |
 | 2026-10-28 | Rex's goal: a route to a perfectly working town through a complicated set of choices; open to a third or fourth person per competition. Choices C1–C4 laid out (ghost rule options, the ISFJ–ESTP knot, lopsided pairs, recruit limit) | Rex; keeper (options) |
+| 2026-10-28 | The OG hospital (ISFJ via the ESTP, alongside the ISTP) is an earned hidden route by design; bypass options withdrawn; the keeper guards only that it stays possible | Rex |
