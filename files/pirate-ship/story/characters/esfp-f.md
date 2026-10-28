@@ -41,11 +41,30 @@ follow `_TEMPLATE.md`.
 | Schedule | `schedule` | their day: post, meals, the den, sleep | open |
 | Claims vs truth | `claims` | what they say they're good at, and whether it's true | open |
 
+### The farm and the cook's shop: food-source consequences (Rex, 2026-10-27)
+
+Shared with the other parent's file (`intp-m.md` / `esfp-f.md`); kept the same in both.
+
+- **(Rex)** Three to four consequences, all about upgrading the town's food source.
+- **(Rex)** Prerequisite quest for both: you provide them bodies. Later they decide to join you; you still give
+  them bodies, and they send the bodies to their businesses so their next of kin keep everything going.
+- **(Rex)** Whoever you take with you, their child takes charge of their business: the daughter runs the farm
+  (the farmer's side), the son the cook's shop (the cook's side).
+- **(Rex, tentative: "I think it would make sense")** The outcomes:
+  - **Neither** (you take and help neither): that institution is overtaken by ghosts.
+  - **One:** the one you take keeps getting more and more supply, which improves their station; it pushes the
+    other one toward ghosthood.
+  - **Both:** both improve, but a secret duel event happens (what it is, is open).
+- **(open)** Rex wasn't sure at first whether the institution improves or declines, or what taking both does; the
+  outcomes above are his answer as he thought it through.
+- **(open)** "Both" is read as the farm and the cook's shop; "that institution" with neither is read as both
+  businesses going to ghosts. To confirm.
+
 ## Joining
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | requires higher reputation before they'll consider joining you, and you must complete sub quests for them (which sub quests are open) | Rex |
+| How recruited | `recruit` | requires higher reputation before they'll consider joining you, and you must complete sub quests for them; the prerequisite quest is providing them bodies (see the food-source consequences) | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -143,3 +162,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Gender confirmed: woman; file moved from `esfp-m.md` to `esfp-f.md` | Rex |
 | 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |
 | 2026-10-27 | Inner rules: her alignment map (OG→CG, CG→CE, OE→CE, CE no change); replaces an earlier wrong chart sent the same day | Rex |
+| 2026-10-27 | Food-source consequences: bodies as the prerequisite quest; their child runs the business; neither → ghosts, one → improves and the other toward ghosthood, both → both improve plus a secret duel | Rex |

@@ -200,4 +200,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The ESTP's alignment map: OG→CG, CG stays, OE→CE, CE stays | Rex |
 | 2026-10-27 | Joining: four or five recruits need higher reputation before they'll consider joining, plus sub quests for them: the INTP, ESTP, ESFP and ISFJ (a fifth, if any, is open) | Rex |
 | 2026-10-27 | Alignment maps (corrected charts): the ESFP cook (OG→CG, CG→CE, OE→CE, CE no change); the INTP farmer (OG→OE, CG→OG, OE no change, CE→OE) | Rex |
+| 2026-10-27 | The farmer and cook: bodies as their prerequisite quest; whoever joins, their child runs the business; taking neither → their institution overtaken by ghosts; one → it improves and pushes the other toward ghosthood; both → both improve plus a secret duel event | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |
