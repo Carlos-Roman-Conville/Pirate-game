@@ -1,5 +1,5 @@
 {
-  "_about": "Balance keeper's data file. Copied from the story keeper's files (story/characters/*.md, story/QUESTLINES.md); those are the source, this is a copy for reach.py. Map = action quadrant -> where the witnessing character moves. Values: og/cg/oe/ce, 'stay' (no change), 'lean' (Rex's dashed ring: no change, leans them toward that cell's own quadrant), or null (open, not made). 'start' = starting alignment (null = open). 'never' = quadrants Rex has ruled out for them. 'mark' says whose each item is.",
+  "_about": "Balance keeper's data file. Copied from the story keeper's files (story/characters/*.md, story/QUESTLINES.md); those are the source, this is a copy for reach.py. Map = action quadrant -> where the witnessing character moves. Values: og/cg/oe/ce, 'stay' (no change), 'lean' (Rex's dashed ring: no change, leans them toward that cell's own quadrant; Rex 2026-10-28: kept up, the lean carries them all the way in), or null (open, not made). 'start' = starting alignment (null = open). 'never' = quadrants Rex has ruled out for them. 'mark' says whose each item is.",
   "quadrants": [
     "og",
     "cg",
