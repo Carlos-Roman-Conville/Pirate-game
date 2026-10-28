@@ -56,6 +56,7 @@ follow `_TEMPLATE.md`.
 |---|---|---|---|
 | How recruited | `recruit` | a secret character; requires higher reputation before they'll consider joining you, and you must complete sub quests for them (which sub quests are open). Why she joins (Rex): she doesn't need anyone and doesn't trust anyone, so she won't join unless you help her with a few things she finds too difficult to accomplish herself (which things is open) | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
+| What develops their place | `develops_place` | recruiting alone doesn't develop it: a sub quest or supplying what they need (which is open) | open |
 
 ## Relationships
 
@@ -155,3 +156,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |
 | 2026-10-27 | Why she joins: trusts and needs no one; joins only after you help with a few things too difficult for her alone. Tie: the ISFJ's infatuation | Rex |
 | 2026-10-28 | Starting alignment for now: neutral | Rex |
+| 2026-10-28 | New field `develops_place`: recruiting alone doesn't develop their place; it takes a sub quest or supplying what they need | Rex |

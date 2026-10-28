@@ -53,6 +53,7 @@ follow `_TEMPLATE.md`.
 |---|---|---|---|
 | How recruited | `recruit` | he despises his parents and wants to get away (Rex: "fairly simple, one-dimensional rationale, I feel") | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
+| What develops their place | `develops_place` | recruiting alone doesn't develop it: a sub quest or supplying what they need (which is open) | open |
 
 ## Relationships
 
@@ -145,3 +146,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Confirmed: the journey into making structure is his | Rex |
 | 2026-10-27 | Why he joins: despises his parents and wants to get away | Rex |
 | 2026-10-28 | Starting alignment for now: neutral | Rex |
+| 2026-10-28 | New field `develops_place`: recruiting alone doesn't develop their place; it takes a sub quest or supplying what they need | Rex |

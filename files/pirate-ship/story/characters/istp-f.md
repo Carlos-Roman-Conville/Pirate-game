@@ -82,6 +82,7 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 |---|---|---|---|
 | How recruited | `recruit` | she agrees easily: she's broke, desperately needs cash for alcohol, and no work has come through the town in months | Rex |
 | What the town thinks of them | `town_view` | | open |
+| What develops their place | `develops_place` | recruiting alone doesn't develop it: a sub quest or supplying what they need (which is open) | open |
 
 ## Relationships
 
@@ -172,3 +173,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Backstory: her husband was killed by a massive shark she failed to kill; never forgave herself, hunts alone; broke, needs cash for alcohol; joins easily since no work has come through town in months | Rex |
 | 2026-10-28 | Inner rules: her alignment map (OG→CG, CG→OE, OE→CE, CE→OG): a full cycle | Rex |
 | 2026-10-28 | Starting alignment for now: neutral | Rex |
+| 2026-10-28 | New field `develops_place`: recruiting alone doesn't develop their place; it takes a sub quest or supplying what they need | Rex |

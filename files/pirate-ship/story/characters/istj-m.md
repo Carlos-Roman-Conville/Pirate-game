@@ -51,6 +51,7 @@ follow `_TEMPLATE.md`.
 |---|---|---|---|
 | How recruited | `recruit` | recruitable: he offers to join. He sees you as floundering in skills and a bit pathetic, so he joins to help you out, to take measure of you, and hopefully to bring you to God, though he knows you likely won't come | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
+| What develops their place | `develops_place` | recruiting alone doesn't develop it: a sub quest or supplying what they need (which is open) | open |
 
 ## Relationships
 
@@ -147,3 +148,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-28 | Inner rules: his alignment map (OG lean, CG lean, OE→CG, CE→OG); where it differs from the earlier cells is open for Rex | Rex |
 | 2026-10-28 | Tie: the evil ENTJ priest competes with him for the church | Rex |
 | 2026-10-28 | Starting alignment for now: orderly good | Rex |
+| 2026-10-28 | New field `develops_place`: recruiting alone doesn't develop their place; it takes a sub quest or supplying what they need | Rex |

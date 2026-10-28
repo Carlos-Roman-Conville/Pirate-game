@@ -47,6 +47,7 @@ follow `_TEMPLATE.md`.
 |---|---|---|---|
 | How recruited | `recruit` | hire / mercenary / kidnap; what they need first (rep, proof, gift, questline) | open |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
+| What develops their place | `develops_place` | recruiting alone doesn't develop it: a sub quest or supplying what they need (which is open) | open |
 
 ## Relationships
 
@@ -135,3 +136,4 @@ For the code (`inner_rules`, action → destination):
 |---|---|---|
 | 2026-10-28 | Created (tentative): the INFP's rival for the brothel; alignment map (OG→CE, CG→OG, OE→CE, CE lean) | Rex |
 | 2026-10-28 | Starting alignment for now: chaotic evil | Rex |
+| 2026-10-28 | New field `develops_place`: recruiting alone doesn't develop their place; it takes a sub quest or supplying what they need | Rex |

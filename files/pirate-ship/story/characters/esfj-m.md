@@ -47,6 +47,7 @@ follow `_TEMPLATE.md`.
 |---|---|---|---|
 | How recruited | `recruit` | he's broke, and only joins if you give him the funds to start a venture: a shop peddling rare goods (Rex: "I think"). He temporarily opens a shop in town, or a stall in the port, but it fails; when it does he realises he can't pay you back, so he offers to join you instead, and you can still get those rare goods from him, for a price | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
+| What develops their place | `develops_place` | recruiting alone doesn't develop it: a sub quest or supplying what they need (which is open) | open |
 
 ## Relationships
 
@@ -192,3 +193,4 @@ Why his map moves the way it does.
 | 2026-10-27 | Why he joins: broke; you fund his rare-goods shop or stall, it fails, he can't repay, so he joins and still sells you rare goods for a price | Rex |
 | 2026-10-28 | Still counts for commerce after his shop fails: he keeps selling rare goods from the ship | Rex |
 | 2026-10-28 | Starting alignment for now: chaotic good | Rex |
+| 2026-10-28 | New field `develops_place`: recruiting alone doesn't develop their place; it takes a sub quest or supplying what they need | Rex |

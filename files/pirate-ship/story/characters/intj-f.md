@@ -55,6 +55,7 @@ follow `_TEMPLATE.md`.
 |---|---|---|---|
 | How recruited | `recruit` | she offers to join, because she sees you as part of her path toward her plans. She doesn't tell you why she joins. Her joining dialogue tree is complex, like the ENTP's, but every path leads to her joining you: you cannot make a wrong choice, only perceive one. (Her questline, below, is her arc; earlier this field read "her questline") | Rex |
 | What the town thinks of them | `town_view` | many townspeople use both her and the ENTP for various things; people who use both often have to lie to each: when she brings up an interaction she had with the ENTP, the villager just agrees and goes along with it (and the same with him) | Rex |
+| What develops their place | `develops_place` | recruiting alone doesn't develop it: a sub quest or supplying what they need (which is open) | open |
 
 ## Relationships
 
@@ -179,3 +180,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Joining dialogue: complex like the ENTP's, but every path leads to her joining; no wrong choice, only the perception of one | Rex |
 | 2026-10-28 | No longer the ENTP's economic rival (stores don't compete; the contempt stays); now competes with the ISFJ's clinic for the town's healing | Rex |
 | 2026-10-28 | Starting alignment for now: orderly evil | Rex |
+| 2026-10-28 | New field `develops_place`: recruiting alone doesn't develop their place; it takes a sub quest or supplying what they need | Rex |

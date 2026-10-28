@@ -48,6 +48,7 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 |---|---|---|---|
 | How recruited | `recruit` | first time: you convince him through dialogue (a complex dialogue tree; the INTJ's is the other). He has been thinking about joining a crew but feels he's not ready to put his weaponry to the test; he's been tinkering for two years and isn't sure he's ready. You convince him, and that's why he joins. After that he constantly leaves your crew; you go back into town, find him and convince him to join again, again and again | Rex |
 | What the town thinks of them | `town_view` | many townspeople use both him and the INTJ for various things; people who use both often have to lie to each: when he brings up an interaction he had with the INTJ, the villager just agrees and goes along with it (and the same with her) | Rex |
+| What develops their place | `develops_place` | recruiting alone doesn't develop it: a sub quest or supplying what they need (which is open) | open |
 
 ### His arc (Rex, 2026-10-26)
 
@@ -178,3 +179,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-28 | No longer the INTJ's economic rival (stores don't compete; the contempt stays); Rex will make a new mechanical character to compete with him | Rex |
 | 2026-10-28 | His mechanical rival is the INFJ, a newcomer (`infj-m`) | Rex |
 | 2026-10-28 | Starting alignment for now: chaotic evil | Rex |
+| 2026-10-28 | New field `develops_place`: recruiting alone doesn't develop their place; it takes a sub quest or supplying what they need | Rex |

@@ -54,6 +54,7 @@ follow `_TEMPLATE.md`.
 |---|---|---|---|
 | How recruited | `recruit` | (Rex, tentative: "could be") you pay for her services, and after about three visits she becomes enamoured with you and joins | Rex (tentative) |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
+| What develops their place | `develops_place` | recruiting alone doesn't develop it: a sub quest or supplying what they need (which is open) | open |
 
 ## Relationships
 
@@ -150,3 +151,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-28 | Her brothel rival: Rex is thinking an ISFP (tentative) | Rex |
 | 2026-10-28 | Inner rules: her alignment map (OG→CG, CG→OE, OE lean, CE→OE); her brothel rival is the tentative ISFP (`isfp.md`) | Rex |
 | 2026-10-28 | Starting alignment for now: orderly evil | Rex |
+| 2026-10-28 | New field `develops_place`: recruiting alone doesn't develop their place; it takes a sub quest or supplying what they need | Rex |

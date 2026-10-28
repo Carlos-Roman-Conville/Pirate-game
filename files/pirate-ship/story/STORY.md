@@ -223,4 +223,5 @@ work lives in `../art/`, not here.
 | 2026-10-28 | The INFJ mechanic's alignment map (OG lean, CG→OG, OE→OG, CE→OG): every path ends in orderly good | Rex (via the balance keeper) |
 | 2026-10-28 | The ISTP hunter's alignment map (OG→CG, CG→OE, OE→CE, CE→OG): a full cycle with no leans | Rex (via the balance keeper) |
 | 2026-10-28 | The alignment system (`balance/ALIGNMENT.md`): the player earns alignment too; three sources of change (dialogue, quests, independent actions), only those present witness, a continuous square, alignment persists through rotation; starting positions for now set for all 16 charted characters | Rex (via the balance keeper) |
+| 2026-10-28 | Recruiting alone doesn't develop a character's place: it takes a sub quest or supplying what they need (the farm's bodies are the example); new field `develops_place` | Rex (via the balance keeper) |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

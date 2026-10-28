@@ -70,6 +70,7 @@ Shared with the other parent's file (`intp-m.md` / `esfp-f.md`); kept the same i
 |---|---|---|---|
 | How recruited | `recruit` | requires higher reputation before they'll consider joining you, and you must complete sub quests for them; the prerequisite quest is providing them bodies (see the food-source consequences). Why they join (Rex): they simply want to see the world more and need a break from the island; since you've been helping them, they decide it's no big deal, as long as they can still come back and use more dead bodies (the farmer's and cook's reasons are similar for now; Rex will make them distinct later) | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
+| What develops their place | `develops_place` | you supply them bodies (Rex's example); recruiting alone doesn't develop it | Rex |
 
 ## Relationships
 
@@ -169,3 +170,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Why they join: to see the world and get a break from the island, as long as they can come back for more bodies (distinct from the other parent's reason later) | Rex |
 | 2026-10-28 | Dashed ring clarified: the lean toward orderly evil, kept up, eventually carries him all the way into it | Rex |
 | 2026-10-28 | Starting alignment for now: orderly evil | Rex |
+| 2026-10-28 | New field `develops_place`: recruiting alone doesn't develop their place; it takes a sub quest or supplying what they need | Rex |

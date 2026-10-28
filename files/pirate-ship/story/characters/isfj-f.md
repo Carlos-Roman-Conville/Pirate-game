@@ -60,6 +60,7 @@ follow `_TEMPLATE.md`.
 |---|---|---|---|
 | How recruited | `recruit` | recruitable; requires higher reputation before they'll consider joining you, and you must complete sub quests for them (which sub quests are open). Why she joins (Rex): only if you have the ESTP in your party. She sees the ESTP as someone who really needs help; she knows of her living situation and the conditions she keeps her house in, and finds it abhorrent | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
+| What develops their place | `develops_place` | recruiting alone doesn't develop it: a sub quest or supplying what they need (which is open) | open |
 
 ## Relationships
 
@@ -157,3 +158,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-28 | Inner rules: her alignment map (OG no change, CG→CE, OE→CG, CE→OE); tie: her clinic competes with the INTJ's apothecary for the town's healing; the church and clinic kept separate | Rex |
 | 2026-10-28 | Dashed ring clarified: the lean toward orderly good, kept up, eventually carries her all the way into it | Rex |
 | 2026-10-28 | Starting alignment for now: orderly good | Rex |
+| 2026-10-28 | New field `develops_place`: recruiting alone doesn't develop their place; it takes a sub quest or supplying what they need | Rex |

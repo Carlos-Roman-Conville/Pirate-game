@@ -47,6 +47,7 @@ follow `_TEMPLATE.md`.
 |---|---|---|---|
 | How recruited | `recruit` | after a sub quest: you prove your skill to her through a series of games she has you play at the pub. She then sees some potential in you and decides to join, to fix your messed-up boat and crew you up (which games is open) | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
+| What develops their place | `develops_place` | recruiting alone doesn't develop it: a sub quest or supplying what they need (which is open) | open |
 
 ## Relationships
 
@@ -141,3 +142,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-28 | Competes with someone (to come) for control of the town hall | Rex |
 | 2026-10-28 | Her town hall rival: Rex is thinking an ENFP (tentative) | Rex |
 | 2026-10-28 | Starting alignment for now: orderly evil | Rex |
+| 2026-10-28 | New field `develops_place`: recruiting alone doesn't develop their place; it takes a sub quest or supplying what they need | Rex |

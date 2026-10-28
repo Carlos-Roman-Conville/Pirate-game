@@ -48,6 +48,7 @@ reorder them; add new ones at the end.
 |---|---|---|---|
 | How recruited | `recruit` | hire / mercenary / kidnap; what they need first (rep, proof, gift, questline) | open |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
+| What develops their place | `develops_place` | sub quest or supplying what they need; recruiting alone doesn't develop their place | open |
 
 ## Relationships
 
