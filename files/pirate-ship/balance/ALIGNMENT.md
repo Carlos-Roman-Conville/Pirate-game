@@ -135,8 +135,11 @@ invented.
 - **(Rex, 2026-10-28) The ghost rule applies to every pair**, as the food rule does: recruit neither → both
   places go to ghosts; recruit one → it develops, the rival's drifts toward ghosts; recruit both → both develop
   (`ghostRule: every-pair-both-improve`). The food pair's secret duel on "both" stays the food pair's (not designed).
-  **(open)** what "developed" needs beyond recruiting (the food pair needs bodies supplied); when a place turns
-  ghosted; whether a ghosted place is the undeveloped state or its own state.
+  **(Rex, 2026-10-28)** Recruiting alone doesn't develop a place: it takes more, a sub quest or supplying what
+  they need (the farm's bodies), so a recruited character's place can stay undeveloped. In the engine `develop`
+  is therefore its own command the game sends when that condition is met (the condition itself is story data, per
+  character, Rex's); `recruit` never develops. **(open)** when a place turns ghosted; whether ghosted is its own
+  slot state.
 
 ## 6. The town and its endings
 
@@ -227,3 +230,4 @@ web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fi
 | 2026-10-28 | An exact diagonal tie keeps the previous region (no snap) | Rex |
 | 2026-10-28 | Every developed place counts toward a perfect town, the loser of a pair included | Rex |
 | 2026-10-28 | The ghost rule applies to every pair; recruiting both lets both develop | Rex |
+| 2026-10-28 | Recruiting alone doesn't develop a place; it takes a sub quest or supplying what they need; develop is its own command | Rex |
