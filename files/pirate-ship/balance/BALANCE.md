@@ -35,7 +35,7 @@ make new characters.
 | Inventions (ENTP vs INFJ mechanic) | nothing; the ENTP alone reaches all four | the INFJ's chart has no constraint |
 | Commerce (ENFJ vs ESFJ) | nothing: the merchant still counts after his shop fails (Rex, 2026-10-28) | |
 | Brothel (INFP vs ISFP, tentative) | **all four**: neither chart is made | the INFP's and ISFP's charts together land on all four (either one alone can do it) |
-| Town hall (ESTJ vs ENFP, tentative) | nothing; the ESTJ reaches all four | the ENFP's chart has no constraint |
+| Town hall (ESTJ vs ENFP, tentative) | nothing; the ESTJ and the ENFP (chart 2026-10-28) each reach all four | |
 
 ## Are the alignment maps on file?
 
@@ -55,6 +55,7 @@ the story keeper. The reachable sets the outside AI quoted for 8 characters all 
 | ESTJ `estj-f` | OG→CE, CG→OG, OE→CG, CE→OE | all four | all four ✓ |
 | ISTJ `istj-m` (Rex, 2026-10-28) | OG no change (leans OG), CG no change (leans CG), OE→CG, CE→OG | OG, CG | n/a |
 | Evil ENTJ priest (new, Rex, 2026-10-28; slug not assigned yet) | OG→CE, CG→OE, OE no change (leans OE), CE no change (leans CE) | OE, CE | n/a |
+| ENFP (tentative; Rex's chart, 2026-10-28) | OG→CG, CG→OG, OE→CE, CE→OE (two double-headed arrows: good acts swap them across the good row, evil acts across the evil row; keeper's reading) | all four | n/a |
 | ISFJ `isfj-f` (Rex, 2026-10-28) | OG no change (dashed ring: leans OG), CG→CE, OE→CG, CE→OE | all four (OG by leaning, which arrives) | n/a |
 
 **The ISTJ priest's chart (Rex, 2026-10-28):** OG dashed ring (leans OG), CG dashed ring (leans CG), OE→CG,
@@ -166,7 +167,7 @@ out.
 | inventions | ENTP / INFJ mechanic | Rex | yes: ENTP | yes: ENTP | yes: ENTP | yes: ENTP |
 | commerce | ENFJ / ESFJ | Rex | yes: ENFJ, ESFJ | yes: ESFJ alone | yes: ENFJ, ESFJ | yes: ESFJ alone |
 | brothel | INFP / ISFP (tentative) | Rex | **open only** (INFP map?) | **open only** (INFP map?) | **open only** (INFP map?) | **open only** (INFP map?) |
-| town hall | ESTJ / ENFP (tentative) | Rex | yes: ESTJ | yes: ESTJ | yes: ESTJ | yes: ESTJ |
+| town hall | ESTJ / ENFP (tentative) | Rex | yes: ESTJ, ENFP | yes: ESTJ, ENFP | yes: ESTJ, ENFP | yes: ESTJ, ENFP |
 
 ### Per ending
 
@@ -256,7 +257,6 @@ Not gaps; each is one character carrying a sector's whole route to an ending, so
   even with a chart his window may be short. Rex's rule: keep him at his explained departure and
   "his contribution to the town never happens". If that contribution is the inventions sector, every inventions
   route needs you to let him go at that one event, with his alignment frozen there. The new mechanic removes this.
-- Town hall: the ESTJ alone, until the ENFP's chart exists.
 - Commerce CG/CE: the ESFJ alone.
 - Healing OG, CG, CE: the ISFJ alone (the INTJ is OE only).
 
@@ -287,7 +287,7 @@ Not filled-in maps; Rex makes them.
 | ISTP `istp-f` | **OG and OE** | nothing | P2 |
 | INFJ mechanic `infj-m` (slug placeholder) | nothing | nothing | the ENTP reaches all four; any map helps P5 |
 | INFP `infp-m` + ISFP (tentative) | **together, all four** (OG, CG, OE, CE); either can carry any of them | nothing | the brothel has no other character |
-| ENFP (tentative, the ESTJ's rival) | nothing | nothing | the ESTJ reaches all four |
+| ENFP (tentative, the ESTJ's rival) | made (Rex, 2026-10-28): all four | nothing | the ESTJ reaches all four |
 | ISFJ `isfj-f` | made (Rex, 2026-10-28); covers all four | | P3 closed |
 | Any new character | together with their sector partner, all four | | the strict reading |
 
@@ -299,7 +299,7 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
   alignments (whether the ISFJ's and ISTJ's highlighted CE squares are their starts).
 - Whether the priest's chart replaces his earlier OE and CE words (OE "does nothing"; CE "moves the town toward good").
 - Eight sectors now (church, healing, food, hunting, inventions, commerce, brothel, town hall).
-- The ENFP and ISFP: confirmed or not, gender, slug, charts; what the town hall is and who else is there.
+- The ENFP and ISFP: confirmed or not, gender, slug; the ISFP's chart; whether the ENFP's highlighted CE square is a start; what the town hall is and who else is there.
 - Whether both institutions in a sector can succeed (proposed), and whether the food rule's "the other drifts
   toward ghosthood" applies to every pair.
 - What "succeed" means for a sector: the institution developed, the character's storyline done, or both.
@@ -321,3 +321,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | Commerce kept: the ENFJ warehouse heir vs the ESFJ merchant (now Rex's); P4 still open | Rex |
 | 2026-10-28 | The merchant still counts for commerce after his shop fails (he keeps selling rare goods from the ship); P4 closed | Rex |
 | 2026-10-28 | Rivals, tentative ("thinking"): the ESTJ vs an ENFP for the town hall, the INFP vs an ISFP for the brothel | Rex |
+| 2026-10-28 | The ENFP's chart (OG↔CG, OE↔CE): reaches all four; the town hall has two carriers | Rex |

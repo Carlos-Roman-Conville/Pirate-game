@@ -166,14 +166,14 @@
     },
     "enfp": {
       "map": {
-        "og": null,
-        "cg": null,
-        "oe": null,
-        "ce": null
+        "og": "cg",
+        "cg": "og",
+        "oe": "ce",
+        "ce": "oe"
       },
       "start": null,
       "never": [],
-      "mark": "Rex (tentative, 2026-10-28: 'thinking'): the ESTJ's rival for the town hall. Gender and slug open; map not made"
+      "mark": "Rex (chart 2026-10-28; the character tentative): the ESTJ's rival for the town hall. Two double-headed arrows read as OG->CG, CG->OG, OE->CE, CE->OE (keeper's reading). Highlighted CE square: start open. Gender and slug open"
     },
     "isfp": {
       "map": {
