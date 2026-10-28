@@ -35,21 +35,72 @@ routes (one character per sector who can reach the ending):
 
 No gaps remain under the keeper's strict reading.
 
-**The ghost rule covers every pair (Rex, 2026-10-28):** recruiting one character makes their rival's place drift
-toward ghosts. What that means for the routes:
+**Rex's goal for the whole town (2026-10-28):** a route to a perfectly working town by the end, through a
+complicated set of choices: you can't recruit everyone, but who you choose to develop can get you there. He is
+open to adding a third or fourth person to any competition where one side is forced to drift.
 
-- Every full-town route has to **recruit each sector's winner** at some point (recruiting is what develops a place
-  and keeps its rival's from winning). That's 8 recruits through 3 slots, so rotation is required, as Rex designed.
-- **Orderly good now hangs on the "both" case.** Healing's only OG character is the ISFJ, and she only joins with
-  the ESTP in your party. The ESTP can't reach OG, so OG hunting must come from the ISTP, which means recruiting
-  *both* hunters. In the food pair, recruiting both makes both places improve (plus a secret duel; that row is
-  still tentative). If that "both" case also applies to every pair, OG keeps its routes: the ISTP's place improves
-  in OG, alongside an ESTP place that can only be chaotic. If recruiting both doesn't save the ISTP's side, **orderly
-  good has no route.**
-- The other three endings are unaffected: CG and CE use the ESTP for hunting anyway, and OE can take healing from
-  the INTJ instead of the ISFJ.
-- Also open: in a fully developed OG town, does a second, chaotic hunting place (the ESTP's) count against it? Rex
-  said only one of each pair needs to succeed, so the keeper reads it as fine, but that's Rex's call.
+## Choices for Rex (2026-10-28)
+
+The keeper lays these out; Rex picks. Nothing here is decided.
+
+### C1. What happens to a rival when you recruit one of a pair (the ghost rule)
+
+Rex's food rule (farm vs butcher shop, tentative): recruit neither → both places go to ghosts; recruit one → it
+improves, the rival's drifts toward ghosts; recruit both → both improve, plus a secret duel. Whether it reaches
+the other seven pairs is **open** (Rex, 2026-10-28: his first "yes, every pair" was a gut feeling, not a decision).
+
+| Option | What it means | Effect on balance |
+|---|---|---|
+| a. Food pair only | Other rivals aren't harmed by recruiting their competitor | No ending loses a route. The other pairs compete only for time and slots |
+| b. Every pair, with "recruit both, both improve" | The full food rule everywhere | All four endings keep their routes, but a perfect OG town needs both hunters recruited (C2) |
+| c. Every pair, recruiting both still costs one (for example the duel's loser ghosts) | Recruiting both is a gamble | Orderly good survives only if the player can steer the hunters' duel to the ISTP |
+| d. Every pair, no "both" case | Recruit one, the other ghosts, full stop | **Orderly good has no route** (C2) |
+
+### C2. The one knot: the doctor needs the outdoorswoman
+
+The ISFJ only joins if the ESTP is in your party (Rex). In a perfect OG town:
+
+- healing must be the ISFJ (the INTJ never reaches OG);
+- hunting must be the ISTP (the ESTP never reaches OG);
+- so you recruit the ESTP only as the doctor's key, and under C1 b–d she harms the ISTP's place.
+
+CG and CE don't hit this (the ESTP can be their hunter); OE avoids it (the INTJ can take healing). Ways out, any one
+is enough:
+
+1. **A third healer** who reaches OG, without the ESTP gate.
+2. **A third hunter** who reaches OG and OE, so the ISTP isn't the only orderly hunter.
+3. **The INTJ's way out reaches OG**: Rex's rule is that shown her belief is wrong she becomes neutral; if that
+   exit led to OG instead, healing has an OG route that skips the ISFJ.
+4. **Another way to win the ISFJ** that doesn't need the ESTP aboard (story change; the character keeper's).
+5. **Ghost rule a or b** (C1).
+
+### C3. Lopsided pairs: where one side never has to win
+
+A pair is lopsided when one character can win the sector for every ending they share, so the other is never
+*needed*. Opportunity holds either way; this is about whether each rival matters. Who must win each sector in a
+perfect town of each ending ("either" = both can):
+
+| Sector | OG | CG | OE | CE | The side that never has to win |
+|---|---|---|---|---|---|
+| church | ISTJ | ISTJ | ENTJ priest | ENTJ priest | none: an even split |
+| healing | ISFJ | ISFJ | either | ISFJ | **INTJ** (only ever shares OE) |
+| food | INTP | ESFP | INTP | ESFP | none: an even split |
+| hunting | ISTP | either | ISTP | either | **ESTP** (only ever shares CG, CE) |
+| inventions | either | ENTP | ENTP | ENTP | **INFJ mechanic** (only ever shares OG) |
+| commerce | either | ESFJ | either | ESFJ | **ENFJ** (only ever shares OG, OE) |
+| brothel | ISFP | INFP | INFP | ISFP | none: an even split |
+| town hall | either | either | either | either | **both overlap fully**: either always works |
+
+Church, food and brothel are clean splits (each rival owns two endings). The other five lean to one side. If Rex
+wants every rival to matter, the fixes are a third person who takes the dominant one's place in some endings, or
+the dominant one's chart giving some quadrants up (charts are Rex's; the keeper doesn't touch them). Not a gap: no
+ending loses a route.
+
+### C4. "You can't recruit everyone"
+
+A perfect town recruits each sector's winner at least once (if recruiting is what develops a place, as in the food
+rule): 8 recruits, plus the ESTP as the ISFJ's key on doctor routes, through 3 slots and rotation. Open: is there a
+limit on total recruits (time, storylines ending, a cap), and does it leave room for 8 or 9?
 
 ## Are the alignment maps on file?
 
@@ -243,7 +294,7 @@ Options:
   ESFP the chaos side).
 - (a) Set the ESTP's starting alignment on an orderly quadrant. Weak: it only holds if you never act in front of her.
 - (c) Add an orderly hunter or gatherer.
-- (e) Say the food rule's "the other drifts toward ghosthood" applies only to the food pair. (Rex, 2026-10-28: it applies to every pair; see Where it stands.)
+- (e) Say the food rule's "the other drifts toward ghosthood" applies only to the food pair. (Open again: C1.)
 
 ### P3. ~~Healing reaches OG only by the ISFJ's lean~~ Closed 2026-10-28
 
@@ -315,8 +366,7 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 - Whether the priest's chart replaces his earlier OE and CE words (OE "does nothing"; CE "moves the town toward good").
 - Eight sectors now (church, healing, food, hunting, inventions, commerce, brothel, town hall).
 - The ENFP and ISFP: confirmed or not, gender, slug; whether the ENFP's highlighted CE square is a start; what the town hall is and who else is there.
-- Whether both institutions in a sector can succeed (proposed). The ghost rule applies to every pair (Rex,
-  2026-10-28); whether its "recruit both, both improve" case does too decides orderly good.
+- Whether both institutions in a sector can succeed (proposed); whether the ghost rule reaches beyond the food pair (C1).
 - What "succeed" means for a sector: the institution developed, the character's storyline done, or both.
 - P6.1 to P6.5.
 - Whether the keeper's strict reading (every sector in X for a full X town) is what Rex means, or the loose one.
@@ -341,4 +391,5 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | The INFP's chart (OG→CG, CG→OE, OE lean, CE→OE): brothel complete; chaotic good and chaotic evil complete; only hunting OG/OE (the ISTP) left | Rex |
 | 2026-10-28 | The INFJ mechanic's chart: every action leads to orderly good; inventions gains a second OG carrier; only the ISTP left | Rex |
 | 2026-10-28 | The ISTP's chart (OG→CG, CG→OE, OE→CE, CE→OG): hunting complete; every sector reaches every ending; routes OG 8, CG 4, OE 8, CE 4 | Rex |
-| 2026-10-28 | The ghost rule applies to every pair; orderly good now depends on whether recruiting both of a pair lets both improve (the ISFJ needs the ESTP; OG hunting needs the ISTP) | Rex; keeper (finding) |
+| 2026-10-28 | ~~The ghost rule applies to every pair~~ withdrawn the same day: Rex's "yes" was a gut feeling, not a decision; ghost rule beyond the food pair is open (C1) | Rex |
+| 2026-10-28 | Rex's goal: a route to a perfectly working town through a complicated set of choices; open to a third or fourth person per competition. Choices C1–C4 laid out (ghost rule options, the ISFJ–ESTP knot, lopsided pairs, recruit limit) | Rex; keeper (options) |
