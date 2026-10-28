@@ -146,8 +146,10 @@ invented.
 - **(Rex) Perfect town:** every relevant institution has developed into the **same** alignment. Consistency, not
   goodness: a perfect CE town is perfect. Eight developed institutions in four alignments is prosperous, not
   perfect. Perfect endings should be hard but achievable wherever the rules permit.
-- **(open)** Which institutions count toward perfection: the losing half of a pair, ghosted buildings. Config
-  `perfectCounts: winners-only | all-developed`.
+- **(Rex, 2026-10-28)** Which institutions count toward perfection: **every developed place**, including the
+  loser of a pair if it was developed (`perfectCounts: all-developed`). So a sector where both were developed
+  needs both in the same quadrant for a perfect town. **(open)** whether a ghosted building counts (it isn't
+  developed, so for now it doesn't).
 - **(Rex)** Hybrid endings have real width: a town strongly orderly but split good/evil is Twisted Virtue, a mixed
   society, not a transition.
 
@@ -174,7 +176,7 @@ invented.
 | `institutionLock` | re-read each sleep while owner in town | open |
 | `ghostRule` | food-only | open (C1) |
 | `townAggregate` | mean | Rex (2026-10-28) |
-| `perfectCounts` | winners-only | open |
+| `perfectCounts` | all-developed | Rex (2026-10-28) |
 | INTJ "becomes neutral" | not built | open |
 
 ## 9. Architecture (keeper's, after the Cursor Opus review of 2026-10-28; built by the belt)
@@ -220,3 +222,4 @@ web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fi
 | 2026-10-28 | Cursor Opus design review folded in: reduce() over a command log, EventDef vs EventOccurrence, per-slot institutions, crew commands, reachable() in the engine; four forced inventions became open keys (tieBreak cliff, step metric/overshoot, startCoords, ownerDeparted/pendingWhenAboard/undevelopedCounts) | keeper; review Cursor Opus |
 | 2026-10-28 | Town position = the mean of the developed institutions' positions | Rex |
 | 2026-10-28 | An exact diagonal tie keeps the previous region (no snap) | Rex |
+| 2026-10-28 | Every developed place counts toward a perfect town, the loser of a pair included | Rex |
