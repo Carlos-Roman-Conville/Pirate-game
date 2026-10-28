@@ -4,32 +4,31 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
 
 ## State
 
-- Stamped from the board kit; the placeholder engine (three in a row) stays only so the four checks pass. Not a
-  board game. Design docs: `PIRATE.md`, `DUTIES.md`, `STATS.md`, `crew/ROSTER.md`, `minigames/FISHING.md`.
-- PLAN units 1-10 done (tasks 2450-2463). The dock (`web/src/world/DockScene.ts`, `catchView.ts`) plays every
-  fishing stage: read water, aim, direction, power, lure rhythm, bite, pull in, result. Logic is pure TS in
-  `web/src/fishing/`, numbers in `data/pirate-ship/fishing.json` (all placeholders).
-- Playtest fixes (2468) are in: a second zoom-1 camera (`hudCam`) draws all HUD so it shows at any zoom; the lure's
-  first beat is one period after the play press (test "first beat"); the fish silhouettes stay through aim,
-  direction and power (`silhouettes.ts`); aim's arrow keys move in screen directions; rhythm boxes carry their
-  names; the prompt follows the lure phase. Pull-in labels (tension, integrity, landing point) show.
-- Task 2469 fixed the bite splash also being drawn by `hudCam` (splash is tagged after its async FX loads).
-- Pull in: hold Space, intensity grows to `maxPullIntensity`, release pulls; past `weakenTensionThreshold` costs
-  line integrity, past `lineBreakTension` it snaps. Strength lands fish in fewer pulls.
-- Lure and bite are separate stages; `bite.lureWaitFactor` (placeholder 0.5) shortens the wait on a lure draw.
+- Stamped from the board kit; the placeholder engine stays only so the four checks pass. Not a board game.
+- PLAN units 1-10 done: the dock and every fishing stage (`web/src/world/`, pure logic in `web/src/fishing/`,
+  numbers in `data/pirate-ship/fishing.json`, all placeholders).
+- PLAN Phase 2 units 11-15 done (tasks 2474-2478): the alignment backend, `web/src/alignment/` (spec
+  `balance/ALIGNMENT.md`). `square.ts` classifies the ±100 square into 9 regions; `charts.ts`, `events.ts`,
+  `state.ts`, `engine.ts` reduce a command log (moves, witnesses, lean); `institutions.ts`, `town.ts`,
+  `endings.ts` do sleep transforms, the town mean and the 9 endings. No UI uses it yet.
+- Numbers: `data/pirate-ship/alignment/` (`thresholds.json` holds every §8 config key; `charts.json`,
+  `starts.json`, `institutions.json`, `events.json` placeholder events only). All placeholders.
+- Simulator: `cd web && npx vitest run src/alignment/sim` prints a verdict and replayable route for each of the four
+  perfect towns (bounded search; "unreachable" means none found within limits).
 
 ## Next
 
-1. Rex replays the full catch on desktop and reports what still feels wrong.
-2. Tick `../progress/ui/pirate-ship.json` pieces only after a real browser check.
+1. Phase 2 gate: Rex reads the simulator report and tunes the numbers (ALIGNMENT.md §8).
+2. Rex replays the full catch on desktop; tick `../progress/ui/pirate-ship.json` only after a real browser check.
 
 ## Blocked
 
-- Pull-in fairness numbers (FISHING.md stage 7): Rex's call; they stay placeholders in `fishing.json`.
-- The game's real name (repo and folder rename when Rex names it): Rex's.
-- Rex replays after 2468: HUD at zoom 2+, hitting the lure's first beat, aiming at visible silhouettes, screen-direction aim keys (his check, not the belt's).
-- `desktop:` check a hard pull snapping the line, the bite's sound, and a phone-size screen.
-- `desktop:` progress-page edits (`../progress/ui/pirate-ship.json`) live outside this repo.
+- ALIGNMENT.md §8 open keys, all Rex's: `step.minor/major/anchor`, `step.metric/overshoot`, `startCoords`,
+  `pendingWhenAboard`, `undevelopedCounts`, `leanFactor`, `witnesses` (absent learning), `institutionLock`, the
+  INTJ "becomes neutral" case.
+- Pull-in fairness numbers (FISHING.md stage 7) and the game's real name: Rex's.
+- `desktop:` fishing replay checks (HUD at zoom 2+, snapping line, bite sound, phone-size screen) and progress-page
+  edits live outside this repo.
 
 ## Gotchas
 

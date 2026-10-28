@@ -8,7 +8,7 @@ Three-quarter top-down (the Stardew view), High Roller's art style. Play money o
 is only **the dock and the fishing minigame**; everything else is later.
 
 **State (dated).** 2026-10-26: stamped (board kit, placeholder engine only); design docs in this folder;
-PLAN.md units 1-8 done (dock world, fishing machine and stages, result loop); units 9-10 (fishing screens, tasks 2460-2463) done: cast, lure, bite and pull-in play on the dock, never browser-checked.
+PLAN.md units 1-8 done (dock world, fishing machine and stages, result loop); units 9-10 (fishing screens, tasks 2460-2463) done: cast, lure, bite and pull-in play on the dock, never browser-checked. 2026-10-28: the alignment backend (PLAN Phase 2, tasks 2474-2478) is built and simulated in `web/src/alignment/`; numbers are placeholders.
 
 ## Where things are
 

@@ -169,6 +169,104 @@
    "code": "missedBite",
    "kind": "phrase",
    "note": "Got-away detail: the hook window closed with no hook set."
+  },
+  {
+   "source": "alignment square",
+   "en": "alignment square",
+   "code": "alignmentSquare",
+   "kind": "phrase",
+   "note": "The ±100 plane of orderly/chaotic against good/evil; every character, the player and the town sit on it."
+  },
+  {
+   "source": "orderly/chaotic",
+   "en": "orderly/chaotic",
+   "code": "orderlyChaotic",
+   "kind": "phrase",
+   "note": "The horizontal axis of the square."
+  },
+  {
+   "source": "good/evil",
+   "en": "good/evil",
+   "code": "goodEvil",
+   "kind": "phrase",
+   "note": "The vertical axis of the square."
+  },
+  {
+   "source": "neutral",
+   "en": "neutral",
+   "code": "neutral",
+   "kind": "phrase",
+   "note": "The centre region of the square."
+  },
+  {
+   "source": "pure ending",
+   "en": "pure ending",
+   "code": "pureEnding",
+   "kind": "phrase",
+   "note": "An ending for one of the four corner regions."
+  },
+  {
+   "source": "hybrid ending",
+   "en": "hybrid ending",
+   "code": "hybridEnding",
+   "kind": "phrase",
+   "note": "An ending for one of the four edge regions between two corners."
+  },
+  {
+   "source": "Twisted Virtue",
+   "en": "Twisted Virtue",
+   "code": "twistedVirtue",
+   "kind": "phrase",
+   "note": "Ending name for the orderly-good plus orderly-evil edge region (Rex)."
+  },
+  {
+   "source": "perfect town",
+   "en": "perfect town",
+   "code": "perfectTown",
+   "kind": "phrase",
+   "note": "A town whose developed places all sit in one quadrant."
+  },
+  {
+   "source": "institution transformation",
+   "en": "institution transformation",
+   "code": "institutionTransformation",
+   "kind": "phrase",
+   "note": "A town institution taking its owner's alignment when the player sleeps after a return."
+  },
+  {
+   "source": "witness",
+   "en": "witness",
+   "code": "witness",
+   "kind": "phrase",
+   "note": "A character present at an event; they move by their response chart."
+  },
+  {
+   "source": "minor event",
+   "en": "minor event",
+   "code": "minorEvent",
+   "kind": "phrase",
+   "note": "An event that moves alignment by the minor step."
+  },
+  {
+   "source": "major event",
+   "en": "major event",
+   "code": "majorEvent",
+   "kind": "phrase",
+   "note": "An event that moves alignment by the major step."
+  },
+  {
+   "source": "lean",
+   "en": "lean",
+   "code": "lean",
+   "kind": "phrase",
+   "note": "A half-step a witness takes toward the player after an event."
+  },
+  {
+   "source": "response chart",
+   "en": "response chart",
+   "code": "responseChart",
+   "kind": "phrase",
+   "note": "The per-character table of how a witness reacts to each event category."
   }
  ],
  "lore": [
