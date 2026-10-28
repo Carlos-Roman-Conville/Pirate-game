@@ -63,7 +63,7 @@ Shared with the other parent's file (`intp-m.md` / `esfp-f.md`); kept the same i
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | requires higher reputation before they'll consider joining you, and you must complete sub quests for them; the prerequisite quest is providing them bodies (see the food-source consequences) | Rex |
+| How recruited | `recruit` | requires higher reputation before they'll consider joining you, and you must complete sub quests for them; the prerequisite quest is providing them bodies (see the food-source consequences). Why they join (Rex): they simply want to see the world more and need a break from the island; since you've been helping them, they decide it's no big deal, as long as they can still come back and use more dead bodies (the farmer's and cook's reasons are similar for now; Rex will make them distinct later) | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -163,3 +163,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Inner rules: her alignment map (OG→CG, CG→CE, OE→CE, CE no change); replaces an earlier wrong chart sent the same day | Rex |
 | 2026-10-27 | Food-source consequences: bodies as the prerequisite quest; their child runs the business; neither → ghosts, one → improves and the other toward ghosthood, both → both improve plus a secret duel | Rex |
 | 2026-10-27 | Confirmed: taking neither sends both the farm and the cook's shop to ghosts | Rex |
+| 2026-10-27 | Why they join: to see the world and get a break from the island, as long as they can come back for more bodies (distinct from the other parent's reason later) | Rex |

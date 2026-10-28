@@ -202,4 +202,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | Alignment maps (corrected charts): the ESFP cook (OG→CG, CG→CE, OE→CE, CE no change); the INTP farmer (OG→OE, CG→OG, OE no change, CE→OE) | Rex |
 | 2026-10-27 | The farmer and cook: bodies as their prerequisite quest; whoever joins, their child runs the business; taking neither → their institution overtaken by ghosts; one → it improves and pushes the other toward ghosthood; both → both improve plus a secret duel event | Rex |
 | 2026-10-27 | The ESFJ's alignment map: OG→CE, CG→OE, OE→OG, CE→CG; starting point not set | Rex |
+| 2026-10-27 | Why they join: the farmer and cook to see the world and get a break, as long as they can come back for bodies; the ESTP only after you help with things too hard for her alone; the ISFJ only with the ESTP in your party. The ISFJ–ESTP odd triangle: wait out the ISFJ's infatuation; she's romanceable after their breaking point | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

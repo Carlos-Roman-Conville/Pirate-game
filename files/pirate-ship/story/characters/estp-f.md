@@ -54,7 +54,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | a secret character; requires higher reputation before they'll consider joining you, and you must complete sub quests for them (which sub quests are open) | Rex |
+| How recruited | `recruit` | a secret character; requires higher reputation before they'll consider joining you, and you must complete sub quests for them (which sub quests are open). Why she joins (Rex): she doesn't need anyone and doesn't trust anyone, so she won't join unless you help her with a few things she finds too difficult to accomplish herself (which things is open) | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -64,6 +64,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | | open |
+| the ISFJ doctor (`isfj-f`) | `rel.isfj-f` | the ISFJ is infatuated with her and sees her as someone who really needs help; she finds the ESTP's living situation and the conditions of her house abhorrent. They eventually reach a breaking point | Rex |
 
 ## Heart events
 
@@ -152,3 +153,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Inner rules: her alignment map (OG→CG, CG stays, OE→CE, CE stays) | Rex |
 | 2026-10-27 | The diagram's highlight isn't her starting alignment; starting alignment left for later | Rex |
 | 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |
+| 2026-10-27 | Why she joins: trusts and needs no one; joins only after you help with a few things too difficult for her alone. Tie: the ISFJ's infatuation | Rex |

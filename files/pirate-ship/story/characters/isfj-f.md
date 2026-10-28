@@ -46,11 +46,19 @@ follow `_TEMPLATE.md`.
 - **(open)** How she justifies taking pleasure in the pain (Rex: "idk how I'll justify it").
 - **(open)** Whether she is the roster's confirmed ISFJ, "the medic who keeps you from leaving".
 
+### The odd triangle (Rex, 2026-10-27)
+
+- **(Rex)** The love situation with her and the ESTP is like an odd triangle: you're meant to wait out the ISFJ's
+  infatuation with the ESTP, and eventually she becomes romanceable.
+- **(Rex)** Things happen in between, but they are relationship building. She isn't romanceable until she and the
+  ESTP have a breaking point.
+- **(open)** What the breaking point is, and the in-between events.
+
 ## Joining
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | recruitable; requires higher reputation before they'll consider joining you, and you must complete sub quests for them (which sub quests are open) | Rex |
+| How recruited | `recruit` | recruitable; requires higher reputation before they'll consider joining you, and you must complete sub quests for them (which sub quests are open). Why she joins (Rex): only if you have the ESTP in your party. She sees the ESTP as someone who really needs help; she knows of her living situation and the conditions she keeps her house in, and finds it abhorrent | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -59,13 +67,14 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | With | Key | What it is | Mark |
 |---|---|---|---|
-| the player | `rel.player` | | open |
+| the player | `rel.player` | romanceable only after her infatuation with the ESTP ends (see the triangle below) | Rex |
+| the ESTP outdoorswoman (`estp-f`) | `rel.estp-f` | infatuated with her; sees her as someone who really needs help; finds her living situation and the state of her house abhorrent. They eventually reach a breaking point | Rex |
 
 ## Heart events
 
 | Hearts | Key | Scene | Mark |
 |---|---|---|---|
-| | `heart_events` | | open |
+| | `heart_events` | relationship-building events while you wait out her infatuation with the ESTP (what they are is open); her breaking point with the ESTP, after which she becomes romanceable | Rex (shape); scenes open |
 
 ## Voice
 
@@ -107,3 +116,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Questline responses section added | keeper |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |
+| 2026-10-27 | Why she joins: only with the ESTP in your party. The odd triangle: wait out her infatuation with the ESTP; romanceable after their breaking point | Rex |
