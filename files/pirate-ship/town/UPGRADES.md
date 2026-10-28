@@ -73,7 +73,7 @@ Open: whether slot states now follow the quadrant, single choices (`port.entp`),
 
 Some parts of town are equivalent and compete. **Two options each, two characters per facility; only one of each
 pair needs to succeed; each has two potential outcomes** (Rex, 2026-10-27). Rex first said six facilities; there
-are now seven sectors counting the proposed ones, and whether he still wants six is open. Balance analysis is the
+are now eight (seven of Rex's plus the proposed commerce pair), and whether he still wants six is open. Balance analysis is the
 balance keeper's: [`../balance/BALANCE.md`](../balance/BALANCE.md).
 
 | Sector | Option A (slot, character) | Option B (slot, character) | Mark |
@@ -84,9 +84,15 @@ balance keeper's: [`../balance/BALANCE.md`](../balance/BALANCE.md).
 | `sec.invent` (inventions) | `port.shipyard`, `entp-m` | the INFJ mechanic (slug: the story keeper's, not yet filed; where he works: open) | Rex (2026-10-28) |
 | `sec.church` | `port.church`, `istj-m` | `port.church`, the evil ENTJ priest, [`entj-m`](../story/characters/entj-m.md) | Rex (2026-10-28) |
 | `sec.commerce` | `port.warehouse`, `enfj-m` | `port.esfj_shop`, `esfj-m` | proposed (outside AI) |
-| `sec.society` | the ESTJ privateer, `estj-f` | the INFP courtesan, `infp-m` | proposed (outside AI; it flagged this one as weak) |
+| `sec.brothel` (control of the brothel) | `port.tavern`, `infp-m` | a competitor not made yet | Rex (2026-10-28) |
+| `sec.townhall` (control of the town hall) | `port.townhall`, `estj-f` | a competitor not made yet | Rex (2026-10-28) |
 
 Retired id: `sec.faith` (church vs clinic, 2026-10-27), split on 2026-10-28; never reused.
+Rejected proposal: `sec.society` (ESTJ vs INFP, outside AI), replaced on 2026-10-28 by Rex's `sec.brothel` and
+`sec.townhall`; the id is never reused.
+
+Rex's words (2026-10-28): "we are now missing INFP v whoever for the control of the brothel and the ESTJ v whoever
+for control of the town hall."
 
 - **(Rex, 2026-10-28)** The ENTP and the INTJ no longer compete: their stores don't compete economically. They still
   dislike each other, an indirect rivalry (character side: the story keeper's).
@@ -155,6 +161,7 @@ one.
 | `port.estp_hut` | the hut away from town | `estp-f` | `base`; others open | Rex (the place; she lives here). Whether `port.soldier_house` still exists: open (if not, that id is retired, never reused) |
 | `port.infp_house` | the INFP's house and basement | `infp-m` | `base`; others open | Rex (the place) |
 | `port.esfj_shop` | the ESFJ's shop or stall (temporary) | `esfj-m` | `base` (not there), `open`, `failed` (below) | Rex |
+| `port.townhall` | the town hall | `estj-f`, a competitor not made yet | `base`; others open | Rex (the place, 2026-10-28) |
 | `port.fort` | the old coastal fort | the old soldier (weekly) | `base`; others open | Rex (the place) |
 | `port.soldier_house` | the old soldier's locked house | the old soldier | `base` (locked); others open | Rex (the place) |
 
@@ -249,3 +256,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-28 | `sec.church`: the evil ENTJ priest competes with the ISTJ priest (via the balance keeper) | Rex |
 | 2026-10-28 | `sec.invent`: the INFJ mechanic (a visitor) competes with the ENTP; his departure is `event.infj_leaves`; ENTJ linked to `entj-m` (via the balance keeper) | Rex |
 | 2026-10-28 | `port.cash` (the town's money) added; `event.infj_leaves` tied to it (via the story keeper) | keeper; Rex |
+| 2026-10-28 | `sec.brothel` (INFP vs a competitor to come) and `sec.townhall` (ESTJ vs a competitor to come) replace the proposed `sec.society`; reserved `port.townhall` (via the balance keeper) | Rex |

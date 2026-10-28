@@ -40,7 +40,7 @@ town, its name changes here but its id does not.
 - **(Rex, 2026-10-27)** Crew rotation is a progressive storyline: crew storylines develop or end, and you logically
   fill the empty spot (not always forced).
 - **(Rex, 2026-10-27; pairs changed 2026-10-28)** Some parts of town are equivalent and compete: **facilities
-  (sectors), two options each, two characters per facility** (Rex first said six; seven now, counting proposed); only one of each pair needs to succeed; each has two potential outcomes
+  (sectors), two options each, two characters per facility** (Rex first said six; eight now, counting the proposed commerce pair); only one of each pair needs to succeed; each has two potential outcomes
   (`UPGRADES.md`, Sectors). Balance side: [`../balance/BALANCE.md`](../balance/BALANCE.md) (the balance keeper's).
 
 ## Towns
@@ -94,6 +94,7 @@ Each place has an id in backticks (`port.<place>`). The same id is reserved as t
 | `port.estp_hut` | A hut away from town | the old soldier (`estp-f`), where she lives; isolated, rarely seen; she goes into the forest (story keeper's reading of Rex's typo, to confirm) | | Rex |
 | `port.infp_house` | The INFP's house, with a basement | the INFP brothel worker; clients kept in the basement as living wax statues | location and layout open | Rex |
 | `port.esfj_shop` | The ESFJ's rare-goods shop in town, or a stall in the port (which: open) | the ESFJ merchant | temporary: opens once you fund him, fails, then he joins your crew | Rex |
+| `port.townhall` | The town hall | the ESTJ and a competitor (not made yet) compete for control | nothing else said yet | Rex (2026-10-28) |
 | `port.fort` | The old coastal fort | the old soldier goes there one day a week | "a great locale, love that idea" | Rex |
 | `port.soldier_house` | The old soldier's locked house | the old soldier | you can't get in; you could see her leave once a week toward the fort. Whether it still exists now she lives in the hut: open | Rex (2026-10-27); existence open |
 | | Docks barely maintained; a harbour of fishing boats, damaged sloops and vessels that shouldn't still sail | | look detail | proposed (outside AI, via STORY.md) |
@@ -198,3 +199,4 @@ they are in town.
 | 2026-10-28 | New resident: the evil ENTJ priest, competing with the ISTJ priest for the church; home and recruitability open (via the balance keeper) | Rex |
 | 2026-10-28 | New visitor: the INFJ mechanic, the ENTP's competitor, about to leave for the next town (via the balance keeper) | Rex |
 | 2026-10-28 | "The next town over" exists (someone there invited the INFJ mechanic to a big project); INFJ linked to `infj-m` (via the story keeper) | Rex |
+| 2026-10-28 | New place: the town hall (`port.townhall`); sectors for control of the brothel (INFP vs ?) and the town hall (ESTJ vs ?), competitors not made yet (via the balance keeper) | Rex |
