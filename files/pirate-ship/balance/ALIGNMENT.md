@@ -138,9 +138,9 @@ invented.
 
 - **(Rex)** The town's alignment is determined by the alignments of its developed institutions. Each contributes its
   own alignment; the town's position emerges from them.
-- **(open)** The combining calculation. Must be defined before the simulator means anything. Placeholder config
-  `townAggregate: mean` (the mean of the institutions' positions); alternatives the outside AI raised: weighting by
-  influence (`../town/ENDINGS.md`, proposed). Rex decides.
+- **(Rex, 2026-10-28)** The combining calculation: the town's position is the **mean of the developed
+  institutions' positions** (`townAggregate: mean`). Weighting by influence (`../town/ENDINGS.md`, proposed by the
+  outside AI) is not used.
 - **(Rex)** Nine town endings: the four pure quadrants, the four hybrids, and neutral (the ghost town).
 - **(Rex) Perfect town:** every relevant institution has developed into the **same** alignment. Consistency, not
   goodness: a perfect CE town is perfect. Eight developed institutions in four alignments is prosperous, not
@@ -172,7 +172,7 @@ invented.
 | `witnesses` | present only; absent learning off | Rex (for now) / open |
 | `institutionLock` | re-read each sleep while owner in town | open |
 | `ghostRule` | food-only | open (C1) |
-| `townAggregate` | mean | open |
+| `townAggregate` | mean | Rex (2026-10-28) |
 | `perfectCounts` | winners-only | open |
 | INTJ "becomes neutral" | not built | open |
 
@@ -217,3 +217,4 @@ web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fi
 |---|---|---|
 | 2026-10-28 | Created from Rex's run-down and the outside AI's spec he adopted: square, events, player, characters, starts, institutions, town, open keys, architecture | Rex; keeper (marks, architecture) |
 | 2026-10-28 | Cursor Opus design review folded in: reduce() over a command log, EventDef vs EventOccurrence, per-slot institutions, crew commands, reachable() in the engine; four forced inventions became open keys (tieBreak cliff, step metric/overshoot, startCoords, ownerDeparted/pendingWhenAboard/undevelopedCounts) | keeper; review Cursor Opus |
+| 2026-10-28 | Town position = the mean of the developed institutions' positions | Rex |
