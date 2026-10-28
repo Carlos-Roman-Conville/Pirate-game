@@ -1,5 +1,5 @@
 import {
-  loadAlignmentConfig, reachable, respond,
+  canRecruit, loadAlignmentConfig, reachable, respond,
   type AlignmentConfig, type Command, type Quadrant,
 } from '../index'
 import { checkLimit, Cursor, eventCommand } from './scenario'
@@ -42,10 +42,34 @@ export function greedyToward(quadrant: Quadrant, config = loadAlignmentConfig(),
   }
   for (let offset = 0; offset < selected.length && !cursor.full; offset += capacity) {
     const batch = selected.slice(offset, offset + capacity)
-    for (const [, slot] of batch) cursor.apply({ type: 'recruit', slug: slot.owner })
+    const board = (slug: string): boolean => {
+      if (cursor.full) return false
+      if (cursor.state.characters[slug].location === 'aboard') return true
+      if (config.gates[slug]?.story && !cursor.state.characters[slug].unlocked) {
+        if (!cursor.apply({ type: 'unlock', slug })) return false
+      }
+      for (const key of config.gates[slug]?.aboard ?? []) {
+        if (!board(key)) return false
+      }
+      const aboard = Object.entries(cursor.state.characters).filter(([, who]) => who.location === 'aboard')
+      if (aboard.length >= capacity) {
+        const completed = batch.find(([id, member]) => cursor.state.slots[id].developed
+          && cursor.state.characters[member.owner].location === 'aboard'
+          && !(config.gates[slug]?.aboard ?? []).includes(member.owner))
+        if (completed) cursor.apply({ type: 'leave', slug: completed[1].owner })
+      }
+      return cursor.apply({ type: 'recruit', slug })
+    }
+    // Fill as much of the batch as possible; prerequisite recruits may consume a slot.
+    for (const [, slot] of batch) {
+      const needed = [slot.owner, ...(config.gates[slot.owner]?.aboard ?? [])]
+        .filter((slug) => cursor.state.characters[slug].location !== 'aboard').length
+      const aboard = Object.values(cursor.state.characters).filter((who) => who.location === 'aboard').length
+      if (aboard + needed <= capacity) board(slot.owner)
+    }
     for (const [id, slot] of batch) {
       const slug = slot.owner
-      if (cursor.state.characters[slug].location !== 'aboard') continue
+      if (!board(slug)) continue
       // Prefer the largest effective step; respond() owns the chart interpretation.
       const events = config.events.filter((event) => helps(slug, event.category)).sort((a, b) => {
         const strength = (event: typeof a) => config.thresholds.step[event.weight]
@@ -69,6 +93,9 @@ export function greedyToward(quadrant: Quadrant, config = loadAlignmentConfig(),
       cursor.apply({ type: 'leave', slug })
       if (arrived) cursor.apply({ type: 'develop', slot: id })
     }
+    for (const [slug, who] of Object.entries(cursor.state.characters)) {
+      if (who.location === 'aboard') cursor.apply({ type: 'leave', slug })
+    }
     cursor.apply({ type: 'sleep' })
   }
   return cursor
@@ -88,8 +115,10 @@ export function random(seed: number, config: AlignmentConfig = loadAlignmentConf
     const characters = Object.entries(cursor.state.characters)
     const aboard = characters.filter(([, who]) => who.location === 'aboard').map(([slug]) => slug)
     const commands: Command[] = [{ type: 'sleep' }]
+    commands.push(...characters.filter(([slug, who]) => config.gates[slug]?.story && !who.unlocked)
+      .map(([slug]): Command => ({ type: 'unlock', slug })))
     if (aboard.length < config.thresholds.crewSlots) {
-      commands.push(...characters.filter(([, who]) => who.location === 'town')
+      commands.push(...characters.filter(([slug, who]) => who.location === 'town' && canRecruit(cursor.state, slug, config.gates) === null)
         .map(([slug]): Command => ({ type: 'recruit', slug })))
     }
     commands.push(...aboard.map((slug): Command => ({ type: 'leave', slug })))

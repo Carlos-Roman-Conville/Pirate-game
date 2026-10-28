@@ -17,7 +17,7 @@ export function currentCommand(state: AlignmentState, command: Command): Command
 }
 
 export function run(scenario: Scenario, config: AlignmentConfig = loadAlignmentConfig()) {
-  let state = initialState(loadStarts(), config.thresholds)
+  let state = initialState(loadStarts(), config.thresholds, config.gates)
   const log: string[] = []
   for (const command of scenario) {
     const result = reduce(state, currentCommand(state, command), config)
@@ -40,7 +40,7 @@ export class Cursor {
     checkLimit(maxSteps, 'maxSteps')
     this.config = config
     this.maxSteps = maxSteps
-    this.state = initialState(loadStarts(), config.thresholds)
+    this.state = initialState(loadStarts(), config.thresholds, config.gates)
   }
 
   get full() { return this.attempts >= this.maxSteps }

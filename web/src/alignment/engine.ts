@@ -3,12 +3,14 @@ import { loadEvents, validateEventDef, validateEventOccurrence, type EventDef, t
 import { classify, quadrantAnchors, step, type Quadrant } from './square'
 import { loadAlignmentThresholds, type AlignedPosition, type AlignmentState, type AlignmentThresholds, type Command } from './state'
 import { develop, markReturned, sleep } from './institutions'
+import { canRecruit, loadGates, unlock, type Gates } from './gates'
 import { townPosition } from './town'
 
 export interface AlignmentConfig {
   thresholds: AlignmentThresholds
   charts: Record<string, Chart>
   events: EventDef[]
+  gates: Gates
 }
 
 export const UNRESOLVED: string[] = [
@@ -28,7 +30,7 @@ export const UNRESOLVED: string[] = [
 ]
 
 export function loadAlignmentConfig(): AlignmentConfig {
-  return { thresholds: loadAlignmentThresholds(), charts: loadCharts(), events: loadEvents() }
+  return { thresholds: loadAlignmentThresholds(), charts: loadCharts(), events: loadEvents(), gates: loadGates() }
 }
 
 function character(state: AlignmentState, slug: string) {
@@ -70,6 +72,8 @@ function recruit(state: AlignmentState, slug: string, config: AlignmentConfig): 
   const who = character(state, slug)
   if (who.location === 'departed') throw new Error(`character departed: ${slug}`)
   if (who.location !== 'town') throw new Error(`character is not in town: ${slug}`)
+  const refusal = canRecruit(state, slug, config.gates)
+  if (refusal) throw new Error(refusal)
   const aboard = Object.values(state.characters).filter((entry) => entry.location === 'aboard').length
   if (aboard >= config.thresholds.crewSlots) throw new Error('crewSlots full')
   return { ...state, characters: { ...state.characters, [slug]: { ...who, location: 'aboard' } } }
@@ -97,6 +101,7 @@ export function reduce(state: AlignmentState, command: Command, config: Alignmen
   switch (command.type) {
     case 'event': next = event(state, command.occurrence, config); break
     case 'recruit': next = recruit(state, command.slug, config); break
+    case 'unlock': next = unlock(state, command.slug); break
     case 'party': next = party(state, command.slugs); break
     case 'leave': next = markReturned(leave(state, command.slug), command.slug); break
     case 'develop': next = develop(state, command.slot, config.thresholds); break

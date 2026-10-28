@@ -1,0 +1,20 @@
+{
+  "notes": "Source: ALIGNMENT.md ?7; Rex 2026-10-27. Open: which reputation and level; \"in your party\" read as aboard (event-party meaning unresolved); a fifth gated recruit.",
+  "gates": {
+    "isfj-f": {
+      "aboard": [
+        "estp-f"
+      ],
+      "story": true
+    },
+    "intp-m": {
+      "story": true
+    },
+    "estp-f": {
+      "story": true
+    },
+    "esfp-f": {
+      "story": true
+    }
+  }
+}

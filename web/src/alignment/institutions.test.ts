@@ -14,7 +14,15 @@ const priest = 'istj-m'
 const anchors = quadrantAnchors(config.thresholds.startCoords)
 
 function developed(id = church, state = fresh()) {
-  state = run(state, { type: 'recruit', slug: state.slots[id].owner })
+  const slug = state.slots[id].owner
+  for (const key of config.gates[slug]?.aboard ?? []) {
+    if (state.characters[key].location !== 'aboard') {
+      state = run(state, { type: 'unlock', slug: key })
+      state = run(state, { type: 'recruit', slug: key })
+    }
+  }
+  if (config.gates[slug]?.story) state = run(state, { type: 'unlock', slug })
+  if (state.characters[slug].location !== 'aboard') state = run(state, { type: 'recruit', slug })
   return run(state, { type: 'develop', slot: id })
 }
 

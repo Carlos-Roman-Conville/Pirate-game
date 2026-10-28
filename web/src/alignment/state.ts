@@ -2,6 +2,7 @@ import thresholdData from '../../../data/pirate-ship/alignment/thresholds.json'
 import startData from '../../../data/pirate-ship/alignment/starts.json'
 import { isQuadrant } from './charts'
 import { clamp, classify, quadrantAnchors, type Position, type Quadrant, type Region } from './square'
+import { loadGates, type Gates } from './gates'
 import type { EventOccurrence } from './events'
 import { initialSlots, type InstitutionSlot } from './institutions'
 
@@ -11,10 +12,12 @@ export interface AlignedPosition { pos: Position; region: Region }
 export interface CharacterState extends AlignedPosition {
   location: 'town' | 'aboard' | 'departed'
   inParty: boolean
+  unlocked: boolean
 }
 export type Command =
   | { type: 'event'; occurrence: EventOccurrence }
   | { type: 'recruit'; slug: string }
+  | { type: 'unlock'; slug: string }
   | { type: 'party'; slugs: string[] }
   | { type: 'leave'; slug: string }
   | { type: 'develop'; slot: string }
@@ -43,7 +46,7 @@ export function loadStarts(raw: unknown = startData): Starts {
   }))
 }
 
-export function initialState(starts: Starts, thresholds: AlignmentThresholds): AlignmentState {
+export function initialState(starts: Starts, thresholds: AlignmentThresholds, gates: Gates = loadGates()): AlignmentState {
   const reading = { ...thresholds.thresholds, tieBreak: thresholds.tieBreak }
   const coords = { ...quadrantAnchors(thresholds.startCoords), neutral: thresholds.startCoords.neutral }
   const place = (category: Quadrant | 'neutral'): AlignedPosition => {
@@ -56,7 +59,7 @@ export function initialState(starts: Starts, thresholds: AlignmentThresholds): A
     day: 0,
     player: place('neutral'),
     characters: Object.fromEntries(Object.entries(starts).map(([slug, category]) => [
-      slug, { ...place(category), location: 'town', inParty: false },
+      slug, { ...place(category), location: 'town', inParty: false, unlocked: !gates[slug]?.story },
     ])),
     slots: initialSlots(),
     slotTransformedAt: {},

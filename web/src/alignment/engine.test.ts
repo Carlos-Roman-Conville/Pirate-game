@@ -142,7 +142,10 @@ describe('alignment engine rules', () => {
   it('§7 a fourth recruit with three aboard is refused', () => {
     let state = fresh()
     const slugs = Object.keys(state.characters)
-    for (const slug of slugs.slice(0, config.thresholds.crewSlots)) state = reduce(state, { type: 'recruit', slug }, config).state
+    for (const slug of slugs.slice(0, config.thresholds.crewSlots)) {
+      if (config.gates[slug]?.story) state = reduce(state, { type: 'unlock', slug }, config).state
+      state = reduce(state, { type: 'recruit', slug }, config).state
+    }
     const saved = JSON.stringify(state)
     expect(() => reduce(state, { type: 'recruit', slug: slugs[config.thresholds.crewSlots] }, config)).toThrow('crewSlots full')
     expect(JSON.stringify(state)).toBe(saved)
