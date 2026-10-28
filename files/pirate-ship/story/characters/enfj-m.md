@@ -45,12 +45,13 @@ follow `_TEMPLATE.md`.
 
 - **(Rex)** His journey is into making structure: he either turns the warehouse into a place for goods and legitimate trade, or uses it to house illegally stolen goods, drugs and such.
 - **(Rex)** The journey is the son's (confirmed 2026-10-27).
+- **(open)** His mother: Rex says he despises his "parents"; only the father is on file.
 
 ## Joining
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | hire / mercenary / kidnap; what they need first (rep, proof, gift, questline) | open |
+| How recruited | `recruit` | he despises his parents and wants to get away (Rex: "fairly simple, one-dimensional rationale, I feel") | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -60,7 +61,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | | open |
-| his father, the warehouse owner (`bigwig`) | `rel.bigwig` | his father isn't teaching him well | Rex |
+| his father, the warehouse owner (`bigwig`) | `rel.bigwig` | his father isn't teaching him well; he despises his parents | Rex |
 
 ## Heart events
 
@@ -140,3 +141,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | A man, a pretty boy; file moved from `enfj.md` to `enfj-m.md` | Rex |
 | 2026-10-27 | He is the warehouse owner's son (the bigwig's child); his journey into making structure: the warehouse for legitimate trade, or for stolen goods and drugs | Rex |
 | 2026-10-27 | Confirmed: the journey into making structure is his | Rex |
+| 2026-10-27 | Why he joins: despises his parents and wants to get away | Rex |

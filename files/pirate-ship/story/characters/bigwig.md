@@ -62,7 +62,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | | open |
-| his son, the ENFJ (`enfj-m`) | `rel.enfj-m` | isn't teaching him well | Rex |
+| his son, the ENFJ (`enfj-m`) | `rel.enfj-m` | isn't teaching him well; his son despises him and wants to get away | Rex |
 
 ## Heart events
 
@@ -106,3 +106,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 |---|---|---|
 | 2026-10-27 | Created: the warehouse owner, disorganised and chaotic, warehouse in disrepair, poor alliances; father of the ENFJ | Rex |
 | 2026-10-27 | Not recruitable; kept separate from the recruitables | Rex |
+| 2026-10-27 | His son despises his parents and joins you to get away | Rex |
