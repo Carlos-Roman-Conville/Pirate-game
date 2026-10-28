@@ -2,6 +2,8 @@ import { loadCharts, respond, type Chart } from './charts'
 import { loadEvents, validateEventDef, validateEventOccurrence, type EventDef, type EventOccurrence } from './events'
 import { classify, quadrantAnchors, step, type Quadrant } from './square'
 import { loadAlignmentThresholds, type AlignedPosition, type AlignmentState, type AlignmentThresholds, type Command } from './state'
+import { develop, markReturned, sleep } from './institutions'
+import { townPosition } from './town'
 
 export interface AlignmentConfig {
   thresholds: AlignmentThresholds
@@ -17,9 +19,13 @@ export const UNRESOLVED: string[] = [
   'startCoords: placeholder starting coordinates',
   'leanFactor: placeholder lean distance multiplier',
   'witnesses: present-only; absent learning is unresolved',
-  'ownerDeparted / pendingWhenAboard / undevelopedCounts: placeholder freeze / keep / skip',
+  'pendingWhenAboard / undevelopedCounts: placeholder keep / skip; ownerDeparted is freeze (Rex)',
   'institutionLock: placeholder reread-each-sleep-while-owner-in-town',
-  'ghostRule: data says food-only; ALIGNMENT.md requires every-pair-both-improve (unit 2477)',
+  'ghostRule: data still says food-only; callers must select every-pair-both-improve',
+  'Ghost timing and a distinct ghost state are undefined; undeveloped slots stay undeveloped',
+  'Missing port slot IDs use internal sector:owner keys until content supplies IDs',
+  'winners-only simultaneous transformations: no tie-breaking rule is defined',
+  'Ending names other than Twisted Virtue are unassigned',
 ]
 
 export function loadAlignmentConfig(): AlignmentConfig {
@@ -88,14 +94,23 @@ function leave(state: AlignmentState, slug: string): AlignmentState {
 /** The sole command entry point. Failed commands throw without changing state or its replay log. */
 export function reduce(state: AlignmentState, command: Command, config: AlignmentConfig): { state: AlignmentState; log: string[] } {
   let next: AlignmentState
+  const log = [JSON.stringify(command)]
   switch (command.type) {
     case 'event': next = event(state, command.occurrence, config); break
     case 'recruit': next = recruit(state, command.slug, config); break
     case 'party': next = party(state, command.slugs); break
-    case 'leave': next = leave(state, command.slug); break
-    case 'develop':
-    case 'sleep': throw new Error(`unresolved: ${command.type} (unit 2477)`)
+    case 'leave': next = markReturned(leave(state, command.slug), command.slug); break
+    case 'develop': next = develop(state, command.slot, config.thresholds); break
+    case 'sleep': {
+      const result = sleep(state, config.thresholds)
+      next = result.state
+      log.push(...result.transformations.map((entry) => JSON.stringify(entry)))
+      const pos = townPosition(next, config)
+      next = { ...next, town: { pos, region: classify(pos,
+        { ...config.thresholds.thresholds, tieBreak: config.thresholds.tieBreak }, state.town.region) } }
+      break
+    }
     default: throw new Error('unknown alignment command')
   }
-  return { state: { ...next, log: [...state.log, structuredClone(command)] }, log: [JSON.stringify(command)] }
+  return { state: { ...next, log: [...state.log, structuredClone(command)] }, log }
 }

@@ -3,6 +3,7 @@ import startData from '../../../data/pirate-ship/alignment/starts.json'
 import { isQuadrant } from './charts'
 import { clamp, classify, quadrantAnchors, type Position, type Quadrant, type Region } from './square'
 import type { EventOccurrence } from './events'
+import { initialSlots, type InstitutionSlot } from './institutions'
 
 export type AlignmentThresholds = typeof thresholdData
 export type Starts = Record<string, Quadrant | 'neutral'>
@@ -24,7 +25,9 @@ export interface AlignmentState {
   day: number
   player: AlignedPosition
   characters: Record<string, CharacterState>
-  slots: Record<string, never>
+  slots: Record<string, InstitutionSlot>
+  slotTransformedAt: Record<string, number>
+  town: AlignedPosition
   log: Command[]
 }
 
@@ -49,13 +52,15 @@ export function initialState(starts: Starts, thresholds: AlignmentThresholds): A
   }
   return {
     version: 1,
-    // Zero-based elapsed days; only sleep (unit 2477) advances this counter.
+    // Zero-based elapsed days; only sleep advances this counter.
     day: 0,
     player: place('neutral'),
     characters: Object.fromEntries(Object.entries(starts).map(([slug, category]) => [
       slug, { ...place(category), location: 'town', inParty: false },
     ])),
-    slots: {},
+    slots: initialSlots(),
+    slotTransformedAt: {},
+    town: place('neutral'),
     log: [],
   }
 }

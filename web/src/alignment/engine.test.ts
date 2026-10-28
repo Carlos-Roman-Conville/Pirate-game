@@ -29,7 +29,8 @@ describe('alignment engine rules', () => {
       expect(state.characters[slug].inParty).toBe(false)
     }
     expect(state.player).toEqual({ pos: { x: 0, y: 0 }, region: 'neutral' })
-    expect(state.slots).toEqual({})
+    expect(Object.values(state.slots)).toHaveLength(16)
+    expect(Object.values(state.slots).every((slot) => !slot.developed)).toBe(true)
   })
   it.each(config.events)('§2–3 $id moves the acting player by its weight toward its category anchor', (def) => {
     const before = fresh()
@@ -186,8 +187,9 @@ describe('alignment engine rules', () => {
     command.occurrence.witnesses.push('istj-m')
     expect((state.log[0] as typeof command).occurrence.witnesses).toEqual(['entp-m'])
   })
-  it.each<Command>([{ type: 'develop', slot: 'church' }, { type: 'sleep' }])('§9 $type remains unresolved for 2477', (command) => {
-    expect(() => reduce(fresh(), command, config)).toThrow('unresolved')
+  it('§9 sleep advances the day; unsupported ghostRule still rejects development', () => {
+    expect(reduce(fresh(), { type: 'sleep' }, config).state.day).toBe(1)
+    expect(() => reduce(fresh(), { type: 'develop', slot: 'port.church' }, config)).toThrow('unresolved ghostRule')
   })
   it('§8 exports named unresolved rules and placeholder keys', () => {
     const text = UNRESOLVED.join(' ')
