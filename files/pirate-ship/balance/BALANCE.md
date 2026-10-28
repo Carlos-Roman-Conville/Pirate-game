@@ -32,7 +32,7 @@ make new characters.
 | Healing (clinic vs apothecary) | nothing (OG by the doctor's lean, which Rex ruled arrives, 2026-10-28) | |
 | Food (farm vs butcher shop) | nothing | |
 | Hunting (outdoorswoman vs hunter) | **OG and OE** | the hunter's (ISTP) diagram lands on OG and OE |
-| Inventions (ENTP vs INFJ mechanic) | nothing; the ENTP alone reaches all four | the INFJ's chart has no constraint |
+| Inventions (ENTP vs INFJ mechanic) | nothing; the ENTP reaches all four, the INFJ (chart 2026-10-28) OG only | |
 | Commerce (ENFJ vs ESFJ) | nothing: the merchant still counts after his shop fails (Rex, 2026-10-28) | |
 | Brothel (INFP vs ISFP, tentative) | nothing: the ISFP reaches OG and CE, the INFP CG and OE (charts 2026-10-28) | |
 | Town hall (ESTJ vs ENFP, tentative) | nothing; the ESTJ and the ENFP (chart 2026-10-28) each reach all four | |
@@ -56,6 +56,7 @@ the story keeper. The reachable sets the outside AI quoted for 8 characters all 
 | ISTJ `istj-m` (Rex, 2026-10-28) | OG no change (leans OG), CG no change (leans CG), OE→CG, CE→OG | OG, CG | n/a |
 | Evil ENTJ priest (new, Rex, 2026-10-28; slug not assigned yet) | OG→CE, CG→OE, OE no change (leans OE), CE no change (leans CE) | OE, CE | n/a |
 | ENFP (tentative; Rex's chart, 2026-10-28) | OG→CG, CG→OG, OE→CE, CE→OE (two double-headed arrows: good acts swap them across the good row, evil acts across the evil row; keeper's reading) | all four | n/a |
+| INFJ mechanic (Rex, 2026-10-28) | OG no change (leans OG), CG→OG, OE→OG, CE→OG: every action leads to orderly good (the INTJ's map mirrored onto OG) | OG | n/a |
 | INFP `infp-m` (Rex, 2026-10-28) | OG→CG, CG→OE, OE no change (leans OE), CE→OE | CG, OE | n/a |
 | ISFP (tentative; Rex's chart, 2026-10-28) | OG→CE, CG→OG, OE→CE, CE no change (leans CE) | OG, CE | n/a |
 | ISFJ `isfj-f` (Rex, 2026-10-28) | OG no change (dashed ring: leans OG), CG→CE, OE→CG, CE→OE | all four (OG by leaning, which arrives) | n/a |
@@ -72,7 +73,7 @@ keeper. Either way he never reaches OE or CE, so the balance result is the same.
 On the ISFJ's chart the chaotic evil square is highlighted. On the ESTP's and ESFP's charts Rex said the highlight
 isn't the starting alignment, so it isn't read as hers either: **(open)**.
 
-Not made: **ISTP**, the new mechanic, a possible church competitor. Starting alignments are open for
+Not made: **ISTP** (the only one left), the new mechanic, a possible church competitor. Starting alignments are open for
 everyone except the INTJ (OE) and the ENTP (CE).
 
 ## 1. The model
@@ -112,7 +113,7 @@ everyone except the INTJ (OE) and the ENTP (CE).
   nostalgia, and someone has invited him to the next town over to be part of their big project.
 - **(Rex)** The competition: he has done this his whole life; the ENTP started 2 years ago. The INFJ makes more
   consistently effective machinery; the ENTP's weapons have more devastating potential, if he can work out the bugs.
-- **(open)** His alignment chart; whether he can be kept in town or recruited before he leaves, and what happens to
+- **(open)** Whether he can be kept in town or recruited before he leaves, and what happens to
   the inventions sector if he leaves; whether he's one of the recruitables (the cast was 12, 6 men and 6 women).
 - Balance note (keeper): no gap either way, because the ENTP reaches all four. His leaving soon only matters if his
   chart is meant to give inventions a second route to an ending; then the player needs a realistic window to reach
@@ -156,7 +157,7 @@ out.
 | evil ENTJ priest | start? | start? | yes (lean) | yes (lean) |
 | `istp-f` | map? | map? | map? | map? |
 | `infp-m` | start? | yes | yes (lean) | start? |
-| `infj-m` | map? | map? | map? | map? |
+| `infj-m` | yes | no | no | no |
 
 ### Per sector
 
@@ -166,7 +167,7 @@ out.
 | healing | ISFJ / INTJ | Rex | yes: ISFJ (lean) | yes: ISFJ | yes: ISFJ, INTJ | yes: ISFJ |
 | food | INTP / ESFP | Rex | yes: INTP | yes: ESFP | yes: INTP | yes: ESFP |
 | hunting / gathering | ESTP / ISTP | Rex | **open only** (ISTP map?, ESTP start?) | yes: ESTP | **open only** (ISTP map?, ESTP start?) | yes: ESTP |
-| inventions | ENTP / INFJ mechanic | Rex | yes: ENTP | yes: ENTP | yes: ENTP | yes: ENTP |
+| inventions | ENTP / INFJ mechanic | Rex | yes: ENTP, INFJ | yes: ENTP | yes: ENTP | yes: ENTP |
 | commerce | ENFJ / ESFJ | Rex | yes: ENFJ, ESFJ | yes: ESFJ alone | yes: ENFJ, ESFJ | yes: ESFJ alone |
 | brothel | INFP / ISFP (tentative) | Rex | yes: ISFP | yes: INFP | yes: INFP | yes: ISFP |
 | town hall | ESTJ / ENFP (tentative) | Rex | yes: ESTJ, ENFP | yes: ESTJ, ENFP | yes: ESTJ, ENFP | yes: ESTJ, ENFP |
@@ -175,7 +176,7 @@ out.
 
 | Ending | Characters who can reach it now | Sectors covered now | Resting only on something open | Starved | Full-town routes now | If every open item lands well |
 |---|---|---|---|---|---|---|
-| Orderly good | ENTP, INTP, ESFJ, ENFJ, ESTJ, ISTJ, ISFJ, ENFP, ISFP (9) | 7 / 8 | hunting | none | **0** | 128 |
+| Orderly good | ENTP, INTP, ESFJ, ENFJ, ESTJ, ISTJ, ISFJ, ENFP, ISFP, INFJ (10) | 7 / 8 | hunting | none | **0** | 128 |
 | Chaotic good | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISTJ, ISFJ, INFP, ENFP (9) | **8 / 8** | none | none | **2** | 128 |
 | Orderly evil | ENTP, INTJ, INTP, ESFJ, ENFJ, ESTJ, ISFJ, INFP, ENTJ priest, ENFP (10) | 7 / 8 | hunting | none | **0** | 128 |
 | Chaotic evil | ENTP, ESFP, ESTP, ESFJ, ESTJ, ISFJ, ENTJ priest, ENFP, ISFP (9) | **8 / 8** | none | none | **2** | 64 |
@@ -254,7 +255,7 @@ carry the chaotic or evil side if its form follows the town.
 
 Not gaps; each is one character carrying a sector's whole route to an ending, so losing them loses the ending.
 
-- Inventions: the ENTP alone, until the INFJ mechanic's chart exists. The INFJ is about to leave town (below), so
+- Inventions CG/OE/CE: the ENTP alone (the INFJ reaches OG only). The INFJ is about to leave town (below), so
   even with a chart his window may be short. Rex's rule: keep him at his explained departure and
   "his contribution to the town never happens". If that contribution is the inventions sector, every inventions
   route needs you to let him go at that one event, with his alignment frozen there. The new mechanic removes this.
@@ -286,7 +287,7 @@ Not filled-in maps; Rex makes them.
 | Evil ENTJ priest | made (Rex, 2026-10-28): OE, CE | | P1 closed |
 | ISTJ `istj-m` | made (Rex, 2026-10-28): OG, CG | OE, CE (Rex: can't be corrupted) | P1 |
 | ISTP `istp-f` | **OG and OE** | nothing | P2 |
-| INFJ mechanic `infj-m` (slug placeholder) | nothing | nothing | the ENTP reaches all four; any map helps P5 |
+| INFJ mechanic `infj-m` (slug placeholder) | made (Rex, 2026-10-28): OG | | |
 | INFP `infp-m` | made (Rex, 2026-10-28): CG, OE | | brothel complete |
 | ENFP (tentative, the ESTJ's rival) | made (Rex, 2026-10-28): all four | nothing | the ESTJ reaches all four |
 | ISFJ `isfj-f` | made (Rex, 2026-10-28); covers all four | | P3 closed |
@@ -296,7 +297,7 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 
 ## 5. What's open
 
-- The ISTP and INFJ mechanic maps; the evil ENTJ priest's slug, gender, starting alignment, and whether they're recruitable (the cast was 12 recruitables, 6 men and 6 women); 10 starting
+- The ISTP's map; the evil ENTJ priest's slug, gender, starting alignment, and whether they're recruitable (the cast was 12 recruitables, 6 men and 6 women); 10 starting
   alignments (whether the ISFJ's and ISTJ's highlighted CE squares are their starts).
 - Whether the priest's chart replaces his earlier OE and CE words (OE "does nothing"; CE "moves the town toward good").
 - Eight sectors now (church, healing, food, hunting, inventions, commerce, brothel, town hall).
@@ -325,3 +326,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | The ENFP's chart (OG↔CG, OE↔CE): reaches all four; the town hall has two carriers | Rex |
 | 2026-10-28 | The ISFP's chart (OG→CE, CG→OG, OE→CE, CE lean): reaches OG and CE; the INFP must reach CG and OE | Rex |
 | 2026-10-28 | The INFP's chart (OG→CG, CG→OE, OE lean, CE→OE): brothel complete; chaotic good and chaotic evil complete; only hunting OG/OE (the ISTP) left | Rex |
+| 2026-10-28 | The INFJ mechanic's chart: every action leads to orderly good; inventions gains a second OG carrier; only the ISTP left | Rex |

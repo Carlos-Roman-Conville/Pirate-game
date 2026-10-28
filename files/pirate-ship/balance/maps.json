@@ -155,14 +155,14 @@
     },
     "infj-m": {
       "map": {
-        "og": null,
-        "cg": null,
-        "oe": null,
-        "ce": null
+        "og": "lean",
+        "cg": "og",
+        "oe": "og",
+        "ce": "og"
       },
       "start": null,
       "never": [],
-      "mark": "Rex (character, 2026-10-28): the INFJ mechanic, a newcomer, the ENTP's competitor. Map not made"
+      "mark": "Rex (chart 2026-10-28): every action leads to orderly good (OG dashed ring, CG/OE/CE -> OG). Highlighted OG: start open"
     },
     "enfp": {
       "map": {
