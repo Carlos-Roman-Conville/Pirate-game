@@ -178,3 +178,4 @@ they are in town.
 | 2026-10-27 | Warehouse confirmed: in disrepair, owner disorganised and chaotic; his son is the ENFJ (`enfj-m`), whose journey into structure turns it to legitimate trade or illegal storage (via the story keeper, 9eb1e15) | Rex |
 | 2026-10-27 | Not recruitable: the warehouse owner, the farmer's daughter, the farmer's son (via the story keeper, bac0d22) | Rex |
 | 2026-10-27 | Recruitment gate: INTP, ESTP, ESFP and ISFJ need higher reputation plus their completed sub quests; maybe a fifth; which reputation and level open (via the story keeper, e034754) | Rex |
+| 2026-10-27 | Food source (tentative): the farm and the cook's shop go to ghosts unless their owner is recruited; recruited, the business improves from bodies you supply, run by their child; both recruited → a secret duel (`UPGRADES.md`) | Rex |

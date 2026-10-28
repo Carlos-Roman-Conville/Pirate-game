@@ -145,8 +145,8 @@ changes how routes are built.
 - (Alignment model, 2026-10-27) The town ends in one of five places (four quadrants or the centre), so the
   endings are five plus whatever routes sit inside them; the counts below are for the slot model.
 - Combinations = the product of every slot's state count. Now: `port.entp` (2 states) = **2** combinations.
-  `port.warehouse` has 3 states (2026-10-27), so **6** combinations; the other reserved place slots have only
-  `base` so far, so they add nothing yet.
+  `port.warehouse`, `port.farm` and `port.bakery` have 3 states each (2026-10-27), so 2 × 3 × 3 × 3 = **54**
+  combinations; the other reserved place slots have only `base` so far, so they add nothing yet.
 - Each new two-state slot doubles it; ten slots of two or three states give roughly a thousand to sixty thousand.
   The endings stay a short authored list on top: each route names only the few slots it cares about, and every
   other slot can be anything.

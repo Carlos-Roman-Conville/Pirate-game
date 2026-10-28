@@ -108,8 +108,8 @@ one.
 | `port.shipyard` | the shipyard | `entp-m` (weapon smith), a few shipyard characters | `base`; others open | Rex (the place) |
 | `port.market` | the market, from the port into town | vendors | `base`; others open | Rex (the place) |
 | `port.tavern` | the tavern / brothel | the bartender | `base`; others open | Rex (the place) |
-| `port.bakery` | the butcher shop (id from when it was the bakery; ids never change) | `esfp-f`, `farm-son` | `base`; others open | Rex (the place) |
-| `port.farm` | the farm | `intp-m`, `farm-daughter` | `base`; others open | Rex (the place) |
+| `port.bakery` | the butcher shop (id from when it was the bakery; ids never change) | `esfp-f`, `farm-son` | `base`, `improved`, `ghosted` (food source, below) | Rex (tentative) |
+| `port.farm` | the farm | `intp-m`, `farm-daughter` | `base`, `improved`, `ghosted` (food source, below) | Rex (tentative) |
 | `port.clinic` | the clinic | `isfj-f` | `base`; others open | Rex (the place) |
 | `port.church` | the church | `istj-m` | `base`; others open | Rex (the place) |
 | `port.warehouse` | the warehouse | `bigwig`, vendors, `enfj-m` | `base`, `legit`, `illicit` (below) | Rex (2026-10-27) |
@@ -130,6 +130,43 @@ one.
 State ids are the keeper's. "Either… or" is Rex's, so the two rule each other out. The journey is the son's,
 `enfj-m` (Rex, 2026-10-27). Open: which choices or quadrant send it each way; whether it can
 stay `base` if the journey never happens (for example, if you take the son aboard).
+
+#### Food source: `port.farm` and `port.bakery` (Rex, tentative, 2026-10-27)
+
+The farmer (`intp-m`) and the cook (`esfp-f`) are the town's food source. Character side:
+[`intp-m.md`](../story/characters/intp-m.md), [`esfp-f.md`](../story/characters/esfp-f.md).
+
+Rex's rule, as given:
+
+| You recruit | The farm | The cook's shop | Also |
+|---|---|---|---|
+| neither | overtaken by ghosts | overtaken by ghosts | |
+| the farmer only | keeps improving from the bodies you supply, run by the daughter | drifts toward ghosthood | |
+| the cook only | drifts toward ghosthood | keeps improving from the bodies you supply, run by the son | |
+| both | improves (run by the daughter) | improves (run by the son) | a secret duel event (not designed yet) |
+
+As slot states (ids the keeper's):
+
+| Slot | State | Unlock | Rules out | Mark |
+|---|---|---|---|---|
+| `port.farm` | `base` | start | | keeper (format) |
+| `port.farm` | `improved` | `recruit(intp-m)`; the business improves from the bodies you supply; the daughter runs it | `ghosted` | Rex (tentative) |
+| `port.farm` | `ghosted` | farmer not recruited (by the end, or when: open) | `improved` | Rex (tentative) |
+| `port.bakery` | `base` | start | | keeper (format) |
+| `port.bakery` | `improved` | `recruit(esfp-f)`; the business improves from the bodies you supply; the son runs it | `ghosted` | Rex (tentative) |
+| `port.bakery` | `ghosted` | cook not recruited (by the end, or when: open) | `improved` | Rex (tentative) |
+| (event) `event.food_duel` | | `recruit(intp-m)` AND `recruit(esfp-f)` | | Rex (tentative; secret; not designed) |
+
+Read this way, each slot depends only on whether its own owner is recruited; the table above is Rex's words, the
+split into two slots is the keeper's.
+
+Open:
+
+1. "Overtaken by ghosts" (neither) vs "drifts toward ghosthood" (the other one): the same end state, or a slower or
+   partial one.
+2. Whether `improved` needs you to keep supplying bodies, and what happens if you stop.
+3. When a slot turns `ghosted`: at a set point, gradually, or only at the end.
+4. Both owners are gated (reputation plus sub quests, `TOWNS.md`), so missing a gate means `ghosted`.
 
 `port.entp` (above) may turn out to be a state of one of these (the shipyard is his home); if so it stays its own
 id and the two are linked here, never renamed.
@@ -152,3 +189,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-27 | Reserved `port.estp_hut` (fourteenth place; may replace `port.soldier_house`) | keeper; place Rex |
 | 2026-10-27 | `port.warehouse` states `legit` / `illicit` (Rex), exclusive; unlocks open | keeper; states Rex |
 | 2026-10-27 | The warehouse journey is the son's (`enfj-m`), not the father's | Rex |
+| 2026-10-27 | Food source rule (tentative): `port.farm` / `port.bakery` `improved` if their owner is recruited, `ghosted` if not; `event.food_duel` if both (via the story keeper, 653c8d0) | keeper; rule Rex |
