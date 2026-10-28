@@ -169,6 +169,9 @@ invented.
 
 ## 8. What stays configurable or unresolved (never invented)
 
+**(Rex, 2026-10-28)** Build with the placeholder numbers (minor 10, major 25, anchors at 70, starts at 50, lean half a
+step); Rex tunes after the simulator runs.
+
 | Key | Default (placeholder) | Status |
 |---|---|---|
 | `thresholds.neutral`, `thresholds.pure` | 15, 30 | Rex (provisional) |
@@ -234,3 +237,4 @@ web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fi
 | 2026-10-28 | The ghost rule applies to every pair; recruiting both lets both develop | Rex |
 | 2026-10-28 | Recruiting alone doesn't develop a place; it takes a sub quest or supplying what they need; develop is its own command | Rex |
 | 2026-10-28 | A place whose owner leaves for good freezes at the alignment it had | Rex |
+| 2026-10-28 | Build with the placeholder numbers; Rex tunes after the simulator runs | Rex |
