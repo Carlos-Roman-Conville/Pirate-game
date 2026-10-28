@@ -440,9 +440,10 @@ The square, the charts, the player's movement, the overnight rule, the mean and 
   three goods, two companies. Rex's two metrics extended to five per settlement-good: stock, consumption per day,
   target reserve, production per day, base price; price from shortage (illustrative formula base × (0.7 + 2.3 ×
   shortage)); need vs willingness vs ability to pay, later.
-- **(keeper)** The economy is a third engine, and Rex wants it shared across games: it should live where shared
-  code lives (the Toolchain or a package the games import), with `data/pirate-ship/economy/` holding this game's
-  goods, ports and companies, so the pirate game is its first client and not its owner. Its balance (no runaway
+- **(Rex, 2026-10-28)** **The economy engine lives in the Toolchain as a shared package** (`E:/AI Programs/Toolchain/economy/`,
+  name proposed, beside ask-cursor and ludii; its own README and SCOPE row); pirate-ship imports it and keeps its
+  goods, ports and companies as data under `data/pirate-ship/economy/`. The pirate game is its first client, not
+  its owner. Its balance (no runaway
   prices, every region viable, piracy's escalation fair) is a lane of its own; this keeper's question is only how
   the economy feeds the town and the world (a shortage as an event; a company's retaliation as a faction's
   influence), which are commands between modules, not shared state.
@@ -467,3 +468,4 @@ The square, the charts, the player's movement, the overnight rule, the mean and 
 | 2026-10-28 | §10 third run-down: the six factions (free pirates, criminal pirates, abyssal cult, holy order, ghost fleet, imperial crown); factions kept apart from alignment | Rex (scope); keeper |
 | 2026-10-28 | §10 fourth run-down: the world answers to the player's actions (power vacuums, regional takeovers), the last fight engineered from it; two acts (the town, then liberating the lands from the faction that took over) | Rex (scope); keeper |
 | 2026-10-28 | §10 fifth run-down: the Caribbean map, fast travel with days and dots, ocean locales and waiting, companies that respond, and the economy as a reusable simulation (three goods types, cache and consumption per settlement) | Rex (scope); keeper |
+| 2026-10-28 | The economy engine lives in the Toolchain as a shared package; pirate-ship imports it and keeps goods, ports and companies as data | Rex |

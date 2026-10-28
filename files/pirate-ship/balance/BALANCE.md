@@ -232,10 +232,10 @@ nothing is built. The current simulator verdicts (OG 61, CG 68, OE 49, CE 57) st
     sim keeps running unchanged while the world is built, and the two are joined only through the commands they
     exchange (a region's fall can send an event to the town; a town's state can gate a region).
 
-24. **Where the economy lives.** Rex wants the simulation as the basis for his other games, so it shouldn't be
-    born inside `pirate-ship/web/src/`; a shared package (Toolchain, or a games-wide module the clients import)
-    with this game's goods, ports and companies as data under `data/pirate-ship/economy/`. Decide the home before
-    the first task, or the first version gets welded to this repo.
+24. ~~**Where the economy lives.**~~ Decided (Rex, 2026-10-28): a shared Toolchain package (`Toolchain/economy/`),
+    imported by pirate-ship; this game's goods, ports and companies are data under `data/pirate-ship/economy/`.
+    Still to settle before the first task: how a game imports it (a local npm package, a path alias, or a git
+    submodule), since the belt's Gate runs in the game's repo and must see the package.
 25. **Three engines, three ticks.** Town (sleep), world (time passing), economy (days). They have to agree on one
     clock (the voyage's days are the economy's days are the town's sleeps), and they should talk only by commands
     (a shortage → a town event; captured cargo → a company's hostility → a faction's influence). Shared state
@@ -549,3 +549,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | C5 items 16–18: factions vs the square, criminals vs cult, factions and endings | keeper |
 | 2026-10-28 | C5 items 19–23: six antagonists reachable, milestone vs threshold, regional rules as data, endings multiply, world module apart | keeper |
 | 2026-10-28 | C5 items 24–27: where the economy lives, three engines one clock, economic viability unowned, ocean waiting vs town neglect | keeper |
+| 2026-10-28 | C5 item 24 decided: the economy engine is a Toolchain package | Rex |
