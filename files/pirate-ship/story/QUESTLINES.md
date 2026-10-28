@@ -23,6 +23,10 @@ questline; Rex, 2026-10-27), orderly evil (Cthulhu corruption), chaotic evil (ki
    mismatches. Confusing to the player, yet logical: humans don't just follow a path unless they're egged on into
    the one they want.
 - **(Rex)** A character's nature isn't corrupted by the quest they go on (stated earlier the same day).
+- **(Rex, 2026-10-27/28) Dashed rings on the maps:** a dashed ring means committing that action leans the character
+  toward that same quadrant. If you keep doing those actions, the lean eventually carries them all the way into it
+  (Rex, 2026-10-28, asked about the ISFJ; a general rule for dashed rings, so the ESFP's, INTP's and the
+  "stays (loop)" rings on the ESTP's, ENFJ's and INTJ's maps read the same way).
 
 Fit with the stats: personality moves only through what someone sees and how they're treated
 (`../STATS.md` §3).
@@ -50,9 +54,9 @@ suggestion (not canon); blank = open.
 | ENTP mechanic (`entp-m`) | **Rex: moves him to chaotic good** (*neutral*) | **Rex: moves him to orderly evil** (*possible support*) | **Rex: moves him to orderly good** (*neutral*) | **Rex: his natural alignment; chaotic evil acts only reinforce him (the loop)**; **Rex: guaranteed; on return he makes something that helps turn the town chaotic evil** (*supports*). **Open:** whether it stays guaranteed or now depends on what he witnesses you do there |
 | ISTP hunter (`istp-f`) | | *possible support* | | *possible support* |
 | INTJ apothecary (`intj-f`) | **Rex: moves her to orderly evil** (*possible support*) | **Rex: moves her to orderly evil** | **Rex: stays orderly evil (loop)** (*possible support*) | **Rex: moves her to orderly evil** (*opposes*). **Rex:** all paths lead here unless you show her that her belief is wrong; then she becomes neutral |
-| ISFJ doctor (`isfj-f`) | **Rex: no change: leans her toward orderly good** | **Rex: moves her to chaotic evil** | **Rex: moves her to chaotic good** | **Rex: moves her to orderly evil** |
-| ESFP cook (`esfp-f`) | **Rex: moves her to chaotic good** | **Rex: moves her to chaotic evil** | **Rex: moves her to chaotic evil** | **Rex: no change: leans her toward chaotic evil** |
-| INTP farmer (`intp-m`) | **Rex: moves him to orderly evil** | **Rex: moves him to orderly good** | **Rex: no change: leans him toward orderly evil** | **Rex: moves him to orderly evil** |
+| ISFJ doctor (`isfj-f`) | **Rex: leans her toward orderly good (kept up, all the way)** | **Rex: moves her to chaotic evil** | **Rex: moves her to chaotic good** | **Rex: moves her to orderly evil** |
+| ESFP cook (`esfp-f`) | **Rex: moves her to chaotic good** | **Rex: moves her to chaotic evil** | **Rex: moves her to chaotic evil** | **Rex: leans her toward chaotic evil (kept up, all the way)** |
+| INTP farmer (`intp-m`) | **Rex: moves him to orderly evil** | **Rex: moves him to orderly good** | **Rex: leans him toward orderly evil (kept up, all the way)** | **Rex: moves him to orderly evil** |
 | ESTP veteran outdoorswoman (`estp-f`) | **Rex: moves her to chaotic good** | **Rex: stays chaotic good (loop)** | **Rex: moves her to chaotic evil** | **Rex: stays chaotic evil (loop)** |
 | ESFJ failed merchant (`esfj-m`) | **Rex: moves him to chaotic evil** | **Rex: moves him to orderly evil** | **Rex: moves him to orderly good** | **Rex: moves him to chaotic good** |
 | ENFJ pretty boy (`enfj-m`) | **Rex: stays orderly good (loop)** | **Rex: moves them to orderly good** | **Rex: stays orderly evil (loop)** | **Rex: moves them to orderly evil** |
@@ -93,3 +97,4 @@ suggestion (not canon); blank = open.
 | 2026-10-27 | The ESFP's and INTP's maps replaced with Rex's corrected charts: ESFP (OG→CG, CG→CE, OE→CE, CE no change); INTP (OG→OE, CG→OG, OE no change, CE→OE) | Rex |
 | 2026-10-27 | The ESFJ's alignment map (OG→CE, CG→OE, OE→OG, CE→CG) | Rex |
 | 2026-10-28 | The ISFJ's alignment map (OG no change, CG→CE, OE→CG, CE→OE) | Rex |
+| 2026-10-28 | Dashed rings: the lean, kept up, eventually carries the character all the way into that quadrant (replaces "no change") | Rex |

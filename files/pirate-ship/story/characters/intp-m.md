@@ -115,7 +115,7 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 |---|---|---|---|
 | Orderly good (church-like) | `quest.order_good` | moves him to orderly evil | Rex |
 | Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | moves him to orderly good | Rex |
-| Orderly evil (Cthulhu corruption) | `quest.order_evil` | no change: leans him toward orderly evil | Rex |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` | leans him toward orderly evil; kept up, the lean carries him all the way into it | Rex |
 | Chaotic evil (killers, devil worship) | `quest.chaos_evil` | moves him to orderly evil | Rex |
 
 ### Inner rules: his alignment map (Rex, 2026-10-27)
@@ -143,13 +143,13 @@ What the path you push him on does to his alignment (`../QUESTLINES.md`, model p
 |---|---|---|
 | Orderly good | orderly evil | Rex |
 | Chaotic good | orderly good | Rex |
-| Orderly evil | orderly evil (no change: just leans that way) | Rex |
+| Orderly evil | orderly evil (a lean: kept up, it carries him all the way there) | Rex |
 | Chaotic evil | orderly evil | Rex |
 
 For the code (`inner_rules`, action → destination):
 `{ "order_good": "order_evil", "chaos_good": "order_good", "order_evil": "order_evil", "chaos_evil": "order_evil" }`
 
-- **(Rex)** The dashed ring means no change: if you commit that action, it just leans him in that direction.
+- **(Rex)** The dashed ring: committing that action leans him in that direction. **(Rex, 2026-10-28)** If you keep doing those actions, the lean eventually carries him all the way into that quadrant.
 - Every path ends in orderly evil: chaotic good passes through orderly good on the way.
 - **(open)** Starting alignment: to figure out later (the highlight on the diagram doesn't mark it).
 
@@ -167,3 +167,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Food-source consequences: bodies as the prerequisite quest; their child runs the business; neither → ghosts, one → improves and the other toward ghosthood, both → both improve plus a secret duel | Rex |
 | 2026-10-27 | Confirmed: taking neither sends both the farm and the cook's shop to ghosts | Rex |
 | 2026-10-27 | Why they join: to see the world and get a break from the island, as long as they can come back for more bodies (distinct from the other parent's reason later) | Rex |
+| 2026-10-28 | Dashed ring clarified: the lean toward orderly evil, kept up, eventually carries him all the way into it | Rex |

@@ -102,7 +102,7 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
 | Questline | Key | Reaction to what they witness you do there | Mark |
 |---|---|---|---|
-| Orderly good (church-like) | `quest.order_good` | no change: leans her toward orderly good | Rex |
+| Orderly good (church-like) | `quest.order_good` | leans her toward orderly good; kept up, the lean carries her all the way into it | Rex |
 | Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | moves her to chaotic evil | Rex |
 | Orderly evil (Cthulhu corruption) | `quest.order_evil` | moves her to chaotic good | Rex |
 | Chaotic evil (killers, devil worship) | `quest.chaos_evil` | moves her to orderly evil | Rex |
@@ -133,7 +133,7 @@ What the path you push her on does to her alignment (`../QUESTLINES.md`, model p
 
 | Pushed on (action quadrant) | She moves toward | Mark |
 |---|---|---|
-| Orderly good | orderly good (no change: just leans that way) | Rex |
+| Orderly good | orderly good (a lean: kept up, it carries her all the way there) | Rex |
 | Chaotic good | chaotic evil | Rex |
 | Orderly evil | chaotic good | Rex |
 | Chaotic evil | orderly evil | Rex |
@@ -141,7 +141,7 @@ What the path you push her on does to her alignment (`../QUESTLINES.md`, model p
 For the code (`inner_rules`, action → destination):
 `{ "order_good": "order_good", "chaos_good": "chaos_evil", "order_evil": "chaos_good", "chaos_evil": "order_evil" }`
 
-- **(Rex)** The dashed ring means no change: if you commit that action, it just leans her in that direction.
+- **(Rex)** The dashed ring: committing that action leans her in that direction. **(Rex, 2026-10-28)** If you keep doing those actions, the lean eventually carries her all the way into that quadrant.
 - The other three form a loop: chaotic good → chaotic evil → orderly evil → chaotic good. Only orderly good holds her.
 - **(open)** Starting alignment: to figure out later. The diagram highlights chaotic evil (on the CE→OE arrow); Rex hasn't said whether that marks her start (on the ESTP's and ESFP's charts the highlight didn't).
 
@@ -155,3 +155,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |
 | 2026-10-27 | Why she joins: only with the ESTP in your party. The odd triangle: wait out her infatuation with the ESTP; romanceable after their breaking point | Rex |
 | 2026-10-28 | Inner rules: her alignment map (OG no change, CG→CE, OE→CG, CE→OE); tie: her clinic competes with the INTJ's apothecary for the town's healing; the church and clinic kept separate | Rex |
+| 2026-10-28 | Dashed ring clarified: the lean toward orderly good, kept up, eventually carries her all the way into it | Rex |

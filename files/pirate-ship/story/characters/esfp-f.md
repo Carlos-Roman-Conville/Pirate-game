@@ -111,7 +111,7 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | Orderly good (church-like) | `quest.order_good` | moves her to chaotic good | Rex |
 | Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | moves her to chaotic evil | Rex |
 | Orderly evil (Cthulhu corruption) | `quest.order_evil` | moves her to chaotic evil | Rex |
-| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | no change: leans her toward chaotic evil | Rex |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | leans her toward chaotic evil; kept up, the lean carries her all the way into it | Rex |
 
 - **(proposed, outside AI)** Paired developments: beloved provider vs hospitality as cover.
 
@@ -141,12 +141,12 @@ What the path you push her on does to her alignment (`../QUESTLINES.md`, model p
 | Orderly good | chaotic good | Rex |
 | Chaotic good | chaotic evil | Rex |
 | Orderly evil | chaotic evil | Rex |
-| Chaotic evil | chaotic evil (no change: just leans that way) | Rex |
+| Chaotic evil | chaotic evil (a lean: kept up, it carries her all the way there) | Rex |
 
 For the code (`inner_rules`, action → destination):
 `{ "order_good": "chaos_good", "chaos_good": "chaos_evil", "order_evil": "chaos_evil", "chaos_evil": "chaos_evil" }`
 
-- **(Rex)** The dashed ring means no change: if you commit that action, it just leans her in that direction.
+- **(Rex)** The dashed ring: committing that action leans her in that direction. **(Rex, 2026-10-28)** If you keep doing those actions, the lean eventually carries her all the way into that quadrant.
 - Every path ends in chaotic evil: orderly good passes through chaotic good on the way.
 - **(open)** Starting alignment: to figure out later (the highlight on the diagram doesn't mark it).
 
@@ -164,3 +164,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Food-source consequences: bodies as the prerequisite quest; their child runs the business; neither → ghosts, one → improves and the other toward ghosthood, both → both improve plus a secret duel | Rex |
 | 2026-10-27 | Confirmed: taking neither sends both the farm and the cook's shop to ghosts | Rex |
 | 2026-10-27 | Why they join: to see the world and get a break from the island, as long as they can come back for more bodies (distinct from the other parent's reason later) | Rex |
+| 2026-10-28 | Dashed ring clarified: the lean toward chaotic evil, kept up, eventually carries her all the way into it | Rex |
