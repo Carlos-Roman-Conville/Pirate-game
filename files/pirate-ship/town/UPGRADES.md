@@ -31,6 +31,7 @@ out; the combinations of upgrades produce the endings (`ENDINGS.md`).
 | `help(<slug>)` | you helped them (what counts is per character) | Rex (verb); word proposed |
 | `return(<slug>, improved)` | you brought a crew mate back to town improved | Rex (2026-10-26, `TOWNS.md`); word proposed |
 | `rep(<town>[.<group>]) >= n` | reputation with a town or a group in it | Rex (§7b); word proposed |
+| `fund(<slug>)` | you gave them money for their venture | Rex (funding the ESFJ, 2026-10-27); word proposed |
 | `act(<id>) -> (g, c)` | an action, quest section or method of finishing a quest, and the alignment points it carries on good/evil (`g`) and order/chaos (`c`) | Rex (actions carry alignment points, 2026-10-27); word proposed |
 
 Words are added here only as Rex's choices need them.
@@ -116,6 +117,7 @@ one.
 | `port.apothecary` | the apothecary | the INTJ herbalist (her potion-testing questline) | `base`; others open | Rex (the place) |
 | `port.estp_hut` | the hut away from town | `estp-f` | `base`; others open | Rex (the place; she lives here). Whether `port.soldier_house` still exists: open (if not, that id is retired, never reused) |
 | `port.infp_house` | the INFP's house and basement | `infp-m` | `base`; others open | Rex (the place) |
+| `port.esfj_shop` | the ESFJ's shop or stall (temporary) | `esfj-m` | `base` (not there), `open`, `failed` (below) | Rex |
 | `port.fort` | the old coastal fort | the old soldier (weekly) | `base`; others open | Rex (the place) |
 | `port.soldier_house` | the old soldier's locked house | the old soldier | `base` (locked); others open | Rex (the place) |
 
@@ -168,6 +170,19 @@ Open:
 3. When a slot turns `ghosted`: at a set point, gradually, or only at the end.
 4. Both owners are gated (reputation plus sub quests, `TOWNS.md`), so missing a gate means `ghosted`.
 
+#### `port.esfj_shop` (Rex, 2026-10-27)
+
+A temporary place: a rare-goods shop in town or a stall in the port (which one: open).
+
+| State | What it is | Unlock | Rules out | Mark |
+|---|---|---|---|---|
+| `base` | not there | start | | keeper (format) |
+| `open` | the ESFJ's shop or stall is open | `fund(esfj-m)` | | Rex |
+| `failed` | it has failed; he joins your crew | after `open` (when, and whether anything you do changes it: open) | | Rex |
+
+State ids are the keeper's. Open: whether the place disappears after `failed` or stays empty; whether it can
+succeed.
+
 `port.entp` (above) may turn out to be a state of one of these (the shipyard is his home); if so it stays its own
 id and the two are linked here, never renamed.
 
@@ -191,3 +206,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-27 | The warehouse journey is the son's (`enfj-m`), not the father's | Rex |
 | 2026-10-27 | Food source rule (tentative): `port.farm` / `port.bakery` `improved` if their owner is recruited, `ghosted` if not; `event.food_duel` if both (via the story keeper, 653c8d0) | keeper; rule Rex |
 | 2026-10-27 | Confirmed: recruit neither the farmer nor the cook and both places go to ghosts | Rex |
+| 2026-10-27 | Reserved `port.esfj_shop` (temporary): `base` → `open` on `fund(esfj-m)` → `failed`, then he joins; choice word `fund(<slug>)` (proposed) | keeper; rule Rex |
