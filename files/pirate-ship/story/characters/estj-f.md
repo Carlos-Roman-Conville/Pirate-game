@@ -1,9 +1,9 @@
-# The ESTJ old privateer (unnamed; file is `estj-m.md` until Rex names him)
+# The ESTJ privateer pirate (unnamed; file is `estj-f.md` until Rex names her)
 
 Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is canon. The field keys in backticks
 follow `_TEMPLATE.md`.
 
-- **Slot:** `estj-m` (file was `estj.md` until 2026-10-27)
+- **Slot:** `estj-f` (file was `estj.md`, then `estj-m.md`, until 2026-10-27)
 - **Status:** idea
 - **Last changed:** 2026-10-27
 
@@ -14,8 +14,8 @@ follow `_TEMPLATE.md`.
 | Name | `name` | | open |
 | Type | `type` | ESTJ | Rex |
 | Function stack | `stack` | Te-Si-Ne-Fi | Rex (type) |
-| Gender | `gender` | man | Rex |
-| Pirate archetype | `archetype` | an old privateer | Rex |
+| Gender | `gender` | woman, in her 40s (was a man earlier on 2026-10-27) | Rex |
+| Pirate archetype | `archetype` | an old privateer pirate; a pirate lady | Rex |
 | Ship job (posts held) | `posts` | | open |
 | Where they are found | `found_at` | starting port / later port / at sea | open |
 | Resident or visitor | `town_role` | resident, visitor, looking for work | open |
@@ -35,7 +35,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Bio | `bio` | an old privateer who lost his crew at sea | Rex |
+| Bio | `bio` | once part of a powerful crew, but she lost everyone (earlier the same day: "lost his crew at sea") | Rex |
 | Likes (gifts, acts) | `likes` | | open |
 | Dislikes | `dislikes` | | open |
 | Schedule | `schedule` | their day: post, meals, the den, sleep | open |
@@ -133,3 +133,4 @@ For the code (`inner_rules`, action → destination):
 |---|---|---|
 | 2026-10-27 | Created with the alignment map (OG→CE, CG→OG, OE→CG, CE→OE) | Rex |
 | 2026-10-27 | An old privateer who lost his crew at sea; a man; file moved from `estj.md` to `estj-m.md` | Rex |
+| 2026-10-27 | Now a woman: a pirate lady in her 40s, once part of a powerful crew, who lost everyone; file moved from `estj-m.md` to `estj-f.md` | Rex |

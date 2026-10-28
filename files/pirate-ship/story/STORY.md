@@ -196,4 +196,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The warehouse owner is simply bad: disorganised, chaotic, the warehouse in disrepair, alliances poorly kept; his son is the ENFJ, badly taught, whose journey into making structure turns the warehouse to legitimate trade or to stolen goods and drugs | Rex |
 | 2026-10-27 | The farm son, farm daughter and warehouse owner are not recruitable; the recruitable list (about 12) is only for recruitables, non-recruitables kept separate; a kidnapping mechanic for other characters is an idea for later | Rex |
 | 2026-10-27 | The ESFJ is a failed merchant, his look based on MrBeast (`esfj-m`); the ESTJ is an old privateer who lost his crew at sea (`estj-m`) | Rex |
+| 2026-10-27 | The ESTJ is a woman: an old privateer pirate, a pirate lady in her 40s, once part of a powerful crew, who lost everyone (`estj-f`) | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

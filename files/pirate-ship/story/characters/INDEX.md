@@ -15,8 +15,8 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | istj-f | ISTJ (Si-Te-Fi-Ne) | woman | (open) | keeper of the articles / bosun | follows the rules to the letter | drafted | |
 | isfj-m | ISFJ (Si-Fe-Ti-Ne) | man | (open) | surgeon who won't let you go / surgeon | the medic who keeps you from leaving | drafted | |
 | isfj-f | ISFJ (Si-Fe-Ti-Ne) | woman | (open) | town doctor at the clinic (Rex) | born here, her father the town doctor; recruitable; secretly enjoys the pain healing causes | idea (Rex) | [isfj-f.md](isfj-f.md) |
-| estj-m | ESTJ (Te-Si-Ne-Fi) | man | (open) | old privateer (Rex) | lost his crew at sea; has an alignment map | idea (Rex) | [estj-m.md](estj-m.md) |
-| estj-f | ESTJ (Te-Si-Ne-Fi) | woman | (open) | quartermaster | | drafted | |
+| estj-m | ESTJ (Te-Si-Ne-Fi) | man | (open) | quartermaster | | drafted | |
+| estj-f | ESTJ (Te-Si-Ne-Fi) | woman | (open) | old privateer pirate (Rex) | a pirate lady in her 40s; once part of a powerful crew, lost everyone; has an alignment map | idea (Rex) | [estj-f.md](estj-f.md) |
 | esfj-m | ESFJ (Fe-Si-Ne-Ti) | man | (open) | failed merchant (Rex) | look based on MrBeast | idea (Rex) | [esfj-m.md](esfj-m.md) |
 | esfj-f | ESFJ (Fe-Si-Ne-Ti) | woman | (open) | mother of the mess / cook | | drafted | |
 | istp-m | ISTP (Ti-Se-Ni-Fe) | man | (open) | boarder | | drafted | |
