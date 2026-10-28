@@ -5,7 +5,7 @@ follow `_TEMPLATE.md`.
 
 - **Slot:** `istj-m`
 - **Status:** idea
-- **Last changed:** 2026-10-27
+- **Last changed:** 2026-10-28
 
 ## Identity
 
@@ -91,12 +91,48 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
 | Questline | Key | Reaction to what they witness you do there | Mark |
 |---|---|---|---|
-| Orderly good (church-like) | `quest.order_good` |  | open (proposed: supports) |
-| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | no effect: does nothing to his alignment or anyone else's; outside AI proposed: neutral | Rex |
-| Orderly evil (Cthulhu corruption) | `quest.order_evil` | does nothing to his alignment or anyone else's; outside AI proposed: opposes | Rex |
-| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | he cannot be corrupted: he becomes more fervently against evil and pushes back, moving the town toward good; outside AI proposed: strongly opposes | Rex |
+| Orderly good (church-like) | `quest.order_good` | leans him toward orderly good; kept up, the lean carries him all the way into it (map, 2026-10-28); outside AI proposed: supports | Rex |
+| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | no effect: does nothing to his alignment or anyone else's; outside AI proposed: neutral. Map (2026-10-28): a lean toward chaotic good; which stands is open | Rex; conflict open |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` | does nothing to his alignment or anyone else's; outside AI proposed: opposes. Map (2026-10-28): moves him to chaotic good; which stands is open | Rex; conflict open |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | he cannot be corrupted: he becomes more fervently against evil and pushes back, moving the town toward good; outside AI proposed: strongly opposes. Map (2026-10-28): moves him to orderly good | Rex |
 
 - **(Rex, 2026-10-27)** The pirate questline is chaotic good; taking him on it does nothing to his alignment or anyone else's.
+
+### Inner rules: his alignment map (Rex, 2026-10-28)
+
+What the path you push him on does to his alignment (`../QUESTLINES.md`, model point 4). Rex's diagram:
+
+![The ISTJ's alignment map](diagrams/istj-m-alignment.png)
+
+```
+              GOOD
+   +-----------------+-----------------+
+   |  ORDERLY GOOD   |  CHAOTIC GOOD   |
+   |   ( (OG) )      |   ( (CG) )      |
+   |        ^        |    ^            |
+   +---------\-------+---/-------------+
+   |          \      |  /              |
+   |      (OE) \-----+-/----- (CE)     |
+   |  ORDERLY EVIL   |  CHAOTIC EVIL   |
+   +-----------------+-----------------+
+              EVIL
+   OG lean   CG lean   OE->CG   CE->OG
+```
+
+| Pushed on (action quadrant) | He moves toward | Mark |
+|---|---|---|
+| Orderly good | orderly good (a lean: kept up, it carries him all the way there) | Rex |
+| Chaotic good | chaotic good (a lean: kept up, it carries him all the way there) | Rex |
+| Orderly evil | chaotic good | Rex |
+| Chaotic evil | orderly good | Rex |
+
+For the code (`inner_rules`, action → destination):
+`{ "order_good": "order_good", "chaos_good": "chaos_good", "order_evil": "chaos_good", "chaos_evil": "order_good" }`
+
+- **(Rex)** Dashed ring: committing that action leans him that way; kept up, the lean carries him all the way into that quadrant.
+- Every path ends in good: the map never lands on orderly evil or chaotic evil, which fits "he cannot be corrupted".
+- **(open, for Rex)** The map differs from the earlier cells above: chaotic good was "no effect" (the map: a lean toward chaotic good); orderly evil "does nothing to his alignment or anyone else's" (the map: moves him to chaotic good); chaotic evil "fights evil harder" (the map: moves him to orderly good; the part about moving the town toward good may still hold). Which stands is Rex's call.
+- **(open)** Starting alignment: to figure out later. The diagram highlights chaotic evil (on the CE→OG arrow); Rex hasn't said whether that marks his start.
 
 ## Change log
 
@@ -107,3 +143,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Chaotic good (the pirate questline): no effect | Rex |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | An old pirate who gave up the life; joins of his own offer, to help you, take your measure and try to bring you to God | Rex |
+| 2026-10-28 | Inner rules: his alignment map (OG lean, CG lean, OE→CG, CE→OG); where it differs from the earlier cells is open for Rex | Rex |

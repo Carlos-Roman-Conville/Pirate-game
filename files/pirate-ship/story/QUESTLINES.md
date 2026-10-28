@@ -50,7 +50,7 @@ suggestion (not canon); blank = open.
 
 | Character | Orderly good | Chaotic good (pirate) | Orderly evil (Cthulhu) | Chaotic evil (devil) |
 |---|---|---|---|---|
-| ISTJ priest (`istj-m`) | *supports* | **Rex: no effect** (*neutral*) | **Rex: does nothing to his or anyone's alignment** (*opposes*) | **Rex: can't be corrupted; fights evil harder, moves the town toward good** (*strongly opposes*) |
+| ISTJ priest (`istj-m`) | **Rex (map): leans him toward orderly good (kept up, all the way)** (*supports*) | **Rex: no effect**; **map: leans him toward chaotic good (kept up, all the way)**; conflict open (*neutral*) | **Rex: does nothing to his or anyone's alignment**; **map: moves him to chaotic good**; conflict open (*opposes*) | **Rex: can't be corrupted; fights evil harder, moves the town toward good**; **map: moves him to orderly good** (*strongly opposes*) |
 | ENTP mechanic (`entp-m`) | **Rex: moves him to chaotic good** (*neutral*) | **Rex: moves him to orderly evil** (*possible support*) | **Rex: moves him to orderly good** (*neutral*) | **Rex: his natural alignment; chaotic evil acts only reinforce him (the loop)**; **Rex: guaranteed; on return he makes something that helps turn the town chaotic evil** (*supports*). **Open:** whether it stays guaranteed or now depends on what he witnesses you do there |
 | ISTP hunter (`istp-f`) | | *possible support* | | *possible support* |
 | INTJ apothecary (`intj-f`) | **Rex: moves her to orderly evil** (*possible support*) | **Rex: moves her to orderly evil** | **Rex: stays orderly evil (loop)** (*possible support*) | **Rex: moves her to orderly evil** (*opposes*). **Rex:** all paths lead here unless you show her that her belief is wrong; then she becomes neutral |
@@ -98,3 +98,4 @@ suggestion (not canon); blank = open.
 | 2026-10-27 | The ESFJ's alignment map (OG→CE, CG→OE, OE→OG, CE→CG) | Rex |
 | 2026-10-28 | The ISFJ's alignment map (OG no change, CG→CE, OE→CG, CE→OE) | Rex |
 | 2026-10-28 | Dashed rings: the lean, kept up, eventually carries the character all the way into that quadrant (replaces "no change") | Rex |
+| 2026-10-28 | The ISTJ's alignment map (OG lean, CG lean, OE→CG, CE→OG); its CG and OE differ from his earlier cells, open for Rex | Rex |
