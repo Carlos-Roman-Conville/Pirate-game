@@ -369,6 +369,36 @@ The square, the charts, the player's movement, the overnight rule, the mean and 
   for the player (`STATS.md` §7b already has per-group reputation; a faction is a group), and nothing in the
   square. Whether faction outcomes become endings beside the nine is open.
 
+### Fourth run-down, the same day: the world answers, and two acts (Rex; recorded, nothing built)
+
+- **(Rex)** Your actions affect not only the town but **the greater world**: complete a quest and take certain
+  actions, leave a power vacuum somewhere with obvious signs of a Cthulhu cult rising, and next time you return
+  everyone has been turned and it's a cult. This is how the game **engineers who the last fight is**: the big bad
+  you end up fighting.
+- **(Rex)** **Two acts.** Act I is whatever first story takes place within the town. Act II is whatever faction
+  has taken over; your job is to liberate the remaining islands and lands from its control.
+- **(proposed, outside AI)** Each region holds a few state variables (controlling faction, each faction's
+  influence, authority, unrest, governor alive, quest status) and evaluates transition conditions when time passes,
+  the same event-driven pattern as the overnight town update; the player creates openings and factions exploit them
+  by their own behaviour (a combination, not autonomous simulation, not player-only). Each faction has a regional
+  influence separate from the player's and the town's alignment, raised by named kinds of action (liberating ports,
+  enabling smuggling, leaving occult threats unchecked, purging, mass deaths and curses, restoring garrisons). The
+  final antagonist is the strongest *hostile* faction, with story exceptions (your ally can be the strongest). The
+  early siege (15–25%) stays as the warfare tutorial; the Act I finale is a world-state evaluation at a fixed
+  milestone choosing the dominant faction (ChatGPT favours fixed milestone, dynamic antagonist, over a threshold
+  trigger). Act II per faction: Crown → free occupied colonies; Holy Order → break a fanatical crusade; Criminals →
+  dismantle gangs; Cult → reclaim corrupted islands and stop the awakening; Ghost Fleet → break curses; Free
+  Pirates → a confederation turned coercive. Liberated regions keep Act I's consequences (dead, turned, fled,
+  willing converts); what replaces the defeated rulers is the player's choice, which ties back to the square
+  (oppression defeated abroad, reproduced at home). Factions differ in how expansionist they are; the Ghost Fleet
+  rises only on curses and mass death, the Free Pirates rarely conquer.
+- **(keeper)** This is a second instance of the engine's own pattern, one level up: regions are to the world what
+  slots are to the town (state as data, a reducer over commands, evaluation at a tick). It belongs in its own module
+  (`web/src/world/`?) built the same way, sharing nothing with the alignment engine but the pattern, so the town and
+  the world can be simulated apart and together. The balance question it adds is the one this keeper exists for:
+  **each of the six Act II antagonists must have a realistic route**, equal opportunity not equal chance, which the
+  world sim must prove the way the town sim proves the four perfect towns.
+
 ## Change log
 
 | Date | Change | By |
@@ -387,3 +417,4 @@ The square, the charts, the player's movement, the overnight rule, the mean and 
 | 2026-10-28 | §10: the scope change (108 characters, locales and relationships, influence carried home, character ghosts, three neutral endings, build locale by locale) recorded with the engine changes it implies; nothing built | Rex (scope); keeper (reading) |
 | 2026-10-28 | §10 second run-down: twelve locales (tavern, docks, fort added), the fort as a Stardew-style fill-in, the attack at 15–25%, turn-based combat of 4 units converting to tactical battles, a world map coming | Rex (scope); keeper |
 | 2026-10-28 | §10 third run-down: the six factions (free pirates, criminal pirates, abyssal cult, holy order, ghost fleet, imperial crown); factions kept apart from alignment | Rex (scope); keeper |
+| 2026-10-28 | §10 fourth run-down: the world answers to the player's actions (power vacuums, regional takeovers), the last fight engineered from it; two acts (the town, then liberating the lands from the faction that took over) | Rex (scope); keeper |

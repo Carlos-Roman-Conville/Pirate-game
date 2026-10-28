@@ -80,6 +80,9 @@ rule stays data.
 | 30 | Combat: turn-based RPG, 4 units a side (enemy count open), converting to a turn-based tactical RPG for invasions; **a separate module with its own data and sim, not the alignment engine; no keeper owns it yet** | codex | Rex's combat design | its own smoke test | scope |
 | 31 | World map: regions where recruits are found; Rex designs it first | — | Rex's map | — | scope |
 | 32 | Factions as data: a faction tag per character and region; faction reputation as a §7b group; faction alliances per stage (Rex's storyline) | composer | 31, Rex's storyline | shape test | scope |
+| 33 | World module: regions as data (controlling faction, per-faction influence, the variables Rex keeps), a reducer over world commands, evaluation at a tick; the same pattern as the alignment engine, its own folder | codex | 31, 32, Rex's region list and transition rules | one test per rule; replays | scope |
+| 34 | World sim: is each of the six factions reachable as the Act II antagonist under the data; prints a route per faction | codex | 33 | six verdicts printed | scope |
+| 35 | Act I finale evaluation (fixed milestone vs threshold: Rex) and the Act II liberation state carrying Act I's consequences | codex | 33, Rex's rule | one test per rule | scope |
 | **Gate** | Rex decides the rules above (BALANCE.md C5), locale by locale, starting with the farm; the balance keeper then writes the tasks | | | | gate |
 
 ## Later phases (not planned yet)

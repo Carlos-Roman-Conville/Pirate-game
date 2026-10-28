@@ -212,6 +212,26 @@ nothing is built. The current simulator verdicts (OG 61, CG 68, OE 49, CE 57) st
 18. **Factions and the endings.** Whether "who rules the port" (a faction outcome) is a dimension beside the nine
     alignment endings and the three neutrals, or folded into them, decides how many endings the sim must reach.
 
+19. **Six Act II antagonists, each must be reachable.** The world sim has to prove every faction can end Act I
+    dominant and hostile, the way the town sim proves the four perfect towns. Factions aren't meant to be equally
+    likely (the Ghost Fleet only through curses and mass death, the Free Pirates rarely), so some routes will be
+    long and hidden; that's earned, like the OG hospital, as long as each exists. The one that can close by
+    accident: a faction the player *allies* with can't be the antagonist, so if a route to "Cult dominant" always
+    passes through allying with the Cult, that antagonist is unreachable; the sim must separate dominance from
+    hostility.
+20. **Milestone or threshold.** Whether Act II starts at a fixed story point (choosing the strongest hostile
+    faction then) or the moment one faction crosses a dominance line changes what the sim measures and whether a
+    player can be surprised mid-act. ChatGPT favours the fixed milestone; Rex's call.
+21. **Regional transitions need their rules, and they're data.** "Cult influence exceeds remaining authority →
+    the island turns" is the shape; each region's variables, what raises them, and the transition conditions are
+    Rex's and the story keeper's. Nothing in the engine knows what a governor is.
+22. **Endings multiply.** Town alignment (9 + the neutral split) × Act II antagonist (6) × liberated-region
+    outcomes is more endings than anyone will write; Rex should say which combinations are *endings* and which are
+    just state the epilogue reads, before the sim is asked to reach them all.
+23. **The world module must stay apart from the town engine.** Same pattern, separate folder and data, so the town
+    sim keeps running unchanged while the world is built, and the two are joined only through the commands they
+    exchange (a region's fall can send an event to the town; a town's state can gate a region).
+
 ## Are the alignment maps on file?
 
 **Yes.** Rex's maps are recorded by the story keeper as Rex (each character file's "Inner rules" section and the
@@ -512,3 +532,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | C5: the scope change's collisions and open rules (pairs vs locales, points vs adopt, influence, death, three neutrals, empty town, scale, novices, sequence, other keepers) | keeper |
 | 2026-10-28 | C5 items 11–15: twelve locales vs pairs, which count, siege fates, combat unowned, world map | keeper |
 | 2026-10-28 | C5 items 16–18: factions vs the square, criminals vs cult, factions and endings | keeper |
+| 2026-10-28 | C5 items 19–23: six antagonists reachable, milestone vs threshold, regional rules as data, endings multiply, world module apart | keeper |
