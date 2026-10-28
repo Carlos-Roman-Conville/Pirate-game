@@ -35,8 +35,8 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| Bio | `bio` | | open |
-| Likes (gifts, acts) | `likes` | | open |
+| Bio | `bio` | she lost her husband years ago during a hunt. He would take part in the kill with her, but the big one, a massive shark she failed to kill with a blow, ended up taking him out. She has never forgiven herself, so she always goes into the hunt by herself, so that she never loses anyone else again. When you meet her she is broke and desperately needs cash for alcohol | Rex |
+| Likes (gifts, acts) | `likes` | alcohol (she desperately needs cash for it) | Rex |
 | Dislikes | `dislikes` | | open |
 | Schedule | `schedule` | | open |
 | Claims vs truth | `claims` | | open |
@@ -80,7 +80,7 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | | open |
+| How recruited | `recruit` | she agrees easily: she's broke, desperately needs cash for alcohol, and no work has come through the town in months | Rex |
 | What the town thinks of them | `town_view` | | open |
 
 ## Relationships
@@ -88,6 +88,7 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | in the water you're in her element and at her mercy | Rex |
+| her husband (dead) | `rel.husband` | hunted with her and took part in the kills; killed years ago by a massive shark she failed to kill with a blow. She has never forgiven herself | Rex |
 
 ## Heart events
 
@@ -133,3 +134,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Questline responses section added | keeper |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | Now a woman: a tomboy, a small, petite girl who is extremely effective at hunting; file moved from `istp-m.md` to `istp-f.md` | Rex |
+| 2026-10-27 | Backstory: her husband was killed by a massive shark she failed to kill; never forgave herself, hunts alone; broke, needs cash for alcohol; joins easily since no work has come through town in months | Rex |
