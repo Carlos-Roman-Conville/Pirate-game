@@ -97,7 +97,7 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 |---|---|---|---|
 | Orderly good (church-like) | `quest.order_good` | moves him to orderly evil | Rex |
 | Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | moves him to orderly good | Rex |
-| Orderly evil (Cthulhu corruption) | `quest.order_evil` | stays orderly evil (loop) | Rex |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` | no change: leans him toward orderly evil | Rex |
 | Chaotic evil (killers, devil worship) | `quest.chaos_evil` | moves him to chaotic good | Rex |
 
 ### Inner rules: his alignment map (Rex, 2026-10-27)
@@ -126,13 +126,13 @@ What the path you push him on does to his alignment (`../QUESTLINES.md`, model p
 |---|---|---|
 | Orderly good | orderly evil | Rex |
 | Chaotic good | orderly good | Rex |
-| Orderly evil | orderly evil (stays: a loop) | Rex; loop read from the dashed ring, to confirm |
+| Orderly evil | orderly evil (no change: just leans that way) | Rex |
 | Chaotic evil | chaotic good | Rex |
 
 For the code (`inner_rules`, action → destination):
 `{ "order_good": "order_evil", "chaos_good": "order_good", "order_evil": "order_evil", "chaos_evil": "chaos_good" }`
 
-- **(Rex's diagram)** A dashed ring with no curl marks orderly evil: read as staying put (a loop), as on the ESTP's map where the rings carry a curl; to confirm.
+- **(Rex, 2026-10-27)** The dashed ring means no change: if you commit that action, it just leans him in that direction. It marks orderly evil.
 - A chain: chaotic evil → chaotic good → orderly good → orderly evil, where it stops.
 - **(open)** Starting alignment: to figure out later (the highlight on the diagram doesn't mark it).
 
@@ -147,3 +147,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Gender confirmed: man; file moved from `intp-f.md` to `intp-m.md` | Rex |
 | 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |
 | 2026-10-27 | Inner rules: his alignment map (OG→OE, CG→OG, OE stays, CE→CG) | Rex |
+| 2026-10-27 | The dashed ring means no change; the action just leans him that way | Rex |
