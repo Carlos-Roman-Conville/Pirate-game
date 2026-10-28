@@ -34,6 +34,26 @@ PIRATE.md v0.1, FISHING.md, STATS.md, DUTIES.md, ROSTER.md. Open decisions in PI
 | 10 | Fishing screen, lure, bite, pull in and result: rhythm pick/play, bobber beats with splash and tone, tension, result panel | composer | 9 | four checks | done (2461 lure and bite on screen; 2462 fixed the build; 2463 pull-in as several pulls) |
 | **Gate** | Rex plays the dock and the fishing loop in the browser; a desktop Sonnet session runs the smoke check (the belt can't open a browser) | | | | gate |
 
+## Phase 2: The alignment backend (Rex, 2026-10-28; spec `balance/ALIGNMENT.md`)
+
+The real alignment engine, built once, used by the game and by a simulator that answers "is a perfect X town
+reachable" (Rex: "design this as the actual backend so we don't program the system twice"). Pure TS in
+`web/src/alignment/`, data in `data/pirate-ship/alignment/`, vitest beside the code. Workers for this phase (Rex,
+2026-10-28): **codex** for engine logic, **composer** for data and shape tests, **sonnet** for scaffolding and docs,
+**haiku** for checks; opus only for design. Every undecided rule is a config key or an explicit "unresolved"
+(ALIGNMENT.md §8); a task never fills one in.
+
+| # | Unit | Model | Needs | Done when | Status |
+|---|---|---|---|---|---|
+| 11 | `web/src/alignment/square.ts`: positions on the ±100 square, clamp, anchors, classify into the 9 regions (neutral, 4 pure, 4 hybrid) with the transitional rule; `data/pirate-ship/alignment/thresholds.json` holds every number and the §8 config keys | sonnet | — | vitest: each region, the transitional cases, clamp; `tsc -b` | queued (2474) |
+| 12 | Data: `charts.json` (16 response charts from `balance/maps.json`), `starts.json` (§4 starts), `institutions.json` (8 sectors, pairs, slot ids), `events.json` (placeholder test events only); a shape test | composer | 11 | vitest: every chart has 4 valid cells, every character a start, every institution's pair exists | queued (2475) |
+| 13 | The engine: `charts.ts`, `events.ts`, `state.ts`, `engine.ts` (`applyEvent`): player moves by category, witnesses by chart, lean steps, minor/major, accumulation, persistence through rotation | codex | 11, 12 | vitest: one test per §2–§4 rule; `tsc -b` | queued (2476) |
+| 14 | `institutions.ts` (return → eligible, sleep → transform, pending list), `town.ts` (aggregate per config, perfect check), `endings.ts` (9 endings) | codex | 13 | vitest: one test per §5–§6 rule | queued (2477) |
+| 15 | The simulator `sim/`: scenario runner (recruit, leave, event, return, sleep), strategies, bounded reachability search for perfect towns per ending × config; smoke tests that print each ending's verdict and route | codex | 14 | vitest `src/alignment/sim` prints a verdict for all four perfect towns | queued (2478) |
+| 16 | Docs: this table's statuses, HANDOFF State/Next, BRIEF state line, glossary terms for the square | sonnet | 15 | HANDOFF under 4 KB with the four headings; glossary has the alignment terms | queued (2479) |
+| 17 | Check: every ALIGNMENT.md §1–§7 rule has a test named after it; the misses listed in `files/pirate-ship/ALIGNMENT_COVERAGE.md` | haiku | 16 | the coverage file exists and names each rule | queued (2480) |
+| **Gate** | Rex reads the simulator's routes and tunes the placeholders in `thresholds.json`; the balance keeper reruns the sims | | | | gate |
+
 ## Later phases (not planned yet)
 
 Selling fish and money, the gambling NPC, saves, the bigger boat and the first recruit (PIRATE.md §11 step 0).
