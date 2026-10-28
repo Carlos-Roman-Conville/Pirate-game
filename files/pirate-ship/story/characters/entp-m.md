@@ -84,7 +84,8 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | you are the one who keeps going back for him | Rex |
-| the INTJ apothecary (`intj-f`) | `rel.intj-f` | contempt, both ways: each believes the other is a hack. She thinks his work is overly crude; he thinks her occultism makes her a hack | Rex |
+| the INTJ apothecary (`intj-f`) | `rel.intj-f` | contempt, both ways: each believes the other is a hack. She thinks his work is overly crude; he thinks her occultism makes her a hack. Since 2026-10-28 they are not rivals in the town's economy (their stores don't compete); the rivalry stays, just not directly | Rex |
+| a new mechanical character (to come) | `rel.rival` | Rex will make a new mechanical character to compete with him (who is open) | Rex |
 | the INFP femboy (`infp-m`) | `rel.infp-m` | built the device the INFP uses to dip clients in hot wax | Rex (idea he likes) |
 | the town | `rel.town` | key to an improvement that leads to the perfect ending, if you let him go (see `../../town/UPGRADES.md`) | Rex |
 
@@ -172,3 +173,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Tie: the INFP uses a device he built for the waxing | Rex |
 | 2026-10-27 | Tie: mutual contempt with the INTJ (each thinks the other a hack); townspeople who use both lie to each | Rex |
 | 2026-10-27 | Why he joins: convinced through dialogue; he's tinkered for two years and isn't sure his weaponry is ready to be tested | Rex |
+| 2026-10-28 | No longer the INTJ's economic rival (stores don't compete; the contempt stays); Rex will make a new mechanical character to compete with him | Rex |

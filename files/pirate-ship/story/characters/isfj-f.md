@@ -68,6 +68,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | romanceable only after her infatuation with the ESTP ends (see the triangle below) | Rex |
+| the INTJ apothecary (`intj-f`) | `rel.intj-f` | business rivals: her clinic and the INTJ's apothecary compete for the town's healing | Rex |
 | the ESTP outdoorswoman (`estp-f`) | `rel.estp-f` | infatuated with her; sees her as someone who really needs help; finds her living situation and the state of her house abhorrent. They eventually reach a breaking point | Rex |
 
 ## Heart events
@@ -101,12 +102,48 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
 | Questline | Key | Reaction to what they witness you do there | Mark |
 |---|---|---|---|
-| Orderly good (church-like) | `quest.order_good` |  | open |
-| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` |  | open |
-| Orderly evil (Cthulhu corruption) | `quest.order_evil` |  | open |
-| Chaotic evil (killers, devil worship) | `quest.chaos_evil` |  | open |
+| Orderly good (church-like) | `quest.order_good` | no change: leans her toward orderly good | Rex |
+| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | moves her to chaotic evil | Rex |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` | moves her to chaotic good | Rex |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | moves her to orderly evil | Rex |
 
 - **(proposed, outside AI)** Paired developments: compassionate care vs cruelty as treatment.
+- **(Rex, 2026-10-28)** The church and the clinic are kept separate (not competitors). Rex may make a new character to compete with the church.
+
+### Inner rules: her alignment map (Rex, 2026-10-28)
+
+What the path you push her on does to her alignment (`../QUESTLINES.md`, model point 4). Rex's diagram:
+
+![The ISFJ's alignment map](diagrams/isfj-f-alignment.png)
+
+```
+              GOOD
+   +-----------------+-----------------+
+   |  ORDERLY GOOD   |  CHAOTIC GOOD   |
+   |   ( (OG) )      |       (CG)      |
+   |                 |    ^    |       |
+   +-----------------+---/-----+-------+
+   |                 |  /      v       |
+   |      (OE) <-----+------- (CE)     |
+   |  ORDERLY EVIL   |  CHAOTIC EVIL   |
+   +-----------------+-----------------+
+              EVIL
+   OG no change   CG->CE   OE->CG   CE->OE
+```
+
+| Pushed on (action quadrant) | She moves toward | Mark |
+|---|---|---|
+| Orderly good | orderly good (no change: just leans that way) | Rex |
+| Chaotic good | chaotic evil | Rex |
+| Orderly evil | chaotic good | Rex |
+| Chaotic evil | orderly evil | Rex |
+
+For the code (`inner_rules`, action → destination):
+`{ "order_good": "order_good", "chaos_good": "chaos_evil", "order_evil": "chaos_good", "chaos_evil": "order_evil" }`
+
+- **(Rex)** The dashed ring means no change: if you commit that action, it just leans her in that direction.
+- The other three form a loop: chaotic good → chaotic evil → orderly evil → chaotic good. Only orderly good holds her.
+- **(open)** Starting alignment: to figure out later. The diagram highlights chaotic evil (on the CE→OE arrow); Rex hasn't said whether that marks her start (on the ESTP's and ESFP's charts the highlight didn't).
 
 ## Change log
 
@@ -117,3 +154,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |
 | 2026-10-27 | Why she joins: only with the ESTP in your party. The odd triangle: wait out her infatuation with the ESTP; romanceable after their breaking point | Rex |
+| 2026-10-28 | Inner rules: her alignment map (OG no change, CG→CE, OE→CG, CE→OE); tie: her clinic competes with the INTJ's apothecary for the town's healing; the church and clinic kept separate | Rex |

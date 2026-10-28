@@ -50,7 +50,7 @@ suggestion (not canon); blank = open.
 | ENTP mechanic (`entp-m`) | **Rex: moves him to chaotic good** (*neutral*) | **Rex: moves him to orderly evil** (*possible support*) | **Rex: moves him to orderly good** (*neutral*) | **Rex: his natural alignment; chaotic evil acts only reinforce him (the loop)**; **Rex: guaranteed; on return he makes something that helps turn the town chaotic evil** (*supports*). **Open:** whether it stays guaranteed or now depends on what he witnesses you do there |
 | ISTP hunter (`istp-f`) | | *possible support* | | *possible support* |
 | INTJ apothecary (`intj-f`) | **Rex: moves her to orderly evil** (*possible support*) | **Rex: moves her to orderly evil** | **Rex: stays orderly evil (loop)** (*possible support*) | **Rex: moves her to orderly evil** (*opposes*). **Rex:** all paths lead here unless you show her that her belief is wrong; then she becomes neutral |
-| ISFJ doctor (`isfj-f`) | | | | |
+| ISFJ doctor (`isfj-f`) | **Rex: no change: leans her toward orderly good** | **Rex: moves her to chaotic evil** | **Rex: moves her to chaotic good** | **Rex: moves her to orderly evil** |
 | ESFP cook (`esfp-f`) | **Rex: moves her to chaotic good** | **Rex: moves her to chaotic evil** | **Rex: moves her to chaotic evil** | **Rex: no change: leans her toward chaotic evil** |
 | INTP farmer (`intp-m`) | **Rex: moves him to orderly evil** | **Rex: moves him to orderly good** | **Rex: no change: leans him toward orderly evil** | **Rex: moves him to orderly evil** |
 | ESTP veteran outdoorswoman (`estp-f`) | **Rex: moves her to chaotic good** | **Rex: stays chaotic good (loop)** | **Rex: moves her to chaotic evil** | **Rex: stays chaotic evil (loop)** |
@@ -92,3 +92,4 @@ suggestion (not canon); blank = open.
 | 2026-10-27 | On Rex's diagrams a dashed ring means no change: committing that action just leans the character that way | Rex |
 | 2026-10-27 | The ESFP's and INTP's maps replaced with Rex's corrected charts: ESFP (OG→CG, CG→CE, OE→CE, CE no change); INTP (OG→OE, CG→OG, OE no change, CE→OE) | Rex |
 | 2026-10-27 | The ESFJ's alignment map (OG→CE, CG→OE, OE→OG, CE→CG) | Rex |
+| 2026-10-28 | The ISFJ's alignment map (OG no change, CG→CE, OE→CG, CE→OE) | Rex |

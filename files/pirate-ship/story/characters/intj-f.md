@@ -63,7 +63,8 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 | With | Key | What it is | Mark |
 |---|---|---|---|
 | the player | `rel.player` | she sees you as part of her path toward her plans, and keeps the reason to herself | Rex |
-| the ENTP mechanic (`entp-m`) | `rel.entp-m` | contempt, both ways: each believes the other is a hack. He thinks her occultism makes her a hack; she thinks his work is overly crude | Rex |
+| the ENTP mechanic (`entp-m`) | `rel.entp-m` | contempt, both ways: each believes the other is a hack. He thinks her occultism makes her a hack; she thinks his work is overly crude. Since 2026-10-28 they are not rivals in the town's economy (their stores don't compete); the rivalry stays, just not directly | Rex |
+| the ISFJ doctor (`isfj-f`) | `rel.isfj-f` | business rivals: her apothecary and the ISFJ's clinic compete for the town's healing | Rex |
 | the INFP femboy (`infp-m`) | `rel.infp-m` | made the potions the INFP uses to keep the wax statues alive | Rex (idea he likes) |
 
 ## Heart events
@@ -176,3 +177,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Uses occultism in her craft; tie: mutual contempt with the ENTP (each thinks the other a hack); townspeople who use both lie to each | Rex |
 | 2026-10-27 | Why she joins: you're part of her path toward her plans; she offers without saying why | Rex |
 | 2026-10-27 | Joining dialogue: complex like the ENTP's, but every path leads to her joining; no wrong choice, only the perception of one | Rex |
+| 2026-10-28 | No longer the ENTP's economic rival (stores don't compete; the contempt stays); now competes with the ISFJ's clinic for the town's healing | Rex |
