@@ -45,6 +45,7 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | enfp-f | ENFP (Ne-Fi-Te-Si) | woman | (open) | turncoat / pilot and interpreter | | drafted | |
 
 - An ENFP (tentative) has an alignment map but no gender yet: [enfp.md](enfp.md) (moves to `enfp-m` or `enfp-f`); the ESTJ's rival for the town hall.
+- An ISFP (tentative) has an alignment map but no gender yet: [isfp.md](isfp.md) (moves to `isfp-m` or `isfp-f`); the INFP's rival for the brothel.
 
 **Romance (Rex, 2026-10-27):** each of the 12 recruitable characters is meant to be romanceable.
 

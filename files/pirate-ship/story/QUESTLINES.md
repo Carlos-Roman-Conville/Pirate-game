@@ -63,6 +63,8 @@ suggestion (not canon); blank = open.
 | ESTJ privateer pirate (`estj-f`) | **Rex: moves them to chaotic evil** | **Rex: moves them to orderly good** | **Rex: moves them to chaotic good** | **Rex: moves them to orderly evil** |
 | Evil ENTJ priest (`entj-m`) | **Rex: moves him to chaotic evil** | **Rex: moves him to orderly evil** | **Rex: leans him toward orderly evil (kept up, all the way)** | **Rex: leans him toward chaotic evil (kept up, all the way)** |
 | ENFP, tentative (`enfp.md`) | **Rex: moves them to chaotic good** | **Rex: moves them to orderly good** | **Rex: moves them to chaotic evil** | **Rex: moves them to orderly evil** |
+| INFP femboy (`infp-m`) | **Rex: moves her to chaotic good** | **Rex: moves her to orderly evil** | **Rex: leans her toward orderly evil (kept up, all the way)** | **Rex: moves her to orderly evil** |
+| ISFP, tentative (`isfp.md`) | **Rex: moves them to chaotic evil** | **Rex: moves them to orderly good** | **Rex: moves them to chaotic evil** | **Rex: leans them toward chaotic evil (kept up, all the way)** |
 
 ## Proposed (outside AI, 2026-10-27; not canon)
 
@@ -103,3 +105,4 @@ suggestion (not canon); blank = open.
 | 2026-10-28 | The ISTJ's alignment map (OG lean, CG lean, OE→CG, CE→OG); its CG and OE differ from his earlier cells, open for Rex | Rex |
 | 2026-10-28 | The evil ENTJ priest's alignment map (OG→CE, CG→OE, OE lean, CE lean) | Rex |
 | 2026-10-28 | The ENFP's alignment map (OG→CG, CG→OG, OE→CE, CE→OE; double-headed arrows, to confirm) | Rex |
+| 2026-10-28 | Alignment maps: the INFP (OG→CG, CG→OE, OE lean, CE→OE); the tentative ISFP (OG→CE, CG→OG, OE→CE, CE lean) | Rex |

@@ -61,7 +61,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | With | Key | What it is | Mark |
 |---|---|---|---|
-| a rival for the brothel (to come) | `rel.rival` | competes with her for control of the brothel; Rex is thinking an ISFP (tentative; gender open) | Rex (ISFP tentative) |
+| the ISFP (`isfp.md`, tentative) | `rel.rival` | competes with her for control of the brothel; Rex is thinking an ISFP (tentative; gender open) | Rex (ISFP tentative) |
 | the player | `rel.player` | a client: after about three paid visits she becomes enamoured with you | Rex (tentative) |
 | the ENTP mechanic (`entp-m`) | `rel.entp-m` | she uses a device he built to do the waxing | Rex (idea he likes) |
 | the INTJ apothecary (`intj-f`) | `rel.intj-f` | she uses potions the INTJ made to keep the wax statues alive | Rex (idea he likes) |
@@ -97,10 +97,46 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
 | Questline | Key | Reaction to what they witness you do there | Mark |
 |---|---|---|---|
-| Orderly good (church-like) | `quest.order_good` |  | open |
-| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` |  | open |
-| Orderly evil (Cthulhu corruption) | `quest.order_evil` |  | open |
-| Chaotic evil (killers, devil worship) | `quest.chaos_evil` |  | open |
+| Orderly good (church-like) | `quest.order_good` | moves her to chaotic good | Rex |
+| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | moves her to orderly evil | Rex |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` | leans her toward orderly evil; kept up, the lean carries her all the way into it | Rex |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | moves her to orderly evil | Rex |
+
+### Inner rules: her alignment map (Rex, 2026-10-28)
+
+What the path you push her on does to her alignment (`../QUESTLINES.md`, model point 4). Rex's diagram:
+
+(Rex's chart image isn't saved yet; the map below is from the balance keeper's reading of it.)
+
+```
+              GOOD
+   +-----------------+-----------------+
+   |  ORDERLY GOOD   |  CHAOTIC GOOD   |
+   |      (OG) ------+-----> (CG)      |
+   |                 |       /         |
+   +-----------------+------/----------+
+   |                 |     /           |
+   |  ( (OE) ) <-----+----/---- (CE)   |
+   |  ORDERLY EVIL   |  CHAOTIC EVIL   |
+   +-----------------+-----------------+
+              EVIL
+   OG->CG   CG->OE   OE lean   CE->OE
+```
+
+| Pushed on (action quadrant) | She moves toward | Mark |
+|---|---|---|
+| Orderly good | chaotic good | Rex |
+| Chaotic good | orderly evil | Rex |
+| Orderly evil | orderly evil (a lean: kept up, it carries her all the way there) | Rex |
+| Chaotic evil | orderly evil | Rex |
+
+For the code (`inner_rules`, action → destination):
+`{ "order_good": "chaos_good", "chaos_good": "order_evil", "order_evil": "order_evil", "chaos_evil": "order_evil" }`
+
+- **(Rex)** Dashed ring: committing that action leans her that way; kept up, the lean carries her all the way into that quadrant.
+- Every path ends in orderly evil: orderly good passes through chaotic good on the way.
+- **(open)** Starting alignment: to figure out later. The diagram highlights chaotic evil (on the CE→OE arrow); Rex hasn't said whether that marks her start.
+- **(open)** The chart image, for `diagrams/infp-m-alignment.png`.
 
 ## Change log
 
@@ -112,3 +148,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Why she joins (tentative): you pay for her services; after about three visits she's enamoured with you | Rex |
 | 2026-10-28 | Competes with someone (to come) for control of the brothel | Rex |
 | 2026-10-28 | Her brothel rival: Rex is thinking an ISFP (tentative) | Rex |
+| 2026-10-28 | Inner rules: her alignment map (OG→CG, CG→OE, OE lean, CE→OE); her brothel rival is the tentative ISFP (`isfp.md`) | Rex |
