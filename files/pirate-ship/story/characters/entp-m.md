@@ -46,7 +46,7 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | first time: you convince him through dialogue. He has been thinking about joining a crew but feels he's not ready to put his weaponry to the test; he's been tinkering for two years and isn't sure he's ready. You convince him, and that's why he joins. After that he constantly leaves your crew; you go back into town, find him and convince him to join again, again and again | Rex |
+| How recruited | `recruit` | first time: you convince him through dialogue (a complex dialogue tree; the INTJ's is the other). He has been thinking about joining a crew but feels he's not ready to put his weaponry to the test; he's been tinkering for two years and isn't sure he's ready. You convince him, and that's why he joins. After that he constantly leaves your crew; you go back into town, find him and convince him to join again, again and again | Rex |
 | What the town thinks of them | `town_view` | many townspeople use both him and the INTJ for various things; people who use both often have to lie to each: when he brings up an interaction he had with the INTJ, the villager just agrees and goes along with it (and the same with her) | Rex |
 
 ### His arc (Rex, 2026-10-26)

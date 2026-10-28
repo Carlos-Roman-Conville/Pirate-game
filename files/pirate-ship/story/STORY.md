@@ -209,4 +209,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The ESTJ joins after a sub quest: a series of games at the pub to prove your skill; seeing potential, she joins to fix your boat and crew | Rex |
 | 2026-10-27 | The ESFJ joins after you fund his rare-goods venture (a shop in town or a stall in the port); it fails, he can't repay you, so he joins and still sells you rare goods for a price | Rex |
 | 2026-10-27 | The INTJ offers to join, seeing you as part of her path toward her plans, without saying why; the ENTP must be convinced through dialogue: after two years of tinkering he isn't sure his weaponry is ready to be tested | Rex |
+| 2026-10-27 | The INTJ's joining dialogue tree is complex like the ENTP's, but every path leads to her joining: no wrong choice, only the perception of one | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

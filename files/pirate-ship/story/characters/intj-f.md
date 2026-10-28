@@ -53,7 +53,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | she offers to join, because she sees you as part of her path toward her plans. She doesn't tell you why she joins. (Her questline, below, is her arc; earlier this field read "her questline") | Rex |
+| How recruited | `recruit` | she offers to join, because she sees you as part of her path toward her plans. She doesn't tell you why she joins. Her joining dialogue tree is complex, like the ENTP's, but every path leads to her joining you: you cannot make a wrong choice, only perceive one. (Her questline, below, is her arc; earlier this field read "her questline") | Rex |
 | What the town thinks of them | `town_view` | many townspeople use both her and the ENTP for various things; people who use both often have to lie to each: when she brings up an interaction she had with the ENTP, the villager just agrees and goes along with it (and the same with him) | Rex |
 
 ## Relationships
@@ -175,3 +175,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Tie: her potions keep the INFP's wax statues alive | Rex |
 | 2026-10-27 | Uses occultism in her craft; tie: mutual contempt with the ENTP (each thinks the other a hack); townspeople who use both lie to each | Rex |
 | 2026-10-27 | Why she joins: you're part of her path toward her plans; she offers without saying why | Rex |
+| 2026-10-27 | Joining dialogue: complex like the ENTP's, but every path leads to her joining; no wrong choice, only the perception of one | Rex |
