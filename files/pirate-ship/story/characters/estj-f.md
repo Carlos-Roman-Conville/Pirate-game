@@ -54,7 +54,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | With | Key | What it is | Mark |
 |---|---|---|---|
-| a rival for the town hall (to come) | `rel.rival` | competes with her for control of the town hall; Rex is thinking an ENFP (tentative; gender open) | Rex (ENFP tentative) |
+| the ENFP (`enfp.md`, tentative) | `rel.rival` | competes with her for control of the town hall; Rex is thinking an ENFP (tentative; gender open) | Rex (ENFP tentative) |
 | the player | `rel.player` | tests you at the pub; sees some potential in you; joins to fix your boat and crew | Rex |
 
 ## Heart events

@@ -218,4 +218,5 @@ work lives in `../art/`, not here.
 | 2026-10-28 | New character: the INFJ mechanic (`infj-m`), a newcomer whose inventions outclass the ENTP's; he's milking the town for money and will leave soon for a big project in the next town over; stayed only out of nostalgia | Rex (via the balance keeper) |
 | 2026-10-28 | The INFP competes with someone (to come) for control of the brothel; the ESTJ competes with someone (to come) for control of the town hall | Rex (via the balance keeper) |
 | 2026-10-28 | Tentative rivals: an ENFP for the ESTJ (town hall) and an ISFP for the INFP (brothel); the ESFJ still counts for commerce after his shop fails, selling rare goods from the ship | Rex (via the balance keeper; rivals tentative) |
+| 2026-10-28 | The ENFP's alignment map (tentative rival to the ESTJ for the town hall): OG↔CG, OE↔CE, so order and chaos flip and good or evil holds; gender open (`enfp.md`) | Rex (via the balance keeper) |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

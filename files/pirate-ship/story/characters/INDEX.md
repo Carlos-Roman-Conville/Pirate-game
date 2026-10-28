@@ -44,6 +44,8 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | enfp-m | ENFP (Ne-Fi-Te-Si) | man | (open) | turncoat / pilot and interpreter | | drafted | |
 | enfp-f | ENFP (Ne-Fi-Te-Si) | woman | (open) | turncoat / pilot and interpreter | | drafted | |
 
+- An ENFP (tentative) has an alignment map but no gender yet: [enfp.md](enfp.md) (moves to `enfp-m` or `enfp-f`); the ESTJ's rival for the town hall.
+
 **Romance (Rex, 2026-10-27):** each of the 12 recruitable characters is meant to be romanceable.
 
 **Joining gates (Rex, 2026-10-27):** four or five recruits need higher reputation before they'll consider joining you,
