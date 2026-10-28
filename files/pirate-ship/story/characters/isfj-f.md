@@ -50,7 +50,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | recruitable (how is open) | Rex |
+| How recruited | `recruit` | recruitable; requires higher reputation before they'll consider joining you, and you must complete sub quests for them (which sub quests are open) | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -106,3 +106,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Created: the town's clinic doctor; secretly enjoys the pain healing causes | Rex |
 | 2026-10-27 | Questline responses section added | keeper |
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
+| 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |

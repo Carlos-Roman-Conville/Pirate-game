@@ -54,7 +54,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | a secret character; whether and how she joins is open | Rex (secret); rest open |
+| How recruited | `recruit` | a secret character; requires higher reputation before they'll consider joining you, and you must complete sub quests for them (which sub quests are open) | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -151,3 +151,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Confirmed: she goes into the forest | Rex |
 | 2026-10-27 | Inner rules: her alignment map (OG→CG, CG stays, OE→CE, CE stays) | Rex |
 | 2026-10-27 | The diagram's highlight isn't her starting alignment; starting alignment left for later | Rex |
+| 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |

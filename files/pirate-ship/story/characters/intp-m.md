@@ -50,7 +50,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | | open |
+| How recruited | `recruit` | requires higher reputation before they'll consider joining you, and you must complete sub quests for them (which sub quests are open) | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -109,3 +109,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | Bodies as fertiliser, kills passers-by for it; ex-spouse of the ESFP cook (supersedes the dead spouse); parent of the daughter and son; gender to confirm | Rex |
 | 2026-10-27 | Gender confirmed: man; file moved from `intp-f.md` to `intp-m.md` | Rex |
+| 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |

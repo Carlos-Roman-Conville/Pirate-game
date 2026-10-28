@@ -198,4 +198,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The ESFJ is a failed merchant, his look based on MrBeast (`esfj-m`); the ESTJ is an old privateer who lost his crew at sea (`estj-m`) | Rex |
 | 2026-10-27 | The ESTJ is a woman: an old privateer pirate, a pirate lady in her 40s, once part of a powerful crew, who lost everyone (`estj-f`) | Rex |
 | 2026-10-27 | The ESTP's alignment map: OG→CG, CG stays, OE→CE, CE stays | Rex |
+| 2026-10-27 | Joining: four or five recruits need higher reputation before they'll consider joining, plus sub quests for them: the INTP, ESTP, ESFP and ISFJ (a fifth, if any, is open) | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

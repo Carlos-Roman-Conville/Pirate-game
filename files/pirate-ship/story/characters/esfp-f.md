@@ -45,7 +45,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | | open |
+| How recruited | `recruit` | requires higher reputation before they'll consider joining you, and you must complete sub quests for them (which sub quests are open) | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -106,3 +106,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Questline cells reread as reactions to what they witness (was: taking them on a questline → effect) | Rex |
 | 2026-10-27 | Not a baker but a general cook with a butcher shop; ex-spouse of the INTP farmer; parent of the son who collects skins; gender to confirm | Rex |
 | 2026-10-27 | Gender confirmed: woman; file moved from `esfp-m.md` to `esfp-f.md` | Rex |
+| 2026-10-27 | Joining: requires higher reputation, plus sub quests for them | Rex |

@@ -44,6 +44,10 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | enfp-m | ENFP (Ne-Fi-Te-Si) | man | (open) | turncoat / pilot and interpreter | | drafted | |
 | enfp-f | ENFP (Ne-Fi-Te-Si) | woman | (open) | turncoat / pilot and interpreter | | drafted | |
 
+**Joining gates (Rex, 2026-10-27):** four or five recruits need higher reputation before they'll consider joining you,
+and you must also complete sub quests for them: the INTP farmer, ESTP outdoorswoman, ESFP cook and ISFJ doctor.
+Whether there's a fifth, and who, is open. Each character's own reason for joining goes in their `recruit` field.
+
 "Drafted" here means drafted in ROSTER.md, not by Rex; each moves to a file and its own status as Rex writes it.
 
 ## Non-recruitable characters (kept separate)
