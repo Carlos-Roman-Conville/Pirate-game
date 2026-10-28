@@ -81,7 +81,7 @@ balance keeper's: [`../balance/BALANCE.md`](../balance/BALANCE.md).
 | `sec.food` (butcher shop vs farm) | `port.bakery`, `esfp-f` | `port.farm`, `intp-m` | Rex |
 | `sec.hunt` (hunting / gathering) | open (no place yet), `estp-f` | open (no place yet), `istp-f` | Rex (the pair); places open |
 | `sec.invent` (inventions) | `port.shipyard`, `entp-m` | a new mechanical character Rex will make | Rex (2026-10-28); the competitor open |
-| `sec.church` | `port.church`, `istj-m` | maybe a new competitor Rex may make | Rex (the church stands alone, 2026-10-28); a competitor open |
+| `sec.church` | `port.church`, `istj-m` | `port.church`, the evil ENTJ priest (slug: the story keeper's, not yet filed) | Rex (2026-10-28) |
 | `sec.commerce` | `port.warehouse`, `enfj-m` | `port.esfj_shop`, `esfj-m` | proposed (outside AI) |
 | `sec.society` | the ESTJ privateer, `estj-f` | the INFP courtesan, `infp-m` | proposed (outside AI; it flagged this one as weak) |
 
@@ -93,10 +93,9 @@ Retired id: `sec.faith` (church vs clinic, 2026-10-27), split on 2026-10-28; nev
   slots, resources); track sector completion, institution development and town alignment separately.
 - **(open)** What "succeed" means for a sector, as a slot state.
 - **(open)** Whether the food rule's "the other drifts toward ghosthood" applies to every pair (balance keeper's P1).
-- **(open)** The church's quadrant forms. With the church on its own, its only character (the priest) can't be
-  corrupted, so a church that follows its priest has no `oe` or `ce` form; one option is for the church's form to
-  follow the town (the proposed eldritch temple / desecrated ruin, Quadrant states above). The balance keeper's
-  finding; Rex's call.
+- **(Rex, 2026-10-28)** The evil ENTJ priest competes with the ISTJ priest for the church. Per the balance keeper,
+  the ENTJ's alignment chart reaches `oe` and `ce` and the ISTJ's `og` and `cg`, so the church sector can take all
+  four quadrants. (This answers the earlier open question about the church's evil forms.)
 
 ### Slots
 
@@ -239,3 +238,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-27 | Reserved `port.esfj_shop` (temporary): `base` → `open` on `fund(esfj-m)` → `failed`, then he joins; choice word `fund(<slug>)` (proposed) | keeper; rule Rex |
 | 2026-10-27 | Sectors table: `sec.faith`, `sec.food`, `sec.hunt`, `sec.invent` (Rex); two open; outside AI's commerce and society pairs as proposed | keeper; pairs Rex |
 | 2026-10-28 | Sectors changed: `sec.faith` retired; `sec.heal` (clinic vs apothecary); `sec.invent` is the ENTP vs a new mechanic; `sec.church` alone for now; commerce and society still proposed (via the balance keeper) | Rex |
+| 2026-10-28 | `sec.church`: the evil ENTJ priest competes with the ISTJ priest (via the balance keeper) | Rex |
