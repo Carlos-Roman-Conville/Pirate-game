@@ -73,7 +73,7 @@ Open: whether slot states now follow the quadrant, single choices (`port.entp`),
 
 Some parts of town are equivalent and compete. **Two options each, two characters per facility; only one of each
 pair needs to succeed; each has two potential outcomes** (Rex, 2026-10-27). Rex first said six facilities; there
-are now eight (seven of Rex's plus the proposed commerce pair), and whether he still wants six is open. Balance analysis is the
+are now eight, all Rex's (2026-10-28), and whether he still wants six is open. Balance analysis is the
 balance keeper's: [`../balance/BALANCE.md`](../balance/BALANCE.md).
 
 | Sector | Option A (slot, character) | Option B (slot, character) | Mark |
@@ -83,7 +83,7 @@ balance keeper's: [`../balance/BALANCE.md`](../balance/BALANCE.md).
 | `sec.hunt` (hunting / gathering) | open (no place yet), `estp-f` | open (no place yet), `istp-f` | Rex (the pair); places open |
 | `sec.invent` (inventions) | `port.shipyard`, `entp-m` | the INFJ mechanic (slug: the story keeper's, not yet filed; where he works: open) | Rex (2026-10-28) |
 | `sec.church` | `port.church`, `istj-m` | `port.church`, the evil ENTJ priest, [`entj-m`](../story/characters/entj-m.md) | Rex (2026-10-28) |
-| `sec.commerce` | `port.warehouse`, `enfj-m` | `port.esfj_shop`, `esfj-m` | proposed (outside AI) |
+| `sec.commerce` | `port.warehouse`, `enfj-m` | `port.esfj_shop`, `esfj-m` | Rex (2026-10-28: "Keep commerce as ENFJ warehouse heir vs ESFJ merchant"; first proposed by the outside AI) |
 | `sec.brothel` (control of the brothel) | `port.tavern`, `infp-m` | a competitor not made yet | Rex (2026-10-28) |
 | `sec.townhall` (control of the town hall) | `port.townhall`, `estj-f` | a competitor not made yet | Rex (2026-10-28) |
 
@@ -106,6 +106,8 @@ for control of the town hall."
 - **(proposed, outside AI)** Both institutions in a sector can succeed with extra work (they compete for time,
   slots, resources); track sector completion, institution development and town alignment separately.
 - **(open)** What "succeed" means for a sector, as a slot state.
+- **(open)** `port.esfj_shop` always ends `failed`. Whether the merchant's side of commerce can still succeed without
+  the shop (for example, he keeps selling rare goods from your ship) is open (balance keeper's note).
 - **(open)** Whether the food rule's "the other drifts toward ghosthood" applies to every pair (balance keeper's P1).
 - **(Rex, 2026-10-28)** The evil ENTJ priest competes with the ISTJ priest for the church. Per the balance keeper,
   the ENTJ's alignment chart reaches `oe` and `ce` and the ISTJ's `og` and `cg`, so the church sector can take all
@@ -257,3 +259,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-28 | `sec.invent`: the INFJ mechanic (a visitor) competes with the ENTP; his departure is `event.infj_leaves`; ENTJ linked to `entj-m` (via the balance keeper) | Rex |
 | 2026-10-28 | `port.cash` (the town's money) added; `event.infj_leaves` tied to it (via the story keeper) | keeper; Rex |
 | 2026-10-28 | `sec.brothel` (INFP vs a competitor to come) and `sec.townhall` (ESTJ vs a competitor to come) replace the proposed `sec.society`; reserved `port.townhall` (via the balance keeper) | Rex |
+| 2026-10-28 | `sec.commerce` confirmed (ENFJ warehouse heir vs ESFJ merchant); all eight sectors Rex's (via the balance keeper) | Rex |

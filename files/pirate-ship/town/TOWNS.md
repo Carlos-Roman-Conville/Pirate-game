@@ -40,7 +40,7 @@ town, its name changes here but its id does not.
 - **(Rex, 2026-10-27)** Crew rotation is a progressive storyline: crew storylines develop or end, and you logically
   fill the empty spot (not always forced).
 - **(Rex, 2026-10-27; pairs changed 2026-10-28)** Some parts of town are equivalent and compete: **facilities
-  (sectors), two options each, two characters per facility** (Rex first said six; eight now, counting the proposed commerce pair); only one of each pair needs to succeed; each has two potential outcomes
+  (sectors), two options each, two characters per facility** (Rex first said six; eight now, all his); only one of each pair needs to succeed; each has two potential outcomes
   (`UPGRADES.md`, Sectors). Balance side: [`../balance/BALANCE.md`](../balance/BALANCE.md) (the balance keeper's).
 
 ## Towns
@@ -200,3 +200,4 @@ they are in town.
 | 2026-10-28 | New visitor: the INFJ mechanic, the ENTP's competitor, about to leave for the next town (via the balance keeper) | Rex |
 | 2026-10-28 | "The next town over" exists (someone there invited the INFJ mechanic to a big project); INFJ linked to `infj-m` (via the story keeper) | Rex |
 | 2026-10-28 | New place: the town hall (`port.townhall`); sectors for control of the brothel (INFP vs ?) and the town hall (ESTJ vs ?), competitors not made yet (via the balance keeper) | Rex |
+| 2026-10-28 | Commerce sector confirmed: ENFJ warehouse heir vs ESFJ merchant (via the balance keeper) | Rex |
