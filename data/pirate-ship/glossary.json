@@ -267,6 +267,20 @@
    "code": "responseChart",
    "kind": "phrase",
    "note": "The per-character table of how a witness reacts to each event category."
+  },
+  {
+   "source": "ALIGNMENT.md §7",
+   "en": "joining gate",
+   "code": "joiningGate",
+   "kind": "phrase",
+   "note": "A gates.json rule: recruit refuses a story-gated character until unlocked, or until every slug listed in aboard is aboard."
+  },
+  {
+   "source": "ALIGNMENT.md §7",
+   "en": "unlocked",
+   "code": "unlocked",
+   "kind": "phrase",
+   "note": "CharacterState.unlocked: true at start unless the character has story: true in gates.json; the unlock command sets it when the story grants recruit permission."
   }
  ],
  "lore": [
