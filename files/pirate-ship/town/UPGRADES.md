@@ -68,28 +68,35 @@ Open: whether slot states now follow the quadrant, single choices (`port.entp`),
 
 ## `port`: the starting port
 
-### Sectors (Rex, 2026-10-27)
+### Sectors (Rex, 2026-10-27; pairs changed 2026-10-28)
 
-Some parts of town are equivalent and compete. **Six facilities, two options each, two characters per facility;
-only one of each pair needs to succeed; each has two potential outcomes.** Balance analysis is the balance keeper's:
-[`../balance/BALANCE.md`](../balance/BALANCE.md) (its P1–P6 touch the slots below).
+Some parts of town are equivalent and compete. **Two options each, two characters per facility; only one of each
+pair needs to succeed; each has two potential outcomes** (Rex, 2026-10-27). Rex first said six facilities; there
+are now seven sectors counting the proposed ones, and whether he still wants six is open. Balance analysis is the
+balance keeper's: [`../balance/BALANCE.md`](../balance/BALANCE.md).
 
 | Sector | Option A (slot, character) | Option B (slot, character) | Mark |
 |---|---|---|---|
-| `sec.faith` (church vs clinic) | `port.church`, `istj-m` | `port.clinic`, `isfj-f` | Rex (the pair); sector id the keeper's |
+| `sec.heal` (the town's healing) | `port.clinic`, `isfj-f` | `port.apothecary`, `intj-f` | Rex (2026-10-28) |
 | `sec.food` (butcher shop vs farm) | `port.bakery`, `esfp-f` | `port.farm`, `intp-m` | Rex |
 | `sec.hunt` (hunting / gathering) | open (no place yet), `estp-f` | open (no place yet), `istp-f` | Rex (the pair); places open |
-| `sec.invent` (inventions) | `port.shipyard`, `entp-m` | `port.apothecary`, `intj-f` | Rex (the pair); slots read from where each lives |
-| (fifth) | | | open |
-| (sixth) | | | open |
+| `sec.invent` (inventions) | `port.shipyard`, `entp-m` | a new mechanical character Rex will make | Rex (2026-10-28); the competitor open |
+| `sec.church` | `port.church`, `istj-m` | maybe a new competitor Rex may make | Rex (the church stands alone, 2026-10-28); a competitor open |
+| `sec.commerce` | `port.warehouse`, `enfj-m` | `port.esfj_shop`, `esfj-m` | proposed (outside AI) |
+| `sec.society` | the ESTJ privateer, `estj-f` | the INFP courtesan, `infp-m` | proposed (outside AI; it flagged this one as weak) |
 
-- **(proposed, outside AI)** Commerce: `port.warehouse` (`enfj-m`) vs `port.esfj_shop` (`esfj-m`).
-- **(proposed, outside AI; it flagged this one as weak)** Society/power: the ESTJ privateer (`estj-f`) vs the INFP
-  courtesan (`infp-m`).
+Retired id: `sec.faith` (church vs clinic, 2026-10-27), split on 2026-10-28; never reused.
+
+- **(Rex, 2026-10-28)** The ENTP and the INTJ no longer compete: their stores don't compete economically. They still
+  dislike each other, an indirect rivalry (character side: the story keeper's).
 - **(proposed, outside AI)** Both institutions in a sector can succeed with extra work (they compete for time,
   slots, resources); track sector completion, institution development and town alignment separately.
 - **(open)** What "succeed" means for a sector, as a slot state.
 - **(open)** Whether the food rule's "the other drifts toward ghosthood" applies to every pair (balance keeper's P1).
+- **(open)** The church's quadrant forms. With the church on its own, its only character (the priest) can't be
+  corrupted, so a church that follows its priest has no `oe` or `ce` form; one option is for the church's form to
+  follow the town (the proposed eldritch temple / desecrated ruin, Quadrant states above). The balance keeper's
+  finding; Rex's call.
 
 ### Slots
 
@@ -231,3 +238,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-27 | Confirmed: recruit neither the farmer nor the cook and both places go to ghosts | Rex |
 | 2026-10-27 | Reserved `port.esfj_shop` (temporary): `base` → `open` on `fund(esfj-m)` → `failed`, then he joins; choice word `fund(<slug>)` (proposed) | keeper; rule Rex |
 | 2026-10-27 | Sectors table: `sec.faith`, `sec.food`, `sec.hunt`, `sec.invent` (Rex); two open; outside AI's commerce and society pairs as proposed | keeper; pairs Rex |
+| 2026-10-28 | Sectors changed: `sec.faith` retired; `sec.heal` (clinic vs apothecary); `sec.invent` is the ENTP vs a new mechanic; `sec.church` alone for now; commerce and society still proposed (via the balance keeper) | Rex |

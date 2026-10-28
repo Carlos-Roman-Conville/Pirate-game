@@ -110,7 +110,7 @@ appear in the DLC as specific characters; they also might not.
 3. ~~Ghost ending vs plain abandonment for neutral.~~ Answered 2026-10-27: a ghost town (Rex).
 4. Which 3 residents sit in each quadrant (`TOWNS.md`, Alignment).
 5. The neutral radius, and how far each choice, quest answer and resident moves the town.
-6. How a "fully developed town" (Rex, 2026-10-27: reachable with a 3-member crew, one success per sector pair,
+6. How a "fully developed town" (Rex, 2026-10-27: reachable with a 3-member crew, one success per sector,
    `UPGRADES.md` Sectors) relates to the quadrant endings and `end.perfect`.
 
 ## Endings

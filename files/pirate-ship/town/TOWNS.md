@@ -39,8 +39,8 @@ town, its name changes here but its id does not.
   and every option should be achievable.
 - **(Rex, 2026-10-27)** Crew rotation is a progressive storyline: crew storylines develop or end, and you logically
   fill the empty spot (not always forced).
-- **(Rex, 2026-10-27)** Some parts of town are equivalent and compete: **six facilities (sectors), two options each,
-  two characters per facility**; only one of each pair needs to succeed; each has two potential outcomes
+- **(Rex, 2026-10-27; pairs changed 2026-10-28)** Some parts of town are equivalent and compete: **facilities
+  (sectors), two options each, two characters per facility** (Rex first said six; seven now, counting proposed); only one of each pair needs to succeed; each has two potential outcomes
   (`UPGRADES.md`, Sectors). Balance side: [`../balance/BALANCE.md`](../balance/BALANCE.md) (the balance keeper's).
 
 ## Towns
@@ -191,3 +191,4 @@ they are in town.
 | 2026-10-27 | Food source (tentative): the farm and the cook's shop go to ghosts unless their owner is recruited; recruited, the business improves from bodies you supply, run by their child; both recruited → a secret duel (`UPGRADES.md`) | Rex |
 | 2026-10-27 | Temporary place `port.esfj_shop`: fund the ESFJ and he opens a rare-goods shop in town or a stall in the port (which: open); it fails, then he joins your crew (via the story keeper) | Rex |
 | 2026-10-27 | Six competing sectors, two options each, only one per pair needs to succeed; a 3-member crew can reach a fully developed town; crew rotation is a progressive storyline (via the balance keeper) | Rex |
+| 2026-10-28 | Sector pairs changed: church and clinic separate; clinic vs apothecary for healing; ENTP vs a new mechanical character (to come); a church competitor may come (via the balance keeper) | Rex |
