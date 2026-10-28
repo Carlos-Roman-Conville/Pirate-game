@@ -87,13 +87,52 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
 | Questline | Key | Reaction to what they witness you do there | Mark |
 |---|---|---|---|
-| Orderly good (church-like) | `quest.order_good` |  | open |
-| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` |  | open |
-| Orderly evil (Cthulhu corruption) | `quest.order_evil` |  | open |
-| Chaotic evil (killers, devil worship) | `quest.chaos_evil` |  | open |
+| Orderly good (church-like) | `quest.order_good` | moves him to chaotic evil | Rex |
+| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | moves him to orderly evil | Rex |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` | moves him to orderly good | Rex |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | moves him to chaotic good | Rex |
+
+### Inner rules: his alignment map (Rex, 2026-10-27)
+
+What the path you push him on does to his alignment (`../QUESTLINES.md`, model point 4). Rex's diagram:
+
+![The ESFJ's alignment map](diagrams/esfj-m-alignment.png)
+
+```
+              GOOD
+   +-----------------+-----------------+
+   |  ORDERLY GOOD   |  CHAOTIC GOOD   |
+   |      (OG)       |      (CG)       |
+   |       ^   \     |    /  ^         |
+   +-------+----\----+---/---+---------+
+   |       |     \   |  /    |         |
+   |       |      \  | /     |         |
+   |       |       X-+X      |         |
+   |      (OE) <----/ \--> (CE)        |
+   |  ORDERLY EVIL   |  CHAOTIC EVIL   |
+   +-----------------+-----------------+
+              EVIL
+   OG->CE   CG->OE   OE->OG   CE->CG
+```
+
+| Pushed on (action quadrant) | He moves toward | Mark |
+|---|---|---|
+| Orderly good | chaotic evil | Rex |
+| Chaotic good | orderly evil | Rex |
+| Orderly evil | orderly good | Rex |
+| Chaotic evil | chaotic good | Rex |
+
+For the code (`inner_rules`, action → destination):
+`{ "order_good": "chaos_evil", "chaos_good": "order_evil", "order_evil": "order_good", "chaos_evil": "chaos_good" }`
+
+- No quadrant holds him: every action moves him somewhere else. The good quadrants send him diagonally to the
+  opposite corner; the evil ones send him straight up to the good side of the same column.
+- The dotted ring on chaotic good in the diagram marks the destination of the selected arrow, not "no change".
+- **(open)** Starting alignment: none yet (Rex, 2026-10-27).
 
 ## Change log
 
 | Date | Change | By |
 |---|---|---|
 | 2026-10-27 | Created: a failed merchant, his look based on MrBeast | Rex |
+| 2026-10-27 | Inner rules: his alignment map (OG→CE, CG→OE, OE→OG, CE→CG); no starting point yet | Rex |
