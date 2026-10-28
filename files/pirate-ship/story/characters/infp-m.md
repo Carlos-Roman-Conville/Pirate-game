@@ -52,7 +52,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | hire / mercenary / kidnap; what they need first (rep, proof, gift, questline) | open |
+| How recruited | `recruit` | (Rex, tentative: "could be") you pay for her services, and after about three visits she becomes enamoured with you and joins | Rex (tentative) |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -61,7 +61,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | With | Key | What it is | Mark |
 |---|---|---|---|
-| the player | `rel.player` | | open |
+| the player | `rel.player` | a client: after about three paid visits she becomes enamoured with you | Rex (tentative) |
 | the ENTP mechanic (`entp-m`) | `rel.entp-m` | she uses a device he built to do the waxing | Rex (idea he likes) |
 | the INTJ apothecary (`intj-f`) | `rel.intj-f` | she uses potions the INTJ made to keep the wax statues alive | Rex (idea he likes) |
 
@@ -108,3 +108,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | Created: the INFP is a femboy | Rex |
 | 2026-10-27 | Backstory: a popular brothel worker who falls for clients and, when they try to leave, turns them into living wax statues kept in her basement; uses the ENTP's device and the INTJ's potions | Rex |
 | 2026-10-27 | Pronouns: doesn't care, either he or she | Rex |
+| 2026-10-27 | Why she joins (tentative): you pay for her services; after about three visits she's enamoured with you | Rex |
