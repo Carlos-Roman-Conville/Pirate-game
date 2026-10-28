@@ -6,6 +6,8 @@ Run: python reach.py
 A character "can reach" a quadrant if some witnessed action moves them there, if a
 'stay' cell holds them at a known start there, or if they start there.
   yes    = follows from Rex's decided maps/starts
+  lean   = only through a dashed ring (no change; the action leans them toward
+           that quadrant): reachable if leaning is enough to arrive (open)
   map?   = only possible through a map cell that is still open (or a map not made)
   start? = the map is complete and never lands there; only an open starting
            alignment there (kept by never pushing them) would reach it
@@ -24,6 +26,7 @@ def reach(char, quads):
     m, start, never = char["map"], char["start"], set(char["never"])
     map_open = any(v is None for v in m.values())
     yes = {v for v in m.values() if v in quads}
+    lean = {k for k, v in m.items() if v == "lean"}
     if start in quads:
         yes.add(start)
     out = {}
@@ -32,6 +35,8 @@ def reach(char, quads):
             out[q] = "no"
         elif q in yes:
             out[q] = "yes"
+        elif q in lean:
+            out[q] = "lean"
         else:
             out[q] = "map?" if map_open else ("start?" if start is None else "no")
     return out
@@ -57,7 +62,7 @@ def main():
         cells = []
         for q in quads:
             who_yes = [c for c in s["pair"] if r[c][q] == "yes"]
-            who_maybe = [c for c in s["pair"] if r[c][q] in ("map?", "start?")]
+            who_maybe = [c for c in s["pair"] if r[c][q] in ("lean", "map?", "start?")]
             tag = lambda cs: ", ".join(f"{c} ({r[c][q]})" for c in cs)
             if who_yes:
                 v, cell = "yes", "yes: " + ", ".join(who_yes) + (" (+ " + tag(who_maybe) + ")" if who_maybe else "")
@@ -74,7 +79,7 @@ def main():
               "|---|---|---|---|---|---|---|---|"]
     for q in quads:
         ys = [c for c in chars if r[c][q] == "yes"]
-        ms = [f"{c} ({r[c][q]})" for c in chars if r[c][q] in ("map?", "start?")]
+        ms = [f"{c} ({r[c][q]})" for c in chars if r[c][q] in ("lean", "map?", "start?")]
         covered = [s["name"] for s in data["sectors"] if cover[(s["id"], q)][0] == "yes"]
         only_open = [s["name"] for s in data["sectors"] if cover[(s["id"], q)][0] == "maybe"]
         starved = [s["name"] for s in data["sectors"] if cover[(s["id"], q)][0] == "no"]

@@ -1,26 +1,209 @@
 {
-  "_about": "Balance keeper's data file. Copied from the story keeper's files (story/characters/*.md, story/QUESTLINES.md); those are the source, this is a copy for reach.py. Map = action quadrant -> where the witnessing character moves. Values: og/cg/oe/ce, 'stay' (no change), or null (open, not made). 'start' = starting alignment (null = open). 'never' = quadrants Rex has ruled out for them. 'mark' says whose each item is.",
-  "quadrants": ["og", "cg", "oe", "ce"],
+  "_about": "Balance keeper's data file. Copied from the story keeper's files (story/characters/*.md, story/QUESTLINES.md); those are the source, this is a copy for reach.py. Map = action quadrant -> where the witnessing character moves. Values: og/cg/oe/ce, 'stay' (no change), 'lean' (Rex's dashed ring: no change, leans them toward that cell's own quadrant), or null (open, not made). 'start' = starting alignment (null = open). 'never' = quadrants Rex has ruled out for them. 'mark' says whose each item is.",
+  "quadrants": [
+    "og",
+    "cg",
+    "oe",
+    "ce"
+  ],
   "characters": {
-    "entp-m": {"map": {"og": "cg", "cg": "oe", "oe": "og", "ce": "ce"}, "start": "ce", "never": [], "mark": "Rex (map, natural alignment chaotic evil)"},
-    "intj-f": {"map": {"og": "oe", "cg": "oe", "oe": "oe", "ce": "oe"}, "start": "oe", "never": [], "mark": "Rex (map, start); also neutral if shown her belief is wrong"},
-    "intp-m": {"map": {"og": "oe", "cg": "og", "oe": "stay", "ce": "oe"}, "start": null, "never": [], "mark": "Rex (corrected chart); start open"},
-    "esfp-f": {"map": {"og": "cg", "cg": "ce", "oe": "ce", "ce": "stay"}, "start": null, "never": [], "mark": "Rex (corrected chart); start open"},
-    "estp-f": {"map": {"og": "cg", "cg": "cg", "oe": "ce", "ce": "ce"}, "start": null, "never": [], "mark": "Rex; start open"},
-    "esfj-m": {"map": {"og": "ce", "cg": "oe", "oe": "og", "ce": "cg"}, "start": null, "never": [], "mark": "Rex; start open"},
-    "enfj-m": {"map": {"og": "og", "cg": "og", "oe": "oe", "ce": "oe"}, "start": null, "never": [], "mark": "Rex; start open"},
-    "estj-f": {"map": {"og": "ce", "cg": "og", "oe": "cg", "ce": "oe"}, "start": null, "never": [], "mark": "Rex; start open"},
-    "istj-m": {"map": {"og": null, "cg": "stay", "oe": "stay", "ce": "stay"}, "start": null, "never": ["oe", "ce"], "mark": "Rex: CG and OE no effect; CE he can't be corrupted (fights evil, moves the town toward good). OG cell open (outside AI proposed: supports). Start open"},
-    "isfj-f": {"map": {"og": null, "cg": null, "oe": null, "ce": null}, "start": null, "never": [], "mark": "open: map not made"},
-    "istp-f": {"map": {"og": null, "cg": null, "oe": null, "ce": null}, "start": null, "never": [], "mark": "open: map not made"},
-    "infp-m": {"map": {"og": null, "cg": null, "oe": null, "ce": null}, "start": null, "never": [], "mark": "open: map not made"}
+    "entp-m": {
+      "map": {
+        "og": "cg",
+        "cg": "oe",
+        "oe": "og",
+        "ce": "ce"
+      },
+      "start": "ce",
+      "never": [],
+      "mark": "Rex (map, natural alignment chaotic evil)"
+    },
+    "intj-f": {
+      "map": {
+        "og": "oe",
+        "cg": "oe",
+        "oe": "oe",
+        "ce": "oe"
+      },
+      "start": "oe",
+      "never": [],
+      "mark": "Rex (map, start); also neutral if shown her belief is wrong"
+    },
+    "intp-m": {
+      "map": {
+        "og": "oe",
+        "cg": "og",
+        "oe": "lean",
+        "ce": "oe"
+      },
+      "start": null,
+      "never": [],
+      "mark": "Rex (corrected chart); start open"
+    },
+    "esfp-f": {
+      "map": {
+        "og": "cg",
+        "cg": "ce",
+        "oe": "ce",
+        "ce": "lean"
+      },
+      "start": null,
+      "never": [],
+      "mark": "Rex (corrected chart); start open"
+    },
+    "estp-f": {
+      "map": {
+        "og": "cg",
+        "cg": "cg",
+        "oe": "ce",
+        "ce": "ce"
+      },
+      "start": null,
+      "never": [],
+      "mark": "Rex; start open"
+    },
+    "esfj-m": {
+      "map": {
+        "og": "ce",
+        "cg": "oe",
+        "oe": "og",
+        "ce": "cg"
+      },
+      "start": null,
+      "never": [],
+      "mark": "Rex; start open"
+    },
+    "enfj-m": {
+      "map": {
+        "og": "og",
+        "cg": "og",
+        "oe": "oe",
+        "ce": "oe"
+      },
+      "start": null,
+      "never": [],
+      "mark": "Rex; start open"
+    },
+    "estj-f": {
+      "map": {
+        "og": "ce",
+        "cg": "og",
+        "oe": "cg",
+        "ce": "oe"
+      },
+      "start": null,
+      "never": [],
+      "mark": "Rex; start open"
+    },
+    "istj-m": {
+      "map": {
+        "og": null,
+        "cg": "stay",
+        "oe": "stay",
+        "ce": "stay"
+      },
+      "start": null,
+      "never": [
+        "oe",
+        "ce"
+      ],
+      "mark": "Rex: CG and OE no effect; CE he can't be corrupted (fights evil, moves the town toward good). OG cell open (outside AI proposed: supports). Start open"
+    },
+    "isfj-f": {
+      "map": {
+        "og": "lean",
+        "cg": "ce",
+        "oe": "cg",
+        "ce": "oe"
+      },
+      "start": null,
+      "never": [],
+      "mark": "Rex (chart 2026-10-28): OG dashed ring = no change, leans her OG; CG->CE, OE->CG, CE->OE. The highlighted CE square: whether it is her start is open"
+    },
+    "istp-f": {
+      "map": {
+        "og": null,
+        "cg": null,
+        "oe": null,
+        "ce": null
+      },
+      "start": null,
+      "never": [],
+      "mark": "open: map not made"
+    },
+    "infp-m": {
+      "map": {
+        "og": null,
+        "cg": null,
+        "oe": null,
+        "ce": null
+      },
+      "start": null,
+      "never": [],
+      "mark": "open: map not made"
+    }
   },
   "sectors": [
-    {"id": "faith_health", "name": "church vs clinic", "pair": ["istj-m", "isfj-f"], "mark": "Rex"},
-    {"id": "food", "name": "farm vs butcher shop", "pair": ["intp-m", "esfp-f"], "mark": "Rex"},
-    {"id": "hunting", "name": "hunting / gathering", "pair": ["estp-f", "istp-f"], "mark": "Rex"},
-    {"id": "inventions", "name": "inventions", "pair": ["entp-m", "intj-f"], "mark": "Rex"},
-    {"id": "commerce", "name": "commerce (warehouse vs merchant)", "pair": ["enfj-m", "esfj-m"], "mark": "proposed (outside AI)"},
-    {"id": "society", "name": "society / power (privateer vs courtesan)", "pair": ["estj-f", "infp-m"], "mark": "proposed (outside AI; flagged weak by it)"}
+    {
+      "id": "church",
+      "name": "church (no competitor yet)",
+      "pair": [
+        "istj-m"
+      ],
+      "mark": "Rex (2026-10-28: kept separate from the clinic; a competitor may come)"
+    },
+    {
+      "id": "healing",
+      "name": "healing: clinic vs apothecary",
+      "pair": [
+        "isfj-f",
+        "intj-f"
+      ],
+      "mark": "Rex (2026-10-28)"
+    },
+    {
+      "id": "food",
+      "name": "farm vs butcher shop",
+      "pair": [
+        "intp-m",
+        "esfp-f"
+      ],
+      "mark": "Rex"
+    },
+    {
+      "id": "hunting",
+      "name": "hunting / gathering",
+      "pair": [
+        "estp-f",
+        "istp-f"
+      ],
+      "mark": "Rex"
+    },
+    {
+      "id": "inventions",
+      "name": "inventions (ENTP vs a new mechanic, not made)",
+      "pair": [
+        "entp-m"
+      ],
+      "mark": "Rex (2026-10-28: the INTJ is no longer the ENTP's competitor; Rex will make a new mechanical character)"
+    },
+    {
+      "id": "commerce",
+      "name": "commerce (warehouse vs merchant)",
+      "pair": [
+        "enfj-m",
+        "esfj-m"
+      ],
+      "mark": "proposed (outside AI)"
+    },
+    {
+      "id": "society",
+      "name": "society / power (privateer vs courtesan)",
+      "pair": [
+        "estj-f",
+        "infp-m"
+      ],
+      "mark": "proposed (outside AI; flagged weak by it)"
+    }
   ]
 }
