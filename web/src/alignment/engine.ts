@@ -1,0 +1,101 @@
+import { loadCharts, respond, type Chart } from './charts'
+import { loadEvents, validateEventDef, validateEventOccurrence, type EventDef, type EventOccurrence } from './events'
+import { classify, quadrantAnchors, step, type Quadrant } from './square'
+import { loadAlignmentThresholds, type AlignedPosition, type AlignmentState, type AlignmentThresholds, type Command } from './state'
+
+export interface AlignmentConfig {
+  thresholds: AlignmentThresholds
+  charts: Record<string, Chart>
+  events: EventDef[]
+}
+
+export const UNRESOLVED: string[] = [
+  'INTJ becomes neutral: no neutralizing verb or replacement chart is defined',
+  'thresholds.neutral / thresholds.pure: provisional boundaries',
+  'step.minor / step.major / anchor: placeholder movement sizes and targets',
+  'step.metric / step.overshoot: placeholder fixed Euclidean distance, stop at anchor',
+  'startCoords: placeholder starting coordinates',
+  'leanFactor: placeholder lean distance multiplier',
+  'witnesses: present-only; absent learning is unresolved',
+  'ownerDeparted / pendingWhenAboard / undevelopedCounts: placeholder freeze / keep / skip',
+  'institutionLock: placeholder reread-each-sleep-while-owner-in-town',
+  'ghostRule: data says food-only; ALIGNMENT.md requires every-pair-both-improve (unit 2477)',
+]
+
+export function loadAlignmentConfig(): AlignmentConfig {
+  return { thresholds: loadAlignmentThresholds(), charts: loadCharts(), events: loadEvents() }
+}
+
+function character(state: AlignmentState, slug: string) {
+  if (!Object.hasOwn(state.characters, slug)) throw new Error(`unknown character: ${slug}`)
+  return state.characters[slug]
+}
+
+function move<T extends AlignedPosition>(who: T, to: Quadrant, distance: number, config: AlignmentThresholds): T {
+  const pos = step(who.pos, quadrantAnchors(config.anchor)[to], distance, config)
+  return { ...who, pos, region: classify(pos, { ...config.thresholds, tieBreak: config.tieBreak }, who.region) }
+}
+
+function event(state: AlignmentState, occurrence: EventOccurrence, config: AlignmentConfig): AlignmentState {
+  validateEventOccurrence(occurrence)
+  const matches = config.events.filter((entry) => entry.id === occurrence.defId)
+  if (matches.length !== 1) throw new Error(`unknown or duplicate event definition: ${occurrence.defId}`)
+  const def = matches[0]
+  validateEventDef(def)
+  if (config.thresholds.witnesses !== 'present-only') throw new Error('unresolved witnesses policy')
+  const distance = config.thresholds.step[def.weight]
+  const characters = { ...state.characters }
+  // Presence is supplied by the caller, never inferred from party or location.
+  for (const slug of occurrence.witnesses) {
+    const who = character(state, slug)
+    if (!Object.hasOwn(config.charts, slug)) throw new Error(`missing chart: ${slug}`)
+    const response = respond(config.charts[slug], def.category)
+    if (response.kind !== 'stay') {
+      characters[slug] = move(who, response.to,
+        distance * (response.kind === 'lean' ? config.thresholds.leanFactor : 1), config.thresholds)
+    }
+  }
+  return {
+    ...state, characters,
+    player: occurrence.playerActs ? move(state.player, def.category, distance, config.thresholds) : state.player,
+  }
+}
+
+function recruit(state: AlignmentState, slug: string, config: AlignmentConfig): AlignmentState {
+  const who = character(state, slug)
+  if (who.location === 'departed') throw new Error(`character departed: ${slug}`)
+  if (who.location !== 'town') throw new Error(`character is not in town: ${slug}`)
+  const aboard = Object.values(state.characters).filter((entry) => entry.location === 'aboard').length
+  if (aboard >= config.thresholds.crewSlots) throw new Error('crewSlots full')
+  return { ...state, characters: { ...state.characters, [slug]: { ...who, location: 'aboard' } } }
+}
+
+function party(state: AlignmentState, slugs: string[]): AlignmentState {
+  for (const slug of slugs) {
+    if (character(state, slug).location !== 'aboard') throw new Error(`party character is not aboard: ${slug}`)
+  }
+  return { ...state, characters: Object.fromEntries(Object.entries(state.characters).map(([slug, who]) => [
+    slug, { ...who, inParty: who.location === 'aboard' && slugs.includes(slug) },
+  ])) }
+}
+
+function leave(state: AlignmentState, slug: string): AlignmentState {
+  const who = character(state, slug)
+  if (who.location !== 'aboard') throw new Error(`character is not aboard: ${slug}`)
+  return { ...state, characters: { ...state.characters, [slug]: { ...who, location: 'town', inParty: false } } }
+}
+
+/** The sole command entry point. Failed commands throw without changing state or its replay log. */
+export function reduce(state: AlignmentState, command: Command, config: AlignmentConfig): { state: AlignmentState; log: string[] } {
+  let next: AlignmentState
+  switch (command.type) {
+    case 'event': next = event(state, command.occurrence, config); break
+    case 'recruit': next = recruit(state, command.slug, config); break
+    case 'party': next = party(state, command.slugs); break
+    case 'leave': next = leave(state, command.slug); break
+    case 'develop':
+    case 'sleep': throw new Error(`unresolved: ${command.type} (unit 2477)`)
+    default: throw new Error('unknown alignment command')
+  }
+  return { state: { ...next, log: [...state.log, structuredClone(command)] }, log: [JSON.stringify(command)] }
+}
