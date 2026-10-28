@@ -88,19 +88,55 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
 | Questline | Key | Reaction to what they witness you do there | Mark |
 |---|---|---|---|
-| Orderly good (church-like) | `quest.order_good` |  | open |
-| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` |  | open |
-| Orderly evil (Cthulhu corruption) | `quest.order_evil` |  | open |
-| Chaotic evil (killers, devil worship) | `quest.chaos_evil` |  | open |
+| Orderly good (church-like) | `quest.order_good` | leans him toward orderly good; kept up, the lean carries him all the way into it | Rex |
+| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | moves him to orderly good | Rex |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` | moves him to orderly good | Rex |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | moves him to orderly good | Rex |
 
 ### Notes (Rex, 2026-10-28)
 
 - **(open)** What his nostalgia for the town is (a past tie to it?).
 - **(open)** Who in the next town over invited him, and what their big project is.
-- **(open)** Where he lives and works in town; his alignment map; whether he is recruitable or romanceable (until Rex says, he is not counted among the 12).
+- **(open)** Where he lives and works in town; whether he is recruitable or romanceable (until Rex says, he is not counted among the 12).
+
+### Inner rules: his alignment map (Rex, 2026-10-28)
+
+What the path you push him on does to his alignment (`../QUESTLINES.md`, model point 4). Rex's diagram:
+
+![The INFJ's alignment map](diagrams/infj-m-alignment.png)
+
+```
+              GOOD
+   +-----------------+-----------------+
+   |  ORDERLY GOOD   |  CHAOTIC GOOD   |
+   |   ( (OG) ) <----+------ (CG)      |
+   |      ^   ^      |                 |
+   +------|----\-----+-----------------+
+   |      |     \    |                 |
+   |     (OE)    \---+------ (CE)      |
+   |  ORDERLY EVIL   |  CHAOTIC EVIL   |
+   +-----------------+-----------------+
+              EVIL
+   OG lean   CG->OG   OE->OG   CE->OG
+```
+
+| Pushed on (action quadrant) | He moves toward | Mark |
+|---|---|---|
+| Orderly good | orderly good (a lean: kept up, it carries him all the way there) | Rex |
+| Chaotic good | orderly good | Rex |
+| Orderly evil | orderly good | Rex |
+| Chaotic evil | orderly good | Rex |
+
+For the code (`inner_rules`, action → destination):
+`{ "order_good": "order_good", "chaos_good": "order_good", "order_evil": "order_good", "chaos_evil": "order_good" }`
+
+- **(Rex)** Dashed ring: committing that action leans him that way; kept up, the lean carries him all the way into that quadrant.
+- Every path ends in orderly good: the INTJ's all-roads-to-orderly-evil shape, mirrored onto orderly good.
+- **(open)** Starting alignment: to figure out later. The diagram highlights orderly good (every arrow is selected); Rex hasn't said whether that marks his start.
 
 ## Change log
 
 | Date | Change | By |
 |---|---|---|
 | 2026-10-28 | Created: a newcomer mechanic whose inventions outclass the ENTP's; milking the town for money before leaving for a big project in the next town over | Rex |
+| 2026-10-28 | Inner rules: his alignment map (OG lean, CG→OG, OE→OG, CE→OG): every path ends in orderly good | Rex |
