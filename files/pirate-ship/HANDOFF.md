@@ -16,7 +16,9 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
   `institutions.json`, `events.json` placeholder events only). All placeholders.
 - Simulator: `cd web && npx vitest run src/alignment/sim`. Joining gates are in the sim (`gates.json`,
   `unlock`; ISFJ needs the ESTP aboard; INTP, ESTP, ESFP and ISFJ are story-gated) and all four perfect towns are
-  still reachable with gates on (og 60, cg 67, oe 48, ce 56 steps).
+  still reachable with gates on (og 61, cg 68, oe 49, ce 57 steps).
+- Develop conditions are in the sim (`data/pirate-ship/alignment/conditions.json`, `conditions.ts`; the farm and the
+  butcher shop need `supply bodies`; placeholder: once is enough).
 
 ## Next
 

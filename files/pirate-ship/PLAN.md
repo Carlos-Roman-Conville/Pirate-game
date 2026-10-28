@@ -53,7 +53,7 @@ reachable" (Rex: "design this as the actual backend so we don't program the syst
 | 16 | Docs: this table's statuses, HANDOFF State/Next, BRIEF state line, glossary terms for the square | sonnet | 15 | HANDOFF under 4 KB with the four headings; glossary has the alignment terms | done (2479) |
 | 17 | Check: every ALIGNMENT.md §1–§7 rule has a test named after it; the misses listed in `files/pirate-ship/ALIGNMENT_COVERAGE.md` | haiku | 16 | the coverage file exists and names each rule | done (2480) |
 | 18 | Joining gates as data: `gates.json` (ISFJ needs the ESTP aboard; INTP, ESTP, ESFP, ISFJ story-gated), `gates.ts`, `unlock` command, `recruit` refuses a gated character; the sim's strategies unlock and bring the key aboard; rerun | codex | 15 | vitest: one test per gate rule; the four verdicts reprinted with gates on | done (2486) |
-| 19 | Develop conditions as data: `conditions.json` (farm and butcher shop need `supply bodies`; others open), `conditions.ts`, `supply` command, `develop` refuses an unmet slot; the sim supplies before developing; rerun | codex | 18 | vitest: one test per condition rule; the four verdicts reprinted | queued (2487) |
+| 19 | Develop conditions as data: `conditions.json` (farm and butcher shop need `supply bodies`; others open), `conditions.ts`, `supply` command, `develop` refuses an unmet slot; the sim supplies before developing; rerun | codex | 18 | vitest: one test per condition rule; the four verdicts reprinted | done (2487) |
 | **Gate** | Rex reads the simulator's routes and tunes the placeholders in `thresholds.json`; the balance keeper reruns the sims | | | | gate |
 
 ## Later phases (not planned yet)
