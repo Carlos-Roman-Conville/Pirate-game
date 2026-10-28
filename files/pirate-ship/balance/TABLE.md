@@ -28,7 +28,7 @@
 | farm vs butcher shop | intp-m / esfp-f | Rex | yes: intp-m (+ esfp-f (start?)) | yes: esfp-f (+ intp-m (start?)) | yes: intp-m (+ esfp-f (start?)) | yes: esfp-f (+ intp-m (start?)) |
 | hunting / gathering | estp-f / istp-f | Rex | **open only: estp-f (start?), istp-f (map?)** | yes: estp-f (+ istp-f (map?)) | **open only: estp-f (start?), istp-f (map?)** | yes: estp-f (+ istp-f (map?)) |
 | inventions: ENTP vs INFJ mechanic | entp-m / infj-m | Rex (2026-10-28: the INTJ no longer competes; the INFJ mechanic does) | yes: entp-m (+ infj-m (map?)) | yes: entp-m (+ infj-m (map?)) | yes: entp-m (+ infj-m (map?)) | yes: entp-m (+ infj-m (map?)) |
-| commerce (warehouse vs merchant) | enfj-m / esfj-m | proposed (outside AI) | yes: enfj-m, esfj-m | yes: esfj-m (+ enfj-m (start?)) | yes: enfj-m, esfj-m | yes: esfj-m (+ enfj-m (start?)) |
+| commerce (warehouse vs merchant) | enfj-m / esfj-m | Rex (2026-10-28; first proposed by the outside AI) | yes: enfj-m, esfj-m | yes: esfj-m (+ enfj-m (start?)) | yes: enfj-m, esfj-m | yes: esfj-m (+ enfj-m (start?)) |
 | brothel: INFP vs a competitor (not made) | infp-m | Rex (2026-10-28: control of the brothel; competitor open) | **open only: infp-m (map?)** | **open only: infp-m (map?)** | **open only: infp-m (map?)** | **open only: infp-m (map?)** |
 | town hall: ESTJ vs a competitor (not made) | estj-f | Rex (2026-10-28: control of the town hall; competitor open) | yes: estj-f | yes: estj-f | yes: estj-f | yes: estj-f |
 
