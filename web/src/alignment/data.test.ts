@@ -33,6 +33,26 @@ describe('charts.json', () => {
   })
 })
 
+/** ALIGNMENT.md §4 starting positions table (Rex, 2026-10-28, "for now"). */
+const SPEC_STARTS: Record<string, (typeof START_VALUES)[number]> = {
+  'entp-m': 'ce',
+  'intp-m': 'oe',
+  'entj-priest': 'oe',
+  'intj-f': 'oe',
+  'enfj-m': 'neutral',
+  'infj-m': 'og',
+  enfp: 'cg',
+  'infp-m': 'oe',
+  'estj-f': 'oe',
+  'istj-m': 'og',
+  'esfj-m': 'cg',
+  'isfj-f': 'og',
+  'estp-f': 'neutral',
+  'istp-f': 'neutral',
+  'esfp-f': 'ce',
+  isfp: 'ce',
+}
+
 describe('starts.json', () => {
   it('every charted slug has a start and vice versa', () => {
     const chartSlugs = Object.keys(charts).sort()
@@ -41,6 +61,17 @@ describe('starts.json', () => {
     for (const slug of chartSlugs) {
       expect(START_VALUES).toContain(starts[slug as keyof typeof starts])
     }
+  })
+
+  it('§4 each slug matches the starting positions table', () => {
+    expect(Object.keys(SPEC_STARTS)).toHaveLength(16)
+    for (const [slug, category] of Object.entries(SPEC_STARTS)) {
+      expect(starts[slug as keyof typeof starts], slug).toBe(category)
+    }
+  })
+
+  it('rejects a start category outside the spec table (negative)', () => {
+    expect(SPEC_STARTS['entp-m']).not.toBe('og')
   })
 })
 

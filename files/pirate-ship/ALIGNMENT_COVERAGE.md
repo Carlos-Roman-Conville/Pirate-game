@@ -46,7 +46,7 @@ rule states, counts as MISSING.
 | 4.5 | Presence comes from the occurrence (aboard and in the party) | `engine.test.ts` "§4 presence comes only from the occurrence, including a witness in town" | covered |
 | 4.6 | Alignment persists through crew rotation | `engine.test.ts` "§4 persistence: leave and recruit again keep position and region" | covered |
 | 4.7 | A character's nature isn't corrupted by the quest; only the chart moves them | MISSING (no test asserts a quest leaves nature or chart unchanged) | MISSING |
-| 4.8 | Starting positions table (16 slugs, "for now") | `data.test.ts` "every charted slug has a start and vice versa" checks slugs only, not the values | MISSING |
+| 4.8 | Starting positions table (16 slugs, "for now") | `data.test.ts` "§4 each slug matches the starting positions table" | covered |
 | 4.9 | INTJ special case: shown her belief is wrong, she becomes neutral | MISSING (parked as an unresolved verb, not built; `engine.test.ts` "§8 exports named unresolved rules" only lists the key) | MISSING |
 | 4.10 | Starting category and chart are independent | `engine.test.ts` "§4 starting category uses startCoords independently of chart and movement anchor" | covered |
 
@@ -69,7 +69,7 @@ rule states, counts as MISSING.
 |---|---|---|---|
 | 6.1 | Town alignment comes from its developed institutions | `institutions.test.ts` "eight developed OG institutions, one per sector, produce a perfect OG town" | covered |
 | 6.2 | Town position is the mean of developed institutions (`townAggregate: mean`) | `institutions.test.ts` "four OG and four OE average into hybrid_order named Twisted Virtue from data" (asserts x = −startCoords.x, y = 0) | covered |
-| 6.3 | Nine endings: four pure, four hybrids, neutral | MISSING (tested: the four pure, Twisted Virtue, neutral; the upper-centre, lower-centre and middle-right hybrids are not asserted) | MISSING |
+| 6.3 | Nine endings: four pure, four hybrids, neutral | `institutions.test.ts` "four OG and four OE average into hybrid_order…"; "four OG and four CG average into hybrid_good…"; "four OE and four CE average into hybrid_evil…"; "four CG and four CE average into hybrid_chaos…"; pure quadrants and neutral in the same describe | covered |
 | 6.4 | Perfect town means every developed institution in the same alignment (CE is perfect too) | `institutions.test.ts` "perfect means consistency, including %s" (og, oe, cg, ce) | covered |
 | 6.5 | Which institutions count: every developed place, including a pair's loser (`perfectCounts: all-developed`) | `institutions.test.ts` "all-developed counts the rival too: an OG/OE pair prevents an otherwise OG perfect town" | covered |
 | 6.6 | Hybrid endings have real width (mixed, not transition) | `institutions.test.ts` "four OG and four OE average into hybrid_order named Twisted Virtue from data" | covered |
@@ -84,4 +84,4 @@ rule states, counts as MISSING.
 
 ## Count
 
-Covered: 35. Missing: 7 (rows 4.7, 4.8, 4.9, 5.2, 5.8, 6.3, 6.7). Total: 42 rules.
+Covered: 37. Missing: 5 (rows 4.7, 4.9, 5.2, 5.8, 6.7). Total: 42 rules.

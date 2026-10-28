@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest'
 import institutions from '../../../data/pirate-ship/alignment/institutions.json'
+import endingNames from './endings.json'
 import {
   ending, initialState, isPerfect, loadAlignmentConfig, loadStarts, quadrantAnchors,
   reduce, townPosition, type AlignmentState, type Command, type Quadrant, type RegionId,
@@ -196,7 +197,25 @@ describe('§6 town and endings', () => {
   it('four OG and four OE average into hybrid_order named Twisted Virtue from data', () => {
     const state = town(['og', 'og', 'og', 'og', 'oe', 'oe', 'oe', 'oe'])
     expect(townPosition(state, config)).toEqual({ x: -config.thresholds.startCoords.x, y: 0 })
-    expect(ending(state, config)).toEqual({ id: 'hybrid_order', perfect: false, name: 'Twisted Virtue' })
+    expect(ending(state, config)).toEqual({ id: 'hybrid_order', perfect: false, name: endingNames.hybrid_order })
+  })
+
+  it('four OG and four CG average into hybrid_good with name from endings.json', () => {
+    const state = town(['og', 'og', 'og', 'og', 'cg', 'cg', 'cg', 'cg'])
+    expect(townPosition(state, config)).toEqual({ x: 0, y: config.thresholds.startCoords.y })
+    expect(ending(state, config)).toEqual({ id: 'hybrid_good', perfect: false, name: endingNames.hybrid_good })
+  })
+
+  it('four OE and four CE average into hybrid_evil with name from endings.json', () => {
+    const state = town(['oe', 'oe', 'oe', 'oe', 'ce', 'ce', 'ce', 'ce'])
+    expect(townPosition(state, config)).toEqual({ x: 0, y: -config.thresholds.startCoords.y })
+    expect(ending(state, config)).toEqual({ id: 'hybrid_evil', perfect: false, name: endingNames.hybrid_evil })
+  })
+
+  it('four CG and four CE average into hybrid_chaos with name from endings.json', () => {
+    const state = town(['cg', 'cg', 'cg', 'cg', 'ce', 'ce', 'ce', 'ce'])
+    expect(townPosition(state, config)).toEqual({ x: config.thresholds.startCoords.x, y: 0 })
+    expect(ending(state, config)).toEqual({ id: 'hybrid_chaos', perfect: false, name: endingNames.hybrid_chaos })
   })
 
   it('no developed institutions means (0,0), neutral and not perfect', () => {
