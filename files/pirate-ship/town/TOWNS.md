@@ -98,13 +98,13 @@ they are in town.
 | Who | Slug | Where | Resident / visitor | Recruitable | Note | Mark |
 |---|---|---|---|---|---|---|
 | The ENTP device builder, the local weapon smith | [`entp-m`](../story/characters/entp-m.md) | `port.shipyard` (lives there) | resident (lives at the shipyard) | yes, again and again: he keeps leaving and you find him back in town | key to a town improvement if let go (`UPGRADES.md` `port.entp`) | Rex |
-| The ISFJ doctor | [`isfj-f`](../story/characters/isfj-f.md) | `port.clinic` | resident: born in town; her father was the town doctor | yes | does her best to keep the townspeople going; probably a sadistic side: she gets pleasure from healing and from the pain it causes, and secretly enjoys your suffering (how she justifies it: open) | Rex |
+| The ISFJ doctor | [`isfj-f`](../story/characters/isfj-f.md) | `port.clinic` | resident: born in town; her father was the town doctor | yes, gated: higher reputation plus their completed sub quests (Rex, 2026-10-27) | does her best to keep the townspeople going; probably a sadistic side: she gets pleasure from healing and from the pain it causes, and secretly enjoys your suffering (how she justifies it: open) | Rex |
 | The ISTJ head priest | [`istj-m`](../story/characters/istj-m.md) | `port.church` (lives there) | resident | open | despises where he lives; especially cruel when following the rules, to a robotic degree | Rex |
-| The INTP farmer | [`intp-m`](../story/characters/intp-m.md) | `port.farm` (runs it with his daughter) | resident | open | a man (Rex, 2026-10-27); the ESFP cook's ex-spouse; psychopathic; the rest is in his file | Rex |
-| The ESFP cook | [`esfp-f`](../story/characters/esfp-f.md) | `port.bakery`, the butcher shop (runs it) | resident | open | a woman (Rex, 2026-10-27); more a general cook than a baker; has a butcher shop; jolly, with a dark side: secretly a cannibal; the farmer's ex-spouse | Rex |
+| The INTP farmer | [`intp-m`](../story/characters/intp-m.md) | `port.farm` (runs it with his daughter) | resident | yes, gated: higher reputation plus their completed sub quests (Rex, 2026-10-27) | a man (Rex, 2026-10-27); the ESFP cook's ex-spouse; psychopathic; the rest is in his file | Rex |
+| The ESFP cook | [`esfp-f`](../story/characters/esfp-f.md) | `port.bakery`, the butcher shop (runs it) | resident | yes, gated: higher reputation plus their completed sub quests (Rex, 2026-10-27) | a woman (Rex, 2026-10-27); more a general cook than a baker; has a butcher shop; jolly, with a dark side: secretly a cannibal; the farmer's ex-spouse | Rex |
 | The farmer's daughter | [`farm-daughter`](../story/characters/farm-daughter.md) | `port.farm` (runs it with her father) | resident | no (Rex, 2026-10-27) | | Rex |
 | The farmer's son | [`farm-son`](../story/characters/farm-son.md) | `port.bakery` (lives with the cook) | resident | no (Rex, 2026-10-27) | | Rex |
-| The old soldier | [`estp-f`](../story/characters/estp-f.md) | lives at `port.estp_hut`; only reliably found at `port.fort`, on a certain day each week; goes into the forest (to confirm) | resident | open | a secret character; an old ESTP woman, very strong, a killer; also the secret cook | Rex |
+| The old soldier | [`estp-f`](../story/characters/estp-f.md) | lives at `port.estp_hut`; only reliably found at `port.fort`, on a certain day each week; goes into the forest (to confirm) | resident | yes, gated: higher reputation plus their completed sub quests (Rex, 2026-10-27) | a secret character; an old ESTP woman, very strong, a killer; also the secret cook | Rex |
 | The warehouse owner | [`bigwig`](../story/characters/bigwig.md) (placeholder, outside the 32) | `port.warehouse` (owns it) | resident | no (Rex, 2026-10-27) | disorganised and chaotic; his alliances are poorly kept; isn't teaching his son well | Rex |
 | The owner's son (the ENFJ) | [`enfj-m`](../story/characters/enfj-m.md) (was the `bigwig-child` placeholder) | `port.warehouse` | resident | yes | extremely troublesome, a real drain on the town; a recruitable who needs fixing to help the town; his journey is into making structure | Rex |
 | The INTJ herbalist and apothecary owner | [`intj-f`](../story/characters/intj-f.md) | `port.apothecary` (owns it) | open | open | concocts potions, tinctures and such; a bit unconventional; the daughter of the apothecary's previous owner (Rex, 2026-10-27). Her psychotic trait: she has no qualms testing her concoctions on bad people, or people she perceives as evil. Part of her questline is a gamble: you work out, mostly from science and the clues you get, whether what she made will kill the person and whether they deserve it, and navigate her psychopathy to help her recover. Those who don't deserve it can't die; she has to discover naturally whether they are innocent or evil | Rex |
@@ -138,6 +138,14 @@ they are in town.
 | Orderly evil (`oe`) | | open |
 | Chaotic evil (`ce`) | | open |
 
+### Recruitment gates (Rex, 2026-10-27)
+
+- **(Rex)** The INTP farmer ([`intp-m`](../story/characters/intp-m.md)), the old soldier
+  ([`estp-f`](../story/characters/estp-f.md)), the ESFP cook ([`esfp-f`](../story/characters/esfp-f.md)) and the
+  ISFJ doctor ([`isfj-f`](../story/characters/isfj-f.md)) need **higher reputation** before they'll consider
+  joining, **plus completed sub quests** for them. A fifth may be added.
+- **(open)** Which reputation (the town's or a group's), and what level.
+
 ### Groups (for reputation)
 
 - **(Rex)** The town keeps a reputation with you, and so does each group inside it (§7b).
@@ -169,3 +177,4 @@ they are in town.
 | 2026-10-27 | The old soldier lives in the hut, is only reliably found at the fort on a certain day each week, and goes into the forest (to confirm); whether the locked house still exists is open (via the story keeper, 2d77c48) | Rex |
 | 2026-10-27 | Warehouse confirmed: in disrepair, owner disorganised and chaotic; his son is the ENFJ (`enfj-m`), whose journey into structure turns it to legitimate trade or illegal storage (via the story keeper, 9eb1e15) | Rex |
 | 2026-10-27 | Not recruitable: the warehouse owner, the farmer's daughter, the farmer's son (via the story keeper, bac0d22) | Rex |
+| 2026-10-27 | Recruitment gate: INTP, ESTP, ESFP and ISFJ need higher reputation plus their completed sub quests; maybe a fifth; which reputation and level open (via the story keeper, e034754) | Rex |
