@@ -215,4 +215,5 @@ work lives in `../art/`, not here.
 | 2026-10-28 | Dashed rings on the alignment maps: if you keep doing those actions, the lean eventually carries the character all the way into that quadrant | Rex (via the balance keeper) |
 | 2026-10-28 | The ISTJ priest's alignment map (OG lean, CG lean, OE→CG, CE→OG): every path ends in good | Rex (via the balance keeper) |
 | 2026-10-28 | New character: the evil ENTJ priest (`entj-m`), who competes with the ISTJ priest for the church; alignment map OG→CE, CG→OE, OE lean, CE lean (every path ends in evil); recruitable open | Rex (via the balance keeper) |
+| 2026-10-28 | New character: the INFJ mechanic (`infj-m`), a newcomer whose inventions outclass the ENTP's; he's milking the town for money and will leave soon for a big project in the next town over; stayed only out of nostalgia | Rex (via the balance keeper) |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

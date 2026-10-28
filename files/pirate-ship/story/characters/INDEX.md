@@ -29,7 +29,7 @@ A slot gets a file in this folder (`<slug>.md`, from `_TEMPLATE.md`) once Rex ma
 | esfp-f | ESFP (Se-Fi-Te-Ni) | woman | (open) | general cook with a butcher shop (Rex) | jolly; secretly a cannibal, humans in the food; ex-spouse of the INTP farmer | idea (Rex) | [esfp-f.md](esfp-f.md) |
 | intj-m | INTJ (Ni-Te-Fi-Se) | man | (open) | navigator | | drafted | |
 | intj-f | INTJ (Ni-Te-Fi-Se) | woman | (open) | herbalist, apothecary owner (Rex) | tests her potions on people she judges evil; her questline: judge if it kills and if they deserve it | idea (Rex) | [intj-f.md](intj-f.md) |
-| infj-m | INFJ (Ni-Fe-Ti-Se) | man | (open) | wrecker / lookout | | drafted | |
+| infj-m | INFJ (Ni-Fe-Ti-Se) | man | (open) | mechanic, a newcomer (Rex) | outclasses the ENTP; milking the town before leaving for a project in the next town; recruitable open, not counted among the 12 | idea (Rex) | [infj-m.md](infj-m.md) |
 | infj-f | INFJ (Ni-Fe-Ti-Se) | woman | (open) | wrecker / lookout | | drafted | |
 | entj-m | ENTJ (Te-Ni-Se-Fi) | man | (open) | the evil priest (Rex) | competes with the ISTJ priest for the church; has an alignment map; recruitable open, not counted among the 12 | idea (Rex) | [entj-m.md](entj-m.md) |
 | entj-f | ENTJ (Te-Ni-Se-Fi) | woman | (open) | rival captain / first mate | | drafted | |
