@@ -30,6 +30,18 @@ character needs beyond recruiting) aren't data yet, so `develop` is sent freely.
 engine won't change. `reach.py`, `maps.json` and `TABLE.md` are retired: `charts.json` and `charts.ts` are the one
 source now (ALIGNMENT.md's build rule).
 
+## The second answer: with the joining gates (2026-10-28, later)
+
+Rex chose to put the known joining gates into the simulator as data (`gates.json`, `unlock` command; ALIGNMENT.md
+§7; built by the belt, 2486). The facts (Rex, 2026-10-27): the INTP, ESTP, ESFP and ISFJ are story-gated
+(reputation plus sub quests, represented as an `unlock` the game issues; one step each in the sim), and the ISFJ
+also needs the ESTP aboard. Rerun: **every perfect town is still reachable.** OG 60 steps (was 55), CG 67 (62),
+OE 48 (43), CE 56 (51); the difference is the unlocks. The OG route now earns the doctor the intended way: unlock the
+ESTP, recruit her, then recruit the ISFJ with her aboard; the clinic develops OG, hunting develops through the ISTP,
+and the ESTP goes home undeveloped (her hunting slot is the ghost, C1 b). What the sim still doesn't know: the
+develop conditions (sub quests, the farm's bodies), which reputation and what level the gates need (open, town
+keeper), and whether "in your party" means the crew or the event party (placeholder: the crew).
+
 ## Where it stands (2026-10-28)
 
 **Every ending has a route.** All 8 sectors reach all four quadrants, and every character's chart is made. Full-town
@@ -408,3 +420,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | Ghost rule b chosen (every pair, both improve); with all-developed counting, the OG hospital route closes and orderly good has no perfect route unless "developed" needs more than recruiting; flagged for Rex | Rex; keeper (finding) |
 | 2026-10-28 | Recruiting alone doesn't develop a place (Rex): the OG hospital route is open again; flagged closure withdrawn | Rex; keeper |
 | 2026-10-28 | The engine and simulator are built (belt tasks 2474–2485); all four perfect towns reachable under Rex's rules with placeholder numbers; reach.py, maps.json and TABLE.md retired | keeper |
+| 2026-10-28 | Second simulator answer with the joining gates as data: all four perfect towns still reachable (OG 60, CG 67, OE 48, CE 56); OG earns the doctor through the ESTP | keeper; Rex (gates in) |
