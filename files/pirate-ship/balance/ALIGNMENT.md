@@ -29,11 +29,12 @@ invented.
 - **(Rex)** Every position must classify; the thresholds leave a transitional ring (for example (20, 20): neither
   pure nor clearly one band), and it must be handled explicitly.
 - **(proposed, keeper)** Transitional rule: the axis with the larger |value| decides the band (|x| > |y| → a
-  left/right band; |y| > |x| → an upper/lower band). **(open)** What an exact tie (|x| = |y|) reads as: config
-  `tieBreak`, placeholder `neutral`. The Cursor Opus review (2026-10-28) found that with anchors on the diagonal
-  (±70, ±70) a character walking from the centre sits on |x| = |y| at every step, so with `neutral` the three
-  neutral starters jump from neutral straight to pure and never cross a hybrid band. Rex decides what a tie reads
-  as; the step metric and the start coordinates (§8) also move this.
+  left/right band; |y| > |x| → an upper/lower band). **(Rex, 2026-10-28)** An exact tie (|x| = |y|) **keeps
+  whatever region the character was in before this step**: no snap (`tieBreak: keep-previous`). So every position
+  carries its previous region with it, and `classify` takes it. (The Cursor Opus review found that with anchors on
+  the diagonal a character walking from the centre ties at every step; with "neutral" the three neutral starters
+  would jump from neutral straight to pure. Rex's rule removes that.) A classification with no previous region
+  (the first one at a start) uses the position alone; the only tie there is the centre, which is neutral.
   Rex's own sketch (2026-10-28) shows a small neutral square at the centre and "at least a quarter past the
   middle is choosing something"; the 15 and 30 are the outside AI's provisional numbers, kept until Rex tunes them.
 
@@ -162,7 +163,7 @@ invented.
 | Key | Default (placeholder) | Status |
 |---|---|---|
 | `thresholds.neutral`, `thresholds.pure` | 15, 30 | Rex (provisional) |
-| `tieBreak` (|x| = |y| in the ring) | neutral | open (see §1: the cliff) |
+| `tieBreak` (|x| = |y| in the ring) | keep-previous | Rex (2026-10-28) |
 | `step.minor`, `step.major`, `anchor` | 10, 25, (±70, ±70) | open |
 | `step.metric`, `step.overshoot` | fixed distance; stop at anchor | open |
 | `startCoords` | (±50, ±50); neutral (0, 0) | open |
@@ -218,3 +219,4 @@ web/src/alignment/                   pure TS, no Phaser, no React (as web/src/fi
 | 2026-10-28 | Created from Rex's run-down and the outside AI's spec he adopted: square, events, player, characters, starts, institutions, town, open keys, architecture | Rex; keeper (marks, architecture) |
 | 2026-10-28 | Cursor Opus design review folded in: reduce() over a command log, EventDef vs EventOccurrence, per-slot institutions, crew commands, reachable() in the engine; four forced inventions became open keys (tieBreak cliff, step metric/overshoot, startCoords, ownerDeparted/pendingWhenAboard/undevelopedCounts) | keeper; review Cursor Opus |
 | 2026-10-28 | Town position = the mean of the developed institutions' positions | Rex |
+| 2026-10-28 | An exact diagonal tie keeps the previous region (no snap) | Rex |
