@@ -317,6 +317,35 @@ words; **(proposed, outside AI)** ChatGPT's suggestions he pasted, adopted only 
 
 The square, the charts, the player's movement, the overnight rule, the mean and the perfect check all stay.
 
+### Second run-down, the same day: twelve locales, combat, the siege (Rex; recorded, nothing built)
+
+- **(Rex)** The **twelve locales are the places you upgrade:** church, clinic, farm, butcher shop, wilderness,
+  shipyard, commerce, brothel, town hall, plus **tavern, docks and the coastal fort** (ChatGPT's recommendation,
+  which Rex took: "that actually makes a lot of sense"). The forge sits under the shipyard and the black market
+  under commerce as sub-branches that can be promoted later; tavern and brothel are separate development trees.
+- **(Rex)** The **fort** is run down but usable, especially with repairs, sub-par at first; it fills in after a
+  certain point like Stardew's community centre. It first becomes available near the point where the town is about
+  to be attacked.
+- **(Rex)** **The attack:** at roughly the 15% or 25% point of the story, the town is prosperous and has money
+  again, and as a result it gets attacked (Digimon World's attack on the house).
+- **(Rex)** **Combat:** an RPG, **turn-based, 4 units on your side**; how many the enemy can have is undetermined.
+  It converts into a **turn-based tactical RPG for invasions and large-scale battles**, like Suikoden's two scales;
+  large ship warfare with smaller RPG combat once ships are near each other. This is what the 108 are for later.
+- **(Rex)** A **world map** is coming; Rex designs it soon. Other docks are a later DLC.
+- **(proposed, outside AI)** Three location types: primary locales (own trees), sub-locales (forge, black market,
+  gambling room), unlockable institutions (restored fort, smugglers' den); a dying town starts without some. The
+  siege is shaped by what the player built (shipyard → durability and cannons, farm/butcher → endurance, clinic →
+  casualties, commerce → supplies, church → morale, town hall → coordination, wilderness → scouts, tavern →
+  intelligence, fort → artillery); the fort restores in stages (ruined → emergency defences → garrison → fortified
+  harbour → naval stronghold) with four alignment forms at the end; the first siege can be lost without a game over
+  (docks damaged, NPCs killed or ghosted, influence shifts); three acts (the dying port, the first siege, a growing
+  pirate power, the fate of the port). Naval tactics the primary large-scale system, boarding the smaller one.
+- **(keeper)** What this adds to the engine's reading above: the sector list becomes the twelve locales (which of
+  them contribute to the town's mean is open; ChatGPT: decide after the locale structure exists); the siege's
+  outcomes (killed, ghosted) are character fates, so they depend on the fate rule; a developed-town state feeding
+  the siege is a read of the same slots. **Combat itself is outside the alignment engine** and outside this
+  keeper's lane: a separate module (`web/src/combat/`?) with its own data and sim, owned by no keeper yet.
+
 ## Change log
 
 | Date | Change | By |
@@ -333,3 +362,4 @@ The square, the charts, the player's movement, the overnight rule, the mean and 
 | 2026-10-28 | Joining gates into the simulator as data (`gates.json`, `unlock` command): Rex's facts from the story and town keepers; the representation proposed | Rex (decision); keeper |
 | 2026-10-28 | Develop conditions into the simulator as data (`conditions.json`, `supply` command): the food pair's bodies from the story; the rest open | Rex (decision); keeper |
 | 2026-10-28 | §10: the scope change (108 characters, locales and relationships, influence carried home, character ghosts, three neutral endings, build locale by locale) recorded with the engine changes it implies; nothing built | Rex (scope); keeper (reading) |
+| 2026-10-28 | §10 second run-down: twelve locales (tavern, docks, fort added), the fort as a Stardew-style fill-in, the attack at 15–25%, turn-based combat of 4 units converting to tactical battles, a world map coming | Rex (scope); keeper |

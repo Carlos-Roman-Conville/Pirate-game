@@ -182,6 +182,24 @@ nothing is built. The current simulator verdicts (OG 61, CG 68, OE 49, CE 57) st
     and `UPGRADES.md` (pairs, slots), `crew/ROSTER.md` (32 → 108), `town/ENDINGS.md` (three neutrals), `STATS.md`
     (influence). Say when to send it.
 
+11. **Twelve locales vs the eight pairs.** The twelve (church, clinic, farm, butcher, wilderness, shipyard,
+    commerce, brothel, town hall, tavern, docks, fort) name one place per sector where today's data has two: the
+    apothecary (INTJ), the ESTP's hut, the ESFJ's shop, and the slotless ENTJ priest, INFJ mechanic, ISTP, ISFP
+    and ENFP all become characters *at* a locale or sub-locales. So "which locale does the INTJ's healing go to"
+    and "does the apothecary still exist as a place" are open; the current reachability (every sector reaches every
+    quadrant through one of two owners) was built on the pairs and must be re-read per locale.
+12. **Which locales count toward the town's mean.** The docks, tavern and fort are new to the alignment data;
+    whether each develops into four forms and feeds the mean is open (ChatGPT: decide after the locale structure
+    exists). Each one added makes a perfect town harder (item 7).
+13. **The siege writes fates.** Killed or ghosted NPCs from a lost siege are the same fate as item 4, so the siege
+    can't be data until the fate rule is; and a siege that can kill a sector's only developer can close an ending,
+    which the sim must check once both exist.
+14. **Combat has no keeper and no balance owner.** Turn-based, 4 units, enemy count open, converting to tactical
+    battles; it's a separate module. Its balance (encounter difficulty, unit numbers) isn't this lane's; say who
+    owns it before it's planned.
+15. **The world map** isn't designed; recruits are found by region, so joining gates may gain "reached region X"
+    conditions (data in `gates.json`, no engine change).
+
 ## Are the alignment maps on file?
 
 **Yes.** Rex's maps are recorded by the story keeper as Rex (each character file's "Inner rules" section and the
@@ -480,3 +498,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | Second simulator answer with the joining gates as data: all four perfect towns still reachable (OG 60, CG 67, OE 48, CE 56); OG earns the doctor through the ESTP | keeper; Rex (gates in) |
 | 2026-10-28 | Third simulator answer with the develop conditions as data: all four perfect towns still reachable (OG 61, CG 68, OE 49, CE 57); only the food pair's bodies are known conditions | keeper; Rex (conditions in) |
 | 2026-10-28 | C5: the scope change's collisions and open rules (pairs vs locales, points vs adopt, influence, death, three neutrals, empty town, scale, novices, sequence, other keepers) | keeper |
+| 2026-10-28 | C5 items 11–15: twelve locales vs pairs, which count, siege fates, combat unowned, world map | keeper |

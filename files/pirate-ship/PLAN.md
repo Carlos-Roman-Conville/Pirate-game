@@ -74,6 +74,11 @@ rule stays data.
 | 24 | Endings: the neutral region split into ordinary / ghost / living by fates, with a priority order and the `relevantCharacters` rule; `emptyTown` key explicit | codex | 21 | one test per ending | scope |
 | 25 | Simulator: searches for ghost neutral and living neutral; sequence rules ("X before Y") as data | codex | 23, 24 | four perfect verdicts plus two neutral verdicts printed | scope |
 | 26 | The 16 novice slots: starts and charts only for those who move the town (Rex draws the charts); crew-only novices stay out of the alignment data | composer | Rex's charts | shape test | scope |
+| 27 | Twelve locales as the alignment data's places (tavern, docks, fort added; forge and black market as sub-branches); which locales contribute to the town's mean (Rex) | composer | 20, Rex's list | shape test; the current 16 owners still load | scope |
+| 28 | The fort: a staged restoration (ruined → … → stronghold) with four alignment forms at the end, as a slot whose states are data; first available at the attack | codex | 27, Rex's stages | one test per stage rule | scope |
+| 29 | The siege as an event that reads the developed slots and writes fates (killed, ghosted) and damage; losable | codex | 21, 28, Rex's rule | one test per contribution and outcome | scope |
+| 30 | Combat: turn-based RPG, 4 units a side (enemy count open), converting to a turn-based tactical RPG for invasions; **a separate module with its own data and sim, not the alignment engine; no keeper owns it yet** | codex | Rex's combat design | its own smoke test | scope |
+| 31 | World map: regions where recruits are found; Rex designs it first | — | Rex's map | — | scope |
 | **Gate** | Rex decides the rules above (BALANCE.md C5), locale by locale, starting with the farm; the balance keeper then writes the tasks | | | | gate |
 
 ## Later phases (not planned yet)
