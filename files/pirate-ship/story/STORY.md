@@ -207,4 +207,5 @@ work lives in `../art/`, not here.
 | 2026-10-27 | The ISTJ priest is an old pirate who gave up the life; he offers to join because you're floundering and a bit pathetic: to help, to take your measure, and to try to bring you to God | Rex |
 | 2026-10-27 | The ENFJ joins because he despises his parents and wants to get away | Rex |
 | 2026-10-27 | The ESTJ joins after a sub quest: a series of games at the pub to prove your skill; seeing potential, she joins to fix your boat and crew | Rex |
+| 2026-10-27 | The ESFJ joins after you fund his rare-goods venture (a shop in town or a stall in the port); it fails, he can't repay you, so he joins and still sells you rare goods for a price | Rex |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |

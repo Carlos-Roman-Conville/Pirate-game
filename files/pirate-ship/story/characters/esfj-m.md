@@ -45,7 +45,7 @@ follow `_TEMPLATE.md`.
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | hire / mercenary / kidnap; what they need first (rep, proof, gift, questline) | open |
+| How recruited | `recruit` | he's broke, and only joins if you give him the funds to start a venture: a shop peddling rare goods (Rex: "I think"). He temporarily opens a shop in town, or a stall in the port, but it fails; when it does he realises he can't pay you back, so he offers to join you instead, and you can still get those rare goods from him, for a price | Rex |
 | What the town thinks of them | `town_view` | who likes them, who doesn't (kidnapping consequences) | open |
 
 ## Relationships
@@ -54,7 +54,7 @@ One row per other character Rex has tied them to. Affection, respect, rivalry, d
 
 | With | Key | What it is | Mark |
 |---|---|---|---|
-| the player | `rel.player` | | open |
+| the player | `rel.player` | owes you the money you fronted for his failed venture; joins instead of paying you back, and still sells you rare goods for a price | Rex |
 
 ## Heart events
 
@@ -185,3 +185,4 @@ Why his map moves the way it does.
 | 2026-10-27 | His mentality: progressivism; Rex's reasoning for OG→CE, with an outside AI's reading as proposals | Rex |
 | 2026-10-27 | Outside AI on the term: progressivism over liberalism; a caricature of an extreme anti-establishment progressive (proposed) | Rex (pasted) |
 | 2026-10-27 | Outside AI's follow-up on the term (progressivism vs liberalism; a satirical caricature), kept as proposals | Rex (pasted) |
+| 2026-10-27 | Why he joins: broke; you fund his rare-goods shop or stall, it fails, he can't repay, so he joins and still sells you rare goods for a price | Rex |
