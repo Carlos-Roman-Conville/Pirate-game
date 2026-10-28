@@ -46,7 +46,7 @@ Every field is marked **(Rex)**, **(proposed)** or **(open)**. Only (Rex) is can
 
 | Field | Key | Value | Mark |
 |---|---|---|---|
-| How recruited | `recruit` | he constantly leaves your crew; you go back into town, find him and convince him to join again, again and again | Rex |
+| How recruited | `recruit` | first time: you convince him through dialogue. He has been thinking about joining a crew but feels he's not ready to put his weaponry to the test; he's been tinkering for two years and isn't sure he's ready. You convince him, and that's why he joins. After that he constantly leaves your crew; you go back into town, find him and convince him to join again, again and again | Rex |
 | What the town thinks of them | `town_view` | many townspeople use both him and the INTJ for various things; people who use both often have to lie to each: when he brings up an interaction he had with the INTJ, the villager just agrees and goes along with it (and the same with her) | Rex |
 
 ### His arc (Rex, 2026-10-26)
@@ -171,3 +171,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-27 | Natural alignment: chaotic evil; chaotic evil acts only reinforce him | Rex |
 | 2026-10-27 | Tie: the INFP uses a device he built for the waxing | Rex |
 | 2026-10-27 | Tie: mutual contempt with the INTJ (each thinks the other a hack); townspeople who use both lie to each | Rex |
+| 2026-10-27 | Why he joins: convinced through dialogue; he's tinkered for two years and isn't sure his weaponry is ready to be tested | Rex |
