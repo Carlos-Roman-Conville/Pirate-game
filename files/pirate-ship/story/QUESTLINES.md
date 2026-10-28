@@ -53,7 +53,7 @@ suggestion (not canon); blank = open.
 | ISFJ doctor (`isfj-f`) | | | | |
 | ESFP baker (`esfp-f`) | | | | |
 | INTP farmer (`intp-m`) | | | | |
-| ESTP veteran outdoorswoman (`estp-f`) | | | | |
+| ESTP veteran outdoorswoman (`estp-f`) | **Rex: moves her to chaotic good** | **Rex: stays chaotic good (loop)** | **Rex: moves her to chaotic evil** | **Rex: stays chaotic evil (loop)** |
 | ENFJ pretty boy (`enfj-m`) | **Rex: stays orderly good (loop)** | **Rex: moves them to orderly good** | **Rex: stays orderly evil (loop)** | **Rex: moves them to orderly evil** |
 | ESTJ privateer pirate (`estj-f`) | **Rex: moves them to chaotic evil** | **Rex: moves them to orderly good** | **Rex: moves them to chaotic good** | **Rex: moves them to orderly evil** |
 
@@ -86,3 +86,4 @@ suggestion (not canon); blank = open.
 | 2026-10-27 | The ISTP and ESTP are now women (`istp-f`, `estp-f`); the ENFJ is a man (`enfj-m`) | Rex |
 | 2026-10-27 | The ESTJ is an old privateer, a man (`estj-m`) | Rex |
 | 2026-10-27 | The ESTJ is a woman, a pirate lady in her 40s (`estj-f`) | Rex |
+| 2026-10-27 | The ESTP's alignment map (OG→CG, CG stays, OE→CE, CE stays) | Rex |

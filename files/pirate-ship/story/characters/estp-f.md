@@ -96,10 +96,46 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 
 | Questline | Key | Reaction to what they witness you do there | Mark |
 |---|---|---|---|
-| Orderly good (church-like) | `quest.order_good` |  | open |
-| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` |  | open |
-| Orderly evil (Cthulhu corruption) | `quest.order_evil` |  | open |
-| Chaotic evil (killers, devil worship) | `quest.chaos_evil` |  | open |
+| Orderly good (church-like) | `quest.order_good` | moves her to chaotic good | Rex |
+| Chaotic good (the stereotypical pirate town) | `quest.chaos_good` | stays chaotic good (loop) | Rex |
+| Orderly evil (Cthulhu corruption) | `quest.order_evil` | moves her to chaotic evil | Rex |
+| Chaotic evil (killers, devil worship) | `quest.chaos_evil` | stays chaotic evil (loop) | Rex |
+
+### Inner rules: her alignment map (Rex, 2026-10-27)
+
+What the path you push her on does to her alignment (`../QUESTLINES.md`, model point 4). Rex's diagram:
+
+![The ESTP's alignment map](diagrams/estp-f-alignment.png)
+
+```
+              GOOD
+   +-----------------+-----------------+
+   |  ORDERLY GOOD   |  CHAOTIC GOOD   |
+   |      (OG) ------+----> (CG) <-+   |
+   |                 |          \_/    |
+   +-----------------+-----------------+
+   |      (OE) ------+----> (CE) <-+   |
+   |                 |          \_/    |
+   |  ORDERLY EVIL   |  CHAOTIC EVIL   |
+   +-----------------+-----------------+
+              EVIL
+   OG->CG   CG stays   OE->CE   CE stays
+```
+
+| Pushed on (action quadrant) | She moves toward | Mark |
+|---|---|---|
+| Orderly good | chaotic good | Rex |
+| Chaotic good | chaotic good (stays: a loop) | Rex |
+| Orderly evil | chaotic evil | Rex |
+| Chaotic evil | chaotic evil (stays: a loop) | Rex |
+
+For the code (`inner_rules`, action → destination):
+`{ "order_good": "chaos_good", "chaos_good": "chaos_good", "order_evil": "chaos_evil", "chaos_evil": "chaos_evil" }`
+
+- Everything pulls her toward chaos, and the good/evil side follows what you do (the mirror of the ENFJ's map,
+  which pulls toward order).
+- **(open)** Orderly evil is highlighted on the diagram. On the INTJ's diagram the highlight marked her starting
+  alignment; whether it means the same here is open.
 
 ## Change log
 
@@ -113,3 +149,4 @@ Rex's rule: a character's nature isn't corrupted by the quest they go on.
 | 2026-10-27 | A veteran turned outdoorsman: a wilderness generalist (wood, stone, herbs, food), unlike the ISTP's hunting; lives isolated in a hut away from town, rarely seen | Rex |
 | 2026-10-27 | The fort day holds: the only constant way to find her; she lives in the hut and goes into the forest | Rex |
 | 2026-10-27 | Confirmed: she goes into the forest | Rex |
+| 2026-10-27 | Inner rules: her alignment map (OG→CG, CG stays, OE→CE, CE stays) | Rex |
