@@ -1,0 +1,48 @@
+{
+  "_about": "Tables for body/PSYCHOLOGY.md. This file never defines a meter: every row pushes a meter that already exists in PIRATE.md 7/7a or STATS.md 3/4/5 (mood, madness, hearts, respect, the sliders, trust, the relationship web). Pushes are per overnight tick unless the row says per event. mark: rex | proposed | open.",
+  "pushes": {
+    "title": "Body and social states and the existing meters they push",
+    "kind": "model", "conf": "medium",
+    "source": "Mechanisms are established psychology (sleep loss raises irritability and emotional reactivity; pain and hunger lower mood and patience; alcohol disinhibits; isolation and bereavement lower mood; fear is contagious in groups), PSY-*; the sizes are placeholders. The meters are Rex's (PIRATE.md 7, STATS.md 3 to 5).",
+    "columns": ["State (from)", "Meter pushed (owner)", "Direction and size", "Condition", "Visible face", "Mark"],
+    "rows": [
+      ["Sleep debt over 12 h (PHYSIOLOGY)", "mood (PIRATE 7: crew average mood = loyalty)", "-1 a day", "while the debt stands", "snaps at a crew mate; short answers on keywords", "proposed"],
+      ["Sleep debt over 24 h", "Calm <-> Volatile slider (STATS 3)", "toward Volatile, +0.5 a day (slow, as Rex's sliders move)", "and madness +1 a day for a character whose trigger is being pushed", "a fight in the night (the day-loop event)", "proposed"],
+      ["Pain over 5 (MEDICINE)", "mood", "-2 a day", "", "groans; refuses the den", "proposed"],
+      ["Pain over 5 for 7+ days", "Patient <-> Impulsive slider", "toward Impulsive, +0.5 a day", "", "", "proposed"],
+      ["Hunger: satiation under 0.2 (NUTRITION)", "mood", "-1 per meal missed", "", "'could eat a horse'; steals from the stores (madness trigger for some)", "rex (hunger hits mood), proposed (size)"],
+      ["Starvation stage 2+ (NUTRITION)", "madness (PIRATE 7)", "+1 a day for everyone", "the crew's loyalty (mean mood) also falls", "the mutiny event opens sooner", "proposed"],
+      ["Thirst over 2% (PHYSIOLOGY)", "mood", "-2 a day", "", "fights over the cask", "proposed"],
+      ["Drink: a ration of rum (STATS 4 drink state)", "mood", "+1 that evening", "PIRATE 5a: too much rum, accidents", "singing in the den", "rex (rum moves mood), proposed (size)"],
+      ["Drink: drunk", "Calm <-> Volatile (that evening only, not the slow slider)", "state read as Volatile +20 for the night", "the day-loop fight event", "the brawl", "proposed"],
+      ["Heat strain (PHYSIOLOGY)", "mood; Calm <-> Volatile", "-1 a day; Volatile pressure while over 38 C", "", "tempers at noon", "proposed"],
+      ["Fever (MEDICINE)", "mood; alertness", "-2 a day; delirium: dialogue goes strange (the keyword answers from the madness pool)", "", "raving in the hammock", "proposed"],
+      ["Scurvy stage 1 (NUTRITION: lassitude and low mood are the first signs)", "mood", "-1 a day", "before any physical sign", "a crew mate 'down' for no reason: the early warning", "rex (scurvy real), proposed (push)"],
+      ["Seasickness day (PHYSIOLOGY)", "mood", "-2", "", "misery at the rail", "proposed"],
+      ["A crew mate's death (MEDICINE / COMBAT)", "mood of everyone with hearts toward them (relationship web, PIRATE 7a); madness for the one whose trigger it is", "-3 to -6 by hearts; madness +2", "per event", "the wake; the next voyage's silence", "proposed"],
+      ["A crew mate's resurrection in a new form (COMBAT 4e)", "relationship web: the others read it by personality (PIRATE 7a)", "per type: fear, awe, disgust, relief (story keeper's)", "per event", "", "open"],
+      ["Isolation: no one talked to for 3+ days (the keyword dialogue)", "mood; Social <-> Solitary", "-1 a day; Solitary pressure", "", "the loner at the bow", "proposed"],
+      ["Being posted to the duty they are best at (STATS)", "respect toward the captain (PIRATE 7a)", "+ (slow)", "per week", "'the captain knows his business'", "proposed"],
+      ["Being posted where they are weak and failing", "respect; mood", "- ; -1 per failure", "per event", "grumbling", "proposed"],
+      ["Fear: outnumbered, a storm, a fever aboard", "Brave <-> Fearful read for the day; mood", "state read as Fearful +10; -1", "contagious: each fearful crew mate adds +2 to the others (PSY-FEAR)", "panic in the rigging", "proposed"],
+      ["Winning a fight, a prize, fresh food after a long passage", "mood; respect", "+2; +", "per event", "the feast", "proposed"],
+      ["A romance partner wounded or sick", "hearts (PIRATE 7) unchanged; mood -2; madness +1 for the jealous or possessive type", "per day", "", "at the bedside", "proposed"],
+      ["Long habit of rum or laudanum broken (NUTRITION open 4)", "mood; Calm <-> Volatile", "-2 a day for 5 days; Volatile pressure", "if habit is a system (open)", "the shakes", "open"]
+    ]
+  },
+  "madness_links": {
+    "title": "Body states as madness triggers (per type; the story keeper owns the triggers themselves)",
+    "kind": "fiction", "conf": "low",
+    "source": "Rex: each crew mate has a madness with its own meter; things they hate push it up; past a line they act, the way the type's inferior function erupts (PIRATE.md 7; crew/ROSTER.md). This table only says which body states are plausibly a trigger, for the story keeper to keep or drop per character.",
+    "columns": ["Body state", "Plausible trigger for", "Why (the matrix reading)", "Mark"],
+    "rows": [
+      ["Hunger, short rations", "types whose slight is 'left out' or 'cheated'", "scarcity reads as unfairness", "proposed"],
+      ["Sleep loss", "the Turbulent (neuroticism high) characters", "reactivity rises with debt", "proposed"],
+      ["Pain, a wound", "the proud fighter types", "weakness exposed", "proposed"],
+      ["Disease aboard", "the careful, clean types (the ISTJ bosun)", "filth and contagion", "proposed"],
+      ["Heat", "the Volatile", "temper", "proposed"],
+      ["A death", "the loyal, the jealous, the possessive", "loss; or the rival gone", "proposed"],
+      ["Drink", "everyone with a trigger: drink lowers the line by 10 for the night", "disinhibition", "proposed"]
+    ]
+  }
+}
