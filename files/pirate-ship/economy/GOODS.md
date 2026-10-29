@@ -477,11 +477,50 @@ ship's duties are in `DUTIES.md`. Everything in this part is **(proposed)**.
 
 Combat classes and magic disciplines are a later topic, not covered here.
 
-**Applied to the 27 activities from 3b (proposed).** Existing skills are the ones in `STATS.md` §2. "New" means the
-activity is proposed as a skill of its own. For each line, Rex can confirm it, move it or rename it.
+**The condensed list (proposed, 2026-10-28; Rex: 34 was far too many).** The economy needs only the skills that
+make goods. Of the 26 in `STATS.md` §2, 20 are ship, combat and social skills the economy never reads. The goods
+need **13 skills**, 6 of them already in `STATS.md`: five gathering, eight crafting.
 
-| Activity (3b) | Skill (proposed) | Why |
-|---|---|---|
+| Group | Skill | In STATS.md? | Folded into it (one-offs by Rex's rule) |
+|---|---|---|---|
+| Gathering | Farming | new | herding, salt raking, curing and packing, dye-making from the crop (indigo vats, cochineal) |
+| Gathering | Hunting | new | tanning, boucan smoking |
+| Gathering | Fishing | yes | the salt-fish cure, turtling, pearl diving |
+| Gathering | Woodcutting | new | riving staves and shingles, tar burning, the dyewood camps |
+| Gathering | Mining | new | smelting to bar metal, silver refining (all off-map in this period) |
+| Crafting | Cooking | yes | milling, baking, butchering and salting, dairying, tallow candles, chocolate |
+| Crafting | Sugar boiling | new | claying; refining (off-map) |
+| Crafting | Distilling | new | brewing, winemaking (off-map) |
+| Crafting | Smithing | yes | hoops, shot casting, gunsmithing; cannon founding (off-map) |
+| Crafting | Carpentry | yes | sawing, joinery |
+| Crafting | Cooperage | yes | slack and tight work as its tiers |
+| Crafting | Weaving | new | ropemaking, tailoring, dyeing cloth |
+| Crafting | Surgery and medicine | yes | the apothecary |
+
+Seven new skills: Farming, Hunting, Woodcutting, Mining, Sugar boiling, Distilling, Weaving. Mining and Weaving are
+nearly all off-map in the period (Spanish silver, Swedish iron, European cloth): Rex can cut them and treat those
+goods as imported only, which would leave 11.
+
+**Where each good sits: `skill-tree.json` and `skill-tree.html`** (this folder). Every one of the 61 goods is placed
+on one of these 13 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
+Master 100), with a one-line reason and the good it needs from another tree (sugar cane → molasses → rum; rived
+staves → dressed staves → tight cask). The JSON is the source; `build-skill-tree.py` rebuilds the HTML, which opens in
+any browser with no server. Goods made outside the Caribbean in the period are flagged off-map. Four goods have no
+tree: gunpowder (no Caribbean powder mill in the sources), enslaved people (Open for Rex 1), voyage iron (the same bar
+iron as Mining), and the Africa trade cargo (a mix, not a good).
+
+**Band names and the period (source).** Apprentice, journeyman and master were the real guild ladder; "novice" and
+"expert" were not trade grades. The sourced detail is in the research note `research-trade-grades.md` (shared notes
+folder) and summarised in the dashboard's band key. Rex's five bands stand; the period words sit beside them.
+
+**What it means for the economy (proposed):**
+- A town makes a specialty good because its people have the skill at the band the good needs (and the land or ground
+  for it). Sugar comes from towns with Farming and Sugar boiling.
+- The economy engine reads the workers' skill values and nothing else about them. This keeps the Toolchain package
+  reusable (ALIGNMENT §10).
+- `STATS.md` belongs to another keeper. The new skills go into it only when Rex confirms them.
+
+---|---|---|
 | Planting, drying and curing crops (sugar cane, tobacco, cotton, indigo plant, ginger, pimento, cacao, rice, grain) | **Farming** (new) | Done every season in every farming town; makes most of the specialty goods |
 | Herding | Farming | Livestock is farm work. (DUTIES has livestock aboard under Cooking) |
 | Sugar boiling, claying, refining | **Sugar boiling** (new) | Repeated daily in the boiling house, with skill of its own (when to strike the sugar, L). It makes the biggest cash crop |
@@ -691,9 +730,9 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
    versus plain names is Rex's choice.
 8. **Cask size.** Which standard hogshead does the game use: one 63-gallon cask for sugar, molasses and rum (proposed,
    fits the 17th-century evidence), the large tobacco-size cask for sugar, or casks that grow over the timeline (1j)?
-9. **The new skills (3c).** Confirm, rename or cut each of: Farming, Sugar boiling, Distilling, Hunting,
-   Woodcutting, Weaving, Dyeing, Mining. Also settle the open placements: Turtling (Fishing or Hunting), and Brewing
-   and winemaking, Tanning and Powder making (each either inside another skill or a skill of its own).
+9. **The 13 skills (3c, `skill-tree.json`).** Confirm, rename or cut each of the seven new ones: Farming, Hunting,
+   Woodcutting, Mining, Sugar boiling, Distilling, Weaving. Mining and Weaving can go if their goods are imported
+   only. Then the placements: every chip on the dashboard is a proposal; move any good to another tree or band.
 10. **STATS.md.** Once confirmed, the new skills need their primary and secondary attributes and personality pull in
     `STATS.md` §2, which belongs to another keeper.
 
@@ -706,3 +745,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-28 | Prices added for logwood, cochineal, tobacco, wine, cloth and iron, plus Jamaica's 1661 legal rates for sugar, cocoa and tobacco (CSP Colonial, Thorold Rogers, Posthumus, Dampier); 1h extended | research session, at Rex's request |
 | 2026-10-28 | 3c: Rex's notes on trade professions recorded (twelve broad professions, techniques inside them); every trade skill placed, gaps marked suggested; Open for Rex items 10-12 | research session, at Rex's request |
 | 2026-10-28 | 3c replaced: Rex chose one flat list of use-levelled skills shared by ship and town (professions withdrawn); each of the 27 activities mapped to an existing skill or one of 8 proposed new skills; Open for Rex items 9-12 replaced by 9-10 | research session, at Rex's request |
+| 2026-10-28 | Condensed to 13 goods skills (5 gathering, 8 crafting; 7 new), one-offs folded in; every good placed on a tree and band in `skill-tree.json`, dashboard `skill-tree.html` built by `build-skill-tree.py` | research session, at Rex's request |
