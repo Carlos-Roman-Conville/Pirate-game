@@ -7,7 +7,8 @@ proposal. Rex decides which goods the game uses, what they are called and how th
 session's suggestion for Rex to confirm or change. **(calc)** is arithmetic on sourced numbers, done here and not
 found in the source. **open** means no source opened in this research gives the fact. Every cargo, weight and
 price below is either sourced or open. Nothing is invented. **(unverified)** means a fact came from a search summary
-or a weak page and should be checked against the original before it is used.
+or a weak page and should be checked against the original before it is used. **(estimate)** means a figure worked out
+in this file from sourced inputs plus a stated assumption (Part 1j). It is a modelling number, not a historical record.
 
 **Period.** Sources span 1650s–1730s. Rows that use evidence from outside the period say so ("late").
 
@@ -173,6 +174,72 @@ but they give no price.
 - **Does not spoil:** salt, metals, woods, shell, coin.
 - **Open:** molasses and rum leakage rates, gunpowder damp, and the life of cotton, cloth and tobacco at sea.
 
+### 1j. Cask estimates: sugar, molasses, rum (estimate)
+
+Rex asked for estimates where the sources give no fixed size (2026-10-28). Each one is the cask's volume times the
+density of what it holds, plus the weight of an oak cask. The inputs are sourced; the assumptions are listed. The
+results are modelling numbers, not period records.
+
+**Inputs (source):**
+- **Cask volumes,** in wine gallons of 231 cubic inches, 3.785 litres (WC): hogshead 63 gal (238 L), puncheon 84 gal
+  (318 L), tierce 42 gal (159 L), barrel 31.5 gal (119 L). Rum puncheon "about 130 gallons" (PU; which gallon is not
+  stated). Rundlet 12–18½ gal (PY).
+- **A large hogshead's outside limits:** the 1730 Virginia Act allowed staves up to 48 in long and heads up to 30 in
+  across (VA30). That rule is for tobacco; using it for sugar is an assumption.
+- **Densities:**
+  - Molasses: specific gravity 1.41, "equivalent to 11.75 lb/gallon" at 79.5° Brix (KER).
+  - Raw cane sugar: 960 kg/m³ in bulk; granulated sugar 800 kg/m³ (ETB). Brown sugar about 721 kg/m³, but from a
+    weak second-hand page.
+  - Spirit: density 0.946 at 40.6% alcohol by volume (CAN); about 0.898 for 57% alcohol by weight at 20 °C (NIST).
+    Period rum strength is open, so rum is taken as 0.90–0.95 kg/L.
+  - Oak: white oak "weighs about 770 kg/m³ when dried" (TS).
+- **Customs tare for sugar:** 12 lb in every 112 lb (US Treasury, 1791). Late, and unverified: the letters could not
+  be opened.
+
+**Assumptions (estimate):**
+- Staves and heads ¾–1 in thick (19–25 mm).
+- The large cask is 46 in long inside, with a bilge (widest point) of 34–36 in.
+- Hoops (wood or iron) are not counted, so the cask weights below are low.
+- Casks are full. How full casks were really filled is open.
+- Modern molasses density stands in for period molasses.
+
+**Results (estimate):**
+
+| Cask | Volume | Contents, net | Cask (oak, est.) | Gross |
+|---|---|---|---|---|
+| Sugar hogshead, small (wine-hogshead size) | 238 L, 63 gal | 420–505 lb (density 0.80–0.96) | 70–90 lb | about 490–595 lb |
+| Sugar hogshead, large (1730 Act limits) | about 630–690 L (formula below) | 1,120–1,460 lb | 130–170 lb | about 1,250–1,630 lb |
+| Molasses hogshead | 238 L, 63 gal | about 740 lb (11.75 lb/gal) | 70–90 lb | about 810–830 lb |
+| Molasses puncheon | 318 L, 84 gal | about 990 lb | open (larger cask) | open |
+| Rum hogshead | 238 L, 63 gal | 473–500 lb (0.90–0.95 kg/L) | 70–90 lb | about 545–590 lb |
+| Rum puncheon (84 gal) | 318 L | 631–666 lb | open | open |
+| Rum puncheon ("about 130 gallons", if wine gallons) | about 492 L | 976–1,031 lb | open | open |
+| Rum rundlet | 45–70 L, 12–18½ gal | 90–147 lb | open | open |
+
+**How each line is worked out:**
+- **Large cask volume:** the gauger's cask rule V = πh(2D² + d²)/12, with h = 46 in, D = 34–36 in at the bilge, and
+  d = 30 in at the head. This gives 38,700–42,100 cubic inches.
+- **Cask weight:** the outer surface of a cylinder of the same volume times the stave thickness times 770 kg/m³. That
+  is about 2.1 m² for the small cask and 4.0 m² for the large one.
+
+**Checks against the sources:**
+- **Small sugar hogshead:** two "Barbadas" hogsheads held "nine hundred weight" in the 17th century (ML). That is 450
+  lb each at 100 lb a hundredweight, or 504 lb at 112 lb. It sits inside the small cask's 420–505 lb, so the small
+  hogshead fits the 17th-century evidence.
+- **Bristol, 1752:** a hogshead of about 272 kg, roughly 600 lb (DB1), sits between the two sizes.
+- **Later average:** 1,792 lb (an 18th–19th century average, from Wikipedia without a citation) is heavier than even
+  the large estimate. Sugar hogsheads grew over the century.
+- **Cask weight:** the estimated 70–90 lb on 420–505 lb of sugar is about 14–18% of the net weight. The 1791 customs
+  rule is about 11%, so the estimate is in the same range, a little high.
+
+**Working figures for the game (proposed).** One hogshead is 63 gallons for all three goods in 1650–1730:
+- sugar about 450 lb net, about 530 lb gross;
+- molasses about 740 lb net, about 820 lb gross;
+- rum about 490 lb net, about 570 lb gross.
+
+Rex can instead pick the large hogshead for sugar if the game is set later, or let cask size grow over the game's
+timeline. Either is his choice (Open for Rex, item 8).
+
 ---
 
 ## 2. What pirates took most (source)
@@ -250,6 +317,119 @@ own civilisation. Every Type cell in Part 1 is **(proposed)**. The reasoning beh
   - cowries, manillas and voyage iron (currency goods on the West African coast).
   The sources show where these went, but not that others valued them less. That part is a judgement, not a sourced
   fact.
+
+---
+
+## 3b. Skills each good needs (proposed)
+
+Rex asked which skills each good needs (2026-10-28). The skill list is the crew skill list in `STATS.md` §2. The
+ship's duties are in `DUTIES.md`. Everything in this part is **(proposed)**.
+
+**Two kinds of skill.**
+- **Crew skills** are names already in `STATS.md` §2 (Cooperage, Cooking, Carpentry and so on). They are written
+  plainly in the table.
+- **Trade skills** are marked with a *. The work that *makes* most goods (boiling sugar, distilling, cutting logwood,
+  raking salt) has no skill in `STATS.md`. The real trades did exist, with sources: Ligon describes the sugar
+  works and the still, Dampier the logwood cutters, turtlers and salt rakers, Exquemelin the hunters and their boucan.
+  Whether these become crew skills, stay as what a settlement knows (Rex's "specialty goods: only a region with the
+  knowledge can make them"), or both, is Rex's call (Open for Rex, item 9). STATS.md belongs to another keeper and is
+  not edited here.
+
+**The four columns.**
+- **Make:** what producing the good takes, where it is made.
+- **Keep aboard:** what stops it being lost in the hold.
+- **Use on the ship:** the duty in `DUTIES.md` that uses it, if any, and the skill that duty raises.
+- **Trade:** buying and selling every good uses **Haggling**. It applies to every row, so it is not repeated in the
+  table. Other skills that touch trade:
+  - **Reading and writing**, for bills of lading and accounts;
+  - **Deception**, for smuggled goods, such as Jamaica sloops trading with the Spanish (D);
+  - the attribute **Taste and smell**, for judging wine, rum, and spoiled food or powder (STATS §1).
+
+| # | Good | Make | Keep aboard | Use on the ship |
+|---|---|---|---|---|
+| 1–3 | Muscovado, clayed, loaf sugar | Planting*, Sugar boiling* (claying is part of it, L); refining* for loaf sugar | Cooperage (the hogshead) | Cooking |
+| 4 | Molasses | by-product of Sugar boiling* | Cooperage (leaks) | raw stuff for Distilling* |
+| 5 | Rum | Distilling* (L) | Cooperage (casks leak, DUTIES "Coopering") | Mixing grog (Cooking); medicine (Surgery) |
+| 6–7 | Ginger, pimento | Planting*; drying and curing (L, EB78) | kept dry | Cooking |
+| 8 | Cotton wool | Planting* | kept dry | open (raw stuff for Weaving*) |
+| 9–10 | Indigo, annatto | Planting*, Dye making* (indigo vats) | kept dry | none |
+| 11 | Cacao | Planting*; sweating and drying (PT) | kept dry | Cooking (chocolate) |
+| 12–14 | Logwood, other dyewoods, mahogany | Woodcutting* (D: the Campeche cutters) | stowage only | Carpentry (mahogany, hardwood) |
+| 15 | Tortoise shell | Turtling* | none | none |
+| 16 | Hides | Hunting* (E2), Tanning* | none | open (leather) |
+| 17 | Tallow | Hunting*, rendering* | none | candles; greasing (open) |
+| 18 | Lime juice, aqua vitae | Planting*; Distilling* | Cooperage | Mixing grog (Cooking); Tending the sick (Surgery) |
+| 19 | Tobacco | Planting*, curing and packing* | Cooperage (hogshead) | crew comfort (open) |
+| 20 | Flour | Planting*, Milling* | Cooperage, kept dry (weevils) | Cooking |
+| 21 | Ship's biscuit | Baking* | Cooperage, kept dry; rat catching | Cooking |
+| 22–23 | Salt beef, salt pork | Butchering and salting* | Cooperage (brine) | Cooking |
+| 24 | Salt fish | Fishing; salting* | kept dry | Cooking |
+| 25–26 | Pease, oatmeal | Planting*; Milling* (oatmeal) | Cooperage | Cooking |
+| 27 | Horses | Herding* | Feeding the livestock (Cooking) | none |
+| 28–29 | Lumber, staves, shingles, hoops | Woodcutting*; Cooperage for staves and hoops | stowage only | Patching (Carpentry); Coopering (Cooperage) |
+| 30 | Rice | Planting* | Cooperage | Cooking |
+| 31 | Tar, pitch, turpentine | Tar burning* (kilns, SCN) | Cooperage | Patching and caulking (Carpentry); Checking the rigging (Seamanship) |
+| 32 | Deerskins | Hunting* | none | none |
+| 33 | Linen and woollen cloth, canvas | Weaving* | kept dry | Mending a torn sail (Sailmaking); clothes |
+| 34 | Silk, chintz, muslin | Weaving* (far away) | kept dry | none (trade and gifts) |
+| 35 | Clothing | Tailoring* | none | crew clothes (open) |
+| 36 | Iron, steel, lead, brass, pewter | Mining and smelting* | none | Smithing; lead for shot (Gunnery) |
+| 37 | Iron tools, nails | Smithing | kept dry (rust) | Carpentry, Cooperage, Patching |
+| 38 | Swords, muskets, guns | Smithing, gunsmithing* | Cleaning the guns (Gunnery) | Swordplay, Marksmanship, Gunnery |
+| 39 | Gunpowder and shot | Powder making*; shot casting (Smithing) | Keeping the powder dry (Gunnery) | Gunnery, Marksmanship |
+| 40–42 | Wine, brandy, beer | Winemaking*, Distilling*, Brewing* | Cooperage; kept cool (wine "loses its spirit" in heat, L) | crew drink; mood (open) |
+| 43 | Cheese, butter | Dairying* | Cooperage; kept cool (spoils, L) | Cooking |
+| 44 | Meal | Milling* | Cooperage, kept dry | Cooking |
+| 45 | Candles | Candle making* (from tallow) | kept cool (they fuse, L) | light (Lights out) |
+| 46 | Cordage, sailcloth, cables | Ropemaking*, Weaving* | kept dry | Checking the rigging (Seamanship); Mending a torn sail (Sailmaking); old rope → Picking oakum |
+| 47 | Combs, pins, needles | small crafts* | none | needles for Sailmaking |
+| 48 | Medicines, surgeon's chest | Apothecary* (or part of Surgery and medicine) | kept dry | Tending the sick (Surgery and medicine) |
+| 49–50 | Silver, gold, coin | Mining and smelting* (silver) | none (guarded) | the den (Gambling) |
+| 51 | Cochineal | Dye making* (rearing the insect, COC) | kept dry | none |
+| 52 | Pearls | Pearl diving* (needs Swimming) | none | none |
+| 53 | Enslaved people | Open for Rex (item 1) | — | — |
+| 54–56 | Voyage iron, cowries, manillas | Smithing (iron, brass); none for cowries | none | none |
+| 57 | Ivory | Hunting* | none | none (Tattooing? open) |
+| 59 | Salt | Salt raking* (D, TC) | kept dry | Salting* fish and meat; Cooking |
+| 60 | Turtle | Turtling* (D) | kept alive: Feeding the livestock (Cooking) | Cooking |
+| 61 | Boucan, salted boar | Hunting*, smoking and salting* (E2) | kept dry | Cooking |
+
+**What the table shows (proposed reading).**
+- **Cooperage** is needed to keep about half the goods aboard, because nearly everything travelled in a cask. Losing a
+  cooper should hurt trade.
+- **Cooking** consumes most of the base goods.
+- **Gunnery**, **Sailmaking**, **Carpentry** and **Seamanship** consume the naval stores pirates took most (Part 2).
+- Every specialty good needs a trade skill (*) that no crew skill covers yet. This fits Rex's definition of a
+  specialty: only a region with the knowledge can make it.
+
+**Trade skills used, with the goods that use them (proposed names):**
+- **Planting:** sugar, ginger, pimento, cotton, indigo, cacao, tobacco, rice, pease, and the grain for flour.
+- **Sugar boiling:** sugar and molasses.
+- **Distilling:** rum, brandy and aqua vitae.
+- **Dye making:** indigo, annatto and cochineal.
+- **Woodcutting:** logwood, mahogany and lumber.
+- **Milling:** flour, meal and oatmeal.
+- **Baking:** ship's biscuit.
+- **Butchering and salting:** salt meat and salt fish.
+- **Hunting:** hides, tallow, boucan, deerskins and ivory.
+- **Tanning:** hides.
+- **Herding:** horses.
+- **Turtling:** turtle and tortoise shell.
+- **Salt raking:** salt.
+- **Tar burning:** tar, pitch and turpentine.
+- **Weaving:** cloth and canvas.
+- **Tailoring:** clothing.
+- **Ropemaking:** cordage.
+- **Brewing:** beer.
+- **Winemaking:** wine.
+- **Dairying:** cheese and butter.
+- **Candle making:** candles.
+- **Powder making:** gunpowder.
+- **Gunsmithing:** firearms.
+- **Mining and smelting:** silver and metals.
+- **Pearl diving:** pearls.
+- **Apothecary:** medicine.
+- **Refining:** loaf sugar.
 
 ---
 
@@ -355,6 +535,20 @@ Scholarship, archives and museums:
   https://savoringthepast.net/2013/03/22/18th-century-sailors-food-ships-provisions ;
   https://botanybaymen.com/sea-provisions-equally-good-as-when-first-put-on-board
 
+Physical constants (for the cask estimates in 1j; modern references):
+- **KER**: Kentucky Equine Research, "Molasses in Feeds" (79.5° Brix, specific gravity 1.41, 11.75 lb/gallon).
+  https://ker.com/wp-content/uploads/Molasses-in-Feeds.pdf
+- **ETB**: Engineering ToolBox, "Food Products – Bulk Densities" (raw cane sugar 960, granulated 800 kg/m³).
+  https://engineeringtoolbox.com/foods-materials-bulk-density-d_1819.html
+- **TS**: Timbersource, American white oak spec sheet ("about 770 kg/m³ when dried"; used for barrel staves).
+  https://www.timbersource.co.uk/application/files/3416/7985/9262/White_American_Oak_Spec_Sheet.pdf
+- **CAN**: Canada Revenue Agency, Canadian Alcoholometric Laboratory Table 1996 (density 0.9460 at 40.61% by volume).
+  https://www.canada.ca/en/revenue-agency/services/tax/technical-information/excise-duty/tables-alcoholometry/canadian-alcoholometric-laboratory-table-1996.html
+- **NIST**: NBS Circular 19, density of ethyl alcohol and water mixtures (unverified: from a search summary).
+  https://nvlpubs.nist.gov/nistpubs/Legacy/circ/nbscircular19.pdf
+- **HAM**: Alexander Hamilton Papers, Treasury letters of 1791 on the tare for sugar in hogsheads (unverified: from a
+  search summary). https://founders.archives.gov/documents/Hamilton/01-08-02-0399
+
 Pointers (Wikipedia, used only for the sources they cite; weak):
 - **RAC**: "Royal African Company" (voyage and death totals). https://en.wikipedia.org/wiki/Royal_African_Company
 - **BAY**: "Baymen" (logwood cutters). https://en.wikipedia.org/wiki/Baymen
@@ -388,9 +582,15 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
    valued them less. Each one needs Rex's yes or no.
 7. **Names.** The game uses one name per good (glossary rule). Period words such as "kill-devil", "boucan" and "otta"
    versus plain names is Rex's choice.
+8. **Cask size.** Which standard hogshead does the game use: one 63-gallon cask for sugar, molasses and rum (proposed,
+   fits the 17th-century evidence), the large tobacco-size cask for sugar, or casks that grow over the timeline (1j)?
+9. **Trade skills (3b).** Making most goods needs a skill that `STATS.md` doesn't have (Sugar boiling, Distilling,
+   Woodcutting and the rest). Options: add some to the crew skills (Distilling and Salting fit a ship); keep them as
+   settlement knowledge, which marks the specialty goods; or both. Which names stay, merge or go?
 
 ## Change log
 
 | Date | Change | Who |
 |---|---|---|
 | 2026-10-28 | Created. Part 1: cargo table of 61 goods with routes, packages, spoilage, prices and units. Part 2: what pirates took, ranked from Johnson and Exquemelin. Part 3: base / specialty / cultural classes (proposed). Part 4: sources. Plus Open for Rex | research session (Rex to steer) |
+| 2026-10-28 | Added 1j cask estimates (sugar, molasses, rum: volume × density + oak cask) and 3b skills each good needs (crew skills from STATS.md, trade skills proposed); Open for Rex items 8–9 | research session, at Rex's request |
