@@ -315,7 +315,7 @@
     "title": "Conditional cardiovascular events (never a random roll on a healthy body)",
     "kind": "science",
     "conf": "medium",
-    "source": "Atherosclerosis develops over years (lipids, pressure, tobacco, the sugar sickness, age, inflammation damaging the endothelium); infarction follows plaque rupture or erosion with a clot blocking coronary flow (CIR-MI); arrhythmias follow electrolyte disturbance (potassium under 3.0 or over 6.0), hypoxia, drugs (NEUROLOGY: alcohol withdrawal, stimulants, quinine at high dose), scarred heart muscle; sudden death in a young crew is rare and usually structural (the one with the hidden heart). The chance formulas are placeholders; the shape is the clinical one.",
+    "source": "Atherosclerosis develops over years (lipids, pressure, tobacco, the sugar sickness, age, inflammation damaging the endothelium); infarction follows plaque rupture or erosion with a clot blocking coronary flow (CIR-MI); arrhythmias follow electrolyte disturbance (potassium under 3.0 or over 6.0), hypoxia, drugs (NEUROLOGY: alcohol withdrawal, stimulants, quinine at high dose), scarred heart muscle; sudden death in a young crew is rare and usually structural (the one with the hidden heart). The chance formulas are placeholders; the shape is the clinical one. Rex, 2026-10-29: named characters are vulnerable to these events; all the events the biology supports are in; a failure is a crisis, never a death by itself (ANATOMY 3a).",
     "columns": [
       "Event",
       "Precondition (the state it needs)",

@@ -125,6 +125,21 @@ absorption. No organ applies a penalty of its own: `BODY.md` reads organ functio
   ceiling for good; a shock that lasts hours leaves kidney damage after the volume is back; a scarred
   heart never recovers.
 
+## 3a. A failure is a crisis, not a death (Rex, 2026-10-29)
+
+- **(Rex, 2026-10-29; ChatGPT's principle, taken)** An organ failure never means death by itself. It opens
+  a **physiological crisis** whose outcome depends on severity (how far function fell), duration (the
+  ischaemia clock), the organ's remaining capacity (1 − damage) and the treatment available
+  (`MEDICINE.md` §5). Four outcomes, told apart: **temporary dysfunction** (function returns, no damage),
+  **chronic disability** (damage caps the ceiling for good), **irreversible injury** (the organ is lost or
+  near it), **death** (a vital organ under its floor for longer than the body survives). `MEDICINE.md`
+  names the crisis; this file and `CIRCULATION.md` run it; the death roll is the last branch, never the
+  first.
+- **[model] (proposed)** death comes only from: brain function under 0.2 for over 10 minutes (no oxygen,
+  no glucose, pressure, heat over 42 °C); heart output under 0.2 for over 5 minutes; both lungs under
+  0.2 for over 5 minutes; liver or kidney function under 0.1 for days (toxins); or a bleed past class IV.
+  Everything short of those is a crisis with the three other outcomes on the table.
+
 ## 4. Timescales
 
 <!-- table:anatomy.timescales -->
@@ -199,8 +214,9 @@ it; the belt's job when the rules stand is to delete the old constants.
 
 1. ~~The whole file: keep, cut, or stamp~~ stamped (Rex, 2026-10-29): structure canon, numbers placeholders.
 2. Pregnancy and birth for named characters (the reproductive row; the story keeper's with you).
-3. Which organ failures the game shows at all (the dropsy, the yellow eye, the stone) beyond the ones
-   that reach combat and work.
+3. ~~Which organ failures the game shows at all~~ decided **(Rex, 2026-10-29)**: the sim models every
+   organ failure the biology here supports; only a subset gets its own dialogue, art or treatment (the
+   story, art and medicine lanes pick which). ChatGPT's recommendation, taken by Rex.
 4. Species beyond the human profile: horses, dogs, the fish-person's gills; who writes their rows.
 5. Every constant is a placeholder for the simulator.
 
@@ -214,5 +230,6 @@ a day over 10 to 20 years; 5 to 40 years range).
 
 | Date | What | Who |
 |---|---|---|
+| 2026-10-29 | Rex: every organ failure the biology supports is simulated (a subset gets bespoke content); a failure is a crisis with four outcomes, never a death by itself (§3a) | Rex |
 | 2026-10-29 | Rex stamped the structure as his; numbers placeholders; marks updated | Rex |
 | 2026-10-29 | File opened on Rex's organ question and ChatGPT's two notes (outside AI) with its three requirements; organs (14), tissues (8), damage versus function, timescales, the species profile, the replacement table; all proposed | keeper |

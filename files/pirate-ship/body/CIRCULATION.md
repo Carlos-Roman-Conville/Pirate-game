@@ -147,7 +147,7 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
 ## 6. Conditional cardiovascular events
 
 <!-- table:circulation.events -->
-*Conditional cardiovascular events (never a random roll on a healthy body)* (science; confidence medium; source: Atherosclerosis develops over years (lipids, pressure, tobacco, the sugar sickness, age, inflammation damaging the endothelium); infarction follows plaque rupture or erosion with a clot blocking coronary flow (CIR-MI); arrhythmias follow electrolyte disturbance (potassium under 3.0 or over 6.0), hypoxia, drugs (NEUROLOGY: alcohol withdrawal, stimulants, quinine at high dose), scarred heart muscle; sudden death in a young crew is rare and usually structural (the one with the hidden heart). The chance formulas are placeholders; the shape is the clinical one.)
+*Conditional cardiovascular events (never a random roll on a healthy body)* (science; confidence medium; source: Atherosclerosis develops over years (lipids, pressure, tobacco, the sugar sickness, age, inflammation damaging the endothelium); infarction follows plaque rupture or erosion with a clot blocking coronary flow (CIR-MI); arrhythmias follow electrolyte disturbance (potassium under 3.0 or over 6.0), hypoxia, drugs (NEUROLOGY: alcohol withdrawal, stimulants, quinine at high dose), scarred heart muscle; sudden death in a young crew is rare and usually structural (the one with the hidden heart). The chance formulas are placeholders; the shape is the clinical one. Rex, 2026-10-29: named characters are vulnerable to these events; all the events the biology supports are in; a failure is a crisis, never a death by itself (ANATOMY 3a).)
 
 | Event | Precondition (the state it needs) | Daily or per-event chance (placeholder) | What happens | Damage | Visible face | Mark |
 |---|---|---|---|---|---|---|
@@ -215,8 +215,15 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
 ## Open for Rex
 
 1. ~~The whole file: keep, cut, or stamp~~ stamped (Rex, 2026-10-29): structure canon, numbers placeholders.
-2. Which cardiac events the game includes (the old captain's infarction; the dropsy; the stroke) and whether
-   named characters are fenced from them (the mortality question, `BALANCE.md` C5 32).
+2. ~~Which cardiac events, and whether named characters are fenced from them~~ decided **(Rex,
+   2026-10-29)**: all the events the biology supports (§6), and **named characters are vulnerable to
+   them**: their identities grant no biological immunity; a cardiac event opens a crisis like any organ
+   failure (`ANATOMY.md` §3a), and what follows a death is the story and fate systems' (the alignment
+   engine's fates, `COMBAT.md` §4e resurrection, the town's succession). This answers the body side of
+   `BALANCE.md` C5 32 for cardiac events; the balance keeper's reachability guarantee now reads these odds
+   as inputs, with the events' preconditions (an index built over years, a trigger) keeping a young crew's
+   risk near zero. The general fence for disease and accident deaths is still Rex's to state the same way,
+   or not.
 3. Whether the player ever sees a pulse or a colour (the surgeon's report is the proposed face).
 4. Every threshold, rate and chance is a placeholder for the simulator.
 
@@ -231,5 +238,6 @@ cell recovery after bleeding (under 40 days for a donation's worth).
 
 | Date | What | Who |
 |---|---|---|
+| 2026-10-29 | Rex: named characters are vulnerable to cardiac events (no biological immunity; the fate systems decide what follows); all events the biology supports are in | Rex |
 | 2026-10-29 | Rex stamped the structure as his; numbers placeholders; marks updated | Rex |
 | 2026-10-29 | File opened on Rex's blood-simulator idea and ChatGPT's notes (outside AI); quantities (18), bleeding classes moved in, the three delivery failures, clotting, chemistry, conditional cardiac events (8), regulation loops (7); all proposed | keeper |
