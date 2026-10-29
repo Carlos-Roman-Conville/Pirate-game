@@ -42,6 +42,7 @@ discovered ones are tracked as named characters with daily summaries; the rest a
 | Each counting muscle gets stats, split by head, trained by what you do; the gym simulator (Rex, 2026-10-29) | `COMBAT.md` §4b | `MUSCULAR.md` |
 | Organs as the reference point: fourteen organs with inputs, outputs, dependencies and cascades, eight tissues (collagen is what scurvy acts on), damage apart from function, the species profile; and the blood as the connector: the quantities, oxygen delivery, the bleeding classes, the three delivery failures, conditional cardiac events, the regulation loops; numbers placeholders (Rex, 2026-10-29) | `ANATOMY.md`, `CIRCULATION.md` | organ function and the deliveries behind every capability factor (§2) |
 | Every organ failure the biology supports is simulated, a subset gets bespoke content; a failure is a crisis with four outcomes (temporary, chronic, irreversible, death), never a death by itself; named characters are vulnerable to cardiac events, their identity grants no biological immunity, the fate systems decide what follows (Rex, 2026-10-29) | `ANATOMY.md` §3a, `CIRCULATION.md` open 2 | the death branches in §2's consciousness and the crisis outcomes; the body side of BALANCE C5 32 for cardiac events |
+| **No biological immunity for named characters**: disease, accident, weather and cardiac deaths all reach them; every death opens a crisis first (`ANATOMY.md` §3a), and the fate systems decide what follows (Rex, 2026-10-29) | `BODY.md` open 1, `MEDICINE.md` open 1, `POPULATION.md` §4 | the body side of `BALANCE.md` C5 32 is answered; the fence, if any, is the fate owners' |
 | The nervous system under the chemicals: ten signalling systems, baseline drivers, substance kinetics, the four clocks (acute, tolerance, dependence, withdrawal), eleven circuits whose outputs go to existing meters, the fence (never a slider, a memory's content or a decision); numbers placeholders (Rex, 2026-10-29) | `NEUROLOGY.md` | the arousal, coordination, attention, encoding, pain-relief, breathing, mood, fear, appetite and sleep factors (§2) |
 | The four-level adaptation model: contractile and oxidative per muscle, tendons per joint, recruitment per movement pattern (per hand, fine manipulation its own), three stimuli per activity; numbers placeholders (Rex, 2026-10-29) | `MUSCULAR.md` §5a | force in an action = contractile × recruitment × fatigue × condition, the weakest group limiting (§2) |
 | Nutrition as real calories, macros, micros, water and salt; satiation, fat gain; scurvy emergent; boosts (Rex, 2026-10-29) | `COMBAT.md` §4c | `NUTRITION.md`; the scurvy chain (§5) |
@@ -295,13 +296,14 @@ integration 5, out of 10) are its own qualitative judgement, recorded as such.
 
 ## Open for Rex (the family's list, gathered)
 
-1. **Named-character mortality** from disease, accident, weather and far-away butterflies (full, protected,
-   conditional with succession, story-only): `MEDICINE.md` open 1, `POPULATION.md` §4, `BALANCE.md` C5 32.
-   The sim runs under any of them; the balance keeper needs the answer. **Part answered (Rex,
-   2026-10-29):** named characters are vulnerable to cardiac events, with no biological immunity; whether
-   the same holds for disease, accident and weather deaths is the remaining question, and the keeper reads
-   Rex's reasoning ("their identities shouldn't grant biological immunity") as pointing the same way,
-   without assuming it.
+1. ~~**Named-character mortality**~~ **decided (Rex, 2026-10-29): no biological immunity.** Named
+   characters are as vulnerable as anyone to disease, accident, weather and cardiac deaths; every death
+   opens a crisis first (`ANATOMY.md` §3a: severity, duration, remaining capacity, treatment), and the
+   fate systems decide what follows (the alignment engine's fates, resurrection by faction, the town's
+   succession). The body docs therefore roll the odds for everyone; any protection a named character has
+   comes from the story (a scripted rescue), the surgeon, or the crew's care, never from the body. The
+   balance keeper's reachability guarantee reads these odds as inputs (`BALANCE.md` C5 32); the town and
+   story keepers own what a death does to a place and a storyline.
 2. **Replace or compute:** does muscle replace per-limb Strength or is Strength computed from it
    (`MUSCULAR.md` §8; the keeper recommends compute).
 3. **Genetic min–max per limb**, and whether groups vary inside the limb's range.
@@ -327,4 +329,5 @@ integration 5, out of 10) are its own qualitative judgement, recorded as such.
 | Date | What | Who |
 |---|---|---|
 | 2026-10-29 | File opened; the record, the capabilities, the pool, the tick order, ten chains, states of being, visible faces, levels, the gathered open list; `data/body.json` | keeper |
+| 2026-10-29 | Rex: no biological immunity for named characters (disease, accident, weather, cardiac); every death a crisis first; the fate systems decide what follows. The family's open 1 closed; balance, story and town keepers told | Rex |
 | 2026-10-29 | ChatGPT's audit (outside AI) recorded in §10: double counting, units, biology and build errors fixed across the family; its expansions (nervous system, homeostasis, full nutrients, a simulation lab) recorded as proposed for Rex | keeper |

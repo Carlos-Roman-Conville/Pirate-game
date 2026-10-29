@@ -26,9 +26,10 @@ shock run per turn (`COMBAT.md`); treatment is an action in the day (the surgeon
   (bleeding) and Constitution. The wound table uses exactly those.
 - **A lost eye halves Eyesight; a peg leg takes Agility** (`STATS.md` §1, Rex's rows): lasting wounds cap
   attributes.
-- **A crew mate can die in a fight** (Rex, 2026-10-29, `COMBAT.md` §4e). Death from disease outside a fight
-  is **not decided**: see Open for Rex 1. This file gives death risks as numbers the simulator can run
-  under whichever mortality fence Rex chooses; it fences nobody itself.
+- **A crew mate can die in a fight** (Rex, 2026-10-29, `COMBAT.md` §4e), and **(Rex, 2026-10-29) named
+  characters have no biological immunity** to disease, accident or weather deaths either: every risk here
+  applies to them; every death opens a crisis first (`ANATOMY.md` §3a); the fate systems decide what
+  follows. This file fences nobody.
 - **Constitution resists sickness, drink, wounds, seasickness** (`STATS.md`, Rex's row).
 - **Surgery and medicine** is a skill (Dexterity, Nerve; Wits, Memory, Strength) and the surgeon's chest a
   good (`../economy/GOODS.md` row 48); period remedies are goods and knowledge (`GOODS.md` §3f).
@@ -351,10 +352,10 @@ dries out of it. All **(proposed)** until Rex writes each form; the merfolk's fo
 
 ## Open for Rex
 
-1. **Named-character mortality from disease and accident.** `BALANCE.md` C5 item 32 and the combat keeper's
-   note put it to you: full mortality, protected (story deaths only), conditional with succession, or story
-   only. This file runs under any of them; the balance keeper's sim needs the answer before these risks
-   touch a town. ChatGPT favoured conditional with succession (outside AI).
+1. ~~Named-character mortality from disease and accident~~ **decided (Rex, 2026-10-29): no biological
+   immunity.** Every death risk in this file applies to named characters as to anyone; a death opens a
+   crisis first (`ANATOMY.md` §3a) and the fate systems decide what follows. `BALANCE.md` C5 item 32's
+   body side is answered; the sim reads these odds as inputs.
 2. Which diseases exist in the game at all (the pox and yaws, smallpox, consumption).
 3. Whether pain feeds Poise (Fi) or stays apart from it.
 4. Does the player learn which remedies work (hidden knowledge), or is it shown?

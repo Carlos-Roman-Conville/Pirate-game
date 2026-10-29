@@ -128,6 +128,9 @@ commands (`BALANCE.md` C5 item 23).
 | The 108 characters and their alignments | balance keeper | untouched | **Rex** |
 <!-- /table -->
 
+- **(Rex, 2026-10-29)** Named characters have no biological immunity: an epidemic this model reports can
+  reach them through `MEDICINE.md`'s exposure like anyone. This model still rolls nothing for a named
+  character; the exposure is theirs through the body docs, the fate the fate owners'.
 - **(keeper, to Rex and the keepers)** If a named character is ever to die of an epidemic this model
   reports, that is a rule in the fate owners' files (`BALANCE.md` C5 items 4, 13, 28–32: Rex's open
   decisions on mortality, succession and the reachability guarantee). This file will supply the event and
