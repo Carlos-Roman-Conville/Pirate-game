@@ -364,9 +364,8 @@ ship's duties are in `DUTIES.md`. Everything in this part is **(proposed)**.
 - **Trade skills** are marked with a *. The work that *makes* most goods (boiling sugar, distilling, cutting logwood,
   raking salt) has no skill in `STATS.md`. The real trades did exist, with sources: Ligon describes the sugar
   works and the still, Dampier the logwood cutters, turtlers and salt rakers, Exquemelin the hunters and their boucan.
-  Whether these become crew skills, stay as what a settlement knows (Rex's "specialty goods: only a region with the
-  knowledge can make them"), or both, is Rex's call (Open for Rex, item 9). STATS.md belongs to another keeper and is
-  not edited here.
+  Rex decided on one flat skill list (3c), so each of these is either a new skill or an existing one; 3c has the proposed
+  answer for every activity. STATS.md belongs to another keeper and is not edited here.
 
 **The four columns.**
 - **Make:** what producing the good takes, where it is made.
@@ -464,63 +463,56 @@ ship's duties are in `DUTIES.md`. Everything in this part is **(proposed)**.
 - **Apothecary:** medicine.
 - **Refining:** loaf sugar.
 
-## 3c. Trade professions: grouping the trade skills (proposed, Rex's notes of 2026-10-28)
+## 3c. One flat skill list (Rex, 2026-10-28)
 
-**Where this comes from.** Rex pasted a design note, not decided. It proposes:
-- **Three progression systems, kept apart:**
-  - trade skills (making, processing, keeping and carrying goods);
-  - combat classes;
-  - magic disciplines (Voodoo, necromancy, holy magic, Atlantean machinery).
+**The rule (Rex).**
+- **One skill list, no layers.** There are no professions and no profession levels, and trade skills are not kept
+  apart from crew skills. The withdrawn twelve-profession grouping was in an earlier version of this part.
+- **Skills grow by use.** Each skill levels independently when a character does the work: catching a fish raises
+  Fishing, making rum raises Distilling.
+- **One value per skill per character, shared everywhere.** The same skill counts on the ship, in a town job, in
+  exploration, in crafting and later in combat. Smithing learned in town stays when the smith joins the crew.
+- **When a new activity gets its own skill:** only if it deserves its own progression. Otherwise it uses an existing
+  skill.
 
-  This part covers only the trade skills.
-- **Twelve broad professions that level, instead of 27 narrow skills.** Narrow activities such as ropemaking,
-  candle making, sugar refining and tar burning become **techniques** inside a profession. Techniques unlock through
-  training, quests and equipment rather than levelling on their own. The note favours this, and Rex has not decided
-  it (Open for Rex, item 10).
-- **Skill level drives the simulation, not just unlocks.** Higher level means more output per production cycle, less
-  waste and better goods. Thresholds open new recipes: a novice smith makes nails, a master makes guns. The note's
-  numbers are only illustrations.
-- **The economy engine reads a worker's profession level and nothing else** about the character: not class, romance
-  or personality. This keeps the Toolchain economy package reusable (ALIGNMENT §10).
-- **Possible later documents,** none written yet:
-  - `TRADE_SKILLS.md`: the professions;
-  - `TRADE_SPECIALIZATIONS.md`: techniques and their unlocks;
-  - `PRODUCTION_RECIPES.md`: inputs, outputs, skill needed and time;
-  - `SKILL_PROGRESSION.md`: experience, efficiency, quality.
+Combat classes and magic disciplines are a later topic, not covered here.
 
-**Every trade skill from 3b placed in a profession.** "Note" means the note names the placement. "Suggested" means the
-note leaves it out and this session proposes a home; those placements are for Rex to confirm.
+**Applied to the 27 activities from 3b (proposed).** Existing skills are the ones in `STATS.md` §2. "New" means the
+activity is proposed as a skill of its own. For each line, Rex can confirm it, move it or rename it.
 
-| Profession (note) | Trade skills and techniques it takes | Goods (Part 1 rows) |
+| Activity (3b) | Skill (proposed) | Why |
 |---|---|---|
-| Agriculture | Planting (note) | sugar cane, tobacco, cotton, rice, ginger, pimento, indigo plant, cacao, pease, grain (1–2, 6–11, 19, 25, 30) |
-| Animal Husbandry | Herding, Dairying (note) | horses, cheese, butter (27, 43) |
-| Hunting & Trapping | Hunting, Turtling (note). Tanning (suggested) | hides, tallow, deerskins, boucan, ivory, turtle, tortoise shell (15–17, 32, 57, 60–61) |
-| Fishing & Diving | Fishing, Pearl diving (note). Salt raking (suggested: "marine harvesting") | salt fish, pearls, salt (24, 52, 59) |
-| Forestry | Woodcutting (note). Tar burning as a technique (note) | logwood, dyewoods, mahogany, lumber, tar, pitch (12–14, 28–29, 31) |
-| Mining & Metallurgy | Mining and smelting (note) | silver, iron and other metals (36, 49) |
-| Cooking & Preservation | Baking, Butchering and salting, smoking (note). Milling (suggested) | biscuit, salt meat, boucan, flour, meal, oatmeal (20–23, 26, 44, 61) |
-| Brewing & Distilling | Brewing, Winemaking, Distilling (note). Sugar boiling and refining (suggested: the still stood in the sugar works, L) | rum, brandy, wine, beer, aqua vitae, molasses, sugar (1–5, 18, 40–42) |
-| Textile Crafting | Weaving, Tailoring, dyeing (note). Ropemaking as a technique (note). Dye making from plants and insects (suggested) | cloth, canvas, clothing, cordage, indigo, annatto, cochineal (9–10, 33–35, 46, 51) |
-| Woodworking & Cooperage | Carpentry, Cooperage (note) | casks, staves, hoops; repairs (28, and keeping about half the goods aboard, 3b) |
-| Smithing & Gunsmithing | Smithing, Gunsmithing, shot casting (note) | tools, nails, weapons, shot, voyage iron, manillas (37–39, 54, 56) |
-| Alchemy & Apothecary | Apothecary (note). Powder making and Candle making (suggested) | medicine, gunpowder, candles (39, 45, 48) |
+| Planting, drying and curing crops (sugar cane, tobacco, cotton, indigo plant, ginger, pimento, cacao, rice, grain) | **Farming** (new) | Done every season in every farming town; makes most of the specialty goods |
+| Herding | Farming | Livestock is farm work. (DUTIES has livestock aboard under Cooking) |
+| Sugar boiling, claying, refining | **Sugar boiling** (new) | Repeated daily in the boiling house, with skill of its own (when to strike the sugar, L). It makes the biggest cash crop |
+| Distilling | **Distilling** (new) | Rum and brandy; Rex's own example |
+| Brewing, winemaking | Distilling | Both are fermenting drink. Split them out if the game wants beer or wine made in its towns |
+| Milling, baking, butchering and salting, smoking (boucan), dairying | Cooking | Food preparation and preserving |
+| Candle making | Cooking | Rendering tallow, kitchen work |
+| Hunting | **Hunting** (new) | Hides, tallow, boucan, deerskins, ivory; Rex's own example |
+| Turtling | Fishing or Hunting (Rex) | Rex's example says either; Dampier's turtlers worked from boats at sea (D) |
+| Tanning | Hunting | Small; a separate Leatherworking skill if the game wants leather goods |
+| Woodcutting, tar burning | **Woodcutting** (new) | Logwood, mahogany, lumber, tar; Rex's own example |
+| Weaving, ropemaking | **Weaving** (new) | Cloth, canvas and cordage: the naval stores pirates wanted most (Part 2) |
+| Tailoring | Sailmaking | Both are needle and palm work (STATS: Dexterity, Eyesight) |
+| Dye making (indigo vats, annatto, cochineal) | **Dyeing** (new) | Indigo, annatto and cochineal are among the most valuable goods by weight (1h); or fold into Farming |
+| Mining | **Mining** (new) | Silver and ore |
+| Smelting, gunsmithing, shot casting | Smithing | Metal work |
+| Powder making | Gunnery | The gunner kept and filled the powder (DUTIES). A separate skill only if towns make powder |
+| Pearl diving | Swimming | Already a skill |
+| Salt raking | Farming | Seasonal harvest from the salt pans (TC, D) |
+| Apothecary | Surgery and medicine | Making and giving medicine together |
+| Cooperage, carpentry, fishing, cooking, smithing | unchanged | Already skills (`STATS.md` §2) |
 
-**What the grouping doesn't settle yet:**
-- **Sugar has no profession named in the note.** It is the biggest cash crop here (rows 1–4). Brewing & Distilling is
-  only a suggestion.
-- **Overlaps with the crew skills in `STATS.md` §2** (another keeper's file; not edited here):
-  - "Woodworking & Cooperage" merges two separate crew skills, Carpentry and Cooperage.
-  - "Cooking & Preservation" contains the crew skill Cooking.
-  - "Fishing & Diving" contains Fishing, which the fishing minigame already raises.
-  - "Smithing & Gunsmithing" contains Smithing.
-  - Sailmaking (crew) and Textile Crafting (sailcloth) touch.
-  - Surgery and medicine (crew) and Alchemy & Apothecary (making medicine) touch.
-  - Swimming (crew) and Diving touch.
+**New skills this proposes:** Farming, Sugar boiling, Distilling, Hunting, Woodcutting, Weaving, Dyeing, Mining.
+That is 8, added to the 26 in `STATS.md` §2.
 
-  Rex decides between one skill list (crew skills become professions), two lists that share names, or two separate
-  lists (Open for Rex, item 11).
-- **Turtling:** the note's prose says Hunting *or* Fishing; its table puts it under Hunting.
+**What it means for the economy (proposed):**
+- A town makes a specialty good because its people have the skill (and the land or ground for it). Sugar comes from
+  towns with Farming and Sugar boiling.
+- The economy engine reads the workers' skill values and nothing else about them. This keeps the Toolchain package
+  reusable (ALIGNMENT §10).
+- `STATS.md` belongs to another keeper. These skills go into it only when Rex confirms them.
 
 ---
 
@@ -699,16 +691,11 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
    versus plain names is Rex's choice.
 8. **Cask size.** Which standard hogshead does the game use: one 63-gallon cask for sugar, molasses and rum (proposed,
    fits the 17th-century evidence), the large tobacco-size cask for sugar, or casks that grow over the timeline (1j)?
-9. **Trade skills (3b).** Making most goods needs a skill that `STATS.md` doesn't have (Sugar boiling, Distilling,
-   Woodcutting and the rest). Options: add some to the crew skills (Distilling and Salting fit a ship); keep them as
-   settlement knowledge, which marks the specialty goods; or both. Which names stay, merge or go?
-10. **How professions level (3c).** Either only the twelve broad professions level and techniques unlock through
-    training, quests and equipment (the note's preference), or specializations get levels of their own too.
-11. **Crew skills and professions (3c).** `STATS.md` §2 already has Carpentry, Cooperage, Cooking, Fishing,
-    Smithing, Sailmaking and Surgery. Do the trade professions replace them, sit beside them with shared names, or
-    stay a separate list? This needs whoever keeps STATS.md.
-12. **Unplaced trade skills (3c).** Sugar boiling and refining, Milling, Tanning, Salt raking, Dye making, Powder
-    making and Candle making: confirm or move their suggested professions.
+9. **The new skills (3c).** Confirm, rename or cut each of: Farming, Sugar boiling, Distilling, Hunting,
+   Woodcutting, Weaving, Dyeing, Mining. Also settle the open placements: Turtling (Fishing or Hunting), and Brewing
+   and winemaking, Tanning and Powder making (each either inside another skill or a skill of its own).
+10. **STATS.md.** Once confirmed, the new skills need their primary and secondary attributes and personality pull in
+    `STATS.md` §2, which belongs to another keeper.
 
 ## Change log
 
@@ -718,3 +705,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-28 | Added 1j cask estimates (sugar, molasses, rum: volume × density + oak cask) and 3b skills each good needs (crew skills from STATS.md, trade skills proposed); Open for Rex items 8–9 | research session, at Rex's request |
 | 2026-10-28 | Prices added for logwood, cochineal, tobacco, wine, cloth and iron, plus Jamaica's 1661 legal rates for sugar, cocoa and tobacco (CSP Colonial, Thorold Rogers, Posthumus, Dampier); 1h extended | research session, at Rex's request |
 | 2026-10-28 | 3c: Rex's notes on trade professions recorded (twelve broad professions, techniques inside them); every trade skill placed, gaps marked suggested; Open for Rex items 10-12 | research session, at Rex's request |
+| 2026-10-28 | 3c replaced: Rex chose one flat list of use-levelled skills shared by ship and town (professions withdrawn); each of the 27 activities mapped to an existing skill or one of 8 proposed new skills; Open for Rex items 9-12 replaced by 9-10 | research session, at Rex's request |
