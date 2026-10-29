@@ -89,7 +89,7 @@ for g in tree["groups"]:
                  "service": bool(it.get("service")), "offMap": bool(it.get("offMap")),
                  "inputs": [by_chip[x] for x in ([it["input"]] if it.get("input") else []) + it.get("inputs", [])],
                  "inputsAny": [by_chip[x] for x in it.get("inputAny", [])],
-                 "gate": it.get("gate"), "note": it.get("note", "")}
+                 "gate": it.get("gate"), "knowledge": it.get("knowledge", "common"), "note": it.get("note", "")}
             if it.get("service"):
                 r["name"] = it["name"]
             recipes.append(r)

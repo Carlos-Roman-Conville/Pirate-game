@@ -710,6 +710,39 @@ service. Ports, companies, ships and routes are not data yet (ALIGNMENT §10).
 
 ---
 
+## 3f. Knowledge apart from skill (Rex, 2026-10-29; recorded from his notes, nothing built)
+
+**The idea (Rex).** A character has three separate things: an **occupation** (what they are known for, 3d), a
+**skill** (how well they do it, 0–100, 3c), and **knowledge** (which recipes and techniques they know). Only the
+skill has a number. A Master distiller who has never seen arrack cannot make it until someone teaches him the
+recipe; once taught, his skill makes him good at it at once. An apprentice may know the recipe and still fail it.
+
+**A recipe then needs four things:** the knowledge, the minimum band, the materials, and the facility (equipment) in
+the settlement. That is Rex's recipe rule of 3c with knowledge added.
+
+**Where knowledge comes from (Rex):** a character has it at the start, or is taught it by another character, or
+learns it from a written recipe or blueprint the town holds. Written knowledge survives the character; unwritten
+knowledge dies with its only holder, which is a reason to keep people alive and to collect books.
+
+**Far-travelled merchants (Rex).** Some characters are merchants back from other continents, in the Argosy style,
+who bring select foreign goods and, with them, recipes and techniques (pepper and a spice-preserving recipe; silk
+and a weaving technique; arrack and its distillation; foreign blades and a bladesmith's method). They hint at later
+expansions set in those regions (the Asian pirates and others) without opening them. Which items: select, Rex's
+choice, not decided.
+
+**Balance for expansions (Rex's reading, recorded).** Skills carry over; a Master stays a Master. A new region's
+challenge is new knowledge, new resources and new facilities, not re-levelling the same skill. A foreign recipe is
+not harder because it is foreign.
+
+**What this does to the data (proposed).** Each recipe carries a `knowledge` field: `common` (every tradesman of the
+skill knows it in the Caribbean), `learned` (must be taught or read: the chemical medicines, fine blades, the
+surgeon's chest), or `foreign` (comes only with a traveller or a book from another continent: arrack, silk,
+porcelain, the Asian spices' uses). The engine checks knowledge before band. The field is set `common` everywhere
+now; the research pass on spices and drinks (3g, pending) will mark the first foreign ones. Which recipes are
+`learned` is Rex's call; the sources say only which trades were apprenticed, not which recipes were secret.
+
+---
+
 ## 4. Sources
 
 Primary or period works:
@@ -915,3 +948,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-28 | The medical split, checked against Campbell 1747 and the companies: Surgery, Apothecary, Physic; service chips for skills that make no goods; physic garden on Farming; Physician, Druggist, Midwife occupations | Rex (decision); research session |
 | 2026-10-29 | Rex reviewed the dashboard: the 40 skills, placements and occupations stand as the working set | Rex |
 | 2026-10-29 | 3e: the data files generated under data/pirate-ship/economy/ (goods, skills, recipes, occupations) by build-economy-data.py; six glossary terms | research session, at Rex's request |
+| 2026-10-29 | 3f: knowledge apart from skill, recipes with a knowledge field (common / learned / foreign), far-travelled merchants as the source of foreign goods and recipes, expansion balance by knowledge, resources and facilities (Rex's notes; recorded, nothing built) | Rex (direction); research session |

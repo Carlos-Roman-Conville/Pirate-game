@@ -40,7 +40,8 @@
     "unsourced": "Rex's addition with no period source found; a design good, not a historical record",
     "inputAny": "one of several inputs will do (a ropewalk spins its own yarn from raw fibre, or takes a spinner's)",
     "inputs": "every listed input is needed (gunpowder takes all three)",
-    "service": "a service, not a traded good: the skill is used on people or ships, and the chip shows what that level can do"
+    "service": "a service, not a traded good: the skill is used on people or ships, and the chip shows what that level can do",
+    "knowledge": "common = every tradesman of the skill knows it here; learned = must be taught or read; foreign = comes only with a far-travelled merchant or a book from another continent (Rex, 2026-10-29). Unset means common"
   },
   "groups": [
     {

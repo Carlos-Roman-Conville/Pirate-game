@@ -7,7 +7,7 @@ reads the design record (`files/pirate-ship/economy/skill-tree.json` and `GOODS.
 |---|---|
 | `goods.json` | `rows`: the 65 cargo rows of GOODS.md with their sourced kind, route, package, spoilage, price text and type. `goods`: the engine's goods, one per recipe output (174), each with its row, type (base / specialty / cultural, marked proposed), off-map flag, mark and the skill that makes it. `basePrice` is null everywhere: the balance lane sets it. |
 | `skills.json` | The 40 goods skills (5 gathering, 35 crafting), Rex's five bands, and the recipe rule (materials + equipment + a minimum band; skill never creates a material). |
-| `recipes.json` | 183 recipes: output good, skill, band and minimum level, inputs (all needed) and `inputsAny` (one will do), off-map flag, Swimming gate, and 9 services that make no good. |
+| `recipes.json` | 183 recipes: output good, skill, band and minimum level, inputs (all needed) and `inputsAny` (one will do), off-map flag, Swimming gate, `knowledge` (common / learned / foreign: a character must know a recipe before the band counts, GOODS.md 3f), and 9 services that make no good. |
 | `occupations.json` | 41 period labels over the skills (Mariner, Cooper, Chymist…), each with its evidence; labels level nothing and grant nothing. |
 
 Marks on every good: `source` (a period record, GOODS.md Part 4), `proposed` (placement for Rex), `unsourced` (Rex's
