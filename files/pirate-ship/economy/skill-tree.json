@@ -113,6 +113,12 @@
               "note": "picked green and sun-dried, kept from the dew (EB78)"
             },
             {
+              "good": 10,
+              "name": "Annatto (seed)",
+              "band": "journeyman",
+              "note": "the crop; the paste is Dye Making (D)"
+            },
+            {
               "good": 11,
               "name": "Cacao, sweated and dried",
               "band": "journeyman",
