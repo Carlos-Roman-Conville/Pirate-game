@@ -477,32 +477,45 @@ ship's duties are in `DUTIES.md`. Everything in this part is **(proposed)**.
 
 Combat classes and magic disciplines are a later topic, not covered here.
 
-**The condensed list (proposed, 2026-10-28; Rex: 34 was far too many).** The economy needs only the skills that
-make goods. Of the 26 in `STATS.md` §2, 20 are ship, combat and social skills the economy never reads. The goods
-need **13 skills**, 6 of them already in `STATS.md`: five gathering, eight crafting.
+**The condensed list.** The economy needs only the skills that make goods. Of the 26 in `STATS.md` §2, 20 are ship,
+combat and social skills the economy never reads. A first cut (2026-10-28) gave 13 goods skills. Rex then split four
+out of Farming and added one (Rex, 2026-10-28, from his notes): the rule is **what the person knows how to make, not
+which equipment they use**. Gathering a thing and processing it are separate skills when the expertise differs.
+**Swimming is a gate, not a goods skill:** it lets a character into water of a certain depth (pearls), and makes nothing.
 
-| Group | Skill | In STATS.md? | Folded into it (one-offs by Rex's rule) |
+| Group | Skill | In STATS.md? | What it covers (one-offs folded in) |
 |---|---|---|---|
-| Gathering | Farming | new | herding, salt raking, curing and packing, dye-making from the crop (indigo vats, cochineal) |
-| Gathering | Hunting | new | tanning, boucan smoking |
-| Gathering | Fishing | yes | the salt-fish cure, turtling, pearl diving |
-| Gathering | Woodcutting | new | riving staves and shingles, tar burning, the dyewood camps |
-| Gathering | Mining | new | smelting to bar metal, silver refining (all off-map in this period) |
-| Crafting | Cooking | yes | milling, baking, butchering and salting, dairying, tallow candles, chocolate |
-| Crafting | Sugar boiling | new | claying; refining (off-map) |
-| Crafting | Distilling | new | brewing, winemaking (off-map) |
-| Crafting | Smithing | yes | hoops, shot casting, gunsmithing; cannon founding (off-map) |
+| Gathering | Farming | new | crops only: planting, harvest, curing and packing; the dye plants and flowers as crops |
+| Gathering | Animal Husbandry | new (Rex) | breeding and keeping livestock; milk, wool, farm hides; the turtle crawls |
+| Gathering | Marine Gathering | new (Rex) | the shore: salt pans, shells, pearls (Swimming gate), seaweed |
+| Gathering | Hunting | new | wild cattle, hogs, deer; hides, tallow, boucan; tanning |
+| Gathering | Fishing | yes | the catch, the salt-fish cure, turtling at sea |
+| Gathering | Woodcutting | new | felling, riving, the dyewood camps, tar burning |
+| Gathering | Mining | new | ore, bar metal, silver refining (all off-map in the period) |
+| Crafting | Cooking | yes | milling, baking, butchering and salting, dairying, candles, chocolate |
+| Crafting | Sugar boiling | new | the boiling house: molasses, muscovado, clayed; refining off-map |
+| Crafting | Dye Making | new (Rex) | the vats and the dye bath: indigo, annatto, cochineal; dyeing cloth |
+| Crafting | Distilling | new | the still: rum, aqua vitae; beer and wine off-map |
+| Crafting | Perfumery | new (Rex) | extraction and blending: fragrant oils, perfume |
+| Crafting | Smithing | yes | nails, hoops, tools, blades, shot; gunsmithing at the top |
 | Crafting | Carpentry | yes | sawing, joinery |
-| Crafting | Cooperage | yes | slack and tight work as its tiers |
-| Crafting | Weaving | new | ropemaking, tailoring, dyeing cloth |
+| Crafting | Cooperage | yes | slack and tight casks as its tiers |
+| Crafting | Weaving | new | spinning, weaving, rope, tailoring |
 | Crafting | Surgery and medicine | yes | the apothecary |
 
-Seven new skills: Farming, Hunting, Woodcutting, Mining, Sugar boiling, Distilling, Weaving. Mining and Weaving are
-nearly all off-map in the period (Spanish silver, Swedish iron, European cloth): Rex can cut them and treat those
-goods as imported only, which would leave 11.
+**17 skills, 11 new.** Perfumery and the two goods it needs (aromatic flowers, perfume) and seaweed are Rex's
+additions with no period Caribbean source; they are marked unsourced in `skill-tree.json` and listed as rows 62–63
+below. Mining and Weaving are nearly all off-map; Rex can cut them and treat those goods as imported only.
+
+**Rows added by Rex (unsourced, 2026-10-28):**
+
+| # | Good | Kind | Skill | Note |
+|---|---|---|---|---|
+| 62 | Aromatic flowers and herbs; fragrant oils; perfume | raw → manufactured | Farming → Perfumery | No period Caribbean trade found. A cultural or specialty good for one region: a flower-growing region and a perfume-making region give a reason to trade |
+| 63 | Seaweed | raw | Marine Gathering | No period trade found; use open |
 
 **Where each good sits: `skill-tree.json` and `skill-tree.html`** (this folder). Every one of the 61 goods is placed
-on one of these 13 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
+on one of these 17 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
 Master 100), with a one-line reason and the good it needs from another tree (sugar cane → molasses → rum; rived
 staves → dressed staves → tight cask). The JSON is the source; `build-skill-tree.py` rebuilds the HTML, which opens in
 any browser with no server. Goods made outside the Caribbean in the period are flagged off-map. Four goods have no
@@ -730,9 +743,9 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
    versus plain names is Rex's choice.
 8. **Cask size.** Which standard hogshead does the game use: one 63-gallon cask for sugar, molasses and rum (proposed,
    fits the 17th-century evidence), the large tobacco-size cask for sugar, or casks that grow over the timeline (1j)?
-9. **The 13 skills (3c, `skill-tree.json`).** Confirm, rename or cut each of the seven new ones: Farming, Hunting,
-   Woodcutting, Mining, Sugar boiling, Distilling, Weaving. Mining and Weaving can go if their goods are imported
-   only. Then the placements: every chip on the dashboard is a proposal; move any good to another tree or band.
+9. **The 17 skills (3c, `skill-tree.json`).** Rex's split stands provisionally. Still to confirm: the seven earlier new
+   ones (Farming, Hunting, Woodcutting, Mining, Sugar boiling, Distilling, Weaving), whether Mining and Weaving go,
+   and every placement on the dashboard. The Swimming gate level for pearls is open.
 10. **STATS.md.** Once confirmed, the new skills need their primary and secondary attributes and personality pull in
     `STATS.md` §2, which belongs to another keeper.
 
@@ -746,3 +759,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-28 | 3c: Rex's notes on trade professions recorded (twelve broad professions, techniques inside them); every trade skill placed, gaps marked suggested; Open for Rex items 10-12 | research session, at Rex's request |
 | 2026-10-28 | 3c replaced: Rex chose one flat list of use-levelled skills shared by ship and town (professions withdrawn); each of the 27 activities mapped to an existing skill or one of 8 proposed new skills; Open for Rex items 9-12 replaced by 9-10 | research session, at Rex's request |
 | 2026-10-28 | Condensed to 13 goods skills (5 gathering, 8 crafting; 7 new), one-offs folded in; every good placed on a tree and band in `skill-tree.json`, dashboard `skill-tree.html` built by `build-skill-tree.py` | research session, at Rex's request |
+| 2026-10-28 | Rex's split: Animal Husbandry, Marine Gathering, Dye Making out of Farming; Perfumery added; Swimming a gate. 17 skills; rows 62–63 added unsourced; trees and dashboard rebuilt | Rex (decision); research session |

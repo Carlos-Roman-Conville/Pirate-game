@@ -143,6 +143,7 @@
     document.getElementById('detail').innerHTML =
       '<b>' + it.name + '</b> <span class="muted">(GOODS.md row ' + it.good + ')</span> · ' + s.name + ', ' + b.name + ' ' + b.range
       + (it.offMap ? ' · <span class="muted">off-map in this period</span>' : '')
+      + (it.gate ? ' · <span class="muted">gate:</span> ' + it.gate : '')
       + '<br>' + it.note
       + (inp ? '<br><span class="muted">needs:</span> ' + inp.it._skill.name + ': ' + inp.it.name : (it.input ? '<br><span class="muted">needs:</span> ' + it.input : ''))
       + (uses.length ? '<br><span class="muted">used by:</span> ' + uses.join('; ') : '');

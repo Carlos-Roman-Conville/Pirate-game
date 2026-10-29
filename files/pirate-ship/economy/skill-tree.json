@@ -1,6 +1,6 @@
 {
   "title": "Pirate Ship: goods on the skill trees (proposed)",
-  "status": "proposed, 2026-10-28; every placement is for Rex to confirm, move or cut",
+  "status": "Rex's split of 2026-10-28 applied (Farming, Animal Husbandry, Marine Gathering, Dye Making, Perfumery; Swimming is a gate, not a goods skill); placements still proposed",
   "bands": [
     {
       "key": "novice",
@@ -35,20 +35,21 @@
   ],
   "flags": {
     "offMap": "made outside the game's Caribbean in this period (Europe, Asia, Africa, the Spanish mainland); the skill tree says where it would sit if a town ever makes it",
-    "input": "needs a good from another skill (the chain the economy follows)"
+    "input": "needs a good from another skill (the chain the economy follows)",
+    "gate": "needs another skill at some level to reach the place (Swimming for depth); that skill makes nothing"
   },
   "groups": [
     {
       "key": "gathering",
       "name": "Gathering",
-      "note": "Skills that take goods from land and sea. Raw goods come from here.",
+      "note": "Skills that take goods from land and sea. Raw goods come from here. Swimming is a gate for depth, not a goods skill.",
       "skills": [
         {
           "key": "farming",
           "name": "Farming",
           "existing": false,
-          "covers": "planting, harvest, curing and packing crops; livestock; salt raking; dye-making from the crop (indigo vats, cochineal rearing)",
-          "why": "Every plantation crop is farm work. Dye-making stays here because the indigo vats stood on the plantation (Ligon, Dampier) and cochineal is an insect reared on cactus (COC).",
+          "covers": "planting, harvest, curing and packing crops; the dye plants and flowers as crops",
+          "why": "Crop cultivation only (Rex, 2026-10-28). Livestock, salt, dye-making and perfume have skills of their own.",
           "items": [
             {
               "good": 25,
@@ -61,18 +62,6 @@
               "name": "Grain for meal and flour",
               "band": "novice",
               "note": "planting and reaping; milling is Cooking"
-            },
-            {
-              "good": 59,
-              "name": "Salt (raked)",
-              "band": "novice",
-              "note": "sun does the work; raking the pans was ordinary labour (D, TC)"
-            },
-            {
-              "good": 27,
-              "name": "Horses and livestock",
-              "band": "novice",
-              "note": "herding; horses went from New England at about £12 each (PY)"
             },
             {
               "good": 8,
@@ -123,12 +112,6 @@
               "note": "picked green and sun-dried, kept from the dew (EB78)"
             },
             {
-              "good": 10,
-              "name": "Annatto",
-              "band": "journeyman",
-              "note": "seed pulp worked into a dye paste (D)"
-            },
-            {
               "good": 11,
               "name": "Cacao, sweated and dried",
               "band": "journeyman",
@@ -136,16 +119,109 @@
             },
             {
               "good": 9,
-              "name": "Indigo",
-              "band": "expert",
-              "note": "steeping, beating and judging the cut in the vats: a known skilled job (C88, D)"
+              "name": "Indigo plant (grown and cut)",
+              "band": "apprentice",
+              "note": "the crop; the vats are Dye Making"
             },
             {
               "good": 51,
-              "name": "Cochineal",
-              "band": "expert",
+              "name": "Nopal and cochineal (reared)",
+              "band": "journeyman",
               "offMap": true,
-              "note": "rearing the insect on nopal in Oaxaca, a trade Spain kept secret (COC)"
+              "note": "the insect reared on the cactus in Oaxaca (COC); the dye is Dye Making"
+            },
+            {
+              "good": 62,
+              "name": "Aromatic flowers and herbs",
+              "band": "apprentice",
+              "note": "Rex's addition: a crop for Perfumery. No period Caribbean source; marked unsourced"
+            }
+          ]
+        },
+        {
+          "key": "husbandry",
+          "name": "Animal Husbandry",
+          "existing": false,
+          "covers": "breeding, feeding and keeping livestock; milk, wool, farm hides",
+          "why": "Split from Farming (Rex, 2026-10-28): keeping animals is its own expertise. Wild cattle and hogs stay with Hunting.",
+          "items": [
+            {
+              "good": 27,
+              "name": "Horses",
+              "band": "journeyman",
+              "note": "bred in New England and shipped at about £12 each (PY)"
+            },
+            {
+              "good": 22,
+              "name": "Cattle and hogs (farm)",
+              "band": "apprentice",
+              "note": "the meat for Cooking's salt beef and pork"
+            },
+            {
+              "good": 43,
+              "name": "Milk",
+              "band": "apprentice",
+              "note": "for Cooking's cheese and butter"
+            },
+            {
+              "good": 16,
+              "name": "Hides (farm)",
+              "band": "novice",
+              "note": "from slaughtered farm stock; wild hides are Hunting"
+            },
+            {
+              "good": 33,
+              "name": "Wool",
+              "band": "apprentice",
+              "offMap": true,
+              "note": "English sheep; no Caribbean flock in the sources"
+            },
+            {
+              "good": 60,
+              "name": "Turtle crawls (kept live)",
+              "band": "apprentice",
+              "note": "penned at Port Royal until sold (D); catching them is Fishing"
+            }
+          ]
+        },
+        {
+          "key": "marine",
+          "name": "Marine Gathering",
+          "existing": false,
+          "covers": "the shore and the shallows: salt pans, shells, pearls, seaweed",
+          "why": "Split from Farming (Rex, 2026-10-28). Pearls sit here with a Swimming gate for the depth, not a skill of their own.",
+          "items": [
+            {
+              "good": 59,
+              "name": "Salt (raked)",
+              "band": "novice",
+              "note": "sun does the work; raking the pans was ordinary labour (D, TC)"
+            },
+            {
+              "good": 52,
+              "name": "Pearls (dived)",
+              "band": "expert",
+              "gate": "Swimming",
+              "note": "the Rancheria banks; needs Swimming for the depth (E)"
+            },
+            {
+              "good": 15,
+              "name": "Tortoise shell",
+              "band": "journeyman",
+              "note": "the hawksbill's plates (method open)"
+            },
+            {
+              "good": 55,
+              "name": "Cowries and shells",
+              "band": "novice",
+              "offMap": true,
+              "note": "Maldives shells, a currency (UWF)"
+            },
+            {
+              "good": 63,
+              "name": "Seaweed",
+              "band": "novice",
+              "note": "Rex's addition; no period trade in the sources, marked unsourced"
             }
           ]
         },
@@ -199,8 +275,8 @@
           "key": "fishing",
           "name": "Fishing",
           "existing": true,
-          "covers": "the catch; the salt-fish cure on the beach; turtling; diving for pearls and shell",
-          "why": "Already a skill with its own minigame. Turtling goes here, not Hunting: Dampier's turtlers worked from sloops at sea (D). Pearl diving goes here rather than Swimming because it is a fishery.",
+          "covers": "the catch; the salt-fish cure on the beach; turtling at sea",
+          "why": "Already a skill with its own minigame. Turtling is netting at sea from sloops (D), so it stays here; shells and pearls are Marine Gathering.",
           "items": [
             {
               "good": 60,
@@ -219,25 +295,6 @@
               "name": "Turtle, live",
               "band": "apprentice",
               "note": "netted at the Caymans and kept alive in crawls at Port Royal (D, HA)"
-            },
-            {
-              "good": 15,
-              "name": "Tortoise shell",
-              "band": "journeyman",
-              "note": "the hawksbill's plates, lifted with heat (open: method not sourced)"
-            },
-            {
-              "good": 52,
-              "name": "Pearls",
-              "band": "expert",
-              "note": "diving the Rancheria banks; a Dutch pearl vessel was worth 100,000 pieces of eight (E)"
-            },
-            {
-              "good": 55,
-              "name": "Cowries",
-              "band": "novice",
-              "offMap": true,
-              "note": "gathered in the Maldives; a currency, not a craft (UWF)"
             }
           ]
         },
@@ -381,14 +438,14 @@
               "good": 22,
               "name": "Salt beef and pork",
               "band": "apprentice",
-              "input": "farming:Horses and livestock",
+              "input": "husbandry:Cattle and hogs (farm)",
               "note": "cut, brined and packed in barrel; a short barrel was noticed (PY)"
             },
             {
               "good": 43,
               "name": "Cheese and butter",
               "band": "journeyman",
-              "input": "farming:Horses and livestock",
+              "input": "husbandry:Milk",
               "note": "dairying; spoils in the heat (L), so an off-map import in practice"
             },
             {
@@ -439,6 +496,44 @@
           ]
         },
         {
+          "key": "dye",
+          "name": "Dye Making",
+          "existing": false,
+          "covers": "the vats and the dye bath: indigo, annatto, cochineal; dyeing cloth",
+          "why": "Its own trade (Rex, 2026-10-28): extraction, fermentation, mordants and colour. Farming grows the plant, Dye Making makes the dye and colours the cloth.",
+          "items": [
+            {
+              "good": 10,
+              "name": "Annatto dye",
+              "band": "apprentice",
+              "input": "farming:Annatto (seed)",
+              "note": "seed pulp worked to a paste (D)"
+            },
+            {
+              "good": 9,
+              "name": "Indigo dye",
+              "band": "journeyman",
+              "input": "farming:Indigo plant (grown and cut)",
+              "note": "steeping, beating and judging the cut (C88, D)"
+            },
+            {
+              "good": 51,
+              "name": "Cochineal dye",
+              "band": "expert",
+              "offMap": true,
+              "input": "farming:Nopal and cochineal (reared)",
+              "note": "killing and drying the insect; 18–45s a pound in London (TR)"
+            },
+            {
+              "good": 33,
+              "name": "Dyed cloth",
+              "band": "journeyman",
+              "input": "weaving:Coarse linen (dowlas, osnaburg)",
+              "note": "the dye bath with a mordant; needs a dye from this tree too"
+            }
+          ]
+        },
+        {
           "key": "distilling",
           "name": "Distilling",
           "existing": false,
@@ -481,6 +576,29 @@
               "offMap": true,
               "input": "distilling:Wine",
               "note": "distilled wine; thirty casks in one prize (J)"
+            }
+          ]
+        },
+        {
+          "key": "perfumery",
+          "name": "Perfumery",
+          "existing": false,
+          "covers": "aromatic extraction, blending, fixing a scent",
+          "why": "Rex's addition (2026-10-28), kept apart from Distilling: a rum distiller is not a perfumer. No Caribbean perfume trade in the period sources; the goods are marked unsourced.",
+          "items": [
+            {
+              "good": 62,
+              "name": "Fragrant oils and waters",
+              "band": "journeyman",
+              "input": "farming:Aromatic flowers and herbs",
+              "note": "unsourced for the Caribbean; a cultural good if one region prizes it"
+            },
+            {
+              "good": 62,
+              "name": "Perfume",
+              "band": "expert",
+              "input": "perfumery:Fragrant oils and waters",
+              "note": "unsourced; the finished luxury"
             }
           ]
         },
@@ -614,7 +732,7 @@
           "key": "weaving",
           "name": "Weaving",
           "existing": false,
-          "covers": "spinning and weaving; rope; tailoring; dyeing the cloth",
+          "covers": "spinning and weaving; rope; tailoring",
           "why": "Cloth, canvas and cordage were the naval stores pirates took most (Part 2). Ropemaking and tailoring are folded in as one-offs. Nearly all of it is off-map: the colonies imported cloth (L, BR).",
           "items": [
             {
@@ -651,14 +769,6 @@
               "band": "journeyman",
               "offMap": true,
               "note": "10s–23s 6d a yard (TR); duffels for the Indian trade (CSP)"
-            },
-            {
-              "good": 33,
-              "name": "Dyed cloth",
-              "band": "journeyman",
-              "offMap": true,
-              "input": "farming:Indigo",
-              "note": "the dyer's vat; indigo and cochineal are the dyes"
             },
             {
               "good": 33,
