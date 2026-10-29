@@ -1,6 +1,6 @@
 {
   "_about": "Built by files/pirate-ship/economy/build-economy-data.py from skill-tree.json and GOODS.md. Do not edit by hand. Marks: source = a period record (GOODS.md Part 4); proposed = this session's placement for Rex; unsourced = Rex's design addition with no period source; estimate = worked out from sourced inputs (GOODS.md 1j). basePrice is null everywhere: the balance lane sets it; the sourced price text is beside it. The five per-settlement numbers (stock, consumption per day, target reserve, production per day, base price) belong to a ports file that does not exist yet (ALIGNMENT §10).",
-  "reviewed": "Reviewed by Rex 2026-10-29 ('looks good'): the 40 skills, the placements and the occupations stand as the working set. 2026-10-29: spices, drugs, island foods and drinks added from the research (Brewing apart from Distilling, Rex 2026-10-29; imported-only goods listed). Later moves go through this JSON; the record of each split is in GOODS.md 3c and 3d.",
+  "reviewed": "Reviewed by Rex 2026-10-29 ('looks good'): the 40 skills, the placements and the occupations stand as the working set. 2026-10-29: spices, drugs, island foods and drinks added from the research (Brewing apart from Distilling, Rex 2026-10-29; imported-only goods listed). Later moves go through this JSON; the record of each split is in GOODS.md 3c and 3d. 2026-10-29: the rest of the Atlantic world added (GOODS.md 1l); origins tagged.",
   "rowsNote": "rows = the 65 cargo rows of GOODS.md Part 1 with their sourced kind, route, package, spoilage, price and type; goods = the engine's goods, one per recipe output, each pointing at its row",
   "rows": [
     {
@@ -974,6 +974,630 @@
       "type": "specialty",
       "sources": "SD",
       "typeMark": "proposed"
+    },
+    {
+      "row": 82,
+      "name": "Gum arabic",
+      "kind": "raw (acacia exudate)",
+      "route": "West Africa: Senegal river escales → France, Holland (dyeing, calico printing)",
+      "package": "quintal",
+      "spoils": "no",
+      "value": "the French took 5,000 + 2,000 quintals a year; price open",
+      "type": "specialty",
+      "sources": "AF",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 83,
+      "name": "Beeswax",
+      "kind": "raw",
+      "route": "West Africa: Senegal, Gambia, Sierra Leone, Gabon → Europe (candles); \"there is always abundance of wax\" (Barbot)",
+      "package": "cwt",
+      "spoils": "no",
+      "value": "bought with brandy, knives, iron bars; price open",
+      "type": "base",
+      "sources": "AF",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 84,
+      "name": "Malaguetta pepper (grains of paradise)",
+      "kind": "raw seed",
+      "route": "West Africa: the Grain Coast, Rio Sestro → Bristol, London (a pepper substitute; ships' relish)",
+      "package": "lb",
+      "spoils": "no",
+      "value": "\"three hundred weight of it at Sestro for one bar of iron\"",
+      "type": "specialty",
+      "sources": "AF",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 85,
+      "name": "Camwood",
+      "kind": "raw dyewood",
+      "route": "West Africa: Sherbro, Cape Lopez → London dyers",
+      "package": "tun",
+      "spoils": "no",
+      "value": "\"about twenty five or thirty shillings per tun\" at Cape Lopez",
+      "type": "specialty",
+      "sources": "AF",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 86,
+      "name": "Benin and Allada cloth",
+      "kind": "manufactured (cotton, striped blue and white)",
+      "route": "West Africa: Benin → Dutch ships → the Gold Coast (for gold) and Angola",
+      "package": "piece",
+      "spoils": "open",
+      "value": "about 16,000 pieces a year mid-century (secondary)",
+      "type": "cultural",
+      "sources": "AF",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 87,
+      "name": "Palm oil",
+      "kind": "raw (pressed)",
+      "route": "West Africa: Whydah, Calabar → ships (slave food, anointing); small export",
+      "package": "pot, jar",
+      "spoils": "goes rancid: open",
+      "value": "\"cheaper at Whidaw\" than Cape Coast (Phillips)",
+      "type": "base",
+      "sources": "AF",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 88,
+      "name": "Kola nuts",
+      "kind": "raw",
+      "route": "West Africa: Sierra Leone forest → Senegambia and the Sahel (chewed with salt and malaguetta; a gift)",
+      "package": "basket",
+      "spoils": "open",
+      "value": "open",
+      "type": "cultural",
+      "sources": "AF",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 89,
+      "name": "Loango copper; raffia cloth (libongo); redwood (takula); elephants' tails",
+      "kind": "raw / manufactured",
+      "route": "West-Central Africa: Loango, Mayumba, Kongo → Dutch, Luanda; libongo and macute were money at Luanda",
+      "package": "weight; cloth of 4 pieces; log; 100 hairs",
+      "spoils": "no",
+      "value": "\"an hundred hairs ... a thousand Reis, or six shillings\"; ivory 5 libongos a lb; others open",
+      "type": "cultural",
+      "sources": "AF",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 90,
+      "name": "Cape Verde panos (strip cloth)",
+      "kind": "manufactured (indigo and white strip-weave)",
+      "route": "Atlantic islands: Santiago, Fogo → the Rivers of Guinea, Senegal, Gambia as currency for slaves",
+      "package": "pano",
+      "spoils": "open",
+      "value": "open",
+      "type": "cultural",
+      "sources": "AF, SB",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 91,
+      "name": "Orchil (urzela)",
+      "kind": "raw dye lichen",
+      "route": "Atlantic islands: Cape Verde, Canaries → Lisbon (a crown monopoly)",
+      "package": "open",
+      "spoils": "no",
+      "value": "1650–1730 price open",
+      "type": "specialty",
+      "sources": "AF, EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 92,
+      "name": "Coast provisions: Indian corn and millet, yams, palm wine, dried fish, goats, fowls",
+      "kind": "raw",
+      "route": "West Africa: Fante, Saboe, Whydah, Calabar → slave ships (Phillips loaded 700 chests of corn)",
+      "package": "chest, basket, anchor",
+      "spoils": "days",
+      "value": "palm wine 2s 3d per 5-gallon anchor; yams 14s a hundred; a goat 12–13s (Bosman)",
+      "type": "base",
+      "sources": "AF",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 93,
+      "name": "Trade beads: bugles, rangoes (carnelian), coral, amber",
+      "kind": "manufactured / raw",
+      "route": "Europe: Venice, Amsterdam, Genoa, Danzig, Cambay → the whole coast",
+      "package": "bunch, cluster, ounce",
+      "spoils": "no",
+      "value": "open",
+      "type": "cultural",
+      "sources": "AF",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 94,
+      "name": "Brass basins, kettles and pans (battery ware); copper bars",
+      "kind": "manufactured",
+      "route": "Europe: Bristol, Birmingham, Aachen → Whydah (cut into bracelets), Calabar, Senegal",
+      "package": "by weight; bar about 3 ft, 1¼ lb",
+      "spoils": "no",
+      "value": "copper bars \"from eighteen-pence to two shillings a-piece\" (Barbot); 1 iron bar = 4 copper bars at Calabar",
+      "type": "base",
+      "sources": "AF",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 95,
+      "name": "Ready-made clothing and hats",
+      "kind": "manufactured",
+      "route": "Europe: London → Barbados (a regiment's supply, 1668), Virginia (1693)",
+      "package": "—",
+      "spoils": "open",
+      "value": "hat 3s; shoes 2s 4d a pair; shirt 2s 6d; cravat 6d (1668)",
+      "type": "base",
+      "sources": "EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 96,
+      "name": "Earthenware, Delftware, glass bottles, window glass",
+      "kind": "manufactured",
+      "route": "Europe: England, Delft (about 30 factories c. 1640–1740) → the colonies",
+      "package": "crate",
+      "spoils": "breaks",
+      "value": "open",
+      "type": "base",
+      "sources": "EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 97,
+      "name": "Paper, books",
+      "kind": "manufactured",
+      "route": "Europe: England, the Zaan, Angoumois → the colonies",
+      "package": "ream",
+      "spoils": "damp",
+      "value": "open",
+      "type": "base",
+      "sources": "EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 98,
+      "name": "Soap (Castile), wax candles",
+      "kind": "manufactured",
+      "route": "Europe: Castile, England → the colonies",
+      "package": "box",
+      "spoils": "no",
+      "value": "open",
+      "type": "base",
+      "sources": "EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 99,
+      "name": "Gunflints",
+      "kind": "manufactured",
+      "route": "Europe: England → the colonies and Africa",
+      "package": "open",
+      "spoils": "no",
+      "value": "open",
+      "type": "base",
+      "sources": "EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 100,
+      "name": "Coal (Newcastle sea-coal)",
+      "kind": "raw",
+      "route": "Europe: the Tyne → London, Rotterdam, Flanders; the colonies",
+      "package": "chaldron",
+      "spoils": "no",
+      "value": "9s–14s the chaldron (1582, 1626: before the period)",
+      "type": "base",
+      "sources": "EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 101,
+      "name": "Tradesmen's tool sets",
+      "kind": "manufactured",
+      "route": "Europe: England → Virginia",
+      "package": "set",
+      "spoils": "rust",
+      "value": "a carpenter's set about £1 10s; carpenter, cooper and joiner together £4 (17th c.)",
+      "type": "base",
+      "sources": "EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 102,
+      "name": "Gin (genever)",
+      "kind": "manufactured",
+      "route": "Europe: Schiedam, Holland → England and abroad",
+      "package": "case",
+      "spoils": "no",
+      "value": "open",
+      "type": "cultural",
+      "sources": "EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 103,
+      "name": "Herring",
+      "kind": "raw (salted)",
+      "route": "Europe: the Dutch and Scots fisheries → Iberia, the Baltic, the Atlantic",
+      "package": "barrel",
+      "spoils": "salted",
+      "value": "open",
+      "type": "base",
+      "sources": "EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 104,
+      "name": "Whale oil (train oil) and whalebone",
+      "kind": "raw (tried out)",
+      "route": "Greenland (Dutch, 246 ships and 1,185 whales in 1684); North America: Long Island shore whaling (2,148 barrels in 1686–87, £4,300), Nantucket (1730: 25 vessels, 3,700 barrels); Newfoundland cod-liver train oil; Bahia (a crown monopoly) → Boston, London",
+      "package": "barrel, hogshead; sold by the ton",
+      "spoils": "no",
+      "value": "oil about £2 a barrel, bone 6–8d a lb (Long Island); Newfoundland train oil £12 a ton, one hogshead per 40–64 quintals of fish",
+      "type": "base",
+      "sources": "EU, NA, SB",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 105,
+      "name": "Baltic stores: hemp, flax, masts, pitch, tar, Swedish iron and steel, Russian leather, Polish grain",
+      "kind": "raw / manufactured",
+      "route": "Europe: Riga, Stockholm, Petersburg, Danzig → Amsterdam → the west (Posthumus has the series: Riga hemp, Stockholm pitch, Muscovite tar, Swedish iron and steel, Polish wheat)",
+      "package": "bundle, barrel, bar, last",
+      "spoils": "no",
+      "value": "open in the period (rye 88.90 guilders a last in 1572, early)",
+      "type": "base",
+      "sources": "EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 106,
+      "name": "Masts (white pine)",
+      "kind": "raw (hewn)",
+      "route": "North America: Piscataqua, from 1727 Casco Bay → the Royal Navy's yards; the Broad Arrow reserved trees of 24 inches",
+      "package": "mast ships of about 400 tons carrying 40–50 masts",
+      "spoils": "no",
+      "value": "bounty £1 a mast (1705 Act); price open",
+      "type": "base",
+      "sources": "NA",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 107,
+      "name": "Olive oil",
+      "kind": "raw",
+      "route": "Europe: Andalusia → the Indies by flota (11,077 arrobas in the 1706 flota), and to English and Dutch ports",
+      "package": "jar (botija), pipe",
+      "spoils": "no",
+      "value": "open",
+      "type": "cultural",
+      "sources": "EU, SB",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 108,
+      "name": "Mercury (quicksilver)",
+      "kind": "raw",
+      "route": "Europe: Almadén → by barge to Cadiz → the flota → Mexico's silver mines (no local supply)",
+      "package": "open",
+      "spoils": "no",
+      "value": "open",
+      "type": "specialty",
+      "sources": "EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 109,
+      "name": "Spanish merino wool",
+      "kind": "raw",
+      "route": "Europe: Spain → Holland, England (Posthumus \"Molina wool\")",
+      "package": "sack",
+      "spoils": "open",
+      "value": "open",
+      "type": "base",
+      "sources": "EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 110,
+      "name": "Irish provisions: salt beef and pork, butter, tallow, hides",
+      "kind": "raw / preserved",
+      "route": "Europe: Cork → the English and French islands, the navy; allowed direct by the 1663 Act; the Cattle Act 1667 pushed Ireland from live cattle to barrelled beef",
+      "package": "barrel, firkin",
+      "spoils": "salted",
+      "value": "open",
+      "type": "base",
+      "sources": "EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 111,
+      "name": "Bahia tobacco in rolls",
+      "kind": "manufactured (rolled, molasses-coated leaf)",
+      "route": "Brazil: the Recôncavo → Salvador → the Mina coast (lower grades, 15–20,000 three-arroba rolls) and Lisbon (the best); about 25,000 rolls a year 1700–10",
+      "package": "roll of about 8 arrobas",
+      "spoils": "keeps",
+      "value": "an 8-arroba roll 12$124 réis at Lisbon",
+      "type": "specialty",
+      "sources": "SB, AF",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 112,
+      "name": "Brazilwood",
+      "kind": "raw dyewood",
+      "route": "Brazil: the coast → Lisbon; a crown monopoly",
+      "package": "log",
+      "spoils": "no",
+      "value": "open",
+      "type": "specialty",
+      "sources": "SB",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 113,
+      "name": "Brazilian gold and the moidore",
+      "kind": "raw → coin",
+      "route": "Brazil: Minas Gerais (found 1693/95) → Rio, Bahia → Lisbon → England; fintas 25–37 arrobas a year 1714–24; \"800 metric tons\" officially in the 18th century",
+      "package": "bag, chest",
+      "spoils": "no",
+      "value": "moidore about 27s in England (30s in Ireland); Roberts took 40,000 (J)",
+      "type": "money",
+      "sources": "SB, EU, J",
+      "typeMark": "source"
+    },
+    {
+      "row": 114,
+      "name": "Diamonds (Brazil, from 1729)",
+      "kind": "raw",
+      "route": "Brazil: Serro do Frio → Lisbon → Amsterdam, London; a crown monopoly",
+      "package": "—",
+      "spoils": "no",
+      "value": "open",
+      "type": "specialty",
+      "sources": "SB, EU",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 115,
+      "name": "Cachaça (aguardente)",
+      "kind": "manufactured (cane spirit)",
+      "route": "Brazil: Bahia, Rio → Angola and Mina as trade liquor; coastwise",
+      "package": "pipe, barrel",
+      "spoils": "no",
+      "value": "open",
+      "type": "base",
+      "sources": "SB",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 116,
+      "name": "Manioc flour (farinha)",
+      "kind": "manufactured (milled)",
+      "route": "Brazil: coastwise and to Angola",
+      "package": "bushel",
+      "spoils": "keeps",
+      "value": "640 réis a bushel, São Paulo 1703",
+      "type": "base",
+      "sources": "SB",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 117,
+      "name": "Mexican silver pesos",
+      "kind": "coin",
+      "route": "Spanish America: the Mexico mint, 4,160,000 pesos a year 1665–1700 → Veracruz → Havana → Cadiz; Peru's silver by mule to Portobelo (\"about 24,000,000 of pieces-of-eight\", Dampier)",
+      "package": "chest, bar, \"wedge\"",
+      "spoils": "no",
+      "value": "the piece of eight 4s 6d intrinsic, 4s 3d at the exchangers (Newton 1711)",
+      "type": "money",
+      "sources": "SB, EU",
+      "typeMark": "source"
+    },
+    {
+      "row": 118,
+      "name": "Gold of New Granada and Darien",
+      "kind": "raw (dust, bars)",
+      "route": "Spanish America: the Chocó, Darien's rivers → Cartagena, Panama → Spain; output \"at a very low level around 1675\"",
+      "package": "dish, bag",
+      "spoils": "no",
+      "value": "open",
+      "type": "money",
+      "sources": "SB",
+      "typeMark": "source"
+    },
+    {
+      "row": 119,
+      "name": "Emeralds (Muzo)",
+      "kind": "raw stones",
+      "route": "Spanish America: Muzo → Cartagena → Seville, and on to Mughal India",
+      "package": "—",
+      "spoils": "no",
+      "value": "open",
+      "type": "specialty",
+      "sources": "SB",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 120,
+      "name": "Caracas cacao in detail",
+      "kind": "raw",
+      "route": "Spanish America: La Guaira, Tucacas → Veracruz (New Spain ate most of it), Cadiz; by contraband → Curaçao → Amsterdam",
+      "package": "fanega of 110 lb",
+      "spoils": "open",
+      "value": "6–8 pesos a fanega at source, about 100 in Europe",
+      "type": "cultural",
+      "sources": "SB",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 121,
+      "name": "Verina and Cuban tobacco; Seville snuff",
+      "kind": "raw → manufactured",
+      "route": "Spanish America: Verina \"reputed the best in the world\" (Dampier); Havana → the Seville snuff factory (1687); contraband to English and Dutch ships",
+      "package": "leaf; snuff in jars",
+      "spoils": "keeps",
+      "value": "open",
+      "type": "specialty",
+      "sources": "SB",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 122,
+      "name": "Spanish American drugs: jalap, balsam of Peru, balsam of Tolu, copal, liquidambar, sarsaparilla",
+      "kind": "raw (roots, resins)",
+      "route": "Spanish America: Honduras, Veracruz, Campeche, Cartagena → Cadiz; Spain imported 83,387 arrobas of drugs 1717–38 (5.6 t sarsaparilla, 1.6 t copal, 1 t balsams a year)",
+      "package": "seroon, jar",
+      "spoils": "open",
+      "value": "open",
+      "type": "specialty",
+      "sources": "SB",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 123,
+      "name": "Campeche wax, Yucatán cotton cloth, tasajo (jerked beef)",
+      "kind": "raw / manufactured",
+      "route": "Spanish America: Campeche, Sisal → Havana",
+      "package": "open",
+      "spoils": "tasajo keeps",
+      "value": "open",
+      "type": "base",
+      "sources": "SB",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 124,
+      "name": "Mules and horses (Venezuela)",
+      "kind": "live",
+      "route": "Spanish America: Maracaibo, Tierra Firme → Curaçao, Saint-Domingue (for the sugar mills), Jamaica",
+      "package": "driven to the coast",
+      "spoils": "die",
+      "value": "open",
+      "type": "base",
+      "sources": "SB",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 125,
+      "name": "Beaver and the furs: marten, otter, fox, bear, raccoon",
+      "kind": "raw pelts",
+      "route": "North America: Hudson Bay (Fort Albany about 19,000 pelts a year 1700–20, York Factory about 35,000), Albany and New York, Quebec → London, La Rochelle",
+      "package": "pack, bale; the \"made beaver\" as the posts' unit of account",
+      "spoils": "moth",
+      "value": "London 1713–26: coat beaver about 6.6s, parchment 5.5s a pelt. At the posts: a blanket 7 made beaver, brandy 4 a gallon, cloth 3½ a yard",
+      "type": "specialty",
+      "sources": "NA",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 126,
+      "name": "Beaver hats",
+      "kind": "manufactured (felt)",
+      "route": "North America: colonial hatters → other colonies, the islands, Iberia, until the Hat Act of 1732",
+      "package": "case",
+      "spoils": "no",
+      "value": "open",
+      "type": "cultural",
+      "sources": "NA",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 127,
+      "name": "Deerskins in numbers (row 32)",
+      "kind": "raw",
+      "route": "North America: Charleston about 54,000 a year 1699–1715, 121,355 in 1707 → London",
+      "package": "hogshead, bundle",
+      "spoils": "open",
+      "value": "open",
+      "type": "specialty",
+      "sources": "NA",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 128,
+      "name": "Newfoundland cod by grade (row 24)",
+      "kind": "preserved",
+      "route": "North America: merchantable (thick, light-salted), Madeira, and West India \"refuse\" → Spain, Portugal, Italy, the islands; 171 fishing ships and 800 boats in 1700",
+      "package": "quintal (112 lb)",
+      "spoils": "salted",
+      "value": "7–8s a quintal (c. 1644); a boat took 200–300 quintals; servants £18–20 a season",
+      "type": "base",
+      "sources": "NA",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 129,
+      "name": "Ginseng",
+      "kind": "raw dried root",
+      "route": "North America: Mohawk country, Canada → Quebec → La Rochelle → Canton, exported from 1721",
+      "package": "cask",
+      "spoils": "no",
+      "value": "open",
+      "type": "specialty",
+      "sources": "NA",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 130,
+      "name": "Pig iron (colonial)",
+      "kind": "semi (furnace)",
+      "route": "North America: Principio (furnace 1723), Pennsylvania → London, Bristol; 15 tons in 1723, 1,716 in 1730",
+      "package": "pig, as ballast",
+      "spoils": "no",
+      "value": "open",
+      "type": "base",
+      "sources": "NA",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 131,
+      "name": "Wampum",
+      "kind": "manufactured (drilled shell beads)",
+      "route": "North America: Long Island Sound → Albany, New England; traded inland for beaver",
+      "package": "string; 120 beads to a fathom",
+      "spoils": "no",
+      "value": "open",
+      "type": "cultural",
+      "sources": "NA",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 132,
+      "name": "Bermuda and Bahamas: cedar, onions, ambergris, braziletto, wrecked goods",
+      "kind": "raw",
+      "route": "Atlantic islands: Bermuda → the islands and the mainland ports; New Providence, Eleuthera → Carolina, Jamaica; Spanish wrecks salvaged",
+      "package": "log; onions by the bunch; ambergris by the ounce",
+      "spoils": "onions keep",
+      "value": "open",
+      "type": "base",
+      "sources": "SB",
+      "typeMark": "proposed"
+    },
+    {
+      "row": 133,
+      "name": "Indentured servants",
+      "kind": "people",
+      "route": "Europe: England (Bristol, London), Ireland, Scotland → the Chesapeake (about 50,000 in 1630–80, three-quarters of arrivals) and the islands",
+      "package": "—",
+      "spoils": "—",
+      "value": "a carpenter's indenture valued £18 (1673); Newfoundland men £18–20 a season",
+      "type": "open",
+      "sources": "NA, EU",
+      "typeMark": "open"
     }
   ],
   "goods": [
@@ -989,6 +1613,7 @@
       "mark": "source",
       "madeBy": "millwrighting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "three rollers driven by oxen or horses (L); Sugar boiling needs it"
     },
     {
@@ -1003,6 +1628,7 @@
       "mark": "source",
       "madeBy": "sugar-boiling",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "boiling through the coppers and striking; 3d a pound on Barbados (L)"
     },
     {
@@ -1017,6 +1643,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "planting, cutting and carting to the mill within a day of cutting (L); the boiling is Sugar boiling"
     },
     {
@@ -1031,6 +1658,7 @@
       "mark": "source",
       "madeBy": "millwrighting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Barbados's windmills; a design tier for the engine (open)"
     },
     {
@@ -1045,6 +1673,7 @@
       "mark": "source",
       "madeBy": "sugar-boiling",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "claying the pot so the molasses drains out; 20d a pound in London (L)"
     },
     {
@@ -1059,6 +1688,7 @@
       "mark": "source",
       "madeBy": "sugar-boiling",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "refined in Bristol and London cone moulds (DB1)"
     },
     {
@@ -1073,6 +1703,7 @@
       "mark": "source",
       "madeBy": "sugar-boiling",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "what drains from the pots; the apprentice's share of the work (L)"
     },
     {
@@ -1087,6 +1718,7 @@
       "mark": "source",
       "madeBy": "distilling",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "half a crown a gallon on Barbados (L); cask size open (1j)"
     },
     {
@@ -1101,6 +1733,7 @@
       "mark": "source",
       "madeBy": "cooperage",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "must hold liquid; a leaking cask loses the rum (DUTIES)"
     },
     {
@@ -1115,6 +1748,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the root is scraped so it stays white and does not sprout (L)"
     },
     {
@@ -1129,6 +1763,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "picked green and sun-dried, kept from the dew (EB78)"
     },
     {
@@ -1143,6 +1778,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "picking and ginning before bagging (C81)"
     },
     {
@@ -1157,6 +1793,7 @@
       "mark": "source",
       "madeBy": "spinning",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the island's own fibre (C81)"
     },
     {
@@ -1171,6 +1808,7 @@
       "mark": "source",
       "madeBy": "dye",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "steeping, beating and judging the cut (C88, D)"
     },
     {
@@ -1185,6 +1823,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the crop; the vats are Dye Making"
     },
     {
@@ -1199,6 +1838,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the crop; the paste is Dye Making (D)"
     },
     {
@@ -1213,6 +1853,7 @@
       "mark": "source",
       "madeBy": "dye",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "seed pulp worked to a paste (D)"
     },
     {
@@ -1227,6 +1868,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the tree; Jamaica's crops failed to a 'blast' (PT)"
     },
     {
@@ -1241,6 +1883,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "sweated under plantain leaves, three or four weeks' sun (PT)"
     },
     {
@@ -1255,6 +1898,7 @@
       "mark": "source",
       "madeBy": "cooking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "roasting and grinding the nut; a Spanish taste first"
     },
     {
@@ -1269,6 +1913,7 @@
       "mark": "source",
       "madeBy": "woodcutting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "cut and chipped at the Campeche camps, sold at £5 a ton in goods (DV)"
     },
     {
@@ -1283,6 +1928,7 @@
       "mark": "source",
       "madeBy": "woodcutting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "as logwood; fustic and brazeletto in the 1681 return (C81)"
     },
     {
@@ -1297,6 +1943,7 @@
       "mark": "source",
       "madeBy": "cabinetmaking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Campbell's carver; a ship's stern-work too"
     },
     {
@@ -1311,6 +1958,7 @@
       "mark": "source",
       "madeBy": "woodcutting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "choosing, felling and squaring the great logs; 'bulky and relatively light' (MH)"
     },
     {
@@ -1325,6 +1973,7 @@
       "mark": "source",
       "madeBy": "cabinetmaking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the 1720s trade (MH)"
     },
     {
@@ -1339,6 +1988,7 @@
       "mark": "source",
       "madeBy": "cabinetmaking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the joiner's edge of the trade"
     },
     {
@@ -1353,6 +2003,7 @@
       "mark": "source",
       "madeBy": "cabinetmaking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the London cabinet-maker's best work; a design tier (open)"
     },
     {
@@ -1367,6 +2018,7 @@
       "mark": "source",
       "madeBy": "marine",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the hawksbill's plates (method open)"
     },
     {
@@ -1381,6 +2033,7 @@
       "mark": "source",
       "madeBy": "leatherworking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "indigo moved in 'leather sacks' at Maracaibo (E)"
     },
     {
@@ -1395,6 +2048,7 @@
       "mark": "source",
       "madeBy": "butchering",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "flaying clean; 'cow hides 69 ... buff hides 768' to London (C81)"
     },
     {
@@ -1409,6 +2063,7 @@
       "mark": "source",
       "madeBy": "tanning",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "bark pits take months; no Caribbean tannery in the sources, so off-map in practice"
     },
     {
@@ -1423,6 +2078,7 @@
       "mark": "source",
       "madeBy": "hunting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Hispaniola's wild herds (E2)"
     },
     {
@@ -1437,6 +2093,7 @@
       "mark": "source",
       "madeBy": "butchering",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the fat rendered; sold with the hides (E2)"
     },
     {
@@ -1451,6 +2108,7 @@
       "mark": "source",
       "madeBy": "distilling",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the rough first spirit from the skimmings (L)"
     },
     {
@@ -1465,6 +2123,7 @@
       "mark": "source",
       "madeBy": "cooking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "pressed and casked; 1,512 gallons to London in one month (C81)"
     },
     {
@@ -1479,6 +2138,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "curing, prizing into the hogshead to at least 800 lb (VA30)"
     },
     {
@@ -1493,6 +2153,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "topping and suckering the plant; the cure is the harder part"
     },
     {
@@ -1507,6 +2168,7 @@
       "mark": "source",
       "madeBy": "milling",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "bolted fine; 196 lb to the barrel (FL)"
     },
     {
@@ -1521,6 +2183,7 @@
       "mark": "source",
       "madeBy": "cooperage",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "flour barrels, sugar hogsheads; 196 lb of flour to the barrel (FL)"
     },
     {
@@ -1535,6 +2198,7 @@
       "mark": "source",
       "madeBy": "baking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "daily bread; not a cargo"
     },
     {
@@ -1549,6 +2213,7 @@
       "mark": "source",
       "madeBy": "cooking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the one hot meal from the galley (DUTIES); not a traded good"
     },
     {
@@ -1563,6 +2228,7 @@
       "mark": "source",
       "madeBy": "baking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "baked hard, twice; 16s a hundredweight (PY); well baked, it keeps for years (SV)"
     },
     {
@@ -1577,6 +2243,7 @@
       "mark": "source",
       "madeBy": "husbandry",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the meat for Cooking's salt beef and pork"
     },
     {
@@ -1591,6 +2258,7 @@
       "mark": "source",
       "madeBy": "butchering",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "for the galley and for Preserving"
     },
     {
@@ -1605,6 +2273,7 @@
       "mark": "source",
       "madeBy": "preserving",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "cut, brined and packed tight in barrel; a short barrel was noticed (PY)"
     },
     {
@@ -1619,6 +2288,7 @@
       "mark": "source",
       "madeBy": "preserving",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "split, salted and dried; the poor grade went to the islands (HV)"
     },
     {
@@ -1633,6 +2303,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "a field crop any hand could grow and pick"
     },
     {
@@ -1647,6 +2318,7 @@
       "mark": "source",
       "madeBy": "milling",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Roberts took '10 Casks of Oatmeal' (J)"
     },
     {
@@ -1661,6 +2333,7 @@
       "mark": "source",
       "madeBy": "millwrighting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Ligon: 'the Christian that has the charge of the carriages'"
     },
     {
@@ -1675,6 +2348,7 @@
       "mark": "source",
       "madeBy": "leatherworking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "for the horse trade (PY); no period Caribbean saddler in the sources: open"
     },
     {
@@ -1689,6 +2363,7 @@
       "mark": "source",
       "madeBy": "husbandry",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "bred in New England and shipped at about £12 each (PY)"
     },
     {
@@ -1703,6 +2378,7 @@
       "mark": "source",
       "madeBy": "smithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Farriers' Company 1674; 'makes Shoes for Horses, and puts them on' (Campbell)"
     },
     {
@@ -1717,6 +2393,7 @@
       "mark": "source",
       "madeBy": "carpentry",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Ligon wanted 'Carpenters, Joyners, Masons' as servants (L)"
     },
     {
@@ -1731,6 +2408,7 @@
       "mark": "source",
       "madeBy": "carpentry",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the 1631 aldermen's ruling listed joiners' work (research)"
     },
     {
@@ -1745,6 +2423,7 @@
       "mark": "source",
       "madeBy": "woodcutting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "felling and hauling; any hand with an axe"
     },
     {
@@ -1759,6 +2438,7 @@
       "mark": "source",
       "madeBy": "carpentry",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the saw pit (L)"
     },
     {
@@ -1773,6 +2453,7 @@
       "mark": "source",
       "madeBy": "carpentry",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the ship's carpenter; pirates 'forced away the Carpenter from the Pink' (J)"
     },
     {
@@ -1787,6 +2468,7 @@
       "mark": "source",
       "madeBy": "cooperage",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "jointing and hollowing the staves"
     },
     {
@@ -1801,6 +2483,7 @@
       "mark": "source",
       "madeBy": "woodcutting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "riving stave bolts for the cooper; Connecticut's cargo to Barbados (CT)"
     },
     {
@@ -1815,6 +2498,7 @@
       "mark": "source",
       "madeBy": "cooperage",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the turner's lathe; Campbell folds him into the cooper"
     },
     {
@@ -1829,6 +2513,7 @@
       "mark": "source",
       "madeBy": "woodcutting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "rived and shaved; late evidence only (CTH)"
     },
     {
@@ -1843,6 +2528,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "wet-field rice took skill the Carolina planters bought from West Africa (SCR)"
     },
     {
@@ -1857,6 +2543,7 @@
       "mark": "source",
       "madeBy": "woodcutting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the kiln burn takes judgement; 40,000 barrels a year by 1720 (SCN)"
     },
     {
@@ -1871,6 +2558,7 @@
       "mark": "source",
       "madeBy": "hunting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Carolina's trade with the Indian nations (CCR)"
     },
     {
@@ -1885,6 +2573,7 @@
       "mark": "source",
       "madeBy": "butchering",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "a clean skin is worth more; 'Skinns' from Carolina (CCR)"
     },
     {
@@ -1899,6 +2588,7 @@
       "mark": "source",
       "madeBy": "tanning",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the Carolina export went raw or half-dressed (open)"
     },
     {
@@ -1913,6 +2603,7 @@
       "mark": "source",
       "madeBy": "weaving",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "1s 5d–1s 8d an ell (TR); servants' and slaves' cloth"
     },
     {
@@ -1927,6 +2618,7 @@
       "mark": "source",
       "madeBy": "weaving",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "under 4s a yard, the colonial ceiling (CSP)"
     },
     {
@@ -1941,6 +2633,7 @@
       "mark": "source",
       "madeBy": "dye",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the dye bath with a mordant; needs a dye from this tree too"
     },
     {
@@ -1955,6 +2648,7 @@
       "mark": "source",
       "madeBy": "weaving",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "2s 4d–2s 8d a yard (TR)"
     },
     {
@@ -1969,6 +2663,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "European fibre crops for linen and rope; no Caribbean crop in the sources"
     },
     {
@@ -1983,6 +2678,7 @@
       "mark": "source",
       "madeBy": "spinning",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "for dowlas, holland and sailcloth"
     },
     {
@@ -1997,6 +2693,7 @@
       "mark": "source",
       "madeBy": "husbandry",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "English sheep; no Caribbean flock in the sources"
     },
     {
@@ -2011,6 +2708,7 @@
       "mark": "source",
       "madeBy": "spinning",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "English wool"
     },
     {
@@ -2025,6 +2723,7 @@
       "mark": "source",
       "madeBy": "weaving",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "10s–23s 6d a yard (TR); duffels for the Indian trade (CSP)"
     },
     {
@@ -2039,6 +2738,7 @@
       "mark": "source",
       "madeBy": "weaving",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Asian looms; chintzes in a French prize (J)"
     },
     {
@@ -2053,6 +2753,7 @@
       "mark": "source",
       "madeBy": "tailoring",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "silk and linen shared out at Maracaibo (E)"
     },
     {
@@ -2067,6 +2768,7 @@
       "mark": "source",
       "madeBy": "spinning",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Asian silk; the hardest fibre to handle"
     },
     {
@@ -2081,6 +2783,7 @@
       "mark": "source",
       "madeBy": "shoemaking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "a design tier (open)"
     },
     {
@@ -2095,6 +2798,7 @@
       "mark": "source",
       "madeBy": "shoemaking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'some bootes' (L)"
     },
     {
@@ -2109,6 +2813,7 @@
       "mark": "source",
       "madeBy": "tailoring",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "a cloth coat at 15s 6d (CSP)"
     },
     {
@@ -2123,6 +2828,7 @@
       "mark": "source",
       "madeBy": "shoemaking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'shooes' at £50 in Ligon's outfit (L)"
     },
     {
@@ -2137,6 +2843,7 @@
       "mark": "source",
       "madeBy": "tailoring",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'a suit of clothes, a wig' taken at the King Solomon (J)"
     },
     {
@@ -2151,6 +2858,7 @@
       "mark": "source",
       "madeBy": "leatherworking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'Gloves' among Ligon's imports (L)"
     },
     {
@@ -2165,6 +2873,7 @@
       "mark": "source",
       "madeBy": "shoemaking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "fitted; no period Caribbean maker in the sources (open)"
     },
     {
@@ -2179,6 +2888,7 @@
       "mark": "source",
       "madeBy": "shoemaking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the cobbler's work"
     },
     {
@@ -2193,6 +2903,7 @@
       "mark": "source",
       "madeBy": "tailoring",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "a servant's shirt at 2s 6d (CSP)"
     },
     {
@@ -2207,6 +2918,7 @@
       "mark": "source",
       "madeBy": "mining",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "£16 10s–£18 a ton in London (TR); 'voyage iron' to Africa (JS)"
     },
     {
@@ -2221,6 +2933,7 @@
       "mark": "source",
       "madeBy": "mining",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "lead for shot; no Caribbean mine in the sources"
     },
     {
@@ -2235,6 +2948,7 @@
       "mark": "source",
       "madeBy": "mining",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "blister steel from Sheffield; brass from calamine; pewter from tin and lead. No colonial steel before the 1720s (research), so all off-map"
     },
     {
@@ -2249,6 +2963,7 @@
       "mark": "source",
       "madeBy": "smithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the anchor-smith, 'laborious and profitable Branch of the Smith Trade' (Campbell)"
     },
     {
@@ -2263,6 +2978,7 @@
       "mark": "source",
       "madeBy": "founding",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Campbell: the founder casts all that is brass in a brazier's shop"
     },
     {
@@ -2277,6 +2993,7 @@
       "mark": "source",
       "madeBy": "smithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the ship's fittings the carpenter needs"
     },
     {
@@ -2291,6 +3008,7 @@
       "mark": "source",
       "madeBy": "smithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "for the cooper"
     },
     {
@@ -2305,6 +3023,7 @@
       "mark": "source",
       "madeBy": "bladesmithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the cutler's staple; surgeon's lancets too"
     },
     {
@@ -2319,6 +3038,7 @@
       "mark": "source",
       "madeBy": "smithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'see Smith' (Campbell's index); needs ingenuity 'almost as any Branch of the Trade'"
     },
     {
@@ -2333,6 +3053,7 @@
       "mark": "source",
       "madeBy": "smithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "6d a pound retail (TR); the Midlands nail trade was a by-employment, not a company"
     },
     {
@@ -2347,6 +3068,7 @@
       "mark": "source",
       "madeBy": "smithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'nails, hoes, and axes' to Virginia (BR)"
     },
     {
@@ -2361,6 +3083,7 @@
       "mark": "source",
       "madeBy": "founding",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "small guns; 'four Swivels' taken by Low (J)"
     },
     {
@@ -2375,6 +3098,7 @@
       "mark": "source",
       "madeBy": "leatherworking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "for the swords Ligon lists among imports (L); the pirate's gear"
     },
     {
@@ -2389,6 +3113,7 @@
       "mark": "source",
       "madeBy": "bladesmithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the boarder's weapon; blades from abroad, mounted here"
     },
     {
@@ -2403,6 +3128,7 @@
       "mark": "source",
       "madeBy": "bladesmithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the German smiths' work; nothing like it in the colonies (research)"
     },
     {
@@ -2417,6 +3143,7 @@
       "mark": "source",
       "madeBy": "gunsmithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the gunmaker's best work; a design tier (open)"
     },
     {
@@ -2431,6 +3158,7 @@
       "mark": "source",
       "madeBy": "founding",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the gunfounder's furnace and boring mill; 29 located on the QAR wreck (QAR)"
     },
     {
@@ -2445,6 +3173,7 @@
       "mark": "source",
       "madeBy": "smithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the gunsmith bought barrels in and made the lock (Campbell)"
     },
     {
@@ -2459,6 +3188,7 @@
       "mark": "source",
       "madeBy": "carpentry",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "wood and iron; a great gun is useless without one"
     },
     {
@@ -2473,6 +3203,7 @@
       "mark": "source",
       "madeBy": "gunsmithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'a great number of muskets' taken (E); proofed in London"
     },
     {
@@ -2487,6 +3218,7 @@
       "mark": "source",
       "madeBy": "gunsmithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "lock, stock and barrel; the stock is the carpenter's wood"
     },
     {
@@ -2501,6 +3233,7 @@
       "mark": "source",
       "madeBy": "gunsmithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the ship's armourer; 'Mariner and Armourer' in a will (research-occupations.md)"
     },
     {
@@ -2515,6 +3248,7 @@
       "mark": "source",
       "madeBy": "bladesmithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "hilt, grip and scabbard; 'Swords, knives' shipped to Barbados (L)"
     },
     {
@@ -2529,6 +3263,7 @@
       "mark": "source",
       "madeBy": "woodcutting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the collier's clamp; Rex keeps charcoal burning inside Woodcutting (2026-10-28)"
     },
     {
@@ -2543,6 +3278,7 @@
       "mark": "source",
       "madeBy": "powder",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "saltpetre, sulphur and charcoal, all three"
     },
     {
@@ -2557,6 +3293,7 @@
       "mark": "source",
       "madeBy": "powder",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "a design tier (open)"
     },
     {
@@ -2571,6 +3308,7 @@
       "mark": "source",
       "madeBy": "powder",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "corned to grain sizes; 'five Barrels of Powder' taken by Roberts (J)"
     },
     {
@@ -2585,6 +3323,7 @@
       "mark": "unsourced",
       "madeBy": "powder",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Rex's design tier"
     },
     {
@@ -2599,6 +3338,7 @@
       "mark": "source",
       "madeBy": "mining",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "nitrate-bearing earth from dovecotes, stables and caves; the saltpetre-men's raw stuff. Caribbean source open"
     },
     {
@@ -2613,6 +3353,7 @@
       "mark": "source",
       "madeBy": "powder",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "keeping it dry (DUTIES: the gunner's duty)"
     },
     {
@@ -2627,6 +3368,7 @@
       "mark": "source",
       "madeBy": "refining",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "melted and skimmed"
     },
     {
@@ -2641,6 +3383,7 @@
       "mark": "source",
       "madeBy": "refining",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "leached, boiled and crystallised; the hardest of the three ingredients to get right"
     },
     {
@@ -2655,6 +3398,7 @@
       "mark": "source",
       "madeBy": "founding",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "1,281 lead shot in one QAR lab batch (QAR); any hand with a mould"
     },
     {
@@ -2669,6 +3413,7 @@
       "mark": "source",
       "madeBy": "mining",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "dug from volcanic deposits; Sicily supplied Europe. Nothing in the Caribbean sources (open)"
     },
     {
@@ -2684,6 +3429,7 @@
       "madeBy": null,
       "knowledge": "common",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Madeira shipped 8–9,000 pipes a year (Ovington 1696); the vintner imports, the taverner sells (Strype 1720)"
     },
     {
@@ -2698,6 +3444,7 @@
       "mark": "source",
       "madeBy": "distilling",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Madeira, Fayal, Canary, claret: £8 a pipe at Jamestown (CSP)"
     },
     {
@@ -2712,6 +3459,7 @@
       "mark": "source",
       "madeBy": "distilling",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "distilled wine; thirty casks in one prize (J)"
     },
     {
@@ -2726,6 +3474,7 @@
       "mark": "source",
       "madeBy": "dairying",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "in firkins; weight open (ML)"
     },
     {
@@ -2740,6 +3489,7 @@
       "mark": "source",
       "madeBy": "dairying",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'a hundred-weight of Gloucester cheese' to Virginia (BR)"
     },
     {
@@ -2754,6 +3504,7 @@
       "mark": "source",
       "madeBy": "husbandry",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "for Cooking's cheese and butter"
     },
     {
@@ -2768,6 +3519,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "planting and reaping; milling is Cooking"
     },
     {
@@ -2782,6 +3534,7 @@
       "mark": "source",
       "madeBy": "milling",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'Barrels of meale close put up' (L)"
     },
     {
@@ -2793,10 +3546,11 @@
       "typeMark": "proposed",
       "basePrice": null,
       "offMap": false,
-      "mark": "unsourced",
+      "mark": "source",
       "madeBy": "waxworking",
       "region": "caribbean",
-      "note": "cleaner burning, for church and the cabin; beeswax supply in the Caribbean open"
+      "origin": "caribbean",
+      "note": "cleaner burning; the wax came from the Guinea coast (AF). No longer unsourced for the wax"
     },
     {
       "id": "lifelike-wax-figures",
@@ -2810,6 +3564,7 @@
       "mark": "unsourced",
       "madeBy": "waxworking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the INFP's signature work (story: brothel, wax figures); a design good"
     },
     {
@@ -2824,6 +3579,7 @@
       "mark": "unsourced",
       "madeBy": "waxworking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "consistent sizes, ceremonial forms"
     },
     {
@@ -2838,6 +3594,7 @@
       "mark": "source",
       "madeBy": "waxworking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "dipped; they fuse in the heat (L)"
     },
     {
@@ -2852,6 +3609,7 @@
       "mark": "unsourced",
       "madeBy": "waxworking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "a European art of the period; unsourced here"
     },
     {
@@ -2866,6 +3624,7 @@
       "mark": "unsourced",
       "madeBy": "waxworking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "sealing wax for letters; no Caribbean source"
     },
     {
@@ -2880,6 +3639,7 @@
       "mark": "source",
       "madeBy": "ropemaking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'two Cables' (J); the anchor cable is the ropewalk's largest work"
     },
     {
@@ -2894,6 +3654,7 @@
       "mark": "source",
       "madeBy": "ropemaking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'several Coils of Rope' taken from the King Solomon (J)"
     },
     {
@@ -2908,6 +3669,7 @@
       "mark": "source",
       "madeBy": "weaving",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the sailmaker sews it; the weaver makes it"
     },
     {
@@ -2922,6 +3684,7 @@
       "mark": "source",
       "madeBy": "ropemaking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "marline, spun yarn; the sailmaker's twine"
     },
     {
@@ -2936,6 +3699,7 @@
       "mark": "source",
       "madeBy": "apothecary",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the QAR syringe held mercury for the pox (QAR); opium preparations in the Pharmacopoeia (research)"
     },
     {
@@ -2950,6 +3714,7 @@
       "mark": "source",
       "madeBy": "apothecary",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Pharmacopoeia Londinensis 1618 and after; spirits for tinctures"
     },
     {
@@ -2964,6 +3729,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the herbs an apothecary works from; Culpeper's book was for householders (research). Caribbean physic gardens: open"
     },
     {
@@ -2978,6 +3744,7 @@
       "mark": "source",
       "madeBy": "refining",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "for the apothecary and the dyer; a design tier (open)"
     },
     {
@@ -2992,6 +3759,7 @@
       "mark": "source",
       "madeBy": "apothecary",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "lime juice against scurvy (DUTIES); whether it stood in the Pharmacopoeia: open"
     },
     {
@@ -3006,6 +3774,7 @@
       "mark": "source",
       "madeBy": "apothecary",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Culpeper's householder medicine; the plantation doctor's dram of kill-devil (L)"
     },
     {
@@ -3020,6 +3789,7 @@
       "mark": "source",
       "madeBy": "apothecary",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "£300–400 at Charleston (J); 200–250 pieces of eight as the buccaneers' fixed share (E)"
     },
     {
@@ -3034,6 +3804,7 @@
       "mark": "source",
       "madeBy": "goldsmithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "judging and refining the metal; the diamond cross for the King of Portugal (J) as the kind of piece"
     },
     {
@@ -3048,6 +3819,7 @@
       "mark": "source",
       "madeBy": "goldsmithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "uncoined plate shared out by weight (E)"
     },
     {
@@ -3062,7 +3834,8 @@
       "mark": "source",
       "madeBy": "mining",
       "region": "caribbean",
-      "note": "Potosí to Portobelo; refining with mercury (WHF)"
+      "origin": "caribbean",
+      "note": "Potosí to Portobelo; refining with mercury (WHF); refined with Almadén mercury, which the mines could not do without (EU)"
     },
     {
       "id": "silver-buttons-and-buckles",
@@ -3076,6 +3849,7 @@
       "mark": "source",
       "madeBy": "goldsmithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "small work"
     },
     {
@@ -3090,6 +3864,7 @@
       "mark": "source",
       "madeBy": "mining",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Brazil and the Guinea coast; washing dust takes less than refining silver"
     },
     {
@@ -3104,6 +3879,7 @@
       "mark": "source",
       "madeBy": "goldsmithing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'chains and trinkets' in Roberts' Brazil prize (J)"
     },
     {
@@ -3118,6 +3894,7 @@
       "mark": "source",
       "madeBy": "dye",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "killing and drying the insect; 18–45s a pound in London (TR)"
     },
     {
@@ -3132,6 +3909,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the insect reared on the cactus in Oaxaca (COC); the dye is Dye Making"
     },
     {
@@ -3146,6 +3924,7 @@
       "mark": "source",
       "madeBy": "marine",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the Rancheria banks; needs Swimming for the depth (E)"
     },
     {
@@ -3160,6 +3939,7 @@
       "mark": "source",
       "madeBy": "marine",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Maldives shells, a currency (UWF)"
     },
     {
@@ -3174,6 +3954,7 @@
       "mark": "source",
       "madeBy": "hunting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'Elephant's Teeth' from the Guinea coast (J)"
     },
     {
@@ -3188,6 +3969,7 @@
       "mark": "source",
       "madeBy": "marine",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "sun does the work; raking the pans was ordinary labour (D, TC)"
     },
     {
@@ -3202,6 +3984,7 @@
       "mark": "source",
       "madeBy": "fishing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the minigame's catch"
     },
     {
@@ -3216,6 +3999,7 @@
       "mark": "source",
       "madeBy": "husbandry",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "penned at Port Royal until sold (D); catching them is Fishing"
     },
     {
@@ -3230,6 +4014,7 @@
       "mark": "source",
       "madeBy": "fishing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "netted at the Caymans and kept alive in crawls at Port Royal (D, HA)"
     },
     {
@@ -3244,6 +4029,7 @@
       "mark": "source",
       "madeBy": "preserving",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "hardened with smoke for sea voyages (E2)"
     },
     {
@@ -3258,6 +4044,7 @@
       "mark": "source",
       "madeBy": "preserving",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'salt it, and sell it so to the planters' (E2)"
     },
     {
@@ -3272,6 +4059,7 @@
       "mark": "unsourced",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Rex's addition: a crop for Perfumery. No period Caribbean source; marked unsourced"
     },
     {
@@ -3286,6 +4074,7 @@
       "mark": "unsourced",
       "madeBy": "perfumery",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "unsourced for the Caribbean; a cultural good if one region prizes it"
     },
     {
@@ -3300,6 +4089,7 @@
       "mark": "unsourced",
       "madeBy": "perfumery",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "unsourced; the finished luxury"
     },
     {
@@ -3314,6 +4104,7 @@
       "mark": "unsourced",
       "madeBy": "marine",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Rex's addition; no period trade in the sources, marked unsourced"
     },
     {
@@ -3328,6 +4119,7 @@
       "mark": "source",
       "madeBy": "founding",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "33 pieces on the QAR, London marks c. 1689–1712 (QAR); Port Royal had pewterers"
     },
     {
@@ -3342,6 +4134,7 @@
       "mark": "source",
       "madeBy": "shipwrighting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "the ship hauled down on a beach and the bottom scraped (DUTIES)"
     },
     {
@@ -3356,6 +4149,7 @@
       "mark": "source",
       "madeBy": "shipwrighting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "also needs old rope picked to oakum (DUTIES); the caulker's rung"
     },
     {
@@ -3370,6 +4164,7 @@
       "mark": "source",
       "madeBy": "shipwrighting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Low took 'a mast, yard and hawsers' (J); Campbell's block-maker"
     },
     {
@@ -3384,6 +4179,7 @@
       "mark": "source",
       "madeBy": "shipwrighting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Boston and the Thames yards; no Caribbean ship of size in the sources (open)"
     },
     {
@@ -3398,6 +4194,7 @@
       "mark": "source",
       "madeBy": "shipwrighting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Campbell's boat and lighter builders"
     },
     {
@@ -3412,6 +4209,7 @@
       "mark": "source",
       "madeBy": "shipwrighting",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Bermuda cedar sloops from the mid-1600s (research); Bonnet's and Teach's sloops"
     },
     {
@@ -3427,6 +4225,7 @@
       "madeBy": null,
       "knowledge": "foreign",
       "region": "malacca",
+      "origin": "caribbean",
       "note": "white 1.01, black 0.42 guilders a lb at Amsterdam (1691–94); Lowther took 'pepper' from a prize (J)"
     },
     {
@@ -3442,6 +4241,7 @@
       "madeBy": null,
       "knowledge": "foreign",
       "region": "malacca",
+      "origin": "caribbean",
       "note": "Amsterdam 1691: cloves 3.75, nutmeg 3.00, mace 8.40, cinnamon 3.00 guilders a lb; Ligon's cookery used them"
     },
     {
@@ -3457,6 +4257,7 @@
       "madeBy": null,
       "knowledge": "foreign",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "21.50 guilders a lb at Amsterdam (1691): dearer than cochineal"
     },
     {
@@ -3471,6 +4272,7 @@
       "mark": "source",
       "madeBy": "cooking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "preserves need white sugar (L); preserved ginger 0.64 and white candy 0.50 guilders a lb at Amsterdam (1691)"
     },
     {
@@ -3485,6 +4287,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "35 lb to London in one month (C81); Blome lists it for Jamaica (1672)"
     },
     {
@@ -3499,6 +4302,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Blome 1672 lists them among Jamaica's commodities"
     },
     {
@@ -3514,6 +4318,7 @@
       "madeBy": null,
       "knowledge": "foreign",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Spanish Peru → Spain → London chemists (1658). Spanish mainland, not an expansion region"
     },
     {
@@ -3528,6 +4333,7 @@
       "mark": "source",
       "madeBy": "apothecary",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "sold by London chemists from 1658; Talbor's cure 1672–78. The bark is Spanish and the use was a secret: learned knowledge (3f)"
     },
     {
@@ -3542,6 +4348,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Spanish America; Dampier: 'three pence a cod'"
     },
     {
@@ -3556,6 +4363,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Martinique 1723, Jamaica 1721/1728: the end of the period"
     },
     {
@@ -3570,6 +4378,7 @@
       "mark": "source",
       "madeBy": "cooking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Roberts 'drank his Tea constantly' (J); the tea itself is imported (below)"
     },
     {
@@ -3585,6 +4394,7 @@
       "madeBy": null,
       "knowledge": "foreign",
       "region": "east-china-sea",
+      "origin": "caribbean",
       "note": "Roberts 'drank his Tea constantly' (J); Asia by the Company ships"
     },
     {
@@ -3599,6 +4409,7 @@
       "mark": "source",
       "madeBy": "baking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'The third sort of bread we use, is only Potatoes' (L)"
     },
     {
@@ -3613,6 +4424,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "Ligon's island breads: 'Tobacco, Ginger, Cotten-wool, Maies, Yeames, and Potatoes'"
     },
     {
@@ -3627,6 +4439,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "limes 'much fitter for sauce then the Limon' (L); the juice to London (C81)"
     },
     {
@@ -3641,6 +4454,7 @@
       "mark": "source",
       "madeBy": "farming",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'Pines worth all that went before' (L)"
     },
     {
@@ -3655,6 +4469,7 @@
       "mark": "source",
       "madeBy": "brewing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "New England and Virginia; a boat 'brought Apples and Sider to sell to the Sloop's Men' (J). Apples: no Caribbean crop"
     },
     {
@@ -3669,6 +4484,7 @@
       "mark": "source",
       "madeBy": "brewing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'one gallon, wine measure, of beer' (Navy contract 1678); spoils in the tropics"
     },
     {
@@ -3683,6 +4499,7 @@
       "mark": "source",
       "madeBy": "brewing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'as bad as water bewitched' (Barlow 1667); Anstis's mock trial: 'guilty of drinking Small-Beer' (J)"
     },
     {
@@ -3697,6 +4514,7 @@
       "mark": "source",
       "madeBy": "brewing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'good English Beer' (L); Ligon's outlay 'Strong Beer 50 l.'"
     },
     {
@@ -3711,6 +4529,7 @@
       "mark": "source",
       "madeBy": "brewing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'spring water, white sugar, and juyce of Orenges' (L)"
     },
     {
@@ -3725,6 +4544,7 @@
       "mark": "source",
       "madeBy": "brewing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'Mobbie, a drink made of Potatoes'; perino 'which the Indians make'; grippo 'few make it well' (L)"
     },
     {
@@ -3739,6 +4559,7 @@
       "mark": "source",
       "madeBy": "brewing",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'the incomparable wine of Pines' (L); Dampier's 'pine-drink'"
     },
     {
@@ -3753,6 +4574,7 @@
       "mark": "source",
       "madeBy": "cooking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "'a sort of Sailors Drink, made of Ale, Brandy and Sugar' (Bailey 1724), heated with a loggerhead"
     },
     {
@@ -3767,6 +4589,7 @@
       "mark": "source",
       "madeBy": "cooking",
       "region": "caribbean",
+      "origin": "caribbean",
       "note": "rum, water, lime, sugar, 'a little Nutmeg scrap'd on the top' (Sloane); Avery 'mightily addicted to Punch' (J)"
     },
     {
@@ -3781,7 +4604,836 @@
       "mark": "source",
       "madeBy": "distilling",
       "region": "indian-ocean",
+      "origin": "caribbean",
       "note": "East Indies palm or cane spirit; 'rum or arrack in lieu' of wine (Navy 1731); Barlow at Goa 1697 priced it by the keg. A far-travelled merchant's recipe (3f)"
+    },
+    {
+      "id": "gum-arabic",
+      "name": "Gum arabic (tapped)",
+      "row": 82,
+      "kind": "raw",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "farming",
+      "region": "caribbean",
+      "origin": "west-africa",
+      "note": "the Moors' desert acacia, sold at the Senegal escales (AF)"
+    },
+    {
+      "id": "beeswax",
+      "name": "Beeswax (wild hives)",
+      "row": 83,
+      "kind": "raw",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "marine",
+      "region": "caribbean",
+      "origin": "west-africa",
+      "note": "'there is always abundance of wax' at Cape Lopez (AF); gathered, not farmed"
+    },
+    {
+      "id": "malaguetta-pepper",
+      "name": "Malaguetta pepper",
+      "row": 84,
+      "kind": "imported",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "west-africa",
+      "note": "300 lb for an iron bar at Sestro (AF)"
+    },
+    {
+      "id": "camwood-and-takula",
+      "name": "Camwood and takula (red dyewoods)",
+      "row": 85,
+      "kind": "raw",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "woodcutting",
+      "region": "caribbean",
+      "origin": "west-africa",
+      "note": "20–30s a tun at Cape Lopez (AF)"
+    },
+    {
+      "id": "benin-and-allada-cloth",
+      "name": "Benin and Allada cloth",
+      "row": 86,
+      "kind": "manufactured",
+      "type": "cultural",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "weaving",
+      "region": "caribbean",
+      "origin": "west-africa",
+      "note": "striped blue and white; 16,000 pieces a year mid-century (AF)"
+    },
+    {
+      "id": "palm-oil",
+      "name": "Palm oil (pressed)",
+      "row": 87,
+      "kind": "raw",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "farming",
+      "region": "caribbean",
+      "origin": "west-africa",
+      "note": "Whydah's palms 'cultivated mainly to draw oil' (AF)"
+    },
+    {
+      "id": "kola-nuts",
+      "name": "Kola nuts",
+      "row": 88,
+      "kind": "raw",
+      "type": "cultural",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "farming",
+      "region": "caribbean",
+      "origin": "west-africa",
+      "note": "the Sierra Leone forest (AF)"
+    },
+    {
+      "id": "loango-copper-libongo-cloth-takula-elephants-tails",
+      "name": "Loango copper, libongo cloth, takula, elephants' tails",
+      "row": 89,
+      "kind": "imported",
+      "type": "cultural",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "foreign",
+      "region": "caribbean",
+      "origin": "west-africa",
+      "note": "the Loango coast's own goods and money (AF)"
+    },
+    {
+      "id": "cape-verde-panos",
+      "name": "Cape Verde panos",
+      "row": 90,
+      "kind": "manufactured",
+      "type": "cultural",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "weaving",
+      "region": "caribbean",
+      "origin": "atlantic-islands",
+      "note": "strip cloth, the currency of the Rivers of Guinea (AF)"
+    },
+    {
+      "id": "orchil",
+      "name": "Orchil (lichen dye)",
+      "row": 91,
+      "kind": "manufactured",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "dye",
+      "region": "caribbean",
+      "origin": "atlantic-islands",
+      "note": "Cape Verde and the Canaries; a Lisbon monopoly (AF, EU)"
+    },
+    {
+      "id": "coast-provisions",
+      "name": "Coast provisions (yams, corn, palm wine)",
+      "row": 92,
+      "kind": "manufactured",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "cooking",
+      "region": "caribbean",
+      "origin": "west-africa",
+      "note": "palm wine 2s 3d the anchor, yams 14s a hundred (Bosman)"
+    },
+    {
+      "id": "trade-beads",
+      "name": "Trade beads (bugles, rangoes, coral, amber)",
+      "row": 93,
+      "kind": "imported",
+      "type": "cultural",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "Venice, Cambay, Genoa, Danzig for the coast trade (AF)"
+    },
+    {
+      "id": "brass-basins-and-kettles",
+      "name": "Brass basins and kettles (battery ware)",
+      "row": 94,
+      "kind": "manufactured",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "founding",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "Bristol and Birmingham battery for the coast; cut into bracelets at Whydah (AF)"
+    },
+    {
+      "id": "ready-made-slops-shirts-trousers-cravats",
+      "name": "Ready-made slops: shirts, trousers, cravats",
+      "row": 95,
+      "kind": "manufactured",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "tailoring",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "shirt 2s 6d, cravat 6d, Barbados 1668 (EU)"
+    },
+    {
+      "id": "earthenware-delftware-glass",
+      "name": "Earthenware, Delftware, glass",
+      "row": 96,
+      "kind": "imported",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "no potter or glasshouse in the game's Caribbean in the sources (EU); Potting as a skill: open"
+    },
+    {
+      "id": "paper-and-books",
+      "name": "Paper and books",
+      "row": 97,
+      "kind": "imported",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "reams from England, the Zaan, Angoumois (EU)"
+    },
+    {
+      "id": "castile-soap-wax-candles",
+      "name": "Castile soap, wax candles",
+      "row": 98,
+      "kind": "imported",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "(EU)"
+    },
+    {
+      "id": "gunflints",
+      "name": "Gunflints",
+      "row": 99,
+      "kind": "imported",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "English flints for the colonies and Africa (EU)"
+    },
+    {
+      "id": "coal",
+      "name": "Coal",
+      "row": 100,
+      "kind": "raw",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "mining",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "Newcastle sea-coal by the chaldron (EU)"
+    },
+    {
+      "id": "tradesmen-s-tools",
+      "name": "Tradesmen's tools (sets)",
+      "row": 101,
+      "kind": "manufactured",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "smithing",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "a carpenter's set about £1 10s (EU)"
+    },
+    {
+      "id": "gin",
+      "name": "Gin (genever)",
+      "row": 102,
+      "kind": "manufactured",
+      "type": "cultural",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "distilling",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "Schiedam's trade (EU)"
+    },
+    {
+      "id": "herring",
+      "name": "Herring",
+      "row": 103,
+      "kind": "raw",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "fishing",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "the Dutch and Scots fisheries (EU)"
+    },
+    {
+      "id": "whale-oil-and-bone",
+      "name": "Whale oil and bone (tried out)",
+      "row": 104,
+      "kind": "manufactured",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "butchering",
+      "region": "caribbean",
+      "origin": "north-america",
+      "note": "rendered on the beach; oil about £2 a barrel, bone 6–8d a lb (NA)"
+    },
+    {
+      "id": "whales",
+      "name": "Whales (shore whaling)",
+      "row": 104,
+      "kind": "raw",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "fishing",
+      "region": "caribbean",
+      "origin": "north-america",
+      "note": "Long Island crews on shares; Nantucket 25 vessels by 1730 (NA)"
+    },
+    {
+      "id": "baltic-stores",
+      "name": "Baltic stores (hemp, flax, pitch, tar, Swedish iron and steel, Russian leather, Polish grain)",
+      "row": 105,
+      "kind": "imported",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "through Amsterdam; Posthumus series (EU)"
+    },
+    {
+      "id": "masts",
+      "name": "Masts (great white pines)",
+      "row": 106,
+      "kind": "raw",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "woodcutting",
+      "region": "caribbean",
+      "origin": "north-america",
+      "note": "the Broad Arrow's 24-inch trees; mast ships carried 40–50 (NA)"
+    },
+    {
+      "id": "olive-oil",
+      "name": "Olive oil",
+      "row": 107,
+      "kind": "imported",
+      "type": "cultural",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "Andalusia's by the jar (EU, SB)"
+    },
+    {
+      "id": "mercury",
+      "name": "Mercury (quicksilver)",
+      "row": 108,
+      "kind": "imported",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "Almadén's, for the silver mines (EU)"
+    },
+    {
+      "id": "spanish-merino-wool",
+      "name": "Spanish merino wool",
+      "row": 109,
+      "kind": "imported",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "(EU)"
+    },
+    {
+      "id": "irish-barrelled-beef-and-butter",
+      "name": "Irish barrelled beef and butter",
+      "row": 110,
+      "kind": "manufactured",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "preserving",
+      "region": "caribbean",
+      "origin": "europe",
+      "note": "Cork's trade after the Cattle Act 1667 (EU)"
+    },
+    {
+      "id": "tobacco-rolled-the-bahia-way",
+      "name": "Tobacco, rolled the Bahia way",
+      "row": 111,
+      "kind": "raw",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "farming",
+      "region": "caribbean",
+      "origin": "brazil",
+      "note": "molasses-coated rolls for the Mina trade; a technique to be learned (SB)"
+    },
+    {
+      "id": "brazilwood",
+      "name": "Brazilwood",
+      "row": 112,
+      "kind": "raw",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "woodcutting",
+      "region": "caribbean",
+      "origin": "brazil",
+      "note": "a crown monopoly (SB)"
+    },
+    {
+      "id": "brazilian-gold-and-moidores",
+      "name": "Brazilian gold and moidores",
+      "row": 113,
+      "kind": "imported",
+      "type": "money",
+      "typeMark": "source",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "brazil",
+      "note": "money; Open for Rex 2"
+    },
+    {
+      "id": "diamonds",
+      "name": "Diamonds (Brazil, 1729)",
+      "row": 114,
+      "kind": "imported",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "brazil",
+      "note": "the very end of the period (SB)"
+    },
+    {
+      "id": "cacha-a",
+      "name": "Cachaça",
+      "row": 115,
+      "kind": "manufactured",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "distilling",
+      "region": "caribbean",
+      "origin": "brazil",
+      "note": "Bahia's cane spirit, the Angola trade liquor (SB)"
+    },
+    {
+      "id": "manioc-flour",
+      "name": "Manioc flour (farinha)",
+      "row": 116,
+      "kind": "manufactured",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": false,
+      "mark": "source",
+      "madeBy": "milling",
+      "region": "caribbean",
+      "origin": "brazil",
+      "note": "640 réis a bushel at São Paulo 1703 (SB)"
+    },
+    {
+      "id": "mexican-silver-pesos",
+      "name": "Mexican silver pesos",
+      "row": 117,
+      "kind": "imported",
+      "type": "money",
+      "typeMark": "source",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "spanish-main",
+      "note": "money; Open for Rex 2"
+    },
+    {
+      "id": "gold-of-new-granada-and-darien",
+      "name": "Gold of New Granada and Darien",
+      "row": 118,
+      "kind": "imported",
+      "type": "money",
+      "typeMark": "source",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "spanish-main",
+      "note": "money; Open for Rex 2"
+    },
+    {
+      "id": "emeralds",
+      "name": "Emeralds (Muzo)",
+      "row": 119,
+      "kind": "raw",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "mining",
+      "region": "caribbean",
+      "origin": "spanish-main",
+      "note": "to Cartagena and Seville; some to Mughal India (SB)"
+    },
+    {
+      "id": "snuff",
+      "name": "Snuff",
+      "row": 121,
+      "kind": "manufactured",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "milling",
+      "region": "caribbean",
+      "origin": "spanish-main",
+      "note": "the Seville factory of 1687 (SB)"
+    },
+    {
+      "id": "balsams-jalap-copal",
+      "name": "Balsams, jalap, copal (Spanish drugs)",
+      "row": 122,
+      "kind": "manufactured",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "apothecary",
+      "region": "caribbean",
+      "origin": "spanish-main",
+      "note": "Spain took 83,387 arrobas of drugs 1717–38 (SB)"
+    },
+    {
+      "id": "spanish-american-drugs",
+      "name": "Spanish American drugs",
+      "row": 122,
+      "kind": "imported",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "spanish-main",
+      "note": "jalap, balsams, copal, liquidambar, sarsaparilla (SB)"
+    },
+    {
+      "id": "tasajo",
+      "name": "Tasajo (jerked beef)",
+      "row": 123,
+      "kind": "manufactured",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": false,
+      "mark": "source",
+      "madeBy": "preserving",
+      "region": "caribbean",
+      "origin": "spanish-main",
+      "note": "Campeche's jerked beef to Havana (SB)"
+    },
+    {
+      "id": "yucat-n-cotton-cloth",
+      "name": "Yucatán cotton cloth",
+      "row": 123,
+      "kind": "manufactured",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "weaving",
+      "region": "caribbean",
+      "origin": "spanish-main",
+      "note": "woven by Indian women for Havana (SB)"
+    },
+    {
+      "id": "mules",
+      "name": "Mules",
+      "row": 124,
+      "kind": "raw",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": false,
+      "mark": "source",
+      "madeBy": "husbandry",
+      "region": "caribbean",
+      "origin": "spanish-main",
+      "note": "Venezuela's mules for the Saint-Domingue sugar mills (SB)"
+    },
+    {
+      "id": "beaver-and-furs",
+      "name": "Beaver and furs (trapping)",
+      "row": 125,
+      "kind": "raw",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "hunting",
+      "region": "caribbean",
+      "origin": "north-america",
+      "note": "coat beaver about 6.6s a pelt in London 1713–26; a blanket cost 7 made beaver at the posts (NA)"
+    },
+    {
+      "id": "beaver-hats",
+      "name": "Beaver hats (felt)",
+      "row": 126,
+      "kind": "manufactured",
+      "type": "cultural",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "tailoring",
+      "region": "caribbean",
+      "origin": "north-america",
+      "note": "the hatter's trade, cut off by the Hat Act 1732 (NA)"
+    },
+    {
+      "id": "cod-the-newfoundland-fishery",
+      "name": "Cod, the Newfoundland fishery",
+      "row": 128,
+      "kind": "raw",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "fishing",
+      "region": "caribbean",
+      "origin": "north-america",
+      "note": "200–300 quintals a boat; 171 ships and 800 boats in 1700 (NA)"
+    },
+    {
+      "id": "salt-cod-by-grade",
+      "name": "Salt cod by grade (merchantable, Madeira, refuse)",
+      "row": 128,
+      "kind": "manufactured",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "preserving",
+      "region": "caribbean",
+      "origin": "north-america",
+      "note": "the grade set the market: the refuse went to the islands (NA)"
+    },
+    {
+      "id": "ginseng",
+      "name": "Ginseng",
+      "row": 129,
+      "kind": "imported",
+      "type": "specialty",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "north-america",
+      "note": "to Canton from 1721 (NA)"
+    },
+    {
+      "id": "pig-iron",
+      "name": "Pig iron (colonial furnace)",
+      "row": 130,
+      "kind": "raw",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "mining",
+      "region": "caribbean",
+      "origin": "north-america",
+      "note": "Principio 1723; 1,716 tons into England by 1730 (NA)"
+    },
+    {
+      "id": "wampum",
+      "name": "Wampum (drilled shell)",
+      "row": 131,
+      "kind": "raw",
+      "type": "cultural",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": "marine",
+      "region": "caribbean",
+      "origin": "north-america",
+      "note": "120 beads to a fathom (NA); a craft folded in here as a one-off"
+    },
+    {
+      "id": "ambergris",
+      "name": "Ambergris (found on the beach)",
+      "row": 132,
+      "kind": "raw",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": false,
+      "mark": "source",
+      "madeBy": "marine",
+      "region": "caribbean",
+      "origin": "atlantic-islands",
+      "note": "Bermuda and the Bahamas (SB); the Nicobars too"
+    },
+    {
+      "id": "bermuda-cedar-onions-bahamas-braziletto",
+      "name": "Bermuda cedar, onions; Bahamas braziletto",
+      "row": 132,
+      "kind": "imported",
+      "type": "base",
+      "typeMark": "proposed",
+      "basePrice": null,
+      "offMap": true,
+      "mark": "source",
+      "madeBy": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "origin": "atlantic-islands",
+      "note": "(SB)"
     }
   ]
 }

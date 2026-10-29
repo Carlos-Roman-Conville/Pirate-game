@@ -9,7 +9,8 @@
     "inputs": "every listed input is needed (gunpowder takes all three)",
     "service": "a service, not a traded good: the skill is used on people or ships, and the chip shows what that level can do",
     "knowledge": "common = every tradesman of the skill knows it here; learned = must be taught or read; foreign = comes only with a far-travelled merchant or a book from another continent (Rex, 2026-10-29). Unset means common",
-    "region": "where a good or recipe belongs: caribbean (the base game) or an expansion region from REGIONS.md. Unset means caribbean. A good from another region reaches the Caribbean only through a rare-items trader, the odd ship, or a merchant's stall (Rex, 2026-10-29)"
+    "region": "where a good or recipe belongs: caribbean (the base game) or an expansion region from REGIONS.md. Unset means caribbean. A good from another region reaches the Caribbean only through a rare-items trader, the odd ship, or a merchant's stall (Rex, 2026-10-29)",
+    "origin": "where in the Atlantic world a base-game good comes from: caribbean, west-africa, europe, north-america, spanish-main, brazil, atlantic-islands (GOODS.md 1l). Unset means caribbean"
   },
   "recipes": [
     {
@@ -373,6 +374,68 @@
       "note": "Martinique 1723, Jamaica 1721/1728: the end of the period"
     },
     {
+      "id": "farming-tobacco-rolled-the-bahia-way",
+      "skill": "farming",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "tobacco-rolled-the-bahia-way",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "tobacco-grown"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "learned",
+      "region": "caribbean",
+      "note": "molasses-coated rolls for the Mina trade; a technique to be learned (SB)"
+    },
+    {
+      "id": "farming-gum-arabic",
+      "skill": "farming",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "gum-arabic",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "the Moors' desert acacia, sold at the Senegal escales (AF)"
+    },
+    {
+      "id": "farming-kola-nuts",
+      "skill": "farming",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "kola-nuts",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "the Sierra Leone forest (AF)"
+    },
+    {
+      "id": "farming-palm-oil",
+      "skill": "farming",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "palm-oil",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Whydah's palms 'cultivated mainly to draw oil' (AF)"
+    },
+    {
       "id": "husbandry-horses",
       "skill": "husbandry",
       "band": "journeyman",
@@ -446,6 +509,21 @@
       "knowledge": "common",
       "region": "caribbean",
       "note": "penned at Port Royal until sold (D); catching them is Fishing"
+    },
+    {
+      "id": "husbandry-mules",
+      "skill": "husbandry",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "mules",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Venezuela's mules for the Saint-Domingue sugar mills (SB)"
     },
     {
       "id": "marine-salt",
@@ -523,6 +601,51 @@
       "note": "Rex's addition; no period trade in the sources, marked unsourced"
     },
     {
+      "id": "marine-beeswax",
+      "skill": "marine",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "beeswax",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "'there is always abundance of wax' at Cape Lopez (AF); gathered, not farmed"
+    },
+    {
+      "id": "marine-ambergris",
+      "skill": "marine",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "ambergris",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Bermuda and the Bahamas (SB); the Nicobars too"
+    },
+    {
+      "id": "marine-wampum",
+      "skill": "marine",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "wampum",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "120 beads to a fathom (NA); a craft folded in here as a one-off"
+    },
+    {
       "id": "hunting-wild-cattle-and-hog-carcasses",
       "skill": "hunting",
       "band": "novice",
@@ -568,6 +691,21 @@
       "note": "'Elephant's Teeth' from the Guinea coast (J)"
     },
     {
+      "id": "hunting-beaver-and-furs",
+      "skill": "hunting",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "beaver-and-furs",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "coat beaver about 6.6s a pelt in London 1713–26; a blanket cost 7 made beaver at the posts (NA)"
+    },
+    {
       "id": "fishing-fresh-fish",
       "skill": "fishing",
       "band": "novice",
@@ -596,6 +734,51 @@
       "knowledge": "common",
       "region": "caribbean",
       "note": "netted at the Caymans and kept alive in crawls at Port Royal (D, HA)"
+    },
+    {
+      "id": "fishing-whales",
+      "skill": "fishing",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "whales",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Long Island crews on shares; Nantucket 25 vessels by 1730 (NA)"
+    },
+    {
+      "id": "fishing-cod-the-newfoundland-fishery",
+      "skill": "fishing",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "cod-the-newfoundland-fishery",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "200–300 quintals a boat; 171 ships and 800 boats in 1700 (NA)"
+    },
+    {
+      "id": "fishing-herring",
+      "skill": "fishing",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "herring",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "the Dutch and Scots fisheries (EU)"
     },
     {
       "id": "woodcutting-lumber",
@@ -720,6 +903,51 @@
       "note": "the collier's clamp; Rex keeps charcoal burning inside Woodcutting (2026-10-28)"
     },
     {
+      "id": "woodcutting-masts",
+      "skill": "woodcutting",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "masts",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "the Broad Arrow's 24-inch trees; mast ships carried 40–50 (NA)"
+    },
+    {
+      "id": "woodcutting-camwood-and-takula",
+      "skill": "woodcutting",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "camwood-and-takula",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "20–30s a tun at Cape Lopez (AF)"
+    },
+    {
+      "id": "woodcutting-brazilwood",
+      "skill": "woodcutting",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "brazilwood",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "a crown monopoly (SB)"
+    },
+    {
       "id": "mining-nitre-earth",
       "skill": "mining",
       "band": "novice",
@@ -802,12 +1030,14 @@
       "output": "silver",
       "service": false,
       "offMap": true,
-      "inputs": [],
+      "inputs": [
+        "mercury"
+      ],
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
-      "note": "Potosí to Portobelo; refining with mercury (WHF)"
+      "note": "Potosí to Portobelo; refining with mercury (WHF); refined with Almadén mercury, which the mines could not do without (EU)"
     },
     {
       "id": "mining-gold-and-gold-dust",
@@ -823,6 +1053,53 @@
       "knowledge": "common",
       "region": "caribbean",
       "note": "Brazil and the Guinea coast; washing dust takes less than refining silver"
+    },
+    {
+      "id": "mining-pig-iron",
+      "skill": "mining",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "pig-iron",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "ore-and-lead"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Principio 1723; 1,716 tons into England by 1730 (NA)"
+    },
+    {
+      "id": "mining-coal",
+      "skill": "mining",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "coal",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Newcastle sea-coal by the chaldron (EU)"
+    },
+    {
+      "id": "mining-emeralds",
+      "skill": "mining",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "emeralds",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "to Cartagena and Seville; some to Mughal India (SB)"
     },
     {
       "id": "cooking-lime-juice",
@@ -944,6 +1221,21 @@
       "note": "Roberts 'drank his Tea constantly' (J); the tea itself is imported (below)"
     },
     {
+      "id": "cooking-coast-provisions",
+      "skill": "cooking",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "coast-provisions",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "palm wine 2s 3d the anchor, yams 14s a hundred (Bosman)"
+    },
+    {
       "id": "milling-meal",
       "skill": "milling",
       "band": "novice",
@@ -993,6 +1285,40 @@
       "knowledge": "common",
       "region": "caribbean",
       "note": "bolted fine; 196 lb to the barrel (FL)"
+    },
+    {
+      "id": "milling-manioc-flour",
+      "skill": "milling",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "manioc-flour",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "cassava-maize-yams-potatoes"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "640 réis a bushel at São Paulo 1703 (SB)"
+    },
+    {
+      "id": "milling-snuff",
+      "skill": "milling",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "snuff",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "tobacco-cured-and-packed"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "the Seville factory of 1687 (SB)"
     },
     {
       "id": "baking-cassava-and-potato-bread",
@@ -1114,6 +1440,23 @@
       "note": "a clean skin is worth more; 'Skinns' from Carolina (CCR)"
     },
     {
+      "id": "butchering-whale-oil-and-bone",
+      "skill": "butchering",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "whale-oil-and-bone",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "whales"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "rendered on the beach; oil about £2 a barrel, bone 6–8d a lb (NA)"
+    },
+    {
       "id": "preserving-salt-fish",
       "skill": "preserving",
       "band": "novice",
@@ -1182,6 +1525,57 @@
       "note": "'salt it, and sell it so to the planters' (E2)"
     },
     {
+      "id": "preserving-salt-cod-by-grade",
+      "skill": "preserving",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "salt-cod-by-grade",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "cod-the-newfoundland-fishery"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "the grade set the market: the refuse went to the islands (NA)"
+    },
+    {
+      "id": "preserving-tasajo",
+      "skill": "preserving",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "tasajo",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "fresh-meat"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Campeche's jerked beef to Havana (SB)"
+    },
+    {
+      "id": "preserving-irish-barrelled-beef-and-butter",
+      "skill": "preserving",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "irish-barrelled-beef-and-butter",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "fresh-meat"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Cork's trade after the Cattle Act 1667 (EU)"
+    },
+    {
       "id": "dairying-butter",
       "skill": "dairying",
       "band": "apprentice",
@@ -1248,21 +1642,6 @@
       "note": "sealing wax for letters; no Caribbean source"
     },
     {
-      "id": "waxworking-beeswax-candles",
-      "skill": "waxworking",
-      "band": "apprentice",
-      "minLevel": 25,
-      "output": "beeswax-candles",
-      "service": false,
-      "offMap": false,
-      "inputs": [],
-      "inputsAny": [],
-      "gate": null,
-      "knowledge": "common",
-      "region": "caribbean",
-      "note": "cleaner burning, for church and the cabin; beeswax supply in the Caribbean open"
-    },
-    {
       "id": "waxworking-moulded-and-altar-candles",
       "skill": "waxworking",
       "band": "journeyman",
@@ -1306,6 +1685,23 @@
       "knowledge": "common",
       "region": "caribbean",
       "note": "the INFP's signature work (story: brothel, wax figures); a design good"
+    },
+    {
+      "id": "waxworking-beeswax-candles",
+      "skill": "waxworking",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "beeswax-candles",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "beeswax"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "cleaner burning; the wax came from the Guinea coast (AF). No longer unsourced for the wax"
     },
     {
       "id": "tanning-dressed-deerskin",
@@ -1631,6 +2027,21 @@
       "note": "the dye bath with a mordant; needs a dye from this tree too"
     },
     {
+      "id": "dye-orchil",
+      "skill": "dye",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "orchil",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Cape Verde and the Canaries; a Lisbon monopoly (AF, EU)"
+    },
+    {
       "id": "brewing-small-beer",
       "skill": "brewing",
       "band": "novice",
@@ -1828,6 +2239,40 @@
       "knowledge": "foreign",
       "region": "indian-ocean",
       "note": "East Indies palm or cane spirit; 'rum or arrack in lieu' of wine (Navy 1731); Barlow at Goa 1697 priced it by the keg. A far-travelled merchant's recipe (3f)"
+    },
+    {
+      "id": "distilling-cacha-a",
+      "skill": "distilling",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "cacha-a",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "molasses"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Bahia's cane spirit, the Angola trade liquor (SB)"
+    },
+    {
+      "id": "distilling-gin",
+      "skill": "distilling",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "gin",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "grain-for-meal-and-flour"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Schiedam's trade (EU)"
     },
     {
       "id": "refining-refined-sulphur",
@@ -2134,6 +2579,23 @@
       "note": "the anchor-smith, 'laborious and profitable Branch of the Smith Trade' (Campbell)"
     },
     {
+      "id": "smithing-tradesmen-s-tools",
+      "skill": "smithing",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "tradesmen-s-tools",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "bar-iron"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "a carpenter's set about £1 10s (EU)"
+    },
+    {
       "id": "gunsmithing-small-arms-repair",
       "skill": "gunsmithing",
       "band": "novice",
@@ -2354,6 +2816,23 @@
       "knowledge": "common",
       "region": "caribbean",
       "note": "the gunfounder's furnace and boring mill; 29 located on the QAR wreck (QAR)"
+    },
+    {
+      "id": "founding-brass-basins-and-kettles",
+      "skill": "founding",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "brass-basins-and-kettles",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "steel-brass-pewter"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Bristol and Birmingham battery for the coast; cut into bracelets at Whydah (AF)"
     },
     {
       "id": "goldsmithing-silver-buttons-and-buckles",
@@ -2972,6 +3451,57 @@
       "note": "Asian looms; chintzes in a French prize (J)"
     },
     {
+      "id": "weaving-benin-and-allada-cloth",
+      "skill": "weaving",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "benin-and-allada-cloth",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "cotton-yarn"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "foreign",
+      "region": "caribbean",
+      "note": "striped blue and white; 16,000 pieces a year mid-century (AF)"
+    },
+    {
+      "id": "weaving-cape-verde-panos",
+      "skill": "weaving",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "cape-verde-panos",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "cotton-yarn"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "foreign",
+      "region": "caribbean",
+      "note": "strip cloth, the currency of the Rivers of Guinea (AF)"
+    },
+    {
+      "id": "weaving-yucat-n-cotton-cloth",
+      "skill": "weaving",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "yucat-n-cotton-cloth",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "cotton-yarn"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "woven by Indian women for Havana (SB)"
+    },
+    {
       "id": "ropemaking-twine-and-small-stuff",
       "skill": "ropemaking",
       "band": "novice",
@@ -3092,6 +3622,40 @@
       "knowledge": "common",
       "region": "caribbean",
       "note": "silk and linen shared out at Maracaibo (E)"
+    },
+    {
+      "id": "tailoring-beaver-hats",
+      "skill": "tailoring",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "beaver-hats",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "beaver-and-furs"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "the hatter's trade, cut off by the Hat Act 1732 (NA)"
+    },
+    {
+      "id": "tailoring-ready-made-slops-shirts-trousers-cravats",
+      "skill": "tailoring",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "ready-made-slops-shirts-trousers-cravats",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "coarse-linen"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "shirt 2s 6d, cravat 6d, Barbados 1668 (EU)"
     },
     {
       "id": "medicine-dressing-wounds",
@@ -3229,6 +3793,23 @@
       "knowledge": "common",
       "region": "caribbean",
       "note": "Pharmacopoeia Londinensis 1618 and after; spirits for tinctures"
+    },
+    {
+      "id": "apothecary-balsams-jalap-copal",
+      "skill": "apothecary",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "balsams-jalap-copal",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "spanish-american-drugs"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Spain took 83,387 arrobas of drugs 1717–38 (SB)"
     },
     {
       "id": "apothecary-peruvian-bark-against-fevers",

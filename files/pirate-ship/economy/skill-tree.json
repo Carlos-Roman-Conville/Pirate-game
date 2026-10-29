@@ -1,6 +1,6 @@
 {
   "title": "Pirate Ship: goods on the skill trees (proposed)",
-  "status": "Reviewed by Rex 2026-10-29 ('looks good'): the 40 skills, the placements and the occupations stand as the working set. 2026-10-29: spices, drugs, island foods and drinks added from the research (Brewing apart from Distilling, Rex 2026-10-29; imported-only goods listed). Later moves go through this JSON; the record of each split is in GOODS.md 3c and 3d.",
+  "status": "Reviewed by Rex 2026-10-29 ('looks good'): the 40 skills, the placements and the occupations stand as the working set. 2026-10-29: spices, drugs, island foods and drinks added from the research (Brewing apart from Distilling, Rex 2026-10-29; imported-only goods listed). Later moves go through this JSON; the record of each split is in GOODS.md 3c and 3d. 2026-10-29: the rest of the Atlantic world added (GOODS.md 1l); origins tagged.",
   "bands": [
     {
       "key": "novice",
@@ -42,7 +42,8 @@
     "inputs": "every listed input is needed (gunpowder takes all three)",
     "service": "a service, not a traded good: the skill is used on people or ships, and the chip shows what that level can do",
     "knowledge": "common = every tradesman of the skill knows it here; learned = must be taught or read; foreign = comes only with a far-travelled merchant or a book from another continent (Rex, 2026-10-29). Unset means common",
-    "region": "where a good or recipe belongs: caribbean (the base game) or an expansion region from REGIONS.md. Unset means caribbean. A good from another region reaches the Caribbean only through a rare-items trader, the odd ship, or a merchant's stall (Rex, 2026-10-29)"
+    "region": "where a good or recipe belongs: caribbean (the base game) or an expansion region from REGIONS.md. Unset means caribbean. A good from another region reaches the Caribbean only through a rare-items trader, the odd ship, or a merchant's stall (Rex, 2026-10-29)",
+    "origin": "where in the Atlantic world a base-game good comes from: caribbean, west-africa, europe, north-america, spanish-main, brazil, atlantic-islands (GOODS.md 1l). Unset means caribbean"
   },
   "groups": [
     {
@@ -204,6 +205,40 @@
               "name": "Coffee (from the 1720s)",
               "band": "journeyman",
               "note": "Martinique 1723, Jamaica 1721/1728: the end of the period"
+            },
+            {
+              "good": 111,
+              "name": "Tobacco, rolled the Bahia way",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "brazil",
+              "knowledge": "learned",
+              "input": "farming:Tobacco, grown",
+              "note": "molasses-coated rolls for the Mina trade; a technique to be learned (SB)"
+            },
+            {
+              "good": 82,
+              "name": "Gum arabic (tapped)",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "west-africa",
+              "note": "the Moors' desert acacia, sold at the Senegal escales (AF)"
+            },
+            {
+              "good": 88,
+              "name": "Kola nuts",
+              "band": "novice",
+              "offMap": true,
+              "origin": "west-africa",
+              "note": "the Sierra Leone forest (AF)"
+            },
+            {
+              "good": 87,
+              "name": "Palm oil (pressed)",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "west-africa",
+              "note": "Whydah's palms 'cultivated mainly to draw oil' (AF)"
             }
           ]
         },
@@ -244,6 +279,13 @@
               "name": "Turtle crawls (kept live)",
               "band": "apprentice",
               "note": "penned at Port Royal until sold (D); catching them is Fishing"
+            },
+            {
+              "good": 124,
+              "name": "Mules",
+              "band": "journeyman",
+              "origin": "spanish-main",
+              "note": "Venezuela's mules for the Saint-Domingue sugar mills (SB)"
             }
           ]
         },
@@ -286,6 +328,29 @@
               "band": "novice",
               "note": "Rex's addition; no period trade in the sources, marked unsourced",
               "unsourced": true
+            },
+            {
+              "good": 83,
+              "name": "Beeswax (wild hives)",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "west-africa",
+              "note": "'there is always abundance of wax' at Cape Lopez (AF); gathered, not farmed"
+            },
+            {
+              "good": 132,
+              "name": "Ambergris (found on the beach)",
+              "band": "expert",
+              "origin": "atlantic-islands",
+              "note": "Bermuda and the Bahamas (SB); the Nicobars too"
+            },
+            {
+              "good": 131,
+              "name": "Wampum (drilled shell)",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "north-america",
+              "note": "120 beads to a fathom (NA); a craft folded in here as a one-off"
             }
           ]
         },
@@ -314,6 +379,14 @@
               "band": "journeyman",
               "offMap": true,
               "note": "'Elephant's Teeth' from the Guinea coast (J)"
+            },
+            {
+              "good": 125,
+              "name": "Beaver and furs (trapping)",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "north-america",
+              "note": "coat beaver about 6.6s a pelt in London 1713–26; a blanket cost 7 made beaver at the posts (NA)"
             }
           ]
         },
@@ -335,6 +408,30 @@
               "name": "Turtle, live",
               "band": "apprentice",
               "note": "netted at the Caymans and kept alive in crawls at Port Royal (D, HA)"
+            },
+            {
+              "good": 104,
+              "name": "Whales (shore whaling)",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "north-america",
+              "note": "Long Island crews on shares; Nantucket 25 vessels by 1730 (NA)"
+            },
+            {
+              "good": 128,
+              "name": "Cod, the Newfoundland fishery",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "north-america",
+              "note": "200–300 quintals a boat; 171 ships and 800 boats in 1700 (NA)"
+            },
+            {
+              "good": 103,
+              "name": "Herring",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "europe",
+              "note": "the Dutch and Scots fisheries (EU)"
             }
           ]
         },
@@ -393,6 +490,30 @@
               "band": "apprentice",
               "input": "woodcutting:Lumber (felled)",
               "note": "the collier's clamp; Rex keeps charcoal burning inside Woodcutting (2026-10-28)"
+            },
+            {
+              "good": 106,
+              "name": "Masts (great white pines)",
+              "band": "expert",
+              "offMap": true,
+              "origin": "north-america",
+              "note": "the Broad Arrow's 24-inch trees; mast ships carried 40–50 (NA)"
+            },
+            {
+              "good": 85,
+              "name": "Camwood and takula (red dyewoods)",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "west-africa",
+              "note": "20–30s a tun at Cape Lopez (AF)"
+            },
+            {
+              "good": 112,
+              "name": "Brazilwood",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "brazil",
+              "note": "a crown monopoly (SB)"
             }
           ]
         },
@@ -442,7 +563,10 @@
               "name": "Silver",
               "band": "expert",
               "offMap": true,
-              "note": "Potosí to Portobelo; refining with mercury (WHF)"
+              "note": "Potosí to Portobelo; refining with mercury (WHF); refined with Almadén mercury, which the mines could not do without (EU)",
+              "inputs": [
+                "imported:Mercury (quicksilver)"
+              ]
             },
             {
               "good": 50,
@@ -450,6 +574,31 @@
               "band": "journeyman",
               "offMap": true,
               "note": "Brazil and the Guinea coast; washing dust takes less than refining silver"
+            },
+            {
+              "good": 130,
+              "name": "Pig iron (colonial furnace)",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "north-america",
+              "input": "mining:Ore and lead",
+              "note": "Principio 1723; 1,716 tons into England by 1730 (NA)"
+            },
+            {
+              "good": 100,
+              "name": "Coal",
+              "band": "novice",
+              "offMap": true,
+              "origin": "europe",
+              "note": "Newcastle sea-coal by the chaldron (EU)"
+            },
+            {
+              "good": 119,
+              "name": "Emeralds (Muzo)",
+              "band": "expert",
+              "offMap": true,
+              "origin": "spanish-main",
+              "note": "to Cartagena and Seville; some to Mughal India (SB)"
             }
           ]
         }
@@ -527,6 +676,14 @@
                 "cooking:Chocolate"
               ],
               "note": "Roberts 'drank his Tea constantly' (J); the tea itself is imported (below)"
+            },
+            {
+              "good": 92,
+              "name": "Coast provisions (yams, corn, palm wine)",
+              "band": "novice",
+              "offMap": true,
+              "origin": "west-africa",
+              "note": "palm wine 2s 3d the anchor, yams 14s a hundred (Bosman)"
             }
           ]
         },
@@ -557,6 +714,23 @@
               "band": "journeyman",
               "input": "farming:Grain for meal and flour",
               "note": "bolted fine; 196 lb to the barrel (FL)"
+            },
+            {
+              "good": 116,
+              "name": "Manioc flour (farinha)",
+              "band": "apprentice",
+              "origin": "brazil",
+              "input": "farming:Cassava, maize, yams, potatoes",
+              "note": "640 réis a bushel at São Paulo 1703 (SB)"
+            },
+            {
+              "good": 121,
+              "name": "Snuff",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "spanish-main",
+              "input": "farming:Tobacco, cured and packed",
+              "note": "the Seville factory of 1687 (SB)"
             }
           ]
         },
@@ -624,6 +798,15 @@
               "band": "journeyman",
               "input": "hunting:Deer carcasses",
               "note": "a clean skin is worth more; 'Skinns' from Carolina (CCR)"
+            },
+            {
+              "good": 104,
+              "name": "Whale oil and bone (tried out)",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "north-america",
+              "input": "fishing:Whales (shore whaling)",
+              "note": "rendered on the beach; oil about £2 a barrel, bone 6–8d a lb (NA)"
             }
           ]
         },
@@ -661,6 +844,32 @@
               "band": "journeyman",
               "input": "butchering:Fresh meat",
               "note": "'salt it, and sell it so to the planters' (E2)"
+            },
+            {
+              "good": 128,
+              "name": "Salt cod by grade (merchantable, Madeira, refuse)",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "north-america",
+              "input": "fishing:Cod, the Newfoundland fishery",
+              "note": "the grade set the market: the refuse went to the islands (NA)"
+            },
+            {
+              "good": 123,
+              "name": "Tasajo (jerked beef)",
+              "band": "apprentice",
+              "origin": "spanish-main",
+              "input": "butchering:Fresh meat",
+              "note": "Campeche's jerked beef to Havana (SB)"
+            },
+            {
+              "good": 110,
+              "name": "Irish barrelled beef and butter",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "europe",
+              "input": "butchering:Fresh meat",
+              "note": "Cork's trade after the Cattle Act 1667 (EU)"
             }
           ]
         },
@@ -710,13 +919,6 @@
             },
             {
               "good": 45,
-              "name": "Beeswax candles",
-              "band": "apprentice",
-              "unsourced": true,
-              "note": "cleaner burning, for church and the cabin; beeswax supply in the Caribbean open"
-            },
-            {
-              "good": 45,
               "name": "Moulded and altar candles",
               "band": "journeyman",
               "unsourced": true,
@@ -735,6 +937,13 @@
               "band": "master",
               "unsourced": true,
               "note": "the INFP's signature work (story: brothel, wax figures); a design good"
+            },
+            {
+              "good": 45,
+              "name": "Beeswax candles",
+              "band": "apprentice",
+              "input": "marine:Beeswax (wild hives)",
+              "note": "cleaner burning; the wax came from the Guinea coast (AF). No longer unsourced for the wax"
             }
           ]
         },
@@ -920,6 +1129,14 @@
               "band": "journeyman",
               "input": "weaving:Coarse linen (dowlas, osnaburg)",
               "note": "the dye bath with a mordant; needs a dye from this tree too"
+            },
+            {
+              "good": 91,
+              "name": "Orchil (lichen dye)",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "atlantic-islands",
+              "note": "Cape Verde and the Canaries; a Lisbon monopoly (AF, EU)"
             }
           ]
         },
@@ -1030,6 +1247,24 @@
               "knowledge": "foreign",
               "note": "East Indies palm or cane spirit; 'rum or arrack in lieu' of wine (Navy 1731); Barlow at Goa 1697 priced it by the keg. A far-travelled merchant's recipe (3f)",
               "region": "indian-ocean"
+            },
+            {
+              "good": 115,
+              "name": "Cachaça",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "brazil",
+              "input": "sugar-boiling:Molasses",
+              "note": "Bahia's cane spirit, the Angola trade liquor (SB)"
+            },
+            {
+              "good": 102,
+              "name": "Gin (genever)",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "europe",
+              "input": "farming:Grain for meal and flour",
+              "note": "Schiedam's trade (EU)"
             }
           ]
         },
@@ -1202,6 +1437,15 @@
               "band": "expert",
               "input": "mining:Bar iron",
               "note": "the anchor-smith, 'laborious and profitable Branch of the Smith Trade' (Campbell)"
+            },
+            {
+              "good": 101,
+              "name": "Tradesmen's tools (sets)",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "europe",
+              "input": "mining:Bar iron",
+              "note": "a carpenter's set about £1 10s (EU)"
             }
           ]
         },
@@ -1337,6 +1581,15 @@
               "offMap": true,
               "input": "mining:Bar iron",
               "note": "the gunfounder's furnace and boring mill; 29 located on the QAR wreck (QAR)"
+            },
+            {
+              "good": 94,
+              "name": "Brass basins and kettles (battery ware)",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "europe",
+              "input": "mining:Steel, brass, pewter (alloys)",
+              "note": "Bristol and Birmingham battery for the coast; cut into bracelets at Whydah (AF)"
             }
           ]
         },
@@ -1693,6 +1946,35 @@
               "offMap": true,
               "input": "spinning:Silk thread",
               "note": "Asian looms; chintzes in a French prize (J)"
+            },
+            {
+              "good": 86,
+              "name": "Benin and Allada cloth",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "west-africa",
+              "knowledge": "foreign",
+              "input": "spinning:Cotton yarn",
+              "note": "striped blue and white; 16,000 pieces a year mid-century (AF)"
+            },
+            {
+              "good": 90,
+              "name": "Cape Verde panos",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "atlantic-islands",
+              "knowledge": "foreign",
+              "input": "spinning:Cotton yarn",
+              "note": "strip cloth, the currency of the Rivers of Guinea (AF)"
+            },
+            {
+              "good": 123,
+              "name": "Yucatán cotton cloth",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "spanish-main",
+              "input": "spinning:Cotton yarn",
+              "note": "woven by Indian women for Havana (SB)"
             }
           ]
         },
@@ -1772,6 +2054,24 @@
               "offMap": true,
               "input": "weaving:Silk, chintz, muslin",
               "note": "silk and linen shared out at Maracaibo (E)"
+            },
+            {
+              "good": 126,
+              "name": "Beaver hats (felt)",
+              "band": "expert",
+              "offMap": true,
+              "origin": "north-america",
+              "input": "hunting:Beaver and furs (trapping)",
+              "note": "the hatter's trade, cut off by the Hat Act 1732 (NA)"
+            },
+            {
+              "good": 95,
+              "name": "Ready-made slops: shirts, trousers, cravats",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "europe",
+              "input": "weaving:Coarse linen (dowlas, osnaburg)",
+              "note": "shirt 2s 6d, cravat 6d, Barbados 1668 (EU)"
             }
           ]
         },
@@ -1854,6 +2154,15 @@
                 "distilling:Aqua vitae (kill-devil)"
               ],
               "note": "Pharmacopoeia Londinensis 1618 and after; spirits for tinctures"
+            },
+            {
+              "good": 122,
+              "name": "Balsams, jalap, copal (Spanish drugs)",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "spanish-main",
+              "input": "imported:Spanish American drugs",
+              "note": "Spain took 83,387 arrobas of drugs 1717–38 (SB)"
             },
             {
               "good": 72,
@@ -2393,7 +2702,8 @@
     "metal": "research-metal-trades.md (shared notes): Campbell 1747, livery company charters, London Museum (Hounslow), QAR pewter, Museum of Miami on Port Royal",
     "wood": "research-wood-trades.md (shared notes): Campbell 1747, Carpenters' and Shipwrights' and Coopers' company histories, Ligon, Dampier 1705, Johnson",
     "medical": "research-medical-trades.md (shared notes): Campbell 1747, Society of Apothecaries, Ligon, Exquemelin, Johnson, QAR finds, the Williamsburg apothecary booklet",
-    "spices": "research-spices-drinks.md (shared notes): CSP 1681 import return, Posthumus Amsterdam 1691–94, Blome 1672, Ligon, Dampier, Sloane via secondary, Navy victualling 1678/1731/1740, Bailey 1724, Johnson"
+    "spices": "research-spices-drinks.md (shared notes): CSP 1681 import return, Posthumus Amsterdam 1691–94, Blome 1672, Ligon, Dampier, Sloane via secondary, Navy victualling 1678/1731/1740, Bailey 1724, Johnson",
+    "atlantic": "the four Atlantic research notes (AF, EU, NA, SB in GOODS.md Part 4)"
   },
   "imported": {
     "note": "Goods no skill here makes in the period: they arrive in a European ship's cargo or a far-travelled merchant's (3f). They exist in the data as goods with no recipe.",
@@ -2436,6 +2746,115 @@
         "good": 40,
         "name": "Madeira, Canary, sherry, claret (the wines)",
         "note": "Madeira shipped 8–9,000 pipes a year (Ovington 1696); the vintner imports, the taverner sells (Strype 1720)"
+      },
+      {
+        "good": 84,
+        "name": "Malaguetta pepper",
+        "origin": "west-africa",
+        "note": "300 lb for an iron bar at Sestro (AF)"
+      },
+      {
+        "good": 89,
+        "name": "Loango copper, libongo cloth, takula, elephants' tails",
+        "origin": "west-africa",
+        "knowledge": "foreign",
+        "note": "the Loango coast's own goods and money (AF)"
+      },
+      {
+        "good": 93,
+        "name": "Trade beads (bugles, rangoes, coral, amber)",
+        "origin": "europe",
+        "note": "Venice, Cambay, Genoa, Danzig for the coast trade (AF)"
+      },
+      {
+        "good": 96,
+        "name": "Earthenware, Delftware, glass",
+        "origin": "europe",
+        "note": "no potter or glasshouse in the game's Caribbean in the sources (EU); Potting as a skill: open"
+      },
+      {
+        "good": 97,
+        "name": "Paper and books",
+        "origin": "europe",
+        "note": "reams from England, the Zaan, Angoumois (EU)"
+      },
+      {
+        "good": 98,
+        "name": "Castile soap, wax candles",
+        "origin": "europe",
+        "note": "(EU)"
+      },
+      {
+        "good": 99,
+        "name": "Gunflints",
+        "origin": "europe",
+        "note": "English flints for the colonies and Africa (EU)"
+      },
+      {
+        "good": 105,
+        "name": "Baltic stores (hemp, flax, pitch, tar, Swedish iron and steel, Russian leather, Polish grain)",
+        "origin": "europe",
+        "note": "through Amsterdam; Posthumus series (EU)"
+      },
+      {
+        "good": 107,
+        "name": "Olive oil",
+        "origin": "europe",
+        "note": "Andalusia's by the jar (EU, SB)"
+      },
+      {
+        "good": 108,
+        "name": "Mercury (quicksilver)",
+        "origin": "europe",
+        "note": "Almadén's, for the silver mines (EU)"
+      },
+      {
+        "good": 109,
+        "name": "Spanish merino wool",
+        "origin": "europe",
+        "note": "(EU)"
+      },
+      {
+        "good": 113,
+        "name": "Brazilian gold and moidores",
+        "origin": "brazil",
+        "note": "money; Open for Rex 2"
+      },
+      {
+        "good": 114,
+        "name": "Diamonds (Brazil, 1729)",
+        "origin": "brazil",
+        "note": "the very end of the period (SB)"
+      },
+      {
+        "good": 117,
+        "name": "Mexican silver pesos",
+        "origin": "spanish-main",
+        "note": "money; Open for Rex 2"
+      },
+      {
+        "good": 118,
+        "name": "Gold of New Granada and Darien",
+        "origin": "spanish-main",
+        "note": "money; Open for Rex 2"
+      },
+      {
+        "good": 122,
+        "name": "Spanish American drugs",
+        "origin": "spanish-main",
+        "note": "jalap, balsams, copal, liquidambar, sarsaparilla (SB)"
+      },
+      {
+        "good": 129,
+        "name": "Ginseng",
+        "origin": "north-america",
+        "note": "to Canton from 1721 (NA)"
+      },
+      {
+        "good": 132,
+        "name": "Bermuda cedar, onions; Bahamas braziletto",
+        "origin": "atlantic-islands",
+        "note": "(SB)"
       }
     ]
   },

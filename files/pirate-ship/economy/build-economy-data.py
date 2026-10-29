@@ -30,6 +30,8 @@ for line in goods_md.splitlines():
 # rows 62-65 (Rex's additions and the later ones) have a shorter table: | # | Good | Kind | Skill | Note |
 for line in goods_md.splitlines():
     m = re.match(r"^\| (6[2-5]) \| (.+?) \| (.+?) \| (.+?) \| (.+?) \|$", line)
+    if m and int(m.group(1)) in rows:
+        m = None
     if m and int(m.group(1)) not in rows:
         rows[int(m.group(1))] = {"name": m.group(2), "kind": m.group(3), "route": "open", "package": "open",
                                  "spoils": "open", "value": "open", "type": "open", "sources": m.group(5)}
@@ -74,7 +76,8 @@ for g in tree["groups"]:
                               "kind": "raw" if g["key"] == "gathering" else "manufactured",
                               "type": t, "typeMark": tmark, "basePrice": None,
                               "offMap": bool(it.get("offMap")), "mark": mark, "madeBy": s["key"],
-                              "region": it.get("region", "caribbean"), "note": it.get("note", "")}
+                              "region": it.get("region", "caribbean"), "origin": it.get("origin", "caribbean"),
+                              "note": it.get("note", "")}
 
 # imported-only goods: no recipe here; a European ship's or a far-travelled merchant's cargo
 for it in tree.get("imported", {}).get("items", []):
@@ -85,7 +88,7 @@ for it in tree.get("imported", {}).get("items", []):
     goods.setdefault(gid, {"id": gid, "name": it["name"], "row": it["good"], "kind": "imported", "type": t, "typeMark": tmark,
                            "basePrice": None, "offMap": True, "mark": "source", "madeBy": None,
                            "knowledge": it.get("knowledge", "common"), "region": it.get("region", "caribbean"),
-                           "note": it.get("note", "")})
+                           "origin": it.get("origin", "caribbean"), "note": it.get("note", "")})
 
 # the GOODS.md rows, with the sourced detail that belongs to the row, not to every good made from it
 row_list = [{"row": n, **r} for n, r in sorted(rows.items())]

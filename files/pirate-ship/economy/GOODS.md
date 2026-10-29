@@ -150,6 +150,84 @@ Ligon's six Barbados drinks are all fermented, none distilled. So **Brewing is a
 Distilling** (3c; Rex, 2026-10-29), and Brewer and Vintner / Taverner as occupations (3d). Grog (rum and water 4:1) dates from
 21 August 1740, after the period, so it is not a good here.
 
+### 1l. The rest of the Atlantic world (source; added 2026-10-29)
+
+Rex: the base game is the Atlantic, so its goods are the Atlantic's. Four research notes (shared folder):
+`research-atlantic-africa.md` (from the full texts of Barbot 1732, Bosman 1705 and Phillips's Hannibal journal
+1693–94 with the Royal African Company's invoices), `research-atlantic-europe.md`, `research-atlantic-north-america.md`,
+`research-atlantic-spanish-brazil.md`. Each row's origin within the Atlantic is the first thing in its route; the
+data carries it as `origin`. Same columns as 1a. **AF** = the Africa note, **EU**, **NA**, **SB** likewise; each has
+its own URL per row.
+
+| # | Good | Kind | Origin → destination | Package | Spoils | Value | Type | Sources |
+|---|---|---|---|---|---|---|---|---|
+| 82 | Gum arabic | raw (acacia exudate) | West Africa: Senegal river escales → France, Holland (dyeing, calico printing) | quintal | no | the French took 5,000 + 2,000 quintals a year; price open | specialty (proposed) | AF |
+| 83 | Beeswax | raw | West Africa: Senegal, Gambia, Sierra Leone, Gabon → Europe (candles); "there is always abundance of wax" (Barbot) | cwt | no | bought with brandy, knives, iron bars; price open | base (proposed) | AF |
+| 84 | Malaguetta pepper (grains of paradise) | raw seed | West Africa: the Grain Coast, Rio Sestro → Bristol, London (a pepper substitute; ships' relish) | lb | no | "three hundred weight of it at Sestro for one bar of iron" | specialty (proposed) | AF |
+| 85 | Camwood | raw dyewood | West Africa: Sherbro, Cape Lopez → London dyers | tun | no | "about twenty five or thirty shillings per tun" at Cape Lopez | specialty (proposed) | AF |
+| 86 | Benin and Allada cloth | manufactured (cotton, striped blue and white) | West Africa: Benin → Dutch ships → the Gold Coast (for gold) and Angola | piece | open | about 16,000 pieces a year mid-century (secondary) | cultural (proposed) | AF |
+| 87 | Palm oil | raw (pressed) | West Africa: Whydah, Calabar → ships (slave food, anointing); small export | pot, jar | goes rancid: open | "cheaper at Whidaw" than Cape Coast (Phillips) | base (proposed) | AF |
+| 88 | Kola nuts | raw | West Africa: Sierra Leone forest → Senegambia and the Sahel (chewed with salt and malaguetta; a gift) | basket | open | open | cultural (proposed) | AF |
+| 89 | Loango copper; raffia cloth (libongo); redwood (takula); elephants' tails | raw / manufactured | West-Central Africa: Loango, Mayumba, Kongo → Dutch, Luanda; libongo and macute were money at Luanda | weight; cloth of 4 pieces; log; 100 hairs | no | "an hundred hairs ... a thousand Reis, or six shillings"; ivory 5 libongos a lb; others open | cultural (proposed) | AF |
+| 90 | Cape Verde panos (strip cloth) | manufactured (indigo and white strip-weave) | Atlantic islands: Santiago, Fogo → the Rivers of Guinea, Senegal, Gambia as currency for slaves | pano | open | open | cultural (proposed) | AF, SB |
+| 91 | Orchil (urzela) | raw dye lichen | Atlantic islands: Cape Verde, Canaries → Lisbon (a crown monopoly) | open | no | 1650–1730 price open | specialty (proposed) | AF, EU |
+| 92 | Coast provisions: Indian corn and millet, yams, palm wine, dried fish, goats, fowls | raw | West Africa: Fante, Saboe, Whydah, Calabar → slave ships (Phillips loaded 700 chests of corn) | chest, basket, anchor | days | palm wine 2s 3d per 5-gallon anchor; yams 14s a hundred; a goat 12–13s (Bosman) | base (proposed) | AF |
+| 93 | Trade beads: bugles, rangoes (carnelian), coral, amber | manufactured / raw | Europe: Venice, Amsterdam, Genoa, Danzig, Cambay → the whole coast | bunch, cluster, ounce | no | open | cultural (proposed) | AF |
+| 94 | Brass basins, kettles and pans (battery ware); copper bars | manufactured | Europe: Bristol, Birmingham, Aachen → Whydah (cut into bracelets), Calabar, Senegal | by weight; bar about 3 ft, 1¼ lb | no | copper bars "from eighteen-pence to two shillings a-piece" (Barbot); 1 iron bar = 4 copper bars at Calabar | base (proposed) | AF |
+| 95 | Ready-made clothing and hats | manufactured | Europe: London → Barbados (a regiment's supply, 1668), Virginia (1693) | — | open | hat 3s; shoes 2s 4d a pair; shirt 2s 6d; cravat 6d (1668) | base (proposed) | EU |
+| 96 | Earthenware, Delftware, glass bottles, window glass | manufactured | Europe: England, Delft (about 30 factories c. 1640–1740) → the colonies | crate | breaks | open | base (proposed) | EU |
+| 97 | Paper, books | manufactured | Europe: England, the Zaan, Angoumois → the colonies | ream | damp | open | base (proposed) | EU |
+| 98 | Soap (Castile), wax candles | manufactured | Europe: Castile, England → the colonies | box | no | open | base (proposed) | EU |
+| 99 | Gunflints | manufactured | Europe: England → the colonies and Africa | open | no | open | base (proposed) | EU |
+| 100 | Coal (Newcastle sea-coal) | raw | Europe: the Tyne → London, Rotterdam, Flanders; the colonies | chaldron | no | 9s–14s the chaldron (1582, 1626: before the period) | base (proposed) | EU |
+| 101 | Tradesmen's tool sets | manufactured | Europe: England → Virginia | set | rust | a carpenter's set about £1 10s; carpenter, cooper and joiner together £4 (17th c.) | base (proposed) | EU |
+| 102 | Gin (genever) | manufactured | Europe: Schiedam, Holland → England and abroad | case | no | open | cultural (proposed) | EU |
+| 103 | Herring | raw (salted) | Europe: the Dutch and Scots fisheries → Iberia, the Baltic, the Atlantic | barrel | salted | open | base (proposed) | EU |
+| 104 | Whale oil (train oil) and whalebone | raw (tried out) | Greenland (Dutch, 246 ships and 1,185 whales in 1684); North America: Long Island shore whaling (2,148 barrels in 1686–87, £4,300), Nantucket (1730: 25 vessels, 3,700 barrels); Newfoundland cod-liver train oil; Bahia (a crown monopoly) → Boston, London | barrel, hogshead; sold by the ton | no | oil about £2 a barrel, bone 6–8d a lb (Long Island); Newfoundland train oil £12 a ton, one hogshead per 40–64 quintals of fish | base (proposed) | EU, NA, SB |
+| 105 | Baltic stores: hemp, flax, masts, pitch, tar, Swedish iron and steel, Russian leather, Polish grain | raw / manufactured | Europe: Riga, Stockholm, Petersburg, Danzig → Amsterdam → the west (Posthumus has the series: Riga hemp, Stockholm pitch, Muscovite tar, Swedish iron and steel, Polish wheat) | bundle, barrel, bar, last | no | open in the period (rye 88.90 guilders a last in 1572, early) | base (proposed) | EU |
+| 106 | Masts (white pine) | raw (hewn) | North America: Piscataqua, from 1727 Casco Bay → the Royal Navy's yards; the Broad Arrow reserved trees of 24 inches | mast ships of about 400 tons carrying 40–50 masts | no | bounty £1 a mast (1705 Act); price open | base (proposed) | NA |
+| 107 | Olive oil | raw | Europe: Andalusia → the Indies by flota (11,077 arrobas in the 1706 flota), and to English and Dutch ports | jar (botija), pipe | no | open | cultural (proposed) | EU, SB |
+| 108 | Mercury (quicksilver) | raw | Europe: Almadén → by barge to Cadiz → the flota → Mexico's silver mines (no local supply) | open | no | open | specialty (proposed) | EU |
+| 109 | Spanish merino wool | raw | Europe: Spain → Holland, England (Posthumus "Molina wool") | sack | open | open | base (proposed) | EU |
+| 110 | Irish provisions: salt beef and pork, butter, tallow, hides | raw / preserved | Europe: Cork → the English and French islands, the navy; allowed direct by the 1663 Act; the Cattle Act 1667 pushed Ireland from live cattle to barrelled beef | barrel, firkin | salted | open | base (proposed) | EU |
+| 111 | Bahia tobacco in rolls | manufactured (rolled, molasses-coated leaf) | Brazil: the Recôncavo → Salvador → the Mina coast (lower grades, 15–20,000 three-arroba rolls) and Lisbon (the best); about 25,000 rolls a year 1700–10 | roll of about 8 arrobas | keeps | an 8-arroba roll 12$124 réis at Lisbon | specialty (proposed) | SB, AF |
+| 112 | Brazilwood | raw dyewood | Brazil: the coast → Lisbon; a crown monopoly | log | no | open | specialty (proposed) | SB |
+| 113 | Brazilian gold and the moidore | raw → coin | Brazil: Minas Gerais (found 1693/95) → Rio, Bahia → Lisbon → England; fintas 25–37 arrobas a year 1714–24; "800 metric tons" officially in the 18th century | bag, chest | no | moidore about 27s in England (30s in Ireland); Roberts took 40,000 (J) | money (Open for Rex) | SB, EU, J |
+| 114 | Diamonds (Brazil, from 1729) | raw | Brazil: Serro do Frio → Lisbon → Amsterdam, London; a crown monopoly | — | no | open | specialty (proposed); the end of the period | SB, EU |
+| 115 | Cachaça (aguardente) | manufactured (cane spirit) | Brazil: Bahia, Rio → Angola and Mina as trade liquor; coastwise | pipe, barrel | no | open | base (proposed) | SB |
+| 116 | Manioc flour (farinha) | manufactured (milled) | Brazil: coastwise and to Angola | bushel | keeps | 640 réis a bushel, São Paulo 1703 | base (proposed) | SB |
+| 117 | Mexican silver pesos | coin | Spanish America: the Mexico mint, 4,160,000 pesos a year 1665–1700 → Veracruz → Havana → Cadiz; Peru's silver by mule to Portobelo ("about 24,000,000 of pieces-of-eight", Dampier) | chest, bar, "wedge" | no | the piece of eight 4s 6d intrinsic, 4s 3d at the exchangers (Newton 1711) | money (Open for Rex) | SB, EU |
+| 118 | Gold of New Granada and Darien | raw (dust, bars) | Spanish America: the Chocó, Darien's rivers → Cartagena, Panama → Spain; output "at a very low level around 1675" | dish, bag | no | open | money (Open for Rex) | SB |
+| 119 | Emeralds (Muzo) | raw stones | Spanish America: Muzo → Cartagena → Seville, and on to Mughal India | — | no | open | specialty (proposed) | SB |
+| 120 | Caracas cacao in detail | raw | Spanish America: La Guaira, Tucacas → Veracruz (New Spain ate most of it), Cadiz; by contraband → Curaçao → Amsterdam | fanega of 110 lb | open | 6–8 pesos a fanega at source, about 100 in Europe | cultural (proposed; row 11) | SB |
+| 121 | Verina and Cuban tobacco; Seville snuff | raw → manufactured | Spanish America: Verina "reputed the best in the world" (Dampier); Havana → the Seville snuff factory (1687); contraband to English and Dutch ships | leaf; snuff in jars | keeps | open | specialty (proposed) | SB |
+| 122 | Spanish American drugs: jalap, balsam of Peru, balsam of Tolu, copal, liquidambar, sarsaparilla | raw (roots, resins) | Spanish America: Honduras, Veracruz, Campeche, Cartagena → Cadiz; Spain imported 83,387 arrobas of drugs 1717–38 (5.6 t sarsaparilla, 1.6 t copal, 1 t balsams a year) | seroon, jar | open | open | specialty (proposed) | SB |
+| 123 | Campeche wax, Yucatán cotton cloth, tasajo (jerked beef) | raw / manufactured | Spanish America: Campeche, Sisal → Havana | open | tasajo keeps | open | base (proposed) | SB |
+| 124 | Mules and horses (Venezuela) | live | Spanish America: Maracaibo, Tierra Firme → Curaçao, Saint-Domingue (for the sugar mills), Jamaica | driven to the coast | die | open | base (proposed) | SB |
+| 125 | Beaver and the furs: marten, otter, fox, bear, raccoon | raw pelts | North America: Hudson Bay (Fort Albany about 19,000 pelts a year 1700–20, York Factory about 35,000), Albany and New York, Quebec → London, La Rochelle | pack, bale; the "made beaver" as the posts' unit of account | moth | London 1713–26: coat beaver about 6.6s, parchment 5.5s a pelt. At the posts: a blanket 7 made beaver, brandy 4 a gallon, cloth 3½ a yard | specialty (proposed) | NA |
+| 126 | Beaver hats | manufactured (felt) | North America: colonial hatters → other colonies, the islands, Iberia, until the Hat Act of 1732 | case | no | open | cultural (proposed) | NA |
+| 127 | Deerskins in numbers (row 32) | raw | North America: Charleston about 54,000 a year 1699–1715, 121,355 in 1707 → London | hogshead, bundle | open | open | specialty (proposed) | NA |
+| 128 | Newfoundland cod by grade (row 24) | preserved | North America: merchantable (thick, light-salted), Madeira, and West India "refuse" → Spain, Portugal, Italy, the islands; 171 fishing ships and 800 boats in 1700 | quintal (112 lb) | salted | 7–8s a quintal (c. 1644); a boat took 200–300 quintals; servants £18–20 a season | base (proposed) | NA |
+| 129 | Ginseng | raw dried root | North America: Mohawk country, Canada → Quebec → La Rochelle → Canton, exported from 1721 | cask | no | open | specialty (proposed); the end of the period | NA |
+| 130 | Pig iron (colonial) | semi (furnace) | North America: Principio (furnace 1723), Pennsylvania → London, Bristol; 15 tons in 1723, 1,716 in 1730 | pig, as ballast | no | open | base (proposed) | NA |
+| 131 | Wampum | manufactured (drilled shell beads) | North America: Long Island Sound → Albany, New England; traded inland for beaver | string; 120 beads to a fathom | no | open | cultural (proposed) | NA |
+| 132 | Bermuda and Bahamas: cedar, onions, ambergris, braziletto, wrecked goods | raw | Atlantic islands: Bermuda → the islands and the mainland ports; New Providence, Eleuthera → Carolina, Jamaica; Spanish wrecks salvaged | log; onions by the bunch; ambergris by the ounce | onions keep | open | base (proposed) | SB |
+| 133 | Indentured servants | people | Europe: England (Bristol, London), Ireland, Scotland → the Chesapeake (about 50,000 in 1630–80, three-quarters of arrivals) and the islands | — | — | a carpenter's indenture valued £18 (1673); Newfoundland men £18–20 a season | Open for Rex (labour, not a good) | NA, EU |
+
+**Units of account on the African coast and the coins (source; for 1g).** The iron bar (about 5s; 8 hides at St
+Louis, 6 at Gorée; a slave 12–30 bars); the copper bar (4 to an iron bar at Calabar; a man-slave 38, a woman 36–37);
+gold by the ounce (16 ackies), the benda of 2 oz (about one Gold Coast slave in the 1680s), the "trade ounce" of
+about 40s of goods; cowries by weight in Europe (67s a cwt in 1680, £4 in 1694) and by tale in Africa (40 a toque,
+200 a galinha, 4,000 a cabess of about 60 lb; about 100 lb of cowries for a man at Whydah in 1694); the libongo at
+Luanda. Prime costs: iron £14 10s a ton (32,000 bars to 40 tons, RAC 1680); a slave £3 15s a head at Whydah, sold
+at Barbados for £19 (Phillips 1694). Coins: the piece of eight 4s 6d intrinsic (Newton 1711); the moidore about
+27s; the guinea 21s from 1717; the guilder at par about 36.59 Flemish shillings to the pound.
+
+**Searched, nothing found (open):** sterling prices for gum, hides, wax and ivory in the period; Cape Verde salt
+and orchil prices; most English manufactures' prices (glass, paper, pewter, candles); the Hudson's Bay gun price
+before 1795; maple sugar and cranberries as exports; the Boston ships sold to England count; cacao fanegas a year;
+emerald and pearl output; the Bahamas' exports in the 1700s. Potash was negligible before 1750 and is left out.
+
 ### 1g. Units and sizes (source)
 
 | Unit | Holds | Size | Date, place | Sources |
@@ -875,6 +953,14 @@ Scholarship, archives and museums:
 - **MH**: A. Bowett, the 1721 Naval Stores Act and mahogany (Regional Furniture Society newsletter).
   https://regionalfurnituresociety.org/wp-content/uploads/2022/04/rfs-nl-21-stuart-2.pdf
 - **VA**: Victoria and Albert Museum, mahogany tea table. https://collections.vam.ac.uk/item/O78999/tea-table-unknown
+- **AF / EU / NA / SB**: the four Atlantic research notes (shared notes folder), each with a URL per row:
+  `research-atlantic-africa.md` (Barbot 1732, Bosman 1705, Phillips's Hannibal journal 1693–94 and the Royal
+  African Company's invoices in Donnan vol. I, all from the archive.org full texts), `research-atlantic-europe.md`
+  (the Navigation Act 1660 and Staple Act 1663 texts, CSP Colonial 1668, Houghton 1692, Newton 1711 on coin,
+  Posthumus series, Methuen 1703), `research-atlantic-north-america.md` (EH.net on the Hudson's Bay trade, CSP Colonial
+  1718 on Newfoundland, HSUS tables, the SC Encyclopedia), `research-atlantic-spanish-brazil.md` (Dampier, Gage 1648,
+  Exquemelin, Wafer 1699, CSP Colonial 1716 and 1732, Crawford on the drug trade, García Fuentes on the flotas,
+  Cardozo on Brazilian gold).
 - **SD**: the spices-and-drinks research note `research-spices-drinks.md` (shared notes folder), with its own URL per row:
   Navy victualling contracts 1678 and 1731, the grog order of 1740, Bailey's dictionary 1724 (flip), Sloane's punch
   via a secondary page, Barlow's journal (1667, 1697), Ovington 1696 (Madeira), Strype 1720 (vintner), the Brewers'
@@ -1005,3 +1091,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-29 | 3f: Rex's rule that no skill or recipe is ever manifested, only learned a real way; skill level sets speed, quality and success; regions and the leak rule recorded in REGIONS.md | Rex (rule); research session |
 | 2026-10-29 | REGIONS.md: the expansion roadmap (four regions pass the tests); imported goods and arrack tagged with their region | research session, at Rex's request |
 | 2026-10-29 | REGIONS.md §5: Rex confirmed the four expansions; escalation by each region's advantage, rising level caps, slow levelling (direction); the order proposed | Rex (direction); research session |
+| 2026-10-29 | 1l: the rest of the Atlantic world, rows 82–133 (West and West-Central Africa, Europe and the Baltic, North America, Spanish America, Brazil, the islands), from four research notes; the coast's units of account and the coins; origins carried in the data | research session, at Rex's request |

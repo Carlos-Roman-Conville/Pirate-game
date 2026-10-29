@@ -137,7 +137,7 @@
   if (data.imported) {
     const im = document.createElement('section'); im.className = 'group notree';
     im.innerHTML = '<h2>Imported only</h2><p class="note">' + data.imported.note + '</p><ul>'
-      + data.imported.items.map(n => '<li><b>' + n.name + '</b> <span class="count">#' + n.good + (n.knowledge ? ' · ' + n.knowledge + ' knowledge' : '') + '</span>: ' + n.note + '</li>').join('') + '</ul>';
+      + data.imported.items.map(n => '<li><b>' + n.name + '</b> <span class="count">#' + n.good + (n.origin ? ' · from ' + n.origin : '') + (n.knowledge ? ' · ' + n.knowledge + ' knowledge' : '') + '</span>: ' + n.note + '</li>').join('') + '</ul>';
     main.appendChild(im);
   }
   const nt = document.createElement('section'); nt.className = 'group notree';
@@ -174,6 +174,7 @@
       + (it.service ? ' · <span class="muted">a service, not a good</span>' : '')
       + (it.knowledge && it.knowledge !== 'common' ? ' · <span class="muted">' + it.knowledge + ' knowledge</span>' : '')
       + (it.region && it.region !== 'caribbean' ? ' · <span class="muted">region: ' + it.region + '</span>' : '')
+      + (it.origin && it.origin !== 'caribbean' ? ' · <span class="muted">from ' + it.origin + '</span>' : '')
       + '<br>' + it.note
       + (inp ? '<br><span class="muted">needs:</span> ' + inp.it._skill.name + ': ' + inp.it.name : (it.input ? '<br><span class="muted">needs:</span> ' + it.input : ''))
       + (all.length ? '<br><span class="muted">needs all of:</span> ' + all.join(', ') : '')
