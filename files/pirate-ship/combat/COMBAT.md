@@ -269,6 +269,27 @@ carry into their docs.
   transformed character keeps identity, memories and personality (a ghost who remembers, a demon who remembers
   but wants otherwise, a replica with nothing) — Rex's mecha answer ("memories, thoughts and beliefs, frozen")
   settles it for the Atlanteans; the other forms: open.
+- **(Rex, 2026-10-29, later)** "Getting a bit too convoluted." The cleaner shape: **transformation becomes part
+  of the ending process, through character endings.** Certain characters can enforce their will on the group.
+  A secondary ending system (not enforced yet): some characters have **their own endings**, which require you to
+  bring them people for the town; those people get **transformed**, you get an **upgraded unit**, and the
+  character's storyline progresses, led down their alignment, so the story still stays within the alignment
+  system. Especially for chaotic evil. The INTJ: support her but give her no test subjects to turn into whoever
+  she will turn, and she seeks a solution in the external world, such as the fish people; give her the bodies
+  and her personal goals are satisfied. Many storylines follow, so **some level of procedural generation** is
+  needed (always was); fill the system with as much data as possible, with AI, so it feels fresh; procedural is
+  the only way a system like this functions.
+- **(proposed, outside AI)** Two layers: the main alignment ending (what the town becomes) and individual
+  character endings (what a character accomplishes within it), the second feeding the first, never replacing
+  it; characters as miniature progression trees (support → internal progression; refuse → external, another
+  faction); narrative split into authored identity and milestones with procedural events between (which
+  resources, merchants, factions, people are involved); the economy as the source of quest variation; a
+  **perfect** alignment ending defined as completing the personal endings of certain influential characters,
+  some mutually exclusive; procedural variation never contradicting an authored motivation.
+- **(keeper)** For combat this means the upgraded units of §4e arrive through character endings, not only
+  through a death; what each form does on the grid stays combat's. The rest is the story keeper's (character
+  endings, the INTJ's ambition), the town keeper's (what transformation does to a place) and the balance
+  keeper's (perfect endings redefined through character endings; the sim).
 - **(keeper, to Rex)** **This collides with decided canon in other lanes.** The ghost rule in `town/UPGRADES.md`
   and `balance/BALANCE.md` (decided 2026-10-28: neither of a pair recruited → both ghosted; one → the rival
   ghosts) makes ghosting the result of *losing* the pair competition, which is exactly the "so simple" Rex is
@@ -442,4 +463,5 @@ whether what you intend happens.
 | 2026-10-29 | The muscular system: each counting muscle (split by head, as real) gets stats trained by what you do; the gym simulator (design and run a regimen); ChatGPT's functional model, activation profiles, development/fatigue/condition recorded as proposed | Rex / outside AI |
 | 2026-10-29 | The body as a family of docs feeding BODY.md (disease, sleep, thermoregulation, metabolism, ageing, hygiene, pain and stress, cardio, psychology) and world docs (weather, ship wear, agriculture, ecology, sanitation, fire, population); keeper's organisation and issues in the shared notes | Rex |
 | 2026-10-29 | Death and resurrection by faction: a dead crew mate can be brought back through the alignment faction you choose (mecha AI, ghost, voodoo zombie, angel, merfolk's form open), frozen at death, storyline ended, stronger form; states of being by who did it (fish person, demon, missing); butterfly deaths; game modes as an option; collision with the ghost rule flagged to town/balance/story | Rex |
+| 2026-10-29 | Refinement: transformation as part of character endings (bring a character people → transformed → upgraded unit → their storyline advances within the alignment); the INTJ example; procedural generation needed; keepers messaged | Rex |
 | 2026-10-29 | `MUSCULAR.md` and `NUTRITION.md` to be written (via ChatGPT); nutrition as calories, macros, micros, water and salt with scurvy emergent; provenance tags (mythical, Triassic, sci-fi) on the item screen, never in battle | Rex |
