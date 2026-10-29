@@ -51,6 +51,19 @@ intake; the deficiency clocks.
 | calcium | Calcium | mg | 1,000 | 1,000 | the skeleton | years | bone loss, fractures | none | proposed |
 | iodine | Iodine | mcg | 150 | 150 | months | 180+ (not at sea: fish and sea air) | goitre (inland towns) | none | proposed |
 | zinc | Zinc | mg | 11 | 8 | weeks | 30 to 60 | slow healing, poor appetite, taste lost | none | proposed |
+| vit_b2 | Riboflavin (B2) | mg | 1.3 | 1.1 | small (weeks) | 60 to 120 | cracked lips and mouth corners, sore tongue, light-shy eyes (ariboflavinosis); worsens other B deficiencies | none | proposed (audit) |
+| vit_b5 | Pantothenic acid (B5) | mg | 5 (AI) | 5 | weeks | rare in any diet; 'burning feet' in famine | burning feet, fatigue | none | proposed (audit) |
+| vit_b6 | Pyridoxine (B6) | mg | 1.3 | 1.3 | weeks to months | 60 to 120 | anaemia, dermatitis, confusion, fits in the extreme | none from food | proposed (audit) |
+| vit_b7 | Biotin (B7) | mcg | 30 (AI) | 30 | weeks | rare; raw egg white (avidin) for weeks | hair loss, rash | none | proposed (audit) |
+| vit_b9 | Folate (B9) | mcg DFE | 400 | 400 | about 10 mg (3 to 4 months) | 90 to 120 (megaloblastic anaemia) | anaemia with large cells: pallor, breathlessness; with B12 the diet-anaemia the audit asked for | none | proposed (audit) |
+| vit_b12 | Cobalamin (B12) | mcg | 2.4 | 2.4 | 2 to 5 mg in the liver (years) | 365 to 1,800; only animal foods carry it, so a long meatless diet or gut damage | anaemia, numb feet, unsteady gait, memory loss | none | proposed (audit) |
+| vit_e | Vitamin E | mg | 15 | 15 | fat stores (years) | 365+; fat malabsorption | nerve damage, weak muscles (slow) | none from food | proposed (audit) |
+| vit_k | Vitamin K | mcg | 120 (AI) | 90 | small (weeks); gut bacteria make some | 14 to 30 with no greens and a purged gut | bleeding, slow clotting (a wound that will not stop) | none | proposed (audit) |
+| magnesium | Magnesium | mg | 400 | 310 | the skeleton (months) | 30 to 90; faster with diarrhoea and rum | cramps, tremor, weakness, arrhythmia; the neuromuscular mineral with calcium | none from food | proposed (audit) |
+| phosphorus | Phosphorus | mg | 700 | 700 | the skeleton | rare from food; refeeding after starvation drops it (refeeding syndrome) | weakness, confusion; heart failure in refeeding | none | proposed (audit) |
+| selenium | Selenium | mcg | 55 | 55 | months | 180+ on poor soils | weak heart (Keshan), weak muscles | hair and nail loss over 400 mcg | proposed (audit) |
+| copper | Copper | mcg | 900 | 900 | liver (months) | 180+; zinc excess blocks it | anaemia that iron does not cure, bone weakness | copper vessels and the dry gripes' cousin (colic) | proposed (audit) |
+| efa | Essential fatty acids (linoleic and alpha-linolenic) | g | 17 and 1.6 (AI) | 12 and 1.1 | fat stores (months) | 90 to 180 on a fat-free diet | scaly skin, poor healing, poor night vision | none | proposed (audit) |
 | fibre | Fibre | g | 30 | 25 | - | - | constipation (the biscuit diet) | - | proposed |
 | alcohol | Alcohol | g | 0 (a gallon of ship's beer is about 60 g) | 0 | - | - | drunkenness, the dry gripes (lead), liver | drink: STATS state | proposed |
 <!-- /table -->
@@ -60,9 +73,13 @@ intake; the deficiency clocks.
   reached in 4–12 weeks on a C-free diet (Hodges' experimental scurvy; NUT-SCURVY); thiamin detectable
   deficiency at about 6 weeks, fatal in as little as 3 on nothing (NUT-B1); pellagra after months on maize
   (NUT-PELL).
-- **[model] (proposed)** The sim tracks the 18 rows above and no more; trace elements are folded into the
-  food's general quality. Only the first eight (energy, protein, carb, fat, water, sodium, potassium,
-  vitamin C) are Rex's by name; the rest are the keeper's reading of "the rest of what a body needs".
+- **[model] (proposed)** The sim tracks the 31 rows above. Only the first eight (energy, protein, carb,
+  fat, water, sodium, potassium, vitamin C) are Rex's by name; the next ten were the keeper's first reading
+  of "the rest of what a body needs"; the thirteen marked **(audit)** were added on Rex's go-ahead
+  (2026-10-29) after ChatGPT's audit asked for them (riboflavin, B5, B6, biotin, folate, B12, E, K,
+  magnesium, phosphorus, selenium, copper, essential fatty acids). Folate, B12 and iron together let
+  anaemia emerge from the diet the way scurvy does from vitamin C; magnesium and calcium are the
+  neuromuscular pair (cramps at the capstan); vitamin K is the clotting one (a wound that will not stop).
 - **Mark:** as the Mark column.
 
 ## 2. Food profiles
@@ -125,6 +142,64 @@ intake; the deficiency clocks.
 | Burgoo (oatmeal porridge with molasses) | 110 | 3 | 20 | 1.5 | 74 | 30 | 200 | 0 | 0.1 | 0.4 | 0 | 1.5 | 1 | low | proposed (derived) |
 <!-- /table -->
 
+<!-- table:nutrition.foods_more -->
+*Food profiles, the added nutrients (per 100 g; illustrative, same rows as the food table)* (model; confidence low; source: Nearest modern food in USDA-type tables (NUT-USDA), the keeper's reading; every value a belt verification task. Added after the audit of 2026-10-29.)
+
+| Good | Folate mcg | B12 mcg | Riboflavin mg | B6 mg | Vit E mg | Vit K mcg | Magnesium mg | Zinc mg | Calcium mg | Mark |
+|---|---|---|---|---|---|---|---|---|---|---|
+| Ship's biscuit | 25 | 0 | 0.1 | 0.05 | 0.3 | 2 | 30 | 0.8 | 20 | proposed (audit) |
+| Bread, fresh | 30 | 0 | 0.2 | 0.1 | 0.3 | 3 | 25 | 0.7 | 50 | proposed (audit) |
+| Flour, bolted | 26 | 0 | 0.1 | 0.04 | 0.1 | 0 | 22 | 0.7 | 15 | proposed (audit) |
+| Oatmeal, dry | 56 | 0 | 0.1 | 0.1 | 0.4 | 2 | 138 | 3.6 | 52 | proposed (audit) |
+| Pease, dried | 274 | 0 | 0.2 | 0.2 | 0.1 | 15 | 115 | 3 | 55 | proposed (audit) |
+| Rice, husked | 20 | 0 | 0.1 | 0.5 | 1.2 | 2 | 143 | 2 | 23 | proposed (audit) |
+| Salt beef | 6 | 2.5 | 0.2 | 0.3 | 0.2 | 1 | 20 | 6 | 10 | proposed (audit) |
+| Salt pork | 3 | 0.7 | 0.2 | 0.3 | 0.2 | 0 | 15 | 2.5 | 8 | proposed (audit) |
+| Salt fish, dried cod | 25 | 10 | 0.3 | 0.9 | 1 | 0 | 133 | 1.6 | 160 | proposed (audit) |
+| Herring, salted | 10 | 13 | 0.2 | 0.3 | 1.1 | 0 | 32 | 1 | 60 | proposed (audit) |
+| Fresh fish | 10 | 2 | 0.1 | 0.4 | 0.5 | 0 | 30 | 0.6 | 20 | proposed (audit) |
+| Green turtle, meat | 15 | 1 | 0.2 | 0.2 | 0.5 | 0 | 20 | 1 | 118 | proposed (audit) |
+| Boucan, smoked meat | 8 | 3 | 0.4 | 0.5 | 0.3 | 2 | 40 | 8 | 15 | proposed (audit) |
+| Tasajo, jerked beef | 10 | 1 | 0.1 | 0.2 | 0.2 | 2 | 50 | 8 | 20 | proposed (audit) |
+| Cheese | 20 | 0.8 | 0.4 | 0.07 | 0.7 | 2 | 28 | 3.1 | 720 | proposed (audit) |
+| Butter | 3 | 0.2 | 0.03 | 0 | 2.3 | 7 | 2 | 0.1 | 24 | proposed (audit) |
+| Milk, goat | 1 | 0.07 | 0.1 | 0.05 | 0.1 | 0 | 14 | 0.3 | 134 | proposed (audit) |
+| Eggs | 47 | 0.9 | 0.5 | 0.2 | 1 | 0 | 12 | 1.3 | 56 | proposed (audit) |
+| Cassava, boiled | 27 | 0 | 0.05 | 0.1 | 0.2 | 2 | 21 | 0.3 | 16 | proposed (audit) |
+| Manioc flour | 20 | 0 | 0.03 | 0.1 | 0.1 | 0 | 30 | 0.5 | 30 | proposed (audit) |
+| Maize, whole grain | 19 | 0 | 0.2 | 0.6 | 0.5 | 0 | 127 | 2.2 | 7 | proposed (audit) |
+| Yams, boiled | 16 | 0 | 0.03 | 0.2 | 0.3 | 2 | 18 | 0.2 | 14 | proposed (audit) |
+| Potatoes, boiled | 10 | 0 | 0.02 | 0.3 | 0 | 2 | 20 | 0.3 | 8 | proposed (audit) |
+| Plantain, boiled | 26 | 0 | 0.05 | 0.2 | 0.1 | 1 | 32 | 0.1 | 2 | proposed (audit) |
+| Pineapple | 18 | 0 | 0.03 | 0.1 | 0 | 1 | 12 | 0.1 | 13 | proposed (audit) |
+| Oranges | 30 | 0 | 0.04 | 0.06 | 0.2 | 0 | 10 | 0.1 | 40 | proposed (audit) |
+| Lemons | 11 | 0 | 0.02 | 0.08 | 0.2 | 0 | 8 | 0.1 | 26 | proposed (audit) |
+| Limes | 8 | 0 | 0.02 | 0.04 | 0.2 | 1 | 6 | 0.1 | 33 | proposed (audit) |
+| Lime juice, fresh | 10 | 0 | 0.02 | 0.04 | 0.2 | 1 | 6 | 0.1 | 14 | proposed (audit) |
+| Sauerkraut | 24 | 0 | 0.02 | 0.1 | 0.1 | 13 | 13 | 0.2 | 30 | proposed (audit) |
+| Onions | 19 | 0 | 0.03 | 0.1 | 0 | 0 | 10 | 0.2 | 23 | proposed (audit) |
+| Muscovado sugar | 1 | 0 | 0 | 0 | 0 | 0 | 29 | 0 | 85 | proposed (audit) |
+| Molasses | 0 | 0 | 0 | 0.7 | 0 | 0 | 242 | 0.3 | 205 | proposed (audit) |
+| Cacao, as chocolate drink | 10 | 0 | 0.1 | 0.05 | 0.1 | 1 | 100 | 1.5 | 50 | proposed (audit) |
+| Coffee, brewed | 2 | 0 | 0.08 | 0 | 0 | 0 | 3 | 0 | 2 | proposed (audit) |
+| Tea, brewed | 5 | 0 | 0.01 | 0 | 0 | 0 | 3 | 0 | 0 | proposed (audit) |
+| Rum | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | proposed (audit) |
+| Brandy, arrack, cachaca | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | proposed (audit) |
+| Ship's beer, small | 6 | 0 | 0.03 | 0.05 | 0 | 0 | 6 | 0 | 4 | proposed (audit) |
+| Strong beer, ale | 8 | 0 | 0.03 | 0.05 | 0 | 0 | 8 | 0 | 4 | proposed (audit) |
+| Wine | 1 | 0 | 0.03 | 0.06 | 0 | 0 | 12 | 0.1 | 8 | proposed (audit) |
+| Cider | 0 | 0 | 0.02 | 0.03 | 0 | 0 | 5 | 0 | 7 | proposed (audit) |
+| Punch | 3 | 0 | 0.01 | 0.01 | 0 | 0 | 3 | 0 | 5 | proposed (audit) |
+| Island drinks | 5 | 0 | 0.02 | 0.05 | 0 | 0 | 10 | 0.1 | 8 | proposed (audit) |
+| Palm oil | 0 | 0 | 0 | 0 | 16 | 8 | 0 | 0 | 0 | proposed (audit) |
+| Olive oil | 0 | 0 | 0 | 0 | 14 | 60 | 0 | 0 | 1 | proposed (audit) |
+| Kola nuts | 10 | 0 | 0.1 | 0.1 | 0 | 0 | 30 | 0.5 | 20 | proposed (audit) |
+| Coast provisions: goat and fowl, fresh | 8 | 1.5 | 0.3 | 0.4 | 0.3 | 1 | 25 | 3 | 15 | proposed (audit) |
+| Spices | 20 | 0 | 0.2 | 0.3 | 1 | 150 | 150 | 1.5 | 400 | proposed (audit) |
+| Salmagundi | 30 | 1.5 | 0.2 | 0.3 | 1 | 5 | 40 | 2.5 | 40 | proposed (audit, derived) |
+| Burgoo | 15 | 0 | 0.03 | 0.05 | 0.1 | 1 | 50 | 1 | 30 | proposed (audit, derived) |
+<!-- /table -->
+
 - **[history]** Preserved food lacks vitamin C; fresh produce spoils (`GOODS.md` §1i); lime juice loses its
   vitamin C when boiled for keeping or stored in copper, which is why the Navy's later lime juice sometimes
   failed where lemons had worked (NUT-LIME, medium confidence); limes carry about half the C of lemons
@@ -140,6 +215,41 @@ intake; the deficiency clocks.
 - **Visible face:** the galley menu the cook names; the hold's stores count; "biscuit and salt horse again";
   a crew mate who hoards oranges.
 - **Mark:** **(proposed)**, every number a belt data task to verify; the scurvy mechanism **(Rex)**.
+
+## 2a. Absorption: what the body keeps
+
+<!-- table:nutrition.absorption -->
+*Absorption and bioavailability: what the body keeps of what it eats* (science; confidence medium; source: Standard nutrition science (NUT-DRI background; Hallberg on iron; the nixtamalisation literature on niacin). The multipliers are the keeper's reading of typical ranges; the model applies them to intake before the pool is filled. Added after the audit of 2026-10-29 (outside AI asked for it).)
+
+| Nutrient | Absorbed, typical | Raised by | Lowered by | Model rule | Mark |
+|---|---|---|---|---|---|
+| Iron, haem (meat, fish) | 15 to 35% | - | little | intake x 0.25 | proposed (audit) |
+| Iron, non-haem (pease, grain, greens) | 2 to 20% | vitamin C in the same meal (x2 to x3); meat in the meal | tea and coffee tannins, phytate in whole grain and pease (x0.5), calcium in the meal | intake x 0.08, x2 with 50+ mg vitamin C in the meal, x0.5 with tea or whole grain | proposed (audit) |
+| Niacin from maize | about 30% unless alkali-treated | nixtamalisation (lime water, the Mesoamerican way): x3 | - | maize niacin x 0.3 unless the recipe is nixtamalised (GOODS: cassava and potato bread recipes are not; a tortilla row would be) | proposed (audit) |
+| Thiamin | high | - | thiaminase in raw fish and shellfish (destroys it), alcohol (x0.5 uptake), baking soda, prolonged boiling (leaches) | intake x 1.0; raw-fish meal x0.5 of the day's thiamin; heavy rum day x0.5 | proposed (audit) |
+| Folate | 50 to 90% (synthetic higher) | - | cooking (50% lost in boiling), alcohol | cooked food x 0.5 of the raw value; rum day x0.7 | proposed (audit) |
+| Vitamin B12 | about 50% from food; needs intrinsic factor | - | chronic gut damage (amoebic dysentery, worms), old age | intake x 0.5; x0 while a chronic flux lasts | proposed (audit) |
+| Vitamin C | 70 to 90% at normal doses | - | heat, copper vessels, air, time (the lime-juice story) | intake x 0.8; the food's own loss rules (cooking x0.5, stored juice) | proposed (audit) |
+| Vitamins A, D, E, K (fat-soluble) | variable | fat in the meal (x2 with 10+ g fat) | a fat-free meal, diarrhoea | x0.5 without fat in the meal; x0.3 during a flux | proposed (audit) |
+| Calcium | 25 to 35% | vitamin D (sun: the tropics give it) | phytate, oxalate, no vitamin D | intake x 0.3 | proposed (audit) |
+| Zinc | 20 to 40% | animal protein | phytate (whole grain, pease) | intake x 0.3; x0.2 on a grain-and-pease diet | proposed (audit) |
+| Magnesium | 30 to 50% | - | phytate, diarrhoea, alcohol (urinary loss) | intake x 0.4 | proposed (audit) |
+| Sodium, potassium, water | near 100% | - | vomiting and diarrhoea (lost, not absorbed) | x1.0; a flux day loses 2 to 4 L and its salts | proposed (audit) |
+| Protein quality | animal 90 to 100%; pease and grain 70 to 80% alone, better combined | mixing grain and pulse in a meal (burgoo and pease) | a single plant staple | protein x 0.75 from a meal of one plant source, x0.9 combined, x1.0 animal | proposed (audit) |
+| Everything, during a flux | - | - | dysentery and typhoid cut absorption of all nutrients | every intake x 0.5 while the condition lasts | proposed (audit) |
+<!-- /table -->
+
+- **[science]** Haem iron from meat is absorbed several times better than iron from pease and grain, and
+  vitamin C in the same meal doubles the plant iron taken up while tea and whole grain halve it; maize
+  niacin is locked unless the grain is alkali-treated; thiaminase in raw fish destroys thiamin; boiling
+  leaches half the folate; the fat-soluble vitamins need fat in the meal; a flux cuts absorption of
+  everything (standard nutrition science; the multipliers are typical ranges, medium confidence).
+- **[model] (proposed, audit)** `absorbed = intake × absorptionFactor(nutrient, meal, gut state)` runs
+  before a pool is filled, so the same salt beef and pease feed two crew differently by what else was in
+  the bowl and whether the flux is on them. The meal, not the day, is the unit, so the cook's combining
+  (pease with the beef; lime with the fish) matters as it did.
+- **Visible face:** the surgeon notices the pale man who "eats well"; the cook's recipe choices; pease
+  with the salt horse as the period's own good sense.
 
 ## 3. The period ration
 
@@ -206,6 +316,12 @@ intake; the deficiency clocks.
 | Vitamin A | 500,000 mcg RAE (500 mg retinol in the liver, a well-fed adult) | 900 mcg RAE | 50,000 mcg RAE | night blindness (month 12 to 18 at zero intake; sooner on a part ration) | dry eyes, infections | blindness | weeks | proposed |
 | Iron | 1,000 mg (men), 300 (women) | 1 mg; +1 per menstrual day; +250 per litre of blood lost | 150 mg | tired, pale (month 3) | breathless on the rigging (month 5) | heart strain (month 8+) | months | proposed |
 | Sodium | a 3-day buffer | 1.5 g + 1 g per litre of sweat | 1 g | cramps in heat | confusion | collapse | hours | proposed |
+| Folate | 10 mg | 0.4 mg (x2 with fever or pregnancy) | 1.5 mg | tired, pale (month 2) | breathless, sore tongue (month 3) | severe anaemia (month 4+); with iron and B12 this is the diet-anaemia chain | weeks | proposed (audit) |
+| B12 | 3 mg (liver) | 2.4 mcg (x0 absorbed if the gut is damaged by chronic dysentery) | 0.5 mg | none for a year or more | tired, pale, numb feet (year 2 to 3) | unsteady, memory failing | months | proposed (audit) |
+| Riboflavin | small | 1.3 mg | - | cracked mouth corners (month 2) | sore tongue, light-shy (month 3) | - | days | proposed (audit) |
+| Vitamin K | small | 0.12 mg | - | bruises easily (week 3 with no greens and a purged gut) | wounds bleed longer (bleeding class +1 on a new wound) | - | days on greens or liver | proposed (audit) |
+| Magnesium | 25 g (skeleton); 1 g exchangeable | 0.4 g (+ losses: diarrhoea 0.2, heavy rum 0.1) | 0.6 g exchangeable | tremor, cramps (week 4 to 8) | weakness, irregular pulse | fits | days to weeks | proposed (audit) |
+| Essential fatty acids | fat stores | a few g | - | scaly skin (month 3 on biscuit and lean salt fish) | poor healing | - | weeks | proposed (audit) |
 | Water | - | PHYSIOLOGY | 2% of body mass | thirst | dizziness | delirium | hours | **Rex** |
 <!-- /table -->
 
@@ -283,13 +399,11 @@ intake; the deficiency clocks.
 3. Boosts beyond the real ones (the table's fiction rows), and whether rum gives Dutch courage.
 4. Habit (rum, laudanum, tobacco) as a system: here, `PSYCHOLOGY.md`, or not at all.
 5. Every food number is a belt verification task against FoodData Central before tuning.
-6. **(proposed, outside AI, audit 2026-10-29)** The audit lists what §1 leaves out: vitamins E, K, B2,
-   B5, B6, B7, B9 (folate) and B12; magnesium, phosphorus, selenium, copper; essential fatty acids;
-   absorption and bioavailability (iron from meat vs pease, niacin from alkali-treated maize); protein
-   quality; and the split of fullness, appetite, hunger and energy sufficiency into separate states. Folate
-   and B12 would let anaemia emerge from diet as scurvy does from vitamin C. The keeper agrees these are
-   the honest next rows if Rex wants "the rest of what a body needs" taken to the full list; each is one
-   row in `nutrients` and one column per food, so the structure does not change. Open for Rex: how far.
+6. ~~The audit's missing nutrients and absorption~~ added as proposed rows on Rex's go-ahead
+   (2026-10-29): §1 (13 nutrients), §2 (their food values), §2a (absorption, protein quality). Still open
+   from the audit: the split of fullness, appetite, hunger and energy sufficiency into separate states
+   (today one satiation index), and whether the game surfaces any of the new deficiencies beyond anaemia,
+   cramps and bleeding.
 
 ## Sources
 
@@ -302,3 +416,4 @@ physiology, lime-vs-lemon composition.
 | Date | What | Who |
 |---|---|---|
 | 2026-10-29 | File opened from Rex's §4c decisions; nutrients (18), food profiles (50 goods), the 1677 ration, body composition, deficiency clocks, water and salt, boosts; tables in `data/nutrition.json` | keeper |
+| 2026-10-29 | On Rex's go-ahead after the audit: 13 more nutrients (B2, B5, B6, B7, folate, B12, E, K, Mg, P, Se, Cu, essential fatty acids), their deficiency clocks, their food values (`foods_more`), and the absorption table (§2a); all proposed | keeper (Rex's go-ahead) |

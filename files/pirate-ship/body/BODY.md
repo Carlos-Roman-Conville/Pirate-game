@@ -264,7 +264,7 @@ here the house way. **Fixed the same day (the keeper agreed they were errors):**
   digestion) as a regulating system instead of independent meters; **tendon capacity, joint range,
   contraction velocity, bone adaptation** in `MUSCULAR.md`; **the remaining vitamins and minerals,
   absorption, protein quality, essential fatty acids, and fullness vs appetite vs hunger** in
-  `NUTRITION.md` (listed there, open 6); **organ injuries, respiratory progression, dental and
+  `NUTRITION.md` (added as proposed rows on Rex's go-ahead the same day: §1, §2, §2a there); **organ injuries, respiratory progression, dental and
   reproductive health, a larger disease catalogue** in `MEDICINE.md`; **learning consolidation,
   habituation, addiction, trauma, cognitive fatigue, attention, stress adaptation** as further inputs in
   `PSYCHOLOGY.md`; **adaptive expenditure** in place of the fixed 7,700 kcal/kg; a homeostatic
