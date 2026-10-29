@@ -141,6 +141,14 @@ for control of the town hall."
 - **(open, Rex's)** Whether the 2026-10-28 ghost rule (places ghosted for losing the pair competition) and this
   one (people ghosted for dying) coexist, or one replaces the other; and what a character's death or
   transformation does to their place.
+- **(Rex, 2026-10-29) No immunity:** named characters can die of disease, accident, weather or the heart, without a
+  script (via the body keeper; odds in [`../body/`](../body/)). Every death opens a crisis first; the fate set
+  decides what follows. A resident's place is then caught by succession where Rex has given one (the farm to the
+  daughter, the butcher shop to the son). **(open)** Every other place's successor, and what a place does with no
+  successor.
+- **(open; raised by the body keeper, not Rex's)** Whether these become town places or faces: a gym; sanitation
+  (wells, latrines, drains) as a multiplier `../body/MEDICINE.md` reads; the port's settlement size
+  (`../world/POPULATION.md` §5); crowd density and a graveyard as visible faces of the town.
 - **(Rex, 2026-10-28) The goal:** "I'd like it so that there is a route toward a perfectly working town by the end
   but that requires a complicated set of choices. Meaning you can't recruit everyone but who you choose to develop
   can help you get there."
@@ -305,3 +313,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-28 | Decided: the ghost rule (neither → both ghosted, one → it develops and the rival ghosts, both → both develop) applies to all eight pairs; the duel stays food's (via the balance keeper) | Rex |
 | 2026-10-28 | Recruiting alone doesn't develop a place: developed = `recruit(x) AND` x's develop condition (food: the bodies; others open) (via the balance keeper) | Rex |
 | 2026-10-29 | Death and transformation: people become ghosts (or fish people, demons, missing, mecha, zombies, angels) only through actual death, by who did it or which faction resurrects them; whether this coexists with the pair ghost rule is open (via the combat keeper, COMBAT.md §4e) | Rex |
+| 2026-10-29 | No immunity: named characters can die of disease, accident, weather or the heart; a death opens a crisis and succession catches the place where Rex gave one; body keeper's place questions (gym, sanitation, settlement size, crowds, graveyard) listed open (via the body keeper) | Rex |
