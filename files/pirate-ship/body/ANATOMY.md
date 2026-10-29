@@ -76,6 +76,30 @@ absorption. No organ applies a penalty of its own: `BODY.md` reads organ functio
   pulse and the belly and tasted the urine; that is the visible face.
 - **Mark:** **(proposed)** throughout; the lost eye **(Rex)**; pregnancy **(open)**.
 
+## 1a. The respiratory profile (added 2026-10-29, the air layer)
+
+<!-- table:anatomy.respiratory -->
+*The respiratory profile (the lungs' interface to the air; per species)* (science; confidence medium; source: Gas transfer across the lung follows the partial-pressure gradient and the lung's diffusing capacity (Fick); ventilation, perfusion and diffusion each limit it (standard respiratory physiology, ATM-ALV). The profile fields are ChatGPT's list (outside AI), typed; the transfer formula is the model abstraction the brief names, not the full pulmonary equation.)
+
+| Field | Human default | Unit | Changed by | Mark |
+|---|---|---|---|---|
+| medium | air | air \| water \| other | the species profile (ANATOMY 5); under water a human has none | proposed |
+| structure | lungs | lungs \| gills \| skin \| other | species | proposed |
+| ventilation capacity (maximal) | 100 to 150 at full effort (trained higher) | L/min | lung function x chest wall intact (MEDICINE chest wounds) x age | proposed |
+| exchange capacity (diffusing capacity) | 25 at rest, 60 at effort | mL O2 per min per mmHg gradient | lung damage (pneumonia, smoke injury, consumption), fluid in the lungs (heart failure), age | proposed |
+| airway resistance | 1.0 | relative | irritant gases (SO2, smoke) raise it: x2 to x5 during exposure; asthma (none modelled) | proposed |
+| dead space | 150 | mL per breath | fixed | proposed |
+| tissue integrity | 1.0 | 0 to 1 (ANATOMY lungs function and damage) | smoke and irritant injury (MEDICINE), infection, drowning | proposed |
+| gas tolerances (species) | hypoxia under 16% O2; CO2 over 3% | thresholds | species profile (a diving mammal tolerates more CO2; open) | proposed |
+| Gas transfer (the model) | transfer = exchange capacity x (inspired-alveolar gradient after the alveolar gas equation); arterial PO2 follows alveolar PO2 less a 5 to 10 mmHg gradient in health, more with damage | mL/min | the whole row above | proposed |
+| Two failures told apart | not enough oxygen in the air (ATMOSPHERE: low fraction or low pressure) vs the lung failing to transfer it (damage, fluid, resistance): same saturation, different cure | - | - | proposed |
+<!-- /table -->
+
+- **[model]** The lungs' interface to `../world/ATMOSPHERE.md`: the air (or water) supplies inspired
+  partial pressures; this profile transfers gas by its capacity and the gradient; `CIRCULATION.md` §1a
+  carries the result. Two failures are told apart: not enough oxygen in the air, and a lung that cannot
+  move it. The profile is a species-profile field (§5): a fish-person's gills are a row here.
+
 ## 2. The tissues
 
 <!-- table:anatomy.tissues -->

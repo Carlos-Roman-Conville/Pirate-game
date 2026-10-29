@@ -80,6 +80,29 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
   anaemia, heart failure and lung disease all lower endurance through one number instead of three
   penalties.
 
+## 1a. Blood gases (added 2026-10-29, the air layer)
+
+<!-- table:circulation.blood_gas -->
+*Blood gases: oxygen binding, carbon dioxide, carbon monoxide, acid-base* (science; confidence high; source: Severinghaus 1979: SaO2 = 1 / (1 + 23400 / (PaO2^3 + 150 PaO2)) (P50 about 26.8 mmHg at pH 7.4, 37 C; the curve shifts right with acidosis, fever and CO2, left with alkalosis, cold and carbon monoxide); carboxyhaemoglobin by the Coburn-Forster-Kane model, simplified here to a first-order approach to equilibrium with a 4 to 6 h half-life in air (CIR-SEV, CHM-CO); CO2 carried as bicarbonate, pH by Henderson-Hasselbalch (standard).)
+
+| Quantity | Formula or rule | Normal | Fails when | Mark |
+|---|---|---|---|---|
+| Arterial PO2 | alveolar PO2 (ANATOMY 1a) minus the gradient | 95 mmHg at sea level | low inspired oxygen; lung transfer failing | proposed |
+| Saturation SaO2 | Severinghaus: 1 / (1 + 23400 / (PaO2^3 + 150 PaO2)); shifted by pH, temperature and CO2 | 0.97 | under 0.90 breathless and dull; 0.80 confused, blue; 0.70 unconscious; under 0.60 death in minutes | proposed |
+| Carboxyhaemoglobin COHb | dCOHb/dt = (COHb_eq - COHb) x ln2 / t_half, COHb_eq about 0.16 x ppm / 100 (an approximation valid to a few thousand ppm), t_half 5 h in air (uptake faster at work: x VE/6) | under 3% (smokers 3 to 10%) | 10 to 20% headache and nausea; 20 to 30% drowsy, ataxic, impaired; 30 to 50% seizures, unconscious, the heart starves; over 50% death. Oxygen content falls by the COHb share and the curve shifts left (the rest is held tighter): worse than the same loss of haemoglobin | proposed |
+| Oxygen content with CO | CaO2 = 1.34 x Hb x (1 - COHb) x SaO2 + dissolved | 20 mL/dL | the pulse and the colour look normal (cherry pink): the surgeon cannot tell | proposed |
+| Arterial PCO2 | set by ventilation against production: PaCO2 = 0.863 x VCO2 / alveolar ventilation | 40 mmHg | over 50 drowsy, over 70 narcosis; under 30 (panic, hyperventilation) tingling and faintness | proposed |
+| Acid-base | pH from bicarbonate and PaCO2 (Henderson-Hasselbalch); respiratory acidosis with CO2 retention, alkalosis with over-breathing; metabolic acidosis from shock and lactate (CIRCULATION 1) | 7.40 | under 7.2 the heart weakens; over 7.6 tetany | proposed |
+| Hydrogen sulphide | not a blood-gas problem: it poisons the cells' use of oxygen (cytochrome oxidase) like cyanide; blood looks oxygenated while the tissues starve | 0 | over 500 ppm collapse in a breath | proposed |
+<!-- /table -->
+
+- **[science]** Saturation follows the Severinghaus curve from arterial PO₂; carbon monoxide takes
+  haemoglobin out of service and holds the rest tighter, so the same number of red cells carry less and
+  release less, with a normal pulse and a pink colour the surgeon cannot read (CIR-SEV, CHM-CO). Hydrogen
+  sulphide is not a blood problem at all: it stops the cells using the oxygen that arrives.
+- **[model]** The dashboard's respiratory calculator runs this table: pressure, mixture and exposure
+  time to saturation, carboxyhaemoglobin and the symptom tier.
+
 ## 2. Bleeding (moved from `MEDICINE.md` §3)
 
 <!-- table:circulation.bleeding -->

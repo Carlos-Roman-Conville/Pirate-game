@@ -49,6 +49,12 @@
         "rex (the layer, 2026-10-29); proposed (fields)"
       ],
       [
+        "air",
+        "ATMOSPHERE, GAS_DYNAMICS (world), ANATOMY 1a, CIRCULATION 1a",
+        "the region the character is in and its concentrations; inspired PO2, PCO2; exposures{species: ppm-min}; the respiratory profile; PaO2, SaO2, COHb, PaCO2, pH",
+        "proposed (2026-10-29)"
+      ],
+      [
         "nervous",
         "NEUROLOGY.md",
         "per system: tone, sensitivity; per substance: concentration, dependence, withdrawal; habits{}; burdens{mercury, lead}; the circuit outputs (arousal, coordination, attention, encoding, painRelief, breathing, moodBias, fear, appetiteMod, sleepQuality)",
@@ -454,6 +460,16 @@
       [
         "The old captain's heart (a conditional event)",
         "forty years of pipe and salt pork -> CIRCULATION: lipids and tobacco damage the endothelium (ANATOMY tissues) -> the atherosclerosis index climbs with age (x2 at 70) -> coronary perfusion narrows: angina on the stairs (face) -> a cold morning hauling with the crew (trigger x5) -> plaque rupture, a clot: infarction (index^2 x 0.001 x 5 that day) -> ANATOMY: heart function 0.4, damage +0.3 for good; CIRCULATION: output down -> kidneys, the dropsy -> MEDICINE names heart failure; the story keeper has an ending that was never a scripted death",
+        "proposed (2026-10-29)"
+      ],
+      [
+        "Fire below decks (the air chain)",
+        "CHEMISTRY: wood and tar burn, starved of air in the hold: CO2, CO (10%), smoke, heat -> GAS_DYNAMICS: the hold box (250 m3, 0.2 ACH): oxygen falls, CO climbs past 800 ppm in minutes, smoke 1 g/min -> ATMOSPHERE regions: the orlop and gun deck boxes fill through the hatches -> PHYSIOLOGY 1a: the men fighting the fire breathe 40 L/min (x7 the dose) -> ANATOMY 1a: smoke raises airway resistance x3; CIRCULATION 1a: COHb 20% in half an hour, saturation falls as oxygen falls -> NEUROLOGY: the brain's hypoxia dulls every circuit (no receptor involved) -> MEDICINE 1a: CO poisoning, smoke inhalation, hypoxia named; lung damage +0.2 for the survivors -> BODY: the Endurance pool x0.6, coordination down, consciousness lost at COHb 40% -> COMBAT and DUTIES read it: who can still work the pump; no 'smoke = -30% endurance' rule anywhere",
+        "proposed (2026-10-29)"
+      ],
+      [
+        "The brazier in the shut cabin",
+        "a cold North Atlantic night; the captain's brazier (CHEMISTRY charcoal starved of air: CO 0.5 L/min) -> GAS_DYNAMICS: the cabin box, 30 m3, window shut (0.5 ACH): CO climbs toward 2,000 ppm over the night -> PHYSIOLOGY 1a: asleep at 6 L/min, no hypoxic drive (CO gives none) -> CIRCULATION 1a: COHb 10% by midnight (headache in his sleep), 30% by four (he cannot wake), 50% by dawn -> MEDICINE 1a: the charcoal sickness; found in the morning, or found in time by the watch -> ANATOMY 3a: a crisis (temporary if carried out early; heart and brain damage if late; death if not) -> the fate systems",
         "proposed (2026-10-29)"
       ]
     ]

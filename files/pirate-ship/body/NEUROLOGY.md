@@ -134,6 +134,17 @@ docs at the tick and on events.
   EC50 per substance and system is the placeholder the simulator tunes; "standard dose" in the table is
   what a potency of 1.0 means.
 
+### 3a. Inhaled substances (added 2026-10-29, the air layer)
+
+- **[model]** A gas or vapour enters by the same kinetics as a drink: inhaled dose = ventilation
+  (`PHYSIOLOGY.md` §1a) × concentration (`../world/GAS_DYNAMICS.md`) × minutes × uptake fraction
+  (`../world/CHEMISTRY.md`), then absorbed into the one-compartment model with the substance's own
+  half-life. Only neuroactive substances take the receptor path (ethanol vapour in a still-house,
+  anaesthetic vapours none in the period, a tagged gas); carbon monoxide, carbon dioxide and hydrogen
+  sulphide act through `CIRCULATION.md` §1a (oxygen transport and the cells' use of it) and reach this
+  file only as hypoxia of the brain, which lowers every circuit's output together. Mercury vapour is a
+  body burden here as before.
+
 ## 4. Receptor dynamics: the four clocks
 
 <!-- table:neurology.receptor -->

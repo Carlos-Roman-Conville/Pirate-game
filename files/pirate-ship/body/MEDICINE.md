@@ -113,6 +113,28 @@ per character a list of `conditions` (id, stage, day, severity), each with its m
   (the pox and yaws touch the brothel sector; smallpox and the plague-scale killers touch the town's
   population and the balance guarantee).
 
+## 1a. Conditions from the air (added 2026-10-29, the air layer)
+
+<!-- table:medicine.exposure -->
+*Conditions from the air (named here, caused by ATMOSPHERE, GAS_DYNAMICS and the body)* (science; confidence medium; source: Standard emergency medicine for hypoxia, hypercapnia, carbon monoxide poisoning, smoke inhalation, irritant injury, hydrogen sulphide and altitude illness; the period could do nothing but carry the man into the air and bleed him. Each condition is a pattern of the body's states, never a timer (the brief's rule, kept).)
+
+| Condition [period name] | The pattern that defines it | Course | Lasting harm | Period treatment | What helps, really | Visible face | Mark |
+|---|---|---|---|---|---|---|---|
+| Hypoxia and asphyxia [suffocation, the foul air] | SaO2 under 0.90 from low inspired oxygen or lung failure | minutes: confusion at 0.80, unconscious at 0.70, death under 0.60 within minutes | brain damage if unconscious over 4 to 6 minutes (ANATOMY brain damage) | carry him into the air; bleeding (useless) | air; the hatch opened | blue lips, gasping, confusion, collapse | proposed |
+| Hypercapnia [the close air] | PaCO2 over 50 mmHg (air CO2 over 3%) | headache and panting at 3%, confusion at 5%, narcosis 8 to 10% | none if aired in time | air | ventilation | panting, flushed, headache, sleepy | proposed |
+| Carbon monoxide poisoning [the charcoal sickness; the brazier death] | COHb over 10% | by the tier (CIRCULATION 1a); clears with a 5 h half-life in air; the heart and brain starve meanwhile | heart damage (infarction-like in the old); delayed brain injury in some survivors (days later: memory, mood) | carry him out; bleeding; vinegar | air (pure oxygen halves the half-life, none in the period) | headache, nausea, then sleep; cherry-pink lips; the whole cabin found dead in the morning | proposed |
+| Smoke inhalation injury | smoke over 100 mg/m3 with heat and CO; soot in the airways | hours to days: airway swelling can close the throat at 6 to 24 h; pneumonia follows | lung damage (ANATOMY lungs damage +0.1 to 0.5) | nothing | air, rest; later weeks | soot in the nose and mouth, hoarse, wheezing, the cough | proposed |
+| Irritant injury [the brimstone] | SO2 over 20 ppm or H2S over 10 ppm, or any tagged irritant | eyes and airways: at once; chemical pneumonitis at high dose in 6 to 24 h | lung damage at high dose | water to the eyes; air | air | eyes streaming shut (Eyesight x0.3 for the exposure), coughing, cannot act (Nerve check) | proposed |
+| Hydrogen sulphide poisoning [the damp; the sewer gas] | H2S over 100 ppm (the smell gone), over 500 the knockdown | collapse in a breath at 500+; death in 30 to 60 min; survivors recover or do not wake | brain damage after a long knockdown | nothing; the rescuer dies too | air; never go down after him without airing the hold | the first man down the hold; the rescuer | proposed |
+| Altitude illness [the mountain sickness] | SaO2 under 0.90 from low pressure over days | headache, nausea, poor sleep from 2,500 m; rare in this game | none | - | descent | headache on the peak | proposed |
+| Respiratory failure (the end state) | SaO2 under 0.80 or PaCO2 over 70 from any cause with the drive failing (NEUROLOGY: opioids, deep drink) | minutes to hours | death | nothing | the cause removed | slow shallow breathing; blue; the man who cannot be woken | proposed |
+<!-- /table -->
+
+- **[model]** Each is a pattern of states the body docs produce (saturation, carboxyhaemoglobin, PaCO₂,
+  airway resistance, lung damage), never a timer; removing the man from the air stops the exposure and
+  does not undo the injury. The period's only remedy was the open air, and bleeding, which helped
+  nothing.
+
 ## 2. Wounds
 
 **Inputs:** from `COMBAT.md` §3–4: hit location, weapon kind, damage; from the day loop: accidents (falls,

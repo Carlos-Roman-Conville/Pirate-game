@@ -485,6 +485,478 @@ window.BODY_DATA = {
      "rex (the forms), proposed (the profile shape)"
     ]
    ]
+  },
+  "respiratory": {
+   "title": "The respiratory profile (the lungs' interface to the air; per species)",
+   "kind": "science",
+   "conf": "medium",
+   "source": "Gas transfer across the lung follows the partial-pressure gradient and the lung's diffusing capacity (Fick); ventilation, perfusion and diffusion each limit it (standard respiratory physiology, ATM-ALV). The profile fields are ChatGPT's list (outside AI), typed; the transfer formula is the model abstraction the brief names, not the full pulmonary equation.",
+   "columns": [
+    "Field",
+    "Human default",
+    "Unit",
+    "Changed by",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "medium",
+     "air",
+     "air | water | other",
+     "the species profile (ANATOMY 5); under water a human has none",
+     "proposed"
+    ],
+    [
+     "structure",
+     "lungs",
+     "lungs | gills | skin | other",
+     "species",
+     "proposed"
+    ],
+    [
+     "ventilation capacity (maximal)",
+     "100 to 150 at full effort (trained higher)",
+     "L/min",
+     "lung function x chest wall intact (MEDICINE chest wounds) x age",
+     "proposed"
+    ],
+    [
+     "exchange capacity (diffusing capacity)",
+     "25 at rest, 60 at effort",
+     "mL O2 per min per mmHg gradient",
+     "lung damage (pneumonia, smoke injury, consumption), fluid in the lungs (heart failure), age",
+     "proposed"
+    ],
+    [
+     "airway resistance",
+     "1.0",
+     "relative",
+     "irritant gases (SO2, smoke) raise it: x2 to x5 during exposure; asthma (none modelled)",
+     "proposed"
+    ],
+    [
+     "dead space",
+     "150",
+     "mL per breath",
+     "fixed",
+     "proposed"
+    ],
+    [
+     "tissue integrity",
+     "1.0",
+     "0 to 1 (ANATOMY lungs function and damage)",
+     "smoke and irritant injury (MEDICINE), infection, drowning",
+     "proposed"
+    ],
+    [
+     "gas tolerances (species)",
+     "hypoxia under 16% O2; CO2 over 3%",
+     "thresholds",
+     "species profile (a diving mammal tolerates more CO2; open)",
+     "proposed"
+    ],
+    [
+     "Gas transfer (the model)",
+     "transfer = exchange capacity x (inspired-alveolar gradient after the alveolar gas equation); arterial PO2 follows alveolar PO2 less a 5 to 10 mmHg gradient in health, more with damage",
+     "mL/min",
+     "the whole row above",
+     "proposed"
+    ],
+    [
+     "Two failures told apart",
+     "not enough oxygen in the air (ATMOSPHERE: low fraction or low pressure) vs the lung failing to transfer it (damage, fluid, resistance): same saturation, different cure",
+     "-",
+     "-",
+     "proposed"
+    ]
+   ]
+  }
+ },
+ "atmosphere": {
+  "_about": "Tables for world/ATMOSPHERE.md: the baseline air, pressure with altitude, local modifiers, the regions that become active, and the period's gas scenarios. Proposed (Rex's go-ahead via ChatGPT's compromise, 2026-10-29); numbers placeholders where marked. mark: rex | proposed | open.",
+  "baseline": {
+   "title": "The baseline atmosphere (one world profile; every place inherits it)",
+   "kind": "science",
+   "conf": "high",
+   "source": "Standard dry-air composition; sea-level pressure 101,325 Pa (760 mmHg); water vapour tracked apart because it follows temperature and humidity (ENVIRONMENT). ATM-STD",
+   "columns": [
+    "Species",
+    "Dry-air fraction",
+    "Partial pressure at sea level (mmHg)",
+    "Tracked in play?",
+    "Why",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Nitrogen N2",
+     "78.08%",
+     593,
+     "as the inert remainder",
+     "fills the balance; matters only for diving (not in the game)",
+     "proposed"
+    ],
+    [
+     "Oxygen O2",
+     "20.95%",
+     159,
+     "yes",
+     "the one that keeps a body alive; inspired partial pressure is what the lungs see",
+     "proposed"
+    ],
+    [
+     "Argon and the traces",
+     "0.93% and less",
+     7,
+     "no",
+     "nothing for play; folded into the remainder",
+     "proposed"
+    ],
+    [
+     "Carbon dioxide CO2",
+     "0.04% (about 400 ppm; about 280 ppm in 1700)",
+     0.3,
+     "yes",
+     "accumulates in closed spaces; drives breathing",
+     "proposed"
+    ],
+    [
+     "Water vapour H2O",
+     "0 to 4% by humidity and temperature",
+     "up to 47 at body temperature (the airways saturate inspired air)",
+     "yes (from ENVIRONMENT)",
+     "takes room from oxygen in the alveoli; the 47 mmHg in the alveolar gas equation",
+     "proposed"
+    ]
+   ]
+  },
+  "altitude": {
+   "title": "Pressure with altitude (the standard atmosphere) and what the lungs see",
+   "kind": "science",
+   "conf": "high",
+   "source": "Barometric formula P(h) = 101325 x (1 - 0.0065 h / 288.15)^5.256 for the lower atmosphere under standard conditions; oxygen stays 20.95% while total pressure falls; inspired PO2 = 0.2095 x (P - 47 mmHg). Alveolar gas equation PAO2 = FiO2 (Patm - 47) - PaCO2 / 0.8 (standard respiratory physiology; ATM-ALV). Caribbean use is small (the Blue Mountains 2,256 m); the table exists for the reusable engine.",
+   "columns": [
+    "Altitude (m)",
+    "Pressure (mmHg)",
+    "Inspired PO2 (mmHg)",
+    "Alveolar PO2 at PaCO2 40 (mmHg)",
+    "Typical resting saturation",
+    "Where in the game",
+    "Mark"
+   ],
+   "rows": [
+    [
+     0,
+     760,
+     149,
+     99,
+     "0.97",
+     "the sea, every port",
+     "proposed"
+    ],
+    [
+     500,
+     716,
+     140,
+     90,
+     "0.96",
+     "the hill towns, Jamaica's uplands",
+     "proposed"
+    ],
+    [
+     1000,
+     674,
+     131,
+     81,
+     "0.95",
+     "coffee country",
+     "proposed"
+    ],
+    [
+     2256,
+     577,
+     111,
+     61,
+     "0.90",
+     "the Blue Mountain peak (a day's climb; mild breathlessness)",
+     "proposed"
+    ],
+    [
+     3000,
+     526,
+     100,
+     50,
+     "0.88",
+     "none in the Caribbean; the engine's other worlds",
+     "proposed"
+    ],
+    [
+     5000,
+     405,
+     75,
+     25,
+     "0.75",
+     "none here; altitude sickness, impaired attention (BODY)",
+     "proposed"
+    ]
+   ]
+  },
+  "modifiers": {
+   "title": "Local modifiers a place applies to the baseline (ENVIRONMENT supplies the inputs)",
+   "kind": "model",
+   "conf": "medium",
+   "source": "ChatGPT's layer B (outside AI), kept; the ventilation numbers are placeholders from building-ventilation practice (air changes per hour).",
+   "columns": [
+    "Modifier",
+    "From",
+    "Changes",
+    "Placeholder values",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Altitude",
+     "the map's elevation",
+     "total pressure (the table above)",
+     "-",
+     "proposed"
+    ],
+    [
+     "Temperature and humidity",
+     "ENVIRONMENT climate and weather",
+     "water vapour partial pressure; gas density (buoyancy)",
+     "humidity 60 to 85% in the Caribbean",
+     "proposed"
+    ],
+    [
+     "Wind",
+     "ENVIRONMENT weather state",
+     "ventilation of open and semi-open places; dispersal of a release (GAS_DYNAMICS)",
+     "trades 13 to 17 knots",
+     "proposed"
+    ],
+    [
+     "Enclosure and ventilation",
+     "the place's kind (ANATOMY of a ship: hold, orlop, cabin, gun deck; a room, a cave, a mine)",
+     "air changes per hour (ACH): how fast the volume is replaced by outside air",
+     "open deck infinite; gun deck with ports open 20; cabin with a window 5; hold with the hatch open 2; hold battened down 0.2; a cave 0.05; a room with a fire and a chimney 3",
+     "proposed"
+    ],
+    [
+     "Water depth",
+     "under water",
+     "pressure +1 atm per 10 m; no air at all: the breathing medium changes (ANATOMY respiratory profile)",
+     "drowning is the lungs' medium, not a gas",
+     "proposed"
+    ],
+    [
+     "Stability and inversion",
+     "ENVIRONMENT (calm nights, fog)",
+     "a release lingers near the ground; smoke hangs on the water",
+     "dispersion x0.3 on a calm night",
+     "proposed"
+    ]
+   ]
+  },
+  "regions": {
+   "title": "Active and inactive regions: when a place gets its own air",
+   "kind": "model",
+   "conf": "medium",
+   "source": "ChatGPT's active-region rule (outside AI), kept: open outdoor places inherit the baseline; a place becomes active when enclosed and occupied, or when a source changes its composition; it returns to baseline when within a tolerance of it.",
+   "columns": [
+    "Place",
+    "State",
+    "Model",
+    "Volume (m3, placeholder)",
+    "ACH (placeholder)",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Open deck, beach, a street",
+     "inactive",
+     "baseline plus ENVIRONMENT; a release makes it active for its cells (GAS_DYNAMICS grid)",
+     "-",
+     "infinite",
+     "proposed"
+    ],
+    [
+     "Forest, swamp",
+     "inactive",
+     "baseline; ECOLOGY's fluxes are aggregate, never a local oxygen bonus",
+     "-",
+     "infinite",
+     "proposed"
+    ],
+    [
+     "The hold",
+     "active when occupied or the hatches are closed",
+     "one well-mixed box (GAS_DYNAMICS box model)",
+     "a sloop 60; a brig 250; a ship 800",
+     "2 open, 0.2 battened",
+     "proposed"
+    ],
+    [
+     "The gun deck in action",
+     "active during a fight",
+     "one box per deck section; powder smoke as the source (CHEMISTRY black powder)",
+     "300 per deck",
+     "20 with ports open, 5 closed",
+     "proposed"
+    ],
+    [
+     "A cabin, the great cabin",
+     "active when occupied with a brazier, a lamp or the window shut",
+     "box",
+     "20 to 60",
+     "5 window open, 0.5 shut",
+     "proposed"
+    ],
+    [
+     "The orlop and the surgeon's cockpit",
+     "active in a fight",
+     "box; wounded men and lamps",
+     "150",
+     "1",
+     "proposed"
+    ],
+    [
+     "A tavern, a room ashore",
+     "active when crowded or heated",
+     "box",
+     "80",
+     "3",
+     "proposed"
+    ],
+    [
+     "The apothecary's laboratory (the INTJ)",
+     "active during an experiment",
+     "box; CHEMISTRY reactions as sources",
+     "40",
+     "2, 8 with the window",
+     "proposed"
+    ],
+    [
+     "A cave, a mine, a well",
+     "active when entered",
+     "box; natural sources (CO2, H2S)",
+     "by the place",
+     "0.05",
+     "proposed"
+    ],
+    [
+     "A burning building or ship",
+     "active",
+     "box per compartment with combustion sources; grid if on the combat map",
+     "by the place",
+     "fire-driven",
+     "proposed"
+    ],
+    [
+     "Under water",
+     "the medium itself",
+     "no gas model: the respiratory profile's medium",
+     "-",
+     "-",
+     "proposed"
+    ]
+   ]
+  },
+  "scenarios": {
+   "title": "The period's gases: what a 1650 to 1730 crew actually breathed (the payoff list)",
+   "kind": "history",
+   "conf": "medium",
+   "source": "Gun decks produced clouds of hazardous smoke (naval artillery overviews); black powder's gases are CO2, N2, CO, H2S, H2 and CH4 (about 43% of the products by mass; ATM-BP); stinkpots of sulphur and powder are attested from 1669 (Sturmy's Mariner's Magazine) and used by pirates and in boarding (ATM-STINK); charcoal in enclosed spaces kills by carbon monoxide (modern series: 83 US deaths in seven years from charcoal indoors; ATM-CO); below-decks air in 1741 was foul enough to be a navy complaint (ATM-VENT); volcanic islands (Montserrat, Guadeloupe, Martinique, St Vincent) have fumaroles. The hold's foul air is documented in the 19th century; the period's own deaths from it are open.",
+   "columns": [
+    "Scenario",
+    "Source species",
+    "Place and model",
+    "What the body sees",
+    "Period provenance",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Fire below decks",
+     "CO2, CO, smoke particles, heat; oxygen consumed",
+     "a box per compartment, fire-driven",
+     "hypoxia, CO poisoning, smoke inhalation, heat (PHYSIOLOGY)",
+     "the great fear of every wooden ship",
+     "proposed"
+    ],
+    [
+     "The gun deck in a long action",
+     "black powder smoke: CO2, CO, H2S (trace), SO2, particles",
+     "box per deck, ports open (ACH 20) or shut",
+     "eyes streaming (Eyesight x0.6), cough, headache after an hour (COHb 5 to 10%), the deafness is the guns' (ANATOMY senses)",
+     "universal; 'clouds of hazardous smoke'",
+     "proposed"
+    ],
+    [
+     "A stinkpot thrown on deck or into a boarding boat",
+     "sulphur burning: SO2; smoke; pitch",
+     "a few grid cells for minutes (GAS_DYNAMICS), or a boat as a box",
+     "choking, eyes shut, Nerve check to stay (COMBAT: a flinch source, combat keeper's), SO2 airway irritation (MEDICINE)",
+     "attested 1669; a pirate and boarding weapon",
+     "proposed"
+    ],
+    [
+     "A charcoal brazier in a shut cabin on a cold night",
+     "CO (incomplete combustion), CO2",
+     "the cabin box at 0.5 ACH",
+     "COHb rising over hours: headache, then sleep that does not end",
+     "charcoal indoors kills; the north Atlantic leg is cold enough to want a brazier",
+     "proposed"
+    ],
+    [
+     "The hold battened down with men in it (prisoners, a storm)",
+     "CO2 up, O2 down, from breathing; bilge gases (H2S, CH4) from rot",
+     "the hold box at 0.2 ACH with N occupants",
+     "headache and panting at 3% CO2, confusion at 5%, unconscious near 10%; H2S if the bilge is foul",
+     "the slave deck's horror is this scenario; the 1741 navy complaint",
+     "proposed"
+    ],
+    [
+     "Opening a long-sealed hold or well",
+     "CO2 or H2S pooled low (heavier than air)",
+     "a box at 0.05 ACH; the first man down",
+     "collapse in a breath at H2S over 500 ppm; the rescuer dies too (the classic)",
+     "documented later; plausible for the period",
+     "proposed"
+    ],
+    [
+     "The apothecary's experiment gone wrong",
+     "whatever CHEMISTRY says the reaction makes (mercury vapour, SO2, H2S, chlorine-like fumes from salts and acids)",
+     "the laboratory box",
+     "by the species' toxicity rows",
+     "the INTJ's lane",
+     "proposed"
+    ],
+    [
+     "A volcanic fumarole or a sulphur mine",
+     "SO2, H2S, CO2",
+     "a cave box or a grid patch on the slope",
+     "irritation, collapse in a hollow",
+     "the Soufrieres of the Lesser Antilles",
+     "proposed"
+    ],
+    [
+     "Lime kiln, tar kettle, smithy",
+     "CO2, CO, SO2, smoke",
+     "a semi-open box, ACH 3 to 10",
+     "chronic low-grade exposure for the worker (a daily COHb of 5%: headaches)",
+     "all period trades",
+     "proposed"
+    ],
+    [
+     "A tagged gas weapon or substance",
+     "its row's species (provenance-tagged: Rex)",
+     "as its release",
+     "by its rows",
+     "fiction",
+     "open (the story keeper's rows)"
+    ]
+   ]
   }
  },
  "body": {
@@ -536,6 +1008,12 @@ window.BODY_DATA = {
      "ANATOMY.md, CIRCULATION.md",
      "per organ: function, damage; per tissue: integrity; the blood: volume, plasma, redCellMass, Hb, SaO2, CO, DO2, MAP, perfusion{organ}, platelets, clotting, Na, K, Ca, Mg, glucose, pH, lactate, immune, lipids, atherosclerosis index",
      "rex (the layer, 2026-10-29); proposed (fields)"
+    ],
+    [
+     "air",
+     "ATMOSPHERE, GAS_DYNAMICS (world), ANATOMY 1a, CIRCULATION 1a",
+     "the region the character is in and its concentrations; inspired PO2, PCO2; exposures{species: ppm-min}; the respiratory profile; PaO2, SaO2, COHb, PaCO2, pH",
+     "proposed (2026-10-29)"
     ],
     [
      "nervous",
@@ -944,6 +1422,16 @@ window.BODY_DATA = {
      "The old captain's heart (a conditional event)",
      "forty years of pipe and salt pork -> CIRCULATION: lipids and tobacco damage the endothelium (ANATOMY tissues) -> the atherosclerosis index climbs with age (x2 at 70) -> coronary perfusion narrows: angina on the stairs (face) -> a cold morning hauling with the crew (trigger x5) -> plaque rupture, a clot: infarction (index^2 x 0.001 x 5 that day) -> ANATOMY: heart function 0.4, damage +0.3 for good; CIRCULATION: output down -> kidneys, the dropsy -> MEDICINE names heart failure; the story keeper has an ending that was never a scripted death",
      "proposed (2026-10-29)"
+    ],
+    [
+     "Fire below decks (the air chain)",
+     "CHEMISTRY: wood and tar burn, starved of air in the hold: CO2, CO (10%), smoke, heat -> GAS_DYNAMICS: the hold box (250 m3, 0.2 ACH): oxygen falls, CO climbs past 800 ppm in minutes, smoke 1 g/min -> ATMOSPHERE regions: the orlop and gun deck boxes fill through the hatches -> PHYSIOLOGY 1a: the men fighting the fire breathe 40 L/min (x7 the dose) -> ANATOMY 1a: smoke raises airway resistance x3; CIRCULATION 1a: COHb 20% in half an hour, saturation falls as oxygen falls -> NEUROLOGY: the brain's hypoxia dulls every circuit (no receptor involved) -> MEDICINE 1a: CO poisoning, smoke inhalation, hypoxia named; lung damage +0.2 for the survivors -> BODY: the Endurance pool x0.6, coordination down, consciousness lost at COHb 40% -> COMBAT and DUTIES read it: who can still work the pump; no 'smoke = -30% endurance' rule anywhere",
+     "proposed (2026-10-29)"
+    ],
+    [
+     "The brazier in the shut cabin",
+     "a cold North Atlantic night; the captain's brazier (CHEMISTRY charcoal starved of air: CO 0.5 L/min) -> GAS_DYNAMICS: the cabin box, 30 m3, window shut (0.5 ACH): CO climbs toward 2,000 ppm over the night -> PHYSIOLOGY 1a: asleep at 6 L/min, no hypoxic drive (CO gives none) -> CIRCULATION 1a: COHb 10% by midnight (headache in his sleep), 30% by four (he cannot wake), 50% by dawn -> MEDICINE 1a: the charcoal sickness; found in the morning, or found in time by the watch -> ANATOMY 3a: a crisis (temporary if carried out early; heart and brain damage if late; death if not) -> the fate systems",
+     "proposed (2026-10-29)"
     ]
    ]
   },
@@ -1011,6 +1499,498 @@ window.BODY_DATA = {
      "The gym",
      "the one place a body number may show: a lift that comes up or not",
      "MUSCULAR 7",
+     "open"
+    ]
+   ]
+  }
+ },
+ "chemistry": {
+  "_about": "Tables for world/CHEMISTRY.md: the general substance schema, a small initial database, the reaction schema with combustion as the first reactions, and the scope statement. The architecture is general (solids, liquids, gases; crafting, metallurgy, fermentation later) while the database starts small (ChatGPT's compromise, 2026-10-29); proposed. mark: rex | proposed | open.",
+  "schema": {
+   "title": "The substance schema (every substance, real or tagged, is one record of this shape)",
+   "kind": "model",
+   "conf": "high",
+   "source": "ChatGPT's field list (outside AI), kept and typed; provenance tags per Rex (COMBAT 4d): the engine reads properties, never the tag.",
+   "columns": [
+    "Field",
+    "Type and unit",
+    "Used by",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "id",
+     "string (chemistry id, e.g. co2)",
+     "every doc",
+     "proposed"
+    ],
+    [
+     "name, formula",
+     "text",
+     "the item screen, the docs",
+     "proposed"
+    ],
+    [
+     "provenance",
+     "Historical | Anachronistic | Prehistoric | Mythological | Fantasy | Science Fiction | Original Fiction",
+     "the item screen only (Rex)",
+     "rex (the tags), proposed (the field)"
+    ],
+    [
+     "molar mass",
+     "g/mol",
+     "stoichiometry, density",
+     "proposed"
+    ],
+    [
+     "phase at 25 C and 1 atm; melting and boiling points",
+     "solid | liquid | gas; C",
+     "which engine handles it (GAS_DYNAMICS for gases and vapours)",
+     "proposed"
+    ],
+    [
+     "density (gas: relative to air; liquid, solid: kg/m3)",
+     "number",
+     "pooling and rising; cargo weight",
+     "proposed"
+    ],
+    [
+     "vapour pressure at 25 C",
+     "mmHg",
+     "how much a liquid puts into the air (mercury: 0.002 mmHg, enough to poison a shut room over months)",
+     "proposed"
+    ],
+    [
+     "solubility in water",
+     "g/L",
+     "washing out by rain; dissolving in the body's fluids (uptake)",
+     "proposed"
+    ],
+    [
+     "flammability: flash point, limits in air",
+     "C; % by volume",
+     "fires, explosions (the magazine)",
+     "proposed"
+    ],
+    [
+     "reactivity notes",
+     "text and reaction ids",
+     "CHEMISTRY reactions",
+     "proposed"
+    ],
+    [
+     "thermal: heat of combustion",
+     "MJ/kg",
+     "the fire's heat (PHYSIOLOGY, the box's temperature)",
+     "proposed"
+    ],
+    [
+     "persistence in the environment",
+     "half-life in air, water, soil (hours to years)",
+     "GAS_DYNAMICS sinks; ECOLOGY",
+     "proposed"
+    ],
+    [
+     "exposure routes",
+     "inhalation | skin | ingestion | wound",
+     "the body's uptake",
+     "proposed"
+    ],
+    [
+     "uptake fraction by route",
+     "0 to 1",
+     "dose = exposure x uptake",
+     "proposed"
+    ],
+    [
+     "toxicity references",
+     "thresholds table rows (ppm and effect; mg/kg oral)",
+     "MEDICINE, NEUROLOGY",
+     "proposed"
+    ],
+    [
+     "mechanism class",
+     "asphyxiant (simple) | chemical asphyxiant (CO, H2S) | irritant | systemic toxin | neuroactive (NEUROLOGY row) | nutrient | inert",
+     "which body pathway it takes",
+     "proposed"
+    ]
+   ]
+  },
+  "substances": {
+   "title": "The initial database (small; the schema is general)",
+   "kind": "science",
+   "conf": "medium",
+   "source": "Standard chemical data; toxicity thresholds from occupational and clinical references: CO (COHb 10 to 20% headache, 20 to 30% drowsiness and ataxia, 30 to 50% seizures and unconsciousness, over 50% death; 200 ppm slight headache in 2 to 3 h, 800 ppm dizziness and convulsions in 45 min, 1,600 ppm death within 30 min; elimination half-life 4 to 6 h in air; CHM-CO), CO2 (1% drowsy, 3% headache and panting, 5% confusion, 8 to 10% unconsciousness; standard), H2S (10 ppm irritation, 100 ppm IDLH and olfactory fatigue, 500 ppm lethal in 30 to 60 min; CHM-H2S), SO2 (irritant: 5 ppm airway, 100 ppm IDLH), oxygen (hypoxia under 16%, unconsciousness under 10%).",
+   "columns": [
+    "Id",
+    "Substance",
+    "Formula",
+    "Molar mass",
+    "Phase",
+    "Density vs air",
+    "Mechanism class",
+    "Effect thresholds (inhalation)",
+    "Period source in the game",
+    "Provenance",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "o2",
+     "Oxygen",
+     "O2",
+     32,
+     "gas",
+     1.1,
+     "nutrient (the one the body burns)",
+     "under 19.5% work falls; 16% judgement and coordination; 12% unconscious; 6% death in minutes",
+     "the air",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "n2",
+     "Nitrogen",
+     "N2",
+     28,
+     "gas",
+     0.97,
+     "inert",
+     "none (simple asphyxiant only by displacement)",
+     "the air",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "co2",
+     "Carbon dioxide",
+     "CO2",
+     44,
+     "gas",
+     1.5,
+     "simple asphyxiant and respiratory driver",
+     "1% drowsy; 3% headache, panting; 5% confusion; 8 to 10% unconscious; pools low",
+     "breathing, fires, fermentation (the brewer's vat), wells, volcanoes",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "co",
+     "Carbon monoxide",
+     "CO",
+     28,
+     "gas",
+     0.97,
+     "chemical asphyxiant (binds haemoglobin 200 x oxygen: carboxyhaemoglobin)",
+     "200 ppm headache in 2 to 3 h; 800 ppm nausea and convulsions in 45 min; 1,600 ppm death in 30 min; COHb 10 to 20% headache, 20 to 30% drowsy and ataxic, 30 to 50% seizures, over 50% death; half-life 4 to 6 h in air",
+     "braziers, galley fires, the gun deck, any fire starved of air",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "h2o_v",
+     "Water vapour",
+     "H2O",
+     18,
+     "gas",
+     0.6,
+     "inert (displaces oxygen in the alveoli: the 47 mmHg)",
+     "none",
+     "humidity, breath, fires",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "h2s",
+     "Hydrogen sulphide",
+     "H2S",
+     34,
+     "gas",
+     1.2,
+     "chemical asphyxiant (cellular) and irritant; the nose fails at 100 ppm",
+     "0.01 ppm rotten eggs; 10 ppm eye and airway irritation; 100 ppm olfactory fatigue, IDLH; 500 ppm collapse, death in 30 to 60 min; pools low",
+     "the bilge, rot, sulphur springs, powder smoke (trace)",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "so2",
+     "Sulphur dioxide",
+     "SO2",
+     64,
+     "gas",
+     2.2,
+     "irritant (airways, eyes)",
+     "1 ppm smell; 5 ppm airway irritation; 20 ppm eyes stream, cough; 100 ppm IDLH; pools low",
+     "burning sulphur (stinkpots, the match), volcanoes, the brimstone cure",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "smoke",
+     "Smoke particles (soot, tars)",
+     "C and tars",
+     "-",
+     "aerosol",
+     "-",
+     "irritant; heat; carries CO",
+     "eyes stream and sight falls (Eyesight x0.6 at 100 mg/m3); cough; inhalation injury at high density with heat",
+     "every fire; the gun deck",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "hg_v",
+     "Mercury vapour",
+     "Hg",
+     201,
+     "gas from the liquid (vapour pressure 0.002 mmHg at 25 C)",
+     7,
+     "systemic toxin (nerves, kidneys; NEUROLOGY burden)",
+     "chronic: a shut room with spilt mercury reaches 0.1 mg/m3; months to erethism and tremor",
+     "the pox cure, the apothecary, hatters later",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "ch4",
+     "Methane (marsh gas)",
+     "CH4",
+     16,
+     "gas",
+     0.55,
+     "simple asphyxiant; flammable 5 to 15%",
+     "none until oxygen is displaced; an explosion with a lamp",
+     "the bilge, swamps, mines",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "s",
+     "Sulphur (brimstone)",
+     "S8",
+     256,
+     "solid",
+     "-",
+     "fuel: burns to SO2",
+     "-",
+     "the stinkpot, the match, the powder mill, the brimstone cure",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "c",
+     "Charcoal (carbon)",
+     "C",
+     12,
+     "solid",
+     "-",
+     "fuel: burns to CO2, or CO when starved",
+     "-",
+     "the brazier, the galley, the powder mill, the smith",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "kno3",
+     "Saltpetre (potassium nitrate)",
+     "KNO3",
+     101,
+     "solid",
+     "-",
+     "oxidiser (GOODS row 39)",
+     "-",
+     "the powder",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "ethanol",
+     "Alcohol (spirit of wine)",
+     "C2H5OH",
+     46,
+     "liquid (vapour pressure 59 mmHg)",
+     1.6,
+     "neuroactive (NEUROLOGY row); flammable",
+     "the drink; its vapour in a still-house is a fire risk",
+     "rum, brandy, arrack",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "pb",
+     "Lead",
+     "Pb",
+     207,
+     "solid (dissolves into rum and cider from still worms and pewter)",
+     "-",
+     "systemic toxin (the dry gripes; NEUROLOGY burden)",
+     "by ingestion (MEDICINE)",
+     "stills, pewter, shot",
+     "Historical",
+     "proposed"
+    ],
+    [
+     "tagged",
+     "A tagged substance (template)",
+     "as written",
+     "as written",
+     "as written",
+     "as written",
+     "as written",
+     "its own thresholds",
+     "the story keeper's",
+     "Fantasy | Science Fiction | Mythological",
+     "open"
+    ]
+   ]
+  },
+  "reactions": {
+   "title": "The reaction schema and the first reactions (combustion)",
+   "kind": "science",
+   "conf": "medium",
+   "source": "Stoichiometry is exact; rates and conditions are placeholders. Black powder: 75% KNO3, 15% charcoal, 10% sulphur by mass; about 43% of products are gas (CO2, N2, CO, H2S, H2, CH4), 56% solids (potassium salts), about 330 cm3 of gas per gram; the products do not follow one simple equation (CHM-BP). Thermodynamic possibility is not kinetics: a reaction needs its conditions (ChatGPT's point, kept).",
+   "columns": [
+    "Id",
+    "Reaction",
+    "Reactants",
+    "Products",
+    "Conditions",
+    "Rate (placeholder)",
+    "Heat",
+    "Where",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "comb_c_full",
+     "Charcoal burning in plenty of air",
+     "C + O2",
+     "CO2 + heat",
+     "ignition over 400 C; oxygen over 15%",
+     "by fuel surface and draught",
+     "33 MJ/kg",
+     "the galley, the smith",
+     "proposed"
+    ],
+    [
+     "comb_c_starved",
+     "Charcoal burning starved of air",
+     "2 C + O2",
+     "2 CO + heat",
+     "oxygen under 15% or a shut space",
+     "the brazier in the cabin: 10 to 30% of carbon to CO",
+     "10 MJ/kg",
+     "the brazier, a smouldering hold",
+     "proposed"
+    ],
+    [
+     "comb_wood",
+     "Wood and tar burning",
+     "wood + O2",
+     "CO2, H2O, CO (10% if smoky), soot, tars, heat",
+     "ignition; spreads by heat",
+     "by surface",
+     "15 MJ/kg",
+     "a ship on fire",
+     "proposed"
+    ],
+    [
+     "comb_s",
+     "Sulphur burning",
+     "S + O2",
+     "SO2 + heat",
+     "ignition over 250 C",
+     "a stinkpot: 100 g in a minute",
+     "9 MJ/kg",
+     "stinkpots, the match",
+     "proposed"
+    ],
+    [
+     "black_powder",
+     "Black powder deflagration",
+     "KNO3 + C + S (75:15:10)",
+     "gases 43% (CO2, N2, CO, H2S trace, H2, CH4) 330 cm3/g; solids 56% (K2CO3, K2SO4, K2S); water 1%",
+     "a spark, a match; confinement makes the bang",
+     "instant",
+     "3 MJ/kg",
+     "the guns, the magazine, a grenade",
+     "proposed"
+    ],
+    [
+     "ferment",
+     "Fermentation (the brewer's and the still-house's first step)",
+     "sugars",
+     "ethanol + CO2",
+     "yeast, 20 to 30 C, days",
+     "a vat: 1 L CO2 per litre of wort over days (a shut brew-house pools CO2)",
+     "small",
+     "GOODS brewing and distilling; a CO2 source for GAS_DYNAMICS",
+     "proposed"
+    ],
+    [
+     "rot",
+     "Anaerobic rot (the bilge)",
+     "organic matter",
+     "CH4, H2S, CO2",
+     "wet, no air, warm",
+     "slow; by the cleanliness meter",
+     "-",
+     "the bilge, the stores",
+     "proposed"
+    ],
+    [
+     "(general)",
+     "Any reaction the engine will later hold: metallurgy (smelting, the forge), cooking (Maillard, caramel), corrosion (rust, verdigris), tanning, dyeing (indigo vats), the apothecary's preparations (calomel, lunar caustic, spirit of salt)",
+     "by record",
+     "by record",
+     "temperature, pressure, catalyst, contact time",
+     "by record",
+     "by record",
+     "GOODS recipes as the first list of what the engine must eventually express",
+     "open (scope: whether recipes become reactions)"
+    ]
+   ]
+  },
+  "scope": {
+   "title": "Scope: general architecture, small start (the compromise)",
+   "kind": "model",
+   "conf": "high",
+   "source": "ChatGPT's position (outside AI): the engine's capability is not the game's need at any moment; the pirate period must not size the architecture. The keeper's caution: replacing GOODS.md's 183 recipes with reactions is a redesign of the economy's crafting and a decision of its own. Both recorded.",
+   "columns": [
+    "Statement",
+    "Status",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "The substance schema and reaction schema are general: solids, liquids and gases; any route; any provenance",
+     "established here",
+     "proposed"
+    ],
+    [
+     "The initial database is the period's gases and fuels (16 substances, 7 reactions)",
+     "established here",
+     "proposed"
+    ],
+    [
+     "Crafting skill affects the minigame's control (temperature, timing, handling), never the chemistry (ChatGPT's rule, agreed)",
+     "recorded",
+     "proposed (outside AI)"
+    ],
+    [
+     "A player who knows a procedure may attempt it without a recipe; poor character skill makes it hard to execute",
+     "recorded; touches GOODS 3f (knowledge apart from skill, Rex)",
+     "proposed (outside AI)"
+    ],
+    [
+     "Whether GOODS.md's recipes become reactions of this engine",
+     "not decided; the economy's lane and Rex's",
+     "open"
+    ],
+    [
+     "Who keeps CHEMISTRY.md after this (the body keeper, the economy, a new keeper)",
+     "not decided",
      "open"
     ]
    ]
@@ -1487,6 +2467,70 @@ window.BODY_DATA = {
      "minutes; days",
      "shock, kidney failure, breathing depression",
      "rex (the loop, 2026-10-29); proposed (time constants)"
+    ]
+   ]
+  },
+  "blood_gas": {
+   "title": "Blood gases: oxygen binding, carbon dioxide, carbon monoxide, acid-base",
+   "kind": "science",
+   "conf": "high",
+   "source": "Severinghaus 1979: SaO2 = 1 / (1 + 23400 / (PaO2^3 + 150 PaO2)) (P50 about 26.8 mmHg at pH 7.4, 37 C; the curve shifts right with acidosis, fever and CO2, left with alkalosis, cold and carbon monoxide); carboxyhaemoglobin by the Coburn-Forster-Kane model, simplified here to a first-order approach to equilibrium with a 4 to 6 h half-life in air (CIR-SEV, CHM-CO); CO2 carried as bicarbonate, pH by Henderson-Hasselbalch (standard).",
+   "columns": [
+    "Quantity",
+    "Formula or rule",
+    "Normal",
+    "Fails when",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Arterial PO2",
+     "alveolar PO2 (ANATOMY 1a) minus the gradient",
+     "95 mmHg at sea level",
+     "low inspired oxygen; lung transfer failing",
+     "proposed"
+    ],
+    [
+     "Saturation SaO2",
+     "Severinghaus: 1 / (1 + 23400 / (PaO2^3 + 150 PaO2)); shifted by pH, temperature and CO2",
+     "0.97",
+     "under 0.90 breathless and dull; 0.80 confused, blue; 0.70 unconscious; under 0.60 death in minutes",
+     "proposed"
+    ],
+    [
+     "Carboxyhaemoglobin COHb",
+     "dCOHb/dt = (COHb_eq - COHb) x ln2 / t_half, COHb_eq about 0.16 x ppm / 100 (an approximation valid to a few thousand ppm), t_half 5 h in air (uptake faster at work: x VE/6)",
+     "under 3% (smokers 3 to 10%)",
+     "10 to 20% headache and nausea; 20 to 30% drowsy, ataxic, impaired; 30 to 50% seizures, unconscious, the heart starves; over 50% death. Oxygen content falls by the COHb share and the curve shifts left (the rest is held tighter): worse than the same loss of haemoglobin",
+     "proposed"
+    ],
+    [
+     "Oxygen content with CO",
+     "CaO2 = 1.34 x Hb x (1 - COHb) x SaO2 + dissolved",
+     "20 mL/dL",
+     "the pulse and the colour look normal (cherry pink): the surgeon cannot tell",
+     "proposed"
+    ],
+    [
+     "Arterial PCO2",
+     "set by ventilation against production: PaCO2 = 0.863 x VCO2 / alveolar ventilation",
+     "40 mmHg",
+     "over 50 drowsy, over 70 narcosis; under 30 (panic, hyperventilation) tingling and faintness",
+     "proposed"
+    ],
+    [
+     "Acid-base",
+     "pH from bicarbonate and PaCO2 (Henderson-Hasselbalch); respiratory acidosis with CO2 retention, alkalosis with over-breathing; metabolic acidosis from shock and lactate (CIRCULATION 1)",
+     "7.40",
+     "under 7.2 the heart weakens; over 7.6 tetany",
+     "proposed"
+    ],
+    [
+     "Hydrogen sulphide",
+     "not a blood-gas problem: it poisons the cells' use of oxygen (cytochrome oxidase) like cyanide; blood looks oxygenated while the tissues starve",
+     "0",
+     "over 500 ppm collapse in a breath",
+     "proposed"
     ]
    ]
   }
@@ -2570,6 +3614,292 @@ window.BODY_DATA = {
    ]
   }
  },
+ "gasdynamics": {
+  "_about": "Tables for world/GAS_DYNAMICS.md: the interface (units, the box model, sources and sinks, exposure) and the grid model deferred. Interface established now, implementation later (ChatGPT's compromise, 2026-10-29); proposed. mark: rex | proposed | open.",
+  "units": {
+   "title": "Units and the concentration interface (every doc that touches a gas uses these)",
+   "kind": "model",
+   "conf": "high",
+   "source": "Consistent units so that CHEMISTRY's products, GAS_DYNAMICS's concentrations and the body's exposure agree: a species is identified by its CHEMISTRY id; a region holds a concentration per species; the body reads partial pressures and ppm at the mouth.",
+   "columns": [
+    "Quantity",
+    "Unit",
+    "Conversion",
+    "Who writes",
+    "Who reads",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Concentration of a gas",
+     "volume fraction (ppm or %)",
+     "partial pressure (mmHg) = fraction x total pressure",
+     "GAS_DYNAMICS",
+     "the respiratory profile (ANATOMY), CIRCULATION blood gas, MEDICINE exposure",
+     "proposed"
+    ],
+    [
+     "Concentration of an aerosol or particle",
+     "mg per m3",
+     "-",
+     "GAS_DYNAMICS",
+     "MEDICINE (smoke inhalation), ANATOMY senses (eyes)",
+     "proposed"
+    ],
+    [
+     "Volume of a region",
+     "m3",
+     "-",
+     "ATMOSPHERE regions table",
+     "the box model",
+     "proposed"
+    ],
+    [
+     "Ventilation",
+     "air changes per hour (ACH), or m3 per minute",
+     "ACH = flow / volume x 60",
+     "ATMOSPHERE modifiers; a door opened, a hatch, a fan (none in the period), the wind",
+     "the box model",
+     "proposed"
+    ],
+    [
+     "Source strength",
+     "litres per minute of a species, or mg per minute",
+     "a fire: from CHEMISTRY's reaction rate; a person: 0.25 L/min O2 in, 0.2 L/min CO2 out at rest, x MET at work (PHYSIOLOGY)",
+     "CHEMISTRY, PHYSIOLOGY, ECOLOGY",
+     "the box model",
+     "proposed"
+    ],
+    [
+     "Exposure",
+     "concentration x minutes (ppm-min), and the peak",
+     "dose to the body = ventilation (L/min, PHYSIOLOGY) x concentration x minutes x uptake fraction",
+     "GAS_DYNAMICS integrates per character present",
+     "ANATOMY lungs, NEUROLOGY (absorbed dose), MEDICINE",
+     "proposed"
+    ],
+    [
+     "Mass conservation",
+     "moles of each species",
+     "a region's total moles = pressure x volume / (R T); sources add, sinks and ventilation remove, reactions convert",
+     "the model",
+     "a check the build script could run on scenario data (open)",
+     "proposed"
+    ]
+   ]
+  },
+  "box_model": {
+   "title": "The box model (implemented first): one well-mixed volume per active region",
+   "kind": "science",
+   "conf": "high",
+   "source": "Standard confined-space mass balance: V dC/dt = S - Q (C - C_out) - R, with Q the ventilation flow (ACH x V / 60), S the sources, R removal and reaction; steady state C = C_out + S / Q (NIOSH confined-space CO2 modelling; GAS-BOX). Worked example: two occupants in a 680 m3 space at 0.06 ACH settle near 1,500 ppm CO2.",
+   "columns": [
+    "Rule",
+    "Formula",
+    "Example",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Mass balance per species",
+     "V dC/dt = S - Q (C - C_out) - R, Q = ACH x V / 60 per minute",
+     "the hold at 250 m3, hatch shut (0.2 ACH), 30 men at rest (CO2 6 L/min): CO2 climbs toward 6 / 0.83 = 7.2% (steady state), passing 3% in about 90 minutes: headache and panting; oxygen falls at 7.5 L/min toward 13%",
+     "proposed"
+    ],
+    [
+     "Oxygen and carbon dioxide move together",
+     "O2 consumed = CO2 produced / 0.8 (the respiratory quotient) for breathing; combustion by CHEMISTRY's stoichiometry",
+     "a fire in the hold: oxygen falls faster than CO2 rises",
+     "proposed"
+    ],
+    [
+     "Heavier gases pool",
+     "CO2 (1.5 x air) and H2S (1.2 x air) sink: in a still box the lower half's concentration is x1.5 the mean, the upper half x0.5 (placeholder); mixing restores it",
+     "the man who crouches to the bilge; the well",
+     "proposed"
+    ],
+    [
+     "Lighter gases rise",
+     "CO (0.97 x air) mixes; hot smoke rises to the deckhead first (the crawl-low rule of a fire)",
+     "a crawling man breathes better air for a while",
+     "proposed"
+    ],
+    [
+     "Ventilation events",
+     "ACH jumps when a hatch, port, door or window opens, or a wind-sail is rigged (period ventilators: wind-sails and Hales' ventilators from the 1740s, after the period)",
+     "opening the hatch takes the hold from 0.2 to 2 ACH: the 7% falls to 1% in about 90 minutes",
+     "proposed"
+    ],
+    [
+     "Time step",
+     "a minute for an occupied box; seconds for a fire or a release (the stability rule: step under volume / flow)",
+     "the gun deck: per combat turn",
+     "proposed"
+    ],
+    [
+     "Return to baseline",
+     "a region goes inactive when every species is within 10% of the baseline and no source remains",
+     "the hold aired out",
+     "proposed"
+    ]
+   ]
+  },
+  "sources_sinks": {
+   "title": "Sources and sinks a region can have",
+   "kind": "model",
+   "conf": "medium",
+   "source": "Each source is one of the other docs' outputs; the rates are placeholders.",
+   "columns": [
+    "Source or sink",
+    "Species",
+    "Rate (placeholder)",
+    "From",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "A person at rest",
+     "O2 -0.25 L/min; CO2 +0.2 L/min; water vapour",
+     "x MET at work (a man at the pumps x7)",
+     "PHYSIOLOGY 1",
+     "proposed"
+    ],
+    [
+     "Livestock (goats, pigs, hens)",
+     "as a person x body-mass ratio",
+     "a goat 0.1 L/min O2",
+     "DUTIES livestock",
+     "proposed"
+    ],
+    [
+     "A lamp or candle",
+     "O2 -0.03 L/min each; CO2 +0.03; CO a little if it gutters",
+     "-",
+     "the ship's lights",
+     "proposed"
+    ],
+    [
+     "A galley fire, a brazier",
+     "O2 -; CO2 +; CO + (charcoal: up to 10% of the carbon as CO when starved of air)",
+     "a brazier: CO 0.5 L/min in a shut cabin",
+     "CHEMISTRY combustion",
+     "proposed"
+    ],
+    [
+     "A fire (structure, cargo)",
+     "by the fuel and the air available (CHEMISTRY): CO2, CO, water, soot, heat",
+     "a cargo fire: 100 L/min CO2, 20 CO, smoke 1 g/min",
+     "CHEMISTRY",
+     "proposed"
+    ],
+    [
+     "Black powder fired",
+     "330 cm3 of gas per gram of powder: CO2, N2, CO, H2S trace, H2, CH4; particles",
+     "a 6-pounder's 1 kg charge: 330 L of gas per shot",
+     "CHEMISTRY black powder; COMBAT guns",
+     "proposed"
+    ],
+    [
+     "A stinkpot",
+     "SO2 from burning sulphur, smoke",
+     "100 g sulphur: about 70 L SO2 over a minute",
+     "CHEMISTRY; COMBAT",
+     "proposed"
+    ],
+    [
+     "Rot in the bilge and stores",
+     "H2S, CH4, CO2",
+     "a foul bilge: H2S 0.01 L/min (enough for 500 ppm in a shut hold over a day)",
+     "the cleanliness meter (PIRATE 5a)",
+     "proposed"
+    ],
+    [
+     "A reaction in the laboratory",
+     "whatever CHEMISTRY computes",
+     "by the reaction",
+     "CHEMISTRY",
+     "proposed"
+    ],
+    [
+     "Plants in a closed space",
+     "O2 + by day, - by night; small",
+     "negligible except a greenhouse (none)",
+     "ECOLOGY",
+     "proposed"
+    ],
+    [
+     "Natural vents",
+     "CO2, H2S, SO2",
+     "by the place",
+     "ENVIRONMENT terrain",
+     "proposed"
+    ],
+    [
+     "Sinks: surfaces, water, rain",
+     "SO2 and H2S dissolve and react on wet surfaces; particles settle (half in an hour in still air); rain washes smoke",
+     "placeholders",
+     "GAS_DYNAMICS",
+     "proposed"
+    ]
+   ]
+  },
+  "grid": {
+   "title": "The grid model (deferred): transport on the combat map",
+   "kind": "science",
+   "conf": "medium",
+   "source": "Advection-diffusion-reaction: dC/dt = -div(u C) + div(D grad C) + S - R, with u the wind field, D an effective turbulent diffusion; implemented later as a coarse cellular model on the combat grid (COMBAT 6's tiles) for releases that cross cells in seconds; the stability constraint (a cell's air must not cross more than one cell per step) sets the step. Not built; the interface is the units table.",
+   "columns": [
+    "Element",
+    "Statement",
+    "Status",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Cells",
+     "the combat map's tiles, each a small box with the units above; elevation and enclosure from the map (COMBAT 6: tile properties)",
+     "deferred",
+     "proposed"
+    ],
+    [
+     "Advection",
+     "the wind (ENVIRONMENT) moves a cell's air downwind by u x step; indoors, the ventilation flow",
+     "deferred",
+     "proposed"
+    ],
+    [
+     "Diffusion and turbulent mixing",
+     "each step a cell shares a fraction with its neighbours (D x step / cell size squared)",
+     "deferred",
+     "proposed"
+    ],
+    [
+     "Buoyancy",
+     "hot and light gases move up a level (a deck) before spreading; heavy ones pool in hollows and the low tiles",
+     "deferred",
+     "proposed"
+    ],
+    [
+     "Deposition",
+     "particles settle; SO2 and H2S lost to wet surfaces",
+     "deferred",
+     "proposed"
+    ],
+    [
+     "Step",
+     "seconds during a release; a cell per step at most; the box model takes over once the cloud is uniform",
+     "deferred",
+     "proposed"
+    ],
+    [
+     "Exposure",
+     "each character sums the concentration of the cell they stand in each step (ppm-min); crouching reads the lower half",
+     "deferred",
+     "proposed"
+    ]
+   ]
+  }
+ },
  "medicine": {
   "_about": "Tables for body/MEDICINE.md. Rendered into the doc and body/data.js by build-body-data.py. kind: science | history | model | fiction. mark: rex | proposed | open. Mortality figures are untreated, modern estimates where a period figure does not exist; conf says how firm.",
   "diseases": {
@@ -3531,6 +4861,104 @@ window.BODY_DATA = {
      "a newcomer who has survived his first bouts of the local fevers is 'seasoned': an immunity record, held here, not a row in the disease list. Period estimates put newcomer deaths in Jamaica's first years as high as a third (Burnard; confidence low on the fraction)",
      "-",
      "none; the record is per disease survived",
+     "proposed"
+    ]
+   ]
+  },
+  "exposure": {
+   "title": "Conditions from the air (named here, caused by ATMOSPHERE, GAS_DYNAMICS and the body)",
+   "kind": "science",
+   "conf": "medium",
+   "source": "Standard emergency medicine for hypoxia, hypercapnia, carbon monoxide poisoning, smoke inhalation, irritant injury, hydrogen sulphide and altitude illness; the period could do nothing but carry the man into the air and bleed him. Each condition is a pattern of the body's states, never a timer (the brief's rule, kept).",
+   "columns": [
+    "Condition [period name]",
+    "The pattern that defines it",
+    "Course",
+    "Lasting harm",
+    "Period treatment",
+    "What helps, really",
+    "Visible face",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Hypoxia and asphyxia [suffocation, the foul air]",
+     "SaO2 under 0.90 from low inspired oxygen or lung failure",
+     "minutes: confusion at 0.80, unconscious at 0.70, death under 0.60 within minutes",
+     "brain damage if unconscious over 4 to 6 minutes (ANATOMY brain damage)",
+     "carry him into the air; bleeding (useless)",
+     "air; the hatch opened",
+     "blue lips, gasping, confusion, collapse",
+     "proposed"
+    ],
+    [
+     "Hypercapnia [the close air]",
+     "PaCO2 over 50 mmHg (air CO2 over 3%)",
+     "headache and panting at 3%, confusion at 5%, narcosis 8 to 10%",
+     "none if aired in time",
+     "air",
+     "ventilation",
+     "panting, flushed, headache, sleepy",
+     "proposed"
+    ],
+    [
+     "Carbon monoxide poisoning [the charcoal sickness; the brazier death]",
+     "COHb over 10%",
+     "by the tier (CIRCULATION 1a); clears with a 5 h half-life in air; the heart and brain starve meanwhile",
+     "heart damage (infarction-like in the old); delayed brain injury in some survivors (days later: memory, mood)",
+     "carry him out; bleeding; vinegar",
+     "air (pure oxygen halves the half-life, none in the period)",
+     "headache, nausea, then sleep; cherry-pink lips; the whole cabin found dead in the morning",
+     "proposed"
+    ],
+    [
+     "Smoke inhalation injury",
+     "smoke over 100 mg/m3 with heat and CO; soot in the airways",
+     "hours to days: airway swelling can close the throat at 6 to 24 h; pneumonia follows",
+     "lung damage (ANATOMY lungs damage +0.1 to 0.5)",
+     "nothing",
+     "air, rest; later weeks",
+     "soot in the nose and mouth, hoarse, wheezing, the cough",
+     "proposed"
+    ],
+    [
+     "Irritant injury [the brimstone]",
+     "SO2 over 20 ppm or H2S over 10 ppm, or any tagged irritant",
+     "eyes and airways: at once; chemical pneumonitis at high dose in 6 to 24 h",
+     "lung damage at high dose",
+     "water to the eyes; air",
+     "air",
+     "eyes streaming shut (Eyesight x0.3 for the exposure), coughing, cannot act (Nerve check)",
+     "proposed"
+    ],
+    [
+     "Hydrogen sulphide poisoning [the damp; the sewer gas]",
+     "H2S over 100 ppm (the smell gone), over 500 the knockdown",
+     "collapse in a breath at 500+; death in 30 to 60 min; survivors recover or do not wake",
+     "brain damage after a long knockdown",
+     "nothing; the rescuer dies too",
+     "air; never go down after him without airing the hold",
+     "the first man down the hold; the rescuer",
+     "proposed"
+    ],
+    [
+     "Altitude illness [the mountain sickness]",
+     "SaO2 under 0.90 from low pressure over days",
+     "headache, nausea, poor sleep from 2,500 m; rare in this game",
+     "none",
+     "-",
+     "descent",
+     "headache on the peak",
+     "proposed"
+    ],
+    [
+     "Respiratory failure (the end state)",
+     "SaO2 under 0.80 or PaCO2 over 70 from any cause with the drive failing (NEUROLOGY: opioids, deep drink)",
+     "minutes to hours",
+     "death",
+     "nothing",
+     "the cause removed",
+     "slow shallow breathing; blue; the man who cannot be woken",
      "proposed"
     ]
    ]
@@ -9319,6 +10747,70 @@ window.BODY_DATA = {
      "proposed"
     ]
    ]
+  },
+  "ventilation": {
+   "title": "Ventilation demand: how much air a body moves, and the drive",
+   "kind": "science",
+   "conf": "high",
+   "source": "Minute ventilation about 6 L/min at rest rising near-linearly with oxygen demand to 100+ at maximal work; oxygen consumption 3.5 mL/kg/min per MET; the carbon dioxide drive doubles ventilation for each 5 mmHg rise in PaCO2 while the hypoxic drive wakes under about 60 mmHg PaO2 (standard respiratory physiology; PHY-VENT). The breathing drive itself is NEUROLOGY's (opioids and deep drink depress it).",
+   "columns": [
+    "Quantity",
+    "Formula or value",
+    "Unit",
+    "Reads",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Oxygen demand",
+     "VO2 = 3.5 x MET x mass_kg",
+     "mL/min",
+     "PHYSIOLOGY 1 MET table",
+     "proposed"
+    ],
+    [
+     "Minute ventilation",
+     "VE = 6 + 0.025 x (VO2 - 250), capped by the profile's maximal capacity (ANATOMY 1a)",
+     "L/min",
+     "oxygen demand",
+     "proposed"
+    ],
+    [
+     "Inhaled dose of a gas",
+     "VE x concentration x minutes x uptake fraction (CHEMISTRY)",
+     "L or mg",
+     "GAS_DYNAMICS exposure",
+     "proposed"
+    ],
+    [
+     "The carbon dioxide drive",
+     "VE x 2 per 5 mmHg of PaCO2 over 40 (the panting in a shut hold); over 70 mmHg the drive fails and sleepiness wins",
+     "-",
+     "CIRCULATION blood gas",
+     "proposed"
+    ],
+    [
+     "The hypoxic drive",
+     "VE up when PaO2 falls under 60 mmHg (altitude, a low-oxygen hold); carbon monoxide gives no drive at all: the body does not notice (the silent killer)",
+     "-",
+     "CIRCULATION",
+     "proposed"
+    ],
+    [
+     "Work of breathing",
+     "at VE over 60 L/min, or airway resistance over 2, breathing itself costs: the Endurance pool x0.9; at resistance over 4 (smoke, SO2) x0.6 and the character stops working",
+     "-",
+     "ANATOMY 1a",
+     "proposed"
+    ],
+    [
+     "Breath-holding and drowning",
+     "a trained diver 1 to 2 minutes; a panicked man 30 seconds; water in the lungs ends transfer: CIRCULATION saturation falls to unconsciousness in 1 to 3 minutes, death in 4 to 6 (PHYSIOLOGY 5 immersion covers the cold side)",
+     "min",
+     "Swimming skill, Nerve",
+     "proposed"
+    ]
+   ]
   }
  },
  "population": {
@@ -10456,6 +11948,102 @@ window.BODY_DATA = {
      "Red cell recovery after blood loss: a donation's worth (about 550 mL) back in under 40 days; marrow response from days 2 to 4, peak day 7 (modelling and veterinary references)",
      "recovery of red cells in weeks",
      "https://en.wikivet.net/Special:MobileDiff/207139...207356",
+     "science",
+     "2026-10-29"
+    ],
+    [
+     "ATM-STD",
+     "Standard atmosphere composition and the barometric formula (standard references); CO2 about 280 ppm in 1700 (ice-core record)",
+     "the baseline and the altitude table",
+     "https://en.wikipedia.org/wiki/Atmosphere_of_Earth",
+     "science",
+     "standard reference"
+    ],
+    [
+     "ATM-ALV",
+     "The alveolar gas equation (Cruickshank and Hirschauer 2004, Continuing Education in Anaesthesia); respiratory physiology (West)",
+     "PAO2 = FiO2 (P - 47) - PaCO2 / 0.8; inspired PO2",
+     "https://www.mathworks.com/matlabcentral/fileexchange/121717-age",
+     "science",
+     "2026-10-29 (tool page); the equation is standard"
+    ],
+    [
+     "CIR-SEV",
+     "Severinghaus 1979, J Appl Physiol: simple accurate equations for blood O2 dissociation (via Deranged Physiology)",
+     "SaO2 from PaO2; P50 26.8 mmHg",
+     "https://derangedphysiology.com/main/cicm-primary-exam/respiratory-system/Chapter-112/oxyhaemoglobin-dissociation-curve",
+     "science",
+     "2026-10-29"
+    ],
+    [
+     "PHY-VENT",
+     "Minute ventilation, oxygen consumption per MET (3.5 mL/kg/min), the CO2 and hypoxic drives (standard respiratory physiology; West)",
+     "the ventilation table",
+     "https://en.wikipedia.org/wiki/Respiratory_minute_volume",
+     "science",
+     "standard reference"
+    ],
+    [
+     "CHM-CO",
+     "Carbon monoxide: EMS CO-monitoring protocol tiers (COHb 10 to 20, 20 to 30, 30 to 50, over 50%); the sensor-review ppm and onset table (PMC3247717); hazard database half-life 5 to 6 h",
+     "COHb tiers, ppm to symptoms, half-life",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC3247717/table/t2-sensors-10-05469-v4",
+     "science",
+     "2026-10-29"
+    ],
+    [
+     "CHM-H2S",
+     "Hydrogen sulphide thresholds (NAP acute exposure guideline chapter; NSW EPA evaluation; the 100 ppm IDLH)",
+     "irritation 10 ppm, olfactory fatigue 100 to 200 ppm, lethal 500 to 700 ppm in 30 to 60 min",
+     "https://www.nap.edu/read/12741/chapter/7",
+     "science",
+     "2026-10-29"
+    ],
+    [
+     "CHM-BP",
+     "Black powder products: the 1868 analysis as reproduced (Ecton Hill Field Studies; New World Encyclopedia); US Naval Institute Proceedings 1879, 'Chemical theory of the combustion of gunpowder' (330 cm3 of gas per gram)",
+     "43% gases (CO2, N2, CO, H2S, H2, CH4), 56% solids",
+     "https://ectonhillfsa.org.uk/ALevelChemistry/ChemistryWorkshops/CW4_SS1_Chemistry_of_Black_Powder.pdf",
+     "science",
+     "2026-10-29"
+    ],
+    [
+     "ATM-BP",
+     "see CHM-BP; naval artillery in the age of sail (gun decks' 'clouds of hazardous smoke')",
+     "the gun deck scenario",
+     "https://en.wikipedia.org/wiki/Naval_artillery_in_the_Age_of_Sail",
+     "history",
+     "2026-10-29"
+    ],
+    [
+     "ATM-STINK",
+     "Stinkpot (weapon): Sturmy, The Mariner's Magazine 1669 (dictionary record); Kennedy 1856; pirate-weapon overviews (World History Encyclopedia, History Hit)",
+     "sulphur and powder in an earthenware pot, thrown in boarding",
+     "https://en.wikipedia.org/wiki/Stinkpot_(weapon)",
+     "history",
+     "2026-10-29"
+    ],
+    [
+     "ATM-CO",
+     "Charcoal indoors and carbon monoxide: CPSC 1986 (83 deaths in seven years); California 1979 to 1988 series (PubMed 9857300)",
+     "the brazier scenario",
+     "https://www.cpsc.gov/Newsroom/News-Releases/1986/Burning-Charcoal-Causes-83-Deaths-From-Carbon-Monoxide",
+     "science",
+     "2026-10-29"
+    ],
+    [
+     "ATM-VENT",
+     "US Naval Institute Proceedings 1925, 'Ship ventilation, 1741'",
+     "below-decks air as a navy complaint; wind-sails; Hales's ventilators (1740s)",
+     "https://www.usni.org/magazines/proceedings/1925/march/ship-ventilation-1741",
+     "history",
+     "2026-10-29"
+    ],
+    [
+     "GAS-BOX",
+     "NIOSH, Mathematical modeling for carbon dioxide level within confined spaces (CDC Stacks); building mass-balance references (AIVC)",
+     "V dC/dt = S - Q (C - C_out); steady state C = C_out + S/Q",
+     "https://stacks.cdc.gov/view/cdc/215480",
      "science",
      "2026-10-29"
     ],

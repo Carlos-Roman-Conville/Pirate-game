@@ -567,6 +567,102 @@
         "2026-10-29"
       ],
       [
+        "ATM-STD",
+        "Standard atmosphere composition and the barometric formula (standard references); CO2 about 280 ppm in 1700 (ice-core record)",
+        "the baseline and the altitude table",
+        "https://en.wikipedia.org/wiki/Atmosphere_of_Earth",
+        "science",
+        "standard reference"
+      ],
+      [
+        "ATM-ALV",
+        "The alveolar gas equation (Cruickshank and Hirschauer 2004, Continuing Education in Anaesthesia); respiratory physiology (West)",
+        "PAO2 = FiO2 (P - 47) - PaCO2 / 0.8; inspired PO2",
+        "https://www.mathworks.com/matlabcentral/fileexchange/121717-age",
+        "science",
+        "2026-10-29 (tool page); the equation is standard"
+      ],
+      [
+        "CIR-SEV",
+        "Severinghaus 1979, J Appl Physiol: simple accurate equations for blood O2 dissociation (via Deranged Physiology)",
+        "SaO2 from PaO2; P50 26.8 mmHg",
+        "https://derangedphysiology.com/main/cicm-primary-exam/respiratory-system/Chapter-112/oxyhaemoglobin-dissociation-curve",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "PHY-VENT",
+        "Minute ventilation, oxygen consumption per MET (3.5 mL/kg/min), the CO2 and hypoxic drives (standard respiratory physiology; West)",
+        "the ventilation table",
+        "https://en.wikipedia.org/wiki/Respiratory_minute_volume",
+        "science",
+        "standard reference"
+      ],
+      [
+        "CHM-CO",
+        "Carbon monoxide: EMS CO-monitoring protocol tiers (COHb 10 to 20, 20 to 30, 30 to 50, over 50%); the sensor-review ppm and onset table (PMC3247717); hazard database half-life 5 to 6 h",
+        "COHb tiers, ppm to symptoms, half-life",
+        "https://pmc.ncbi.nlm.nih.gov/articles/PMC3247717/table/t2-sensors-10-05469-v4",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "CHM-H2S",
+        "Hydrogen sulphide thresholds (NAP acute exposure guideline chapter; NSW EPA evaluation; the 100 ppm IDLH)",
+        "irritation 10 ppm, olfactory fatigue 100 to 200 ppm, lethal 500 to 700 ppm in 30 to 60 min",
+        "https://www.nap.edu/read/12741/chapter/7",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "CHM-BP",
+        "Black powder products: the 1868 analysis as reproduced (Ecton Hill Field Studies; New World Encyclopedia); US Naval Institute Proceedings 1879, 'Chemical theory of the combustion of gunpowder' (330 cm3 of gas per gram)",
+        "43% gases (CO2, N2, CO, H2S, H2, CH4), 56% solids",
+        "https://ectonhillfsa.org.uk/ALevelChemistry/ChemistryWorkshops/CW4_SS1_Chemistry_of_Black_Powder.pdf",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "ATM-BP",
+        "see CHM-BP; naval artillery in the age of sail (gun decks' 'clouds of hazardous smoke')",
+        "the gun deck scenario",
+        "https://en.wikipedia.org/wiki/Naval_artillery_in_the_Age_of_Sail",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "ATM-STINK",
+        "Stinkpot (weapon): Sturmy, The Mariner's Magazine 1669 (dictionary record); Kennedy 1856; pirate-weapon overviews (World History Encyclopedia, History Hit)",
+        "sulphur and powder in an earthenware pot, thrown in boarding",
+        "https://en.wikipedia.org/wiki/Stinkpot_(weapon)",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "ATM-CO",
+        "Charcoal indoors and carbon monoxide: CPSC 1986 (83 deaths in seven years); California 1979 to 1988 series (PubMed 9857300)",
+        "the brazier scenario",
+        "https://www.cpsc.gov/Newsroom/News-Releases/1986/Burning-Charcoal-Causes-83-Deaths-From-Carbon-Monoxide",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "ATM-VENT",
+        "US Naval Institute Proceedings 1925, 'Ship ventilation, 1741'",
+        "below-decks air as a navy complaint; wind-sails; Hales's ventilators (1740s)",
+        "https://www.usni.org/magazines/proceedings/1925/march/ship-ventilation-1741",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "GAS-BOX",
+        "NIOSH, Mathematical modeling for carbon dioxide level within confined spaces (CDC Stacks); building mass-balance references (AIVC)",
+        "V dC/dt = S - Q (C - C_out); steady state C = C_out + S/Q",
+        "https://stacks.cdc.gov/view/cdc/215480",
+        "science",
+        "2026-10-29"
+      ],
+      [
         "ENV-FAO",
         "FAO regional climate note for the Caribbean (P4495E02)",
         "trade winds 24 to 32 km/h from the east; Montserrat 24.7 to 27.2 C",

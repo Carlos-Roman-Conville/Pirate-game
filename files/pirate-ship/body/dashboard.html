@@ -105,14 +105,16 @@ footer { margin-top: 40px; font-size: .8rem; color: var(--ink-3); border-top: 1p
   const D = window.BODY_DATA || {};
   const TABS = [
     { id: 'body', label: 'Body', file: 'body', title: 'BODY.md: the hub', intro: 'One shared body record; the subsystems produce states, this hub turns them into the capabilities STATS.md and COMBAT.md read, computed once. Rex’s decisions are preserved in BODY.md §0.', tables: ['record', 'capabilities', 'tick', 'states_of_being', 'visible_faces'], charts: ['deps'] },
-    { id: 'physiology', label: 'Physiology', file: 'physiology', title: 'Physiology', intro: 'Metabolism, cardio fitness, sleep and the watches, heat, cold, hydration, exertion, recovery, ageing. Produces alertness, core temperature, water deficit, fatigue and the Endurance pool fill.', tables: ['met', 'pal', 'banister', 'sleep_debt', 'circadian', 'wbgt_limits', 'core_temp', 'cold_water', 'hydration', 'acclimatisation', 'ageing', 'recovery'], charts: ['sleep', 'coldwater', 'hydration'] },
-    { id: 'medicine', label: 'Medicine', file: 'medicine', title: 'Medicine', intro: 'The disease list (cause, course, treatment, face), wounds, bleeding classes, pain and shock, what a surgeon of the period could do, hygiene as exposure, healing and immunity.', tables: ['diseases', 'wounds', 'pain', 'treatments', 'hygiene', 'healing', 'immunity'], charts: ['diseases'] },
-    { id: 'anatomy', label: 'Anatomy', file: 'anatomy', title: 'Anatomy (proposed)', intro: 'Organs with inputs, outputs, dependencies and failure cascades; the tissues diseases and deficiencies act on; damage kept apart from function; timescales; the species profile that makes the engine reusable.', tables: ['organs', 'tissues', 'damage_function', 'timescales', 'species'], charts: [] },
-    { id: 'circulation', label: 'Circulation', file: 'circulation', title: 'Circulation (proposed)', intro: 'The blood as the connector: composition and transport, oxygen delivery, pressure and perfusion, the bleeding classes (moved here), three ways delivery fails, clotting, chemistry, conditional cardiac events and the regulation loops.', tables: ['quantities', 'bleeding', 'delivery_failures', 'events', 'homeostasis'], charts: ['do2'] },
+    { id: 'physiology', label: 'Physiology', file: 'physiology', title: 'Physiology', intro: 'Metabolism, cardio fitness, sleep and the watches, heat, cold, hydration, exertion, recovery, ageing. Produces alertness, core temperature, water deficit, fatigue and the Endurance pool fill.', tables: ['met', 'pal', 'ventilation', 'banister', 'sleep_debt', 'circadian', 'wbgt_limits', 'core_temp', 'cold_water', 'hydration', 'acclimatisation', 'ageing', 'recovery'], charts: ['sleep', 'coldwater', 'hydration'] },
+    { id: 'medicine', label: 'Medicine', file: 'medicine', title: 'Medicine', intro: 'The disease list (cause, course, treatment, face), wounds, bleeding classes, pain and shock, what a surgeon of the period could do, hygiene as exposure, healing and immunity.', tables: ['diseases', 'exposure', 'wounds', 'pain', 'treatments', 'hygiene', 'healing', 'immunity'], charts: ['diseases'] },
+    { id: 'anatomy', label: 'Anatomy', file: 'anatomy', title: 'Anatomy (proposed)', intro: 'Organs with inputs, outputs, dependencies and failure cascades; the tissues diseases and deficiencies act on; damage kept apart from function; timescales; the species profile that makes the engine reusable.', tables: ['organs', 'respiratory', 'tissues', 'damage_function', 'timescales', 'species'], charts: [] },
+    { id: 'circulation', label: 'Circulation', file: 'circulation', title: 'Circulation (proposed)', intro: 'The blood as the connector: composition and transport, oxygen delivery, pressure and perfusion, the bleeding classes (moved here), three ways delivery fails, clotting, chemistry, conditional cardiac events and the regulation loops.', tables: ['quantities', 'blood_gas', 'bleeding', 'delivery_failures', 'events', 'homeostasis'], charts: ['do2'] },
     { id: 'muscular', label: 'Muscular', file: 'muscular', title: 'The muscular system and the gym', intro: 'Rex’s groups split by head and trained by what you do. Activation profiles per action, three-compartment fatigue, training gates, injuries, the gym week, and the computed-Strength reading (replace or compute is Rex’s to decide).', tables: ['groups', 'values', 'activations', 'fatigue_rates', 'endurance_time', 'training', 'adaptation', 'patterns', 'tendons', 'injuries', 'gym', 'limb_strength'], charts: ['activation'] },
     { id: 'nutrition', label: 'Nutrition', file: 'nutrition', title: 'Nutrition', intro: 'Calories, macros, micros, water and salt as real needs; food profiles for the goods in GOODS.md; the 1677 ration; body composition; the deficiency clocks that make scurvy emerge.', tables: ['nutrients', 'foods', 'foods_more', 'absorption', 'ration', 'body_composition', 'depletion', 'boosts'], charts: ['vitc', 'ration'] },
     { id: 'psychology', label: 'Psychology', file: 'psychology', title: 'Psychology', intro: 'No meter of its own. Body and social states push the meters that already exist: mood, madness, respect, the sliders. Plausible madness triggers are for the story keeper per character.', tables: ['pushes', 'madness_links'], charts: [] },
     { id: 'neurology', label: 'Neurology', file: 'neurology', title: 'Neurology (proposed)', intro: 'A functional brain under the chemicals: baseline signalling from the day, substances as dose and clearance, receptor tolerance, dependence and withdrawal as four clocks, and circuits whose outputs go to existing meters. It never writes a personality.', tables: ['systems', 'baseline', 'pk', 'receptor', 'circuits', 'interactions', 'outputs'], charts: ['pkcurve'] },
+    { id: 'atmosphere', label: 'Atmosphere', file: 'atmosphere', title: 'Atmosphere (proposed)', intro: 'The air itself: one baseline every place inherits, pressure with altitude, local modifiers, the regions that get their own air, and the gases a 1650 to 1730 crew actually breathed. The calculator runs the chain from the air to the blood.', tables: ['baseline', 'altitude', 'modifiers', 'regions', 'scenarios'], charts: ['resp'] },
+    { id: 'gaschem', label: 'Gas & Chemistry', file: 'gasdynamics', title: 'Gas dynamics and chemistry (proposed)', intro: 'The transport interface and the box model (the grid deferred), sources and sinks; then the substance schema, the small initial database and the first reactions. The chemistry architecture is general; the database starts with the period\u2019s gases and fuels.', tables: ['units', 'box_model', 'sources_sinks', 'grid'], extra: [['chemistry', 'schema'], ['chemistry', 'substances'], ['chemistry', 'reactions'], ['chemistry', 'scope']], charts: [] },
     { id: 'environment', label: 'Environment', file: 'environment', title: 'Environment', intro: 'Climate, the period’s Little Ice Age hurricane lull, a daily weather generator, wind and currents for the voyage loop, and exposure by place for the body.', tables: ['climate', 'period_climate', 'weather_states', 'currents', 'exposure', 'sun'], charts: ['climate'] },
     { id: 'ecology', label: 'Ecology', file: 'ecology', title: 'Ecology', intro: 'Every living thing is a stock with r and K (Schaefer): fish, turtle, game; crops and soil; the year’s calendar. Fewer silhouettes when reading the water is the visible face.', tables: ['stocks', 'depletion_rules', 'crops', 'soil', 'seasons'], charts: ['schaefer'] },
     { id: 'population', label: 'Population', file: 'population', title: 'Population', intro: 'The aggregate settlement a town draws from: births, deaths, migration, labour. It never writes a named character’s fate; the fence table says who does.', tables: ['rates', 'cohorts', 'tick', 'fences'], charts: ['rates'] },
@@ -261,6 +263,19 @@ footer { margin-top: 40px; font-size: .8rem; color: var(--ink-3); border-top: 1p
       cos.forEach(se => { const pts = hbs.map(hb => se.co * 1.34 * hb * 0.97 * 10); s += `<path d="${pts.map((v, i) => (i ? 'L' : 'M') + x(i) + ',' + y(v)).join(' ')}" fill="none" stroke="${se.c}" stroke-width="2"/>`; pts.forEach((v, i) => s += `<circle cx="${x(i)}" cy="${y(v)}" r="4" fill="${se.c}" stroke="var(--surface)" stroke-width="2" data-tip="${se.n}: Hb ${hbs[i]} g/dL gives ${Math.round(v)} mL O2/min"/>`); });
       return fig('Oxygen delivery (mL/min) by haemoglobin at three cardiac outputs (CIRCULATION.md section 1: DO2 = CO x 1.34 x Hb x SaO2 x 10, saturation 0.97). Anaemia halves what every output can carry.', s + '</svg>', cos.map(se => `<span><i style="background:${se.c}"></i>${se.n}</span>`).join(''));
     },
+    resp() {
+      return `<figure id="respcalc"><figcaption>Respiratory calculator (CIRCULATION.md 1a, ANATOMY.md 1a): the air to the blood. Change the air and the time; the readout follows the formulas in the docs. Illustrative, placeholders.</figcaption>
+      <div class="toolbar" style="gap:10px 16px">
+        <label>Altitude (m) <input type="number" id="rc-alt" value="0" min="0" max="8000" step="100" style="width:90px"></label>
+        <label>Oxygen (%) <input type="number" id="rc-o2" value="20.95" min="0" max="100" step="0.5" style="width:80px"></label>
+        <label>CO2 (%) <input type="number" id="rc-co2" value="0.04" min="0" max="20" step="0.5" style="width:80px"></label>
+        <label>CO (ppm) <input type="number" id="rc-co" value="0" min="0" max="10000" step="50" style="width:90px"></label>
+        <label>Minutes <input type="number" id="rc-min" value="60" min="1" max="1440" step="10" style="width:80px"></label>
+        <label>Work (MET) <input type="number" id="rc-met" value="1.5" min="0.9" max="14" step="0.5" style="width:70px"></label>
+        <label>Hb (g/dL) <input type="number" id="rc-hb" value="15" min="4" max="20" step="0.5" style="width:70px"></label>
+      </div>
+      <div class="kv" id="rc-out"></div><div class="meta" id="rc-note"></div></figure>`;
+    },
     pkcurve() {
       // Blood alcohol over 12 hours for one, three and six gills of rum (14 g each) in a 70 kg man: first-order absorption (30 min half-time), zero-order clearance 0.015 g/dL/h, Widmark 0.68. One axis, three series, legend present.
       const w = 640, h = 220, padL = 50, padR = 16, padT = 14, padB = 28, hours = 12, steps = 144;
@@ -275,9 +290,9 @@ footer { margin-top: 40px; font-size: .8rem; color: var(--ink-3); border-top: 1p
     },
     rates() { const t = D.population.rates; return fig('Deaths per 1,000 a year in a normal year (first) and an epidemic year (second), by population.', rangeBarsSimple(t.rows.map(r => ({ label: r[0], a: r[2], b: r[3] })))); },
     deps() {
-      const docs = ['ENVIRONMENT', 'ECOLOGY', 'POPULATION', 'PHYSIOLOGY', 'NUTRITION', 'MUSCULAR', 'MEDICINE', 'NEUROLOGY', 'ANATOMY', 'CIRCULATION', 'BODY', 'PSYCHOLOGY', 'STATS', 'COMBAT', 'DUTIES', 'GOODS', 'PIRATE', 'BALANCE'];
+      const docs = ['ATMOSPHERE', 'GAS_DYNAMICS', 'CHEMISTRY', 'ENVIRONMENT', 'ECOLOGY', 'POPULATION', 'PHYSIOLOGY', 'NUTRITION', 'MUSCULAR', 'MEDICINE', 'NEUROLOGY', 'ANATOMY', 'CIRCULATION', 'BODY', 'PSYCHOLOGY', 'STATS', 'COMBAT', 'DUTIES', 'GOODS', 'PIRATE', 'BALANCE'];
       const idx = Object.fromEntries(docs.map((d, i) => [d, i])); const grid = docs.map(() => docs.map(() => 0));
-      for (const ch of D.body.chains.rows) { const steps = ch[1].split('->').map(s => { const m = s.match(/\b(ENVIRONMENT|ECOLOGY|POPULATION|PHYSIOLOGY|NUTRITION|MUSCULAR|MEDICINE|BODY|PSYCHOLOGY|STATS|COMBAT|DUTIES|GOODS|PIRATE|BALANCE)\b/); return m ? m[1] : null; }); for (let i = 1; i < steps.length; i++) { const a = steps[i - 1], b = steps[i]; if (a && b && a !== b) grid[idx[a]][idx[b]] += 1; } }
+      for (const ch of D.body.chains.rows) { const steps = ch[1].split('->').map(s => { const m = s.match(/\b(ATMOSPHERE|GAS_DYNAMICS|CHEMISTRY|ENVIRONMENT|ECOLOGY|POPULATION|PHYSIOLOGY|NUTRITION|MUSCULAR|MEDICINE|BODY|PSYCHOLOGY|STATS|COMBAT|DUTIES|GOODS|PIRATE|BALANCE)\b/); return m ? m[1] : null; }); for (let i = 1; i < steps.length; i++) { const a = steps[i - 1], b = steps[i]; if (a && b && a !== b) grid[idx[a]][idx[b]] += 1; } }
       const max = Math.max(1, ...grid.flat()); const cw = 30, padL = 110, padT = 100, w = padL + docs.length * cw + 10, h = padT + docs.length * cw + 10;
       let s = svgOpen(w, h); docs.forEach((d, j) => s += `<text transform="translate(${padL + j * cw + 18},${padT - 6}) rotate(-60)" font-size="10">${d}</text>`);
       docs.forEach((d, i) => { s += `<text class="lab" x="${padL - 8}" y="${padT + i * cw + 19}" text-anchor="end" font-size="11">${d}</text>`; docs.forEach((e, j) => { const v = grid[i][j]; s += `<rect x="${padL + j * cw + 1}" y="${padT + i * cw + 1}" width="${cw - 2}" height="${cw - 2}" rx="3" fill="color-mix(in oklab, var(--seq-7) ${Math.round(v / max * 100)}%, var(--seq-1))" fill-opacity="${v ? 1 : .2}" data-tip="${d} → ${e}: ${v} chain step${v === 1 ? '' : 's'}"/>`; }); });
@@ -306,10 +321,39 @@ footer { margin-top: 40px; font-size: .8rem; color: var(--ink-3); border-top: 1p
     if (t.tables.length) h += `<div class="toolbar"><input type="search" id="search-${t.id}" placeholder="Find in this tab (a disease, a muscle, a food)…" aria-label="Find in this tab"><label>Mark <select id="mark-${t.id}"><option value="">all</option><option value="rex">Rex</option><option value="proposed">proposed</option><option value="open">open</option></select></label><span class="count" id="count-${t.id}"></span></div>`;
     for (const c of t.charts) h += CH[c]();
     for (const k of t.tables) h += renderTable(t.file, k);
+    for (const [f, k] of (t.extra || [])) h += renderTable(f, k);
     if (t.id === 'body') h += `<h3 id="body-sources">Sources</h3>` + renderTable('sources', 'sources').replace(/^<h3[^>]*>.*?<\/h3>/, '');
     return h + '</section>';
   }).join('');
 
+  // respiratory calculator
+  (function () {
+    const ids = ['alt', 'o2', 'co2', 'co', 'min', 'met', 'hb']; const el = {}; ids.forEach(i => el[i] = $('#rc-' + i)); if (!el.alt) return;
+    const sat = p => 1 / (1 + 23400 / (p * p * p + 150 * p));
+    function run() {
+      const alt = +el.alt.value, fo2 = +el.o2.value / 100, fco2 = +el.co2.value / 100, co = +el.co.value, min = +el.min.value, met = +el.met.value, hb = +el.hb.value;
+      const P = 760 * Math.pow(1 - 0.0065 * alt / 288.15, 5.256);
+      const pio2 = fo2 * (P - 47);
+      const vo2 = 3.5 * met * 70, ve = Math.min(150, 6 + 0.025 * Math.max(0, vo2 - 250));
+      // CO2 retention: inspired CO2 adds to arterial PCO2 until the drive raises ventilation; simple: PaCO2 = 40 + fco2*(P-47)*0.7, drive doubles VE per 5 mmHg over 40, capped
+      let paco2 = 40 + fco2 * (P - 47) * 0.7; let veDrive = Math.min(150, ve * Math.pow(2, Math.max(0, paco2 - 40) / 5));
+      // the hypoxic drive (PHYSIOLOGY 1a): under an alveolar PO2 of 60 the body over-breathes and blows off CO2, toward 25 mmHg (the unacclimatised limit)
+      const pao2First = Math.max(0, pio2 - paco2 / 0.8);
+      if (pao2First < 60 && fco2 < 0.02) { const drop = Math.min(15, (60 - pao2First) * 0.5); paco2 = Math.max(25, paco2 - drop); veDrive = Math.min(150, veDrive * (1 + drop / 15)); }
+      const pao2 = Math.max(0, pio2 - paco2 / 0.8); const pa = Math.max(0, pao2 - 7); const sao2 = sat(pa);
+      const thalf = 300 / Math.max(1, veDrive / 6); const cohbEq = Math.min(0.8, 0.16 * co / 100 / 100 * 100); // 0.16 x ppm/100 -> percent -> fraction
+      const cohb = 0.01 + (cohbEq - 0.01) * (1 - Math.pow(0.5, min / thalf));
+      const cao2 = 1.34 * hb * (1 - cohb) * sao2 + 0.003 * pa; const do2 = 5 * cao2 * 10;
+      let tier = 'normal', face = 'none';
+      if (sao2 < 0.6 || cohb > 0.5 || paco2 > 90) { tier = 'death in minutes'; face = 'unresponsive, blue or cherry-pink'; }
+      else if (sao2 < 0.7 || cohb > 0.3 || paco2 > 70) { tier = 'unconscious'; face = 'cannot be woken'; }
+      else if (sao2 < 0.8 || cohb > 0.2 || paco2 > 55) { tier = 'confused, ataxic'; face = 'stumbling, slurred, blue lips or flushed'; }
+      else if (sao2 < 0.9 || cohb > 0.1 || paco2 > 47) { tier = 'impaired'; face = 'headache, nausea, panting, dull'; }
+      $('#rc-out').innerHTML = [['Pressure', P.toFixed(0) + ' mmHg'], ['Inspired PO2', pio2.toFixed(0) + ' mmHg'], ['Alveolar PO2', pao2.toFixed(0) + ' mmHg'], ['PaCO2', paco2.toFixed(0) + ' mmHg'], ['Ventilation', veDrive.toFixed(0) + ' L/min'], ['SaO2', (sao2 * 100).toFixed(0) + ' %'], ['COHb after ' + min + ' min', (cohb * 100).toFixed(0) + ' %'], ['O2 content', cao2.toFixed(1) + ' mL/dL'], ['DO2 at rest', do2.toFixed(0) + ' mL/min'], ['State (BODY)', tier]].map(([k, v]) => `<div><b style="font-size:1.1rem">${v}</b><span>${k}</span></div>`).join('');
+      $('#rc-note').textContent = 'Visible face: ' + face + '. CO equilibrium approaches ' + (cohbEq * 100).toFixed(0) + '% with a half-time of ' + thalf.toFixed(0) + ' min at this ventilation; carbon monoxide gives no breathing drive, so the body does not notice.';
+    }
+    ids.forEach(i => el[i].addEventListener('input', run)); run();
+  })();
   // tooltips on marks
   main.querySelectorAll('[data-tip]').forEach(el => hover(el, el.getAttribute('data-tip')));
   // filters
@@ -325,7 +369,7 @@ footer { margin-top: 40px; font-size: .8rem; color: var(--ink-3); border-top: 1p
     m.addEventListener('change', () => { try { localStorage.setItem('atlas-mark-' + t.id, m.value); } catch (e) {} });
   });
   // chains
-  const DOCTAB = { ENVIRONMENT: 'environment', ECOLOGY: 'ecology', POPULATION: 'population', PHYSIOLOGY: 'physiology', NUTRITION: 'nutrition', MUSCULAR: 'muscular', MEDICINE: 'medicine', BODY: 'body', PSYCHOLOGY: 'psychology', NEUROLOGY: 'neurology', ANATOMY: 'anatomy', CIRCULATION: 'circulation' };
+  const DOCTAB = { ENVIRONMENT: 'environment', ECOLOGY: 'ecology', POPULATION: 'population', PHYSIOLOGY: 'physiology', NUTRITION: 'nutrition', MUSCULAR: 'muscular', MEDICINE: 'medicine', BODY: 'body', PSYCHOLOGY: 'psychology', NEUROLOGY: 'neurology', ANATOMY: 'anatomy', CIRCULATION: 'circulation', ATMOSPHERE: 'atmosphere', GAS_DYNAMICS: 'gaschem', CHEMISTRY: 'gaschem' };
   function showChain(i) {
     const r = D.body.chains.rows[i]; main.querySelectorAll('.chain').forEach(b => b.classList.toggle('on', +b.dataset.chain === i));
     const steps = r[1].split('->').map(s => s.trim());
