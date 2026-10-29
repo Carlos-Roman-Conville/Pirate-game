@@ -163,6 +163,12 @@ For the code (`inner_rules`, action → destination):
   a different map or a path toward orderly good.
 - If every character is meant to reach all four alignments through ordinary play, this map prevents it for her.
 
+### Her ending (Rex, 2026-10-29)
+
+- **(Rex)** One of the characters with her own ending (see `../STORY.md`, "Death, transformation and character
+  endings"). Support her with no test subjects and she seeks a solution outside: the fish people. Give her the
+  bodies and her personal goals are satisfied.
+
 ## Change log
 
 | Date | Change | By |
@@ -181,3 +187,4 @@ For the code (`inner_rules`, action → destination):
 | 2026-10-28 | No longer the ENTP's economic rival (stores don't compete; the contempt stays); now competes with the ISFJ's clinic for the town's healing | Rex |
 | 2026-10-28 | Starting alignment for now: orderly evil | Rex |
 | 2026-10-28 | New field `develops_place`: recruiting alone doesn't develop their place; it takes a sub quest or supplying what they need | Rex |
+| 2026-10-29 | Her ending: without test subjects she seeks the fish people; given the bodies, her goals are satisfied | Rex |

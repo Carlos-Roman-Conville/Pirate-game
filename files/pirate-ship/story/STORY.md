@@ -141,6 +141,36 @@ work lives in `../art/`, not here.
 - **(proposed, outside AI)** The return: a nobody in a town of nobodies at the start; later, rich and with a big
   crew, you come back to the same docks. The town hasn't changed; how its people see you has.
 
+## Death, transformation and character endings (Rex, 2026-10-29)
+
+Decided in the combat session; mechanics in `../combat/COMBAT.md` §4e. The fiction is kept here.
+
+- **(Rex)** A dead party member can be resurrected through the alignment faction you choose. Each resurrection
+  ends that character's storyline: "lose a player, get a stronger one, lose the story."
+  - Atlanteans: a mecha AI holding the person's memories, thoughts and beliefs, frozen at death; no further
+    development; mecha upgrades.
+  - Ghost faction: a ghost.
+  - Free pirates: a voodoo zombie.
+  - Imperials / the orderly: an angel.
+  - Merfolk: **(open)** not decided.
+- **(Rex)** Becoming a ghost (or anything) follows actual death; it's "not so simple" as losing to another
+  character. The state of being depends on who did it: the Cthulhu cult makes a fish person; the devil cult a
+  demon; a chaotic-evil actor might kidnap them instead, so there is no ghost and the person is missing. The
+  community continues; that person's storyline ends.
+- **(Rex) Transformation is part of character endings.** Certain characters can enforce their will on the group.
+  Some have their own endings (a secondary ending system, not enforced yet) that need you to bring them people
+  for the town: those people are transformed, you get an upgraded unit, and the character's storyline advances
+  down their alignment, so it stays inside the alignment system.
+  - The INTJ: support her with no test subjects and she seeks a solution outside (the fish people); give her the
+    bodies and her personal goals are satisfied.
+- **(Rex)** Many storylines follow, so they need procedural generation: fill the system with data so it feels fresh.
+- **(proposed, outside AI)** Authored identity and milestones per character, with procedural events between; the
+  economy as the source of quest variation; two ending layers (town and character), the second feeding the first.
+- **(open)** What each form is in the fiction (mecha, ghost, zombie, angel, demon, fish person); the merfolk's
+  form; which characters can kidnap; which characters have their own endings, and what each needs.
+- **(open)** How this sits with the town's ghost rule (losing a pair competition ghosts the loser): whether the
+  loser now dies, or the two rules coexist (the town and balance keepers have been told).
+
 ## Open threads (story-level questions for Rex)
 
 1. The game's name.
@@ -224,4 +254,5 @@ work lives in `../art/`, not here.
 | 2026-10-28 | The ISTP hunter's alignment map (OG→CG, CG→OE, OE→CE, CE→OG): a full cycle with no leans | Rex (via the balance keeper) |
 | 2026-10-28 | The alignment system (`balance/ALIGNMENT.md`): the player earns alignment too; three sources of change (dialogue, quests, independent actions), only those present witness, a continuous square, alignment persists through rotation; starting positions for now set for all 16 charted characters | Rex (via the balance keeper) |
 | 2026-10-28 | Recruiting alone doesn't develop a character's place: it takes a sub quest or supplying what they need (the farm's bodies are the example); new field `develops_place` | Rex (via the balance keeper) |
+| 2026-10-29 | Death and resurrection through a faction (mecha, ghost, zombie, angel; merfolk open), each ending that storyline; transformations depend on who did it (fish person, demon, missing if kidnapped); transformation is part of character endings, which can need you to bring people (the INTJ: test subjects or the fish people) | Rex (via the combat keeper) |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |
