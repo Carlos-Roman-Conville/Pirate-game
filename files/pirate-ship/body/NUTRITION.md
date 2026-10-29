@@ -293,7 +293,10 @@ intake; the deficiency clocks.
 | Glycogen | += carb intake x 0.8 up to 400 g; -= work (about 60 g per MET-hour over 4 MET); the Endurance pool's glycogenFactor = 0.5 + 0.5 x glycogen/400 | g | proposed |
 | Lean mass | the MUSCULAR development sum x a body-size constant; in a deficit over 1,000 kcal/day, development decays (MUSCULAR energy gate) | kg | proposed |
 | Body mass | fat + lean + the rest (bone, organs, water) | kg | proposed |
-| Satiation | fullness 0 to 1: a meal adds its mass/600 g; falls 0.15 per hour; hunger (mood push, PSYCHOLOGY) under 0.2; 'could eat a horse' under 0.1 | index | rex (satiation), proposed (numbers) |
+| Fullness | the stomach's load, 0 to 1: a meal adds its mass/600 g (liquids half); empties 0.15 per hour (slower for fat and meat, faster for broth); over 1.0 is discomfort (work capacity x0.9 for 2 h, seasickness chance x1.5) | index | rex (satiation is simulated), proposed (the split, Rex's go-ahead 2026-10-29; outside AI's table) |
+| Hunger | the drive to eat, 0 to 1: rises with hours since the last meal (0.05/h) and with the energy deficit (+0.1 per 500 kcal below the day's need); falls with fullness (x(1 - fullness)); starvation stage 2+ holds it at 1.0; a fever or seasickness lowers it (x0.5) even when the body needs food | index | proposed (Rex's go-ahead 2026-10-29) |
+| Appetite | the wish to eat this food now, 0 to 1 per meal offered: hunger x palatability (a hot meal 1.0, fresh meat 1.0, biscuit and salt horse for the 30th day 0.6, spoiled food 0.3, a favourite 1.2) x state (fever x0.3, drunk x0.7, seasick x0.2, grief x0.6); a man full but wanting pudding is appetite over fullness; a man hungry but off his food is hunger without appetite | index | proposed (Rex's go-ahead 2026-10-29) |
+| Eating rule | a crew mate eats the meal if appetite over 0.3, or if hunger over 0.8 whatever the appetite; what is eaten fills fullness and intake; what is refused goes back to the stores or over the side | rule | proposed (Rex's go-ahead 2026-10-29) |
 | Starvation stages | day 1 glycogen gone; days 2 to 7 ketosis, work capacity x0.8; weeks 2 to 6 wasting, x0.5, immune weak; death when fat is gone or mass under 60% of start | - | proposed |
 <!-- /table -->
 
@@ -307,16 +310,16 @@ intake; the deficiency clocks.
   (`MEDICINE.md` §7); satiation pushes mood (`PSYCHOLOGY.md`).
 - **Visible face:** "he's gone thin"; the cook's rations shortening; the quartermaster's count of days of
   food left (the one number the player sees: stores, not stats).
-- **(proposed, outside AI, 2026-10-29; not adopted)** ChatGPT recommends splitting today's one satiation
-  index into four states: **fullness** (the stomach's distension, from the meal's mass; falls over hours),
-  **hunger** (the drive to eat, from energy deficit and time since eating), **appetite** (the wish to eat,
-  shaped by the food, illness, drink, stress and personality: a man full but wanting pudding, a feverish
-  man hungry but off his food), and **energy balance** (already this file's, §4). Its reading: keep all
-  four, energy balance here, the other three as inputs to the existing crew psychology (hunger and
-  appetite as pushes, `PSYCHOLOGY.md`), so illness, rum and personality change eating without a hunger
-  penalty of their own. The keeper's view: fullness and hunger are two numbers the sim already half-keeps
-  (satiation and energy balance) and the split costs little; appetite touches personality and belongs to
-  the story keeper's characters if it is kept at all. **Rex's call** (open 6).
+- **Fullness, hunger, appetite, energy balance (Rex's go-ahead, 2026-10-29; ChatGPT's split, outside AI;
+  the rules proposed).** Satiation is four states, in the table: **fullness** is the stomach's load from
+  the meal's mass, emptying over hours; **hunger** is the drive, from hours without food and the energy
+  deficit, dulled by fever and seasickness even when the body needs food; **appetite** is the wish to eat
+  *this* food now, hunger times palatability times state, so a man can be full and want pudding, or hungry
+  and off his food; **energy balance** is the ledger (§4). Only energy balance moves fat and glycogen; the
+  other three decide whether a meal is eaten at all (the eating rule) and push the existing meters
+  (`PSYCHOLOGY.md` §1: hunger to mood and the Patient and Generous sliders; appetite to mood and hearts
+  toward the cook; a refused meal as the early warning). Which foods a character loves or hates is the
+  story keeper's, per character (open).
 - **Mark:** **(Rex)** that energy and fat are simulated; **(proposed)** the rules.
 
 ## 5. Deficiency clocks
@@ -417,9 +420,9 @@ intake; the deficiency clocks.
 5. Every food number is a belt verification task against FoodData Central before tuning.
 6. ~~The audit's missing nutrients and absorption~~ added as proposed rows on Rex's go-ahead
    (2026-10-29): §1 (13 nutrients), §2 (their food values), §2a (absorption, protein quality). Still open
-   from the audit: the split of fullness, hunger, appetite and energy balance into separate states (§4,
-   ChatGPT's table recorded there, not adopted), and whether the game surfaces any of the new deficiencies
-   beyond anaemia, cramps and bleeding.
+   from the audit: ~~the split of fullness, hunger, appetite and energy balance~~ done on Rex's go-ahead
+   (§4, proposed rules), and whether the game surfaces any of the new deficiencies beyond anaemia, cramps
+   and bleeding. New open: each character's favourite and hated foods (story keeper).
 7. The `foods_more` values are low-confidence estimates (ChatGPT's caution, agreed): no deficiency
    timeline built on them is reliable until the belt verifies them against FoodData Central.
 
@@ -434,5 +437,6 @@ physiology, lime-vs-lemon composition.
 | Date | What | Who |
 |---|---|---|
 | 2026-10-29 | File opened from Rex's §4c decisions; nutrients (18), food profiles (50 goods), the 1677 ration, body composition, deficiency clocks, water and salt, boosts; tables in `data/nutrition.json` | keeper |
+| 2026-10-29 | Rex: split it. Satiation becomes fullness, hunger, appetite and energy balance (§4 table, the eating rule); hunger and appetite pushes in `PSYCHOLOGY.md`; the body record updated | Rex (go-ahead), keeper (rules, proposed) |
 | 2026-10-29 | ChatGPT's second note (outside AI): the four-stage principle (intake, absorption, reserve, effect) stated in §2a; its fullness / hunger / appetite / energy-balance split recorded in §4 as proposed, not adopted; its caution on the food values added to open 7 | keeper |
 | 2026-10-29 | On Rex's go-ahead after the audit: 13 more nutrients (B2, B5, B6, B7, folate, B12, E, K, Mg, P, Se, Cu, essential fatty acids), their deficiency clocks, their food values (`foods_more`), and the absorption table (§2a); all proposed | keeper (Rex's go-ahead) |

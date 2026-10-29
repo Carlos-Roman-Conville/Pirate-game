@@ -9,7 +9,7 @@
       ["identity", "STATS.md", "sex, age, height_cm, personality type, genetic min and max per attribute (per limb: open)", "rex (min-max), proposed (fields)"],
       ["limbs", "MUSCULAR.md, MEDICINE.md", "per arm and leg: groups[] (development, fatigue, condition, stimulus), wounds[], caps (permanent), present (false after amputation)", "rex (per limb), proposed (fields)"],
       ["whole", "PHYSIOLOGY.md", "fitness, cardioFatigue, aerobic_today, sleepDebt, alertness, coreTemp, waterDeficit, fatigueDay, heatAcclim, seaLegs", "proposed"],
-      ["fuel", "NUTRITION.md", "glycogen, fatMass, leanMass, satiation, energyBalance, pools{vit_c, b1, b3, a, iron, sodium, potassium, zinc, ...}", "rex (that they exist), proposed (fields)"],
+      ["fuel", "NUTRITION.md", "glycogen, fatMass, leanMass, fullness, hunger, appetite (per meal offered), energyBalance, pools{vit_c, b1, b3, a, iron, folate, b12, sodium, potassium, magnesium, zinc, ...}", "rex (that they exist), proposed (fields; the fullness/hunger/appetite split on Rex's go-ahead 2026-10-29)"],
       ["conditions", "MEDICINE.md", "conditions[] (id, stage, day, severity), bloodLoss, pain, immunity{}", "proposed"],
       ["mind (read, never written here)", "PIRATE.md 7, STATS.md 3 to 5", "mood, madness, hearts, respect, sliders, trust, memories", "rex"],
       ["being", "COMBAT.md 4e, BODY.md 6", "stateOfBeing (human default), frozenAt (for resurrected forms)", "rex (the forms), proposed (fields)"],

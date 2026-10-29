@@ -35,8 +35,8 @@ window.BODY_DATA = {
     [
      "fuel",
      "NUTRITION.md",
-     "glycogen, fatMass, leanMass, satiation, energyBalance, pools{vit_c, b1, b3, a, iron, sodium, potassium, zinc, ...}",
-     "rex (that they exist), proposed (fields)"
+     "glycogen, fatMass, leanMass, fullness, hunger, appetite (per meal offered), energyBalance, pools{vit_c, b1, b3, a, iron, folate, b12, sodium, potassium, magnesium, zinc, ...}",
+     "rex (that they exist), proposed (fields; the fullness/hunger/appetite split on Rex's go-ahead 2026-10-29)"
     ],
     [
      "conditions",
@@ -5752,10 +5752,28 @@ window.BODY_DATA = {
      "proposed"
     ],
     [
-     "Satiation",
-     "fullness 0 to 1: a meal adds its mass/600 g; falls 0.15 per hour; hunger (mood push, PSYCHOLOGY) under 0.2; 'could eat a horse' under 0.1",
+     "Fullness",
+     "the stomach's load, 0 to 1: a meal adds its mass/600 g (liquids half); empties 0.15 per hour (slower for fat and meat, faster for broth); over 1.0 is discomfort (work capacity x0.9 for 2 h, seasickness chance x1.5)",
      "index",
-     "rex (satiation), proposed (numbers)"
+     "rex (satiation is simulated), proposed (the split, Rex's go-ahead 2026-10-29; outside AI's table)"
+    ],
+    [
+     "Hunger",
+     "the drive to eat, 0 to 1: rises with hours since the last meal (0.05/h) and with the energy deficit (+0.1 per 500 kcal below the day's need); falls with fullness (x(1 - fullness)); starvation stage 2+ holds it at 1.0; a fever or seasickness lowers it (x0.5) even when the body needs food",
+     "index",
+     "proposed (Rex's go-ahead 2026-10-29)"
+    ],
+    [
+     "Appetite",
+     "the wish to eat this food now, 0 to 1 per meal offered: hunger x palatability (a hot meal 1.0, fresh meat 1.0, biscuit and salt horse for the 30th day 0.6, spoiled food 0.3, a favourite 1.2) x state (fever x0.3, drunk x0.7, seasick x0.2, grief x0.6); a man full but wanting pudding is appetite over fullness; a man hungry but off his food is hunger without appetite",
+     "index",
+     "proposed (Rex's go-ahead 2026-10-29)"
+    ],
+    [
+     "Eating rule",
+     "a crew mate eats the meal if appetite over 0.3, or if hunger over 0.8 whatever the appetite; what is eaten fills fullness and intake; what is refused goes back to the stores or over the side",
+     "rule",
+     "proposed (Rex's go-ahead 2026-10-29)"
     ],
     [
      "Starvation stages",
@@ -7787,12 +7805,44 @@ window.BODY_DATA = {
      "proposed"
     ],
     [
-     "Hunger: satiation under 0.2 (NUTRITION)",
+     "Hunger over 0.6 (NUTRITION 4: the drive, from hours and deficit)",
      "mood",
-     "-1 per meal missed",
+     "-1 per meal missed; -2 a day while over 0.8",
      "",
      "'could eat a horse'; steals from the stores (madness trigger for some)",
-     "rex (hunger hits mood), proposed (size)"
+     "rex (hunger hits mood), proposed (size; the split, Rex's go-ahead 2026-10-29)"
+    ],
+    [
+     "Hunger over 0.8 for 3+ days",
+     "Patient <-> Impulsive; Generous <-> Greedy (slow)",
+     "toward Impulsive and Greedy, +0.5 a day",
+     "the whole crew: loyalty (mean mood) falls with it",
+     "fights over rations; hoarding",
+     "proposed (Rex's go-ahead 2026-10-29)"
+    ],
+    [
+     "Appetite: a meal eaten with appetite over 0.8 (a hot meal, fresh meat, a favourite)",
+     "mood; hearts toward the cook (PIRATE 7, the gift rule by analogy)",
+     "+1; + (slow)",
+     "per meal",
+     "praise for the cook; the feast after a prize",
+     "proposed (Rex's go-ahead 2026-10-29)"
+    ],
+    [
+     "Appetite low while hunger is high (off his food: fever, seasickness, grief, 30 days of biscuit)",
+     "mood",
+     "-1 per refused meal",
+     "the refused meal is the early warning of illness or low spirits",
+     "'he won't eat'; the cook complains",
+     "proposed (Rex's go-ahead 2026-10-29)"
+    ],
+    [
+     "Appetite and personality (the story keeper's per character)",
+     "appetite's palatability factor read through type",
+     "a favourite food per character (+0.2); a hated one (-0.3)",
+     "open: which foods per character",
+     "the ESTP cook's secret; a crew mate who hoards oranges",
+     "open"
     ],
     [
      "Starvation stage 2+ (NUTRITION)",

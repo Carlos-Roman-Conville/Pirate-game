@@ -126,7 +126,10 @@
       ["Glycogen", "+= carb intake x 0.8 up to 400 g; -= work (about 60 g per MET-hour over 4 MET); the Endurance pool's glycogenFactor = 0.5 + 0.5 x glycogen/400", "g", "proposed"],
       ["Lean mass", "the MUSCULAR development sum x a body-size constant; in a deficit over 1,000 kcal/day, development decays (MUSCULAR energy gate)", "kg", "proposed"],
       ["Body mass", "fat + lean + the rest (bone, organs, water)", "kg", "proposed"],
-      ["Satiation", "fullness 0 to 1: a meal adds its mass/600 g; falls 0.15 per hour; hunger (mood push, PSYCHOLOGY) under 0.2; 'could eat a horse' under 0.1", "index", "rex (satiation), proposed (numbers)"],
+      ["Fullness", "the stomach's load, 0 to 1: a meal adds its mass/600 g (liquids half); empties 0.15 per hour (slower for fat and meat, faster for broth); over 1.0 is discomfort (work capacity x0.9 for 2 h, seasickness chance x1.5)", "index", "rex (satiation is simulated), proposed (the split, Rex's go-ahead 2026-10-29; outside AI's table)"],
+      ["Hunger", "the drive to eat, 0 to 1: rises with hours since the last meal (0.05/h) and with the energy deficit (+0.1 per 500 kcal below the day's need); falls with fullness (x(1 - fullness)); starvation stage 2+ holds it at 1.0; a fever or seasickness lowers it (x0.5) even when the body needs food", "index", "proposed (Rex's go-ahead 2026-10-29)"],
+      ["Appetite", "the wish to eat this food now, 0 to 1 per meal offered: hunger x palatability (a hot meal 1.0, fresh meat 1.0, biscuit and salt horse for the 30th day 0.6, spoiled food 0.3, a favourite 1.2) x state (fever x0.3, drunk x0.7, seasick x0.2, grief x0.6); a man full but wanting pudding is appetite over fullness; a man hungry but off his food is hunger without appetite", "index", "proposed (Rex's go-ahead 2026-10-29)"],
+      ["Eating rule", "a crew mate eats the meal if appetite over 0.3, or if hunger over 0.8 whatever the appetite; what is eaten fills fullness and intake; what is refused goes back to the stores or over the side", "rule", "proposed (Rex's go-ahead 2026-10-29)"],
       ["Starvation stages", "day 1 glycogen gone; days 2 to 7 ketosis, work capacity x0.8; weeks 2 to 6 wasting, x0.5, immune weak; death when fat is gone or mass under 60% of start", "-", "proposed"]
     ]
   },
