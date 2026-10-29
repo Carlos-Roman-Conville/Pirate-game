@@ -7,7 +7,7 @@ decision; the numbers are placeholders.
 
 **Ownership.** This file: concentrations per region, the mass balance, ventilation, sources and sinks as
 rates handed in by other docs, exposure per character, and later the grid. It never decides what a
-reaction produces (`CHEMISTRY.md`) nor what a dose does (`../body/`).
+reaction produces (`../science/CHEMISTRY.md`) nor what a dose does (`../body/`).
 
 **How to read.** **[science]** / **[history]** / **[model]** / **[fiction]**; **(Rex, date)**,
 **(proposed)**, **(proposed, outside AI)**, **(open)**. Tables from `../body/data/gasdynamics.json`.

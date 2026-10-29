@@ -471,6 +471,11 @@
         "The brazier in the shut cabin",
         "a cold North Atlantic night; the captain's brazier (CHEMISTRY charcoal starved of air: CO 0.5 L/min) -> GAS_DYNAMICS: the cabin box, 30 m3, window shut (0.5 ACH): CO climbs toward 2,000 ppm over the night -> PHYSIOLOGY 1a: asleep at 6 L/min, no hypoxic drive (CO gives none) -> CIRCULATION 1a: COHb 10% by midnight (headache in his sleep), 30% by four (he cannot wake), 50% by dawn -> MEDICINE 1a: the charcoal sickness; found in the morning, or found in time by the watch -> ANATOMY 3a: a crisis (temporary if carried out early; heart and brain damage if late; death if not) -> the fate systems",
         "proposed (2026-10-29)"
+      ],
+      [
+        "Oxygen in 1700 (a time-anomaly discovery)",
+        "GOODS: red precipitate (mercury calx) from the apothecary; a great burning lens (rare, SCIENTIFIC_EQUIPMENT); a jar and a tub -> TECHNOLOGY: all three available or makeable in 1700, nobody knows the process -> the player, who does, assembles them: the assembly pipeline (heat role: the lens in sun reaches 500 C; vessel: the retort; collection: the jar over water) -> CHEMISTRY: HgO -> Hg + O2 (supported record) -> DISCOVERY: encountered ('an air in which a candle burns bright'); observed (a mouse lives longer in it; it has no smell); identified only by a later book or theory: the journal holds it as an unknown air with its tests -> JOURNAL: on identification, 'oxygen: first isolated 1774 (Scheele 1771 to 72, Priestley 1774), named by Lavoisier 1777; found here in 1700: a Time Anomaly'; the process becomes knowledge the character can write down (GOODS 3f) -> the world: a surgeon with oxygen; a Nerve-steadying air; the fish-person's needs (ANATOMY species)",
+        "proposed (2026-10-29)"
       ]
     ]
   },

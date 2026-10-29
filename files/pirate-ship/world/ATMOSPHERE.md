@@ -6,13 +6,15 @@ route, instead of a scripted debuff. ChatGPT (outside AI) drafted the architectu
 down to what pays in 1650–1730 and ChatGPT answered that the engine's capability must not be sized by the
 game's present need; Rex passed on the compromise: **build the atmosphere and the respiratory exchange
 now, establish the interfaces for gas dynamics and chemistry, keep the chemistry schema general and the
-database small.** This file is the atmosphere. **(Rex, 2026-10-29)** The structure of this file, `GAS_DYNAMICS.md`,
-`CHEMISTRY.md` and the respiratory tables is his decision; **every number is a placeholder** (Rex's
+database small.** This file is the atmosphere, **a consumer of `../science/CHEMISTRY.md`** (the universal engine; the
+chemistry is not an atmospheric subsystem: Rex's correction of 2026-10-29) and of `../science/PHYSICS.md`.
+This file is the atmosphere. **(Rex, 2026-10-29)** The structure of this file, `GAS_DYNAMICS.md`,
+`../science/CHEMISTRY.md` and the respiratory tables is his decision; **every number is a placeholder** (Rex's
 words: "numbers still placeholders"); recipes-as-reactions stays open.
 
 **Ownership (the boundaries from the brief, kept exactly).** This file: the baseline composition, pressure
 with altitude, the local modifiers, which regions are active, and the period scenario list.
-`GAS_DYNAMICS.md`: transport and concentrations. `CHEMISTRY.md`: substances and reactions.
+`GAS_DYNAMICS.md`: transport and concentrations. `../science/CHEMISTRY.md`: substances and reactions.
 `ENVIRONMENT.md`: weather and terrain as inputs, never a second gas model. `ECOLOGY.md`: biological
 production and consumption as aggregate fluxes. `../body/ANATOMY.md`: the respiratory structures.
 `../body/PHYSIOLOGY.md`: breathing demand. `../body/CIRCULATION.md`: blood gases. `../body/NEUROLOGY.md`:
@@ -180,5 +182,6 @@ modelling (NIOSH).
 
 | Date | What | Who |
 |---|---|---|
+| 2026-10-29 | CHEMISTRY.md moved to `science/` as the universal engine; this file is its consumer (Rex's correction) | keeper |
 | 2026-10-29 | Rex stamped the air layer's structure as his; numbers placeholders; recipes-as-reactions open | Rex |
 | 2026-10-29 | File opened on Rex's gas layer and ChatGPT's architecture (outside AI), sized by the compromise; baseline, altitude, modifiers, regions, the period's scenarios, the body interfaces; tables in `../body/data/atmosphere.json` | keeper |

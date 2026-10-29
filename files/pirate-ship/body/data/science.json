@@ -1,0 +1,104 @@
+{
+  "_about": "Tables for science/TECHNOLOGY.md, DISCOVERY.md, JOURNAL.md and PLAN.md: the availability layer, the discovery states, the journal's classifications and entry fields, the separations, and the development plan. Rex (2026-10-29): the journal records everything encountered; discoveries made with the period's equipment before their historical date are Time Anomalies; the limiter is the equipment, never the chemical; the world is ours in a space-time anomaly version. mark: rex | proposed | open.",
+  "separations": {
+    "title": "The five separations (nothing is decided by the year)",
+    "kind": "model", "conf": "high",
+    "source": "ChatGPT's list (outside AI), which Rex adopted in his own words: the chemistry is not limited by the period; the equipment is the limiter; a discovery out of its time is a time anomaly in the journal.",
+    "columns": ["Question", "Layer", "Owner", "Example (oxygen in 1700)", "Mark"],
+    "rows": [
+      ["Scientific existence: does the substance or reaction exist under the simulated conditions?", "the universal engine", "CHEMISTRY.md, PHYSICS.md", "mercury calx heated gives oxygen: yes, always", "rex (2026-10-29)"],
+      ["Historical availability: could someone in this setting obtain or make it ordinarily?", "the world", "TECHNOLOGY.md, GOODS.md, REGIONS.md", "oxygen was isolated in 1774; nobody in 1700 sells or knows it", "rex"],
+      ["Technological accessibility: does the character have the equipment, materials and knowledge?", "the world and the character", "SCIENTIFIC_EQUIPMENT.md, TECHNOLOGY.md, GOODS 3f knowledge", "a burning lens, mercury calx (red precipitate: an apothecary's good) and a jar over water: all makeable in 1700", "rex"],
+      ["Execution difficulty: can the character control the process?", "the character", "the skill minigames (Rex), STATS", "steady hands and a clear day", "rex (skill affects execution)"],
+      ["Provenance: what is it, in the world's history?", "the journal", "JOURNAL.md, COMBAT 4d tags", "a real gas, discovered 74 years early: Historical and Time Anomaly", "rex"]
+    ]
+  },
+  "technology": {
+    "title": "The availability layer: how equipment, fuel, power and knowledge reach a place",
+    "kind": "model", "conf": "medium",
+    "source": "GOODS.md's recipe rule (materials + equipment + band + knowledge, Rex 2026-10-28/29) and its facilities list are the period's technology layer already; this table adds the general fields a world profile needs so another setting is a different profile, not a rewrite.",
+    "columns": ["Field", "What it holds", "Pirate-world default (1650 to 1730, Atlantic)", "Where it already lives", "Mark"],
+    "rows": [
+      ["equipment available", "which catalogue items a place can hold: common (bought), rare (one maker, a city), none (only as a time anomaly)", "the catalogue's availability column", "GOODS facilities list (the still, the forge, the furnace, the chymist's laboratory)", "proposed"],
+      ["manufacture prerequisites", "what it takes to make a piece: materials, a trade, a facility (a glassblower for a retort; a founder for a brass pump)", "glass from Europe; copper work in the islands; brass instruments from London and Amsterdam makers", "GOODS recipes (equipment is a good)", "proposed"],
+      ["fuel and power", "charcoal, wood, bagasse, spirit, oil; the sun; wind, water and animal power; later gas, steam, electricity", "charcoal and wood everywhere; a water wheel at a mill; no steam (Newcomen 1712 is in the period but not in the islands), no gas, no electricity", "GOODS (charcoal, firewood as goods: open)", "proposed"],
+      ["knowledge", "who knows the process: common, learned, foreign (GOODS 3f), or nobody yet (the discovery is the player's)", "the apothecary and the chymist know the period's preparations; everything after is nobody's", "GOODS 3f (Rex)", "rex (knowledge rule)"],
+      ["infrastructure", "what a place can supply continuously: running water, ice, a gasworks, mains power", "water by bucket; ice none (the freezing mixture needs it); the rest none", "the town keeper's places", "proposed"],
+      ["the anomaly plug", "a tagged piece of equipment, fuel or power source introduced by the story; its catalogue numbers make its processes possible at once, with no change to CHEMISTRY.md", "none unless the story adds one", "COMBAT 4d provenance (Rex); the story keeper's rows", "rex (2026-10-29)"],
+      ["world profile", "the whole table as one record per setting (pirate 1700; a modern city; a prehistoric camp; a science-fiction ship)", "this column", "-", "proposed"]
+    ]
+  },
+  "states": {
+    "title": "Discovery states: from meeting a thing to understanding it",
+    "kind": "model", "conf": "high",
+    "source": "ChatGPT's four states (outside AI), kept; the keeper adds what moves an entry between them and what the player sees at each. The microbe is the model case: Leeuwenhoek saw animalcules in 1676 and nobody understood them until the 1860s.",
+    "columns": ["State", "Meaning", "Reached by", "What the journal shows", "What the engine lets you do", "Mark"],
+    "rows": [
+      ["Encountered", "it exists and you have met it", "seeing, catching, buying, making it", "a sketch and a provisional name ('an unknown liquid'; 'a red fish with a horn'); observed appearance", "use it blindly: eat it, burn it, throw it", "proposed"],
+      ["Observed", "you have measured or tested properties", "the measure roles present (balance, thermometer, hydrometer, litmus, the taste and smell, a trial by fire); time with the thing", "the properties found (boils at the water bath's heat; sinks in water; turns litmus red; the fish bites at dusk)", "repeat what worked; predict a little", "proposed"],
+      ["Identified", "you know what it is", "a match to a known entry: a book, a teacher, a measuring instrument that names it (spectroscope, mass spectrometer), or the period's test (a flame colour, a precipitate)", "its name, formula or species, its known uses, the historical entry (JOURNAL 7)", "name it in trade and dialogue; look it up; use it in a recipe that calls for it", "proposed"],
+      ["Understood", "you know why it does what it does", "experiment and theory: the player's own, or a book of a later century (a time anomaly in itself)", "the mechanism, the reactions it takes part in, what it does to a body", "design new processes with it; teach it (GOODS 3f: knowledge that survives you if written)", "proposed"]
+    ]
+  },
+  "classifications": {
+    "title": "Provenance classifications (Rex's time-anomaly labels, extended; not mutually exclusive)",
+    "kind": "fiction", "conf": "high",
+    "source": "Rex (COMBAT 4d): a time-anomaly tag on things that do not belong to the period, shown on the item screen, never in battle; the world is ours in a space-time-anomaly version with real places and people not literally where or when they were. ChatGPT's set (outside AI) merged with the one already recorded in COMBAT 4d. Labels never change behaviour (Rex).",
+    "columns": ["Label", "Meaning", "Examples", "Stacks with", "Why the journal says so", "Mark"],
+    "rows": [
+      ["Historical", "consistent with the setting's period and place", "rum, scurvy, the retort, Brand's phosphorus (1669)", "any", "'known in this time'", "rex"],
+      ["Time Anomaly", "real, but discovered, introduced or met outside its historical timeline (earlier or later)", "oxygen isolated in 1700 (historically 1774); a Bunsen burner in a 1700 laboratory; a creature from another century", "Historical (a real thing), Prehistoric", "'first recorded in <year> by <who>; you have it in <game year>'", "rex (the tag), proposed (the stacking)"],
+      ["Prehistoric", "from an earlier geological period, named", "a Triassic reptile; a Devonian fish", "Time Anomaly", "'extinct since the <period>'", "rex (COMBAT 4d: Triassic)"],
+      ["Mythological", "from a real tradition's myth or folklore", "a kraken, a mermaid, a voodoo loa's gift", "-", "'from the <tradition>'", "rex (mythical)"],
+      ["Fantasy", "fictional supernatural", "the angel's energy, a demon's form", "-", "'no record'", "proposed (outside AI)"],
+      ["Science Fiction", "fictional technology or material on speculative science", "the Atlantean mecha's power cell; a sci-fi fish (Rex's example)", "-", "'no record'", "rex (sci-fi), proposed (the label)"],
+      ["Original Fiction", "made for this universe", "the Ghost Fleet's needs", "-", "'this world's own'", "proposed (outside AI)"],
+      ["Unknown", "the engine has no record of the reaction or thing: not impossible, not yet supported", "a synthesis the database does not hold", "-", "'nothing known; try, and the world will answer what it can'", "proposed (ChatGPT's 'unknown, not physically impossible', agreed)"]
+    ]
+  },
+  "entry": {
+    "title": "A journal entry's fields (one shape for a chemical, a plant, a fish, a creature, a disease, a tool, a place)",
+    "kind": "model", "conf": "high",
+    "source": "ChatGPT's field list (outside AI) merged with Rex's: a blurb of what it does and what it is used for, when it was discovered and by whom. The entry separates what the player found from the historical reference that unlocks on identification; the five historical dates are kept apart because they differ and credit is often disputed.",
+    "columns": ["Field", "Holds", "Shown when", "Mark"],
+    "rows": [
+      ["kind", "chemical | element | mineral | plant | fungus | animal | fish | creature | disease | equipment | material | object | place | phenomenon", "always", "rex (everything you can encounter)"],
+      ["state", "encountered | observed | identified | understood", "always", "proposed"],
+      ["classification", "one or more labels (classifications table) with the reason", "on identification (before that: 'unclassified')", "rex (labels)"],
+      ["name, formula or species; provisional name before identification", "-", "by state", "proposed"],
+      ["observed properties", "what the player's own tests found, dated and with the instrument used", "as found", "proposed"],
+      ["reference properties", "the engine's record (CHEMISTRY, ECOLOGY, MEDICINE rows)", "on identification", "proposed"],
+      ["natural occurrence", "where it is found in the world", "on identification", "proposed"],
+      ["uses and effects", "what it does and what it is used for: on a body (the body docs), in a recipe (GOODS), in a fight (COMBAT)", "on identification, growing with understanding", "rex (the blurb)"],
+      ["history: existence", "when it existed (a mineral: always; a species: its era; a compound: made by nature or first made by people)", "on identification", "proposed"],
+      ["history: first observation", "first documented noticing (Leeuwenhoek's animalcules 1676)", "on identification", "proposed"],
+      ["history: isolation", "first obtained pure (oxygen 1774, Scheele and Priestley)", "on identification", "rex (when and by whom)"],
+      ["history: identification", "first recognised for what it is (oxygen as an element: Lavoisier 1777)", "on identification", "proposed"],
+      ["history: synthesis", "first made from other things (urea 1828, Wohler)", "on identification", "proposed"],
+      ["credited to, and the dispute", "names; where credit is contested, say so", "on identification", "rex (by whom)"],
+      ["historical production", "how it was made then", "on identification", "proposed"],
+      ["significance", "why it mattered", "on identification", "proposed"],
+      ["your discovery", "the in-game date, place, process and apparatus by which the player found or made it; the character who did it", "always", "rex"],
+      ["anomaly note", "if the game date is before the historical date: 'first recorded <year> by <who>; found here in <game year>: a Time Anomaly'", "on identification", "rex"],
+      ["personal vs reference", "two columns kept apart: what you found, what the books say", "always", "proposed (outside AI: educational as well)"]
+    ]
+  },
+  "plan": {
+    "title": "The development plan for the universal science engine (phases, sizes, who)",
+    "kind": "model", "conf": "high",
+    "source": "ChatGPT's eight priorities (outside AI) sized by the keeper against the belt's capacities (CARD_GAMEDEV, the belt lanes) and the family's existing docs. Research and data tasks are Composer-scale; design decisions are Rex's; nothing is engine code yet.",
+    "columns": ["Phase", "Work", "Deliverable", "Size and who", "Depends on", "Status", "Mark"],
+    "rows": [
+      [1, "Universal chemistry schema and principles", "CHEMISTRY.md reframed: domains, the five separations, 'unknown not impossible', kinetics and equilibrium fields on reactions", "done this turn (keeper)", "-", "done", "proposed"],
+      [2, "The equipment catalogue, complete", "every apparatus from antiquity to now across chemistry, physics, biology, medicine, metallurgy: the catalogue's columns researched per item with sources (dates, inventors, predecessors, materials, energy, ranges, precision, capacity, needs, skills, enables)", "a belt research lane on Composer or Sonnet: about 300 items, 10 to 20 per task; the seed of 60 is here", "phase 1", "seed done; the rest a belt lane", "proposed"],
+      [3, "The capability-based apparatus model", "the roles and the assembly pipeline (SCIENTIFIC_EQUIPMENT 1 and 3) as data an engine can run; a joints and seals rule; accidents", "design done here; engine later", "phase 2", "design done", "proposed"],
+      [4, "The technology and availability database", "a world profile for the pirate setting: which items are common, rare or none per port; fuel and power per place; manufacture prerequisites tied to GOODS recipes; the facilities list reconciled", "the economy lane with the town keeper; Composer tasks", "phase 2", "fields done; data open", "proposed"],
+      [5, "The discovery and identification system", "the four states and what moves them; identification tests per substance (period tests: flame, precipitate, taste, litmus, density; later instruments); the 'unknown liquid' flow", "design done here; the tests per substance a data task", "phases 1 and 2", "design done", "proposed"],
+      [6, "The journal", "entry shape, classifications, the five historical dates per entry; the first 200 entries (the goods, the diseases, the fish, the period apparatus) as data", "the entry shape done; entries a belt data task (Composer), the fiction ones the story keeper's", "phases 1, 2, 5", "shape done", "proposed"],
+      [7, "Science and the skill minigames", "the chymist's, assayer's, distiller's, surgeon's minigames as control tasks (temperature, timing, measurement, handling) over the apparatus; skill sets difficulty, never the chemistry", "Rex designs the minigames (house rule); the keeper lists the control variables per apparatus", "phase 3", "open (Rex)", "rex (minigames are his)"],
+      [8, "Anomalous discovery tests", "scenarios to prove discoveries emerge from equipment without unlocks: oxygen from mercury calx with a burning lens (1700); hydrogen from iron and spirit of salt in a jar over water; phosphorus from urine (1669, Historical); the voltaic pile from zinc and copper if someone knows; the brewer's CO2 pooling in the vat-house", "the simulation lab (engine work; the belt once the rules stand)", "phases 3 to 5", "scenarios listed; engine later", "proposed"],
+      [9, "Physics", "PHYSICS.md: energy, heat transfer, pressure, mechanics as the shared layer the others already use (thermal balance in PHYSIOLOGY, pressure in ATMOSPHERE, the ship's speed in ENVIRONMENT); no physics agent exists: the keeper's stub, Rex to assign", "stub done", "-", "stub", "open (who keeps it)"],
+      [10, "Dashboard", "a Science tab (equipment, assembly, discovery states, classifications, the plan) with the chemistry tab beside it; later an apparatus builder that checks a process's conditions against chosen equipment (a calculator, not the engine)", "the tab done this turn; the builder a follow-up", "phases 2 and 3", "tab done", "proposed"]
+    ]
+  }
+}

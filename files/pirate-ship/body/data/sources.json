@@ -663,6 +663,38 @@
         "2026-10-29"
       ],
       [
+        "EQ-TL",
+        "Wikipedia, Timeline of microscope technology; Timeline of chemical element discoveries; Museo Galileo on the air pump; encyclopaedia entries on the barometer (Torricelli 1643 to 44); Boyle's New Experiments 1660",
+        "the catalogue's usual dates and the element dates behind the anomaly examples",
+        "https://en.wikipedia.org/wiki/Timeline_of_chemical_element_discoveries",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-ALCH",
+        "Histories of alchemical apparatus: Kircher's 1665 table of distillation (via the alchemy website); the JSTOR Daily 'Alchemist's workshop'; the 1893 transactions on Geber's aludel, descensory and water bath",
+        "alembic, retort, aludel, pelican, athanor, the baths",
+        "https://daily.jstor.org/alchemists-workshop",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CAP",
+        "The keeper's capability estimates from the apparatus's physics (charcoal with bellows about 1,200 C; sand bath 300; water bath 100); standard references (Partington, A History of Chemistry) not opened this session",
+        "the catalogue's numbers, placeholders",
+        "https://en.wikipedia.org/wiki/Alchemical_apparatus",
+        "science",
+        "standard reference"
+      ],
+      [
+        "EQ-LEMERY",
+        "Nicolas Lemery, Cours de chymie (1675; English 1677): the period's own textbook of preparations",
+        "the period's chemistry database, to be read by the belt",
+        "https://en.wikipedia.org/wiki/Nicolas_L%C3%A9mery",
+        "history",
+        "standard reference"
+      ],
+      [
         "ENV-FAO",
         "FAO regional climate note for the Caribbean (P4495E02)",
         "trade winds 24 to 32 km/h from the east; Montserrat 24.7 to 27.2 C",
