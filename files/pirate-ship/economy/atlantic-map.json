@@ -829,7 +829,7 @@
       "region": "north-america",
       "origin": "north-america",
       "tier": "major",
-      "verdict": "fits: founded 1682",
+      "verdict": "caveat: young in 1700",
       "role": "flour and provisions",
       "produces": [
         "flour",
@@ -848,7 +848,7 @@
       "region": "north-america",
       "origin": "north-america",
       "tier": "major",
-      "verdict": "fits: laid out 1680s",
+      "verdict": "caveat: small",
       "role": "tobacco",
       "produces": [
         "tobacco-cured-and-packed",
@@ -902,7 +902,7 @@
       "region": "north-america",
       "origin": "north-america",
       "tier": "candidate",
-      "verdict": "caveat: founded 1718",
+      "verdict": "caveat: 1718",
       "role": "Louisiana",
       "produces": [],
       "consumes": [],
@@ -967,7 +967,7 @@
       "region": "mexico",
       "origin": "spanish-main",
       "tier": "candidate",
-      "verdict": "caveat: the fort is 1729",
+      "verdict": "caveat: empty 1652–1729",
       "role": "the lagoon",
       "produces": [
         "logwood"
@@ -981,7 +981,7 @@
       "region": "mexico",
       "origin": "spanish-main",
       "tier": "candidate",
-      "verdict": "open",
+      "verdict": "caveat: a landing",
       "role": "the Yucatán salt coast",
       "produces": [
         "salt"
@@ -1051,7 +1051,7 @@
       "region": "south-america",
       "origin": "brazil",
       "tier": "major",
-      "verdict": "fits: founded 1616",
+      "verdict": "caveat: forest produce, no raids",
       "role": "the Amazon's gate",
       "produces": [
         "cacao-sweated-and-dried"
@@ -1334,6 +1334,24 @@
         "coarse-linen"
       ],
       "note": ""
+    },
+    {
+      "id": "portobelo-and-panama",
+      "name": "Portobelo and Panama",
+      "region": "south-america",
+      "origin": "spanish-main",
+      "tier": "candidate",
+      "verdict": "fits: Morgan 1668, 1671",
+      "role": "the fair and the silver road",
+      "produces": [
+        "mexican-silver-pesos",
+        "pearls"
+      ],
+      "consumes": [
+        "coarse-linen",
+        "wine"
+      ],
+      "note": "unplaced; on the record"
     }
   ]
 }

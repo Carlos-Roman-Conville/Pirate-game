@@ -8,7 +8,7 @@ made and wanted, what pirates did there, and whether the record supports it. Mar
 
 The town keeper's `town/` files own the design of a locale (its look, people and quests); the twelve locales in
 ALIGNMENT §10 predate this list and need reconciling with it (Open for Rex, 1). Research notes are in the shared
-folder: `map-caribbean-1.md`, `map-caribbean-2.md`, `map-caribbean-small.md`, `map-mainland-europe.md`, and for
+folder (all four map passes are in): `map-caribbean-1.md`, `map-caribbean-2.md`, `map-caribbean-small.md`, `map-mainland-europe.md`, and for
 Africa `research-africa-kongo-angola.md`, `research-africa-ouidah.md`, `research-africa-senegambia-calabar.md`.
 The Caribbean and small-settlement notes lean on Wikipedia pages opened as pointers, plus Johnson 1724 and museum
 pages; the African notes reach period texts (Phillips 1694, Bosman 1705, Barbot, Labat 1728, Johnson, Latham).
@@ -123,38 +123,41 @@ had merchants, dissenters, rulers and captives; the research notes name them whe
 **Goods these five add to GOODS.md:** none new. Gum, hides, wax, ivory, gold, palm oil, yams, copper, raffia,
 redwood, kola, salt and the coast's money are rows 82–94 and 1g already.
 
-## 4. The mainland and Europe (Rex's lists; verification pending in `map-mainland-europe.md`)
+## 4. The mainland and Europe (source, from `map-mainland-europe.md`)
 
-| Region | Node | Role (Rex's note) | Period note |
-|---|---|---|---|
-| North America | St Augustine | Spanish military frontier | Searles 1668, Moore's siege 1702 |
-| North America | Boston | shipbuilding, fish, timber, rum, provisions | fits |
-| North America | Philadelphia (or New York) | flour, grain, provisions | Philadelphia founded 1682; New York English from 1664 |
-| North America | a Chesapeake port (Norfolk, Hampton) | tobacco | Norfolk laid out 1680s |
-| North America | Charleston | rice, deerskins, naval stores | founded 1670; Blackbeard's blockade 1718; Bonnet's trial |
-| North America, candidate | Newport | slave trade, privateers | fits |
-| North America, candidate | New Orleans | Louisiana | founded 1718: the end of the period |
-| Mexico | Veracruz | the treasure port | de Graaf and Grammont 1683 |
-| Mexico | Campeche | the contested frontier | Myngs 1663, de Graaf 1685 |
-| Mexico | Laguna de Términos | the logwood camps | Dampier 1675–78; Spain expelled the cutters 1717 |
-| Mexico, candidate | Bacalar | the lagoon | Fort San Felipe 1729 |
-| Mexico, candidate | Sisal | the Yucatán salt coast | open |
-| South America | Cartagena | the Spanish stronghold | de Pointis 1697 |
-| South America | Maracaibo | buccaneer territory, cacao, smuggling | Morgan 1669 |
-| South America | Salvador da Bahia | sugar, tobacco, the Africa run | Roberts' Brazil prize 1719 |
-| South America | Belém | the Amazon's gate | founded 1616 |
-| South America, candidate | Rio de Janeiro | gold, the fleet | Duguay-Trouin's ransom 1711 |
-| South America, candidate | Essequibo (the Guianas) | Dutch river posts | fits |
-| Europe | Bristol | Atlantic merchants, privateers, the slave trade | fits |
-| Europe | London | finance, the Navy, the Company | fits |
-| Europe | Cadiz | the fleets' port | fits |
-| Europe | Lisbon | Brazil's gold and sugar | fits |
-| Europe | Amsterdam | banking, the companies | fits |
-| Europe | Saint-Malo | the corsairs | Duguay-Trouin |
-| Europe, candidate | Nantes | sugar refining, the slave trade | fits |
-| Europe, candidate | Cork | provisions | fits |
+Twenty-nine ports verified: 23 fit, 6 fit with a caveat, none outside the period. The anchor quotes are from Johnson
+and Exquemelin on Gutenberg; populations and several goods lists are open.
 
-Also on the record and not yet placed: Portobelo (Morgan 1668) and Panama (1671).
+| Region | Node | What it was, 1650–1730 | Goods out / in | Pirates, privateers, navies | Verdict |
+|---|---|---|---|---|---|
+| North America | St Augustine | a Spanish presidio; the Castillo begun 1672; about 200 regulars and 1,500 civilians in 1702 | nothing of note out; the situado in (open) | Searles sacked it May 1668; Moore's siege 10 Nov–30 Dec 1702 | fits |
+| North America | Boston | the largest colonial town (10,567 in 1722); charter revoked 1684, Andros overthrown 1689 | dried cod to Iberia and the islands, timber, ships, rum; sugar and molasses in | Kidd arrested there 6 July 1699; Quelch hanged 30 June 1704 | fits |
+| North America | Philadelphia | founded 1682; about 2,500 by 1701 | grain, flour, lumber to the islands; sugar in | Markham accused of sheltering pirates 1693–99 | fits with a caveat: young in 1700 |
+| North America | New York | English from 1664; about 6,000 c. 1700 | furs, farm produce; slaves in (the largest importer of the 1690s), pirates' goods | Fletcher's dealings with Tew; the Pirate Round's home port | fits |
+| North America | Norfolk (Chesapeake) | charter 1682, incorporated 1705; Hampton tiny | tobacco, corn, timber | Blackbeard's head at Hampton (Maynard 1718) | fits with a caveat: small |
+| North America | Charleston | founded 1670 | rice, deerskins, naval stores | Blackbeard "lay off the Bar of Charles-Town for five or six Days" (1718); Bonnet hanged 10 Dec 1718 | fits |
+| North America, candidate | Newport | 1639; 2,203 in 1708; Rhode Island's chief port | rum (22 of 30 distilleries by 1764), horses; molasses in | the Greyhound "carried in their Prize to Rhode Island"; 25 hanged 19 July 1723 | fits |
+| North America, candidate | New Orleans | early 1718; "a hundred wretched hovels" (1721); capital 1722 | nothing of scale before 1730 | none found | fits with a caveat: the end of the period |
+| Mexico | Veracruz | New Spain's chief port; the flota twice a year; San Juan de Ulúa | silver and gold out; wine, wheat, cloth, slaves in; cochineal and mercury open | van Hoorn, de Graaf and Grammont sacked it 17 May 1683 | fits |
+| Mexico | Campeche | Yucatán's main port; walls 1686–1704 after the raids | logwood, salt; wax and cotton as tribute | Myngs' 14 ships and 1,400 men Feb 1663; de Graaf and Grammont from 6 July 1685 | fits |
+| Mexico | Laguna de Términos | the logwood camps; pirates' refuge "about 200 years" | logwood | the Spanish cleared Isla de Tris 16 July 1717 | fits |
+| Mexico, candidate | Bacalar | razed 1652 by Diego el Mulato; the fort 1729; resettled 1733–35 | nothing before the fort | the raiders came through the lagoon's channels | fits with a caveat: empty for most of the period |
+| Mexico, candidate | Sisal | Mérida's landing; a legal port only in 1811 | cotton, dyewood, tobacco, cochineal (colonial, undated) | none | fits with a caveat: a landing, not a port |
+| South America | Cartagena | the walled city; San Felipe finished 1654; the Tierra Firme fleet and the asiento market | silver and gold out; slaves and European goods in | de Pointis and du Casse took it 6–24 May 1697 | fits |
+| South America | Maracaibo | refounded 1574; its lake and narrow entrance | cacao (as a prize cargo), plate, hides and tobacco open | L'Olonnais 1667, Morgan March 1669, Grammont June 1678 | fits |
+| South America | Salvador da Bahia | the capital of Portuguese America to 1763; the archbishop's seat | sugar, roll tobacco, cachaça; slaves in from Mina and Angola | Roberts took the Sagrada Família off Bahia 1719 | fits |
+| South America | Belém | 1616; city 1655; the State of Maranhão's governors from the 1670s | the drogas do sertão: cacao "the most lucrative", Brazil nut, cloves of the forest | none | fits with a caveat: forest produce, no raids |
+| South America, candidate | Rio de Janeiro | the gold port after 1693–95; the royal fifth from 1699 | gold, sugar; slaves in | Duguay-Trouin took and ransomed it 12–22 Sept 1711 | fits |
+| South America, candidate | Essequibo | Fort Kyk-Over-Al 1616; Zeeland's colony; small | cotton, indigo, cacao | none | fits |
+| Also on the record | Portobelo and Panama | the fair; Panama "merchants vastly rich", 10,000 people in 1670 | Peruvian silver crossing | Morgan took Portobelo 1668 ("If our number is small, our hearts are great") and Panama 28 Jan 1671 | fits; unplaced |
+| Europe | Bristol | England's second city; the Merchant Venturers; slaving from 1698 | copper and brass goods, gunpowder, guns, textiles, tools out; sugar, tobacco, rum, rice, cotton, indigo, cacao in | Rogers sailed 1 Aug 1708; Blackbeard born there | fits |
+| Europe | London | 550,000–600,000; the Company, the Admiralty court | everything: the bulk of England's trade | Kidd hanged at Wapping 23 May 1701 | fits |
+| Europe | Cadiz | the fleets' home port; the Casa de Contratación from 1717 | wine, salt, re-exported textiles out; silver in | Rooke's landing repulsed 1702 | fits |
+| Europe | Lisbon | the Braganza capital; the royal fifth from 1699 | cloth and metal goods out to Brazil; gold, sugar, tobacco in | — | fits |
+| Europe | Amsterdam | about 200,000; the Bank, the exchange, the companies | Baltic grain and timber, herring, spices and silk, the Atlantic's goods | — | fits |
+| Europe | Saint-Malo | the walled corsair city, "a nest of privateers" | cod, prizes; the South Sea trade open | Duguay-Trouin (born there 1673); Benbow's "Infernal" 1693 | fits |
+| Europe, candidate | Nantes | France's largest port by 1700; slaving from 1706 (42% of the French trade) | salt, wine, textiles out; sugar in from the 1640s, rum, tobacco, indigo, coffee, cacao | — | fits |
+| Europe, candidate | Cork | Marlborough's siege 1690; about 5,000 | butter and beef to Britain, France and the Caribbean, wool, tallow, hides | — | fits |
 
 ## 5. How the data carries the map
 
@@ -181,4 +184,5 @@ region and origin; the rest is open until the balance lane fills it.
 
 | Date | Change | Who |
 |---|---|---|
-| 2026-10-29 | Created from Rex's six regional lists: the count, the Caribbean's fifty with verdicts, the five African settings on one spectrum from period sources, the mainland and Europe pending verification, the data plan | Rex (decision); research session |
+| 2026-10-29 | Created from Rex's six regional lists: the count, the Caribbean's fifty with verdicts, the five African settings on one spectrum from period sources, the mainland and Europe, the data plan | Rex (decision); research session |
+| 2026-10-29 | §4 filled from the mainland and Europe verification: 29 ports, 23 fit, 6 with a caveat, none outside; Portobelo and Panama noted | research session |
