@@ -16,7 +16,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 DATA = HERE / "data"
-DOCS = list(HERE.glob("*.md")) + list((HERE.parent / "world").glob("*.md"))
+DOCS = list(HERE.glob("*.md")) + list((HERE.parent / "world").glob("*.md")) + [HERE.parent / "SOURCES.md"]
 MARK = {"rex": "**Rex**", "proposed": "proposed", "open": "**open**", "outside": "proposed (outside AI)", "science": "science", "history": "history", "model": "model", "fiction": "fiction"}
 
 

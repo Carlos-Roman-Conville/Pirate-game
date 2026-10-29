@@ -1,0 +1,112 @@
+{
+  "_about": "Tables for body/BODY.md, the integration hub: the shared character body record, the capability outputs STATS.md and COMBAT.md read, the overnight tick order, the states of being as physiological profiles, and the interaction chains the dashboard lets Rex inspect. mark: rex | proposed | open.",
+  "record": {
+    "title": "The shared body record (one per active character; the fields each subsystem owns)",
+    "kind": "model", "conf": "medium",
+    "source": "ChatGPT's principle, agreed by the combat keeper and the brief: one shared character state, specialised modules; each subsystem computes its own values, BODY.md combines them (proposed, outside AI). Field names are the keeper's.",
+    "columns": ["Field group", "Owner doc", "Fields", "Mark"],
+    "rows": [
+      ["identity", "STATS.md", "sex, age, height_cm, personality type, genetic min and max per attribute (per limb: open)", "rex (min-max), proposed (fields)"],
+      ["limbs", "MUSCULAR.md, MEDICINE.md", "per arm and leg: groups[] (development, fatigue, condition, stimulus), wounds[], caps (permanent), present (false after amputation)", "rex (per limb), proposed (fields)"],
+      ["whole", "PHYSIOLOGY.md", "fitness, cardioFatigue, aerobic_today, sleepDebt, alertness, coreTemp, waterDeficit, fatigueDay, heatAcclim, seaLegs", "proposed"],
+      ["fuel", "NUTRITION.md", "glycogen, fatMass, leanMass, satiation, energyBalance, pools{vit_c, b1, b3, a, iron, sodium, potassium, zinc, ...}", "rex (that they exist), proposed (fields)"],
+      ["conditions", "MEDICINE.md", "conditions[] (id, stage, day, severity), bloodLoss, pain, immunity{}", "proposed"],
+      ["mind (read, never written here)", "PIRATE.md 7, STATS.md 3 to 5", "mood, madness, hearts, respect, sliders, trust, memories", "rex"],
+      ["being", "COMBAT.md 4e, BODY.md 6", "stateOfBeing (human default), frozenAt (for resurrected forms)", "rex (the forms), proposed (fields)"],
+      ["level", "this file", "simLevel: active | discovered | aggregate", "proposed (outside AI)"]
+    ]
+  },
+  "capabilities": {
+    "title": "The capability outputs: the only numbers STATS.md and COMBAT.md read from the body",
+    "kind": "model", "conf": "medium",
+    "source": "Rex: physical attributes per limb; Endurance, Constitution, Agility whole-body; the function attributes in the head; hit locations dip what they house; Endurance the pool, Efficiency the spend (COMBAT.md 4a, 6a). STATS.md 4: performance = skill x attribute factor (today) x state. The formulas are the keeper's combination of the subsystem outputs.",
+    "columns": ["Output", "Formula (each factor 1.0 when healthy)", "Inputs from", "Mark"],
+    "rows": [
+      ["Strength_today(limb)", "Strength_attr(limb) x muscleFactor(limb) x woundDip(limb) x coldFactor x hydrationFactor(Strength) x capFactor(limb); Strength_attr computed from the limb's groups if Rex picks 'compute' (MUSCULAR 8), else stored", "MUSCULAR, MEDICINE, PHYSIOLOGY", "proposed"],
+      ["Dexterity_today(limb)", "Dexterity_attr(limb) x woundDip(limb) x coldFactor(Dex) x painFactor(limb) x drinkFactor x muscleFatigueCap(limb)", "MEDICINE, PHYSIOLOGY, STATS state", "proposed"],
+      ["Reflexes_today(limb)", "Reflexes_attr(limb) x alertness x drinkFactor x woundDip(limb) x coldFactor", "PHYSIOLOGY, MEDICINE", "proposed"],
+      ["Movement (tiles)", "MUSCULAR 8 movement row: the weaker leg limits; x alertness x heatState x load", "MUSCULAR, PHYSIOLOGY", "proposed (outside AI shape), proposed (formula)"],
+      ["Endurance pool ceiling", "Endurance_attr x (aerobic_today / 40)", "PHYSIOLOGY 6", "rex (pool), proposed (formula)"],
+      ["Endurance pool now", "ceiling x (1 - 0.5 fatigueDay) x alertness x hydrationFactor x glycogenFactor x feverFactor x bloodFactor x heatFactor", "PHYSIOLOGY, NUTRITION, MEDICINE", "rex (pool), proposed (formula)"],
+      ["Efficiency", "Efficiency_attr (Te): untouched by the body except alertness x (Rex: the spend is Efficiency's; the keeper proposes only that exhaustion makes a character waste motion: x alertness, open)", "STATS", "rex (attribute), open (the alertness factor)"],
+      ["Constitution_today", "Constitution_attr x bloodFactor x nutritionFactor x torsoWoundDip", "MEDICINE, NUTRITION", "proposed"],
+      ["Agility_today", "Agility_attr x legsFactor (min leg condition) x balanceFactor (glute_med, deep_core fatigue) x alertness x drinkFactor x seaLegs", "MUSCULAR, PHYSIOLOGY", "proposed"],
+      ["Head attributes today (Eyesight Si, Perception Se, Pattern Recognition Ne, Hearing Fe, Intuition Ni, Spatial Reasoning Ti, Wits, Memory, Taste and smell)", "attr x alertness x circadian x headWoundDip x feverFactor x (Eyesight: light from the map, COMBAT 6; night blindness from vitamin A)", "PHYSIOLOGY, MEDICINE, NUTRITION, the map", "rex (the attributes), proposed (factors)"],
+      ["Poise (Fi)", "Poise_attr x painFactor? (open: Rex's Poise resists flinching from strikes; whether pain feeds it is MEDICINE open 3)", "STATS", "rex (attribute), open"],
+      ["Nerve", "Nerve_attr x alertness x drinkFactor(+) (rum raises Nerve read, NUTRITION boosts: fiction, open)", "STATS, NUTRITION", "proposed"],
+      ["Work capacity (duties)", "min over the duty's activation groups of (force available / force required) x fatigueDay x heatState x alertness", "MUSCULAR 3, PHYSIOLOGY", "proposed"],
+      ["state (STATS 4)", "mood x madness x drink x fatigue x sickness x injury, each mapped to 0.5 to 1.0; computed here once", "the crew engine (mood, madness), this file (the rest)", "proposed (STATS 4 proposed the shape)"],
+      ["Accident chance (a fall, a burn, a cut)", "base(place hazard, ENVIRONMENT) x (2 - alertness) x (1 + fatigueDay) x drinkFactor(-) x seaState", "ENVIRONMENT, PHYSIOLOGY", "proposed"],
+      ["Appearance (the visible face for the art keeper)", "build (lean mass, fat mass), scars and missing parts, pallor (blood, anaemia), jaundice, sunburn, sweat, bandages", "all", "proposed"]
+    ]
+  },
+  "tick": {
+    "title": "The overnight tick: order of integration",
+    "kind": "model", "conf": "medium",
+    "source": "The game's day loop (PIRATE.md 5) and the alignment engine's sleep (ALIGNMENT.md 5): the town transforms at the same sleep. Order chosen so each step reads only finished inputs.",
+    "columns": ["Step", "Doc", "What happens", "Mark"],
+    "rows": [
+      [1, "world/ENVIRONMENT.md", "tomorrow's weather drawn; tonight's exposure (wet, cold, mosquitoes) for where each character sleeps", "proposed"],
+      [2, "world/ECOLOGY.md, world/POPULATION.md", "stocks, fields and settlements advance one day (the visited town) or a batch (distant ones)", "proposed"],
+      [3, "PHYSIOLOGY.md", "sleep blocks from the roster; sleep debt and alertness; core temperature overnight; Banister decay plus the day's load; whole-body fatigue reset", "proposed"],
+      [4, "NUTRITION.md", "the day's meals summed; energy balance settled into fat and glycogen; nutrient pools filled or drained; deficiency clocks advanced; spoilage", "proposed"],
+      [5, "MUSCULAR.md", "fatigue recovers by 3CC R overnight; stimulus converts to development where the rest, protein and energy gates allow; disuse decay; DOMS", "proposed"],
+      [6, "MEDICINE.md", "exposure rolls (catching); conditions advance (incubation, course, death rolls); wounds heal by their modified clock; infection and sepsis rolls; blood regenerates", "proposed"],
+      [7, "BODY.md", "capabilities recomputed from the new states; permanent caps applied", "proposed"],
+      [8, "PSYCHOLOGY.md", "pushes on mood, madness, respect and the sliders handed to the crew engine", "proposed"],
+      [9, "the crew engine and the town engine", "their own sleep: moods, madness acts, the town's transformations (ALIGNMENT.md 5); the waking screen's events (a sail torn, a crew mate sick: DUTIES.md morning events)", "rex (the overnight rule), proposed (order)"]
+    ]
+  },
+  "states_of_being": {
+    "title": "States of being as physiological profiles on the same architecture",
+    "kind": "fiction", "conf": "low",
+    "source": "Rex (COMBAT.md 4e, 2026-10-29): resurrection by faction ends the storyline and gives a stronger, frozen form: Atlanteans a mecha AI (memories, thoughts, beliefs frozen; mecha upgrades), the ghost faction a ghost, free pirates a voodoo zombie, Imperials an angel, merfolk undecided; the Cthulhu cult makes a fish person, the devil cult a demon, a chaotic-evil kidnapping leaves them missing; ghosts have their own physiological needs and desires. Each form as a profile on the body architecture is ChatGPT's (proposed, outside AI). The profile contents below are the keeper's placeholders for the story keeper and Rex.",
+    "columns": ["State", "Who gives it (Rex)", "Fuel (NUTRITION)", "Sleep (PHYSIOLOGY)", "Heat and cold", "Disease and wounds (MEDICINE)", "Muscle and training (MUSCULAR)", "Mind (PSYCHOLOGY)", "Stronger how (Rex: a stronger form)", "Mark"],
+    "rows": [
+      ["Human", "birth", "food, water, salt: all of NUTRITION", "8 h; the watches", "the full model", "the full list", "trains by what you do", "the full crew psychology", "-", "rex (default)"],
+      ["Ghost", "the Ghost Fleet, or death by the ghost rule", "'ghosts have their own physiological needs and desires' (Rex): proposed a need for attachment (a place, a person, an unfinished thing) that drains like hunger", "none; stronger at night (fiction)", "none", "no disease; no bleeding; 'wounds' are dispersal, recovered by returning to the attachment", "fixed at death; no training", "frozen at death (Rex); reads only the pushes that touch its attachment", "passes walls (COMBAT 6: a detection and movement rule, combat keeper's); cannot carry", "rex (exists), open (needs)"],
+      ["Mecha AI (Atlantean)", "the Atlanteans", "power: a charge the Atlanteans sell or a sun-fed cell (fiction, open)", "none; a shutdown to recharge", "overheats under heavy work (a heatState of its own); cold-proof", "no disease; damage is wear, repaired with parts (an economy good, open), not healed", "no muscle: fixed strength per limb, upgraded by parts (Rex: mecha upgrades)", "memories, thoughts, beliefs frozen (Rex); no mood pushes", "strength and senses by upgrade; immune to fatigue", "rex (form), open (fuel, parts)"],
+      ["Voodoo zombie (free pirates)", "the Free Pirates", "ritual upkeep (ChatGPT): a rite each week by a houngan, else decay", "none", "indifferent", "no pain, no shock; rots: a decay clock in place of healing; no disease", "fixed; cannot train; does not tire", "frozen; obeys", "never tires; no pain", "rex (form), open (upkeep)"],
+      ["Angel (Imperials, the orderly)", "the Imperials", "'divine energy by alignment' (ChatGPT): drains when acting against the orderly good, refills in a church", "little", "none", "immune; heals fast; harmed by the unholy (fiction)", "fixed high", "frozen; serene", "heals, flies (open), strength", "rex (form), open (everything else)"],
+      ["Demon (the devil cult)", "the Devil Cult kills them", "'infernal sustenance' (ChatGPT): a need the story keeper writes", "none", "fire-proof; cold-weak", "immune; harmed by the holy", "fixed high", "memories kept, wants otherwise? (ChatGPT's question; Rex's mecha answer settles only the Atlanteans)", "strength, fear (Poise damage on others, combat keeper's)", "rex (form), open"],
+      ["Fish-person (the Cthulhu cult / Abyssal)", "the Cthulhu cult transforms them; the INTJ's test subjects", "fish; must stay wet (NUTRITION water inverted: dries out of water, a hydration clock in reverse)", "normal", "heat-weak out of water", "heals in water; period diseases of the sea (none modelled); wounds normal", "trains; swims at x2", "frozen if it came by death; living if transformed alive (ChatGPT: a transformation need not be a death)", "swims, breathes water, sees in the dark (Eyesight at night)", "rex (form), open"],
+      ["Merfolk's form", "the merfolk", "open", "open", "open", "open", "open", "open", "open", "open (Rex: not decided)"],
+      ["Missing (kidnapped by a chaotic-evil actor)", "the Criminal Pirates or any chaotic-evil kidnapper", "-", "-", "-", "-", "-", "no ghost; the person is gone; whether they can return is the story keeper's", "-", "rex (exists), open (return)"]
+    ]
+  },
+  "chains": {
+    "title": "Interaction chains the dashboard lets Rex inspect",
+    "kind": "model", "conf": "medium",
+    "source": "The brief's five chains plus the ones the docs make: each step names the doc, the variable and the direction, so a reader can follow a cause to a capability.",
+    "columns": ["Chain", "Steps (doc: variable -> effect)", "Mark"],
+    "rows": [
+      ["Food -> muscles", "NUTRITION: protein g/kg and energy balance -> MUSCULAR: conversion gate (x1.0 at 1.6 g/kg; x0.5 at 0.8; x0.1 at 0.4) -> development per group -> BODY: Strength_today(limb) -> STATS: every skill reading Strength; COMBAT: effort required per action", "proposed"],
+      ["Sleep -> recovery", "watch roster: hours slept -> PHYSIOLOGY: sleep debt, alertness -> MUSCULAR: sleep gate on conversion (x0.3 under 4 h) and R rest multiplier -> MEDICINE: healing x1.2 over 24 h debt -> BODY: Reflexes, head attributes, accident chance -> PSYCHOLOGY: mood -1/day, Volatile pressure", "proposed"],
+      ["Temperature -> hydration", "ENVIRONMENT: WBGT at the place -> PHYSIOLOGY: sweat rate 0.3 to 2.5 L/h, core drift -> waterDeficit % -> hydration thresholds (2%: Endurance x0.85) -> NUTRITION: sodium pool -1 g per litre -> MUSCULAR: cramp; MEDICINE: heat exhaustion, heat stroke -> BODY: Endurance pool, work capacity", "proposed"],
+      ["Disease -> physical capacity", "MEDICINE: exposure (hygiene x season x place) -> catch roll -> condition stage -> feverFactor, appetite x0.5, hydration drain -> NUTRITION: intake down, pools drain -> PHYSIOLOGY: alertness, aerobic x0.8 (anaemia) -> BODY: Endurance pool, work capacity, head attributes -> PSYCHOLOGY: mood -2/day; the surgeon's report", "proposed"],
+      ["Injuries -> combat", "COMBAT: hit location and damage -> MEDICINE: wound (kind, severity, bleeding class, pain) -> dips on the housed stats (Rex: arm, leg, head, torso) -> bleeding drains the Endurance pool per turn; pain and blood trigger shock (Nerve) -> BODY: Strength/Dexterity/Reflexes_today(limb), movement, head attributes -> COMBAT: accuracy, parry, movement; after: healing clock, infection, permanent caps", "proposed"],
+      ["Scurvy, start to finish", "GOODS: stores with no fresh food -> NUTRITION: vitamin C pool 1,500 mg draining 3%/day -> day 40 to 60: PSYCHOLOGY mood -1/day (lassitude) -> day 60 to 90: MEDICINE scurvy stage 2 (bleeding gums in dialogue; healing x3; old wounds reopen) -> day 90+: stage 3, death rolls -> a port with limes: pool refills, fit in a week", "rex (the mechanism), proposed (the clock)"],
+      ["Work -> fitness -> the pool", "DUTIES: a season on the pumps -> PHYSIOLOGY: MET-hours -> Banister fitness (42-day) and fatigue (7-day) -> aerobic_today -> Endurance pool ceiling; MUSCULAR: the pumping profile -> back, arms, grip development", "proposed"],
+      ["Weather -> the ship -> the body", "ENVIRONMENT: a gale -> PIRATE 5a: all hands, sail wear, leaks -> no sleep (PHYSIOLOGY debt), wet cold nights (core temperature), falls x3 (MEDICINE fractures) -> BODY: next day's work capacity down while the pumps need it most", "proposed"],
+      ["Age -> everything", "PHYSIOLOGY ageing: the maximum of each attribute falls on its curve -> STATS: the current value capped -> MUSCULAR: conversion x0.6 at 60 -> MEDICINE: healing x1.3 over 50 -> but skills never fall (Rex): the old surgeon", "rex (skills), proposed (curves)"],
+      ["A death far away (the butterfly)", "POPULATION: an epidemic in a town the crew visited -> MEDICINE: exposure for whoever was there -> a named character's fate: NOT this family's to write; the event is handed to the fate owners (BALANCE C5 32)", "rex (fates are theirs), proposed (the handoff)"]
+    ]
+  },
+  "visible_faces": {
+    "title": "How hidden stats surface (the one-line index)",
+    "kind": "fiction", "conf": "medium",
+    "source": "Rex: stats are secret; the player infers them from conversation, gossip and watching people work (PIRATE.md 7b). Every mechanic in the family names its face; this table is the index.",
+    "columns": ["Channel", "What it shows", "Owner", "Mark"],
+    "rows": [
+      ["The surgeon's morning report", "who is sick or hurt, what he calls it, what he did, his guess; honest only to his skill", "MEDICINE (text), the surgeon's Surgery skill", "proposed"],
+      ["The quartermaster's count", "days of food and water; the ration; stores spoiling", "NUTRITION, the economy", "proposed (stores are visible, stats hidden)"],
+      ["The navigator's line", "the glass, the swell, the wind, days to port", "ENVIRONMENT", "proposed"],
+      ["Dialogue on keywords (Rex's Morrowind style)", "bleeding gums, aches, hunger, fear, tiredness, grudges", "PSYCHOLOGY, MEDICINE, NUTRITION", "rex (the channel), proposed (lines)"],
+      ["Gossip", "'Jimmie fixed James's leg'; 'that port has the fever'", "PIRATE 7b", "rex"],
+      ["Watching people work (duty results)", "slow on the rigging; the line slipped; the lift did not come up; asleep on watch", "MUSCULAR, PHYSIOLOGY", "rex (the channel), proposed (results)"],
+      ["The portrait and sprite", "build, scars, bandages, pallor, jaundice, sweat, a peg leg", "the art keeper", "open (art)"],
+      ["The fight", "the Endurance pool as 'wind' (open: a bar or not); hit locations in text; a flinch", "COMBAT", "open"],
+      ["The gym", "the one place a body number may show: a lift that comes up or not", "MUSCULAR 7", "open"]
+    ]
+  }
+}
