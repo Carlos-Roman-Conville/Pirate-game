@@ -1,6 +1,6 @@
 {
   "title": "Pirate Ship: goods on the skill trees (proposed)",
-  "status": "Rex's splits of 2026-10-28 applied (Farming group; Cooking into Milling, Baking, Butchering, Preserving, Dairying, Waxworking; Tanning apart; Leatherworking added); placements still proposed",
+  "status": "Rex's splits of 2026-10-28 applied: Farming group; Cooking group; Tanning, Leatherworking, Shoemaking; Spinning, Weaving, Ropemaking, Tailoring. Placements still proposed",
   "bands": [
     {
       "key": "novice",
@@ -37,7 +37,8 @@
     "offMap": "made outside the game's Caribbean in this period (Europe, Asia, Africa, the Spanish mainland); the skill tree says where it would sit if a town ever makes it",
     "input": "needs a good from another skill (the chain the economy follows)",
     "gate": "needs another skill at some level to reach the place (Swimming for depth); that skill makes nothing",
-    "unsourced": "Rex's addition with no period source found; a design good, not a historical record"
+    "unsourced": "Rex's addition with no period source found; a design good, not a historical record",
+    "inputAny": "one of several inputs will do (a ropewalk spins its own yarn from raw fibre, or takes a spinner's)"
   },
   "groups": [
     {
@@ -143,6 +144,13 @@
               "band": "apprentice",
               "note": "Rex's addition: a crop for Perfumery. No period Caribbean source; marked unsourced",
               "unsourced": true
+            },
+            {
+              "good": 33,
+              "name": "Flax and hemp",
+              "band": "apprentice",
+              "offMap": true,
+              "note": "European fibre crops for linen and rope; no Caribbean crop in the sources"
             }
           ]
         },
@@ -636,8 +644,8 @@
           "key": "leatherworking",
           "name": "Leatherworking",
           "existing": false,
-          "covers": "goods made from leather: sacks and straps, belts and baldrics, shoes and boots, harness and saddles, gloves",
-          "why": "Added by Rex (2026-10-28) after Tanning. Shoes, boots and gloves were imported from England in the period (L), so those sit off-map; the shoemaker (cordwainer) was a seven-year trade. Leather sacks carried indigo (E).",
+          "covers": "leather goods other than footwear: sacks and straps, belts and baldrics, harness and saddles, gloves",
+          "why": "Added by Rex (2026-10-28) after Tanning. Footwear moved to Shoemaking per Rex's textile notes; four goods stay here. Gloves were imported from England (L).",
           "items": [
             {
               "good": 16,
@@ -654,14 +662,6 @@
               "note": "for the swords Ligon lists among imports (L); the pirate's gear"
             },
             {
-              "good": 35,
-              "name": "Shoes and boots",
-              "band": "journeyman",
-              "offMap": true,
-              "input": "tanning:Tanned leather",
-              "note": "'shooes, and some bootes' at £50 in Ligon's outfit (L); the cordwainer's trade"
-            },
-            {
               "good": 27,
               "name": "Harness and saddles",
               "band": "expert",
@@ -675,6 +675,54 @@
               "offMap": true,
               "input": "tanning:Tanned leather",
               "note": "'Gloves' among Ligon's imports (L)"
+            }
+          ]
+        },
+        {
+          "key": "shoemaking",
+          "name": "Shoemaking",
+          "existing": false,
+          "covers": "leather into footwear on the last; repairs",
+          "why": "Its own trade (Rex, 2026-10-28), the cordwainer's; a cobbler repairs. Shoes and boots were imported from England in the period (L), so most of it sits off-map.",
+          "items": [
+            {
+              "good": 35,
+              "name": "Sandals and repairs",
+              "band": "novice",
+              "input": "tanning:Tanned leather",
+              "note": "the cobbler's work"
+            },
+            {
+              "good": 35,
+              "name": "Common shoes",
+              "band": "apprentice",
+              "offMap": true,
+              "input": "tanning:Tanned leather",
+              "note": "'shooes' at £50 in Ligon's outfit (L)"
+            },
+            {
+              "good": 35,
+              "name": "Boots",
+              "band": "journeyman",
+              "offMap": true,
+              "input": "tanning:Tanned leather",
+              "note": "'some bootes' (L)"
+            },
+            {
+              "good": 35,
+              "name": "Riding and sea boots",
+              "band": "expert",
+              "offMap": true,
+              "input": "tanning:Tanned leather",
+              "note": "fitted; no period Caribbean maker in the sources (open)"
+            },
+            {
+              "good": 35,
+              "name": "Bespoke footwear",
+              "band": "master",
+              "offMap": true,
+              "input": "tanning:Tanned leather",
+              "note": "a design tier (open)"
             }
           ]
         },
@@ -952,52 +1000,88 @@
           ]
         },
         {
+          "key": "spinning",
+          "name": "Spinning",
+          "existing": false,
+          "covers": "fibre into yarn and thread: cotton, wool, flax, silk",
+          "why": "Split from Weaving (Rex, 2026-10-28): the spinner and the weaver were different trades. Finer and harder fibres need higher skill; the fibre itself must exist (a master cannot spin silk without silk).",
+          "items": [
+            {
+              "good": 8,
+              "name": "Cotton yarn",
+              "band": "apprentice",
+              "input": "farming:Cotton wool",
+              "note": "the island's own fibre (C81)"
+            },
+            {
+              "good": 33,
+              "name": "Wool yarn",
+              "band": "apprentice",
+              "offMap": true,
+              "input": "husbandry:Wool",
+              "note": "English wool"
+            },
+            {
+              "good": 33,
+              "name": "Linen thread",
+              "band": "journeyman",
+              "offMap": true,
+              "input": "farming:Flax and hemp",
+              "note": "for dowlas, holland and sailcloth"
+            },
+            {
+              "good": 34,
+              "name": "Silk thread",
+              "band": "expert",
+              "offMap": true,
+              "note": "Asian silk; the hardest fibre to handle"
+            }
+          ]
+        },
+        {
           "key": "weaving",
           "name": "Weaving",
           "existing": false,
-          "covers": "spinning and weaving; rope; tailoring",
-          "why": "Cloth, canvas and cordage were the naval stores pirates took most (Part 2). Ropemaking and tailoring are folded in as one-offs. Nearly all of it is off-map: the colonies imported cloth (L, BR).",
+          "covers": "yarn into cloth on the loom: cotton, linen, woollen, canvas, silk",
+          "why": "Cloth only (Rex, 2026-10-28). Nearly all of it was off-map: the colonies imported their cloth (L, BR); Massachusetts made nothing above 4s a yard (CSP).",
           "items": [
             {
-              "good": 46,
-              "name": "Cordage and cable",
+              "good": 33,
+              "name": "Cotton cloth (coarse)",
               "band": "apprentice",
-              "offMap": true,
-              "note": "the ropewalk; 'two Cables, and several Coils of Rope' taken (J)"
+              "input": "spinning:Cotton yarn",
+              "note": "under 4s a yard, the colonial ceiling (CSP)"
             },
             {
               "good": 33,
               "name": "Coarse linen (dowlas, osnaburg)",
               "band": "apprentice",
               "offMap": true,
-              "note": "1s 5d–1s 8d an ell (TR); slaves' and servants' cloth"
-            },
-            {
-              "good": 35,
-              "name": "Clothing",
-              "band": "apprentice",
-              "input": "weaving:Coarse linen (dowlas, osnaburg)",
-              "note": "tailoring folded in; a shirt at 2s 6d (CSP)"
-            },
-            {
-              "good": 46,
-              "name": "Sailcloth and canvas",
-              "band": "journeyman",
-              "offMap": true,
-              "note": "the sailmaker sews it; the weaver makes it"
+              "input": "spinning:Linen thread",
+              "note": "1s 5d–1s 8d an ell (TR); servants' and slaves' cloth"
             },
             {
               "good": 33,
               "name": "Woollens (broadcloth, duffels)",
               "band": "journeyman",
               "offMap": true,
+              "input": "spinning:Wool yarn",
               "note": "10s–23s 6d a yard (TR); duffels for the Indian trade (CSP)"
+            },
+            {
+              "good": 46,
+              "name": "Sailcloth and canvas",
+              "band": "journeyman",
+              "offMap": true,
+              "input": "spinning:Linen thread",
+              "note": "the sailmaker sews it; the weaver makes it"
             },
             {
               "good": 33,
               "name": "Fine linen (holland)",
               "band": "expert",
               "offMap": true,
+              "input": "spinning:Linen thread",
               "note": "2s 4d–2s 8d a yard (TR)"
             },
             {
@@ -1005,7 +1089,87 @@
               "name": "Silk, chintz, muslin",
               "band": "master",
               "offMap": true,
+              "input": "spinning:Silk thread",
               "note": "Asian looms; chintzes in a French prize (J)"
+            }
+          ]
+        },
+        {
+          "key": "ropemaking",
+          "name": "Ropemaking",
+          "existing": false,
+          "covers": "the ropewalk: twine, cordage, cables",
+          "why": "Its own trade (Rex, 2026-10-28). It spins its own yarn from raw hemp or takes a spinner's, so either input will do. Cables and coils of rope were among the first things pirates took (J).",
+          "items": [
+            {
+              "good": 46,
+              "name": "Twine and small stuff",
+              "band": "novice",
+              "inputAny": [
+                "farming:Flax and hemp",
+                "spinning:Cotton yarn"
+              ],
+              "note": "marline, spun yarn; the sailmaker's twine"
+            },
+            {
+              "good": 46,
+              "name": "Cordage (running rigging)",
+              "band": "apprentice",
+              "offMap": true,
+              "inputAny": [
+                "farming:Flax and hemp",
+                "spinning:Linen thread"
+              ],
+              "note": "'several Coils of Rope' taken from the King Solomon (J)"
+            },
+            {
+              "good": 46,
+              "name": "Cables and hawsers",
+              "band": "journeyman",
+              "offMap": true,
+              "inputAny": [
+                "farming:Flax and hemp",
+                "spinning:Linen thread"
+              ],
+              "note": "'two Cables' (J); the anchor cable is the ropewalk's largest work"
+            }
+          ]
+        },
+        {
+          "key": "tailoring",
+          "name": "Tailoring",
+          "existing": false,
+          "covers": "cloth into fitted clothes; sewing, embroidery, knitting and repair as activities inside it",
+          "why": "Split from Weaving (Rex, 2026-10-28): the tailor does not make cloth. Sailmaking stays its own ship skill (STATS.md).",
+          "items": [
+            {
+              "good": 35,
+              "name": "Shirts and trousers (coarse)",
+              "band": "apprentice",
+              "input": "weaving:Coarse linen (dowlas, osnaburg)",
+              "note": "a servant's shirt at 2s 6d (CSP)"
+            },
+            {
+              "good": 35,
+              "name": "Coats and fitted clothes",
+              "band": "journeyman",
+              "input": "weaving:Woollens (broadcloth, duffels)",
+              "note": "a cloth coat at 15s 6d (CSP)"
+            },
+            {
+              "good": 35,
+              "name": "Fine dress, embroidery",
+              "band": "expert",
+              "input": "weaving:Fine linen (holland)",
+              "note": "'a suit of clothes, a wig' taken at the King Solomon (J)"
+            },
+            {
+              "good": 34,
+              "name": "Silk dress",
+              "band": "master",
+              "offMap": true,
+              "input": "weaving:Silk, chintz, muslin",
+              "note": "silk and linen shared out at Maracaibo (E)"
             }
           ]
         },
@@ -1055,5 +1219,6 @@
       "note": "a mix of the goods above, not a good"
     }
   ],
-  "bandsSource": "research-trade-grades.md (shared notes folder): guild ladder, sea ranks, Ligon's overseers and tradesmen; 'novice' and 'expert' found as no grade"
+  "bandsSource": "research-trade-grades.md (shared notes folder): guild ladder, sea ranks, Ligon's overseers and tradesmen; 'novice' and 'expert' found as no grade",
+  "rule": "Every recipe needs materials + equipment + a minimum skill band (Rex, 2026-10-28). Skill never creates a material: a master spinner cannot spin silk without silk."
 }
