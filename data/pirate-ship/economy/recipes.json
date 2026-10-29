@@ -1,0 +1,2658 @@
+{
+  "_about": "Built by files/pirate-ship/economy/build-economy-data.py from skill-tree.json and GOODS.md. Do not edit by hand. Marks: source = a period record (GOODS.md Part 4); proposed = this session's placement for Rex; unsourced = Rex's design addition with no period source; estimate = worked out from sourced inputs (GOODS.md 1j). basePrice is null everywhere: the balance lane sets it; the sourced price text is beside it. The five per-settlement numbers (stock, consumption per day, target reserve, production per day, base price) belong to a ports file that does not exist yet (ALIGNMENT §10).",
+  "flags": {
+    "offMap": "made outside the game's Caribbean in this period (Europe, Asia, Africa, the Spanish mainland); the skill tree says where it would sit if a town ever makes it",
+    "input": "needs a good from another skill (the chain the economy follows)",
+    "gate": "needs another skill at some level to reach the place (Swimming for depth); that skill makes nothing",
+    "unsourced": "Rex's addition with no period source found; a design good, not a historical record",
+    "inputAny": "one of several inputs will do (a ropewalk spins its own yarn from raw fibre, or takes a spinner's)",
+    "inputs": "every listed input is needed (gunpowder takes all three)",
+    "service": "a service, not a traded good: the skill is used on people or ships, and the chip shows what that level can do"
+  },
+  "recipes": [
+    {
+      "id": "farming-pease",
+      "skill": "farming",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "pease",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "a field crop any hand could grow and pick"
+    },
+    {
+      "id": "farming-grain-for-meal-and-flour",
+      "skill": "farming",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "grain-for-meal-and-flour",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "planting and reaping; milling is Cooking"
+    },
+    {
+      "id": "farming-cotton-wool",
+      "skill": "farming",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "cotton-wool",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "picking and ginning before bagging (C81)"
+    },
+    {
+      "id": "farming-ginger",
+      "skill": "farming",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "ginger",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the root is scraped so it stays white and does not sprout (L)"
+    },
+    {
+      "id": "farming-tobacco-grown",
+      "skill": "farming",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "tobacco-grown",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "topping and suckering the plant; the cure is the harder part"
+    },
+    {
+      "id": "farming-cacao-grown",
+      "skill": "farming",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "cacao-grown",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the tree; Jamaica's crops failed to a 'blast' (PT)"
+    },
+    {
+      "id": "farming-sugar-cane",
+      "skill": "farming",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "sugar-cane",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "planting, cutting and carting to the mill within a day of cutting (L); the boiling is Sugar boiling"
+    },
+    {
+      "id": "farming-rice",
+      "skill": "farming",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "rice",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "wet-field rice took skill the Carolina planters bought from West Africa (SCR)"
+    },
+    {
+      "id": "farming-tobacco-cured-and-packed",
+      "skill": "farming",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "tobacco-cured-and-packed",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "curing, prizing into the hogshead to at least 800 lb (VA30)"
+    },
+    {
+      "id": "farming-pimento",
+      "skill": "farming",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "pimento",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "picked green and sun-dried, kept from the dew (EB78)"
+    },
+    {
+      "id": "farming-annatto",
+      "skill": "farming",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "annatto",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the crop; the paste is Dye Making (D)"
+    },
+    {
+      "id": "farming-cacao-sweated-and-dried",
+      "skill": "farming",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "cacao-sweated-and-dried",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "sweated under plantain leaves, three or four weeks' sun (PT)"
+    },
+    {
+      "id": "farming-indigo-plant",
+      "skill": "farming",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "indigo-plant",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the crop; the vats are Dye Making"
+    },
+    {
+      "id": "farming-nopal-and-cochineal",
+      "skill": "farming",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "nopal-and-cochineal",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the insect reared on the cactus in Oaxaca (COC); the dye is Dye Making"
+    },
+    {
+      "id": "farming-aromatic-flowers-and-herbs",
+      "skill": "farming",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "aromatic-flowers-and-herbs",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Rex's addition: a crop for Perfumery. No period Caribbean source; marked unsourced"
+    },
+    {
+      "id": "farming-flax-and-hemp",
+      "skill": "farming",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "flax-and-hemp",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "European fibre crops for linen and rope; no Caribbean crop in the sources"
+    },
+    {
+      "id": "farming-physic-garden",
+      "skill": "farming",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "physic-garden",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the herbs an apothecary works from; Culpeper's book was for householders (research). Caribbean physic gardens: open"
+    },
+    {
+      "id": "husbandry-horses",
+      "skill": "husbandry",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "horses",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "bred in New England and shipped at about £12 each (PY)"
+    },
+    {
+      "id": "husbandry-cattle-and-hogs",
+      "skill": "husbandry",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "cattle-and-hogs",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the meat for Cooking's salt beef and pork"
+    },
+    {
+      "id": "husbandry-milk",
+      "skill": "husbandry",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "milk",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "for Cooking's cheese and butter"
+    },
+    {
+      "id": "husbandry-wool",
+      "skill": "husbandry",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "wool",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "English sheep; no Caribbean flock in the sources"
+    },
+    {
+      "id": "husbandry-turtle-crawls",
+      "skill": "husbandry",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "turtle-crawls",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "penned at Port Royal until sold (D); catching them is Fishing"
+    },
+    {
+      "id": "marine-salt",
+      "skill": "marine",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "salt",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "sun does the work; raking the pans was ordinary labour (D, TC)"
+    },
+    {
+      "id": "marine-pearls",
+      "skill": "marine",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "pearls",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": "Swimming",
+      "note": "the Rancheria banks; needs Swimming for the depth (E)"
+    },
+    {
+      "id": "marine-tortoise-shell",
+      "skill": "marine",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "tortoise-shell",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the hawksbill's plates (method open)"
+    },
+    {
+      "id": "marine-cowries-and-shells",
+      "skill": "marine",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "cowries-and-shells",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Maldives shells, a currency (UWF)"
+    },
+    {
+      "id": "marine-seaweed",
+      "skill": "marine",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "seaweed",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Rex's addition; no period trade in the sources, marked unsourced"
+    },
+    {
+      "id": "hunting-wild-cattle-and-hog-carcasses",
+      "skill": "hunting",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "wild-cattle-and-hog-carcasses",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Hispaniola's wild herds (E2)"
+    },
+    {
+      "id": "hunting-deer-carcasses",
+      "skill": "hunting",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "deer-carcasses",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Carolina's trade with the Indian nations (CCR)"
+    },
+    {
+      "id": "hunting-ivory",
+      "skill": "hunting",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "ivory",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'Elephant's Teeth' from the Guinea coast (J)"
+    },
+    {
+      "id": "fishing-fresh-fish",
+      "skill": "fishing",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "fresh-fish",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the minigame's catch"
+    },
+    {
+      "id": "fishing-turtle-live",
+      "skill": "fishing",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "turtle-live",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "netted at the Caymans and kept alive in crawls at Port Royal (D, HA)"
+    },
+    {
+      "id": "woodcutting-lumber",
+      "skill": "woodcutting",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "lumber",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "felling and hauling; any hand with an axe"
+    },
+    {
+      "id": "woodcutting-logwood",
+      "skill": "woodcutting",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "logwood",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "cut and chipped at the Campeche camps, sold at £5 a ton in goods (DV)"
+    },
+    {
+      "id": "woodcutting-staves-and-hoops",
+      "skill": "woodcutting",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "staves-and-hoops",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "riving stave bolts for the cooper; Connecticut's cargo to Barbados (CT)"
+    },
+    {
+      "id": "woodcutting-shingles",
+      "skill": "woodcutting",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "shingles",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "rived and shaved; late evidence only (CTH)"
+    },
+    {
+      "id": "woodcutting-other-dyewoods-lignum-vitae",
+      "skill": "woodcutting",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "other-dyewoods-lignum-vitae",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "as logwood; fustic and brazeletto in the 1681 return (C81)"
+    },
+    {
+      "id": "woodcutting-tar-pitch-turpentine",
+      "skill": "woodcutting",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "tar-pitch-turpentine",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the kiln burn takes judgement; 40,000 barrels a year by 1720 (SCN)"
+    },
+    {
+      "id": "woodcutting-mahogany",
+      "skill": "woodcutting",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "mahogany",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "choosing, felling and squaring the great logs; 'bulky and relatively light' (MH)"
+    },
+    {
+      "id": "woodcutting-charcoal",
+      "skill": "woodcutting",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "charcoal",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "lumber"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the collier's clamp; Rex keeps charcoal burning inside Woodcutting (2026-10-28)"
+    },
+    {
+      "id": "mining-nitre-earth",
+      "skill": "mining",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "nitre-earth",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "nitrate-bearing earth from dovecotes, stables and caves; the saltpetre-men's raw stuff. Caribbean source open"
+    },
+    {
+      "id": "mining-sulphur",
+      "skill": "mining",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "sulphur",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "dug from volcanic deposits; Sicily supplied Europe. Nothing in the Caribbean sources (open)"
+    },
+    {
+      "id": "mining-ore-and-lead",
+      "skill": "mining",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "ore-and-lead",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "lead for shot; no Caribbean mine in the sources"
+    },
+    {
+      "id": "mining-bar-iron",
+      "skill": "mining",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "bar-iron",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "£16 10s–£18 a ton in London (TR); 'voyage iron' to Africa (JS)"
+    },
+    {
+      "id": "mining-steel-brass-pewter",
+      "skill": "mining",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "steel-brass-pewter",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "blister steel from Sheffield; brass from calamine; pewter from tin and lead. No colonial steel before the 1720s (research), so all off-map"
+    },
+    {
+      "id": "mining-silver",
+      "skill": "mining",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "silver",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Potosí to Portobelo; refining with mercury (WHF)"
+    },
+    {
+      "id": "mining-gold-and-gold-dust",
+      "skill": "mining",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "gold-and-gold-dust",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Brazil and the Guinea coast; washing dust takes less than refining silver"
+    },
+    {
+      "id": "cooking-lime-juice",
+      "skill": "cooking",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "lime-juice",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "pressed and casked; 1,512 gallons to London in one month (C81)"
+    },
+    {
+      "id": "cooking-salmagundi-and-the-hot-meal",
+      "skill": "cooking",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "salmagundi-and-the-hot-meal",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "salt-beef-and-pork"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the one hot meal from the galley (DUTIES); not a traded good"
+    },
+    {
+      "id": "cooking-chocolate",
+      "skill": "cooking",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "chocolate",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "cacao-sweated-and-dried"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "roasting and grinding the nut; a Spanish taste first"
+    },
+    {
+      "id": "milling-meal",
+      "skill": "milling",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "meal",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "grain-for-meal-and-flour"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'Barrels of meale close put up' (L)"
+    },
+    {
+      "id": "milling-oatmeal",
+      "skill": "milling",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "oatmeal",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "grain-for-meal-and-flour"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Roberts took '10 Casks of Oatmeal' (J)"
+    },
+    {
+      "id": "milling-flour",
+      "skill": "milling",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "flour",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "grain-for-meal-and-flour"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "bolted fine; 196 lb to the barrel (FL)"
+    },
+    {
+      "id": "baking-bread",
+      "skill": "baking",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "bread",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "meal"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "daily bread; not a cargo"
+    },
+    {
+      "id": "baking-ship-s-biscuit",
+      "skill": "baking",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "ship-s-biscuit",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "flour"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "baked hard, twice; 16s a hundredweight (PY); well baked, it keeps for years (SV)"
+    },
+    {
+      "id": "butchering-fresh-meat",
+      "skill": "butchering",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "fresh-meat",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "cattle-and-hogs"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "for the galley and for Preserving"
+    },
+    {
+      "id": "butchering-raw-hides",
+      "skill": "butchering",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "raw-hides",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "wild-cattle-and-hog-carcasses"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "flaying clean; 'cow hides 69 ... buff hides 768' to London (C81)"
+    },
+    {
+      "id": "butchering-tallow",
+      "skill": "butchering",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "tallow",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "wild-cattle-and-hog-carcasses"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the fat rendered; sold with the hides (E2)"
+    },
+    {
+      "id": "butchering-deerskins",
+      "skill": "butchering",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "deerskins",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "deer-carcasses"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "a clean skin is worth more; 'Skinns' from Carolina (CCR)"
+    },
+    {
+      "id": "preserving-salt-fish",
+      "skill": "preserving",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "salt-fish",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "fresh-fish"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "split, salted and dried; the poor grade went to the islands (HV)"
+    },
+    {
+      "id": "preserving-boucan",
+      "skill": "preserving",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "boucan",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "fresh-meat"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "hardened with smoke for sea voyages (E2)"
+    },
+    {
+      "id": "preserving-salt-beef-and-pork",
+      "skill": "preserving",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "salt-beef-and-pork",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "fresh-meat"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "cut, brined and packed tight in barrel; a short barrel was noticed (PY)"
+    },
+    {
+      "id": "preserving-salted-boar",
+      "skill": "preserving",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "salted-boar",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "fresh-meat"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'salt it, and sell it so to the planters' (E2)"
+    },
+    {
+      "id": "dairying-butter",
+      "skill": "dairying",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "butter",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "milk"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "in firkins; weight open (ML)"
+    },
+    {
+      "id": "dairying-cheese",
+      "skill": "dairying",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "cheese",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "milk"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'a hundred-weight of Gloucester cheese' to Virginia (BR)"
+    },
+    {
+      "id": "waxworking-tallow-candles",
+      "skill": "waxworking",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "tallow-candles",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "tallow"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "dipped; they fuse in the heat (L)"
+    },
+    {
+      "id": "waxworking-wax-seals",
+      "skill": "waxworking",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "wax-seals",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "sealing wax for letters; no Caribbean source"
+    },
+    {
+      "id": "waxworking-beeswax-candles",
+      "skill": "waxworking",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "beeswax-candles",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "cleaner burning, for church and the cabin; beeswax supply in the Caribbean open"
+    },
+    {
+      "id": "waxworking-moulded-and-altar-candles",
+      "skill": "waxworking",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "moulded-and-altar-candles",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "consistent sizes, ceremonial forms"
+    },
+    {
+      "id": "waxworking-wax-portraits-and-anatomical-models",
+      "skill": "waxworking",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "wax-portraits-and-anatomical-models",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "a European art of the period; unsourced here"
+    },
+    {
+      "id": "waxworking-lifelike-wax-figures",
+      "skill": "waxworking",
+      "band": "master",
+      "minLevel": 100,
+      "output": "lifelike-wax-figures",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the INFP's signature work (story: brothel, wax figures); a design good"
+    },
+    {
+      "id": "tanning-dressed-deerskin",
+      "skill": "tanning",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "dressed-deerskin",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "deerskins"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the Carolina export went raw or half-dressed (open)"
+    },
+    {
+      "id": "tanning-tanned-leather",
+      "skill": "tanning",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "tanned-leather",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "raw-hides"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "bark pits take months; no Caribbean tannery in the sources, so off-map in practice"
+    },
+    {
+      "id": "leatherworking-leather-sacks-and-straps",
+      "skill": "leatherworking",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "leather-sacks-and-straps",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "tanned-leather"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "indigo moved in 'leather sacks' at Maracaibo (E)"
+    },
+    {
+      "id": "leatherworking-belts-baldrics-scabbards",
+      "skill": "leatherworking",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "belts-baldrics-scabbards",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "tanned-leather"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "for the swords Ligon lists among imports (L); the pirate's gear"
+    },
+    {
+      "id": "leatherworking-harness-and-saddles",
+      "skill": "leatherworking",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "harness-and-saddles",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "tanned-leather"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "for the horse trade (PY); no period Caribbean saddler in the sources: open"
+    },
+    {
+      "id": "leatherworking-gloves-and-fine-leather",
+      "skill": "leatherworking",
+      "band": "master",
+      "minLevel": 100,
+      "output": "gloves-and-fine-leather",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "tanned-leather"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'Gloves' among Ligon's imports (L)"
+    },
+    {
+      "id": "shoemaking-sandals-and-repairs",
+      "skill": "shoemaking",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "sandals-and-repairs",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "tanned-leather"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the cobbler's work"
+    },
+    {
+      "id": "shoemaking-common-shoes",
+      "skill": "shoemaking",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "common-shoes",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "tanned-leather"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'shooes' at £50 in Ligon's outfit (L)"
+    },
+    {
+      "id": "shoemaking-boots",
+      "skill": "shoemaking",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "boots",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "tanned-leather"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'some bootes' (L)"
+    },
+    {
+      "id": "shoemaking-riding-and-sea-boots",
+      "skill": "shoemaking",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "riding-and-sea-boots",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "tanned-leather"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "fitted; no period Caribbean maker in the sources (open)"
+    },
+    {
+      "id": "shoemaking-bespoke-footwear",
+      "skill": "shoemaking",
+      "band": "master",
+      "minLevel": 100,
+      "output": "bespoke-footwear",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "tanned-leather"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "a design tier (open)"
+    },
+    {
+      "id": "sugar-boiling-molasses",
+      "skill": "sugar-boiling",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "molasses",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "sugar-cane"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "what drains from the pots; the apprentice's share of the work (L)"
+    },
+    {
+      "id": "sugar-boiling-muscovado-sugar",
+      "skill": "sugar-boiling",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "muscovado-sugar",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "sugar-cane"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "boiling through the coppers and striking; 3d a pound on Barbados (L)"
+    },
+    {
+      "id": "sugar-boiling-clayed-sugar",
+      "skill": "sugar-boiling",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "clayed-sugar",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "muscovado-sugar"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "claying the pot so the molasses drains out; 20d a pound in London (L)"
+    },
+    {
+      "id": "sugar-boiling-loaf-sugar",
+      "skill": "sugar-boiling",
+      "band": "master",
+      "minLevel": 100,
+      "output": "loaf-sugar",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "muscovado-sugar"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "refined in Bristol and London cone moulds (DB1)"
+    },
+    {
+      "id": "dye-annatto-dye",
+      "skill": "dye",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "annatto-dye",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "annatto"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "seed pulp worked to a paste (D)"
+    },
+    {
+      "id": "dye-indigo-dye",
+      "skill": "dye",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "indigo-dye",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "indigo-plant"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "steeping, beating and judging the cut (C88, D)"
+    },
+    {
+      "id": "dye-cochineal-dye",
+      "skill": "dye",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "cochineal-dye",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "nopal-and-cochineal"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "killing and drying the insect; 18–45s a pound in London (TR)"
+    },
+    {
+      "id": "dye-dyed-cloth",
+      "skill": "dye",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "dyed-cloth",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "coarse-linen"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the dye bath with a mordant; needs a dye from this tree too"
+    },
+    {
+      "id": "distilling-beer",
+      "skill": "distilling",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "beer",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "grain-for-meal-and-flour"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'good English Beer' shipped out (L)"
+    },
+    {
+      "id": "distilling-aqua-vitae",
+      "skill": "distilling",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "aqua-vitae",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "molasses"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the rough first spirit from the skimmings (L)"
+    },
+    {
+      "id": "distilling-rum",
+      "skill": "distilling",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "rum",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "molasses"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "half a crown a gallon on Barbados (L); cask size open (1j)"
+    },
+    {
+      "id": "distilling-wine",
+      "skill": "distilling",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "wine",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Madeira, Fayal, Canary, claret: £8 a pipe at Jamestown (CSP)"
+    },
+    {
+      "id": "distilling-brandy",
+      "skill": "distilling",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "brandy",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "wine"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "distilled wine; thirty casks in one prize (J)"
+    },
+    {
+      "id": "refining-refined-sulphur",
+      "skill": "refining",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "refined-sulphur",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "sulphur"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "melted and skimmed"
+    },
+    {
+      "id": "refining-saltpetre",
+      "skill": "refining",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "saltpetre",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "nitre-earth"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "leached, boiled and crystallised; the hardest of the three ingredients to get right"
+    },
+    {
+      "id": "refining-reagents-and-salts",
+      "skill": "refining",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "reagents-and-salts",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "for the apothecary and the dyer; a design tier (open)"
+    },
+    {
+      "id": "powder-powder-handling-and-storage",
+      "skill": "powder",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "powder-handling-and-storage",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "keeping it dry (DUTIES: the gunner's duty)"
+    },
+    {
+      "id": "powder-common-powder",
+      "skill": "powder",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "common-powder",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "saltpetre",
+        "refined-sulphur",
+        "charcoal"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "saltpetre, sulphur and charcoal, all three"
+    },
+    {
+      "id": "powder-graded-powder",
+      "skill": "powder",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "graded-powder",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "common-powder"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "corned to grain sizes; 'five Barrels of Powder' taken by Roberts (J)"
+    },
+    {
+      "id": "powder-fine-military-powder",
+      "skill": "powder",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "fine-military-powder",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "graded-powder"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "a design tier (open)"
+    },
+    {
+      "id": "powder-masterwork-powder",
+      "skill": "powder",
+      "band": "master",
+      "minLevel": 100,
+      "output": "masterwork-powder",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "fine-military-powder"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Rex's design tier"
+    },
+    {
+      "id": "perfumery-fragrant-oils-and-waters",
+      "skill": "perfumery",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "fragrant-oils-and-waters",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "aromatic-flowers-and-herbs"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "unsourced for the Caribbean; a cultural good if one region prizes it"
+    },
+    {
+      "id": "perfumery-perfume",
+      "skill": "perfumery",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "perfume",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "fragrant-oils-and-waters"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "unsourced; the finished luxury"
+    },
+    {
+      "id": "smithing-nails",
+      "skill": "smithing",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "nails",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "bar-iron"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "6d a pound retail (TR); the Midlands nail trade was a by-employment, not a company"
+    },
+    {
+      "id": "smithing-iron-hoops",
+      "skill": "smithing",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "iron-hoops",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "bar-iron"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "for the cooper"
+    },
+    {
+      "id": "smithing-tools-hoes-axes-knives",
+      "skill": "smithing",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "tools-hoes-axes-knives",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "bar-iron"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'nails, hoes, and axes' to Virginia (BR)"
+    },
+    {
+      "id": "smithing-horseshoes",
+      "skill": "smithing",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "horseshoes",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "bar-iron"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Farriers' Company 1674; 'makes Shoes for Horses, and puts them on' (Campbell)"
+    },
+    {
+      "id": "smithing-chains-hinges-ship-s-ironwork",
+      "skill": "smithing",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "chains-hinges-ship-s-ironwork",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "bar-iron"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the ship's fittings the carpenter needs"
+    },
+    {
+      "id": "smithing-gun-barrels",
+      "skill": "smithing",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "gun-barrels",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "bar-iron"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the gunsmith bought barrels in and made the lock (Campbell)"
+    },
+    {
+      "id": "smithing-locks-and-keys",
+      "skill": "smithing",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "locks-and-keys",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "steel-brass-pewter"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'see Smith' (Campbell's index); needs ingenuity 'almost as any Branch of the Trade'"
+    },
+    {
+      "id": "smithing-anchors",
+      "skill": "smithing",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "anchors",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "bar-iron"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the anchor-smith, 'laborious and profitable Branch of the Smith Trade' (Campbell)"
+    },
+    {
+      "id": "gunsmithing-small-arms-repair",
+      "skill": "gunsmithing",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "small-arms-repair",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the ship's armourer; 'Mariner and Armourer' in a will (research-occupations.md)"
+    },
+    {
+      "id": "gunsmithing-pistols",
+      "skill": "gunsmithing",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "pistols",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "gun-barrels",
+        "planks-and-boards"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "lock, stock and barrel; the stock is the carpenter's wood"
+    },
+    {
+      "id": "gunsmithing-muskets",
+      "skill": "gunsmithing",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "muskets",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "gun-barrels",
+        "planks-and-boards"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'a great number of muskets' taken (E); proofed in London"
+    },
+    {
+      "id": "gunsmithing-fine-locks-and-fowling-pieces",
+      "skill": "gunsmithing",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "fine-locks-and-fowling-pieces",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "steel-brass-pewter"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the gunmaker's best work; a design tier (open)"
+    },
+    {
+      "id": "bladesmithing-knives-and-razors",
+      "skill": "bladesmithing",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "knives-and-razors",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "steel-brass-pewter"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the cutler's staple; surgeon's lancets too"
+    },
+    {
+      "id": "bladesmithing-cutlasses",
+      "skill": "bladesmithing",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "cutlasses",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "steel-brass-pewter"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the boarder's weapon; blades from abroad, mounted here"
+    },
+    {
+      "id": "bladesmithing-swords-mounted",
+      "skill": "bladesmithing",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "swords-mounted",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "steel-brass-pewter",
+        "belts-baldrics-scabbards"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "hilt, grip and scabbard; 'Swords, knives' shipped to Barbados (L)"
+    },
+    {
+      "id": "bladesmithing-fine-blades",
+      "skill": "bladesmithing",
+      "band": "master",
+      "minLevel": 100,
+      "output": "fine-blades",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "steel-brass-pewter"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the German smiths' work; nothing like it in the colonies (research)"
+    },
+    {
+      "id": "founding-shot",
+      "skill": "founding",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "shot",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "ore-and-lead"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "1,281 lead shot in one QAR lab batch (QAR); any hand with a mould"
+    },
+    {
+      "id": "founding-pewter-plates-and-mugs",
+      "skill": "founding",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "pewter-plates-and-mugs",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "steel-brass-pewter"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "33 pieces on the QAR, London marks c. 1689–1712 (QAR); Port Royal had pewterers"
+    },
+    {
+      "id": "founding-brass-fittings-buckles-candlesticks",
+      "skill": "founding",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "brass-fittings-buckles-candlesticks",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "steel-brass-pewter"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Campbell: the founder casts all that is brass in a brazier's shop"
+    },
+    {
+      "id": "founding-bells-and-swivel-guns",
+      "skill": "founding",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "bells-and-swivel-guns",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "steel-brass-pewter"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "small guns; 'four Swivels' taken by Low (J)"
+    },
+    {
+      "id": "founding-great-guns",
+      "skill": "founding",
+      "band": "master",
+      "minLevel": 100,
+      "output": "great-guns",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "bar-iron"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the gunfounder's furnace and boring mill; 29 located on the QAR wreck (QAR)"
+    },
+    {
+      "id": "goldsmithing-silver-buttons-and-buckles",
+      "skill": "goldsmithing",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "silver-buttons-and-buckles",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "silver"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "small work"
+    },
+    {
+      "id": "goldsmithing-plate",
+      "skill": "goldsmithing",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "plate",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "silver"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "uncoined plate shared out by weight (E)"
+    },
+    {
+      "id": "goldsmithing-jewellery-and-chains",
+      "skill": "goldsmithing",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "jewellery-and-chains",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "gold-and-gold-dust"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'chains and trinkets' in Roberts' Brazil prize (J)"
+    },
+    {
+      "id": "goldsmithing-assay-and-fine-work",
+      "skill": "goldsmithing",
+      "band": "master",
+      "minLevel": 100,
+      "output": "assay-and-fine-work",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "judging and refining the metal; the diamond cross for the King of Portugal (J) as the kind of piece"
+    },
+    {
+      "id": "carpentry-planks-and-boards",
+      "skill": "carpentry",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "planks-and-boards",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "lumber"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the saw pit (L)"
+    },
+    {
+      "id": "carpentry-framing-and-house-carpentry",
+      "skill": "carpentry",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "framing-and-house-carpentry",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "planks-and-boards"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Ligon wanted 'Carpenters, Joyners, Masons' as servants (L)"
+    },
+    {
+      "id": "carpentry-ship-s-repairs-patching-shoring",
+      "skill": "carpentry",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "ship-s-repairs-patching-shoring",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "planks-and-boards"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the ship's carpenter; pirates 'forced away the Carpenter from the Pink' (J)"
+    },
+    {
+      "id": "carpentry-joinery-doors-windows-chests",
+      "skill": "carpentry",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "joinery-doors-windows-chests",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "planks-and-boards"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the 1631 aldermen's ruling listed joiners' work (research)"
+    },
+    {
+      "id": "carpentry-gun-carriages",
+      "skill": "carpentry",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "gun-carriages",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "planks-and-boards",
+        "chains-hinges-ship-s-ironwork"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "wood and iron; a great gun is useless without one"
+    },
+    {
+      "id": "shipwrighting-caulking",
+      "skill": "shipwrighting",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "caulking",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "tar-pitch-turpentine"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "also needs old rope picked to oakum (DUTIES); the caulker's rung"
+    },
+    {
+      "id": "shipwrighting-ship-s-boat",
+      "skill": "shipwrighting",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "ship-s-boat",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "planks-and-boards"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Campbell's boat and lighter builders"
+    },
+    {
+      "id": "shipwrighting-masts-yards-and-blocks",
+      "skill": "shipwrighting",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "masts-yards-and-blocks",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "lumber",
+        "planks-and-boards"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Low took 'a mast, yard and hawsers' (J); Campbell's block-maker"
+    },
+    {
+      "id": "shipwrighting-careening-and-refit",
+      "skill": "shipwrighting",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "careening-and-refit",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "caulking"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the ship hauled down on a beach and the bottom scraped (DUTIES)"
+    },
+    {
+      "id": "shipwrighting-sloop",
+      "skill": "shipwrighting",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "sloop",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "planks-and-boards",
+        "chains-hinges-ship-s-ironwork",
+        "masts-yards-and-blocks"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Bermuda cedar sloops from the mid-1600s (research); Bonnet's and Teach's sloops"
+    },
+    {
+      "id": "shipwrighting-ship",
+      "skill": "shipwrighting",
+      "band": "master",
+      "minLevel": 100,
+      "output": "ship",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "sloop",
+        "masts-yards-and-blocks"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Boston and the Thames yards; no Caribbean ship of size in the sources (open)"
+    },
+    {
+      "id": "cabinetmaking-plain-furniture",
+      "skill": "cabinetmaking",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "plain-furniture",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "planks-and-boards"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the joiner's edge of the trade"
+    },
+    {
+      "id": "cabinetmaking-mahogany-furniture",
+      "skill": "cabinetmaking",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "mahogany-furniture",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "mahogany"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the 1720s trade (MH)"
+    },
+    {
+      "id": "cabinetmaking-carving-and-ornament",
+      "skill": "cabinetmaking",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "carving-and-ornament",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "mahogany"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Campbell's carver; a ship's stern-work too"
+    },
+    {
+      "id": "cabinetmaking-veneered-and-inlaid-pieces",
+      "skill": "cabinetmaking",
+      "band": "master",
+      "minLevel": 100,
+      "output": "veneered-and-inlaid-pieces",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "mahogany"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the London cabinet-maker's best work; a design tier (open)"
+    },
+    {
+      "id": "millwrighting-cart-wheels-and-carts",
+      "skill": "millwrighting",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "cart-wheels-and-carts",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "planks-and-boards",
+        "iron-hoops"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Ligon: 'the Christian that has the charge of the carriages'"
+    },
+    {
+      "id": "millwrighting-cattle-mill",
+      "skill": "millwrighting",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "cattle-mill",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "planks-and-boards",
+        "chains-hinges-ship-s-ironwork"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "three rollers driven by oxen or horses (L); Sugar boiling needs it"
+    },
+    {
+      "id": "millwrighting-windmill-or-water-mill",
+      "skill": "millwrighting",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "windmill-or-water-mill",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "framing-and-house-carpentry",
+        "chains-hinges-ship-s-ironwork"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Barbados's windmills; a design tier for the engine (open)"
+    },
+    {
+      "id": "cooperage-staves-and-heads-dressed",
+      "skill": "cooperage",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "staves-and-heads-dressed",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "staves-and-hoops"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "jointing and hollowing the staves"
+    },
+    {
+      "id": "cooperage-turned-ware",
+      "skill": "cooperage",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "turned-ware",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "planks-and-boards"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the turner's lathe; Campbell folds him into the cooper"
+    },
+    {
+      "id": "cooperage-slack-casks",
+      "skill": "cooperage",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "slack-casks",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "staves-and-heads-dressed"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "flour barrels, sugar hogsheads; 196 lb of flour to the barrel (FL)"
+    },
+    {
+      "id": "cooperage-tight-casks",
+      "skill": "cooperage",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "tight-casks",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "staves-and-heads-dressed"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "must hold liquid; a leaking cask loses the rum (DUTIES)"
+    },
+    {
+      "id": "spinning-cotton-yarn",
+      "skill": "spinning",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "cotton-yarn",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "cotton-wool"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the island's own fibre (C81)"
+    },
+    {
+      "id": "spinning-wool-yarn",
+      "skill": "spinning",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "wool-yarn",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "wool"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "English wool"
+    },
+    {
+      "id": "spinning-linen-thread",
+      "skill": "spinning",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "linen-thread",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "flax-and-hemp"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "for dowlas, holland and sailcloth"
+    },
+    {
+      "id": "spinning-silk-thread",
+      "skill": "spinning",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "silk-thread",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Asian silk; the hardest fibre to handle"
+    },
+    {
+      "id": "weaving-cotton-cloth",
+      "skill": "weaving",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "cotton-cloth",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "cotton-yarn"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "under 4s a yard, the colonial ceiling (CSP)"
+    },
+    {
+      "id": "weaving-coarse-linen",
+      "skill": "weaving",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "coarse-linen",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "linen-thread"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "1s 5d–1s 8d an ell (TR); servants' and slaves' cloth"
+    },
+    {
+      "id": "weaving-woollens",
+      "skill": "weaving",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "woollens",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "wool-yarn"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "10s–23s 6d a yard (TR); duffels for the Indian trade (CSP)"
+    },
+    {
+      "id": "weaving-sailcloth-and-canvas",
+      "skill": "weaving",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "sailcloth-and-canvas",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "linen-thread"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the sailmaker sews it; the weaver makes it"
+    },
+    {
+      "id": "weaving-fine-linen",
+      "skill": "weaving",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "fine-linen",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "linen-thread"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "2s 4d–2s 8d a yard (TR)"
+    },
+    {
+      "id": "weaving-silk-chintz-muslin",
+      "skill": "weaving",
+      "band": "master",
+      "minLevel": 100,
+      "output": "silk-chintz-muslin",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "silk-thread"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Asian looms; chintzes in a French prize (J)"
+    },
+    {
+      "id": "ropemaking-twine-and-small-stuff",
+      "skill": "ropemaking",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "twine-and-small-stuff",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [
+        "flax-and-hemp",
+        "cotton-yarn"
+      ],
+      "gate": null,
+      "note": "marline, spun yarn; the sailmaker's twine"
+    },
+    {
+      "id": "ropemaking-cordage",
+      "skill": "ropemaking",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "cordage",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [
+        "flax-and-hemp",
+        "linen-thread"
+      ],
+      "gate": null,
+      "note": "'several Coils of Rope' taken from the King Solomon (J)"
+    },
+    {
+      "id": "ropemaking-cables-and-hawsers",
+      "skill": "ropemaking",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "cables-and-hawsers",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [
+        "flax-and-hemp",
+        "linen-thread"
+      ],
+      "gate": null,
+      "note": "'two Cables' (J); the anchor cable is the ropewalk's largest work"
+    },
+    {
+      "id": "tailoring-shirts-and-trousers",
+      "skill": "tailoring",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "shirts-and-trousers",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "coarse-linen"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "a servant's shirt at 2s 6d (CSP)"
+    },
+    {
+      "id": "tailoring-coats-and-fitted-clothes",
+      "skill": "tailoring",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "coats-and-fitted-clothes",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "woollens"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "a cloth coat at 15s 6d (CSP)"
+    },
+    {
+      "id": "tailoring-fine-dress-embroidery",
+      "skill": "tailoring",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "fine-dress-embroidery",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "fine-linen"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'a suit of clothes, a wig' taken at the King Solomon (J)"
+    },
+    {
+      "id": "tailoring-silk-dress",
+      "skill": "tailoring",
+      "band": "master",
+      "minLevel": 100,
+      "output": "silk-dress",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "silk-chintz-muslin"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "silk and linen shared out at Maracaibo (E)"
+    },
+    {
+      "id": "medicine-dressing-wounds",
+      "skill": "medicine",
+      "band": "novice",
+      "minLevel": 0,
+      "output": null,
+      "service": true,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "recruited at about 16 with basic training (research)",
+      "name": "Dressing wounds (the surgeon's mate)"
+    },
+    {
+      "id": "medicine-bleeding-purging-the-clyster",
+      "skill": "medicine",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": null,
+      "service": true,
+      "offMap": false,
+      "inputs": [
+        "knives-and-razors"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "lancets from the cutler; clyster pumps on the QAR wreck (QAR)",
+      "name": "Bleeding, purging, the clyster"
+    },
+    {
+      "id": "medicine-setting-bones-drawing-teeth",
+      "skill": "medicine",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": null,
+      "service": true,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "barber-surgeons drew teeth; the 'pretending bone-setters' were the empirics (Turner 1694)",
+      "name": "Setting bones, drawing teeth"
+    },
+    {
+      "id": "medicine-amputation-and-the-great-operations",
+      "skill": "medicine",
+      "band": "expert",
+      "minLevel": 75,
+      "output": null,
+      "service": true,
+      "offMap": false,
+      "inputs": [
+        "knives-and-razors"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Exquemelin's compensation table: a lost limb paid in pieces of eight or slaves (E)",
+      "name": "Amputation and the great operations"
+    },
+    {
+      "id": "medicine-chief-surgeon",
+      "skill": "medicine",
+      "band": "master",
+      "minLevel": 100,
+      "output": null,
+      "service": true,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "examined at Surgeons' Hall for the navy (Campbell); elected chief surgeon in Roberts' fleet (J)",
+      "name": "Chief surgeon (examined, elected)"
+    },
+    {
+      "id": "apothecary-simples-and-herb-remedies",
+      "skill": "apothecary",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "simples-and-herb-remedies",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "physic-garden"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Culpeper's householder medicine; the plantation doctor's dram of kill-devil (L)"
+    },
+    {
+      "id": "apothecary-salves-plasters-lime-juice-regimen",
+      "skill": "apothecary",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "salves-plasters-lime-juice-regimen",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "physic-garden",
+        "lime-juice"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "lime juice against scurvy (DUTIES); whether it stood in the Pharmacopoeia: open"
+    },
+    {
+      "id": "apothecary-compound-medicines",
+      "skill": "apothecary",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "compound-medicines",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "physic-garden",
+        "aqua-vitae"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "Pharmacopoeia Londinensis 1618 and after; spirits for tinctures"
+    },
+    {
+      "id": "apothecary-chemical-medicines-mercury-antimony-laudanum",
+      "skill": "apothecary",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "chemical-medicines-mercury-antimony-laudanum",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "reagents-and-salts"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the QAR syringe held mercury for the pox (QAR); opium preparations in the Pharmacopoeia (research)"
+    },
+    {
+      "id": "apothecary-the-surgeon-s-chest-stocked",
+      "skill": "apothecary",
+      "band": "master",
+      "minLevel": 100,
+      "output": "the-surgeon-s-chest-stocked",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "compound-medicines"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "£300–400 at Charleston (J); 200–250 pieces of eight as the buccaneers' fixed share (E)"
+    },
+    {
+      "id": "physic-regimen-and-diet",
+      "skill": "physic",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": null,
+      "service": true,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the plantation doctor's level",
+      "name": "Regimen and diet"
+    },
+    {
+      "id": "physic-diagnosing-fevers-and-the-flux",
+      "skill": "physic",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": null,
+      "service": true,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "scurvy and fever killed more than battle (DUTIES)",
+      "name": "Diagnosing fevers and the flux"
+    },
+    {
+      "id": "physic-prescribing",
+      "skill": "physic",
+      "band": "expert",
+      "minLevel": 75,
+      "output": null,
+      "service": true,
+      "offMap": false,
+      "inputs": [
+        "compound-medicines"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "note": "the physician prescribes, the apothecary compounds; the Rose case blurred it (research)",
+      "name": "Prescribing (the apothecary makes it up)"
+    },
+    {
+      "id": "physic-doctor-in-physic",
+      "skill": "physic",
+      "band": "master",
+      "minLevel": 100,
+      "output": null,
+      "service": true,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "note": "'Doctor in Physic' at Port Royal, 1725; Campbell sneers at bought Latin diplomas",
+      "name": "Doctor in Physic (university)"
+    }
+  ]
+}

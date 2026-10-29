@@ -1,0 +1,358 @@
+{
+  "_about": "Built by files/pirate-ship/economy/build-economy-data.py from skill-tree.json and GOODS.md. Do not edit by hand. Marks: source = a period record (GOODS.md Part 4); proposed = this session's placement for Rex; unsourced = Rex's design addition with no period source; estimate = worked out from sourced inputs (GOODS.md 1j). basePrice is null everywhere: the balance lane sets it; the sourced price text is beside it. The five per-settlement numbers (stock, consumption per day, target reserve, production per day, base price) belong to a ports file that does not exist yet (ALIGNMENT §10).",
+  "bands": [
+    {
+      "key": "novice",
+      "name": "Novice",
+      "range": "0–24",
+      "period": "no trade grade; a labourer or a 'landsman' at sea (the sea grades date from 1652)"
+    },
+    {
+      "key": "apprentice",
+      "name": "Apprentice",
+      "range": "25–49",
+      "period": "the guild grade: bound seven years, usually from 14 to 21 (Statute of Artificers; secondary summaries)"
+    },
+    {
+      "key": "journeyman",
+      "name": "Journeyman",
+      "range": "50–74",
+      "period": "the guild grade: out of his time, free of the company, works for day wages (Campbell 1747)"
+    },
+    {
+      "key": "expert",
+      "name": "Expert",
+      "range": "75–99",
+      "period": "no guild grade; the nearest is the 'able seaman', at least five years at sea (TNA). 'Head boiler' appears only in 1750s Jamaica, later than the period"
+    },
+    {
+      "key": "master",
+      "name": "Master",
+      "range": "100",
+      "period": "the guild grade: keeps a shop and apprentices; liveryman above it"
+    }
+  ],
+  "rule": "Every recipe needs materials + equipment + a minimum skill band (Rex, 2026-10-28). Skill never creates a material: a master spinner cannot spin silk without silk.",
+  "skills": [
+    {
+      "id": "farming",
+      "name": "Farming",
+      "group": "gathering",
+      "inStats": false,
+      "covers": "planting, harvest, curing and packing crops; the dye plants and flowers as crops",
+      "why": "Crop cultivation only (Rex, 2026-10-28). Livestock, salt, dye-making and perfume have skills of their own."
+    },
+    {
+      "id": "husbandry",
+      "name": "Animal Husbandry",
+      "group": "gathering",
+      "inStats": false,
+      "covers": "breeding, feeding and keeping livestock; milk, wool, farm hides",
+      "why": "Split from Farming (Rex, 2026-10-28): keeping animals is its own expertise. Wild cattle and hogs stay with Hunting."
+    },
+    {
+      "id": "marine",
+      "name": "Marine Gathering",
+      "group": "gathering",
+      "inStats": false,
+      "covers": "the shore and the shallows: salt pans, shells, pearls, seaweed",
+      "why": "Split from Farming (Rex, 2026-10-28). Pearls sit here with a Swimming gate for the depth, not a skill of their own."
+    },
+    {
+      "id": "hunting",
+      "name": "Hunting",
+      "group": "gathering",
+      "inStats": false,
+      "covers": "tracking and killing wild cattle, hogs, deer; the carcass",
+      "why": "Obtaining the animal only (Rex, 2026-10-28). Skinning is Butchering, curing is Preserving, leather is Tanning. A hunter with low Butchering wastes the carcass."
+    },
+    {
+      "id": "fishing",
+      "name": "Fishing",
+      "group": "gathering",
+      "inStats": true,
+      "covers": "the catch; turtling at sea",
+      "why": "Already a skill with its own minigame. Turtling is netting at sea from sloops (D), so it stays here; shells and pearls are Marine Gathering."
+    },
+    {
+      "id": "woodcutting",
+      "name": "Woodcutting",
+      "group": "gathering",
+      "inStats": false,
+      "covers": "felling, riving and squaring timber; the dyewood camps; tar, pitch and turpentine from the pine woods; charcoal burning",
+      "why": "Logwood, lumber and naval stores all came out of the woods. Dampier went to Campeche 'to spend some time at the Logwood Trade' with 'Hatchets, Axes, Macheats, Saws, Wedges' (1705). Tar burner and collier were found as no separate occupation (research-wood-trades.md), so both stay here."
+    },
+    {
+      "id": "mining",
+      "name": "Mining",
+      "group": "gathering",
+      "inStats": false,
+      "covers": "ore, the furnace and the forge that makes bar metal; silver refining",
+      "why": "Smelting sits here with the mine, not with the smith: the smith buys bar iron. Nearly all of it is off-map in this period (Spanish silver, Swedish and Bilbao iron)."
+    },
+    {
+      "id": "cooking",
+      "name": "Cooking",
+      "group": "crafting",
+      "inStats": true,
+      "covers": "meals and dishes; the galley; chocolate",
+      "why": "Meals only (Rex, 2026-10-28). Milling, Baking, Butchering, Preserving, Dairying and Waxworking are skills of their own."
+    },
+    {
+      "id": "milling",
+      "name": "Milling",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "grinding grain to flour and meal; the sugar mill is Sugar boiling",
+      "why": "Its own skill (Rex, 2026-10-28). New York guarded its flour's name with a bolting monopoly (VR)."
+    },
+    {
+      "id": "baking",
+      "name": "Baking",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "bread and ship's biscuit",
+      "why": "Its own skill (Rex, 2026-10-28). Large quantities of biscuit were baked in the Connecticut Valley and Philadelphia for the islands (PH)."
+    },
+    {
+      "id": "butchering",
+      "name": "Butchering",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "skinning and dividing a carcass: meat, raw hide, fat, bone",
+      "why": "Its own skill (Rex, 2026-10-28): obtaining the animal is Hunting or Animal Husbandry; the carcass is this. Raw hides come from here."
+    },
+    {
+      "id": "preserving",
+      "name": "Preserving",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "salting, smoking, drying: meat and fish that keep at sea",
+      "why": "Its own skill (Rex, 2026-10-28). The boucaniers' smoking frame and the salt-fish flakes are the same expertise: keeping food."
+    },
+    {
+      "id": "dairying",
+      "name": "Dairying",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "butter and cheese from milk",
+      "why": "Its own skill (Rex, 2026-10-28). Nearly all of it was off-map: Ligon says butter and cheese from England or Holland often spoil on the way (L)."
+    },
+    {
+      "id": "waxworking",
+      "name": "Waxworking",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "candles first, then wax seals, moulded and ceremonial candles, wax portraits and figures",
+      "why": "Rex's skill (2026-10-28), renamed from Candlemaking so it has a ladder to Master. Tallow candles are sourced (L); beeswax and wax sculpture were real European trades but nothing in the period Caribbean sources, so those tiers are marked unsourced. Wax sculpture was an artist's trade, not the top of the chandler's; joining them is a design choice."
+    },
+    {
+      "id": "tanning",
+      "name": "Tanning",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "raw hide to leather",
+      "why": "Kept apart from Butchering (Rex, 2026-10-28): a butcher skins, a tanner makes leather. Leatherworking makes the goods."
+    },
+    {
+      "id": "leatherworking",
+      "name": "Leatherworking",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "leather goods other than footwear: sacks and straps, belts and baldrics, harness and saddles, gloves",
+      "why": "Added by Rex (2026-10-28) after Tanning. Footwear moved to Shoemaking per Rex's textile notes; four goods stay here. Gloves were imported from England (L)."
+    },
+    {
+      "id": "shoemaking",
+      "name": "Shoemaking",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "leather into footwear on the last; repairs",
+      "why": "Its own trade (Rex, 2026-10-28), the cordwainer's; a cobbler repairs. Shoes and boots were imported from England in the period (L), so most of it sits off-map."
+    },
+    {
+      "id": "sugar-boiling",
+      "name": "Sugar boiling",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "the mill and the boiling house: molasses, muscovado, clayed sugar, loaf sugar",
+      "why": "The biggest cash crop. Ligon's boiler judges when to strike the sugar by eye and hand; a head boiler was the most valued man on a plantation. One-off nowhere: every sugar island needs it."
+    },
+    {
+      "id": "dye",
+      "name": "Dye Making",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "the vats and the dye bath: indigo, annatto, cochineal; dyeing cloth",
+      "why": "Its own trade (Rex, 2026-10-28): extraction, fermentation, mordants and colour. Farming grows the plant, Dye Making makes the dye and colours the cloth."
+    },
+    {
+      "id": "distilling",
+      "name": "Distilling",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "the still and the brewhouse: rum, aqua vitae, brandy; beer and wine folded in",
+      "why": "Rex's own example. Brewing and winemaking are folded in as one-offs: no Caribbean town made wine or much beer in the sources, so they sit here off-map."
+    },
+    {
+      "id": "refining",
+      "name": "Chemical Refining",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "purifying salts and minerals: saltpetre, refined sulphur; reagents",
+      "why": "Rex's skill (2026-10-28) from his notes: the saltpetre-maker was a trade of its own, neither miner nor powder-maker. 'Alchemist' is an occupation label, not this skill (see occupations)."
+    },
+    {
+      "id": "powder",
+      "name": "Powder Making",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "the powder mill: mixing, corning and grading gunpowder",
+      "why": "Rex's skill (2026-10-28): the powder-maker was distinct from gunsmith, smith and gunner. No Caribbean powder mill in the sources, so the town imports until it recruits one. Recipes stay abstract: no manufacturing procedure is modelled."
+    },
+    {
+      "id": "perfumery",
+      "name": "Perfumery",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "aromatic extraction, blending, fixing a scent",
+      "why": "Rex's addition (2026-10-28), kept apart from Distilling: a rum distiller is not a perfumer. No Caribbean perfume trade in the period sources; the goods are marked unsourced."
+    },
+    {
+      "id": "smithing",
+      "name": "Blacksmithing (Smithing)",
+      "group": "crafting",
+      "inStats": true,
+      "covers": "the forge: nails, hoops, chains, tools, horseshoes, locks, anchors; forged gun barrels",
+      "why": "The existing STATS.md Smithing, now the blacksmith's trade alone (Rex, 2026-10-28). Campbell 1747 calls it 'the most comprehensive Branch of all the Mechanic' trades and lists the anchor-smith as its own laborious branch; the locksmith is 'see Smith'; the farrier 'a compound of the smith and' the horse-doctor. Nailer, locksmith, farrier and anchorsmith are folded in here on that evidence (research-metal-trades.md)."
+    },
+    {
+      "id": "gunsmithing",
+      "name": "Gunsmithing",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "the lock, the stock and the mounting; repairs of small arms",
+      "why": "Its own trade (Rex, 2026-10-28): Gunmakers' Company chartered 1637 with powers of 'search view gage proof trial'; proof house from 1657. Campbell: the gunsmith made the lock and bought barrels. Port Royal had gun and sword smiths (Museum of Miami). The ship's armourer (repairs) is folded in: by 1747 the armourer's own trade was 'merely nominal'."
+    },
+    {
+      "id": "bladesmithing",
+      "name": "Bladesmithing (cutler)",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "knives, razors, scissors; cutlasses and swords; hilts and scabbards",
+      "why": "Its own trade (Rex, 2026-10-28): Cutlers' Company chartered 1416; Campbell separates the cutler (knives, razors, scissors, lancets) from the sword-cutler who mounts hilts. Blades 'come mostly from abroad' (Campbell): Hounslow (1630s–70s) and Shotley Bridge (1691) were German-staffed works, so sword blades sit off-map."
+    },
+    {
+      "id": "founding",
+      "name": "Founding",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "casting metal: shot, pewter ware, brass fittings, bells, great guns",
+      "why": "Its own trade (Rex, 2026-10-28): Founders' Company 1614; the King's Gunfounder post from 1615 (the Brownes, Weald furnaces); Woolwich brass foundry 1716–18. Pewterers (company by 1348) are folded in: pewter is cast in a mould (Campbell). 33 pewter pieces with London touch-marks of c. 1689–1712 came off the QAR wreck. No cannon was founded in an English colony before 1730 (research), so the guns sit off-map."
+    },
+    {
+      "id": "goldsmithing",
+      "name": "Precious Metalworking (goldsmith)",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "plate, buttons and buckles, jewellery; assaying",
+      "why": "Its own trade (Rex, 2026-10-28): Goldsmiths' Company (Campbell dates it 1180) and 'employs several distinct' workmen, almost one per article. 'Goldsmith of Jamaica' in a 1693 will; silversmiths and goldsmiths at Port Royal (Museum of Miami). Plate was valued at 'ten pieces of eight to a pound' (E)."
+    },
+    {
+      "id": "carpentry",
+      "name": "Carpentry (joinery)",
+      "group": "crafting",
+      "inStats": true,
+      "covers": "sawing, framing, house carpentry, joinery, gun carriages; the ship's repairs (DUTIES)",
+      "why": "The existing STATS.md Carpentry. Joinery is folded in: Campbell 1747 says the joiner is 'generally the same Person with the Carpenter', and the London demarcation dispute (1630–80) was between two companies doing one trade. The sawyer appears only in Campbell's premium table; Ligon's Barbados had 'three whip-Sawes, going all at once in a Frame or Pit', so sawing is the Novice rung."
+    },
+    {
+      "id": "shipwrighting",
+      "name": "Shipwrighting",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "boats, sloops and ships; caulking and careening; masts, yards and blocks",
+      "why": "Its own trade (Rex, 2026-10-28): Shipwrights' Company charters 1605 and 1612; Campbell has 'ship-builder and ship-carpenter', block-maker and boat-builder as entries. Bermuda built cedar sloops from the mid-1600s. Caulker and mast-maker were found as no separate entries, so both are folded in. The ship itself was the most valuable prize of all (Part 2)."
+    },
+    {
+      "id": "cabinetmaking",
+      "name": "Cabinetmaking (carving)",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "fine furniture, carving, veneer; mahogany work",
+      "why": "Its own trade (Rex, 2026-10-28): Campbell 1747 gives the cabinet-maker and the carver their own entries apart from the joiner; Port Royal's 1688 list names 'Turners, Cabanittmakers' (second-hand). The mahogany furniture trade grew after the 1721 Act (MH)."
+    },
+    {
+      "id": "millwrighting",
+      "name": "Millwrighting (wheelwright)",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "mills and wheels: cart wheels, the cattle mill, the windmill",
+      "why": "Its own trade (Rex, 2026-10-28): Campbell 1747 has mill-wright and wheeler as separate entries, and Ligon asked Barbados for 'Mill-wrights, Wheel-wrights'. The sugar mill is the heart of a sugar island, so this is the trade a planter cannot do without."
+    },
+    {
+      "id": "cooperage",
+      "name": "Cooperage",
+      "group": "crafting",
+      "inStats": true,
+      "covers": "casks: slack (dry) work for flour and sugar, tight (wet) work for rum and molasses; turned ware",
+      "why": "Already a skill. Coopers' Company charters 1501 and 1661; Parliament gave it control of the craft in 1532. The slack (dry) and tight (wet) branches are reported but the research could not open a page confirming them for the period (unverified). The turner is folded in: Campbell says 'the common Turner is generally a Cooper'. About half the goods travel in its casks (3b)."
+    },
+    {
+      "id": "spinning",
+      "name": "Spinning",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "fibre into yarn and thread: cotton, wool, flax, silk",
+      "why": "Split from Weaving (Rex, 2026-10-28): the spinner and the weaver were different trades. Finer and harder fibres need higher skill; the fibre itself must exist (a master cannot spin silk without silk)."
+    },
+    {
+      "id": "weaving",
+      "name": "Weaving",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "yarn into cloth on the loom: cotton, linen, woollen, canvas, silk",
+      "why": "Cloth only (Rex, 2026-10-28). Nearly all of it was off-map: the colonies imported their cloth (L, BR); Massachusetts made nothing above 4s a yard (CSP)."
+    },
+    {
+      "id": "ropemaking",
+      "name": "Ropemaking",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "the ropewalk: twine, cordage, cables",
+      "why": "Its own trade (Rex, 2026-10-28). It spins its own yarn from raw hemp or takes a spinner's, so either input will do. Cables and coils of rope were among the first things pirates took (J)."
+    },
+    {
+      "id": "tailoring",
+      "name": "Tailoring",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "cloth into fitted clothes; sewing, embroidery, knitting and repair as activities inside it",
+      "why": "Split from Weaving (Rex, 2026-10-28): the tailor does not make cloth. Sailmaking stays its own ship skill (STATS.md)."
+    },
+    {
+      "id": "medicine",
+      "name": "Surgery (Surgery and medicine)",
+      "group": "crafting",
+      "inStats": true,
+      "covers": "wounds, bleeding and purging, bones, amputation; the ship's surgeon and his mate",
+      "why": "The existing STATS.md skill, now the surgeon's craft alone (Rex, 2026-10-28). Campbell 1747 lists Physician, Surgeon, Chymist, Druggist and Apothecary as five separate 'Professors'. The surgeon was bound seven years and examined by the Barber-Surgeons' Company (one company until 1745); the surgeon's mate was a rank under him, examined too. Exquemelin served the buccaneers 'in the capacity of barber-surgeon'; Roberts' fleet elected a chief surgeon (J). Every item here is a service, not a good."
+    },
+    {
+      "id": "apothecary",
+      "name": "Apothecary",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "simples, salves, compound medicines; laudanum, mercury and bark; stocking the surgeon's chest",
+      "why": "Its own trade (Rex, 2026-10-28): the Society of Apothecaries was chartered 6 December 1617, apart from the Grocers; a seven-year apprenticeship; after the Rose case (1703/04) apothecaries could prescribe. Ligon: 'the Apothecary of the Plantation, which we call Doctor'. Campbell: 'The Chymists are generally Apothecaries', so the chymist's preparations sit here, drawing on Chemical Refining. The INTJ's calling."
+    },
+    {
+      "id": "physic",
+      "name": "Physic (the physician)",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "diagnosis, fevers, regimen, prescribing; the learned branch",
+      "why": "Its own trade (Rex, 2026-10-28): the College of Physicians (1518) licensed practice and its Fellows held university degrees; 'Doctor in Physic' is a status word in a Port Royal will (1725). Campbell keeps the physician apart from the surgeon and the apothecary. Rare in the colonies: most 'doctors' were apothecaries or surgeons, so the top tiers sit off-map. Services, not goods."
+    }
+  ]
+}

@@ -295,6 +295,48 @@
    "code": "supply",
    "kind": "phrase",
    "note": "The alignment command that records an item as supplied for a slot, clearing that item from the develop condition check."
+  },
+  {
+   "source": "good",
+   "en": "good",
+   "code": "good",
+   "kind": "resource",
+   "note": "A thing the economy stocks, makes, carries and prices. data/pirate-ship/economy/goods.json; the record is files/pirate-ship/economy/GOODS.md."
+  },
+  {
+   "source": "recipe",
+   "en": "recipe",
+   "code": "recipe",
+   "kind": "phrase",
+   "note": "Materials + equipment + a minimum skill band that make a good (or do a service). economy/recipes.json."
+  },
+  {
+   "source": "skill band",
+   "en": "skill band",
+   "code": "band",
+   "kind": "phrase",
+   "note": "Rex's five bands of a skill: Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99, Master 100. economy/skills.json."
+  },
+  {
+   "source": "occupation",
+   "en": "occupation",
+   "code": "occupation",
+   "kind": "phrase",
+   "note": "A period label over a set of skills (Mariner, Cooper, Chymist). Levels nothing, grants nothing; a character may hold more than one. economy/occupations.json."
+  },
+  {
+   "source": "off-map",
+   "en": "off-map",
+   "code": "offMap",
+   "kind": "phrase",
+   "note": "A good made outside the game's Caribbean in 1650–1730 (Europe, Asia, Africa, the Spanish mainland): imported until a town can make it."
+  },
+  {
+   "source": "service",
+   "en": "service",
+   "code": "service",
+   "kind": "phrase",
+   "note": "A recipe that makes no good: a skill used on a patient or a ship (Surgery, Physic, the ship's repairs)."
   }
  ],
  "lore": [

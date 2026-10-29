@@ -698,6 +698,18 @@ and Cooper, Military Specialist → Soldier, Merchant/Diplomat → Merchant. Per
 
 ---
 
+## 3e. The data files (2026-10-29)
+
+`data/pirate-ship/economy/` holds the engine's data, generated from this record by
+`files/pirate-ship/economy/build-economy-data.py` (never edited by hand; `README.md` there says what each file is):
+`goods.json` (the 65 rows with their sourced detail, and 174 engine goods, one per recipe output, each with its row,
+type, mark and maker; `basePrice` null until the balance lane sets it), `skills.json` (40 skills, the five bands, the
+recipe rule), `recipes.json` (183 recipes with inputs, bands, off-map and gate flags; 9 services) and
+`occupations.json` (41 labels). The glossary has entries for good, recipe, skill band, occupation, off-map and
+service. Ports, companies, ships and routes are not data yet (ALIGNMENT §10).
+
+---
+
 ## 4. Sources
 
 Primary or period works:
@@ -902,3 +914,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-28 | The wood split, checked against Campbell 1747 and the companies: Shipwrighting, Cabinetmaking, Millwrighting apart from Carpentry; joiner, sawyer, caulker, mast-maker, turner folded in on the evidence; three wood occupations; row 65 boats and ships; build stamp on the dashboard | Rex (decision); research session |
 | 2026-10-28 | The medical split, checked against Campbell 1747 and the companies: Surgery, Apothecary, Physic; service chips for skills that make no goods; physic garden on Farming; Physician, Druggist, Midwife occupations | Rex (decision); research session |
 | 2026-10-29 | Rex reviewed the dashboard: the 40 skills, placements and occupations stand as the working set | Rex |
+| 2026-10-29 | 3e: the data files generated under data/pirate-ship/economy/ (goods, skills, recipes, occupations) by build-economy-data.py; six glossary terms | research session, at Rex's request |
