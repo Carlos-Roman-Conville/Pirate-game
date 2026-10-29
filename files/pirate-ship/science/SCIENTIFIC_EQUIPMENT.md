@@ -139,7 +139,7 @@ is the period's instance of this catalogue and stays the economy's.
 | 1 | Are the materials present (reactants, solvents, fuel)? | the inventory (GOODS goods) | cannot start | rex (materials + equipment + band + knowledge is Rex's recipe rule), proposed (as a pipeline) |
 | 2 | Does the assembled apparatus meet the process's conditions? For each role the process needs (heat to T, hold it +/- x for t; a vessel of volume V that survives the reagents at T and P; a condenser for a vapour at b.p.; vacuum to p), is there a piece whose numbers cover it? | the catalogue's numbers; the process's conditions (CHEMISTRY reaction record) | the process does not run, or runs partway (a lower yield, a different product: what the simulation supports), or the vessel breaks (an accident: ATMOSPHERE's laboratory scenario) | rex (the step, 2026-10-29) |
 | 3 | Is there fuel or power for the duration? | charcoal, spirit, the sun, a water wheel, a pile (TECHNOLOGY) | the process stops when it runs out | rex (the step, 2026-10-29) |
-| 4 | Can the pieces be connected (joints, seals, a receiver)? | a joints rule: glass to glass needs lute or ground joints (period: clay lute); gases need a trough or a tube | leaks (exposure, loss) | rex (the step, 2026-10-29) |
+| 4 | Can the pieces be connected, and do they agree? Joints and seals (glass to glass needs lute or ground joints: period lute is clay); a vessel's max temperature and pressure cover the heat and pressure roles' numbers; the vessel's material survives the reagents (no mercury in a lead pot, no acid in iron); a condenser's capacity covers the still's rate | a joints rule; each piece's ranges against the others' (two working pieces are not a working apparatus: ChatGPT's point, 2026-10-29, agreed) | leaks (exposure, loss); a vessel that cracks or melts (an accident); a run that never reaches the condition | rex (the step, 2026-10-29) |
 | 5 | Can the character control it (temperature, timing, measurement, handling)? | the skill's minigame (Rex's minigames); skill band sets difficulty, never the chemistry | a bad run: wrong temperature, a boil-over, contamination | rex (skill affects execution), proposed (as a step) |
 | 6 | Do the actual conditions reached permit the transformation? | CHEMISTRY kinetics and equilibrium at the conditions reached | nothing happens, or something else does (the engine's answer; an unsupported reaction is 'unknown', not impossible) | rex (the step, 2026-10-29) |
 | 7 | Can the character tell what he made? | the measure roles present (DISCOVERY: observed vs identified) | a product he cannot name: an 'unknown liquid' in the journal | rex (the step, 2026-10-29) |
@@ -155,13 +155,46 @@ is the period's instance of this catalogue and stays the economy's.
 - **Visible face:** the laboratory's bench on screen (art keeper); the apparatus assembled from the
   inventory; the thermometer's reading or its absence; the explosion.
 
+## 4. Wear, calibration and the two confidence ratings (added 2026-10-29)
+
+<!-- table:equipment.wear -->
+*Wear and calibration (proposed; ties the science system to the ship's maintenance loop)* (model; confidence low; source: ChatGPT's suggestion (outside AI), recorded: a poorly kept balance drifts, a damaged furnace will not hold heat. Rex's maintenance design is PIRATE.md 5a and DUTIES.md (keeps / if skipped); this table is the same shape for apparatus, so the economy's facilities and the laboratory age like the ship.)
+
+| Rule | Statement | Reads | Visible face | Mark |
+|---|---|---|---|---|
+| Condition | each piece carries condition 0 to 1 (like a ship part): its capability numbers scale with it (a furnace at 0.5 holds half the control, reaches 80% of its max; a balance at 0.5 reads to 5x its precision) | DUTIES-style keeps and if-skipped rows per apparatus (open) | the cracked crucible; the balance that will not settle | proposed |
+| Wear by use | condition falls per run by the process's severity (heat over 80% of max, corrosive reagents, pressure) and the material (clay fast, glass medium, brass slow) | the reaction record's conditions | 'the retort is pitted' | proposed |
+| Calibration | measuring pieces drift: precision x (1 + drift x days since calibration); calibrating needs a standard (weights, a fixed-point bath for a thermometer, a known acid) | the catalogue's precision | 'the glass reads a degree high' | proposed |
+| Repair | a trade repairs or replaces: the smith for iron, the glassblower for glass, the instrument maker for brass (TECHNOLOGY manufacture prerequisites) | GOODS trades | the voyage to the instrument maker | proposed |
+| A bad instrument and discovery | a drifted balance or thermometer gives wrong observed properties: DISCOVERY's observed state can be wrong, and a later better instrument corrects the journal | DISCOVERY states | the entry revised | proposed |
+<!-- /table -->
+
+<!-- table:equipment.confidence -->
+*Two confidence ratings per item (the reconcile task adds the columns)* (model; confidence high; source: ChatGPT's point (outside AI), agreed: a documented invention date does not establish that a period instrument reached a modern specification. The catalogue therefore carries two ratings per row, added by the reconcile task: conf_history (the date, inventor and existence) and conf_capability (the numbers: temperature, pressure, precision, capacity).)
+
+| Rating | high | medium | low | Mark |
+|---|---|---|---|---|
+| conf_history | two or more sources agree on the date and the attribution | one source, or sources disagree by a few years (both given) | a usual attribution with no page opened, or a disputed one | proposed |
+| conf_capability | a measured figure from a source or a replica study | derived from the apparatus's physics or a comparable instrument | the keeper's or the lane's estimate | proposed |
+<!-- /table -->
+
+- **(proposed)** Three watch-points for the lane, from ChatGPT's note (outside AI), agreed: an item is
+  defined by its capabilities (the date is the journal's; the ranges, fuel, atmosphere and material
+  compatibility are the simulation's); two working pieces are not a working apparatus (step 4 of the
+  pipeline now checks connections, ranges, containment and materials); and the date's confidence is not
+  the number's (the reconcile task adds `conf_history` and `conf_capability` columns to every row).
+  Wear and calibration tie the laboratory to the ship's maintenance loop (`../PIRATE.md` §5a, Rex's
+  keeps-and-if-skipped design) and let a bad instrument mislead the journal.
+
 ## Open for Rex
 
 1. ~~Keep, cut, or stamp the roles and the pipeline~~ stamped (Rex, 2026-10-29); entries and numbers placeholders.
 2. The belt lane for the full catalogue: start it, and on which worker (Composer for the data, Sonnet for
    the research).
-3. Whether the minigames per apparatus (the still, the furnace, the balance) are one control minigame
-   with parameters or several (Rex's minigames).
+3. The minigames per apparatus: after the catalogue is in, the shared operating controls (temperature
+   regulation, pressure, measurement, timing, handling) can be reusable primitives instead of one minigame
+   per instrument (ChatGPT's suggestion; the primitives are yours to design).
+5. Wear and calibration (§4): keep as the laboratory's side of the maintenance loop, or cut.
 4. The seed's numbers are placeholders.
 
 ## Sources
@@ -175,5 +208,6 @@ histories of chemistry (Partington) for the rest, not opened this session.
 
 | Date | What | Who |
 |---|---|---|
+| 2026-10-29 | ChatGPT's watch-points (outside AI) recorded: capabilities over dates, combinations validated (pipeline step 4 widened to ranges, containment and materials), two confidence ratings (the reconcile task adds the columns); wear and calibration proposed; minigame primitives deferred to after the catalogue | keeper |
 | 2026-10-29 | Rex stamped the roles, the catalogue's shape and the pipeline as his; entries placeholders | Rex |
 | 2026-10-29 | File opened on Rex's rule; roles (10), the catalogue seed (60 items, antiquity to now), the assembly pipeline; the full catalogue a belt lane | keeper |

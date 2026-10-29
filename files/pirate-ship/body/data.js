@@ -5425,9 +5425,9 @@ window.BODY_DATA = {
     ],
     [
      4,
-     "Can the pieces be connected (joints, seals, a receiver)?",
-     "a joints rule: glass to glass needs lute or ground joints (period: clay lute); gases need a trough or a tube",
-     "leaks (exposure, loss)",
+     "Can the pieces be connected, and do they agree? Joints and seals (glass to glass needs lute or ground joints: period lute is clay); a vessel's max temperature and pressure cover the heat and pressure roles' numbers; the vessel's material survives the reagents (no mercury in a lead pot, no acid in iron); a condenser's capacity covers the still's rate",
+     "a joints rule; each piece's ranges against the others' (two working pieces are not a working apparatus: ChatGPT's point, 2026-10-29, agreed)",
+     "leaks (exposure, loss); a vessel that cracks or melts (an accident); a run that never reaches the condition",
      "rex (the step, 2026-10-29)"
     ],
     [
@@ -5450,6 +5450,85 @@ window.BODY_DATA = {
      "the measure roles present (DISCOVERY: observed vs identified)",
      "a product he cannot name: an 'unknown liquid' in the journal",
      "rex (the step, 2026-10-29)"
+    ]
+   ]
+  },
+  "wear": {
+   "title": "Wear and calibration (proposed; ties the science system to the ship's maintenance loop)",
+   "kind": "model",
+   "conf": "low",
+   "source": "ChatGPT's suggestion (outside AI), recorded: a poorly kept balance drifts, a damaged furnace will not hold heat. Rex's maintenance design is PIRATE.md 5a and DUTIES.md (keeps / if skipped); this table is the same shape for apparatus, so the economy's facilities and the laboratory age like the ship.",
+   "columns": [
+    "Rule",
+    "Statement",
+    "Reads",
+    "Visible face",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Condition",
+     "each piece carries condition 0 to 1 (like a ship part): its capability numbers scale with it (a furnace at 0.5 holds half the control, reaches 80% of its max; a balance at 0.5 reads to 5x its precision)",
+     "DUTIES-style keeps and if-skipped rows per apparatus (open)",
+     "the cracked crucible; the balance that will not settle",
+     "proposed"
+    ],
+    [
+     "Wear by use",
+     "condition falls per run by the process's severity (heat over 80% of max, corrosive reagents, pressure) and the material (clay fast, glass medium, brass slow)",
+     "the reaction record's conditions",
+     "'the retort is pitted'",
+     "proposed"
+    ],
+    [
+     "Calibration",
+     "measuring pieces drift: precision x (1 + drift x days since calibration); calibrating needs a standard (weights, a fixed-point bath for a thermometer, a known acid)",
+     "the catalogue's precision",
+     "'the glass reads a degree high'",
+     "proposed"
+    ],
+    [
+     "Repair",
+     "a trade repairs or replaces: the smith for iron, the glassblower for glass, the instrument maker for brass (TECHNOLOGY manufacture prerequisites)",
+     "GOODS trades",
+     "the voyage to the instrument maker",
+     "proposed"
+    ],
+    [
+     "A bad instrument and discovery",
+     "a drifted balance or thermometer gives wrong observed properties: DISCOVERY's observed state can be wrong, and a later better instrument corrects the journal",
+     "DISCOVERY states",
+     "the entry revised",
+     "proposed"
+    ]
+   ]
+  },
+  "confidence": {
+   "title": "Two confidence ratings per item (the reconcile task adds the columns)",
+   "kind": "model",
+   "conf": "high",
+   "source": "ChatGPT's point (outside AI), agreed: a documented invention date does not establish that a period instrument reached a modern specification. The catalogue therefore carries two ratings per row, added by the reconcile task: conf_history (the date, inventor and existence) and conf_capability (the numbers: temperature, pressure, precision, capacity).",
+   "columns": [
+    "Rating",
+    "high",
+    "medium",
+    "low",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "conf_history",
+     "two or more sources agree on the date and the attribution",
+     "one source, or sources disagree by a few years (both given)",
+     "a usual attribution with no page opened, or a disputed one",
+     "proposed"
+    ],
+    [
+     "conf_capability",
+     "a measured figure from a source or a replica study",
+     "derived from the apparatus's physics or a comparable instrument",
+     "the keeper's or the lane's estimate",
+     "proposed"
     ]
    ]
   }
@@ -13667,10 +13746,10 @@ window.BODY_DATA = {
     [
      7,
      "Science and the skill minigames",
-     "the chymist's, assayer's, distiller's, surgeon's minigames as control tasks (temperature, timing, measurement, handling) over the apparatus; skill sets difficulty, never the chemistry",
+     "the chymist's, assayer's, distiller's, surgeon's minigames as control tasks (temperature, timing, measurement, handling) over the apparatus; skill sets difficulty, never the chemistry; after the catalogue is in, find the operating controls shared across apparatuses (temperature regulation, pressure control, measurement, timing, material handling) and make them reusable minigame primitives rather than one minigame per instrument (ChatGPT's suggestion, outside AI, 2026-10-29; the primitives' design is Rex's)",
      "Rex designs the minigames (house rule); the keeper lists the control variables per apparatus",
      "phase 3",
-     "open (Rex)",
+     "open (Rex); wait for the catalogue (phase 2)",
      "rex (minigames are his)"
     ],
     [

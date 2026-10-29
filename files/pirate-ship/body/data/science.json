@@ -442,10 +442,10 @@
       [
         7,
         "Science and the skill minigames",
-        "the chymist's, assayer's, distiller's, surgeon's minigames as control tasks (temperature, timing, measurement, handling) over the apparatus; skill sets difficulty, never the chemistry",
+        "the chymist's, assayer's, distiller's, surgeon's minigames as control tasks (temperature, timing, measurement, handling) over the apparatus; skill sets difficulty, never the chemistry; after the catalogue is in, find the operating controls shared across apparatuses (temperature regulation, pressure control, measurement, timing, material handling) and make them reusable minigame primitives rather than one minigame per instrument (ChatGPT's suggestion, outside AI, 2026-10-29; the primitives' design is Rex's)",
         "Rex designs the minigames (house rule); the keeper lists the control variables per apparatus",
         "phase 3",
-        "open (Rex)",
+        "open (Rex); wait for the catalogue (phase 2)",
         "rex (minigames are his)"
       ],
       [
