@@ -511,15 +511,30 @@ which equipment they use**. Gathering a thing and processing it are separate ski
 | Crafting | Bladesmithing (cutler) | new (Rex) | knives, razors; cutlasses, swords mounted; fine blades off-map |
 | Crafting | Founding | new (Rex) | casting: shot, pewter, brass, bells, great guns (off-map) |
 | Crafting | Precious Metalworking | new (Rex) | the goldsmith: buttons, plate, jewellery, assay |
-| Crafting | Carpentry | yes | sawing, joinery |
-| Crafting | Cooperage | yes | slack and tight casks as its tiers |
+| Crafting | Carpentry (joinery) | yes | sawing, framing, joinery, gun carriages; the ship's repairs |
+| Crafting | Shipwrighting | new (Rex) | boats, sloops, ships; caulking, careening; masts, yards, blocks |
+| Crafting | Cabinetmaking (carving) | new (Rex) | fine furniture, mahogany work, carving, veneer |
+| Crafting | Millwrighting (wheelwright) | new (Rex) | cart wheels, the cattle mill, the windmill |
+| Crafting | Cooperage | yes | slack and tight casks as its tiers; turned ware (the turner folded in) |
 | Crafting | Spinning | new (Rex) | fibre to yarn and thread: cotton, wool, flax, silk |
 | Crafting | Weaving | new | yarn to cloth: cotton cloth, linen, woollens, canvas, silk |
 | Crafting | Ropemaking | new (Rex) | the ropewalk: twine, cordage, cables; takes raw hemp or a spinner's yarn |
 | Crafting | Tailoring | new (Rex) | cloth to clothes; sewing, embroidery, knitting, repair as activities inside it |
 | Crafting | Surgery and medicine | yes | the apothecary |
 
-**35 skills, 29 new.** Rex's metal split (2026-10-28, from his notes), checked against the record
+**38 skills, 32 new.** The wood split (Rex, 2026-10-28), checked against the record (`research-wood-trades.md`):
+three trades stand apart from Carpentry because Campbell 1747 and the companies treat them so: **Shipwrighting**
+(Shipwrights' Company 1605 and 1612; Campbell's ship-builder, boat-builder and block-maker; Bermuda's cedar sloops
+from the mid-1600s), **Cabinetmaking** (Campbell's cabinet-maker and carver, apart from the joiner; "Cabanittmakers"
+at Port Royal 1688, second-hand), and **Millwrighting** (Campbell's mill-wright and wheeler; Ligon asked Barbados for
+"Mill-wrights, Wheel-wrights"; the sugar mill is the heart of a sugar island). Folded in on the evidence: the joiner
+into Carpentry (Campbell: "generally the same Person with the Carpenter"; the 1630–80 dispute was two companies over
+one trade), the sawyer into Carpentry's Novice rung (Ligon's "three whip-Sawes ... in a Frame or Pit"), the caulker
+and mast-maker into Shipwrighting (no separate entries found), and the turner into Cooperage (Campbell: "the common
+Turner is generally a Cooper"). The tar burner and the collier were found as no occupation at all and stay inside
+Woodcutting. The wet/dry cooper split is reported but the research could not open a page confirming it (unverified).
+
+**35 before the wood split.** Rex's metal split (2026-10-28, from his notes), checked against the record
 (`research-metal-trades.md`, shared notes): the six trades his notes name were real, separate London companies with
 their own apprenticeships: Blacksmiths (1571), Gunmakers (1637, with proof of barrels), Cutlers (1416), Founders
 (1614; the King's Gunfounder from 1615), Goldsmiths, Pewterers (by 1348). Campbell's *London Tradesman* (1747)
@@ -568,9 +583,10 @@ below. Mining and Weaving are nearly all off-map; Rex can cut them and treat tho
 | 62 | Aromatic flowers and herbs; fragrant oils; perfume | raw → manufactured | Farming → Perfumery | No period Caribbean trade found. A cultural or specialty good for one region: a flower-growing region and a perfume-making region give a reason to trade |
 | 63 | Seaweed | raw | Marine Gathering | No period trade found; use open |
 | 64 | Pewter plates and mugs | manufactured | Founding | Sourced (QAR, Part 2): 33 pieces on the Queen Anne's Revenge wreck, London touch-marks c. 1689–1712; pewterers at Port Royal. Added with the metal split |
+| 65 | Boats, sloops and ships; caulking and refit | manufactured | Shipwrighting | Sourced: the ship itself was the most valuable prize (Part 2); Bermuda cedar sloops from the mid-1600s; careening (DUTIES). Added with the wood split |
 
 **Where each good sits: `skill-tree.json` and `skill-tree.html`** (this folder). Every one of the 61 goods is placed
-on one of these 35 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
+on one of these 38 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
 Master 100), with a one-line reason and the good it needs from another tree (sugar cane → molasses → rum; rived
 staves → dressed staves → tight cask). The JSON is the source; `build-skill-tree.py` rebuilds the HTML, which opens in
 any browser with no server. Goods made outside the Caribbean in the period are flagged off-map. Four goods have no
@@ -834,7 +850,7 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
    versus plain names is Rex's choice.
 8. **Cask size.** Which standard hogshead does the game use: one 63-gallon cask for sugar, molasses and rum (proposed,
    fits the 17th-century evidence), the large tobacco-size cask for sugar, or casks that grow over the timeline (1j)?
-9. **The 35 skills (3c, `skill-tree.json`).** Rex's two splits stand provisionally. Still to confirm: the seven
+9. **The 38 skills (3c, `skill-tree.json`).** Rex's two splits stand provisionally. Still to confirm: the seven
    earlier new ones (Farming, Hunting, Woodcutting, Mining, Sugar boiling, Distilling, Weaving), whether Mining and
    Weaving go, the Swimming gate level for pearls, and every placement.
 10. **Occupations (3d).** Confirm the 31 period words and which skills each groups; whether a label ever does
@@ -860,3 +876,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-28 | Rex's third split: Spinning, Weaving, Ropemaking, Tailoring; Shoemaking apart from Leatherworking; the recipe rule (materials + equipment + band); flax and hemp added off-map. 29 skills | Rex (decision); research session |
 | 2026-10-28 | Powder Making and Chemical Refining trees (Rex); gunpowder's three inputs. 3d occupations: labels over the skills, 31 period words from wills and indentures (research-occupations.md); 'Alchemist' replaced by Chymist | Rex (decision); research session |
 | 2026-10-28 | Rex's metal split, checked against the companies and Campbell 1747: Blacksmithing (the old Smithing), Gunsmithing, Bladesmithing, Founding, Precious Metalworking; Fine Metalworking rejected (no evidence); five metal occupations; row 64 pewter | Rex (decision); research session |
+| 2026-10-28 | The wood split, checked against Campbell 1747 and the companies: Shipwrighting, Cabinetmaking, Millwrighting apart from Carpentry; joiner, sawyer, caulker, mast-maker, turner folded in on the evidence; three wood occupations; row 65 boats and ships; build stamp on the dashboard | Rex (decision); research session |

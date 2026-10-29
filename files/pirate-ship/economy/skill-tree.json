@@ -1,6 +1,6 @@
 {
   "title": "Pirate Ship: goods on the skill trees (proposed)",
-  "status": "Rex's splits of 2026-10-28 applied: Farming group; Cooking group; Tanning, Leatherworking, Shoemaking; Spinning, Weaving, Ropemaking, Tailoring; Smithing into Blacksmithing, Gunsmithing, Bladesmithing, Founding, Precious Metalworking. Placements still proposed",
+  "status": "Rex's splits of 2026-10-28 applied: Farming group; Cooking group; Tanning, Leatherworking, Shoemaking; Spinning, Weaving, Ropemaking, Tailoring; Smithing into Blacksmithing, Gunsmithing, Bladesmithing, Founding, Precious Metalworking; Carpentry into Carpentry, Shipwrighting, Cabinetmaking, Millwrighting. Placements still proposed",
   "bands": [
     {
       "key": "novice",
@@ -291,7 +291,7 @@
           "name": "Woodcutting",
           "existing": false,
           "covers": "felling, riving and squaring timber; the dyewood camps; tar, pitch and turpentine from the pine woods; charcoal burning",
-          "why": "Logwood, lumber and naval stores all came out of the woods. Tar burning is folded in: the kilns stood in the forest and the same hands worked them (SCN).",
+          "why": "Logwood, lumber and naval stores all came out of the woods. Dampier went to Campeche 'to spend some time at the Logwood Trade' with 'Hatchets, Axes, Macheats, Saws, Wedges' (1705). Tar burner and collier were found as no separate occupation (research-wood-trades.md), so both stay here.",
           "items": [
             {
               "good": 28,
@@ -1214,24 +1214,189 @@
         },
         {
           "key": "carpentry",
-          "name": "Carpentry",
+          "name": "Carpentry (joinery)",
           "existing": true,
-          "covers": "sawn timber and joinery; the ship's repairs (DUTIES)",
-          "why": "Already a skill, mostly for repairs. Its goods are few: the raw timber comes from Woodcutting and casks are Cooperage.",
+          "covers": "sawing, framing, house carpentry, joinery, gun carriages; the ship's repairs (DUTIES)",
+          "why": "The existing STATS.md Carpentry. Joinery is folded in: Campbell 1747 says the joiner is 'generally the same Person with the Carpenter', and the London demarcation dispute (1630–80) was between two companies doing one trade. The sawyer appears only in Campbell's premium table; Ligon's Barbados had 'three whip-Sawes, going all at once in a Frame or Pit', so sawing is the Novice rung.",
           "items": [
             {
               "good": 28,
               "name": "Planks and boards (sawn)",
               "band": "novice",
               "input": "woodcutting:Lumber (felled)",
-              "note": "the saw pit"
+              "note": "the saw pit (L)"
+            },
+            {
+              "good": 28,
+              "name": "Framing and house carpentry",
+              "band": "apprentice",
+              "input": "carpentry:Planks and boards (sawn)",
+              "note": "Ligon wanted 'Carpenters, Joyners, Masons' as servants (L)"
+            },
+            {
+              "good": 28,
+              "name": "Ship's repairs: patching, shoring",
+              "band": "apprentice",
+              "input": "carpentry:Planks and boards (sawn)",
+              "note": "the ship's carpenter; pirates 'forced away the Carpenter from the Pink' (J)"
+            },
+            {
+              "good": 28,
+              "name": "Joinery: doors, windows, chests",
+              "band": "journeyman",
+              "input": "carpentry:Planks and boards (sawn)",
+              "note": "the 1631 aldermen's ruling listed joiners' work (research)"
+            },
+            {
+              "good": 38,
+              "name": "Gun carriages",
+              "band": "journeyman",
+              "inputs": [
+                "carpentry:Planks and boards (sawn)",
+                "smithing:Chains, hinges, ship's ironwork"
+              ],
+              "note": "wood and iron; a great gun is useless without one"
+            }
+          ]
+        },
+        {
+          "key": "shipwrighting",
+          "name": "Shipwrighting",
+          "existing": false,
+          "covers": "boats, sloops and ships; caulking and careening; masts, yards and blocks",
+          "why": "Its own trade (Rex, 2026-10-28): Shipwrights' Company charters 1605 and 1612; Campbell has 'ship-builder and ship-carpenter', block-maker and boat-builder as entries. Bermuda built cedar sloops from the mid-1600s. Caulker and mast-maker were found as no separate entries, so both are folded in. The ship itself was the most valuable prize of all (Part 2).",
+          "items": [
+            {
+              "good": 65,
+              "name": "Caulking (oakum and pitch)",
+              "band": "novice",
+              "inputs": [
+                "woodcutting:Tar, pitch, turpentine"
+              ],
+              "note": "also needs old rope picked to oakum (DUTIES); the caulker's rung"
+            },
+            {
+              "good": 65,
+              "name": "Ship's boat (yawl, longboat)",
+              "band": "apprentice",
+              "input": "carpentry:Planks and boards (sawn)",
+              "note": "Campbell's boat and lighter builders"
+            },
+            {
+              "good": 65,
+              "name": "Masts, yards and blocks",
+              "band": "journeyman",
+              "inputs": [
+                "woodcutting:Lumber (felled)",
+                "carpentry:Planks and boards (sawn)"
+              ],
+              "note": "Low took 'a mast, yard and hawsers' (J); Campbell's block-maker"
+            },
+            {
+              "good": 65,
+              "name": "Careening and refit",
+              "band": "journeyman",
+              "input": "shipwrighting:Caulking (oakum and pitch)",
+              "note": "the ship hauled down on a beach and the bottom scraped (DUTIES)"
+            },
+            {
+              "good": 65,
+              "name": "Sloop (Bermuda cedar)",
+              "band": "expert",
+              "inputs": [
+                "carpentry:Planks and boards (sawn)",
+                "smithing:Chains, hinges, ship's ironwork",
+                "shipwrighting:Masts, yards and blocks"
+              ],
+              "note": "Bermuda cedar sloops from the mid-1600s (research); Bonnet's and Teach's sloops"
+            },
+            {
+              "good": 65,
+              "name": "Ship (brigantine, frigate)",
+              "band": "master",
+              "offMap": true,
+              "inputs": [
+                "shipwrighting:Sloop (Bermuda cedar)",
+                "shipwrighting:Masts, yards and blocks"
+              ],
+              "note": "Boston and the Thames yards; no Caribbean ship of size in the sources (open)"
+            }
+          ]
+        },
+        {
+          "key": "cabinetmaking",
+          "name": "Cabinetmaking (carving)",
+          "existing": false,
+          "covers": "fine furniture, carving, veneer; mahogany work",
+          "why": "Its own trade (Rex, 2026-10-28): Campbell 1747 gives the cabinet-maker and the carver their own entries apart from the joiner; Port Royal's 1688 list names 'Turners, Cabanittmakers' (second-hand). The mahogany furniture trade grew after the 1721 Act (MH).",
+          "items": [
+            {
+              "good": 14,
+              "name": "Plain furniture (tables, stools)",
+              "band": "apprentice",
+              "input": "carpentry:Planks and boards (sawn)",
+              "note": "the joiner's edge of the trade"
             },
             {
               "good": 14,
-              "name": "Mahogany, worked",
+              "name": "Mahogany furniture",
               "band": "journeyman",
               "input": "woodcutting:Mahogany",
-              "note": "joinery; the 1720s furniture trade (MH)"
+              "note": "the 1720s trade (MH)"
+            },
+            {
+              "good": 14,
+              "name": "Carving and ornament",
+              "band": "expert",
+              "input": "woodcutting:Mahogany",
+              "note": "Campbell's carver; a ship's stern-work too"
+            },
+            {
+              "good": 14,
+              "name": "Veneered and inlaid pieces",
+              "band": "master",
+              "offMap": true,
+              "input": "woodcutting:Mahogany",
+              "note": "the London cabinet-maker's best work; a design tier (open)"
+            }
+          ]
+        },
+        {
+          "key": "millwrighting",
+          "name": "Millwrighting (wheelwright)",
+          "existing": false,
+          "covers": "mills and wheels: cart wheels, the cattle mill, the windmill",
+          "why": "Its own trade (Rex, 2026-10-28): Campbell 1747 has mill-wright and wheeler as separate entries, and Ligon asked Barbados for 'Mill-wrights, Wheel-wrights'. The sugar mill is the heart of a sugar island, so this is the trade a planter cannot do without.",
+          "items": [
+            {
+              "good": 27,
+              "name": "Cart wheels and carts",
+              "band": "apprentice",
+              "inputs": [
+                "carpentry:Planks and boards (sawn)",
+                "smithing:Iron hoops"
+              ],
+              "note": "Ligon: 'the Christian that has the charge of the carriages'"
+            },
+            {
+              "good": 1,
+              "name": "Cattle mill (sugar)",
+              "band": "journeyman",
+              "inputs": [
+                "carpentry:Planks and boards (sawn)",
+                "smithing:Chains, hinges, ship's ironwork"
+              ],
+              "note": "three rollers driven by oxen or horses (L); Sugar boiling needs it"
+            },
+            {
+              "good": 1,
+              "name": "Windmill or water mill",
+              "band": "expert",
+              "inputs": [
+                "carpentry:Framing and house carpentry",
+                "smithing:Chains, hinges, ship's ironwork"
+              ],
+              "note": "Barbados's windmills; a design tier for the engine (open)"
             }
           ]
         },
@@ -1239,8 +1404,8 @@
           "key": "cooperage",
           "name": "Cooperage",
           "existing": true,
-          "covers": "casks: slack (dry) work for flour and sugar, tight (wet) work for rum, molasses and wine",
-          "why": "Already a skill, and the trade had a real ladder: a slack cooper made dry casks, a tight cooper the harder wet ones. About half the goods travel in its casks (3b).",
+          "covers": "casks: slack (dry) work for flour and sugar, tight (wet) work for rum and molasses; turned ware",
+          "why": "Already a skill. Coopers' Company charters 1501 and 1661; Parliament gave it control of the craft in 1532. The slack (dry) and tight (wet) branches are reported but the research could not open a page confirming them for the period (unverified). The turner is folded in: Campbell says 'the common Turner is generally a Cooper'. About half the goods travel in its casks (3b).",
           "items": [
             {
               "good": 28,
@@ -1248,6 +1413,13 @@
               "band": "apprentice",
               "input": "woodcutting:Staves and hoops (rived)",
               "note": "jointing and hollowing the staves"
+            },
+            {
+              "good": 28,
+              "name": "Turned ware (bowls, sheaves, handles)",
+              "band": "apprentice",
+              "input": "carpentry:Planks and boards (sawn)",
+              "note": "the turner's lathe; Campbell folds him into the cooper"
             },
             {
               "good": 20,
@@ -1685,21 +1857,47 @@
         "note": ""
       },
       {
-        "name": "Carpenter / Joiner / Shipwright",
-        "period": "'Carpenter' (Port Royal 1707), 'Joiner' (1723), 'Shipwright' (Stepney 1699); 'Mariner and Shipwright'",
+        "name": "Carpenter (joiner, sawyer)",
+        "period": "'Carpenter' (Port Royal 1707), 'Joiner' (1723); Campbell: the joiner 'generally the same Person with the Carpenter'",
         "skills": [
-          "Carpentry",
+          "Carpentry (joinery)",
           "Woodcutting"
         ],
-        "note": "Rex's 'Woodworker'. Caulker is the ship's own pairing"
+        "note": "Rex's 'Woodworker', the common kind"
       },
       {
-        "name": "Cooper (hooper)",
+        "name": "Cooper (hooper, turner)",
         "period": "'Cooper' (Nevis 1705); 'Mariner and Cooper' (8 wills 1669–1725); 'Hooper' (Bristol)",
         "skills": [
           "Cooperage"
         ],
-        "note": "the commonest sea + craft pairing"
+        "note": "the commonest sea + craft pairing; 'the common Turner is generally a Cooper' (Campbell)"
+      },
+      {
+        "name": "Shipwright (boat-builder, caulker, block-maker)",
+        "period": "'Shipwright' (Stepney 1699); 'Mariner and Shipwright' (4 wills); 'Mariner and Caulker' (3); Shipwrights' Co. 1605/1612",
+        "skills": [
+          "Shipwrighting",
+          "Carpentry (joinery)"
+        ],
+        "note": "Bermuda's cedar sloops; the Boston yards"
+      },
+      {
+        "name": "Cabinetmaker (carver)",
+        "period": "Campbell 1747 entries; 'Cabanittmakers' at Port Royal 1688 (second-hand)",
+        "skills": [
+          "Cabinetmaking (carving)"
+        ],
+        "note": ""
+      },
+      {
+        "name": "Millwright (wheelwright)",
+        "period": "Campbell 1747 entries; Ligon asked for 'Mill-wrights, Wheel-wrights' (1657)",
+        "skills": [
+          "Millwrighting (wheelwright)",
+          "Carpentry (joinery)"
+        ],
+        "note": "the sugar island's indispensable man"
       },
       {
         "name": "Weaver / Spinster",
@@ -1853,6 +2051,7 @@
     ]
   },
   "sources": {
-    "metal": "research-metal-trades.md (shared notes): Campbell 1747, livery company charters, London Museum (Hounslow), QAR pewter, Museum of Miami on Port Royal"
+    "metal": "research-metal-trades.md (shared notes): Campbell 1747, livery company charters, London Museum (Hounslow), QAR pewter, Museum of Miami on Port Royal",
+    "wood": "research-wood-trades.md (shared notes): Campbell 1747, Carpenters' and Shipwrights' and Coopers' company histories, Ligon, Dampier 1705, Johnson"
   }
 }
