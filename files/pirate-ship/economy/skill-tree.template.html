@@ -87,7 +87,7 @@
   const data = JSON.parse(document.getElementById('data').textContent);
   const bands = data.bands;
   const main = document.getElementById('main');
-  document.getElementById('status').textContent = data.status;
+  document.getElementById('status').textContent = (data.build ? data.build + ' · ' : '') + data.status;
   const bandsEl = document.getElementById('bands');
   for (const b of bands) {
     const d = document.createElement('div'); d.className = 'band-key';
