@@ -166,12 +166,16 @@ whether what you intend happens.
 
 - **(Rex)** The five sense rows are his concept as pasted; Ti → Spatial Reasoning and Fi → Poise are his own
   additions in the same message.
-- **(open)** **Te** has no attribute yet. What Intuition is set by. Whether a flinch costs the reaction, the turn,
-  or position.
-- **(keeper)** This reaches into `STATS.md`: Eyesight and Hearing exist there; Perception, Pattern Recognition,
-  Intuition, Spatial Reasoning and Poise would be new attributes, and `STATS.md` §6 already has the idea of
-  functions absorbing parts of a fight ("Se takes the timing, Ne the options"). `STATS.md` has no keeper; Rex
-  decides where the table lives.
+- **(Rex, 2026-10-29)** **Where they live:** the attributes go in `STATS.md`, because they are character
+  properties used beyond combat; this file describes how they function during battles. (Not yet written into
+  `STATS.md`: Eyesight and Hearing are there; Perception, Pattern Recognition, Intuition, Spatial Reasoning and
+  Poise are new. `STATS.md` has no keeper; the combat keeper only owns `combat/`.)
+- **(Rex, 2026-10-29)** **Levels of flinch.** A flinch isn't one thing. The light end is a straight stat decrease,
+  or a slight shift of when the unit's next turn comes: it waits one, two or three more units' turns before it
+  goes. The heavy end is losing the whole turn, up to a full round where every unit on the board goes before it
+  does. "In general, not as a rule": the ladder is the shape, not fixed steps.
+- **(open)** **Te** has no attribute yet. What Intuition is set by. Which strikes do poise damage, and how much
+  Poise resists which flinch level.
 
 ## 7. Preparation and travel
 
@@ -205,13 +209,14 @@ whether what you intend happens.
 3. Actions per turn; what a prepared shot costs.
 4. Targeting: automatic parts, called shots, or both.
 5. Death for the player's crew: the wound ladder, or permanent death, or never.
-6. Te's combat attribute; what sets Intuition; what a flinch costs.
+6. Te's combat attribute; what sets Intuition; which strikes do poise damage and how Poise maps to flinch levels.
 7. Light and elevation as map properties (ChatGPT) or stats.
 8. Grid shape (square proposed); the team limit and what unlocks more units; the enemy's unit count; how the
    small scale converts to the tactical scale.
 9. Who owns combat balance (encounter difficulty, unit numbers): `balance/BALANCE.md` item 14 says not balance.
 10. Ammunition and powder kinds: which exist and what each does in a fight.
-11. Where the attribute table (§6a) lives: `STATS.md` or here.
+11. ~~Where the attribute table lives~~ decided: `STATS.md` (Rex, 2026-10-29). Still to do: write the five new
+    attributes into `STATS.md` (no keeper owns it; Rex says who).
 
 ## Log
 
@@ -222,3 +227,4 @@ whether what you intend happens.
 | 2026-10-29 | ChatGPT's recommendations on the open items added as proposed; reactions as the duel feel under turns | keeper (outside AI) |
 | 2026-10-29 | Rex likes the prepared shot; references set (XCOM 2, Phoenix Point, BG3); record confirmed and reshaped into design sections for refining | Rex |
 | 2026-10-29 | 4-unit limit dropped for now; ammo and powder kinds integral to prep; Intuition (around corners) and sound (materials × terrain, Hearing); skill = intent happens more often; the functions as combat attributes (Si Eyesight, Se Perception, Ne Pattern Recognition, Fe Hearing, Ni Intuition, Ti Spatial Reasoning/aiming, Fi Poise/flinch) | Rex |
+| 2026-10-29 | Attributes live in `STATS.md`, their battle function here; flinch has levels, from a stat dip or a delayed turn up to a full round lost | Rex |
