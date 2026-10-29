@@ -450,6 +450,16 @@
       "why": "Split from Weaving (Rex, 2026-10-28): the tailor does not make cloth. Sailmaking stays its own ship skill (STATS.md)."
     },
     {
+      "id": "sailmaking",
+      "name": "Sailmaking",
+      "group": "crafting",
+      "inStats": true,
+      "region": "caribbean",
+      "learnedBy": "open",
+      "covers": "sails sewn from sailcloth with twine; mending (DUTIES)",
+      "why": "The STATS.md ship skill, now with its one goods recipe so a sloop can have sails (review, 2026-10-29). 'Petty, as Sail-maker' at the Cape Coast trial (J)."
+    },
+    {
       "id": "medicine",
       "name": "Surgery (Surgery and medicine)",
       "group": "crafting",

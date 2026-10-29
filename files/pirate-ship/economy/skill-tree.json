@@ -1,6 +1,6 @@
 {
   "title": "Pirate Ship: goods on the skill trees (proposed)",
-  "status": "Reviewed by Rex 2026-10-29 ('looks good'): the 40 skills, the placements and the occupations stand as the working set. 2026-10-29: spices, drugs, island foods and drinks added from the research (Brewing apart from Distilling, Rex 2026-10-29; imported-only goods listed). Later moves go through this JSON; the record of each split is in GOODS.md 3c and 3d. 2026-10-29: the rest of the Atlantic world added (GOODS.md 1l) and the whole list confirmed by Rex as the base game's goods; origins tagged.",
+  "status": "Reviewed by Rex 2026-10-29 ('looks good'): the 40 skills, the placements and the occupations stand as the working set. 2026-10-29: spices, drugs, island foods and drinks added from the research (Brewing apart from Distilling, Rex 2026-10-29; imported-only goods listed). Later moves go through this JSON; the record of each split is in GOODS.md 3c and 3d. 2026-10-29: the rest of the Atlantic world added (GOODS.md 1l) and the whole list confirmed by Rex as the base game's goods; origins tagged. 2026-10-29: data review applied (inputs, equipment, services, by-products, alloys split, origins, Sailmaking).",
   "bands": [
     {
       "key": "novice",
@@ -34,7 +34,7 @@
     }
   ],
   "flags": {
-    "offMap": "made outside the game's Caribbean in this period (Europe, Asia, Africa, the Spanish mainland); the skill tree says where it would sit if a town ever makes it",
+    "offMap": "made outside the game's playable map in the base game (the Caribbean); origin says where. Whether a place is on the map is the map's decision, not this flag's (review, 2026-10-29)",
     "input": "needs a good from another skill (the chain the economy follows)",
     "gate": "needs another skill at some level to reach the place (Swimming for depth); that skill makes nothing",
     "unsourced": "Rex's addition with no period source found; a design good, not a historical record",
@@ -43,7 +43,8 @@
     "service": "a service, not a traded good: the skill is used on people or ships, and the chip shows what that level can do",
     "knowledge": "common = every tradesman of the skill knows it here; learned = must be taught or read; foreign = comes only with a far-travelled merchant or a book from another continent (Rex, 2026-10-29). Unset means common",
     "region": "where a good or recipe belongs: caribbean (the base game) or an expansion region from REGIONS.md. Unset means caribbean. A good from another region reaches the Caribbean only through a rare-items trader, the odd ship, or a merchant's stall (Rex, 2026-10-29)",
-    "origin": "where in the Atlantic world a base-game good comes from: caribbean, west-africa, europe, north-america, spanish-main, brazil, atlantic-islands (GOODS.md 1l). Unset means caribbean"
+    "origin": "where in the Atlantic world a base-game good comes from: caribbean, west-africa, europe, north-america, spanish-main, brazil, atlantic-islands, asia (GOODS.md 1l). Unset means caribbean",
+    "byproductOf": "this good comes out of another recipe's run as well (molasses drains from the sugar pots): the engine yields it alongside, in a ratio the balance lane sets"
   },
   "groups": [
     {
@@ -98,7 +99,7 @@
               "good": 1,
               "name": "Sugar cane",
               "band": "journeyman",
-              "note": "planting, cutting and carting to the mill within a day of cutting (L); the boiling is Sugar boiling"
+              "note": "planting, cutting and carting to the mill within a day of cutting (L); the boiling is Sugar boiling; the cane goes to the mill within a day"
             },
             {
               "good": 30,
@@ -110,7 +111,8 @@
               "good": 19,
               "name": "Tobacco, cured and packed",
               "band": "journeyman",
-              "note": "curing, prizing into the hogshead to at least 800 lb (VA30)"
+              "note": "curing, prizing into the hogshead to at least 800 lb (VA30)",
+              "input": "farming:Tobacco, grown"
             },
             {
               "good": 7,
@@ -128,7 +130,8 @@
               "good": 11,
               "name": "Cacao, sweated and dried",
               "band": "journeyman",
-              "note": "sweated under plantain leaves, three or four weeks' sun (PT)"
+              "note": "sweated under plantain leaves, three or four weeks' sun (PT)",
+              "input": "farming:Cacao, grown"
             },
             {
               "good": 9,
@@ -141,7 +144,8 @@
               "name": "Nopal and cochineal (reared)",
               "band": "journeyman",
               "offMap": true,
-              "note": "the insect reared on the cactus in Oaxaca (COC); the dye is Dye Making"
+              "note": "the insect reared on the cactus in Oaxaca (COC); the dye is Dye Making",
+              "origin": "spanish-main"
             },
             {
               "good": 62,
@@ -155,11 +159,12 @@
               "name": "Flax and hemp",
               "band": "apprentice",
               "offMap": true,
-              "note": "European fibre crops for linen and rope; no Caribbean crop in the sources"
+              "note": "European fibre crops for linen and rope; no Caribbean crop in the sources",
+              "origin": "europe"
             },
             {
               "good": 48,
-              "name": "Physic garden (simples)",
+              "name": "Medicinal herbs (simples)",
               "band": "apprentice",
               "note": "the herbs an apothecary works from; Culpeper's book was for householders (research). Caribbean physic gardens: open"
             },
@@ -198,7 +203,8 @@
               "name": "Vanilla",
               "band": "journeyman",
               "offMap": true,
-              "note": "Spanish America; Dampier: 'three pence a cod'"
+              "note": "Spanish America; Dampier: 'three pence a cod'",
+              "origin": "spanish-main"
             },
             {
               "good": 74,
@@ -213,8 +219,11 @@
               "offMap": true,
               "origin": "brazil",
               "knowledge": "learned",
-              "input": "farming:Tobacco, grown",
-              "note": "molasses-coated rolls for the Mina trade; a technique to be learned (SB)"
+              "note": "molasses-coated rolls for the Mina trade; a technique to be learned (SB)",
+              "inputs": [
+                "farming:Tobacco, grown",
+                "sugar-boiling:Molasses"
+              ]
             },
             {
               "good": 82,
@@ -239,6 +248,30 @@
               "offMap": true,
               "origin": "west-africa",
               "note": "Whydah's palms 'cultivated mainly to draw oil' (AF)"
+            },
+            {
+              "good": 92,
+              "name": "Coast provisions (yams, corn, palm wine, goats)",
+              "band": "novice",
+              "offMap": true,
+              "origin": "west-africa",
+              "note": "palm wine 2s 3d the anchor, yams 14s a hundred (Bosman)"
+            },
+            {
+              "good": 78,
+              "name": "Apples",
+              "band": "novice",
+              "offMap": true,
+              "origin": "north-america",
+              "note": "New England and Virginia orchards; a boat sold 'Apples and Sider' to Teach's men (J)"
+            },
+            {
+              "good": 40,
+              "name": "Grapes (vineyards)",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "europe",
+              "note": "Madeira, the Canaries, Bordeaux, Jerez; no Caribbean vineyard in the sources"
             }
           ]
         },
@@ -272,7 +305,8 @@
               "name": "Wool",
               "band": "apprentice",
               "offMap": true,
-              "note": "English sheep; no Caribbean flock in the sources"
+              "note": "English sheep; no Caribbean flock in the sources",
+              "origin": "europe"
             },
             {
               "good": 60,
@@ -320,7 +354,8 @@
               "name": "Cowries and shells",
               "band": "novice",
               "offMap": true,
-              "note": "Maldives shells, a currency (UWF)"
+              "note": "Maldives shells, a currency (UWF)",
+              "origin": "asia"
             },
             {
               "good": 63,
@@ -328,14 +363,6 @@
               "band": "novice",
               "note": "Rex's addition; no period trade in the sources, marked unsourced",
               "unsourced": true
-            },
-            {
-              "good": 83,
-              "name": "Beeswax (wild hives)",
-              "band": "apprentice",
-              "offMap": true,
-              "origin": "west-africa",
-              "note": "'there is always abundance of wax' at Cape Lopez (AF); gathered, not farmed"
             },
             {
               "good": 132,
@@ -351,6 +378,14 @@
               "offMap": true,
               "origin": "north-america",
               "note": "120 beads to a fathom (NA); a craft folded in here as a one-off"
+            },
+            {
+              "good": 91,
+              "name": "Orchil lichen (gathered from sea rocks)",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "atlantic-islands",
+              "note": "Cape Verde and the Canaries (AF, EU)"
             }
           ]
         },
@@ -378,7 +413,8 @@
               "name": "Ivory",
               "band": "journeyman",
               "offMap": true,
-              "note": "'Elephant's Teeth' from the Guinea coast (J)"
+              "note": "'Elephant's Teeth' from the Guinea coast (J)",
+              "origin": "west-africa"
             },
             {
               "good": 125,
@@ -387,6 +423,14 @@
               "offMap": true,
               "origin": "north-america",
               "note": "coat beaver about 6.6s a pelt in London 1713–26; a blanket cost 7 made beaver at the posts (NA)"
+            },
+            {
+              "good": 83,
+              "name": "Beeswax (wild hives)",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "west-africa",
+              "note": "'there is always abundance of wax' at Cape Lopez (AF); gathered, not farmed"
             }
           ]
         },
@@ -476,7 +520,10 @@
               "good": 31,
               "name": "Tar, pitch, turpentine",
               "band": "journeyman",
-              "note": "the kiln burn takes judgement; 40,000 barrels a year by 1720 (SCN)"
+              "note": "the kiln burn takes judgement; 40,000 barrels a year by 1720 (SCN)",
+              "equipment": [
+                "kiln"
+              ]
             },
             {
               "good": 14,
@@ -489,7 +536,10 @@
               "name": "Charcoal",
               "band": "apprentice",
               "input": "woodcutting:Lumber (felled)",
-              "note": "the collier's clamp; Rex keeps charcoal burning inside Woodcutting (2026-10-28)"
+              "note": "the collier's clamp; Rex keeps charcoal burning inside Woodcutting (2026-10-28)",
+              "equipment": [
+                "kiln"
+              ]
             },
             {
               "good": 106,
@@ -535,28 +585,24 @@
               "name": "Sulphur (brimstone)",
               "band": "apprentice",
               "offMap": true,
-              "note": "dug from volcanic deposits; Sicily supplied Europe. Nothing in the Caribbean sources (open)"
+              "note": "dug from volcanic deposits; Sicily supplied Europe. Nothing in the Caribbean sources (open)",
+              "origin": "europe"
             },
             {
               "good": 36,
               "name": "Ore and lead",
               "band": "apprentice",
               "offMap": true,
-              "note": "lead for shot; no Caribbean mine in the sources"
+              "note": "lead for shot; no Caribbean mine in the sources",
+              "origin": "europe"
             },
             {
               "good": 36,
               "name": "Bar iron",
               "band": "journeyman",
               "offMap": true,
-              "note": "£16 10s–£18 a ton in London (TR); 'voyage iron' to Africa (JS)"
-            },
-            {
-              "good": 36,
-              "name": "Steel, brass, pewter (alloys)",
-              "band": "expert",
-              "offMap": true,
-              "note": "blister steel from Sheffield; brass from calamine; pewter from tin and lead. No colonial steel before the 1720s (research), so all off-map"
+              "note": "£16 10s–£18 a ton in London (TR); 'voyage iron' to Africa (JS)",
+              "origin": "europe"
             },
             {
               "good": 49,
@@ -566,14 +612,16 @@
               "note": "Potosí to Portobelo; refining with mercury (WHF); refined with Almadén mercury, which the mines could not do without (EU)",
               "inputs": [
                 "imported:Mercury (quicksilver)"
-              ]
+              ],
+              "origin": "spanish-main"
             },
             {
               "good": 50,
               "name": "Gold and gold dust",
               "band": "journeyman",
               "offMap": true,
-              "note": "Brazil and the Guinea coast; washing dust takes less than refining silver"
+              "note": "Brazil and the Guinea coast; washing dust takes less than refining silver",
+              "origin": "west-africa"
             },
             {
               "good": 130,
@@ -599,6 +647,32 @@
               "offMap": true,
               "origin": "spanish-main",
               "note": "to Cartagena and Seville; some to Mughal India (SB)"
+            },
+            {
+              "good": 36,
+              "name": "Steel (blister)",
+              "band": "expert",
+              "offMap": true,
+              "origin": "europe",
+              "input": "mining:Bar iron",
+              "note": "Sheffield's cementation steel; no colonial steel before the 1720s"
+            },
+            {
+              "good": 36,
+              "name": "Brass",
+              "band": "journeyman",
+              "offMap": true,
+              "origin": "europe",
+              "note": "copper and calamine; Bristol battery (AF)"
+            },
+            {
+              "good": 36,
+              "name": "Pewter (tin and lead)",
+              "band": "apprentice",
+              "offMap": true,
+              "origin": "europe",
+              "input": "mining:Ore and lead",
+              "note": "Campbell: pewter is tin and lead"
             }
           ]
         }
@@ -620,7 +694,8 @@
               "good": 18,
               "name": "Lime juice",
               "band": "novice",
-              "note": "pressed and casked; 1,512 gallons to London in one month (C81)"
+              "note": "pressed and casked; 1,512 gallons to London in one month (C81)",
+              "input": "farming:Limes, oranges, lemons"
             },
             {
               "good": 21,
@@ -675,15 +750,12 @@
                 "farming:Coffee (from the 1720s)",
                 "cooking:Chocolate"
               ],
-              "note": "Roberts 'drank his Tea constantly' (J); the tea itself is imported (below)"
-            },
-            {
-              "good": 92,
-              "name": "Coast provisions (yams, corn, palm wine)",
-              "band": "novice",
-              "offMap": true,
-              "origin": "west-africa",
-              "note": "palm wine 2s 3d the anchor, yams 14s a hundred (Bosman)"
+              "note": "Roberts 'drank his Tea constantly' (J); the tea itself is imported (below)",
+              "inputAny": [
+                "farming:Coffee (from the 1720s)",
+                "imported:Tea",
+                "cooking:Chocolate"
+              ]
             }
           ]
         },
@@ -699,21 +771,33 @@
               "name": "Meal (coarse)",
               "band": "novice",
               "input": "farming:Grain for meal and flour",
-              "note": "'Barrels of meale close put up' (L)"
+              "note": "'Barrels of meale close put up' (L)",
+              "equipment": [
+                "mill"
+              ]
             },
             {
               "good": 26,
               "name": "Oatmeal",
               "band": "apprentice",
               "input": "farming:Grain for meal and flour",
-              "note": "Roberts took '10 Casks of Oatmeal' (J)"
+              "note": "Roberts took '10 Casks of Oatmeal' (J)",
+              "equipment": [
+                "mill"
+              ]
             },
             {
               "good": 20,
               "name": "Flour (bolted)",
               "band": "journeyman",
-              "input": "farming:Grain for meal and flour",
-              "note": "bolted fine; 196 lb to the barrel (FL)"
+              "note": "bolted fine; 196 lb to the barrel (FL)",
+              "equipment": [
+                "mill"
+              ],
+              "inputs": [
+                "farming:Grain for meal and flour",
+                "cooperage:Slack casks (barrel, hogshead for dry goods)"
+              ]
             },
             {
               "good": 116,
@@ -721,7 +805,10 @@
               "band": "apprentice",
               "origin": "brazil",
               "input": "farming:Cassava, maize, yams, potatoes",
-              "note": "640 réis a bushel at São Paulo 1703 (SB)"
+              "note": "640 réis a bushel at São Paulo 1703 (SB)",
+              "equipment": [
+                "mill"
+              ]
             },
             {
               "good": 121,
@@ -730,7 +817,10 @@
               "offMap": true,
               "origin": "spanish-main",
               "input": "farming:Tobacco, cured and packed",
-              "note": "the Seville factory of 1687 (SB)"
+              "note": "the Seville factory of 1687 (SB)",
+              "equipment": [
+                "mill"
+              ]
             }
           ]
         },
@@ -746,21 +836,30 @@
               "name": "Cassava and potato bread",
               "band": "novice",
               "input": "farming:Cassava, maize, yams, potatoes",
-              "note": "'The third sort of bread we use, is only Potatoes' (L)"
+              "note": "'The third sort of bread we use, is only Potatoes' (L)",
+              "equipment": [
+                "oven"
+              ]
             },
             {
               "good": 21,
               "name": "Bread",
               "band": "novice",
               "input": "milling:Meal (coarse)",
-              "note": "daily bread; not a cargo"
+              "note": "daily bread; not a cargo",
+              "equipment": [
+                "oven"
+              ]
             },
             {
               "good": 21,
               "name": "Ship's biscuit",
               "band": "apprentice",
               "input": "milling:Flour (bolted)",
-              "note": "baked hard, twice; 16s a hundredweight (PY); well baked, it keeps for years (SV)"
+              "note": "baked hard, twice; 16s a hundredweight (PY); well baked, it keeps for years (SV)",
+              "equipment": [
+                "oven"
+              ]
             }
           ]
         },
@@ -775,22 +874,34 @@
               "good": 22,
               "name": "Fresh meat",
               "band": "novice",
-              "input": "husbandry:Cattle and hogs (farm)",
-              "note": "for the galley and for Preserving"
+              "note": "for the galley and for Preserving",
+              "inputAny": [
+                "husbandry:Cattle and hogs (farm)",
+                "hunting:Wild cattle and hog carcasses",
+                "hunting:Deer carcasses"
+              ]
             },
             {
               "good": 16,
               "name": "Raw hides",
               "band": "apprentice",
-              "input": "hunting:Wild cattle and hog carcasses",
-              "note": "flaying clean; 'cow hides 69 ... buff hides 768' to London (C81)"
+              "note": "flaying clean; 'cow hides 69 ... buff hides 768' to London (C81)",
+              "inputAny": [
+                "hunting:Wild cattle and hog carcasses",
+                "husbandry:Cattle and hogs (farm)"
+              ],
+              "byproductOf": "butchering:Fresh meat"
             },
             {
               "good": 17,
               "name": "Tallow (rendered)",
               "band": "apprentice",
-              "input": "hunting:Wild cattle and hog carcasses",
-              "note": "the fat rendered; sold with the hides (E2)"
+              "note": "the fat rendered; sold with the hides (E2)",
+              "inputAny": [
+                "hunting:Wild cattle and hog carcasses",
+                "husbandry:Cattle and hogs (farm)"
+              ],
+              "byproductOf": "butchering:Fresh meat"
             },
             {
               "good": 32,
@@ -821,29 +932,42 @@
               "good": 24,
               "name": "Salt fish",
               "band": "novice",
-              "input": "fishing:Fresh fish",
-              "note": "split, salted and dried; the poor grade went to the islands (HV)"
+              "note": "split, salted and dried; the poor grade went to the islands (HV)",
+              "inputs": [
+                "fishing:Fresh fish",
+                "marine:Salt (raked)"
+              ]
             },
             {
               "good": 61,
               "name": "Boucan (smoked meat)",
               "band": "apprentice",
               "input": "butchering:Fresh meat",
-              "note": "hardened with smoke for sea voyages (E2)"
+              "note": "hardened with smoke for sea voyages (E2)",
+              "equipment": [
+                "smokehouse"
+              ]
             },
             {
               "good": 22,
               "name": "Salt beef and pork",
               "band": "journeyman",
-              "input": "butchering:Fresh meat",
-              "note": "cut, brined and packed tight in barrel; a short barrel was noticed (PY)"
+              "note": "cut, brined and packed tight in barrel; a short barrel was noticed (PY)",
+              "inputs": [
+                "butchering:Fresh meat",
+                "marine:Salt (raked)",
+                "cooperage:Tight casks (rum, molasses, wine)"
+              ]
             },
             {
               "good": 61,
               "name": "Salted boar",
               "band": "journeyman",
-              "input": "butchering:Fresh meat",
-              "note": "'salt it, and sell it so to the planters' (E2)"
+              "note": "'salt it, and sell it so to the planters' (E2)",
+              "inputs": [
+                "butchering:Fresh meat",
+                "marine:Salt (raked)"
+              ]
             },
             {
               "good": 128,
@@ -851,16 +975,22 @@
               "band": "journeyman",
               "offMap": true,
               "origin": "north-america",
-              "input": "fishing:Cod, the Newfoundland fishery",
-              "note": "the grade set the market: the refuse went to the islands (NA)"
+              "note": "the grade set the market: the refuse went to the islands (NA)",
+              "inputs": [
+                "fishing:Cod, the Newfoundland fishery",
+                "marine:Salt (raked)"
+              ]
             },
             {
               "good": 123,
               "name": "Tasajo (jerked beef)",
               "band": "apprentice",
               "origin": "spanish-main",
-              "input": "butchering:Fresh meat",
-              "note": "Campeche's jerked beef to Havana (SB)"
+              "note": "Campeche's jerked beef to Havana (SB)",
+              "inputs": [
+                "butchering:Fresh meat",
+                "marine:Salt (raked)"
+              ]
             },
             {
               "good": 110,
@@ -868,8 +998,11 @@
               "band": "journeyman",
               "offMap": true,
               "origin": "europe",
-              "input": "butchering:Fresh meat",
-              "note": "Cork's trade after the Cattle Act 1667 (EU)"
+              "note": "Cork's trade after the Cattle Act 1667 (EU)",
+              "inputs": [
+                "butchering:Fresh meat",
+                "marine:Salt (raked)"
+              ]
             }
           ]
         },
@@ -885,14 +1018,20 @@
               "name": "Butter",
               "band": "apprentice",
               "input": "husbandry:Milk",
-              "note": "in firkins; weight open (ML)"
+              "note": "in firkins; weight open (ML)",
+              "equipment": [
+                "dairy"
+              ]
             },
             {
               "good": 43,
               "name": "Cheese",
               "band": "journeyman",
               "input": "husbandry:Milk",
-              "note": "'a hundred-weight of Gloucester cheese' to Virginia (BR)"
+              "note": "'a hundred-weight of Gloucester cheese' to Virginia (BR)",
+              "equipment": [
+                "dairy"
+              ]
             }
           ]
         },
@@ -915,34 +1054,38 @@
               "name": "Wax seals",
               "band": "novice",
               "unsourced": true,
-              "note": "sealing wax for letters; no Caribbean source"
+              "note": "sealing wax for letters; no Caribbean source",
+              "input": "hunting:Beeswax (wild hives)"
             },
             {
               "good": 45,
               "name": "Moulded and altar candles",
               "band": "journeyman",
               "unsourced": true,
-              "note": "consistent sizes, ceremonial forms"
+              "note": "consistent sizes, ceremonial forms",
+              "input": "hunting:Beeswax (wild hives)"
             },
             {
               "good": 45,
               "name": "Wax portraits and anatomical models",
               "band": "expert",
               "unsourced": true,
-              "note": "a European art of the period; unsourced here"
+              "note": "a European art of the period; unsourced here",
+              "input": "hunting:Beeswax (wild hives)"
             },
             {
               "good": 45,
               "name": "Lifelike wax figures",
               "band": "master",
               "unsourced": true,
-              "note": "the INFP's signature work (story: brothel, wax figures); a design good"
+              "note": "the INFP's signature work (story: brothel, wax figures); a design good",
+              "input": "hunting:Beeswax (wild hives)"
             },
             {
               "good": 45,
               "name": "Beeswax candles",
               "band": "apprentice",
-              "input": "marine:Beeswax (wild hives)",
+              "input": "hunting:Beeswax (wild hives)",
               "note": "cleaner burning; the wax came from the Guinea coast (AF). No longer unsourced for the wax"
             }
           ]
@@ -959,14 +1102,20 @@
               "name": "Dressed deerskin",
               "band": "apprentice",
               "input": "butchering:Deerskins (raw)",
-              "note": "the Carolina export went raw or half-dressed (open)"
+              "note": "the Carolina export went raw or half-dressed (open)",
+              "equipment": [
+                "tan-pits"
+              ]
             },
             {
               "good": 16,
               "name": "Tanned leather",
               "band": "journeyman",
               "input": "butchering:Raw hides",
-              "note": "bark pits take months; no Caribbean tannery in the sources, so off-map in practice"
+              "note": "bark pits take months; no Caribbean tannery in the sources, so off-map in practice",
+              "equipment": [
+                "tan-pits"
+              ]
             }
           ]
         },
@@ -1004,7 +1153,8 @@
               "band": "master",
               "offMap": true,
               "input": "tanning:Tanned leather",
-              "note": "'Gloves' among Ligon's imports (L)"
+              "note": "'Gloves' among Ligon's imports (L)",
+              "origin": "europe"
             }
           ]
         },
@@ -1017,10 +1167,20 @@
           "items": [
             {
               "good": 35,
-              "name": "Sandals and repairs",
+              "name": "Cobbling (shoe repairs)",
+              "band": "novice",
+              "service": true,
+              "note": "the cobbler repairs; terminology varied (research)"
+            },
+            {
+              "good": 35,
+              "name": "Sandals",
               "band": "novice",
               "input": "tanning:Tanned leather",
-              "note": "the cobbler's work"
+              "note": "the cobbler's work",
+              "equipment": [
+                "last-and-bench"
+              ]
             },
             {
               "good": 35,
@@ -1028,7 +1188,11 @@
               "band": "apprentice",
               "offMap": true,
               "input": "tanning:Tanned leather",
-              "note": "'shooes' at £50 in Ligon's outfit (L)"
+              "note": "'shooes' at £50 in Ligon's outfit (L)",
+              "equipment": [
+                "last-and-bench"
+              ],
+              "origin": "europe"
             },
             {
               "good": 35,
@@ -1036,7 +1200,11 @@
               "band": "journeyman",
               "offMap": true,
               "input": "tanning:Tanned leather",
-              "note": "'some bootes' (L)"
+              "note": "'some bootes' (L)",
+              "equipment": [
+                "last-and-bench"
+              ],
+              "origin": "europe"
             },
             {
               "good": 35,
@@ -1044,7 +1212,11 @@
               "band": "expert",
               "offMap": true,
               "input": "tanning:Tanned leather",
-              "note": "fitted; no period Caribbean maker in the sources (open)"
+              "note": "fitted; no period Caribbean maker in the sources (open)",
+              "equipment": [
+                "last-and-bench"
+              ],
+              "origin": "europe"
             },
             {
               "good": 35,
@@ -1052,7 +1224,11 @@
               "band": "master",
               "offMap": true,
               "input": "tanning:Tanned leather",
-              "note": "a design tier (open)"
+              "note": "a design tier (open)",
+              "equipment": [
+                "last-and-bench"
+              ],
+              "origin": "europe"
             }
           ]
         },
@@ -1067,22 +1243,40 @@
               "good": 4,
               "name": "Molasses",
               "band": "apprentice",
-              "input": "farming:Sugar cane",
-              "note": "what drains from the pots; the apprentice's share of the work (L)"
+              "note": "what drains from the pots; the apprentice's share of the work (L)",
+              "equipment": [
+                "boiling-house",
+                "cattle-mill"
+              ],
+              "inputs": [
+                "farming:Sugar cane",
+                "cooperage:Tight casks (rum, molasses, wine)"
+              ],
+              "byproductOf": "sugar-boiling:Muscovado sugar"
             },
             {
               "good": 1,
               "name": "Muscovado sugar",
               "band": "journeyman",
-              "input": "farming:Sugar cane",
-              "note": "boiling through the coppers and striking; 3d a pound on Barbados (L)"
+              "note": "boiling through the coppers and striking; 3d a pound on Barbados (L)",
+              "equipment": [
+                "boiling-house",
+                "cattle-mill"
+              ],
+              "inputs": [
+                "farming:Sugar cane",
+                "cooperage:Slack casks (barrel, hogshead for dry goods)"
+              ]
             },
             {
               "good": 2,
               "name": "Clayed (white) sugar",
               "band": "expert",
               "input": "sugar-boiling:Muscovado sugar",
-              "note": "claying the pot so the molasses drains out; 20d a pound in London (L)"
+              "note": "claying the pot so the molasses drains out; 20d a pound in London (L)",
+              "equipment": [
+                "boiling-house"
+              ]
             },
             {
               "good": 3,
@@ -1090,7 +1284,11 @@
               "band": "master",
               "offMap": true,
               "input": "sugar-boiling:Muscovado sugar",
-              "note": "refined in Bristol and London cone moulds (DB1)"
+              "note": "refined in Bristol and London cone moulds (DB1)",
+              "equipment": [
+                "boiling-house"
+              ],
+              "origin": "europe"
             }
           ]
         },
@@ -1113,7 +1311,10 @@
               "name": "Indigo dye",
               "band": "journeyman",
               "input": "farming:Indigo plant (grown and cut)",
-              "note": "steeping, beating and judging the cut (C88, D)"
+              "note": "steeping, beating and judging the cut (C88, D)",
+              "equipment": [
+                "vat"
+              ]
             },
             {
               "good": 51,
@@ -1121,14 +1322,25 @@
               "band": "expert",
               "offMap": true,
               "input": "farming:Nopal and cochineal (reared)",
-              "note": "killing and drying the insect; 18–45s a pound in London (TR)"
+              "note": "killing and drying the insect; 18–45s a pound in London (TR)",
+              "origin": "spanish-main"
             },
             {
               "good": 33,
               "name": "Dyed cloth",
               "band": "journeyman",
-              "input": "weaving:Coarse linen (dowlas, osnaburg)",
-              "note": "the dye bath with a mordant; needs a dye from this tree too"
+              "note": "the dye bath with a mordant; needs a dye from this tree too",
+              "equipment": [
+                "dye-vat"
+              ],
+              "inputs": [
+                "weaving:Coarse linen (dowlas, osnaburg)"
+              ],
+              "inputAny": [
+                "dye:Indigo dye",
+                "dye:Annatto dye",
+                "dye:Cochineal dye"
+              ]
             },
             {
               "good": 91,
@@ -1136,7 +1348,8 @@
               "band": "journeyman",
               "offMap": true,
               "origin": "atlantic-islands",
-              "note": "Cape Verde and the Canaries; a Lisbon monopoly (AF, EU)"
+              "note": "Cape Verde and the Canaries; a Lisbon monopoly (AF, EU)",
+              "input": "marine:Orchil lichen (gathered from sea rocks)"
             }
           ]
         },
@@ -1152,14 +1365,20 @@
               "name": "Small beer",
               "band": "novice",
               "input": "farming:Grain for meal and flour",
-              "note": "'as bad as water bewitched' (Barlow 1667); Anstis's mock trial: 'guilty of drinking Small-Beer' (J)"
+              "note": "'as bad as water bewitched' (Barlow 1667); Anstis's mock trial: 'guilty of drinking Small-Beer' (J)",
+              "equipment": [
+                "brewhouse"
+              ]
             },
             {
               "good": 79,
               "name": "Mobbie, perino, grippo (island drinks)",
               "band": "novice",
               "input": "farming:Cassava, maize, yams, potatoes",
-              "note": "'Mobbie, a drink made of Potatoes'; perino 'which the Indians make'; grippo 'few make it well' (L)"
+              "note": "'Mobbie, a drink made of Potatoes'; perino 'which the Indians make'; grippo 'few make it well' (L)",
+              "equipment": [
+                "brewhouse"
+              ]
             },
             {
               "good": 79,
@@ -1169,37 +1388,74 @@
                 "farming:Limes, oranges, lemons",
                 "sugar-boiling:Clayed (white) sugar"
               ],
-              "note": "'spring water, white sugar, and juyce of Orenges' (L)"
+              "note": "'spring water, white sugar, and juyce of Orenges' (L)",
+              "equipment": [
+                "brewhouse"
+              ]
             },
             {
               "good": 79,
               "name": "Wine of pines",
               "band": "apprentice",
               "input": "farming:Pineapple, plantain",
-              "note": "'the incomparable wine of Pines' (L); Dampier's 'pine-drink'"
+              "note": "'the incomparable wine of Pines' (L); Dampier's 'pine-drink'",
+              "equipment": [
+                "brewhouse"
+              ]
             },
             {
               "good": 78,
               "name": "Ship's beer (gallon a day)",
               "band": "apprentice",
               "offMap": true,
-              "input": "farming:Grain for meal and flour",
-              "note": "'one gallon, wine measure, of beer' (Navy contract 1678); spoils in the tropics"
+              "note": "'one gallon, wine measure, of beer' (Navy contract 1678); spoils in the tropics",
+              "equipment": [
+                "brewhouse"
+              ],
+              "inputs": [
+                "farming:Grain for meal and flour",
+                "cooperage:Tight casks (rum, molasses, wine)"
+              ],
+              "origin": "europe"
             },
             {
               "good": 78,
               "name": "Cider",
               "band": "apprentice",
               "offMap": true,
-              "note": "New England and Virginia; a boat 'brought Apples and Sider to sell to the Sloop's Men' (J). Apples: no Caribbean crop"
+              "note": "New England and Virginia; a boat 'brought Apples and Sider to sell to the Sloop's Men' (J). Apples: no Caribbean crop",
+              "equipment": [
+                "brewhouse"
+              ],
+              "origin": "north-america",
+              "input": "farming:Apples"
             },
             {
               "good": 78,
               "name": "Strong beer, stout, bottled ale",
               "band": "journeyman",
               "offMap": true,
-              "input": "farming:Grain for meal and flour",
-              "note": "'good English Beer' (L); Ligon's outlay 'Strong Beer 50 l.'"
+              "note": "'good English Beer' (L); Ligon's outlay 'Strong Beer 50 l.'",
+              "equipment": [
+                "brewhouse"
+              ],
+              "inputs": [
+                "farming:Grain for meal and flour",
+                "cooperage:Tight casks (rum, molasses, wine)"
+              ],
+              "origin": "europe"
+            },
+            {
+              "good": 40,
+              "name": "Wine",
+              "band": "journeyman",
+              "offMap": true,
+              "note": "Madeira, Fayal, Canary, claret: £8 a pipe at Jamestown (CSP)",
+              "equipment": [
+                "still"
+              ],
+              "origin": "europe",
+              "input": "farming:Grapes (vineyards)"
             }
           ]
         },
@@ -1215,29 +1471,35 @@
               "name": "Aqua vitae (kill-devil)",
               "band": "apprentice",
               "input": "sugar-boiling:Molasses",
-              "note": "the rough first spirit from the skimmings (L)"
+              "note": "the rough first spirit from the skimmings (L) (the first run; rum is the second)",
+              "equipment": [
+                "still"
+              ]
             },
             {
               "good": 5,
               "name": "Rum",
               "band": "journeyman",
-              "input": "sugar-boiling:Molasses",
-              "note": "half a crown a gallon on Barbados (L); cask size open (1j)"
-            },
-            {
-              "good": 40,
-              "name": "Wine",
-              "band": "journeyman",
-              "offMap": true,
-              "note": "Madeira, Fayal, Canary, claret: £8 a pipe at Jamestown (CSP)"
+              "note": "half a crown a gallon on Barbados (L); cask size open (1j)",
+              "equipment": [
+                "still"
+              ],
+              "inputs": [
+                "sugar-boiling:Molasses",
+                "cooperage:Tight casks (rum, molasses, wine)"
+              ]
             },
             {
               "good": 41,
               "name": "Brandy",
               "band": "expert",
               "offMap": true,
-              "input": "distilling:Wine",
-              "note": "distilled wine; thirty casks in one prize (J)"
+              "input": "brewing:Wine",
+              "note": "distilled wine; thirty casks in one prize (J)",
+              "equipment": [
+                "still"
+              ],
+              "origin": "europe"
             },
             {
               "good": 81,
@@ -1246,7 +1508,15 @@
               "offMap": true,
               "knowledge": "foreign",
               "note": "East Indies palm or cane spirit; 'rum or arrack in lieu' of wine (Navy 1731); Barlow at Goa 1697 priced it by the keg. A far-travelled merchant's recipe (3f)",
-              "region": "indian-ocean"
+              "region": "indian-ocean",
+              "equipment": [
+                "still"
+              ],
+              "origin": "asia",
+              "inputAny": [
+                "farming:Rice",
+                "sugar-boiling:Molasses"
+              ]
             },
             {
               "good": 115,
@@ -1255,7 +1525,10 @@
               "offMap": true,
               "origin": "brazil",
               "input": "sugar-boiling:Molasses",
-              "note": "Bahia's cane spirit, the Angola trade liquor (SB)"
+              "note": "Bahia's cane spirit, the Angola trade liquor (SB)",
+              "equipment": [
+                "still"
+              ]
             },
             {
               "good": 102,
@@ -1264,7 +1537,10 @@
               "offMap": true,
               "origin": "europe",
               "input": "farming:Grain for meal and flour",
-              "note": "Schiedam's trade (EU)"
+              "note": "Schiedam's trade (EU)",
+              "equipment": [
+                "still"
+              ]
             }
           ]
         },
@@ -1281,20 +1557,35 @@
               "band": "apprentice",
               "offMap": true,
               "input": "mining:Sulphur (brimstone)",
-              "note": "melted and skimmed"
+              "note": "melted and skimmed",
+              "equipment": [
+                "laboratory"
+              ],
+              "origin": "europe"
             },
             {
               "good": 39,
               "name": "Saltpetre",
               "band": "journeyman",
               "input": "mining:Nitre earth",
-              "note": "leached, boiled and crystallised; the hardest of the three ingredients to get right"
+              "note": "leached, boiled and crystallised; the hardest of the three ingredients to get right",
+              "equipment": [
+                "laboratory"
+              ]
             },
             {
               "good": 48,
               "name": "Reagents and salts",
               "band": "expert",
-              "note": "for the apothecary and the dyer; a design tier (open)"
+              "note": "for the apothecary and the dyer; a design tier (open)",
+              "equipment": [
+                "laboratory"
+              ],
+              "inputAny": [
+                "mining:Nitre earth",
+                "refining:Refined sulphur",
+                "mining:Ore and lead"
+              ]
             }
           ]
         },
@@ -1309,7 +1600,8 @@
               "good": 39,
               "name": "Powder handling and storage",
               "band": "novice",
-              "note": "keeping it dry (DUTIES: the gunner's duty)"
+              "note": "keeping it dry (DUTIES: the gunner's duty)",
+              "service": true
             },
             {
               "good": 39,
@@ -1321,7 +1613,11 @@
                 "refining:Saltpetre",
                 "refining:Refined sulphur",
                 "woodcutting:Charcoal"
-              ]
+              ],
+              "equipment": [
+                "powder-mill"
+              ],
+              "origin": "europe"
             },
             {
               "good": 39,
@@ -1329,7 +1625,11 @@
               "band": "journeyman",
               "offMap": true,
               "input": "powder:Common powder",
-              "note": "corned to grain sizes; 'five Barrels of Powder' taken by Roberts (J)"
+              "note": "corned to grain sizes; 'five Barrels of Powder' taken by Roberts (J)",
+              "equipment": [
+                "powder-mill"
+              ],
+              "origin": "europe"
             },
             {
               "good": 39,
@@ -1337,7 +1637,11 @@
               "band": "expert",
               "offMap": true,
               "input": "powder:Graded powder (musket, cannon)",
-              "note": "a design tier (open)"
+              "note": "a design tier (open)",
+              "equipment": [
+                "powder-mill"
+              ],
+              "origin": "europe"
             },
             {
               "good": 39,
@@ -1346,7 +1650,11 @@
               "offMap": true,
               "unsourced": true,
               "input": "powder:Fine military powder",
-              "note": "Rex's design tier"
+              "note": "Rex's design tier",
+              "equipment": [
+                "powder-mill"
+              ],
+              "origin": "europe"
             }
           ]
         },
@@ -1387,56 +1695,80 @@
               "name": "Nails",
               "band": "novice",
               "input": "mining:Bar iron",
-              "note": "6d a pound retail (TR); the Midlands nail trade was a by-employment, not a company"
+              "note": "6d a pound retail (TR); the Midlands nail trade was a by-employment, not a company",
+              "equipment": [
+                "forge"
+              ]
             },
             {
               "good": 37,
               "name": "Iron hoops",
               "band": "apprentice",
               "input": "mining:Bar iron",
-              "note": "for the cooper"
+              "note": "for the cooper",
+              "equipment": [
+                "forge"
+              ]
             },
             {
               "good": 37,
               "name": "Tools: hoes, axes, knives (rough)",
               "band": "apprentice",
               "input": "mining:Bar iron",
-              "note": "'nails, hoes, and axes' to Virginia (BR)"
+              "note": "'nails, hoes, and axes' to Virginia (BR)",
+              "equipment": [
+                "forge"
+              ]
             },
             {
               "good": 27,
               "name": "Horseshoes (farriery)",
               "band": "apprentice",
               "input": "mining:Bar iron",
-              "note": "Farriers' Company 1674; 'makes Shoes for Horses, and puts them on' (Campbell)"
+              "note": "Farriers' Company 1674; 'makes Shoes for Horses, and puts them on' (Campbell)",
+              "equipment": [
+                "forge"
+              ]
             },
             {
               "good": 37,
               "name": "Chains, hinges, ship's ironwork",
               "band": "journeyman",
               "input": "mining:Bar iron",
-              "note": "the ship's fittings the carpenter needs"
+              "note": "the ship's fittings the carpenter needs",
+              "equipment": [
+                "forge"
+              ]
             },
             {
               "good": 38,
               "name": "Gun barrels (forged)",
               "band": "journeyman",
               "input": "mining:Bar iron",
-              "note": "the gunsmith bought barrels in and made the lock (Campbell)"
+              "note": "the gunsmith bought barrels in and made the lock (Campbell)",
+              "equipment": [
+                "forge"
+              ]
             },
             {
               "good": 37,
               "name": "Locks and keys",
               "band": "expert",
-              "input": "mining:Steel, brass, pewter (alloys)",
-              "note": "'see Smith' (Campbell's index); needs ingenuity 'almost as any Branch of the Trade'"
+              "input": "mining:Steel (blister)",
+              "note": "'see Smith' (Campbell's index); needs ingenuity 'almost as any Branch of the Trade'",
+              "equipment": [
+                "forge"
+              ]
             },
             {
               "good": 37,
               "name": "Anchors",
               "band": "expert",
               "input": "mining:Bar iron",
-              "note": "the anchor-smith, 'laborious and profitable Branch of the Smith Trade' (Campbell)"
+              "note": "the anchor-smith, 'laborious and profitable Branch of the Smith Trade' (Campbell)",
+              "equipment": [
+                "forge"
+              ]
             },
             {
               "good": 101,
@@ -1445,7 +1777,10 @@
               "offMap": true,
               "origin": "europe",
               "input": "mining:Bar iron",
-              "note": "a carpenter's set about £1 10s (EU)"
+              "note": "a carpenter's set about £1 10s (EU)",
+              "equipment": [
+                "forge"
+              ]
             }
           ]
         },
@@ -1460,7 +1795,8 @@
               "good": 38,
               "name": "Small-arms repair (the armourer)",
               "band": "novice",
-              "note": "the ship's armourer; 'Mariner and Armourer' in a will (research-occupations.md)"
+              "note": "the ship's armourer; 'Mariner and Armourer' in a will (research-occupations.md)",
+              "service": true
             },
             {
               "good": 38,
@@ -1470,7 +1806,10 @@
                 "smithing:Gun barrels (forged)",
                 "carpentry:Planks and boards (sawn)"
               ],
-              "note": "lock, stock and barrel; the stock is the carpenter's wood"
+              "note": "lock, stock and barrel; the stock is the carpenter's wood",
+              "equipment": [
+                "forge"
+              ]
             },
             {
               "good": 38,
@@ -1481,15 +1820,23 @@
                 "smithing:Gun barrels (forged)",
                 "carpentry:Planks and boards (sawn)"
               ],
-              "note": "'a great number of muskets' taken (E); proofed in London"
+              "note": "'a great number of muskets' taken (E); proofed in London",
+              "equipment": [
+                "forge"
+              ],
+              "origin": "europe"
             },
             {
               "good": 38,
               "name": "Fine locks and fowling pieces",
               "band": "expert",
               "offMap": true,
-              "input": "mining:Steel, brass, pewter (alloys)",
-              "note": "the gunmaker's best work; a design tier (open)"
+              "input": "mining:Steel (blister)",
+              "note": "the gunmaker's best work; a design tier (open)",
+              "equipment": [
+                "forge"
+              ],
+              "origin": "europe"
             }
           ]
         },
@@ -1504,16 +1851,23 @@
               "good": 37,
               "name": "Knives and razors",
               "band": "apprentice",
-              "input": "mining:Steel, brass, pewter (alloys)",
-              "note": "the cutler's staple; surgeon's lancets too"
+              "input": "mining:Steel (blister)",
+              "note": "the cutler's staple; surgeon's lancets too",
+              "equipment": [
+                "forge"
+              ]
             },
             {
               "good": 38,
               "name": "Cutlasses",
               "band": "journeyman",
               "offMap": true,
-              "input": "mining:Steel, brass, pewter (alloys)",
-              "note": "the boarder's weapon; blades from abroad, mounted here"
+              "input": "mining:Steel (blister)",
+              "note": "the boarder's weapon; blades from abroad, mounted here",
+              "equipment": [
+                "forge"
+              ],
+              "origin": "europe"
             },
             {
               "good": 38,
@@ -1521,18 +1875,26 @@
               "band": "expert",
               "offMap": true,
               "inputs": [
-                "mining:Steel, brass, pewter (alloys)",
+                "mining:Steel (blister)",
                 "leatherworking:Belts, baldrics, scabbards"
               ],
-              "note": "hilt, grip and scabbard; 'Swords, knives' shipped to Barbados (L)"
+              "note": "hilt, grip and scabbard; 'Swords, knives' shipped to Barbados (L)",
+              "equipment": [
+                "forge"
+              ],
+              "origin": "europe"
             },
             {
               "good": 38,
               "name": "Fine blades (Hounslow, Solingen)",
               "band": "master",
               "offMap": true,
-              "input": "mining:Steel, brass, pewter (alloys)",
-              "note": "the German smiths' work; nothing like it in the colonies (research)"
+              "input": "mining:Steel (blister)",
+              "note": "the German smiths' work; nothing like it in the colonies (research)",
+              "equipment": [
+                "forge"
+              ],
+              "origin": "europe"
             }
           ]
         },
@@ -1548,31 +1910,47 @@
               "name": "Shot (cast lead)",
               "band": "novice",
               "input": "mining:Ore and lead",
-              "note": "1,281 lead shot in one QAR lab batch (QAR); any hand with a mould"
+              "note": "1,281 lead shot in one QAR lab batch (QAR); any hand with a mould",
+              "equipment": [
+                "furnace"
+              ]
             },
             {
               "good": 64,
               "name": "Pewter plates and mugs",
               "band": "apprentice",
               "offMap": true,
-              "input": "mining:Steel, brass, pewter (alloys)",
-              "note": "33 pieces on the QAR, London marks c. 1689–1712 (QAR); Port Royal had pewterers"
+              "input": "mining:Pewter (tin and lead)",
+              "note": "33 pieces on the QAR, London marks c. 1689–1712 (QAR); Port Royal had pewterers",
+              "equipment": [
+                "furnace"
+              ],
+              "origin": "europe"
             },
             {
               "good": 37,
               "name": "Brass fittings, buckles, candlesticks",
               "band": "journeyman",
               "offMap": true,
-              "input": "mining:Steel, brass, pewter (alloys)",
-              "note": "Campbell: the founder casts all that is brass in a brazier's shop"
+              "input": "mining:Brass",
+              "note": "Campbell: the founder casts all that is brass in a brazier's shop",
+              "equipment": [
+                "furnace"
+              ],
+              "origin": "europe"
             },
             {
               "good": 38,
               "name": "Bells and swivel guns",
               "band": "expert",
               "offMap": true,
-              "input": "mining:Steel, brass, pewter (alloys)",
-              "note": "small guns; 'four Swivels' taken by Low (J)"
+              "input": "mining:Brass",
+              "note": "small guns; 'four Swivels' taken by Low (J)",
+              "equipment": [
+                "foundry",
+                "furnace"
+              ],
+              "origin": "europe"
             },
             {
               "good": 38,
@@ -1580,7 +1958,12 @@
               "band": "master",
               "offMap": true,
               "input": "mining:Bar iron",
-              "note": "the gunfounder's furnace and boring mill; 29 located on the QAR wreck (QAR)"
+              "note": "the gunfounder's furnace and boring mill; 29 located on the QAR wreck (QAR)",
+              "equipment": [
+                "foundry",
+                "furnace"
+              ],
+              "origin": "europe"
             },
             {
               "good": 94,
@@ -1588,8 +1971,11 @@
               "band": "apprentice",
               "offMap": true,
               "origin": "europe",
-              "input": "mining:Steel, brass, pewter (alloys)",
-              "note": "Bristol and Birmingham battery for the coast; cut into bracelets at Whydah (AF)"
+              "input": "mining:Brass",
+              "note": "Bristol and Birmingham battery for the coast; cut into bracelets at Whydah (AF)",
+              "equipment": [
+                "furnace"
+              ]
             }
           ]
         },
@@ -1605,27 +1991,31 @@
               "name": "Silver buttons and buckles",
               "band": "apprentice",
               "input": "mining:Silver",
-              "note": "small work"
+              "note": "small work",
+              "type": "specialty"
             },
             {
               "good": 49,
               "name": "Plate (cups, dishes)",
               "band": "journeyman",
               "input": "mining:Silver",
-              "note": "uncoined plate shared out by weight (E)"
+              "note": "uncoined plate shared out by weight (E)",
+              "type": "specialty"
             },
             {
               "good": 50,
               "name": "Jewellery and chains",
               "band": "expert",
               "input": "mining:Gold and gold dust",
-              "note": "'chains and trinkets' in Roberts' Brazil prize (J)"
+              "note": "'chains and trinkets' in Roberts' Brazil prize (J)",
+              "type": "specialty"
             },
             {
               "good": 49,
               "name": "Assay and fine work",
               "band": "master",
-              "note": "judging and refining the metal; the diamond cross for the King of Portugal (J) as the kind of piece"
+              "note": "judging and refining the metal; the diamond cross for the King of Portugal (J) as the kind of piece",
+              "service": true
             }
           ]
         },
@@ -1641,7 +2031,10 @@
               "name": "Planks and boards (sawn)",
               "band": "novice",
               "input": "woodcutting:Lumber (felled)",
-              "note": "the saw pit (L)"
+              "note": "the saw pit (L)",
+              "equipment": [
+                "saw-pit"
+              ]
             },
             {
               "good": 28,
@@ -1655,7 +2048,8 @@
               "name": "Ship's repairs: patching, shoring",
               "band": "apprentice",
               "input": "carpentry:Planks and boards (sawn)",
-              "note": "the ship's carpenter; pirates 'forced away the Carpenter from the Pink' (J)"
+              "note": "the ship's carpenter; pirates 'forced away the Carpenter from the Pink' (J)",
+              "service": true
             },
             {
               "good": 28,
@@ -1690,7 +2084,8 @@
               "inputs": [
                 "woodcutting:Tar, pitch, turpentine"
               ],
-              "note": "also needs old rope picked to oakum (DUTIES); the caulker's rung"
+              "note": "also needs old rope picked to oakum (DUTIES); the caulker's rung",
+              "service": true
             },
             {
               "good": 65,
@@ -1713,8 +2108,14 @@
               "good": 65,
               "name": "Careening and refit",
               "band": "journeyman",
-              "input": "shipwrighting:Caulking (oakum and pitch)",
-              "note": "the ship hauled down on a beach and the bottom scraped (DUTIES)"
+              "note": "the ship hauled down on a beach and the bottom scraped (DUTIES); old rope picked to oakum (DUTIES)",
+              "equipment": [
+                "shipyard"
+              ],
+              "service": true,
+              "inputs": [
+                "woodcutting:Tar, pitch, turpentine"
+              ]
             },
             {
               "good": 65,
@@ -1723,9 +2124,15 @@
               "inputs": [
                 "carpentry:Planks and boards (sawn)",
                 "smithing:Chains, hinges, ship's ironwork",
-                "shipwrighting:Masts, yards and blocks"
+                "shipwrighting:Masts, yards and blocks",
+                "sailmaking:Sails (sewn)",
+                "ropemaking:Cordage (running rigging)",
+                "ropemaking:Cables and hawsers"
               ],
-              "note": "Bermuda cedar sloops from the mid-1600s (research); Bonnet's and Teach's sloops"
+              "note": "Bermuda cedar sloops from the mid-1600s (research); Bonnet's and Teach's sloops",
+              "equipment": [
+                "shipyard"
+              ]
             },
             {
               "good": 65,
@@ -1733,10 +2140,18 @@
               "band": "master",
               "offMap": true,
               "inputs": [
-                "shipwrighting:Sloop (Bermuda cedar)",
-                "shipwrighting:Masts, yards and blocks"
+                "carpentry:Planks and boards (sawn)",
+                "smithing:Chains, hinges, ship's ironwork",
+                "shipwrighting:Masts, yards and blocks",
+                "sailmaking:Sails (sewn)",
+                "ropemaking:Cordage (running rigging)",
+                "ropemaking:Cables and hawsers"
               ],
-              "note": "Boston and the Thames yards; no Caribbean ship of size in the sources (open)"
+              "note": "Boston and the Thames yards; no Caribbean ship of size in the sources (open). Built from the keel, not from a sloop (review)",
+              "equipment": [
+                "shipyard"
+              ],
+              "origin": "europe"
             }
           ]
         },
@@ -1774,7 +2189,8 @@
               "band": "master",
               "offMap": true,
               "input": "woodcutting:Mahogany",
-              "note": "the London cabinet-maker's best work; a design tier (open)"
+              "note": "the London cabinet-maker's best work; a design tier (open)",
+              "origin": "europe"
             }
           ]
         },
@@ -1866,7 +2282,10 @@
               "name": "Cotton yarn",
               "band": "apprentice",
               "input": "farming:Cotton wool",
-              "note": "the island's own fibre (C81)"
+              "note": "the island's own fibre (C81)",
+              "equipment": [
+                "spinning-wheel"
+              ]
             },
             {
               "good": 33,
@@ -1874,7 +2293,11 @@
               "band": "apprentice",
               "offMap": true,
               "input": "husbandry:Wool",
-              "note": "English wool"
+              "note": "English wool",
+              "equipment": [
+                "spinning-wheel"
+              ],
+              "origin": "europe"
             },
             {
               "good": 33,
@@ -1882,14 +2305,23 @@
               "band": "journeyman",
               "offMap": true,
               "input": "farming:Flax and hemp",
-              "note": "for dowlas, holland and sailcloth"
+              "note": "for dowlas, holland and sailcloth",
+              "equipment": [
+                "spinning-wheel"
+              ],
+              "origin": "europe"
             },
             {
               "good": 34,
               "name": "Silk thread",
               "band": "expert",
               "offMap": true,
-              "note": "Asian silk; the hardest fibre to handle"
+              "note": "Asian silk; the hardest fibre to handle",
+              "equipment": [
+                "spinning-wheel"
+              ],
+              "input": "imported:Raw silk",
+              "origin": "asia"
             }
           ]
         },
@@ -1905,7 +2337,10 @@
               "name": "Cotton cloth (coarse)",
               "band": "apprentice",
               "input": "spinning:Cotton yarn",
-              "note": "under 4s a yard, the colonial ceiling (CSP)"
+              "note": "under 4s a yard, the colonial ceiling (CSP)",
+              "equipment": [
+                "loom"
+              ]
             },
             {
               "good": 33,
@@ -1913,7 +2348,11 @@
               "band": "apprentice",
               "offMap": true,
               "input": "spinning:Linen thread",
-              "note": "1s 5d–1s 8d an ell (TR); servants' and slaves' cloth"
+              "note": "1s 5d–1s 8d an ell (TR); servants' and slaves' cloth",
+              "equipment": [
+                "loom"
+              ],
+              "origin": "europe"
             },
             {
               "good": 33,
@@ -1921,7 +2360,11 @@
               "band": "journeyman",
               "offMap": true,
               "input": "spinning:Wool yarn",
-              "note": "10s–23s 6d a yard (TR); duffels for the Indian trade (CSP)"
+              "note": "10s–23s 6d a yard (TR); duffels for the Indian trade (CSP)",
+              "equipment": [
+                "loom"
+              ],
+              "origin": "europe"
             },
             {
               "good": 46,
@@ -1929,7 +2372,11 @@
               "band": "journeyman",
               "offMap": true,
               "input": "spinning:Linen thread",
-              "note": "the sailmaker sews it; the weaver makes it"
+              "note": "the sailmaker sews it; the weaver makes it",
+              "equipment": [
+                "loom"
+              ],
+              "origin": "europe"
             },
             {
               "good": 33,
@@ -1937,15 +2384,23 @@
               "band": "expert",
               "offMap": true,
               "input": "spinning:Linen thread",
-              "note": "2s 4d–2s 8d a yard (TR)"
+              "note": "2s 4d–2s 8d a yard (TR)",
+              "equipment": [
+                "loom"
+              ],
+              "origin": "europe"
             },
             {
               "good": 34,
-              "name": "Silk, chintz, muslin",
+              "name": "Silk cloth",
               "band": "master",
               "offMap": true,
               "input": "spinning:Silk thread",
-              "note": "Asian looms; chintzes in a French prize (J)"
+              "note": "Chinese and Persian silk woven in Europe and Asia; 'silk and linen' shared out at Maracaibo (E)",
+              "equipment": [
+                "loom"
+              ],
+              "origin": "asia"
             },
             {
               "good": 86,
@@ -1955,7 +2410,10 @@
               "origin": "west-africa",
               "knowledge": "foreign",
               "input": "spinning:Cotton yarn",
-              "note": "striped blue and white; 16,000 pieces a year mid-century (AF)"
+              "note": "striped blue and white; 16,000 pieces a year mid-century (AF)",
+              "equipment": [
+                "loom"
+              ]
             },
             {
               "good": 90,
@@ -1965,7 +2423,10 @@
               "origin": "atlantic-islands",
               "knowledge": "foreign",
               "input": "spinning:Cotton yarn",
-              "note": "strip cloth, the currency of the Rivers of Guinea (AF)"
+              "note": "strip cloth, the currency of the Rivers of Guinea (AF)",
+              "equipment": [
+                "loom"
+              ]
             },
             {
               "good": 123,
@@ -1974,7 +2435,21 @@
               "offMap": true,
               "origin": "spanish-main",
               "input": "spinning:Cotton yarn",
-              "note": "woven by Indian women for Havana (SB)"
+              "note": "woven by Indian women for Havana (SB)",
+              "equipment": [
+                "loom"
+              ]
+            },
+            {
+              "good": 34,
+              "name": "Chintz and muslin (fine cotton)",
+              "band": "master",
+              "offMap": true,
+              "origin": "asia",
+              "region": "indian-ocean",
+              "knowledge": "foreign",
+              "input": "spinning:Cotton yarn",
+              "note": "Surat's painted chintz 'out-do all the Ingenuity of Europe' (Ovington); muslins in the Quedagh Merchant (WK)"
             }
           ]
         },
@@ -1993,7 +2468,10 @@
                 "farming:Flax and hemp",
                 "spinning:Cotton yarn"
               ],
-              "note": "marline, spun yarn; the sailmaker's twine"
+              "note": "marline, spun yarn; the sailmaker's twine",
+              "equipment": [
+                "ropewalk"
+              ]
             },
             {
               "good": 46,
@@ -2004,7 +2482,11 @@
                 "farming:Flax and hemp",
                 "spinning:Linen thread"
               ],
-              "note": "'several Coils of Rope' taken from the King Solomon (J)"
+              "note": "'several Coils of Rope' taken from the King Solomon (J)",
+              "equipment": [
+                "ropewalk"
+              ],
+              "origin": "europe"
             },
             {
               "good": 46,
@@ -2015,7 +2497,11 @@
                 "farming:Flax and hemp",
                 "spinning:Linen thread"
               ],
-              "note": "'two Cables' (J); the anchor cable is the ropewalk's largest work"
+              "note": "'two Cables' (J); the anchor cable is the ropewalk's largest work",
+              "equipment": [
+                "ropewalk"
+              ],
+              "origin": "europe"
             }
           ]
         },
@@ -2052,8 +2538,9 @@
               "name": "Silk dress",
               "band": "master",
               "offMap": true,
-              "input": "weaving:Silk, chintz, muslin",
-              "note": "silk and linen shared out at Maracaibo (E)"
+              "input": "weaving:Silk cloth",
+              "note": "silk and linen shared out at Maracaibo (E)",
+              "origin": "asia"
             },
             {
               "good": 126,
@@ -2076,6 +2563,33 @@
           ]
         },
         {
+          "key": "sailmaking",
+          "name": "Sailmaking",
+          "existing": true,
+          "covers": "sails sewn from sailcloth with twine; mending (DUTIES)",
+          "why": "The STATS.md ship skill, now with its one goods recipe so a sloop can have sails (review, 2026-10-29). 'Petty, as Sail-maker' at the Cape Coast trial (J).",
+          "items": [
+            {
+              "good": 46,
+              "name": "Sails (sewn)",
+              "band": "journeyman",
+              "inputs": [
+                "weaving:Sailcloth and canvas",
+                "ropemaking:Twine and small stuff"
+              ],
+              "note": "palm and needle; a torn sail splits in wind (DUTIES)"
+            },
+            {
+              "good": 46,
+              "name": "Mending a sail",
+              "band": "apprentice",
+              "service": true,
+              "input": "weaving:Sailcloth and canvas",
+              "note": "the morning duty (DUTIES)"
+            }
+          ]
+        },
+        {
           "key": "medicine",
           "name": "Surgery (Surgery and medicine)",
           "existing": true,
@@ -2094,23 +2608,30 @@
               "name": "Bleeding, purging, the clyster",
               "band": "apprentice",
               "service": true,
-              "input": "bladesmithing:Knives and razors",
-              "note": "lancets from the cutler; clyster pumps on the QAR wreck (QAR)"
+              "note": "lancets from the cutler; clyster pumps on the QAR wreck (QAR)",
+              "equipment": [
+                "surgeon-s-chest"
+              ]
             },
             {
               "good": 48,
               "name": "Setting bones, drawing teeth",
               "band": "journeyman",
               "service": true,
-              "note": "barber-surgeons drew teeth; the 'pretending bone-setters' were the empirics (Turner 1694)"
+              "note": "barber-surgeons drew teeth; the 'pretending bone-setters' were the empirics (Turner 1694)",
+              "equipment": [
+                "surgeon-s-chest"
+              ]
             },
             {
               "good": 48,
               "name": "Amputation and the great operations",
               "band": "expert",
               "service": true,
-              "input": "bladesmithing:Knives and razors",
-              "note": "Exquemelin's compensation table: a lost limb paid in pieces of eight or slaves (E)"
+              "note": "Exquemelin's compensation table: a lost limb paid in pieces of eight or slaves (E)",
+              "equipment": [
+                "surgeon-s-chest"
+              ]
             },
             {
               "good": 48,
@@ -2132,15 +2653,15 @@
               "good": 48,
               "name": "Simples and herb remedies",
               "band": "novice",
-              "input": "farming:Physic garden (simples)",
+              "input": "farming:Medicinal herbs (simples)",
               "note": "Culpeper's householder medicine; the plantation doctor's dram of kill-devil (L)"
             },
             {
               "good": 48,
-              "name": "Salves, plasters, lime-juice regimen",
+              "name": "Salves and plasters",
               "band": "apprentice",
               "inputs": [
-                "farming:Physic garden (simples)",
+                "farming:Medicinal herbs (simples)",
                 "cooking:Lime juice"
               ],
               "note": "lime juice against scurvy (DUTIES); whether it stood in the Pharmacopoeia: open"
@@ -2150,7 +2671,7 @@
               "name": "Compound medicines (the Pharmacopoeia)",
               "band": "journeyman",
               "inputs": [
-                "farming:Physic garden (simples)",
+                "farming:Medicinal herbs (simples)",
                 "distilling:Aqua vitae (kill-devil)"
               ],
               "note": "Pharmacopoeia Londinensis 1618 and after; spirits for tinctures"
@@ -2171,7 +2692,8 @@
               "offMap": true,
               "knowledge": "learned",
               "input": "imported:Peruvian bark (cinchona)",
-              "note": "sold by London chemists from 1658; Talbor's cure 1672–78. The bark is Spanish and the use was a secret: learned knowledge (3f)"
+              "note": "sold by London chemists from 1658; Talbor's cure 1672–78. The bark is Spanish and the use was a secret: learned knowledge (3f)",
+              "origin": "spanish-main"
             },
             {
               "good": 48,
@@ -2179,7 +2701,11 @@
               "band": "expert",
               "offMap": true,
               "input": "refining:Reagents and salts",
-              "note": "the QAR syringe held mercury for the pox (QAR); opium preparations in the Pharmacopoeia (research)"
+              "note": "the QAR syringe held mercury for the pox (QAR); opium preparations in the Pharmacopoeia (research)",
+              "equipment": [
+                "laboratory"
+              ],
+              "origin": "europe"
             },
             {
               "good": 48,
@@ -2225,7 +2751,8 @@
               "band": "master",
               "service": true,
               "offMap": true,
-              "note": "'Doctor in Physic' at Port Royal, 1725; Campbell sneers at bought Latin diplomas"
+              "note": "'Doctor in Physic' at Port Royal, 1725; Campbell sneers at bought Latin diplomas",
+              "origin": "europe"
             }
           ]
         }
@@ -2273,14 +2800,14 @@
         "note": "The sugar planter's works: fields, boiling house, still-house (L). Boiler and distiller as job titles: open for 1657"
       },
       {
-        "name": "Husbandman",
+        "name": "Husbandman / Yeoman (the farmer)",
         "period": "status of a small farmer, used as a trade in indentures (1654–86)",
         "skills": [
           "Farming",
           "Animal Husbandry",
           "Dairying"
         ],
-        "note": "Rex's 'Agriculturalist'. Yeoman is the richer man, same work"
+        "note": "a status word used as a trade in the indenture registers (research-occupations.md); kept as the farmer's label on that evidence"
       },
       {
         "name": "Hunter (boucanier)",
@@ -2331,7 +2858,8 @@
           "Baking",
           "Butchering",
           "Preserving",
-          "Milling"
+          "Milling",
+          "Brewing"
         ],
         "note": "Rex's 'Food Artisan'. Miller, Baker and Butcher were each a trade of their own in a town; a small port lumps them"
       },
@@ -2389,7 +2917,7 @@
         "period": "'Vintner' (Nevis 1723, Bridgetown 1679/80); Strype 1720: the vintner imports wine, the taverner retails it; Barbados capped tavern prices (1672)",
         "skills": [
           "Haggling",
-          "Cooking"
+          "Brewing"
         ],
         "outside": [
           "Haggling"
@@ -2550,9 +3078,7 @@
           "Tailoring",
           "Ropemaking"
         ],
-        "outside": [
-          "Sailmaker"
-        ],
+        "outside": [],
         "note": "the ship's tradesman; needle and palm"
       },
       {
@@ -2713,39 +3239,45 @@
         "name": "Pepper (black, white)",
         "knowledge": "foreign",
         "note": "white 1.01, black 0.42 guilders a lb at Amsterdam (1691–94); Lowther took 'pepper' from a prize (J)",
-        "region": "malacca"
+        "region": "malacca",
+        "origin": "asia"
       },
       {
         "good": 67,
         "name": "Cloves, nutmeg, mace, cinnamon",
         "knowledge": "foreign",
         "note": "Amsterdam 1691: cloves 3.75, nutmeg 3.00, mace 8.40, cinnamon 3.00 guilders a lb; Ligon's cookery used them",
-        "region": "malacca"
+        "region": "malacca",
+        "origin": "asia"
       },
       {
         "good": 68,
         "name": "Saffron",
         "knowledge": "foreign",
-        "note": "21.50 guilders a lb at Amsterdam (1691): dearer than cochineal"
+        "note": "21.50 guilders a lb at Amsterdam (1691): dearer than cochineal",
+        "origin": "asia"
       },
       {
         "good": 72,
         "name": "Peruvian bark (cinchona)",
         "knowledge": "foreign",
         "note": "Spanish Peru → Spain → London chemists (1658). Spanish mainland, not an expansion region",
-        "region": "caribbean"
+        "region": "caribbean",
+        "origin": "spanish-main"
       },
       {
         "good": 75,
         "name": "Tea",
         "knowledge": "foreign",
         "note": "Roberts 'drank his Tea constantly' (J); Asia by the Company ships",
-        "region": "east-china-sea"
+        "region": "east-china-sea",
+        "origin": "asia"
       },
       {
         "good": 40,
         "name": "Madeira, Canary, sherry, claret (the wines)",
-        "note": "Madeira shipped 8–9,000 pipes a year (Ovington 1696); the vintner imports, the taverner sells (Strype 1720)"
+        "note": "Madeira shipped 8–9,000 pipes a year (Ovington 1696); the vintner imports, the taverner sells (Strype 1720)",
+        "origin": "atlantic-islands"
       },
       {
         "good": 84,
@@ -2855,6 +3387,14 @@
         "name": "Bermuda cedar, onions; Bahamas braziletto",
         "origin": "atlantic-islands",
         "note": "(SB)"
+      },
+      {
+        "good": 34,
+        "name": "Raw silk",
+        "origin": "asia",
+        "region": "east-china-sea",
+        "knowledge": "foreign",
+        "note": "Chinese and Persian silk reached Europe's looms; none in the Atlantic. Added so silk thread has a material (review)"
       }
     ]
   },
@@ -2892,5 +3432,35 @@
         "leansOn": "gunpowder and founding; porcelain; silk; junks; state navies"
       }
     ]
+  },
+  "facilities": {
+    "note": "Equipment a recipe needs and does not consume (Rex's rule: materials + equipment + band). A settlement has or lacks each; the engine checks it before the band. Added 2026-10-29 after the data review.",
+    "list": {
+      "cattle-mill": "the sugar mill (Millwrighting makes it)",
+      "boiling-house": "the coppers and curing pots",
+      "still": "the still-house",
+      "brewhouse": "coppers and vats",
+      "mill": "a grist mill (wind, water or hand)",
+      "oven": "a bake oven",
+      "smokehouse": "the boucan frame or smokehouse",
+      "salting-house": "tubs and brine",
+      "dairy": "a cool dairy",
+      "forge": "the smith's forge and anvil",
+      "furnace": "a founder's furnace and moulds",
+      "foundry": "a gunfounder's furnace and boring mill",
+      "powder-mill": "the powder mill",
+      "loom": "a loom",
+      "spinning-wheel": "wheels and distaffs",
+      "ropewalk": "a ropewalk",
+      "tan-pits": "bark pits",
+      "last-and-bench": "the cordwainer's bench",
+      "saw-pit": "a saw pit",
+      "shipyard": "a yard, ways and a careening beach",
+      "kiln": "a tar or charcoal kiln",
+      "dye-vat": "vats and a mordant store",
+      "vat": "the indigo steeping vats",
+      "surgeon-s-chest": "the surgeon's chest and instruments",
+      "laboratory": "the chymist's furnace and glass"
+    }
   }
 }

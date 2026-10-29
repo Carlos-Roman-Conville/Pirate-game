@@ -179,6 +179,8 @@
       + (inp ? '<br><span class="muted">needs:</span> ' + inp.it._skill.name + ': ' + inp.it.name : (it.input ? '<br><span class="muted">needs:</span> ' + it.input : ''))
       + (all.length ? '<br><span class="muted">needs all of:</span> ' + all.join(', ') : '')
       + (any.length ? '<br><span class="muted">needs one of:</span> ' + any.join(' or ') : '')
+      + (it.equipment && it.equipment.length ? '<br><span class="muted">equipment:</span> ' + it.equipment.join(', ') : '')
+      + (it.byproductOf ? '<br><span class="muted">also comes out of:</span> ' + label(it.byproductOf) : '')
       + (uses.length ? '<br><span class="muted">used by:</span> ' + uses.join('; ') : '');
     const chains = document.getElementById('showChains').checked;
     const lit = chains ? chainOf(key, new Set()) : new Set([key]);

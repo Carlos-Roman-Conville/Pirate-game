@@ -23,8 +23,8 @@
       "note": "The sugar planter's works: fields, boiling house, still-house (L). Boiler and distiller as job titles: open for 1657"
     },
     {
-      "id": "husbandman",
-      "name": "Husbandman",
+      "id": "husbandman-yeoman",
+      "name": "Husbandman / Yeoman (the farmer)",
       "period": "status of a small farmer, used as a trade in indentures (1654–86)",
       "skills": [
         "farming",
@@ -32,7 +32,7 @@
         "dairying"
       ],
       "outside": [],
-      "note": "Rex's 'Agriculturalist'. Yeoman is the richer man, same work"
+      "note": "a status word used as a trade in the indenture registers (research-occupations.md); kept as the farmer's label on that evidence"
     },
     {
       "id": "hunter",
@@ -91,7 +91,8 @@
         "baking",
         "butchering",
         "preserving",
-        "milling"
+        "milling",
+        "brewing"
       ],
       "outside": [],
       "note": "Rex's 'Food Artisan'. Miller, Baker and Butcher were each a trade of their own in a town; a small port lumps them"
@@ -163,7 +164,7 @@
       "period": "'Vintner' (Nevis 1723, Bridgetown 1679/80); Strype 1720: the vintner imports wine, the taverner retails it; Barbados capped tavern prices (1672)",
       "skills": [
         "haggling",
-        "cooking"
+        "brewing"
       ],
       "outside": [
         "haggling"
@@ -359,9 +360,7 @@
         "tailoring",
         "ropemaking"
       ],
-      "outside": [
-        "sailmaker"
-      ],
+      "outside": [],
       "note": "the ship's tradesman; needle and palm"
     },
     {

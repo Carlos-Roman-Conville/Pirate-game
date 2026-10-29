@@ -867,6 +867,53 @@ now; the research pass on spices and drinks (3g, pending) will mark the first fo
 
 ---
 
+## 3h. The data review and what it changed (2026-10-29)
+
+Rex had the five data files reviewed (his notes, 2026-10-29). The review found the references sound (no duplicate
+ids, no dangling inputs) and the division of labour the strongest feature, and listed defects. What was done:
+
+- **Material dependencies.** Every crafting recipe now has an input: cured tobacco needs grown tobacco, cacao needs
+  the tree's crop, lime juice needs limes, silk thread needs raw silk (a new import), every wax piece needs wax,
+  dyed cloth needs cloth and a dye, every salted food needs salt, Bahia rolls need molasses, cider apples and wine
+  grapes exist (off-map crops), arrack takes rice or molasses, brewed coffee, tea and chocolate take one of the three.
+- **Equipment.** Recipes carry `equipment`, had and not consumed, from a facilities list (the cattle mill and boiling
+  house for sugar, the still, the brewhouse, the mill, the oven, the forge, the furnace and the gunfounder's foundry,
+  the powder mill, the loom, the ropewalk, the tan pits, the saw pit, the shipyard, the kiln, the vats, the surgeon's
+  chest, the chymist's laboratory). The sugar mill is now what sugar needs; surgical knives are equipment, not a
+  consumed input.
+- **Casks, sails and rigging consumed.** Rum, molasses, salt beef and beer take a tight cask; muscovado and flour a
+  slack one. A sloop takes sails (Sailmaking, now a goods skill with one recipe), running rigging and cables; a ship
+  is built from the keel (planks, ironwork, masts, sails, rigging), not from a sloop.
+- **Services marked.** Small-arms repair, the ship's repairs, caulking, careening, powder handling, assay, sail mending
+  and cobbling are services; careening takes pitch and oakum, not "a caulking". Sandals and cobbling are apart;
+  "salves, plasters, lime-juice regimen" is now salves and plasters; the physic garden is "medicinal herbs".
+- **Joint outputs.** Fresh meat, raw hides and tallow come from farm stock or wild carcasses alike; hides and tallow
+  are by-products of the meat, and molasses a by-product of muscovado (`byproductOf`; the ratio is the balance
+  lane's).
+- **Bundles split where a recipe cares.** Steel, brass and pewter are three goods (blades and locks take steel, fittings
+  and manillas brass, plates pewter); silk cloth is apart from chintz and muslin, which are fine cotton from Surat
+  (foreign knowledge, the Indian Ocean's). The cassava-maize-yams-potatoes bundle and the Loango bundle stay grouped:
+  no recipe tells them apart yet.
+- **Origins.** Every off-map good now says where it comes from (europe, west-africa, north-america, spanish-main,
+  brazil, atlantic-islands, asia); `offMap` means only "outside the base game's playable map", and whether a place is
+  on the map is the map's decision. Jewellery and plate are specialty goods, not money. Wine sits under Brewing.
+- **Occupations.** Sailmaker's skills match; Husbandman is kept as the farmer's label on the indenture evidence;
+  Victualler lists the split food skills; Vintner points at Brewing. Beeswax is gathered under Hunting, not on the shore.
+
+**Left as design, not defects (the review's own distinction):** base prices (all null), quantities, yields, durations
+and labour per recipe, packaging and spoilage as rules, ports and demand, which recipes are `learned` and how each
+skill is `learnedBy` (all still `open`), and that about 170 goods have no consuming recipe (food, clothing, exports:
+settlement and crew consumption must do that work). Novice recipes that need a journeyman's material (leather sacks,
+beveridge) are left: they make beginners buy.
+
+**The review's list of what to look at next, recorded for Rex:** everyday possessions (pottery, bedding, utensils,
+buckets, baskets), shipboard equipment as finished goods (instruments, lamps, pumps, tackle), named local foods and
+dishes per port, personal and cultural objects (religious objects, instruments, games, gifts), the port's services
+(lodging, warehousing, brokerage, credit), and African and Indigenous occupations and expertise, which the labels
+cover far less well than the European trades.
+
+---
+
 ## 4. Sources
 
 Primary or period works:
@@ -1094,3 +1141,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-29 | REGIONS.md §5: Rex confirmed the four expansions; escalation by each region's advantage, rising level caps, slow levelling (direction); the order proposed | Rex (direction); research session |
 | 2026-10-29 | 1l: the rest of the Atlantic world, rows 82–133 (West and West-Central Africa, Europe and the Baltic, North America, Spanish America, Brazil, the islands), from four research notes; the coast's units of account and the coins; origins carried in the data | research session, at Rex's request |
 | 2026-10-29 | Rex confirmed the Atlantic list (rows 1–133) as the base game's goods | Rex |
+| 2026-10-29 | 3h: the data review applied: inputs on every crafting recipe, equipment from a facilities list, casks, sails and rigging consumed, services marked, by-products, alloys and silk split, origins on every off-map good, Sailmaking as a goods skill (42) | research session, from Rex's review notes |

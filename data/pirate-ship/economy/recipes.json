@@ -1,7 +1,7 @@
 {
   "_about": "Built by files/pirate-ship/economy/build-economy-data.py from skill-tree.json and GOODS.md. Do not edit by hand. Marks: source = a period record (GOODS.md Part 4); proposed = this session's placement for Rex; unsourced = Rex's design addition with no period source; estimate = worked out from sourced inputs (GOODS.md 1j). basePrice is null everywhere: the balance lane sets it; the sourced price text is beside it. The five per-settlement numbers (stock, consumption per day, target reserve, production per day, base price) belong to a ports file that does not exist yet (ALIGNMENT §10).",
   "flags": {
-    "offMap": "made outside the game's Caribbean in this period (Europe, Asia, Africa, the Spanish mainland); the skill tree says where it would sit if a town ever makes it",
+    "offMap": "made outside the game's playable map in the base game (the Caribbean); origin says where. Whether a place is on the map is the map's decision, not this flag's (review, 2026-10-29)",
     "input": "needs a good from another skill (the chain the economy follows)",
     "gate": "needs another skill at some level to reach the place (Swimming for depth); that skill makes nothing",
     "unsourced": "Rex's addition with no period source found; a design good, not a historical record",
@@ -10,7 +10,38 @@
     "service": "a service, not a traded good: the skill is used on people or ships, and the chip shows what that level can do",
     "knowledge": "common = every tradesman of the skill knows it here; learned = must be taught or read; foreign = comes only with a far-travelled merchant or a book from another continent (Rex, 2026-10-29). Unset means common",
     "region": "where a good or recipe belongs: caribbean (the base game) or an expansion region from REGIONS.md. Unset means caribbean. A good from another region reaches the Caribbean only through a rare-items trader, the odd ship, or a merchant's stall (Rex, 2026-10-29)",
-    "origin": "where in the Atlantic world a base-game good comes from: caribbean, west-africa, europe, north-america, spanish-main, brazil, atlantic-islands (GOODS.md 1l). Unset means caribbean"
+    "origin": "where in the Atlantic world a base-game good comes from: caribbean, west-africa, europe, north-america, spanish-main, brazil, atlantic-islands, asia (GOODS.md 1l). Unset means caribbean",
+    "byproductOf": "this good comes out of another recipe's run as well (molasses drains from the sugar pots): the engine yields it alongside, in a ratio the balance lane sets"
+  },
+  "facilities": {
+    "note": "Equipment a recipe needs and does not consume (Rex's rule: materials + equipment + band). A settlement has or lacks each; the engine checks it before the band. Added 2026-10-29 after the data review.",
+    "list": {
+      "cattle-mill": "the sugar mill (Millwrighting makes it)",
+      "boiling-house": "the coppers and curing pots",
+      "still": "the still-house",
+      "brewhouse": "coppers and vats",
+      "mill": "a grist mill (wind, water or hand)",
+      "oven": "a bake oven",
+      "smokehouse": "the boucan frame or smokehouse",
+      "salting-house": "tubs and brine",
+      "dairy": "a cool dairy",
+      "forge": "the smith's forge and anvil",
+      "furnace": "a founder's furnace and moulds",
+      "foundry": "a gunfounder's furnace and boring mill",
+      "powder-mill": "the powder mill",
+      "loom": "a loom",
+      "spinning-wheel": "wheels and distaffs",
+      "ropewalk": "a ropewalk",
+      "tan-pits": "bark pits",
+      "last-and-bench": "the cordwainer's bench",
+      "saw-pit": "a saw pit",
+      "shipyard": "a yard, ways and a careening beach",
+      "kiln": "a tar or charcoal kiln",
+      "dye-vat": "vats and a mordant store",
+      "vat": "the indigo steeping vats",
+      "surgeon-s-chest": "the surgeon's chest and instruments",
+      "laboratory": "the chymist's furnace and glass"
+    }
   },
   "recipes": [
     {
@@ -23,6 +54,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -38,6 +71,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -53,6 +88,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -68,6 +105,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -83,6 +122,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -98,6 +139,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -113,10 +156,12 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
-      "note": "planting, cutting and carting to the mill within a day of cutting (L); the boiling is Sugar boiling"
+      "note": "planting, cutting and carting to the mill within a day of cutting (L); the boiling is Sugar boiling; the cane goes to the mill within a day"
     },
     {
       "id": "farming-rice",
@@ -128,6 +173,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -141,8 +188,12 @@
       "output": "tobacco-cured-and-packed",
       "service": false,
       "offMap": false,
-      "inputs": [],
+      "inputs": [
+        "tobacco-grown"
+      ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -158,6 +209,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -173,6 +226,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -186,8 +241,12 @@
       "output": "cacao-sweated-and-dried",
       "service": false,
       "offMap": false,
-      "inputs": [],
+      "inputs": [
+        "cacao-grown"
+      ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -203,6 +262,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -218,6 +279,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -233,6 +296,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -248,21 +313,25 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "European fibre crops for linen and rope; no Caribbean crop in the sources"
     },
     {
-      "id": "farming-physic-garden",
+      "id": "farming-medicinal-herbs",
       "skill": "farming",
       "band": "apprentice",
       "minLevel": 25,
-      "output": "physic-garden",
+      "output": "medicinal-herbs",
       "service": false,
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -278,6 +347,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -293,6 +364,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -308,6 +381,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -323,6 +398,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -338,6 +415,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -353,6 +432,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -368,6 +449,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -382,9 +465,12 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "tobacco-grown"
+        "tobacco-grown",
+        "molasses"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "learned",
       "region": "caribbean",
@@ -400,6 +486,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -415,6 +503,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -430,10 +520,63 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "Whydah's palms 'cultivated mainly to draw oil' (AF)"
+    },
+    {
+      "id": "farming-coast-provisions",
+      "skill": "farming",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "coast-provisions",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "palm wine 2s 3d the anchor, yams 14s a hundred (Bosman)"
+    },
+    {
+      "id": "farming-apples",
+      "skill": "farming",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "apples",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "New England and Virginia orchards; a boat sold 'Apples and Sider' to Teach's men (J)"
+    },
+    {
+      "id": "farming-grapes",
+      "skill": "farming",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "grapes",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Madeira, the Canaries, Bordeaux, Jerez; no Caribbean vineyard in the sources"
     },
     {
       "id": "husbandry-horses",
@@ -445,6 +588,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -460,6 +605,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -475,6 +622,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -490,6 +639,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -505,6 +656,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -520,6 +673,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -535,6 +690,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -550,6 +707,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": "Swimming",
       "knowledge": "common",
       "region": "caribbean",
@@ -565,6 +724,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -580,6 +741,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -595,25 +758,12 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "Rex's addition; no period trade in the sources, marked unsourced"
-    },
-    {
-      "id": "marine-beeswax",
-      "skill": "marine",
-      "band": "apprentice",
-      "minLevel": 25,
-      "output": "beeswax",
-      "service": false,
-      "offMap": true,
-      "inputs": [],
-      "inputsAny": [],
-      "gate": null,
-      "knowledge": "common",
-      "region": "caribbean",
-      "note": "'there is always abundance of wax' at Cape Lopez (AF); gathered, not farmed"
     },
     {
       "id": "marine-ambergris",
@@ -625,6 +775,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -640,10 +792,29 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "120 beads to a fathom (NA); a craft folded in here as a one-off"
+    },
+    {
+      "id": "marine-orchil-lichen",
+      "skill": "marine",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "orchil-lichen",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Cape Verde and the Canaries (AF, EU)"
     },
     {
       "id": "hunting-wild-cattle-and-hog-carcasses",
@@ -655,6 +826,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -670,6 +843,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -685,6 +860,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -700,10 +877,29 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "coat beaver about 6.6s a pelt in London 1713–26; a blanket cost 7 made beaver at the posts (NA)"
+    },
+    {
+      "id": "hunting-beeswax",
+      "skill": "hunting",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "beeswax",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "'there is always abundance of wax' at Cape Lopez (AF); gathered, not farmed"
     },
     {
       "id": "fishing-fresh-fish",
@@ -715,6 +911,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -730,6 +928,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -745,6 +945,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -760,6 +962,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -775,6 +979,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -790,6 +996,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -805,6 +1013,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -820,6 +1030,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -835,6 +1047,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -850,6 +1064,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -865,6 +1081,10 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [
+        "kiln"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -880,6 +1100,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -897,6 +1119,10 @@
         "lumber"
       ],
       "inputsAny": [],
+      "equipment": [
+        "kiln"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -912,6 +1138,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -927,6 +1155,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -942,6 +1172,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -957,6 +1189,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -972,6 +1206,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -987,6 +1223,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1002,25 +1240,12 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "£16 10s–£18 a ton in London (TR); 'voyage iron' to Africa (JS)"
-    },
-    {
-      "id": "mining-steel-brass-pewter",
-      "skill": "mining",
-      "band": "expert",
-      "minLevel": 75,
-      "output": "steel-brass-pewter",
-      "service": false,
-      "offMap": true,
-      "inputs": [],
-      "inputsAny": [],
-      "gate": null,
-      "knowledge": "common",
-      "region": "caribbean",
-      "note": "blister steel from Sheffield; brass from calamine; pewter from tin and lead. No colonial steel before the 1720s (research), so all off-map"
     },
     {
       "id": "mining-silver",
@@ -1034,6 +1259,8 @@
         "mercury"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1049,6 +1276,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1066,6 +1295,8 @@
         "ore-and-lead"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1081,6 +1312,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1096,10 +1329,67 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "to Cartagena and Seville; some to Mughal India (SB)"
+    },
+    {
+      "id": "mining-steel",
+      "skill": "mining",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "steel",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "bar-iron"
+      ],
+      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Sheffield's cementation steel; no colonial steel before the 1720s"
+    },
+    {
+      "id": "mining-brass",
+      "skill": "mining",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "brass",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "copper and calamine; Bristol battery (AF)"
+    },
+    {
+      "id": "mining-pewter",
+      "skill": "mining",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "pewter",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "ore-and-lead"
+      ],
+      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Campbell: pewter is tin and lead"
     },
     {
       "id": "cooking-lime-juice",
@@ -1109,8 +1399,12 @@
       "output": "lime-juice",
       "service": false,
       "offMap": false,
-      "inputs": [],
+      "inputs": [
+        "limes-oranges-lemons"
+      ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1128,6 +1422,8 @@
         "salt-beef-and-pork"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1145,6 +1441,8 @@
         "cacao-sweated-and-dried"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1164,6 +1462,8 @@
         "muscovado-sugar"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1182,6 +1482,8 @@
         "rum"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1200,6 +1502,8 @@
         "ginger"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1214,26 +1518,17 @@
       "service": false,
       "offMap": false,
       "inputs": [],
-      "inputsAny": [],
+      "inputsAny": [
+        "coffee",
+        "tea",
+        "chocolate"
+      ],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "Roberts 'drank his Tea constantly' (J); the tea itself is imported (below)"
-    },
-    {
-      "id": "cooking-coast-provisions",
-      "skill": "cooking",
-      "band": "novice",
-      "minLevel": 0,
-      "output": "coast-provisions",
-      "service": false,
-      "offMap": true,
-      "inputs": [],
-      "inputsAny": [],
-      "gate": null,
-      "knowledge": "common",
-      "region": "caribbean",
-      "note": "palm wine 2s 3d the anchor, yams 14s a hundred (Bosman)"
     },
     {
       "id": "milling-meal",
@@ -1247,6 +1542,10 @@
         "grain-for-meal-and-flour"
       ],
       "inputsAny": [],
+      "equipment": [
+        "mill"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1264,6 +1563,10 @@
         "grain-for-meal-and-flour"
       ],
       "inputsAny": [],
+      "equipment": [
+        "mill"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1278,9 +1581,14 @@
       "service": false,
       "offMap": false,
       "inputs": [
-        "grain-for-meal-and-flour"
+        "grain-for-meal-and-flour",
+        "slack-casks"
       ],
       "inputsAny": [],
+      "equipment": [
+        "mill"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1298,6 +1606,10 @@
         "cassava-maize-yams-potatoes"
       ],
       "inputsAny": [],
+      "equipment": [
+        "mill"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1315,6 +1627,10 @@
         "tobacco-cured-and-packed"
       ],
       "inputsAny": [],
+      "equipment": [
+        "mill"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1332,6 +1648,10 @@
         "cassava-maize-yams-potatoes"
       ],
       "inputsAny": [],
+      "equipment": [
+        "oven"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1349,6 +1669,10 @@
         "meal"
       ],
       "inputsAny": [],
+      "equipment": [
+        "oven"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1366,6 +1690,10 @@
         "flour"
       ],
       "inputsAny": [],
+      "equipment": [
+        "oven"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1379,10 +1707,14 @@
       "output": "fresh-meat",
       "service": false,
       "offMap": false,
-      "inputs": [
-        "cattle-and-hogs"
+      "inputs": [],
+      "inputsAny": [
+        "cattle-and-hogs",
+        "wild-cattle-and-hog-carcasses",
+        "deer-carcasses"
       ],
-      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1396,10 +1728,13 @@
       "output": "raw-hides",
       "service": false,
       "offMap": false,
-      "inputs": [
-        "wild-cattle-and-hog-carcasses"
+      "inputs": [],
+      "inputsAny": [
+        "wild-cattle-and-hog-carcasses",
+        "cattle-and-hogs"
       ],
-      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": "butchering:Fresh meat",
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1413,10 +1748,13 @@
       "output": "tallow",
       "service": false,
       "offMap": false,
-      "inputs": [
-        "wild-cattle-and-hog-carcasses"
+      "inputs": [],
+      "inputsAny": [
+        "wild-cattle-and-hog-carcasses",
+        "cattle-and-hogs"
       ],
-      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": "butchering:Fresh meat",
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1434,6 +1772,8 @@
         "deer-carcasses"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1451,6 +1791,8 @@
         "whales"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1465,9 +1807,12 @@
       "service": false,
       "offMap": false,
       "inputs": [
-        "fresh-fish"
+        "fresh-fish",
+        "salt"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1485,6 +1830,10 @@
         "fresh-meat"
       ],
       "inputsAny": [],
+      "equipment": [
+        "smokehouse"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1499,9 +1848,13 @@
       "service": false,
       "offMap": false,
       "inputs": [
-        "fresh-meat"
+        "fresh-meat",
+        "salt",
+        "tight-casks"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1516,9 +1869,12 @@
       "service": false,
       "offMap": false,
       "inputs": [
-        "fresh-meat"
+        "fresh-meat",
+        "salt"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1533,9 +1889,12 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "cod-the-newfoundland-fishery"
+        "cod-the-newfoundland-fishery",
+        "salt"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1550,9 +1909,12 @@
       "service": false,
       "offMap": false,
       "inputs": [
-        "fresh-meat"
+        "fresh-meat",
+        "salt"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1567,9 +1929,12 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "fresh-meat"
+        "fresh-meat",
+        "salt"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1587,6 +1952,10 @@
         "milk"
       ],
       "inputsAny": [],
+      "equipment": [
+        "dairy"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1604,6 +1973,10 @@
         "milk"
       ],
       "inputsAny": [],
+      "equipment": [
+        "dairy"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1621,6 +1994,8 @@
         "tallow"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1634,8 +2009,12 @@
       "output": "wax-seals",
       "service": false,
       "offMap": false,
-      "inputs": [],
+      "inputs": [
+        "beeswax"
+      ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1649,8 +2028,12 @@
       "output": "moulded-and-altar-candles",
       "service": false,
       "offMap": false,
-      "inputs": [],
+      "inputs": [
+        "beeswax"
+      ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1664,8 +2047,12 @@
       "output": "wax-portraits-and-anatomical-models",
       "service": false,
       "offMap": false,
-      "inputs": [],
+      "inputs": [
+        "beeswax"
+      ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1679,8 +2066,12 @@
       "output": "lifelike-wax-figures",
       "service": false,
       "offMap": false,
-      "inputs": [],
+      "inputs": [
+        "beeswax"
+      ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1698,6 +2089,8 @@
         "beeswax"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1715,6 +2108,10 @@
         "deerskins"
       ],
       "inputsAny": [],
+      "equipment": [
+        "tan-pits"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1732,6 +2129,10 @@
         "raw-hides"
       ],
       "inputsAny": [],
+      "equipment": [
+        "tan-pits"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1749,6 +2150,8 @@
         "tanned-leather"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1766,6 +2169,8 @@
         "tanned-leather"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1783,6 +2188,8 @@
         "tanned-leather"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1800,23 +2207,47 @@
         "tanned-leather"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "'Gloves' among Ligon's imports (L)"
     },
     {
-      "id": "shoemaking-sandals-and-repairs",
+      "id": "shoemaking-cobbling",
       "skill": "shoemaking",
       "band": "novice",
       "minLevel": 0,
-      "output": "sandals-and-repairs",
+      "output": null,
+      "service": true,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "the cobbler repairs; terminology varied (research)",
+      "name": "Cobbling (shoe repairs)"
+    },
+    {
+      "id": "shoemaking-sandals",
+      "skill": "shoemaking",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "sandals",
       "service": false,
       "offMap": false,
       "inputs": [
         "tanned-leather"
       ],
       "inputsAny": [],
+      "equipment": [
+        "last-and-bench"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1834,6 +2265,10 @@
         "tanned-leather"
       ],
       "inputsAny": [],
+      "equipment": [
+        "last-and-bench"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1851,6 +2286,10 @@
         "tanned-leather"
       ],
       "inputsAny": [],
+      "equipment": [
+        "last-and-bench"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1868,6 +2307,10 @@
         "tanned-leather"
       ],
       "inputsAny": [],
+      "equipment": [
+        "last-and-bench"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1885,6 +2328,10 @@
         "tanned-leather"
       ],
       "inputsAny": [],
+      "equipment": [
+        "last-and-bench"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1899,9 +2346,15 @@
       "service": false,
       "offMap": false,
       "inputs": [
-        "sugar-cane"
+        "sugar-cane",
+        "tight-casks"
       ],
       "inputsAny": [],
+      "equipment": [
+        "boiling-house",
+        "cattle-mill"
+      ],
+      "byproductOf": "sugar-boiling:Muscovado sugar",
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1916,9 +2369,15 @@
       "service": false,
       "offMap": false,
       "inputs": [
-        "sugar-cane"
+        "sugar-cane",
+        "slack-casks"
       ],
       "inputsAny": [],
+      "equipment": [
+        "boiling-house",
+        "cattle-mill"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1936,6 +2395,10 @@
         "muscovado-sugar"
       ],
       "inputsAny": [],
+      "equipment": [
+        "boiling-house"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1953,6 +2416,10 @@
         "muscovado-sugar"
       ],
       "inputsAny": [],
+      "equipment": [
+        "boiling-house"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1970,6 +2437,8 @@
         "annatto"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -1987,6 +2456,10 @@
         "indigo-plant"
       ],
       "inputsAny": [],
+      "equipment": [
+        "vat"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2004,6 +2477,8 @@
         "nopal-and-cochineal"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2020,7 +2495,15 @@
       "inputs": [
         "coarse-linen"
       ],
-      "inputsAny": [],
+      "inputsAny": [
+        "indigo-dye",
+        "annatto-dye",
+        "cochineal-dye"
+      ],
+      "equipment": [
+        "dye-vat"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2034,8 +2517,12 @@
       "output": "orchil",
       "service": false,
       "offMap": true,
-      "inputs": [],
+      "inputs": [
+        "orchil-lichen"
+      ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2053,6 +2540,10 @@
         "grain-for-meal-and-flour"
       ],
       "inputsAny": [],
+      "equipment": [
+        "brewhouse"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2070,6 +2561,10 @@
         "cassava-maize-yams-potatoes"
       ],
       "inputsAny": [],
+      "equipment": [
+        "brewhouse"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2088,6 +2583,10 @@
         "clayed-sugar"
       ],
       "inputsAny": [],
+      "equipment": [
+        "brewhouse"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2105,6 +2604,10 @@
         "pineapple-plantain"
       ],
       "inputsAny": [],
+      "equipment": [
+        "brewhouse"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2119,9 +2622,14 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "grain-for-meal-and-flour"
+        "grain-for-meal-and-flour",
+        "tight-casks"
       ],
       "inputsAny": [],
+      "equipment": [
+        "brewhouse"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2135,8 +2643,14 @@
       "output": "cider",
       "service": false,
       "offMap": true,
-      "inputs": [],
+      "inputs": [
+        "apples"
+      ],
       "inputsAny": [],
+      "equipment": [
+        "brewhouse"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2151,13 +2665,39 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "grain-for-meal-and-flour"
+        "grain-for-meal-and-flour",
+        "tight-casks"
       ],
       "inputsAny": [],
+      "equipment": [
+        "brewhouse"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "'good English Beer' (L); Ligon's outlay 'Strong Beer 50 l.'"
+    },
+    {
+      "id": "brewing-wine",
+      "skill": "brewing",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "wine",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "grapes"
+      ],
+      "inputsAny": [],
+      "equipment": [
+        "still"
+      ],
+      "byproductOf": null,
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "Madeira, Fayal, Canary, claret: £8 a pipe at Jamestown (CSP)"
     },
     {
       "id": "distilling-aqua-vitae",
@@ -2171,10 +2711,14 @@
         "molasses"
       ],
       "inputsAny": [],
+      "equipment": [
+        "still"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
-      "note": "the rough first spirit from the skimmings (L)"
+      "note": "the rough first spirit from the skimmings (L) (the first run; rum is the second)"
     },
     {
       "id": "distilling-rum",
@@ -2185,28 +2729,18 @@
       "service": false,
       "offMap": false,
       "inputs": [
-        "molasses"
+        "molasses",
+        "tight-casks"
       ],
       "inputsAny": [],
+      "equipment": [
+        "still"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "half a crown a gallon on Barbados (L); cask size open (1j)"
-    },
-    {
-      "id": "distilling-wine",
-      "skill": "distilling",
-      "band": "journeyman",
-      "minLevel": 50,
-      "output": "wine",
-      "service": false,
-      "offMap": true,
-      "inputs": [],
-      "inputsAny": [],
-      "gate": null,
-      "knowledge": "common",
-      "region": "caribbean",
-      "note": "Madeira, Fayal, Canary, claret: £8 a pipe at Jamestown (CSP)"
     },
     {
       "id": "distilling-brandy",
@@ -2220,6 +2754,10 @@
         "wine"
       ],
       "inputsAny": [],
+      "equipment": [
+        "still"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2234,7 +2772,14 @@
       "service": false,
       "offMap": true,
       "inputs": [],
-      "inputsAny": [],
+      "inputsAny": [
+        "rice",
+        "molasses"
+      ],
+      "equipment": [
+        "still"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "foreign",
       "region": "indian-ocean",
@@ -2252,6 +2797,10 @@
         "molasses"
       ],
       "inputsAny": [],
+      "equipment": [
+        "still"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2269,6 +2818,10 @@
         "grain-for-meal-and-flour"
       ],
       "inputsAny": [],
+      "equipment": [
+        "still"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2286,6 +2839,10 @@
         "sulphur"
       ],
       "inputsAny": [],
+      "equipment": [
+        "laboratory"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2303,6 +2860,10 @@
         "nitre-earth"
       ],
       "inputsAny": [],
+      "equipment": [
+        "laboratory"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2317,7 +2878,15 @@
       "service": false,
       "offMap": false,
       "inputs": [],
-      "inputsAny": [],
+      "inputsAny": [
+        "nitre-earth",
+        "refined-sulphur",
+        "ore-and-lead"
+      ],
+      "equipment": [
+        "laboratory"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2328,15 +2897,18 @@
       "skill": "powder",
       "band": "novice",
       "minLevel": 0,
-      "output": "powder-handling-and-storage",
-      "service": false,
+      "output": null,
+      "service": true,
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
-      "note": "keeping it dry (DUTIES: the gunner's duty)"
+      "note": "keeping it dry (DUTIES: the gunner's duty)",
+      "name": "Powder handling and storage"
     },
     {
       "id": "powder-common-powder",
@@ -2352,6 +2924,10 @@
         "charcoal"
       ],
       "inputsAny": [],
+      "equipment": [
+        "powder-mill"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2369,6 +2945,10 @@
         "common-powder"
       ],
       "inputsAny": [],
+      "equipment": [
+        "powder-mill"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2386,6 +2966,10 @@
         "graded-powder"
       ],
       "inputsAny": [],
+      "equipment": [
+        "powder-mill"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2403,6 +2987,10 @@
         "fine-military-powder"
       ],
       "inputsAny": [],
+      "equipment": [
+        "powder-mill"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2420,6 +3008,8 @@
         "aromatic-flowers-and-herbs"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2437,6 +3027,8 @@
         "fragrant-oils-and-waters"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2454,6 +3046,10 @@
         "bar-iron"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2471,6 +3067,10 @@
         "bar-iron"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2488,6 +3088,10 @@
         "bar-iron"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2505,6 +3109,10 @@
         "bar-iron"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2522,6 +3130,10 @@
         "bar-iron"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2539,6 +3151,10 @@
         "bar-iron"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2553,9 +3169,13 @@
       "service": false,
       "offMap": false,
       "inputs": [
-        "steel-brass-pewter"
+        "steel"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2573,6 +3193,10 @@
         "bar-iron"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2590,6 +3214,10 @@
         "bar-iron"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2600,15 +3228,18 @@
       "skill": "gunsmithing",
       "band": "novice",
       "minLevel": 0,
-      "output": "small-arms-repair",
-      "service": false,
+      "output": null,
+      "service": true,
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
-      "note": "the ship's armourer; 'Mariner and Armourer' in a will (research-occupations.md)"
+      "note": "the ship's armourer; 'Mariner and Armourer' in a will (research-occupations.md)",
+      "name": "Small-arms repair (the armourer)"
     },
     {
       "id": "gunsmithing-pistols",
@@ -2623,6 +3254,10 @@
         "planks-and-boards"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2641,6 +3276,10 @@
         "planks-and-boards"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2655,9 +3294,13 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "steel-brass-pewter"
+        "steel"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2672,9 +3315,13 @@
       "service": false,
       "offMap": false,
       "inputs": [
-        "steel-brass-pewter"
+        "steel"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2689,9 +3336,13 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "steel-brass-pewter"
+        "steel"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2706,10 +3357,14 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "steel-brass-pewter",
+        "steel",
         "belts-baldrics-scabbards"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2724,9 +3379,13 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "steel-brass-pewter"
+        "steel"
       ],
       "inputsAny": [],
+      "equipment": [
+        "forge"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2744,6 +3403,10 @@
         "ore-and-lead"
       ],
       "inputsAny": [],
+      "equipment": [
+        "furnace"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2758,9 +3421,13 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "steel-brass-pewter"
+        "pewter"
       ],
       "inputsAny": [],
+      "equipment": [
+        "furnace"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2775,9 +3442,13 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "steel-brass-pewter"
+        "brass"
       ],
       "inputsAny": [],
+      "equipment": [
+        "furnace"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2792,9 +3463,14 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "steel-brass-pewter"
+        "brass"
       ],
       "inputsAny": [],
+      "equipment": [
+        "foundry",
+        "furnace"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2812,6 +3488,11 @@
         "bar-iron"
       ],
       "inputsAny": [],
+      "equipment": [
+        "foundry",
+        "furnace"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2826,9 +3507,13 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "steel-brass-pewter"
+        "brass"
       ],
       "inputsAny": [],
+      "equipment": [
+        "furnace"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2846,6 +3531,8 @@
         "silver"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2863,6 +3550,8 @@
         "silver"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2880,6 +3569,8 @@
         "gold-and-gold-dust"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2890,15 +3581,18 @@
       "skill": "goldsmithing",
       "band": "master",
       "minLevel": 100,
-      "output": "assay-and-fine-work",
-      "service": false,
+      "output": null,
+      "service": true,
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
-      "note": "judging and refining the metal; the diamond cross for the King of Portugal (J) as the kind of piece"
+      "note": "judging and refining the metal; the diamond cross for the King of Portugal (J) as the kind of piece",
+      "name": "Assay and fine work"
     },
     {
       "id": "carpentry-planks-and-boards",
@@ -2912,6 +3606,10 @@
         "lumber"
       ],
       "inputsAny": [],
+      "equipment": [
+        "saw-pit"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2929,6 +3627,8 @@
         "planks-and-boards"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2939,17 +3639,20 @@
       "skill": "carpentry",
       "band": "apprentice",
       "minLevel": 25,
-      "output": "ship-s-repairs-patching-shoring",
-      "service": false,
+      "output": null,
+      "service": true,
       "offMap": false,
       "inputs": [
         "planks-and-boards"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
-      "note": "the ship's carpenter; pirates 'forced away the Carpenter from the Pink' (J)"
+      "note": "the ship's carpenter; pirates 'forced away the Carpenter from the Pink' (J)",
+      "name": "Ship's repairs: patching, shoring"
     },
     {
       "id": "carpentry-joinery-doors-windows-chests",
@@ -2963,6 +3666,8 @@
         "planks-and-boards"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2981,6 +3686,8 @@
         "chains-hinges-ship-s-ironwork"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -2991,17 +3698,20 @@
       "skill": "shipwrighting",
       "band": "novice",
       "minLevel": 0,
-      "output": "caulking",
-      "service": false,
+      "output": null,
+      "service": true,
       "offMap": false,
       "inputs": [
         "tar-pitch-turpentine"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
-      "note": "also needs old rope picked to oakum (DUTIES); the caulker's rung"
+      "note": "also needs old rope picked to oakum (DUTIES); the caulker's rung",
+      "name": "Caulking (oakum and pitch)"
     },
     {
       "id": "shipwrighting-ship-s-boat",
@@ -3015,6 +3725,8 @@
         "planks-and-boards"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3033,6 +3745,8 @@
         "planks-and-boards"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3043,17 +3757,22 @@
       "skill": "shipwrighting",
       "band": "journeyman",
       "minLevel": 50,
-      "output": "careening-and-refit",
-      "service": false,
+      "output": null,
+      "service": true,
       "offMap": false,
       "inputs": [
-        "caulking"
+        "tar-pitch-turpentine"
       ],
       "inputsAny": [],
+      "equipment": [
+        "shipyard"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
-      "note": "the ship hauled down on a beach and the bottom scraped (DUTIES)"
+      "note": "the ship hauled down on a beach and the bottom scraped (DUTIES); old rope picked to oakum (DUTIES)",
+      "name": "Careening and refit"
     },
     {
       "id": "shipwrighting-sloop",
@@ -3066,9 +3785,16 @@
       "inputs": [
         "planks-and-boards",
         "chains-hinges-ship-s-ironwork",
-        "masts-yards-and-blocks"
+        "masts-yards-and-blocks",
+        "sails",
+        "cordage",
+        "cables-and-hawsers"
       ],
       "inputsAny": [],
+      "equipment": [
+        "shipyard"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3083,14 +3809,22 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "sloop",
-        "masts-yards-and-blocks"
+        "planks-and-boards",
+        "chains-hinges-ship-s-ironwork",
+        "masts-yards-and-blocks",
+        "sails",
+        "cordage",
+        "cables-and-hawsers"
       ],
       "inputsAny": [],
+      "equipment": [
+        "shipyard"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
-      "note": "Boston and the Thames yards; no Caribbean ship of size in the sources (open)"
+      "note": "Boston and the Thames yards; no Caribbean ship of size in the sources (open). Built from the keel, not from a sloop (review)"
     },
     {
       "id": "cabinetmaking-plain-furniture",
@@ -3104,6 +3838,8 @@
         "planks-and-boards"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3121,6 +3857,8 @@
         "mahogany"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3138,6 +3876,8 @@
         "mahogany"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3155,6 +3895,8 @@
         "mahogany"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3173,6 +3915,8 @@
         "iron-hoops"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3191,6 +3935,8 @@
         "chains-hinges-ship-s-ironwork"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3209,6 +3955,8 @@
         "chains-hinges-ship-s-ironwork"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3226,6 +3974,8 @@
         "staves-and-hoops"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3243,6 +3993,8 @@
         "planks-and-boards"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3260,6 +4012,8 @@
         "staves-and-heads-dressed"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3277,6 +4031,8 @@
         "staves-and-heads-dressed"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3294,6 +4050,10 @@
         "cotton-wool"
       ],
       "inputsAny": [],
+      "equipment": [
+        "spinning-wheel"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3311,6 +4071,10 @@
         "wool"
       ],
       "inputsAny": [],
+      "equipment": [
+        "spinning-wheel"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3328,6 +4092,10 @@
         "flax-and-hemp"
       ],
       "inputsAny": [],
+      "equipment": [
+        "spinning-wheel"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3341,8 +4109,14 @@
       "output": "silk-thread",
       "service": false,
       "offMap": true,
-      "inputs": [],
+      "inputs": [
+        "raw-silk"
+      ],
       "inputsAny": [],
+      "equipment": [
+        "spinning-wheel"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3360,6 +4134,10 @@
         "cotton-yarn"
       ],
       "inputsAny": [],
+      "equipment": [
+        "loom"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3377,6 +4155,10 @@
         "linen-thread"
       ],
       "inputsAny": [],
+      "equipment": [
+        "loom"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3394,6 +4176,10 @@
         "wool-yarn"
       ],
       "inputsAny": [],
+      "equipment": [
+        "loom"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3411,6 +4197,10 @@
         "linen-thread"
       ],
       "inputsAny": [],
+      "equipment": [
+        "loom"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3428,27 +4218,35 @@
         "linen-thread"
       ],
       "inputsAny": [],
+      "equipment": [
+        "loom"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "2s 4d–2s 8d a yard (TR)"
     },
     {
-      "id": "weaving-silk-chintz-muslin",
+      "id": "weaving-silk-cloth",
       "skill": "weaving",
       "band": "master",
       "minLevel": 100,
-      "output": "silk-chintz-muslin",
+      "output": "silk-cloth",
       "service": false,
       "offMap": true,
       "inputs": [
         "silk-thread"
       ],
       "inputsAny": [],
+      "equipment": [
+        "loom"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
-      "note": "Asian looms; chintzes in a French prize (J)"
+      "note": "Chinese and Persian silk woven in Europe and Asia; 'silk and linen' shared out at Maracaibo (E)"
     },
     {
       "id": "weaving-benin-and-allada-cloth",
@@ -3462,6 +4260,10 @@
         "cotton-yarn"
       ],
       "inputsAny": [],
+      "equipment": [
+        "loom"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "foreign",
       "region": "caribbean",
@@ -3479,6 +4281,10 @@
         "cotton-yarn"
       ],
       "inputsAny": [],
+      "equipment": [
+        "loom"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "foreign",
       "region": "caribbean",
@@ -3496,10 +4302,33 @@
         "cotton-yarn"
       ],
       "inputsAny": [],
+      "equipment": [
+        "loom"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "woven by Indian women for Havana (SB)"
+    },
+    {
+      "id": "weaving-chintz-and-muslin",
+      "skill": "weaving",
+      "band": "master",
+      "minLevel": 100,
+      "output": "chintz-and-muslin",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "cotton-yarn"
+      ],
+      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
+      "gate": null,
+      "knowledge": "foreign",
+      "region": "indian-ocean",
+      "note": "Surat's painted chintz 'out-do all the Ingenuity of Europe' (Ovington); muslins in the Quedagh Merchant (WK)"
     },
     {
       "id": "ropemaking-twine-and-small-stuff",
@@ -3514,6 +4343,10 @@
         "flax-and-hemp",
         "cotton-yarn"
       ],
+      "equipment": [
+        "ropewalk"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3532,6 +4365,10 @@
         "flax-and-hemp",
         "linen-thread"
       ],
+      "equipment": [
+        "ropewalk"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3550,6 +4387,10 @@
         "flax-and-hemp",
         "linen-thread"
       ],
+      "equipment": [
+        "ropewalk"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3567,6 +4408,8 @@
         "coarse-linen"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3584,6 +4427,8 @@
         "woollens"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3601,6 +4446,8 @@
         "fine-linen"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3615,9 +4462,11 @@
       "service": false,
       "offMap": true,
       "inputs": [
-        "silk-chintz-muslin"
+        "silk-cloth"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3635,6 +4484,8 @@
         "beaver-and-furs"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3652,10 +4503,52 @@
         "coarse-linen"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "shirt 2s 6d, cravat 6d, Barbados 1668 (EU)"
+    },
+    {
+      "id": "sailmaking-sails",
+      "skill": "sailmaking",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "sails",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "sailcloth-and-canvas",
+        "twine-and-small-stuff"
+      ],
+      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "palm and needle; a torn sail splits in wind (DUTIES)"
+    },
+    {
+      "id": "sailmaking-mending-a-sail",
+      "skill": "sailmaking",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": null,
+      "service": true,
+      "offMap": false,
+      "inputs": [
+        "sailcloth-and-canvas"
+      ],
+      "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
+      "gate": null,
+      "knowledge": "common",
+      "region": "caribbean",
+      "note": "the morning duty (DUTIES)",
+      "name": "Mending a sail"
     },
     {
       "id": "medicine-dressing-wounds",
@@ -3667,6 +4560,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3681,10 +4576,12 @@
       "output": null,
       "service": true,
       "offMap": false,
-      "inputs": [
-        "knives-and-razors"
-      ],
+      "inputs": [],
       "inputsAny": [],
+      "equipment": [
+        "surgeon-s-chest"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3701,6 +4598,10 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [
+        "surgeon-s-chest"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3715,10 +4616,12 @@
       "output": null,
       "service": true,
       "offMap": false,
-      "inputs": [
-        "knives-and-razors"
-      ],
+      "inputs": [],
       "inputsAny": [],
+      "equipment": [
+        "surgeon-s-chest"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3735,6 +4638,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3750,27 +4655,31 @@
       "service": false,
       "offMap": false,
       "inputs": [
-        "physic-garden"
+        "medicinal-herbs"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
       "note": "Culpeper's householder medicine; the plantation doctor's dram of kill-devil (L)"
     },
     {
-      "id": "apothecary-salves-plasters-lime-juice-regimen",
+      "id": "apothecary-salves-and-plasters",
       "skill": "apothecary",
       "band": "apprentice",
       "minLevel": 25,
-      "output": "salves-plasters-lime-juice-regimen",
+      "output": "salves-and-plasters",
       "service": false,
       "offMap": false,
       "inputs": [
-        "physic-garden",
+        "medicinal-herbs",
         "lime-juice"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3785,10 +4694,12 @@
       "service": false,
       "offMap": false,
       "inputs": [
-        "physic-garden",
+        "medicinal-herbs",
         "aqua-vitae"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3806,6 +4717,8 @@
         "spanish-american-drugs"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3823,6 +4736,8 @@
         "peruvian-bark"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "learned",
       "region": "caribbean",
@@ -3840,6 +4755,10 @@
         "reagents-and-salts"
       ],
       "inputsAny": [],
+      "equipment": [
+        "laboratory"
+      ],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3857,6 +4776,8 @@
         "compound-medicines"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3872,6 +4793,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3888,6 +4811,8 @@
       "offMap": false,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3906,6 +4831,8 @@
         "compound-medicines"
       ],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",
@@ -3922,6 +4849,8 @@
       "offMap": true,
       "inputs": [],
       "inputsAny": [],
+      "equipment": [],
+      "byproductOf": null,
       "gate": null,
       "knowledge": "common",
       "region": "caribbean",

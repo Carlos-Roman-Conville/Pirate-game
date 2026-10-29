@@ -70,6 +70,8 @@ for g in tree["groups"]:
                 continue
             row = rows.get(it["good"], {})
             t, tmark = type_of(row.get("type", "open"))
+            if it.get("type"):
+                t, tmark = it["type"], "proposed"
             mark = "unsourced" if it.get("unsourced") else "source"
             if gid not in goods:
                 goods[gid] = {"id": gid, "name": it["name"], "row": it["good"],
@@ -104,6 +106,7 @@ for g in tree["groups"]:
                  "service": bool(it.get("service")), "offMap": bool(it.get("offMap")),
                  "inputs": [by_chip[x] for x in ([it["input"]] if it.get("input") else []) + it.get("inputs", [])],
                  "inputsAny": [by_chip[x] for x in it.get("inputAny", [])],
+                 "equipment": it.get("equipment", []), "byproductOf": it.get("byproductOf"),
                  "gate": it.get("gate"), "knowledge": it.get("knowledge", "common"),
                  "region": it.get("region", "caribbean"), "note": it.get("note", "")}
             if it.get("service"):
@@ -127,7 +130,7 @@ about = ("Built by files/pirate-ship/economy/build-economy-data.py from skill-tr
     "rowsNote": "rows = the 65 cargo rows of GOODS.md Part 1 with their sourced kind, route, package, spoilage, price and type; goods = the engine's goods, one per recipe output, each pointing at its row",
     "rows": row_list, "goods": sorted(goods.values(), key=lambda g: (g["row"], g["id"]))}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 (out / "skills.json").write_text(json.dumps({"_about": about, "bands": tree["bands"], "rule": tree.get("rule", ""), "regions": tree.get("regions"), "skills": skills}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-(out / "recipes.json").write_text(json.dumps({"_about": about, "flags": tree["flags"], "recipes": recipes}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+(out / "recipes.json").write_text(json.dumps({"_about": about, "flags": tree["flags"], "facilities": tree.get("facilities"), "recipes": recipes}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 (out / "occupations.json").write_text(json.dumps({"_about": about, "note": tree["occupations"]["note"], "rules": tree["occupations"]["rules"], "occupations": occupations}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 # checks
