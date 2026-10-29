@@ -171,6 +171,17 @@ Battle Brothers (lasting injuries).
   write; and a **`NUTRITION.md`** beside it. **(Rex, 2026-10-29)** Both go under `files/pirate-ship/body/`,
   with `STATS.md` pointing at them once they arrive; the combat keeper files them. Whose lane after that: open. Whether muscle **replaces** per-limb Strength
   (§4a) or is what Strength is computed from: open, ChatGPT says replaces.
+- **(Rex, 2026-10-29)** **The body gets a family of docs, each its own `.md`, all feeding a `BODY.md`:**
+  muscular, nutrition, disease (with a disease list), sleep and circadian rhythm, thermoregulation, metabolism,
+  ageing and development, hygiene and sanitation, pain and stress, cardiovascular and respiratory fitness,
+  psychology and mental health. **And world docs for external realism:** weather and ocean currents, ship
+  maintenance and deterioration, agriculture and soil fertility, ecology and animal populations, sanitation and
+  waste, fire and structural damage, population and demographics. ChatGPT's grouping (PHYSIOLOGY, MEDICINE,
+  ENVIRONMENT, ECOLOGY, POPULATION) and its principle that every system describes one physical reality and
+  functional capacity is computed once from all of them, not six separate penalties: **(proposed, outside
+  AI)**. The keeper's organisation and the issues he raised are in the shared notes
+  (`combat-keeper-2026-10-29-body-and-world-docs.md`) and were put to Rex the same day. None of these docs
+  exist yet; none is combat's.
 - **(keeper)** The system touches lanes beyond combat: every duty in `DUTIES.md` would carry an activation
   profile; the gym is a town place (town keeper) and a regimen a minigame (Rex's to design); food and rest are
   the economy's and the balance keeper's. What combat owns of it: how fatigue, injury, hunger, thirst and
@@ -370,4 +381,5 @@ whether what you intend happens.
 | 2026-10-29 | Physical attributes per limb (Rex's idea); three distinct stat sets agreed (body, eight functions, skills); ChatGPT's global/local split, head/torso rows and Te fence recorded as proposed; keeper's readings on head/torso and a Te floor | Rex / outside AI / keeper |
 | 2026-10-29 | Decided: head and torso carry no stats of their own (hit location → stats dipped); Te floor cost stands; STATS.md body attributes rewritten per limb | Rex |
 | 2026-10-29 | The muscular system: each counting muscle (split by head, as real) gets stats trained by what you do; the gym simulator (design and run a regimen); ChatGPT's functional model, activation profiles, development/fatigue/condition recorded as proposed | Rex / outside AI |
+| 2026-10-29 | The body as a family of docs feeding BODY.md (disease, sleep, thermoregulation, metabolism, ageing, hygiene, pain and stress, cardio, psychology) and world docs (weather, ship wear, agriculture, ecology, sanitation, fire, population); keeper's organisation and issues in the shared notes | Rex |
 | 2026-10-29 | `MUSCULAR.md` and `NUTRITION.md` to be written (via ChatGPT); nutrition as calories, macros, micros, water and salt with scurvy emergent; provenance tags (mythical, Triassic, sci-fi) on the item screen, never in battle | Rex |
