@@ -2,11 +2,36 @@
   "title": "Pirate Ship: goods on the skill trees (proposed)",
   "status": "proposed, 2026-10-28; every placement is for Rex to confirm, move or cut",
   "bands": [
-    { "key": "novice", "name": "Novice", "range": "0–24", "period": "a hand, a labourer: no trade term; 'landsman' at sea" },
-    { "key": "apprentice", "name": "Apprentice", "range": "25–49", "period": "bound to a master, usually seven years (guild term)" },
-    { "key": "journeyman", "name": "Journeyman", "range": "50–74", "period": "out of his time, works for day wages (guild term)" },
-    { "key": "expert", "name": "Expert", "range": "75–99", "period": "no guild grade; 'able' at sea, 'head' on a plantation (head boiler, head cooper)" },
-    { "key": "master", "name": "Master", "range": "100", "period": "free of the company, keeps apprentices (guild term)" }
+    {
+      "key": "novice",
+      "name": "Novice",
+      "range": "0–24",
+      "period": "no trade grade; a labourer or a 'landsman' at sea (the sea grades date from 1652)"
+    },
+    {
+      "key": "apprentice",
+      "name": "Apprentice",
+      "range": "25–49",
+      "period": "the guild grade: bound seven years, usually from 14 to 21 (Statute of Artificers; secondary summaries)"
+    },
+    {
+      "key": "journeyman",
+      "name": "Journeyman",
+      "range": "50–74",
+      "period": "the guild grade: out of his time, free of the company, works for day wages (Campbell 1747)"
+    },
+    {
+      "key": "expert",
+      "name": "Expert",
+      "range": "75–99",
+      "period": "no guild grade; the nearest is the 'able seaman', at least five years at sea (TNA). 'Head boiler' appears only in 1750s Jamaica, later than the period"
+    },
+    {
+      "key": "master",
+      "name": "Master",
+      "range": "100",
+      "period": "the guild grade: keeps a shop and apprentices; liveryman above it"
+    }
   ],
   "flags": {
     "offMap": "made outside the game's Caribbean in this period (Europe, Asia, Africa, the Spanish mainland); the skill tree says where it would sit if a town ever makes it",
@@ -25,22 +50,103 @@
           "covers": "planting, harvest, curing and packing crops; livestock; salt raking; dye-making from the crop (indigo vats, cochineal rearing)",
           "why": "Every plantation crop is farm work. Dye-making stays here because the indigo vats stood on the plantation (Ligon, Dampier) and cochineal is an insect reared on cactus (COC).",
           "items": [
-            { "good": 25, "name": "Pease", "band": "novice", "note": "a field crop any hand could grow and pick" },
-            { "good": 44, "name": "Grain for meal and flour", "band": "novice", "note": "planting and reaping; milling is Cooking" },
-            { "good": 59, "name": "Salt (raked)", "band": "novice", "note": "sun does the work; raking the pans was ordinary labour (D, TC)" },
-            { "good": 27, "name": "Horses and livestock", "band": "novice", "note": "herding; horses went from New England at about £12 each (PY)" },
-            { "good": 8, "name": "Cotton wool", "band": "apprentice", "note": "picking and ginning before bagging (C81)" },
-            { "good": 6, "name": "Ginger", "band": "apprentice", "note": "the root is scraped so it stays white and does not sprout (L)" },
-            { "good": 19, "name": "Tobacco, grown", "band": "apprentice", "note": "topping and suckering the plant; the cure is the harder part" },
-            { "good": 11, "name": "Cacao, grown", "band": "apprentice", "note": "the tree; Jamaica's crops failed to a 'blast' (PT)" },
-            { "good": 1, "name": "Sugar cane", "band": "journeyman", "note": "planting, cutting and carting to the mill within a day of cutting (L); the boiling is Sugar boiling" },
-            { "good": 30, "name": "Rice", "band": "journeyman", "note": "wet-field rice took skill the Carolina planters bought from West Africa (SCR)" },
-            { "good": 19, "name": "Tobacco, cured and packed", "band": "journeyman", "note": "curing, prizing into the hogshead to at least 800 lb (VA30)" },
-            { "good": 7, "name": "Pimento", "band": "journeyman", "note": "picked green and sun-dried, kept from the dew (EB78)" },
-            { "good": 10, "name": "Annatto", "band": "journeyman", "note": "seed pulp worked into a dye paste (D)" },
-            { "good": 11, "name": "Cacao, sweated and dried", "band": "journeyman", "note": "sweated under plantain leaves, three or four weeks' sun (PT)" },
-            { "good": 9, "name": "Indigo", "band": "expert", "note": "steeping, beating and judging the cut in the vats: a known skilled job (C88, D)" },
-            { "good": 51, "name": "Cochineal", "band": "expert", "offMap": true, "note": "rearing the insect on nopal in Oaxaca, a trade Spain kept secret (COC)" }
+            {
+              "good": 25,
+              "name": "Pease",
+              "band": "novice",
+              "note": "a field crop any hand could grow and pick"
+            },
+            {
+              "good": 44,
+              "name": "Grain for meal and flour",
+              "band": "novice",
+              "note": "planting and reaping; milling is Cooking"
+            },
+            {
+              "good": 59,
+              "name": "Salt (raked)",
+              "band": "novice",
+              "note": "sun does the work; raking the pans was ordinary labour (D, TC)"
+            },
+            {
+              "good": 27,
+              "name": "Horses and livestock",
+              "band": "novice",
+              "note": "herding; horses went from New England at about £12 each (PY)"
+            },
+            {
+              "good": 8,
+              "name": "Cotton wool",
+              "band": "apprentice",
+              "note": "picking and ginning before bagging (C81)"
+            },
+            {
+              "good": 6,
+              "name": "Ginger",
+              "band": "apprentice",
+              "note": "the root is scraped so it stays white and does not sprout (L)"
+            },
+            {
+              "good": 19,
+              "name": "Tobacco, grown",
+              "band": "apprentice",
+              "note": "topping and suckering the plant; the cure is the harder part"
+            },
+            {
+              "good": 11,
+              "name": "Cacao, grown",
+              "band": "apprentice",
+              "note": "the tree; Jamaica's crops failed to a 'blast' (PT)"
+            },
+            {
+              "good": 1,
+              "name": "Sugar cane",
+              "band": "journeyman",
+              "note": "planting, cutting and carting to the mill within a day of cutting (L); the boiling is Sugar boiling"
+            },
+            {
+              "good": 30,
+              "name": "Rice",
+              "band": "journeyman",
+              "note": "wet-field rice took skill the Carolina planters bought from West Africa (SCR)"
+            },
+            {
+              "good": 19,
+              "name": "Tobacco, cured and packed",
+              "band": "journeyman",
+              "note": "curing, prizing into the hogshead to at least 800 lb (VA30)"
+            },
+            {
+              "good": 7,
+              "name": "Pimento",
+              "band": "journeyman",
+              "note": "picked green and sun-dried, kept from the dew (EB78)"
+            },
+            {
+              "good": 10,
+              "name": "Annatto",
+              "band": "journeyman",
+              "note": "seed pulp worked into a dye paste (D)"
+            },
+            {
+              "good": 11,
+              "name": "Cacao, sweated and dried",
+              "band": "journeyman",
+              "note": "sweated under plantain leaves, three or four weeks' sun (PT)"
+            },
+            {
+              "good": 9,
+              "name": "Indigo",
+              "band": "expert",
+              "note": "steeping, beating and judging the cut in the vats: a known skilled job (C88, D)"
+            },
+            {
+              "good": 51,
+              "name": "Cochineal",
+              "band": "expert",
+              "offMap": true,
+              "note": "rearing the insect on nopal in Oaxaca, a trade Spain kept secret (COC)"
+            }
           ]
         },
         {
@@ -50,12 +156,43 @@
           "covers": "wild cattle, hogs and deer; hides and tallow; the hunters' own smoking and salting (boucan); tanning",
           "why": "Exquemelin's hunters took hides, tallow and meat and cured it themselves (E2). Tanning is folded in: it was a one-off here.",
           "items": [
-            { "good": 16, "name": "Hides", "band": "novice", "note": "the kill and the flaying; Spanish Hispaniola 'exercising no other traffic' (E2)" },
-            { "good": 17, "name": "Tallow", "band": "novice", "note": "rendering the fat; sold with the hides (E2)" },
-            { "good": 32, "name": "Deerskins", "band": "apprentice", "note": "Carolina's trade with the Indian nations (CCR)" },
-            { "good": 61, "name": "Boucan and salted boar", "band": "apprentice", "note": "smoked on the boucan frame; the hunters' own craft (E2)" },
-            { "good": 16, "name": "Tanned leather", "band": "journeyman", "note": "tanning folded in; a separate skill only if the game makes leather goods" },
-            { "good": 57, "name": "Ivory", "band": "journeyman", "offMap": true, "note": "'Elephant's Teeth' from the Guinea coast (J)" }
+            {
+              "good": 16,
+              "name": "Hides",
+              "band": "novice",
+              "note": "the kill and the flaying; Spanish Hispaniola 'exercising no other traffic' (E2)"
+            },
+            {
+              "good": 17,
+              "name": "Tallow",
+              "band": "novice",
+              "note": "rendering the fat; sold with the hides (E2)"
+            },
+            {
+              "good": 32,
+              "name": "Deerskins",
+              "band": "apprentice",
+              "note": "Carolina's trade with the Indian nations (CCR)"
+            },
+            {
+              "good": 61,
+              "name": "Boucan and salted boar",
+              "band": "apprentice",
+              "note": "smoked on the boucan frame; the hunters' own craft (E2)"
+            },
+            {
+              "good": 16,
+              "name": "Tanned leather",
+              "band": "journeyman",
+              "note": "tanning folded in; a separate skill only if the game makes leather goods"
+            },
+            {
+              "good": 57,
+              "name": "Ivory",
+              "band": "journeyman",
+              "offMap": true,
+              "note": "'Elephant's Teeth' from the Guinea coast (J)"
+            }
           ]
         },
         {
@@ -65,12 +202,43 @@
           "covers": "the catch; the salt-fish cure on the beach; turtling; diving for pearls and shell",
           "why": "Already a skill with its own minigame. Turtling goes here, not Hunting: Dampier's turtlers worked from sloops at sea (D). Pearl diving goes here rather than Swimming because it is a fishery.",
           "items": [
-            { "good": 60, "name": "Fresh fish", "band": "novice", "note": "the minigame's catch" },
-            { "good": 24, "name": "Salt fish", "band": "apprentice", "note": "split, salted and dried on the flakes; the poor grade went to the islands (HV)" },
-            { "good": 60, "name": "Turtle, live", "band": "apprentice", "note": "netted at the Caymans and kept alive in crawls at Port Royal (D, HA)" },
-            { "good": 15, "name": "Tortoise shell", "band": "journeyman", "note": "the hawksbill's plates, lifted with heat (open: method not sourced)" },
-            { "good": 52, "name": "Pearls", "band": "expert", "note": "diving the Rancheria banks; a Dutch pearl vessel was worth 100,000 pieces of eight (E)" },
-            { "good": 55, "name": "Cowries", "band": "novice", "offMap": true, "note": "gathered in the Maldives; a currency, not a craft (UWF)" }
+            {
+              "good": 60,
+              "name": "Fresh fish",
+              "band": "novice",
+              "note": "the minigame's catch"
+            },
+            {
+              "good": 24,
+              "name": "Salt fish",
+              "band": "apprentice",
+              "note": "split, salted and dried on the flakes; the poor grade went to the islands (HV)"
+            },
+            {
+              "good": 60,
+              "name": "Turtle, live",
+              "band": "apprentice",
+              "note": "netted at the Caymans and kept alive in crawls at Port Royal (D, HA)"
+            },
+            {
+              "good": 15,
+              "name": "Tortoise shell",
+              "band": "journeyman",
+              "note": "the hawksbill's plates, lifted with heat (open: method not sourced)"
+            },
+            {
+              "good": 52,
+              "name": "Pearls",
+              "band": "expert",
+              "note": "diving the Rancheria banks; a Dutch pearl vessel was worth 100,000 pieces of eight (E)"
+            },
+            {
+              "good": 55,
+              "name": "Cowries",
+              "band": "novice",
+              "offMap": true,
+              "note": "gathered in the Maldives; a currency, not a craft (UWF)"
+            }
           ]
         },
         {
@@ -80,13 +248,48 @@
           "covers": "felling, riving and squaring timber; the dyewood camps; tar, pitch and turpentine from the pine woods",
           "why": "Logwood, lumber and naval stores all came out of the woods. Tar burning is folded in: the kilns stood in the forest and the same hands worked them (SCN).",
           "items": [
-            { "good": 28, "name": "Lumber (felled)", "band": "novice", "note": "felling and hauling; any hand with an axe" },
-            { "good": 12, "name": "Logwood", "band": "apprentice", "note": "cut and chipped at the Campeche camps, sold at £5 a ton in goods (DV)" },
-            { "good": 28, "name": "Staves and hoops (rived)", "band": "apprentice", "note": "riving stave bolts for the cooper; Connecticut's cargo to Barbados (CT)" },
-            { "good": 29, "name": "Shingles", "band": "apprentice", "note": "rived and shaved; late evidence only (CTH)" },
-            { "good": 13, "name": "Other dyewoods, lignum vitae", "band": "apprentice", "note": "as logwood; fustic and brazeletto in the 1681 return (C81)" },
-            { "good": 31, "name": "Tar, pitch, turpentine", "band": "journeyman", "note": "the kiln burn takes judgement; 40,000 barrels a year by 1720 (SCN)" },
-            { "good": 14, "name": "Mahogany", "band": "journeyman", "note": "choosing, felling and squaring the great logs; 'bulky and relatively light' (MH)" }
+            {
+              "good": 28,
+              "name": "Lumber (felled)",
+              "band": "novice",
+              "note": "felling and hauling; any hand with an axe"
+            },
+            {
+              "good": 12,
+              "name": "Logwood",
+              "band": "apprentice",
+              "note": "cut and chipped at the Campeche camps, sold at £5 a ton in goods (DV)"
+            },
+            {
+              "good": 28,
+              "name": "Staves and hoops (rived)",
+              "band": "apprentice",
+              "note": "riving stave bolts for the cooper; Connecticut's cargo to Barbados (CT)"
+            },
+            {
+              "good": 29,
+              "name": "Shingles",
+              "band": "apprentice",
+              "note": "rived and shaved; late evidence only (CTH)"
+            },
+            {
+              "good": 13,
+              "name": "Other dyewoods, lignum vitae",
+              "band": "apprentice",
+              "note": "as logwood; fustic and brazeletto in the 1681 return (C81)"
+            },
+            {
+              "good": 31,
+              "name": "Tar, pitch, turpentine",
+              "band": "journeyman",
+              "note": "the kiln burn takes judgement; 40,000 barrels a year by 1720 (SCN)"
+            },
+            {
+              "good": 14,
+              "name": "Mahogany",
+              "band": "journeyman",
+              "note": "choosing, felling and squaring the great logs; 'bulky and relatively light' (MH)"
+            }
           ]
         },
         {
@@ -96,11 +299,41 @@
           "covers": "ore, the furnace and the forge that makes bar metal; silver refining",
           "why": "Smelting sits here with the mine, not with the smith: the smith buys bar iron. Nearly all of it is off-map in this period (Spanish silver, Swedish and Bilbao iron).",
           "items": [
-            { "good": 36, "name": "Ore and lead", "band": "apprentice", "offMap": true, "note": "lead for shot; no Caribbean mine in the sources" },
-            { "good": 36, "name": "Bar iron", "band": "journeyman", "offMap": true, "note": "£16 10s–£18 a ton in London (TR); 'voyage iron' to Africa (JS)" },
-            { "good": 36, "name": "Brass, pewter, steel", "band": "expert", "offMap": true, "note": "alloying and steeling; European works" },
-            { "good": 49, "name": "Silver", "band": "expert", "offMap": true, "note": "Potosí to Portobelo; refining with mercury (WHF)" },
-            { "good": 50, "name": "Gold and gold dust", "band": "journeyman", "offMap": true, "note": "Brazil and the Guinea coast; washing dust takes less than refining silver" }
+            {
+              "good": 36,
+              "name": "Ore and lead",
+              "band": "apprentice",
+              "offMap": true,
+              "note": "lead for shot; no Caribbean mine in the sources"
+            },
+            {
+              "good": 36,
+              "name": "Bar iron",
+              "band": "journeyman",
+              "offMap": true,
+              "note": "£16 10s–£18 a ton in London (TR); 'voyage iron' to Africa (JS)"
+            },
+            {
+              "good": 36,
+              "name": "Brass, pewter, steel",
+              "band": "expert",
+              "offMap": true,
+              "note": "alloying and steeling; European works"
+            },
+            {
+              "good": 49,
+              "name": "Silver",
+              "band": "expert",
+              "offMap": true,
+              "note": "Potosí to Portobelo; refining with mercury (WHF)"
+            },
+            {
+              "good": 50,
+              "name": "Gold and gold dust",
+              "band": "journeyman",
+              "offMap": true,
+              "note": "Brazil and the Guinea coast; washing dust takes less than refining silver"
+            }
           ]
         }
       ]
@@ -117,13 +350,54 @@
           "covers": "milling, baking, butchering and salting, dairying, tallow candles, chocolate; the galley",
           "why": "Already a skill. Every preserved food is folded in: miller, baker, butcher and chandler were separate trades in London but one-offs in a small port, and the game's cook already handles stores (DUTIES).",
           "items": [
-            { "good": 20, "name": "Flour and meal", "band": "novice", "input": "farming:Grain for meal and flour", "note": "grinding; New York's bolting monopoly guarded the quality (VR)" },
-            { "good": 18, "name": "Lime juice", "band": "novice", "note": "pressed and casked; 1,512 gallons to London in one month (C81)" },
-            { "good": 45, "name": "Tallow candles", "band": "apprentice", "input": "hunting:Tallow", "note": "dipping; they fuse in the heat (L)" },
-            { "good": 21, "name": "Ship's biscuit", "band": "apprentice", "input": "cooking:Flour and meal", "note": "baked hard, twice; 16s a hundredweight (PY)" },
-            { "good": 22, "name": "Salt beef and pork", "band": "apprentice", "input": "farming:Horses and livestock", "note": "cut, brined and packed in barrel; a short barrel was noticed (PY)" },
-            { "good": 43, "name": "Cheese and butter", "band": "journeyman", "input": "farming:Horses and livestock", "note": "dairying; spoils in the heat (L), so an off-map import in practice" },
-            { "good": 11, "name": "Chocolate", "band": "journeyman", "input": "farming:Cacao, sweated and dried", "note": "roasting and grinding the nut; a Spanish taste first" }
+            {
+              "good": 20,
+              "name": "Flour and meal",
+              "band": "novice",
+              "input": "farming:Grain for meal and flour",
+              "note": "grinding; New York's bolting monopoly guarded the quality (VR)"
+            },
+            {
+              "good": 18,
+              "name": "Lime juice",
+              "band": "novice",
+              "note": "pressed and casked; 1,512 gallons to London in one month (C81)"
+            },
+            {
+              "good": 45,
+              "name": "Tallow candles",
+              "band": "apprentice",
+              "input": "hunting:Tallow",
+              "note": "dipping; they fuse in the heat (L)"
+            },
+            {
+              "good": 21,
+              "name": "Ship's biscuit",
+              "band": "apprentice",
+              "input": "cooking:Flour and meal",
+              "note": "baked hard, twice; 16s a hundredweight (PY)"
+            },
+            {
+              "good": 22,
+              "name": "Salt beef and pork",
+              "band": "apprentice",
+              "input": "farming:Horses and livestock",
+              "note": "cut, brined and packed in barrel; a short barrel was noticed (PY)"
+            },
+            {
+              "good": 43,
+              "name": "Cheese and butter",
+              "band": "journeyman",
+              "input": "farming:Horses and livestock",
+              "note": "dairying; spoils in the heat (L), so an off-map import in practice"
+            },
+            {
+              "good": 11,
+              "name": "Chocolate",
+              "band": "journeyman",
+              "input": "farming:Cacao, sweated and dried",
+              "note": "roasting and grinding the nut; a Spanish taste first"
+            }
           ]
         },
         {
@@ -133,10 +407,35 @@
           "covers": "the mill and the boiling house: molasses, muscovado, clayed sugar, loaf sugar",
           "why": "The biggest cash crop. Ligon's boiler judges when to strike the sugar by eye and hand; a head boiler was the most valued man on a plantation. One-off nowhere: every sugar island needs it.",
           "items": [
-            { "good": 4, "name": "Molasses", "band": "apprentice", "input": "farming:Sugar cane", "note": "what drains from the pots; the apprentice's share of the work (L)" },
-            { "good": 1, "name": "Muscovado sugar", "band": "journeyman", "input": "farming:Sugar cane", "note": "boiling through the coppers and striking; 3d a pound on Barbados (L)" },
-            { "good": 2, "name": "Clayed (white) sugar", "band": "expert", "input": "sugar-boiling:Muscovado sugar", "note": "claying the pot so the molasses drains out; 20d a pound in London (L)" },
-            { "good": 3, "name": "Loaf sugar", "band": "master", "offMap": true, "input": "sugar-boiling:Muscovado sugar", "note": "refined in Bristol and London cone moulds (DB1)" }
+            {
+              "good": 4,
+              "name": "Molasses",
+              "band": "apprentice",
+              "input": "farming:Sugar cane",
+              "note": "what drains from the pots; the apprentice's share of the work (L)"
+            },
+            {
+              "good": 1,
+              "name": "Muscovado sugar",
+              "band": "journeyman",
+              "input": "farming:Sugar cane",
+              "note": "boiling through the coppers and striking; 3d a pound on Barbados (L)"
+            },
+            {
+              "good": 2,
+              "name": "Clayed (white) sugar",
+              "band": "expert",
+              "input": "sugar-boiling:Muscovado sugar",
+              "note": "claying the pot so the molasses drains out; 20d a pound in London (L)"
+            },
+            {
+              "good": 3,
+              "name": "Loaf sugar",
+              "band": "master",
+              "offMap": true,
+              "input": "sugar-boiling:Muscovado sugar",
+              "note": "refined in Bristol and London cone moulds (DB1)"
+            }
           ]
         },
         {
@@ -146,11 +445,43 @@
           "covers": "the still and the brewhouse: rum, aqua vitae, brandy; beer and wine folded in",
           "why": "Rex's own example. Brewing and winemaking are folded in as one-offs: no Caribbean town made wine or much beer in the sources, so they sit here off-map.",
           "items": [
-            { "good": 42, "name": "Beer", "band": "apprentice", "offMap": true, "input": "farming:Grain for meal and flour", "note": "'good English Beer' shipped out (L)" },
-            { "good": 18, "name": "Aqua vitae (kill-devil)", "band": "apprentice", "input": "sugar-boiling:Molasses", "note": "the rough first spirit from the skimmings (L)" },
-            { "good": 5, "name": "Rum", "band": "journeyman", "input": "sugar-boiling:Molasses", "note": "half a crown a gallon on Barbados (L); cask size open (1j)" },
-            { "good": 40, "name": "Wine", "band": "journeyman", "offMap": true, "note": "Madeira, Fayal, Canary, claret: £8 a pipe at Jamestown (CSP)" },
-            { "good": 41, "name": "Brandy", "band": "expert", "offMap": true, "input": "distilling:Wine", "note": "distilled wine; thirty casks in one prize (J)" }
+            {
+              "good": 42,
+              "name": "Beer",
+              "band": "apprentice",
+              "offMap": true,
+              "input": "farming:Grain for meal and flour",
+              "note": "'good English Beer' shipped out (L)"
+            },
+            {
+              "good": 18,
+              "name": "Aqua vitae (kill-devil)",
+              "band": "apprentice",
+              "input": "sugar-boiling:Molasses",
+              "note": "the rough first spirit from the skimmings (L)"
+            },
+            {
+              "good": 5,
+              "name": "Rum",
+              "band": "journeyman",
+              "input": "sugar-boiling:Molasses",
+              "note": "half a crown a gallon on Barbados (L); cask size open (1j)"
+            },
+            {
+              "good": 40,
+              "name": "Wine",
+              "band": "journeyman",
+              "offMap": true,
+              "note": "Madeira, Fayal, Canary, claret: £8 a pipe at Jamestown (CSP)"
+            },
+            {
+              "good": 41,
+              "name": "Brandy",
+              "band": "expert",
+              "offMap": true,
+              "input": "distilling:Wine",
+              "note": "distilled wine; thirty casks in one prize (J)"
+            }
           ]
         },
         {
@@ -160,15 +491,70 @@
           "covers": "the forge: nails, hoops, tools, blades, shot; gunsmithing at the top",
           "why": "Already a skill. Gunsmithing is folded in as its top tier rather than a skill of its own. The great guns stay off-map: a foundry, not a forge.",
           "items": [
-            { "good": 37, "name": "Nails", "band": "novice", "input": "mining:Bar iron", "note": "6d a pound retail (TR); the first thing an apprentice makes" },
-            { "good": 39, "name": "Shot (cast lead)", "band": "novice", "input": "mining:Ore and lead", "note": "1,281 lead shot in one QAR lab batch (QAR)" },
-            { "good": 37, "name": "Iron hoops", "band": "apprentice", "input": "mining:Bar iron", "note": "for the cooper; wooden hoops were the cheaper kind" },
-            { "good": 37, "name": "Tools: hoes, axes, knives", "band": "apprentice", "input": "mining:Bar iron", "note": "'nails, hoes, and axes' to Virginia (BR)" },
-            { "good": 47, "name": "Small wares: pins, needles, combs", "band": "apprentice", "offMap": true, "note": "Bonnet took 'a few Combs, Pins and Needles' (J)" },
-            { "good": 56, "name": "Manillas", "band": "apprentice", "offMap": true, "input": "mining:Brass, pewter, steel", "note": "brass currency for the Africa trade; 600 on the Whydah (WBUR)" },
-            { "good": 38, "name": "Swords and cutlasses", "band": "journeyman", "input": "mining:Brass, pewter, steel", "note": "steel blades; 'Swords, knives' shipped to Barbados (L)" },
-            { "good": 38, "name": "Muskets and pistols", "band": "expert", "input": "mining:Bar iron", "note": "gunsmithing: lock, stock and barrel" },
-            { "good": 38, "name": "Great guns (cannon)", "band": "master", "offMap": true, "note": "cast at a foundry; 29 located on the QAR wreck (QAR)" }
+            {
+              "good": 37,
+              "name": "Nails",
+              "band": "novice",
+              "input": "mining:Bar iron",
+              "note": "6d a pound retail (TR); the first thing an apprentice makes"
+            },
+            {
+              "good": 39,
+              "name": "Shot (cast lead)",
+              "band": "novice",
+              "input": "mining:Ore and lead",
+              "note": "1,281 lead shot in one QAR lab batch (QAR)"
+            },
+            {
+              "good": 37,
+              "name": "Iron hoops",
+              "band": "apprentice",
+              "input": "mining:Bar iron",
+              "note": "for the cooper; wooden hoops were the cheaper kind"
+            },
+            {
+              "good": 37,
+              "name": "Tools: hoes, axes, knives",
+              "band": "apprentice",
+              "input": "mining:Bar iron",
+              "note": "'nails, hoes, and axes' to Virginia (BR)"
+            },
+            {
+              "good": 47,
+              "name": "Small wares: pins, needles, combs",
+              "band": "apprentice",
+              "offMap": true,
+              "note": "Bonnet took 'a few Combs, Pins and Needles' (J)"
+            },
+            {
+              "good": 56,
+              "name": "Manillas",
+              "band": "apprentice",
+              "offMap": true,
+              "input": "mining:Brass, pewter, steel",
+              "note": "brass currency for the Africa trade; 600 on the Whydah (WBUR)"
+            },
+            {
+              "good": 38,
+              "name": "Swords and cutlasses",
+              "band": "journeyman",
+              "input": "mining:Brass, pewter, steel",
+              "note": "steel blades; 'Swords, knives' shipped to Barbados (L)"
+            },
+            {
+              "good": 38,
+              "name": "Muskets and pistols",
+              "band": "expert",
+              "input": "mining:Bar iron",
+              "note": "gunsmithing: lock, stock and barrel"
+            },
+            {
+              "good": 38,
+              "name": "Great guns (cannon)",
+              "band": "master",
+              "offMap": true,
+              "note": "cast at a foundry; 29 located on the QAR wreck (QAR)"
+            }
           ]
         },
         {
@@ -178,8 +564,20 @@
           "covers": "sawn timber and joinery; the ship's repairs (DUTIES)",
           "why": "Already a skill, mostly for repairs. Its goods are few: the raw timber comes from Woodcutting and casks are Cooperage.",
           "items": [
-            { "good": 28, "name": "Planks and boards (sawn)", "band": "novice", "input": "woodcutting:Lumber (felled)", "note": "the saw pit" },
-            { "good": 14, "name": "Mahogany, worked", "band": "journeyman", "input": "woodcutting:Mahogany", "note": "joinery; the 1720s furniture trade (MH)" }
+            {
+              "good": 28,
+              "name": "Planks and boards (sawn)",
+              "band": "novice",
+              "input": "woodcutting:Lumber (felled)",
+              "note": "the saw pit"
+            },
+            {
+              "good": 14,
+              "name": "Mahogany, worked",
+              "band": "journeyman",
+              "input": "woodcutting:Mahogany",
+              "note": "joinery; the 1720s furniture trade (MH)"
+            }
           ]
         },
         {
@@ -189,9 +587,27 @@
           "covers": "casks: slack (dry) work for flour and sugar, tight (wet) work for rum, molasses and wine",
           "why": "Already a skill, and the trade had a real ladder: a slack cooper made dry casks, a tight cooper the harder wet ones. About half the goods travel in its casks (3b).",
           "items": [
-            { "good": 28, "name": "Staves and heads, dressed", "band": "apprentice", "input": "woodcutting:Staves and hoops (rived)", "note": "jointing and hollowing the staves" },
-            { "good": 20, "name": "Slack casks (barrel, hogshead for dry goods)", "band": "journeyman", "input": "cooperage:Staves and heads, dressed", "note": "flour barrels, sugar hogsheads; 196 lb of flour to the barrel (FL)" },
-            { "good": 5, "name": "Tight casks (rum, molasses, wine)", "band": "expert", "input": "cooperage:Staves and heads, dressed", "note": "must hold liquid; a leaking cask loses the rum (DUTIES)" }
+            {
+              "good": 28,
+              "name": "Staves and heads, dressed",
+              "band": "apprentice",
+              "input": "woodcutting:Staves and hoops (rived)",
+              "note": "jointing and hollowing the staves"
+            },
+            {
+              "good": 20,
+              "name": "Slack casks (barrel, hogshead for dry goods)",
+              "band": "journeyman",
+              "input": "cooperage:Staves and heads, dressed",
+              "note": "flour barrels, sugar hogsheads; 196 lb of flour to the barrel (FL)"
+            },
+            {
+              "good": 5,
+              "name": "Tight casks (rum, molasses, wine)",
+              "band": "expert",
+              "input": "cooperage:Staves and heads, dressed",
+              "note": "must hold liquid; a leaking cask loses the rum (DUTIES)"
+            }
           ]
         },
         {
@@ -201,14 +617,63 @@
           "covers": "spinning and weaving; rope; tailoring; dyeing the cloth",
           "why": "Cloth, canvas and cordage were the naval stores pirates took most (Part 2). Ropemaking and tailoring are folded in as one-offs. Nearly all of it is off-map: the colonies imported cloth (L, BR).",
           "items": [
-            { "good": 46, "name": "Cordage and cable", "band": "apprentice", "offMap": true, "note": "the ropewalk; 'two Cables, and several Coils of Rope' taken (J)" },
-            { "good": 33, "name": "Coarse linen (dowlas, osnaburg)", "band": "apprentice", "offMap": true, "note": "1s 5d–1s 8d an ell (TR); slaves' and servants' cloth" },
-            { "good": 35, "name": "Clothing", "band": "apprentice", "input": "weaving:Coarse linen (dowlas, osnaburg)", "note": "tailoring folded in; a shirt at 2s 6d (CSP)" },
-            { "good": 46, "name": "Sailcloth and canvas", "band": "journeyman", "offMap": true, "note": "the sailmaker sews it; the weaver makes it" },
-            { "good": 33, "name": "Woollens (broadcloth, duffels)", "band": "journeyman", "offMap": true, "note": "10s–23s 6d a yard (TR); duffels for the Indian trade (CSP)" },
-            { "good": 33, "name": "Dyed cloth", "band": "journeyman", "offMap": true, "input": "farming:Indigo", "note": "the dyer's vat; indigo and cochineal are the dyes" },
-            { "good": 33, "name": "Fine linen (holland)", "band": "expert", "offMap": true, "note": "2s 4d–2s 8d a yard (TR)" },
-            { "good": 34, "name": "Silk, chintz, muslin", "band": "master", "offMap": true, "note": "Asian looms; chintzes in a French prize (J)" }
+            {
+              "good": 46,
+              "name": "Cordage and cable",
+              "band": "apprentice",
+              "offMap": true,
+              "note": "the ropewalk; 'two Cables, and several Coils of Rope' taken (J)"
+            },
+            {
+              "good": 33,
+              "name": "Coarse linen (dowlas, osnaburg)",
+              "band": "apprentice",
+              "offMap": true,
+              "note": "1s 5d–1s 8d an ell (TR); slaves' and servants' cloth"
+            },
+            {
+              "good": 35,
+              "name": "Clothing",
+              "band": "apprentice",
+              "input": "weaving:Coarse linen (dowlas, osnaburg)",
+              "note": "tailoring folded in; a shirt at 2s 6d (CSP)"
+            },
+            {
+              "good": 46,
+              "name": "Sailcloth and canvas",
+              "band": "journeyman",
+              "offMap": true,
+              "note": "the sailmaker sews it; the weaver makes it"
+            },
+            {
+              "good": 33,
+              "name": "Woollens (broadcloth, duffels)",
+              "band": "journeyman",
+              "offMap": true,
+              "note": "10s–23s 6d a yard (TR); duffels for the Indian trade (CSP)"
+            },
+            {
+              "good": 33,
+              "name": "Dyed cloth",
+              "band": "journeyman",
+              "offMap": true,
+              "input": "farming:Indigo",
+              "note": "the dyer's vat; indigo and cochineal are the dyes"
+            },
+            {
+              "good": 33,
+              "name": "Fine linen (holland)",
+              "band": "expert",
+              "offMap": true,
+              "note": "2s 4d–2s 8d a yard (TR)"
+            },
+            {
+              "good": 34,
+              "name": "Silk, chintz, muslin",
+              "band": "master",
+              "offMap": true,
+              "note": "Asian looms; chintzes in a French prize (J)"
+            }
           ]
         },
         {
@@ -218,17 +683,44 @@
           "covers": "the apothecary's medicines and the surgeon's chest",
           "why": "Already a skill. Apothecary work is folded in: a town with a surgeon has its medicines from the same hands.",
           "items": [
-            { "good": 48, "name": "Simple medicines", "band": "journeyman", "note": "the apothecary's stock; 'some of the Ship's Medicines' pressed (J)" },
-            { "good": 48, "name": "Surgeon's chest and instruments", "band": "expert", "note": "£300–400 at Charleston (J); 200–250 pieces of eight as a fixed share (E)" }
+            {
+              "good": 48,
+              "name": "Simple medicines",
+              "band": "journeyman",
+              "note": "the apothecary's stock; 'some of the Ship's Medicines' pressed (J)"
+            },
+            {
+              "good": 48,
+              "name": "Surgeon's chest and instruments",
+              "band": "expert",
+              "note": "£300–400 at Charleston (J); 200–250 pieces of eight as a fixed share (E)"
+            }
           ]
         }
       ]
     }
   ],
   "noTree": [
-    { "good": 39, "name": "Gunpowder", "note": "powder mills were a trade of their own in Europe; nothing in the sources makes it in the Caribbean. Imported only, or Smithing master if Rex wants a town to make it" },
-    { "good": 53, "name": "Enslaved people", "note": "Open for Rex, item 1" },
-    { "good": 54, "name": "Voyage iron", "note": "the same bar iron as Mining: Bar iron, sold as currency on the African coast" },
-    { "good": 58, "name": "Africa trade cargo", "note": "a mix of the goods above, not a good" }
-  ]
+    {
+      "good": 39,
+      "name": "Gunpowder",
+      "note": "powder mills were a trade of their own in Europe; nothing in the sources makes it in the Caribbean. Imported only, or Smithing master if Rex wants a town to make it"
+    },
+    {
+      "good": 53,
+      "name": "Enslaved people",
+      "note": "Open for Rex, item 1"
+    },
+    {
+      "good": 54,
+      "name": "Voyage iron",
+      "note": "the same bar iron as Mining: Bar iron, sold as currency on the African coast"
+    },
+    {
+      "good": 58,
+      "name": "Africa trade cargo",
+      "note": "a mix of the goods above, not a good"
+    }
+  ],
+  "bandsSource": "research-trade-grades.md (shared notes folder): guild ladder, sea ranks, Ligon's overseers and tradesmen; 'novice' and 'expert' found as no grade"
 }
