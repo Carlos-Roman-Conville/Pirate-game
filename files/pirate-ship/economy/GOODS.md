@@ -152,7 +152,8 @@ Distilling** (3c; Rex, 2026-10-29), and Brewer and Vintner / Taverner as occupat
 
 ### 1l. The rest of the Atlantic world (source; added 2026-10-29)
 
-Rex: the base game is the Atlantic, so its goods are the Atlantic's. Four research notes (shared folder):
+Rex: the base game is the Atlantic, so its goods are the Atlantic's. **Rex confirmed the list as the base game's goods,
+2026-10-29.** Four research notes (shared folder):
 `research-atlantic-africa.md` (from the full texts of Barbot 1732, Bosman 1705 and Phillips's Hannibal journal
 1693–94 with the Royal African Company's invoices), `research-atlantic-europe.md`, `research-atlantic-north-america.md`,
 `research-atlantic-spanish-brazil.md`. Each row's origin within the Atlantic is the first thing in its route; the
@@ -1092,3 +1093,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-29 | REGIONS.md: the expansion roadmap (four regions pass the tests); imported goods and arrack tagged with their region | research session, at Rex's request |
 | 2026-10-29 | REGIONS.md §5: Rex confirmed the four expansions; escalation by each region's advantage, rising level caps, slow levelling (direction); the order proposed | Rex (direction); research session |
 | 2026-10-29 | 1l: the rest of the Atlantic world, rows 82–133 (West and West-Central Africa, Europe and the Baltic, North America, Spanish America, Brazil, the islands), from four research notes; the coast's units of account and the coins; origins carried in the data | research session, at Rex's request |
+| 2026-10-29 | Rex confirmed the Atlantic list (rows 1–133) as the base game's goods | Rex |
