@@ -48,7 +48,7 @@ window.BODY_DATA = {
      "nervous",
      "NEUROLOGY.md",
      "per system: tone, sensitivity; per substance: concentration, dependence, withdrawal; habits{}; burdens{mercury, lead}; the circuit outputs (arousal, coordination, attention, encoding, painRelief, breathing, moodBias, fear, appetiteMod, sleepQuality)",
-     "proposed (2026-10-29)"
+     "rex (the subsystem, 2026-10-29); proposed (fields)"
     ],
     [
      "mind (read, never written here)",
@@ -4542,7 +4542,7 @@ window.BODY_DATA = {
   }
  },
  "neurology": {
-  "_about": "Tables for body/NEUROLOGY.md: baseline signalling, pharmacokinetics, receptor dynamics, functional circuits, the four clocks, interactions, outputs. The whole subsystem is proposed (Rex's go-ahead via ChatGPT's note, 2026-10-29); the biology is established at the level of a functional model, never a neuron. mark: rex | proposed | open.",
+  "_about": "Tables for body/NEUROLOGY.md. Structure (the systems, baseline drivers, kinetics, the four clocks, circuits, the fence) is Rex's decision, 2026-10-29; every number, weight, EC50 and time constant is a placeholder (proposed). mark: rex | proposed | open.",
   "systems": {
    "title": "The signalling systems the model tracks (a functional brain, not a cellular one)",
    "kind": "science",
@@ -4567,7 +4567,7 @@ window.BODY_DATA = {
      5,
      "sedation, slurred coordination, calm",
      "anxiety, tremor, fits (the alcohol withdrawal state)",
-     "proposed"
+     "rex (the system, 2026-10-29); proposed (constants)"
     ],
     [
      "glutamate",
@@ -4577,7 +4577,7 @@ window.BODY_DATA = {
      5,
      "excitation, fits, excitotoxic damage",
      "dulled learning and memory",
-     "proposed"
+     "rex (the system, 2026-10-29); proposed (constants)"
     ],
     [
      "dopamine",
@@ -4587,7 +4587,7 @@ window.BODY_DATA = {
      14,
      "drive, wanting, stereotyped behaviour, paranoia at the extreme",
      "apathy, slowed movement, anhedonia",
-     "proposed"
+     "rex (the system, 2026-10-29); proposed (constants)"
     ],
     [
      "serotonin",
@@ -4597,7 +4597,7 @@ window.BODY_DATA = {
      14,
      "sedation, nausea, in excess a syndrome",
      "low mood, impulsivity, poor sleep",
-     "proposed"
+     "rex (the system, 2026-10-29); proposed (constants)"
     ],
     [
      "noradrenaline",
@@ -4607,7 +4607,7 @@ window.BODY_DATA = {
      7,
      "alertness, anxiety, fast pulse, sweating",
      "fatigue, inattention",
-     "proposed"
+     "rex (the system, 2026-10-29); proposed (constants)"
     ],
     [
      "acetylcholine",
@@ -4617,7 +4617,7 @@ window.BODY_DATA = {
      7,
      "focus; at the junction, muscle twitching",
      "poor memory, inattention; at the junction, weakness",
-     "proposed"
+     "rex (the system, 2026-10-29); proposed (constants)"
     ],
     [
      "opioid",
@@ -4627,7 +4627,7 @@ window.BODY_DATA = {
      10,
      "analgesia, euphoria, slowed breathing, constipation",
      "pain amplified, dysphoria, gut cramps, gooseflesh (withdrawal)",
-     "proposed"
+     "rex (the system, 2026-10-29); proposed (constants)"
     ],
     [
      "adenosine",
@@ -4637,7 +4637,7 @@ window.BODY_DATA = {
      3,
      "sleepiness (the pressure PHYSIOLOGY 3 counts as debt)",
      "wakefulness (caffeine blocks the receptor; the pressure itself still accumulates)",
-     "proposed"
+     "rex (the system, 2026-10-29); proposed (constants)"
     ],
     [
      "cannabinoid",
@@ -4647,7 +4647,7 @@ window.BODY_DATA = {
      7,
      "hunger, altered time sense, calm",
      "anxiety, poor sleep",
-     "proposed (no period substance in the base game: hemp was cordage; open)"
+     "rex (the system, 2026-10-29); proposed (constants)"
     ],
     [
      "histamine_orexin",
@@ -4657,7 +4657,7 @@ window.BODY_DATA = {
      3,
      "wakeful",
      "sleepy (the antihistamine state; no period substance)",
-     "proposed"
+     "rex (the system, 2026-10-29); proposed (constants)"
     ]
    ]
   },
@@ -4679,98 +4679,98 @@ window.BODY_DATA = {
      "adenosine +0.05 per hour awake, reset by sleep (deep sleep clears it)",
      "arousal down; the mechanism under PHYSIOLOGY's sleep-debt table, which stays the output",
      "with sleep",
-     "proposed"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ],
     [
      "Hard exercise (MET over 6, MUSCULAR work)",
      "noradrenaline +0.3 during; opioid +0.2 for 2 h after (the runner's calm); dopamine +0.1",
      "arousal up during; pain gating up after; mood push +1 (PSYCHOLOGY)",
      "hours",
-     "proposed"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ],
     [
      "Pain over 5 (MEDICINE 4)",
      "noradrenaline +0.3; opioid +0.2 (the body's own analgesia, limited)",
      "arousal up, sleep down, attention narrowed",
      "with the pain",
-     "proposed"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ],
     [
      "Fear: a fight, a storm, outnumbered (COMBAT, the day loop)",
      "noradrenaline +0.5 for the event, +0.1 for the day; the stress hormones (PHYSIOLOGY, open)",
      "arousal and vigilance up; fine motor control down (the shaking hand); memory of the event stamped (the memories system)",
      "hours; days if repeated",
-     "proposed"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ],
     [
      "Hunger over 0.6 (NUTRITION 4)",
      "histamine_orexin +0.2; dopamine seeking +0.1",
      "food-seeking drive; irritability",
      "with a meal",
-     "proposed"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ],
     [
      "Starvation stage 2+ (NUTRITION)",
      "serotonin -0.2 (tryptophan short); dopamine -0.1",
      "low mood, apathy; the mood push PSYCHOLOGY already gives",
      "with refeeding, weeks",
-     "proposed"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ],
     [
      "Sleep debt over 24 h (PHYSIOLOGY)",
      "glutamate control down (prefrontal); noradrenaline erratic",
      "emotional reactivity up (the irritability push), lapses",
      "with sleep",
-     "proposed"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ],
     [
      "Social: praise, a win, a prize, a gift (the crew engine)",
      "dopamine +0.2 for the day; opioid +0.1",
      "reward: the habit circuit learns what got it (the memories system), mood push",
      "a day",
-     "proposed"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ],
     [
      "Social: isolation, grief, humiliation",
      "serotonin -0.1 a day while it lasts; noradrenaline +0.1",
      "low mood, poor sleep; PSYCHOLOGY's pushes",
      "weeks",
-     "proposed"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ],
     [
      "Fever (MEDICINE)",
      "all systems noisy: attention -0.3, delirium over 39.5 C",
      "the raving in the hammock",
      "with the fever",
-     "proposed"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ],
     [
      "Heat strain (PHYSIOLOGY 4)",
      "noradrenaline +0.2; serotonin disturbed",
      "irritability, poor judgement",
      "with cooling",
-     "proposed"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ],
     [
      "Deficiency: thiamin, niacin, B12, iron (NUTRITION 5)",
      "slow loss of acetylcholine and glutamate function (thiamin, B12); serotonin (niacin); oxygen delivery (iron)",
      "memory, confusion, the dementia of pellagra, the numb feet of B12",
      "months on repletion",
-     "proposed"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ],
     [
      "Age (PHYSIOLOGY 8)",
      "dopamine -5% per decade after 40; acetylcholine -3%",
      "slower movement initiation; memory",
      "never",
-     "proposed"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ],
     [
      "Genetics (the hidden min-max, STATS)",
      "each system's baseline tone and sensitivity vary per character within a range (the nervous type: the Assertive <-> Turbulent slider's biological side, proposed)",
      "why one man drinks himself calm and another wild",
      "never",
-     "proposed; open (whether tied to the type or the sliders)"
+     "rex (the driver, 2026-10-29); proposed (sizes)"
     ]
    ]
   },
@@ -4800,7 +4800,7 @@ window.BODY_DATA = {
      "0.68 (men) 0.55 (women), Widmark",
      "gaba +0.3 (agonist); glutamate -0.3 (NMDA block); dopamine +0.15; opioid +0.1; adenosine +0.1 later (the rebound insomnia)",
      "14 g (half a gill of rum, a pint of strong beer)",
-     "proposed"
+     "rex (the substance and its systems, 2026-10-29); proposed (constants)"
     ],
     [
      "Opium as laudanum (drugs row 48; the surgeon's chest)",
@@ -4811,7 +4811,7 @@ window.BODY_DATA = {
      "3.5",
      "opioid +0.6 (mu agonist); dopamine +0.2; adenosine +0.1; gut motility down",
      "25 drops (about 15 mg morphine)",
-     "proposed"
+     "rex (the substance and its systems, 2026-10-29); proposed (constants)"
     ],
     [
      "Tobacco, smoked or chewed (rows 19, 111, 121)",
@@ -4822,7 +4822,7 @@ window.BODY_DATA = {
      "2.6",
      "acetylcholine +0.3 (nicotinic agonist); dopamine +0.2; noradrenaline +0.2",
      "one pipe (1 to 2 mg absorbed)",
-     "proposed"
+     "rex (the substance and its systems, 2026-10-29); proposed (constants)"
     ],
     [
      "Coffee (row 74), tea (75), chocolate (11), kola (88)",
@@ -4833,7 +4833,7 @@ window.BODY_DATA = {
      "0.6",
      "adenosine -0.3 (antagonist: blocks, does not clear the pressure); noradrenaline +0.1; dopamine +0.05",
      "a dish of coffee (80 mg caffeine); tea 40; chocolate 20 caffeine plus theobromine; kola 50",
-     "proposed"
+     "rex (the substance and its systems, 2026-10-29); proposed (constants)"
     ],
     [
      "Peruvian bark, quinine (row 72)",
@@ -4844,7 +4844,7 @@ window.BODY_DATA = {
      "1.5",
      "none at a dose; over 2 g a day: hearing (tinnitus, Hearing x0.8), vision blur, nausea (cinchonism)",
      "1 g bark",
-     "proposed"
+     "rex (the substance and its systems, 2026-10-29); proposed (constants)"
     ],
     [
      "Mercury (row 108; the pox cure)",
@@ -4855,7 +4855,7 @@ window.BODY_DATA = {
      "accumulates in brain and kidney",
      "slow: acetylcholine and glutamate function down with the body burden; erethism (irritability, shyness, tremor) over months",
      "a course of unction (grams over weeks)",
-     "proposed"
+     "rex (the substance and its systems, 2026-10-29); proposed (constants)"
     ],
     [
      "Lead (from still worms and pewter: the dry gripes, MEDICINE)",
@@ -4866,7 +4866,7 @@ window.BODY_DATA = {
      "accumulates",
      "slow: gaba and glutamate disturbed; peripheral nerve (wrist drop); encephalopathy at high burden",
      "with each rum ration from a lead-worm still",
-     "proposed"
+     "rex (the substance and its systems, 2026-10-29); proposed (constants)"
     ],
     [
      "Hemp, cannabis (not a GOODS row)",
@@ -4910,28 +4910,28 @@ window.BODY_DATA = {
      "how much the substance moves each system now",
      "effect_s = potency_s x occupancy, occupancy = C / (C + EC50) ; tone_s = baseline_s + sum over substances of effect_s x sensitivity_s",
      "minutes to hours (the PK curve)",
-     "proposed"
+     "rex (the clock, 2026-10-29); proposed (formula constants)"
     ],
     [
      "2. Tolerance",
      "the system's sensitivity falling under repeated exposure, so the same dose does less",
      "sensitivity_s -= k_tol x mean occupancy over the day, floor 0.3; recovers toward 1.0 at the system's recovery time constant when exposure stops",
      "days to weeks to build (alcohol 2 to 3 weeks of daily drinking for marked tolerance; opioids 1 to 2 weeks; caffeine days), days to weeks to lose",
-     "proposed"
+     "rex (the clock, 2026-10-29); proposed (formula constants)"
     ],
     [
      "3. Dependence",
      "the adapted system now needs the substance to sit at its normal tone (the baseline has shifted the other way)",
      "dependence_s = clamp(1 - sensitivity_s, 0, 1) x exposure days / 14; counts as a need the character acts on (craving: the reward circuit's habit learning and the PSYCHOLOGY push)",
      "weeks",
-     "proposed"
+     "rex (the clock, 2026-10-29); proposed (formula constants)"
     ],
     [
      "4. Withdrawal",
      "the rebound when the substance leaves an adapted system: tone swings opposite to the drug",
      "withdrawal_s = dependence_s x (1 - occupancy) x rebound_s(t), rebound rising from the drug's last elimination to a peak then fading on the recovery constant; alcohol: gaba under, glutamate over (tremor, sweats, fits at 24 to 48 h, delirium at 48 to 72 h if dependence over 0.7, death roll 10% per day of delirium untreated); opioid: opioid under (pain, cramps, gooseflesh, vomiting, no sleep; rarely fatal); caffeine: adenosine over (headache, sleepiness for 1 to 2 days); nicotine: acetylcholine and dopamine under (irritability, craving, days)",
      "hours to days; craving for weeks to months",
-     "proposed"
+     "rex (the clock, 2026-10-29); proposed (formula constants)"
     ]
    ]
   },
@@ -4955,7 +4955,7 @@ window.BODY_DATA = {
      "arousal 0 to 2: 1 normal, under 0.5 stupor, over 1.5 agitation",
      "BODY: the alertness factor is min(PHYSIOLOGY alertness, arousal) on the head attributes and Reflexes; over 1.5 dips Dexterity (tremor) and sleep quality",
      "nodding over the cards; the wide-awake lookout on coffee; the man who cannot sleep",
-     "proposed"
+     "rex (the circuit and where its output goes, 2026-10-29); proposed (weights)"
     ],
     [
      "Motor control",
@@ -4963,7 +4963,7 @@ window.BODY_DATA = {
      "coordination 0 to 1",
      "BODY: Dexterity and Agility x coordination; MUSCULAR: the pattern recruitment available today x coordination; the accident roll",
      "the drunk's stagger; the delirious man's tremor; mercury's shaking hand",
-     "proposed"
+     "rex (the circuit and where its output goes, 2026-10-29); proposed (weights)"
     ],
     [
      "Reward and habit",
@@ -4971,7 +4971,7 @@ window.BODY_DATA = {
      "reward signal per event; habit strength per substance or act (learns what delivered the signal)",
      "PSYCHOLOGY: mood push on the event; craving as a daily push toward the habit (the den, the bottle: Rex's gambling loop is a reward circuit already); dependence feeds it",
      "the man who goes to the den every night; the one who needs his pipe",
-     "proposed"
+     "rex (the circuit and where its output goes, 2026-10-29); proposed (weights)"
     ],
     [
      "Attention",
@@ -4979,7 +4979,7 @@ window.BODY_DATA = {
      "attention 0 to 2",
      "BODY: Perception, Pattern Recognition, Wits read x attention; skill learning rate (STATS 4) x attention",
      "the drunk navigator's sight; the pipe that steadies the gunner (nicotine, small, real)",
-     "proposed"
+     "rex (the circuit and where its output goes, 2026-10-29); proposed (weights)"
     ],
     [
      "Pain gating",
@@ -4987,7 +4987,7 @@ window.BODY_DATA = {
      "pain relief 0 to 1 subtracted from MEDICINE's pain (laudanum -4 was this)",
      "MEDICINE 4: effective pain = pain x (1 - relief); withdrawal makes relief negative (pain amplified)",
      "the wounded man quiet after his dose; screaming without it",
-     "proposed"
+     "rex (the circuit and where its output goes, 2026-10-29); proposed (weights)"
     ],
     [
      "Memory and learning",
@@ -4995,7 +4995,7 @@ window.BODY_DATA = {
      "encoding 0 to 1",
      "the memories system (PIRATE 7: what the dialogue cards check) records an event only if encoding over 0.4; skill practice counts x encoding",
      "'I don't remember last night'; the lesson that did not take",
-     "proposed"
+     "rex (the circuit and where its output goes, 2026-10-29); proposed (weights)"
     ],
     [
      "Breathing drive",
@@ -5003,7 +5003,7 @@ window.BODY_DATA = {
      "respiratory drive 0 to 1",
      "MEDICINE: under 0.4 the overdose condition (stupor, slow breathing, death roll per hour; alcohol with laudanum is the classic: the 2017 study found the combination synergistic)",
      "the man who cannot be woken",
-     "proposed"
+     "rex (the circuit and where its output goes, 2026-10-29); proposed (weights)"
     ],
     [
      "Mood regulation",
@@ -5011,7 +5011,7 @@ window.BODY_DATA = {
      "mood bias -1 to +1 per day",
      "PSYCHOLOGY: a daily push on mood only; never on a slider directly (Rex: sliders move by how people treat them)",
      "the sulk after the rum runs out",
-     "proposed"
+     "rex (the circuit and where its output goes, 2026-10-29); proposed (weights)"
     ],
     [
      "Fear and stress",
@@ -5019,7 +5019,7 @@ window.BODY_DATA = {
      "fear reading for the day 0 to 2",
      "PSYCHOLOGY: the 'read as Fearful' state; COMBAT: Nerve checks x (2 - fear); the madness line lowered for the Turbulent (proposed)",
      "the shakes before boarding; the rum that steadies them (gaba up: the real Dutch courage)",
-     "proposed"
+     "rex (the circuit and where its output goes, 2026-10-29); proposed (weights)"
     ],
     [
      "Appetite",
@@ -5027,7 +5027,7 @@ window.BODY_DATA = {
      "appetite modifier x0.5 to x1.5",
      "NUTRITION 4: the appetite state's 'state' factor",
      "the smoker who skips his dinner; the drinker who eats nothing",
-     "proposed"
+     "rex (the circuit and where its output goes, 2026-10-29); proposed (weights)"
     ],
     [
      "Sleep",
@@ -5035,7 +5035,7 @@ window.BODY_DATA = {
      "sleep propensity and sleep quality",
      "PHYSIOLOGY 3: a block's quality x sleep quality (rum: falls asleep fast, wakes at 3, quality x0.7; coffee at dusk x0.6; laudanum deep but not restful x0.8); PHYSIOLOGY keeps the debt",
      "the snoring drunk who is worse in the morning",
-     "proposed"
+     "rex (the circuit and where its output goes, 2026-10-29); proposed (weights)"
     ]
    ]
   },
@@ -5055,43 +5055,43 @@ window.BODY_DATA = {
      "Tones add",
      "tone_s = baseline_s + sum over substances (potency x occupancy x sensitivity_s); each circuit then reads the summed tones once. No substance carries a penalty of its own",
      "rum and laudanum both raise gaba and opioid; the arousal circuit falls once, by the sum",
-     "proposed"
+     "rex (the rule, 2026-10-29); proposed (constants)"
     ],
     [
      "Depressant synergy on breathing",
      "respiratory drive = product form: (1 - 0.6 opioidEffect) x (1 - 0.3 gabaEffect) x (1 - 0.2 alcoholEffect), then x0.8 if two or more depressants are over 0.3 occupancy",
      "a dosed wounded man given rum for the pain: the overdose roll",
-     "proposed"
+     "rex (the rule, 2026-10-29); proposed (constants)"
     ],
     [
      "Stimulant masks depressant",
      "arousal reads the sum, so coffee on rum raises arousal while motor control (gaba) stays impaired: the wide-awake drunk",
      "the navigator who sobers up his head with coffee and not his hands",
-     "proposed"
+     "rex (the rule, 2026-10-29); proposed (constants)"
     ],
     [
      "Tolerance is per system, so cross-tolerance follows the system",
      "a drinker's gaba sensitivity is low, so laudanum's gaba side does less for him, its opioid side the same",
      "the sot who needs a double dose of the surgeon's draught to sleep",
-     "proposed"
+     "rex (the rule, 2026-10-29); proposed (constants)"
     ],
     [
      "A shifted baseline changes what a dose does",
      "the same rum on a sleep-deprived, afraid man (noradrenaline high) reads as calm; on a rested man as stupor",
      "Dutch courage on the eve of boarding",
-     "proposed"
+     "rex (the rule, 2026-10-29); proposed (constants)"
     ],
     [
      "Withdrawal plus a new substance",
      "a dose during withdrawal fills the occupancy and the rebound falls at once (the relief that teaches the habit: reward circuit +)",
      "the morning dram",
-     "proposed"
+     "rex (the rule, 2026-10-29); proposed (constants)"
     ],
     [
      "Poisons do not clear",
      "mercury and lead are body burdens: tone shifts grow with burden and fade over months after exposure ends",
      "the hatter's tremor; the dry gripes' palsy",
-     "proposed"
+     "rex (the rule, 2026-10-29); proposed (constants)"
     ]
    ]
   },
@@ -5113,28 +5113,28 @@ window.BODY_DATA = {
      "BODY 2 (the factors), PSYCHOLOGY 1 (pushes), NUTRITION 4, PHYSIOLOGY 3, MEDICINE 4",
      "the old drinkFactor and the fixed rum and laudanum effects in NUTRITION 7 and MEDICINE 5 (those rows now cite this file)",
      "a personality slider, a memory's content, a decision",
-     "proposed"
+     "rex (the fence, 2026-10-29)"
     ],
     [
      "habit strength per substance; dependence; withdrawal state",
      "PSYCHOLOGY (craving push, the slight if denied), MEDICINE (delirium, overdose as conditions), the story (a crew mate's habit as a trait)",
      "the open 'habit as a system' in NUTRITION and PSYCHOLOGY",
      "whether the character chooses to drink: that is the crew engine's, reading the push",
-     "proposed"
+     "rex (the fence, 2026-10-29)"
     ],
     [
      "the rule that moves MUSCULAR's recruitment values (practice x encoding x acetylcholine tone)",
      "MUSCULAR 5a",
      "nothing: MUSCULAR keeps the values",
      "a second motor-control system",
-     "proposed"
+     "rex (the fence, 2026-10-29)"
     ],
     [
      "poison body burdens (mercury, lead)",
      "MEDICINE (the dry gripes, erethism as conditions)",
      "-",
      "-",
-     "proposed"
+     "rex (the fence, 2026-10-29)"
     ]
    ]
   }
