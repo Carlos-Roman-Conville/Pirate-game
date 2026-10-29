@@ -166,6 +166,9 @@ Decided in the combat session; mechanics in `../combat/COMBAT.md` §4e. The fict
 - **(Rex, via the body keeper)** Named characters are vulnerable to cardiac events, and organ failures are crises
   with four outcomes (temporary, chronic, irreversible, death), so an old captain's heart or a drinker's dropsy can
   be an ending without a scripted death (`../body/CIRCULATION.md` 6, `../body/ANATOMY.md` 3a).
+- **(Rex, same day, via the body keeper)** Extended to every kind of death: named characters have no biological
+  immunity to disease, accident or weather. Every death opens a crisis first, and the fate systems decide what
+  follows. Any protection comes from the story (a rescue, the surgeon, the crew's care), never from the body.
 - **(open, for the body files)** Per character: favourite and hated foods from their history (`../body/NUTRITION.md`
   4); habits (rum, laudanum, tobacco) as traits with a dependence number (`../body/NEUROLOGY.md` 4); body-state
   madness triggers (`../body/PSYCHOLOGY.md` 2); the forms' physiology (`../body/BODY.md` 6, species shape in
@@ -263,4 +266,5 @@ Decided in the combat session; mechanics in `../combat/COMBAT.md` §4e. The fict
 | 2026-10-28 | Recruiting alone doesn't develop a character's place: it takes a sub quest or supplying what they need (the farm's bodies are the example); new field `develops_place` | Rex (via the balance keeper) |
 | 2026-10-29 | Death and resurrection through a faction (mecha, ghost, zombie, angel; merfolk open), each ending that storyline; transformations depend on who did it (fish person, demon, missing if kidnapped); transformation is part of character endings, which can need you to bring people (the INTJ: test subjects or the fish people) | Rex (via the combat keeper) |
 | 2026-10-29 | Named characters are vulnerable to cardiac events; organ failures are crises (temporary, chronic, irreversible, death), so a body can end a story without a scripted death | Rex (via the body keeper) |
+| 2026-10-29 | No biological immunity for named characters to disease, accident or weather deaths; every death opens a crisis first; protection comes only from the story | Rex (via the body keeper) |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |
