@@ -1028,7 +1028,8 @@
               "band": "expert",
               "offMap": true,
               "knowledge": "foreign",
-              "note": "East Indies palm or cane spirit; 'rum or arrack in lieu' of wine (Navy 1731); Barlow at Goa 1697 priced it by the keg. A far-travelled merchant's recipe (3f)"
+              "note": "East Indies palm or cane spirit; 'rum or arrack in lieu' of wine (Navy 1731); Barlow at Goa 1697 priced it by the keg. A far-travelled merchant's recipe (3f)",
+              "region": "indian-ocean"
             }
           ]
         },
@@ -2401,13 +2402,15 @@
         "good": 66,
         "name": "Pepper (black, white)",
         "knowledge": "foreign",
-        "note": "white 1.01, black 0.42 guilders a lb at Amsterdam (1691–94); Lowther took 'pepper' from a prize (J)"
+        "note": "white 1.01, black 0.42 guilders a lb at Amsterdam (1691–94); Lowther took 'pepper' from a prize (J)",
+        "region": "malacca"
       },
       {
         "good": 67,
         "name": "Cloves, nutmeg, mace, cinnamon",
         "knowledge": "foreign",
-        "note": "Amsterdam 1691: cloves 3.75, nutmeg 3.00, mace 8.40, cinnamon 3.00 guilders a lb; Ligon's cookery used them"
+        "note": "Amsterdam 1691: cloves 3.75, nutmeg 3.00, mace 8.40, cinnamon 3.00 guilders a lb; Ligon's cookery used them",
+        "region": "malacca"
       },
       {
         "good": 68,
@@ -2419,19 +2422,31 @@
         "good": 72,
         "name": "Peruvian bark (cinchona)",
         "knowledge": "foreign",
-        "note": "Spanish Peru → Spain → London chemists (1658)"
+        "note": "Spanish Peru → Spain → London chemists (1658). Spanish mainland, not an expansion region",
+        "region": "caribbean"
       },
       {
         "good": 75,
         "name": "Tea",
         "knowledge": "foreign",
-        "note": "Roberts 'drank his Tea constantly' (J); Asia by the Company ships"
+        "note": "Roberts 'drank his Tea constantly' (J); Asia by the Company ships",
+        "region": "east-china-sea"
       },
       {
         "good": 40,
         "name": "Madeira, Canary, sherry, claret (the wines)",
         "note": "Madeira shipped 8–9,000 pipes a year (Ovington 1696); the vintner imports, the taverner sells (Strype 1720)"
       }
+    ]
+  },
+  "regions": {
+    "note": "REGIONS.md (this folder): the four expansion regions and the leak rule",
+    "list": [
+      "caribbean",
+      "indian-ocean",
+      "malacca",
+      "east-china-sea",
+      "barbary"
     ]
   }
 }

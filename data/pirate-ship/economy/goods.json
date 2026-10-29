@@ -3426,7 +3426,7 @@
       "mark": "source",
       "madeBy": null,
       "knowledge": "foreign",
-      "region": "caribbean",
+      "region": "malacca",
       "note": "white 1.01, black 0.42 guilders a lb at Amsterdam (1691–94); Lowther took 'pepper' from a prize (J)"
     },
     {
@@ -3441,7 +3441,7 @@
       "mark": "source",
       "madeBy": null,
       "knowledge": "foreign",
-      "region": "caribbean",
+      "region": "malacca",
       "note": "Amsterdam 1691: cloves 3.75, nutmeg 3.00, mace 8.40, cinnamon 3.00 guilders a lb; Ligon's cookery used them"
     },
     {
@@ -3514,7 +3514,7 @@
       "madeBy": null,
       "knowledge": "foreign",
       "region": "caribbean",
-      "note": "Spanish Peru → Spain → London chemists (1658)"
+      "note": "Spanish Peru → Spain → London chemists (1658). Spanish mainland, not an expansion region"
     },
     {
       "id": "peruvian-bark-against-fevers",
@@ -3584,7 +3584,7 @@
       "mark": "source",
       "madeBy": null,
       "knowledge": "foreign",
-      "region": "caribbean",
+      "region": "east-china-sea",
       "note": "Roberts 'drank his Tea constantly' (J); Asia by the Company ships"
     },
     {
@@ -3780,7 +3780,7 @@
       "offMap": true,
       "mark": "source",
       "madeBy": "distilling",
-      "region": "caribbean",
+      "region": "indian-ocean",
       "note": "East Indies palm or cane spirit; 'rum or arrack in lieu' of wine (Navy 1731); Barlow at Goa 1697 priced it by the keg. A far-travelled merchant's recipe (3f)"
     }
   ]
