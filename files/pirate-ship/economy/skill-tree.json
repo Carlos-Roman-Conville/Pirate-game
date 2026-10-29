@@ -1,6 +1,6 @@
 {
   "title": "Pirate Ship: goods on the skill trees (proposed)",
-  "status": "Rex's splits of 2026-10-28 applied: Farming group; Cooking group; Tanning, Leatherworking, Shoemaking; Spinning, Weaving, Ropemaking, Tailoring; Smithing into Blacksmithing, Gunsmithing, Bladesmithing, Founding, Precious Metalworking; Carpentry into Carpentry, Shipwrighting, Cabinetmaking, Millwrighting; Surgery and medicine into Surgery, Apothecary, Physic. Placements still proposed",
+  "status": "Reviewed by Rex 2026-10-29 ('looks good'): the 40 skills, the placements and the occupations stand as the working set. Later moves go through this JSON; the record of each split is in GOODS.md 3c and 3d.",
   "bands": [
     {
       "key": "novice",

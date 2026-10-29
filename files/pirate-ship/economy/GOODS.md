@@ -524,6 +524,9 @@ which equipment they use**. Gathering a thing and processing it are separate ski
 | Crafting | Apothecary | new (Rex) | simples, salves, compound and chemical medicines; the surgeon's chest stocked |
 | Crafting | Physic (the physician) | new (Rex) | diagnosis, regimen, prescribing; the learned branch (services) |
 
+**Reviewed by Rex, 2026-10-29: the 40 skills, the placements and the occupations stand as the working set.** Later
+moves go through `skill-tree.json`.
+
 **40 skills, 34 new.** The medical split (Rex, 2026-10-28), checked against the record
 (`research-medical-trades.md`): Campbell 1747 opens his medical chapter with five separate "Professors": Physician,
 Surgeon, Chymist, Druggist, Apothecary. So **Surgery and medicine becomes Surgery** (the surgeon's craft: bound seven
@@ -898,3 +901,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-28 | Rex's metal split, checked against the companies and Campbell 1747: Blacksmithing (the old Smithing), Gunsmithing, Bladesmithing, Founding, Precious Metalworking; Fine Metalworking rejected (no evidence); five metal occupations; row 64 pewter | Rex (decision); research session |
 | 2026-10-28 | The wood split, checked against Campbell 1747 and the companies: Shipwrighting, Cabinetmaking, Millwrighting apart from Carpentry; joiner, sawyer, caulker, mast-maker, turner folded in on the evidence; three wood occupations; row 65 boats and ships; build stamp on the dashboard | Rex (decision); research session |
 | 2026-10-28 | The medical split, checked against Campbell 1747 and the companies: Surgery, Apothecary, Physic; service chips for skills that make no goods; physic garden on Farming; Physician, Druggist, Midwife occupations | Rex (decision); research session |
+| 2026-10-29 | Rex reviewed the dashboard: the 40 skills, placements and occupations stand as the working set | Rex |
