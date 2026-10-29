@@ -1,0 +1,144 @@
+{
+  "_about": "Tables for body/MEDICINE.md. Rendered into the doc and body/data.js by build-body-data.py. kind: science | history | model | fiction. mark: rex | proposed | open. Mortality figures are untreated, modern estimates where a period figure does not exist; conf says how firm.",
+  "diseases": {
+    "title": "The disease list (period names in brackets)",
+    "kind": "science", "conf": "medium",
+    "source": "Causes and courses are modern medicine (textbook; MED-* keys in SOURCES.md). Period presence and names from Trapham 1679, Sloane 1707, Woodall 1617, Moyle 1693, the Burnard mortality study, the Hektoen ship-fever article and the Cardiff sea-surgeons piece. Mortality figures are ranges, untreated, confidence as given per row.",
+    "columns": ["Id", "Disease [period name]", "Cause (modern)", "How the sim catches it", "Incubation (days)", "Course (days)", "Untreated death risk", "Lasting harm", "Symptoms (the visible face)", "Period treatment (what the surgeon does)", "What helped, really", "Conf", "Mark"],
+    "rows": [
+      ["scurvy", "Scurvy [the scurvy]", "vitamin C depletion (NUTRITION.md)", "no vitamin C for 6 to 12 weeks", "42 to 84 (from the last fresh food)", "progressive until C is eaten; recovery in 1 to 2 weeks on citrus", "high over months (the great killer of long voyages)", "old wounds reopen; teeth lost", "lassitude first, then bleeding gums, bruises, swollen legs, old scars open", "Woodall (1617) already prescribed lemon juice; Lind's 1747 trial proved oranges and lemons; the Navy issued lemon juice only from 1795", "citrus, fresh greens, sauerkraut; lime juice boiled or stored in copper lost most of its C", "high", "rex"],
+      ["yellow_fever", "Yellow fever [yellow jack, the bleeding fever, Barbados distemper]", "flavivirus, Aedes aegypti mosquito", "wet-season port or coast (ENVIRONMENT vector table); newcomers; a ship from an infected port", "3 to 6", "3 to 4 acute; 15% enter the toxic phase (jaundice, black vomit) after a brief remission", "20 to 50% of toxic-phase cases; 5 to 10% of all cases; far higher in unseasoned Europeans", "lifelong immunity", "sudden fever, headache, back pain; then yellow skin, black vomit, bleeding", "bleeding, purging, mercury, bark; nothing worked; quarantine of ships (Boston 1647)", "survival alone; immunity after", "medium", "proposed"],
+      ["malaria_vivax", "Malaria, tertian [ague, intermittent fever]", "Plasmodium vivax, Anopheles mosquito", "swampy coasts, river mouths, wet season", "10 to 20 (longer in temperate strains)", "fever every 2nd day for 2 to 4 weeks; relapses from the liver for years", "low (under 2%) but repeated attacks", "relapses; anaemia; enlarged spleen", "shaking chills, burning fever, sweats on a two-day cycle", "Peruvian bark (cinchona) from the 1650s in London (Talbor 1672); bleeding and purging otherwise", "cinchona bark really worked (quinine)", "high", "proposed"],
+      ["malaria_falciparum", "Malaria, malignant [the burning fever, quotidian]", "Plasmodium falciparum, Anopheles", "West African coast, the Guinea trade, swampy Caribbean coasts", "7 to 14", "irregular fever; cerebral malaria within days", "15 to 30% untreated in the unexposed; survivors gain partial immunity", "anaemia; after cerebral malaria, lasting weakness", "irregular high fever, confusion, coma", "bark, bleeding", "cinchona bark", "medium", "proposed"],
+      ["dysentery", "Dysentery [the bloody flux]", "Shigella (bacillary) or Entamoeba (amoebic); faecal contamination of water and food", "foul water casks, filth below decks, a crowded ship, a dirty port", "1 to 7", "7 to 14 bacillary; weeks amoebic", "5 to 15% bacillary without fluids; amoebic 1 to 5% (liver abscess)", "weakness for weeks; amoebic liver abscess", "bloody stools, cramps, fever, rapid dehydration", "opium (laudanum, Sydenham), purging first then astringents, ipecacuanha for the amoebic kind (known from 1680s)", "clean water, fluids and salt; ipecacuanha for amoebic", "high", "proposed"],
+      ["typhus", "Typhus [ship fever, gaol fever, spotted fever]", "Rickettsia prowazekii, the body louse", "lice: crowded unwashed crew, prisoners taken aboard, a long cold voyage", "7 to 14", "14 to 21", "10 to 40% (up to 60% in epidemics); mortality rises with age", "weakness for weeks; Brill-Zinsser recurrence years later", "high fever, headache, rash on the trunk, stupor; 'the Armada died of it'", "bleeding, blistering, bark; the cause (lice) unknown; cleanliness and airing the ship helped by accident", "delousing, washing, fresh clothes", "high", "proposed"],
+      ["typhoid", "Typhoid [slow nervous fever, putrid fever]", "Salmonella Typhi, faecal contamination of water and food", "the same filth as dysentery; a carrier in the galley", "7 to 14", "21 to 28", "10 to 20%", "intestinal haemorrhage; relapse in 10%", "stepladder fever over a week, rose spots, delirium, 'coated tongue'", "bleeding, purging, bark", "clean water, nursing", "high", "proposed"],
+      ["smallpox", "Smallpox [the small pox]", "Variola virus, person to person", "an infected person aboard or in port; epidemics every few years", "10 to 14", "21 to 28", "20 to 30% (variola major); near zero in the immune (survivors, and inoculated after 1721)", "pitted scars; blindness in some", "fever, then the pustules over face and arms", "isolation; inoculation reached England from 1721 (Lady Mary Wortley Montagu), Boston 1721 (Boylston)", "survivor immunity; inoculation", "high", "proposed"],
+      ["influenza", "Influenza [the epidemical catarrh]", "influenza virus, droplet", "crowding; port epidemics", "1 to 3", "5 to 10", "1 to 2% (higher with chest infection after)", "none usually", "fever, cough, aches; the whole ship down at once", "sweating, bleeding, warm drinks", "rest", "high", "proposed"],
+      ["consumption", "Tuberculosis [consumption, phthisic]", "Mycobacterium tuberculosis, droplet; chronic", "long close contact below decks; poor diet", "months to years", "years", "about 50% within 5 years when active", "progressive loss of weight and wind", "cough with blood, wasting, night sweats, pallor", "sea air (the period's own advice), milk diet, bleeding", "nothing then; rest and food slowed it", "high", "proposed"],
+      ["beriberi", "Beriberi [the dropsy of the legs, in Asian waters]", "thiamine (B1) deficiency (NUTRITION.md)", "polished rice or pure biscuit-and-rum diet for 3 to 6 weeks", "21 to 42", "progressive; cardiac death possible in 3 weeks of total lack", "high if the diet is not changed", "nerve damage if long", "swollen legs, weak legs, breathlessness, racing heart", "unknown to the period; dropsy was purged", "thiamine: pease, oatmeal, pork, whole grain", "medium", "proposed"],
+      ["pellagra", "Pellagra [not named in the period]", "niacin deficiency (NUTRITION.md)", "a maize-only diet for months (coast provisions); not alkali-treated", "60 to 180", "months", "moderate over years", "dermatitis scars; dementia if long", "the 4 Ds: dermatitis on sun-exposed skin, diarrhoea, dementia, death", "unknown; first described 1735 in Spain", "meat, fish, pease, nixtamalised maize", "medium", "proposed"],
+      ["dry_gripes", "Lead poisoning [the dry gripes, West India dry belly-ache]", "lead from still worms and pewter; rum, cider", "heavy rum or cider drinking from lead-worm stills over months", "30 to 90", "weeks; recurs while drinking", "low directly; palsy disables", "wrist drop (palsy), gut pain, lasting nerve damage", "colic without diarrhoea, constipation, wrist drop", "Cadwalader 1745 described it; purges; the cause (lead) shown by Franklin later", "stop the rum", "medium", "proposed"],
+      ["yaws", "Yaws [the yaws]", "Treponema pallidum pertenue, skin contact; tropical", "skin contact in crowded tropical quarters; children mostly", "9 to 90", "months to years in stages", "very low", "bone and skin deformity in late stage", "the raspberry 'mother yaw', then skin sores, then bone pain", "treated like the pox (mercury, sweating); African inoculation practice suppressed by planters (Paugh)", "later, one shot of penicillin; then, nothing", "medium", "proposed"],
+      ["pox", "Syphilis and gonorrhoea [the pox, the French disease; the clap]", "Treponema pallidum; Neisseria gonorrhoeae; sexual contact", "the brothel, the port", "21 (syphilis), 2 to 7 (clap)", "syphilis in stages over years; clap 2 to 4 weeks", "syphilis: about a third progress to late disease over decades", "late syphilis: madness, heart, bone; clap: sterility, joint pain", "chancre, then rash and fever; years later the tertiary signs; clap: burning, discharge", "mercury (salivation to the point of poisoning), guaiacum wood, sweating tubs", "nothing effective; mercury partly suppressed signs at great cost", "high", "proposed"],
+      ["hookworm", "Hookworm [not named; 'the cachexia']", "Necator, Ancylostoma; larvae enter bare feet from contaminated soil", "bare feet on plantation or camp soil in the tropics", "40 to 60 to egg-laying", "chronic, years", "low; anaemia disables", "chronic anaemia, weakness", "pallor, breathlessness, pica, swollen belly", "unknown; iron 'steel wine' for pallor by luck", "shoes, latrines; iron", "medium", "proposed"],
+      ["worms", "Intestinal worms [the worms]", "Ascaris, tapeworm; faecal contamination, undercooked pork", "dirty food and water; salt pork badly cured", "14 to 60", "chronic", "very low", "loss of nutrients", "passing worms; belly pain; a child's swollen belly", "wormseed, purges; Woodall lists vermifuges", "purges did pass them", "medium", "proposed"],
+      ["tetanus", "Tetanus [lockjaw]", "Clostridium tetani in soil and manure, through a deep wound", "a deep dirty wound (a nail, a splinter, a bayonet)", "3 to 21", "14 to 28", "50 to 90% before antitoxin", "none if survived", "jaw stiff, then arching spasms", "opium, warm baths; usually fatal", "nothing then", "high", "proposed"],
+      ["gangrene", "Gas gangrene and wound sepsis [mortification, the gangrene]", "Clostridium perfringens and others in a crushed or dirty wound", "an untreated gunshot or crush wound, foul dressings", "1 to 4", "days", "near certain untreated; amputation above it the only cure", "a limb lost", "swelling, crackling skin, black tissue, foul smell, then fever and death", "amputation (over half died of it in the 18th century: Bell); cautery", "early amputation", "high", "proposed"],
+      ["heat_stroke", "Heat stroke [a stroke of the sun, calenture]", "core temperature over 40 C with brain signs (PHYSIOLOGY.md)", "heavy work in the noon heat without water", "0", "1 to 3", "30 to 50% without cooling", "lasting weakness in some", "collapse, hot dry skin, raving", "cooling, bleeding; 'calenture' was thought a madness that made men leap into the sea", "shade, water, cooling", "high", "proposed"],
+      ["seasoning", "The seasoning [seasoning fever]", "a first bout of the local fevers (yellow fever, malaria) in a newcomer", "the first wet season in the tropics for a European", "as the fevers above", "as the fevers above", "a third of newcomers died in their first years in Jamaica by period estimates (Burnard; confidence low on the exact fraction)", "immunity to what was survived", "'He has not had his seasoning yet' (dialogue); the newcomer who sickens in his first summer", "the same as the fevers", "survival", "low", "proposed"]
+    ]
+  },
+  "wounds": {
+    "title": "Wound kinds, what each does, and how long it heals",
+    "kind": "science", "conf": "medium",
+    "source": "Healing phases: hemostasis at once, inflammation 1 to 4 days, proliferation 4 to 21 days, remodelling 21 days to a year (MED-HEAL). Period handling from Woodall and Moyle. Infection and mortality ranges are the keeper's reading of the sources, medium confidence.",
+    "columns": ["Kind", "Typical cause", "Bleeding class (see bleeding table)", "Infection chance untreated", "Heals in (days, clean)", "What it dips while open (per COMBAT 4a hit-location rule)", "Period treatment", "Visible face", "Mark"],
+    "rows": [
+      ["Cut (incised)", "cutlass, knife, broken glass", "I to II", "10 to 20%", "7 to 14", "the limb's Dexterity and Strength x0.8 to x0.5 by depth", "wash, dry lint, stitch or tape, bandage; a splint if deep", "a bandage in the portrait; favours the arm", "proposed"],
+      ["Thrust (penetrating)", "sword, pike, bayonet", "II to IV", "25 to 50% (deep, dirty)", "14 to 30", "the limb x0.5; torso: the Endurance pool drains (bleeding), Constitution", "probe, extract, tent the wound to drain, bandage; the chest or belly usually fatal", "pale, short of breath", "proposed"],
+      ["Gunshot (musket ball, splinter)", "ball, grapeshot, wood splinters from a hit", "II to IV", "40 to 70% (cloth and bone carried in)", "30 to 60", "limb x0.3; a shattered bone means amputation or a crippled limb", "extract the ball and cloth with forceps, dress; amputate a shattered limb early (Moyle); over half died of amputation", "slung arm; the surgeon's saw heard below", "proposed"],
+      ["Blunt (bruise, fracture)", "a fall from the rigging, a loose gun, a belaying pin", "I (internal bleeding higher)", "5% (closed); 30% (open fracture)", "bruise 7; simple fracture 42; open 60 to 90", "fracture: the limb out of use; Agility x0.5 for a leg", "splint and bandage; a lost leg if the bone pierces", "limps; arm bound to the chest", "proposed"],
+      ["Burn and scald", "the galley, powder flash, a gun bursting", "none, but fluid loss like class II per 15% of body burned", "30 to 60% (large burns)", "7 (superficial) to 60 (deep)", "the burned part x0.5; a face burn dips Eyesight", "oils, egg white and lime water (Woodall), later linseed oil and lime water", "scarred face; wrapped hands", "proposed"],
+      ["Crush (a gun, a cask, a falling yard)", "heavy gear in a seaway", "II to IV internal", "20% (open) ; crush syndrome in a trapped limb", "30 to 90", "limb x0.2; often amputation", "amputation; splints", "a peg leg later (Rex: a peg leg takes Agility)", "proposed"],
+      ["Head blow (concussion)", "a boom, a fall, a club", "I", "5% (open scalp 20%)", "3 to 14 (concussion), skull fracture 60", "the head's attributes: Eyesight, Perception, Hearing, Intuition, Spatial Reasoning x0.6; awareness lost on a bad one (Rex 4a)", "bleeding, trepanning for a depressed fracture", "dazed answers; 'he does not know the day'", "proposed"],
+      ["Amputation (the surgeon's wound)", "the treatment for gangrene, a shattered limb", "III (with tourniquet II)", "20 to 50% sepsis", "30 to 60 (stump)", "the limb gone: its Strength, Dexterity, Reflexes = 0; a leg: Agility x0.5, movement halved (STATS.md: a peg leg takes Agility)", "tourniquet (Petit's screw tourniquet 1718; a stick and cord before), knife and saw, ligatures (Pare's method), the stump dressed; opium and rum for the pain", "the hook, the peg leg", "proposed"]
+    ]
+  },
+  "bleeding": {
+    "title": "Blood loss classes (ATLS teaching values) and what the sim does",
+    "kind": "science", "conf": "high",
+    "source": "ATLS classes of haemorrhagic shock (teaching values; the current manual gives trends). Blood volume about 70 mL/kg (standard). MED-ATLS",
+    "columns": ["Class", "Loss (% of blood volume)", "Loss for a 70 kg man (mL)", "Signs", "Sim: Endurance pool and Constitution", "Death risk per hour untreated", "Mark"],
+    "rows": [
+      ["I", "up to 15", "up to 750", "pulse under 100; little change", "pool x0.95", "0", "proposed"],
+      ["II", "15 to 30", "750 to 1500", "pulse 100 to 120; anxious; pale", "pool x0.8; Constitution x0.9", "1%", "proposed"],
+      ["III", "30 to 40", "1500 to 2000", "pulse 120 to 140; blood pressure falls; confused", "pool x0.5; Wits x0.7; collapse risk per turn", "10%", "proposed"],
+      ["IV", "over 40", "over 2000", "pulse over 140; lethargic; unconscious", "incapacitated; dying (COMBAT 4 wound ladder)", "50%", "proposed"]
+    ]
+  },
+  "pain": {
+    "title": "Pain (0 to 10) and shock",
+    "kind": "model", "conf": "low",
+    "source": "The 0 to 10 numeric rating scale is standard clinical practice; the mapping to game effects is the keeper's model. Period analgesia: laudanum (Sydenham's tincture of opium, 1660s), rum, biting a bullet.",
+    "columns": ["Pain", "Cause examples", "Sim effect", "Relief", "Visible face", "Mark"],
+    "rows": [
+      ["0 to 2", "bruise, small cut", "none", "-", "none", "proposed"],
+      ["3 to 5", "deep cut, sprain, toothache", "sleep quality x0.7; Dexterity x0.9 on that limb; PSYCHOLOGY push to Volatile", "rum (-2 for 4 h, costs alertness), laudanum (-4 for 6 h, costs alertness and habit)", "winces; short temper", "proposed"],
+      ["6 to 8", "fracture, burn, gunshot", "sleep x0.4; the limb x0.5; Nerve check to keep working; Calm pressure", "laudanum", "cannot sleep; asks the surgeon", "proposed"],
+      ["9 to 10", "amputation, crushed limb, gangrene", "cannot act except by Nerve; shock risk", "laudanum, rum, the surgeon's speed", "screams below; the crew goes quiet", "proposed"]
+    ]
+  },
+  "treatments": {
+    "title": "What a surgeon of 1650 to 1730 could do (and whether it worked)",
+    "kind": "history", "conf": "medium",
+    "source": "Woodall, The Surgeon's Mate (1617); Moyle, Chirurgus Marinus (1693); the humoral tradition (bleeding, purging, emetics, sweating); Sydenham (laudanum, bark); Pare's ligature (1564); Petit's tourniquet (1718); inoculation 1721. MED-WOOD, MED-MOYLE, MED-HUM, MED-LIND",
+    "columns": ["Treatment", "Used for", "Really worked?", "Skill needed (STATS Surgery)", "Supplies (GOODS.md)", "Sim effect", "Risk", "Mark"],
+    "rows": [
+      ["Bleeding (venesection, cupping, leeches)", "fevers, inflammation, almost anything", "no; it worsened blood loss and anaemia", "20", "lancet, basin", "a class-I loss; fever course unchanged; Constitution x0.95 for a week", "infection of the cut; fainting", "proposed"],
+      ["Purging and emetics (jalap, senna, antimony, ipecacuanha)", "fevers, the flux, worms", "worms yes; amoebic flux partly (ipecacuanha); fevers no, and it dehydrated", "20", "drugs (row 48, 71, 122)", "worms cleared; dysentery hydration -1 class; nothing on fevers", "dehydration", "proposed"],
+      ["Sweating, blistering, cautery", "the pox, fevers, bleeding wounds", "cautery stopped bleeding (at a cost); the rest no", "30", "fire, cantharides", "bleeding class -1 at a burn wound; pain +3", "burns, infection", "proposed"],
+      ["Mercury (unction, pills, salivation)", "the pox, yaws", "suppressed signs, poisoned the patient", "40", "mercury (row 108)", "pox signs hidden for months; Constitution x0.9; tremor (Dexterity x0.9) after long courses", "lead-like palsy, lost teeth", "proposed"],
+      ["Peruvian bark (cinchona)", "intermittent fevers (malaria)", "yes: quinine", "30 (and the knowledge, GOODS 3f)", "Peruvian bark (row 72)", "malaria course halved, relapse chance x0.5 while taken", "none to speak of", "proposed"],
+      ["Opium (laudanum)", "pain, the flux, sleeplessness", "yes for pain and diarrhoea", "30", "drugs (row 48)", "pain -4 for 6 h; dysentery stools halved; alertness x0.7; habit after 30 days", "habit; overdose", "proposed"],
+      ["Lemon or lime juice, fresh greens", "scurvy", "yes (Woodall 1617 already; proved by Lind 1747)", "10 (the knowledge: GOODS 3f)", "limes, oranges (row 77), lime juice (row 18)", "vitamin C restored: NUTRITION.md", "none", "rex"],
+      ["Washing wounds, dry lint, bandage, stitching", "cuts", "yes, partly (cleanliness mattered though nobody knew why)", "20", "lint, linen, needle, thread (row 47)", "infection chance x0.5; healing clock starts", "none", "proposed"],
+      ["Extracting balls and splinters", "gunshot", "yes if done early", "40", "forceps, probe", "infection chance x0.6 if within a day", "more bleeding", "proposed"],
+      ["Splints and reduction", "fractures, dislocations", "yes", "35", "wood, bandage", "fracture heals in 42 days instead of never", "a badly set limb: lasting Agility or Dexterity cap", "proposed"],
+      ["Tourniquet and ligature", "amputation, a severed vessel", "yes (Pare's ligature; Petit's screw tourniquet 1718)", "50", "cord, needle", "bleeding class -2 during surgery", "none", "proposed"],
+      ["Amputation", "gangrene, a shattered limb", "the only cure for gangrene; over half died of the operation in the 18th century (Bell)", "60", "saw, knife, rum, opium", "removes the limb (wound table); sepsis roll at 20 to 50% by surgeon skill and cleanliness", "death on the table (shock, bleeding), sepsis", "proposed"],
+      ["Trepanning", "depressed skull fracture", "sometimes", "70", "trepan", "head wound death risk x0.6; infection 30%", "death", "proposed"],
+      ["Inoculation (variolation)", "smallpox, from 1721", "yes: about 2% died of the inoculation vs 20 to 30% of the disease", "50 (and the knowledge, after 1721)", "a lancet, a pustule", "immunity after 3 weeks of mild illness", "2% death; spreads smallpox if not isolated", "proposed"],
+      ["Quarantine and airing the ship", "fevers, ship fever", "yes for lice-borne and person-to-person disease; useless against the mosquito", "none (the captain's call)", "-", "contagion chance x0.3 for lice and droplet diseases", "lost days", "proposed"],
+      ["Rum and 'drinking the fever away'", "everything", "no; it dehydrated", "none", "rum", "pain -2; hydration -0.5 L; alertness x0.8", "the dry gripes over months", "proposed"]
+    ]
+  },
+  "hygiene": {
+    "title": "Hygiene as exposure: what filth does to the odds",
+    "kind": "model", "conf": "medium",
+    "source": "Mechanisms are modern (lice carry typhus; faecal water carries dysentery and typhoid; crowding carries smallpox, influenza, consumption). The ship side (swabbing, rats, the cleanliness meter) is PIRATE.md 5a and DUTIES.md; the place side (latrines, wells) is the town keeper's.",
+    "columns": ["Condition (ship or place)", "Raises the chance of", "Multiplier on daily exposure", "What lowers it", "Visible face", "Mark"],
+    "rows": [
+      ["Days unswabbed (PIRATE.md 5a cleanliness)", "dysentery, typhoid, worms", "x1 at 0 days, x2 at 7, x4 at 14", "swabbing the deck (DUTIES)", "the smell; rats seen", "proposed"],
+      ["Rats in the stores", "typhus (fleas, murine), food loss, worms", "x1.5", "rat catching, the cat", "gnawed biscuit", "proposed"],
+      ["Lice (no washing, no clean clothes, prisoners aboard)", "typhus", "x1 clean, x5 lousy", "washing, boiling clothes, shaving heads (the Navy's cure by accident)", "scratching in dialogue", "proposed"],
+      ["Foul water casks (green water, 'the water stinks')", "dysentery, typhoid", "x3", "fresh water, rain catch, beer or grog instead of water", "the cask smell; the cook refuses it", "proposed"],
+      ["Crowding (men per ton)", "smallpox, influenza, consumption, typhus", "x1 at 1 man per 2 tons, x2 at 1 per ton", "a bigger ship, fewer prisoners", "no room to swing a hammock", "proposed"],
+      ["Mosquito exposure (wet season, swampy anchorage, no netting)", "yellow fever, malaria", "x1 dry season at sea, x4 wet season at a swampy port", "anchoring offshore, moving on, the dry season (ENVIRONMENT)", "bitten at night; the port's fever reputation", "proposed"],
+      ["Bare feet on plantation soil", "hookworm", "x3", "shoes", "pale and breathless after a season ashore", "proposed"],
+      ["Salt pork badly cured", "tapeworm, food poisoning", "x2", "the cooper and the cook's skill", "worms passed", "proposed"]
+    ]
+  },
+  "healing": {
+    "title": "Healing clock modifiers",
+    "kind": "model", "conf": "medium",
+    "source": "Wound healing needs protein, vitamin C (collagen) and zinc; scurvy reopens old wounds (Lind, and modern collagen biology); age slows healing; infection resets the clock; rest speeds it. MED-HEAL",
+    "columns": ["Factor", "Multiplier on healing time", "Reads", "Mark"],
+    "rows": [
+      ["Vitamin C reserve under 300 mg (scurvy)", "x3, and healed wounds reopen", "NUTRITION.md", "rex"],
+      ["Protein under 0.8 g/kg/day", "x1.5", "NUTRITION.md", "proposed"],
+      ["Energy balance under -500 kcal/day", "x1.3", "NUTRITION.md", "proposed"],
+      ["Age over 50", "x1.3 (x1.6 over 65)", "PHYSIOLOGY.md ageing", "proposed"],
+      ["Infected", "clock paused; fever; sepsis roll daily", "this file", "proposed"],
+      ["Rest (no duty using the part)", "x0.7", "DUTIES roster", "proposed"],
+      ["Working the wounded part", "x1.5; reopen chance 10%/day", "DUTIES roster", "proposed"],
+      ["Surgeon skill 50+ dressing daily", "x0.8", "STATS.md Surgery", "proposed"],
+      ["Sleep debt over 24 h", "x1.2", "PHYSIOLOGY.md", "proposed"]
+    ]
+  },
+  "immunity": {
+    "title": "Immunity and resistance",
+    "kind": "science", "conf": "high",
+    "source": "Lifelong immunity after yellow fever and smallpox; partial after falciparum malaria; none after dysentery or influenza strains; Constitution as the hidden resistance stat is Rex's (STATS.md).",
+    "columns": ["Disease", "After surviving", "Inoculation", "Constitution effect (model)", "Mark"],
+    "rows": [
+      ["Yellow fever", "lifelong immunity", "none in the period", "each Constitution point over 10: -5% chance of the toxic phase", "proposed"],
+      ["Smallpox", "lifelong immunity", "variolation from 1721", "each point over 10: -3% death risk", "proposed"],
+      ["Malaria (falciparum)", "partial, fades after a year away", "none", "each point: -2% severe", "proposed"],
+      ["Malaria (vivax)", "none; relapses", "none", "relapse chance unchanged", "proposed"],
+      ["Typhus", "mostly immune; late recurrence (Brill-Zinsser)", "none", "each point: -3% death", "proposed"],
+      ["Dysentery, typhoid, influenza", "short or none", "none", "each point: -5% catch chance", "proposed"],
+      ["Scurvy, beriberi, pellagra", "none: they return when the nutrient does not", "-", "none (Rex: nutrition is real)", "rex"]
+    ]
+  }
+}
