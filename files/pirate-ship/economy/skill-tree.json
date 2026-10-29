@@ -38,7 +38,8 @@
     "input": "needs a good from another skill (the chain the economy follows)",
     "gate": "needs another skill at some level to reach the place (Swimming for depth); that skill makes nothing",
     "unsourced": "Rex's addition with no period source found; a design good, not a historical record",
-    "inputAny": "one of several inputs will do (a ropewalk spins its own yarn from raw fibre, or takes a spinner's)"
+    "inputAny": "one of several inputs will do (a ropewalk spins its own yarn from raw fibre, or takes a spinner's)",
+    "inputs": "every listed input is needed (gunpowder takes all three)"
   },
   "groups": [
     {
@@ -289,7 +290,7 @@
           "key": "woodcutting",
           "name": "Woodcutting",
           "existing": false,
-          "covers": "felling, riving and squaring timber; the dyewood camps; tar, pitch and turpentine from the pine woods",
+          "covers": "felling, riving and squaring timber; the dyewood camps; tar, pitch and turpentine from the pine woods; charcoal burning",
           "why": "Logwood, lumber and naval stores all came out of the woods. Tar burning is folded in: the kilns stood in the forest and the same hands worked them (SCN).",
           "items": [
             {
@@ -333,6 +334,13 @@
               "name": "Mahogany",
               "band": "journeyman",
               "note": "choosing, felling and squaring the great logs; 'bulky and relatively light' (MH)"
+            },
+            {
+              "good": 39,
+              "name": "Charcoal",
+              "band": "apprentice",
+              "input": "woodcutting:Lumber (felled)",
+              "note": "the collier's clamp; Rex keeps charcoal burning inside Woodcutting (2026-10-28)"
             }
           ]
         },
@@ -343,6 +351,19 @@
           "covers": "ore, the furnace and the forge that makes bar metal; silver refining",
           "why": "Smelting sits here with the mine, not with the smith: the smith buys bar iron. Nearly all of it is off-map in this period (Spanish silver, Swedish and Bilbao iron).",
           "items": [
+            {
+              "good": 39,
+              "name": "Nitre earth",
+              "band": "novice",
+              "note": "nitrate-bearing earth from dovecotes, stables and caves; the saltpetre-men's raw stuff. Caribbean source open"
+            },
+            {
+              "good": 39,
+              "name": "Sulphur (brimstone)",
+              "band": "apprentice",
+              "offMap": true,
+              "note": "dug from volcanic deposits; Sicily supplied Europe. Nothing in the Caribbean sources (open)"
+            },
             {
               "good": 36,
               "name": "Ore and lead",
@@ -849,6 +870,88 @@
           ]
         },
         {
+          "key": "refining",
+          "name": "Chemical Refining",
+          "existing": false,
+          "covers": "purifying salts and minerals: saltpetre, refined sulphur; reagents",
+          "why": "Rex's skill (2026-10-28) from his notes: the saltpetre-maker was a trade of its own, neither miner nor powder-maker. 'Alchemist' is an occupation label, not this skill (see occupations).",
+          "items": [
+            {
+              "good": 39,
+              "name": "Refined sulphur",
+              "band": "apprentice",
+              "offMap": true,
+              "input": "mining:Sulphur (brimstone)",
+              "note": "melted and skimmed"
+            },
+            {
+              "good": 39,
+              "name": "Saltpetre",
+              "band": "journeyman",
+              "input": "mining:Nitre earth",
+              "note": "leached, boiled and crystallised; the hardest of the three ingredients to get right"
+            },
+            {
+              "good": 48,
+              "name": "Reagents and salts",
+              "band": "expert",
+              "note": "for the apothecary and the dyer; a design tier (open)"
+            }
+          ]
+        },
+        {
+          "key": "powder",
+          "name": "Powder Making",
+          "existing": false,
+          "covers": "the powder mill: mixing, corning and grading gunpowder",
+          "why": "Rex's skill (2026-10-28): the powder-maker was distinct from gunsmith, smith and gunner. No Caribbean powder mill in the sources, so the town imports until it recruits one. Recipes stay abstract: no manufacturing procedure is modelled.",
+          "items": [
+            {
+              "good": 39,
+              "name": "Powder handling and storage",
+              "band": "novice",
+              "note": "keeping it dry (DUTIES: the gunner's duty)"
+            },
+            {
+              "good": 39,
+              "name": "Common powder",
+              "band": "apprentice",
+              "offMap": true,
+              "note": "saltpetre, sulphur and charcoal, all three",
+              "inputs": [
+                "refining:Saltpetre",
+                "refining:Refined sulphur",
+                "woodcutting:Charcoal"
+              ]
+            },
+            {
+              "good": 39,
+              "name": "Graded powder (musket, cannon)",
+              "band": "journeyman",
+              "offMap": true,
+              "input": "powder:Common powder",
+              "note": "corned to grain sizes; 'five Barrels of Powder' taken by Roberts (J)"
+            },
+            {
+              "good": 39,
+              "name": "Fine military powder",
+              "band": "expert",
+              "offMap": true,
+              "input": "powder:Graded powder (musket, cannon)",
+              "note": "a design tier (open)"
+            },
+            {
+              "good": 39,
+              "name": "Masterwork powder",
+              "band": "master",
+              "offMap": true,
+              "unsourced": true,
+              "input": "powder:Fine military powder",
+              "note": "Rex's design tier"
+            }
+          ]
+        },
+        {
           "key": "perfumery",
           "name": "Perfumery",
           "existing": false,
@@ -1198,11 +1301,6 @@
     }
   ],
   "noTree": [
-    {
-      "good": 39,
-      "name": "Gunpowder",
-      "note": "powder mills were a trade of their own in Europe; nothing in the sources makes it in the Caribbean. Imported only, or Smithing master if Rex wants a town to make it"
-    },
     {
       "good": 53,
       "name": "Enslaved people",

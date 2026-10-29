@@ -126,7 +126,7 @@
   main.appendChild(nt);
   document.getElementById('count').textContent = total + ' placements, ' + off + ' off-map, ' + data.noTree.length + ' without a tree';
 
-  function inputsOf(it) { return (it.input ? [it.input] : []).concat(it.inputAny || []); }
+  function inputsOf(it) { return (it.input ? [it.input] : []).concat(it.inputs || [], it.inputAny || []); }
   function up(key, acc) {
     if (acc.has(key)) return acc; acc.add(key);
     const e = byKey.get(key); if (e) for (const k of inputsOf(e.it)) up(k, acc);
@@ -142,7 +142,9 @@
     const e = byKey.get(key); if (!e) return;
     const it = e.it, s = it._skill, b = it._band;
     const inp = it.input ? byKey.get(it.input) : null;
-    const any = (it.inputAny || []).map(k => { const e2 = byKey.get(k); return e2 ? e2.it._skill.name + ': ' + e2.it.name : k; });
+    const label = k => { const e2 = byKey.get(k); return e2 ? e2.it._skill.name + ': ' + e2.it.name : k; };
+    const any = (it.inputAny || []).map(label);
+    const all = (it.inputs || []).map(label);
     const uses = [...byKey.values()].filter(v => inputsOf(v.it).includes(key)).map(v => v.it._skill.name + ': ' + v.it.name);
     document.getElementById('detail').innerHTML =
       '<b>' + it.name + '</b> <span class="muted">(GOODS.md row ' + it.good + ')</span> · ' + s.name + ', ' + b.name + ' ' + b.range
@@ -151,6 +153,7 @@
       + (it.unsourced ? ' · <span class="muted">unsourced (Rex\'s addition)</span>' : '')
       + '<br>' + it.note
       + (inp ? '<br><span class="muted">needs:</span> ' + inp.it._skill.name + ': ' + inp.it.name : (it.input ? '<br><span class="muted">needs:</span> ' + it.input : ''))
+      + (all.length ? '<br><span class="muted">needs all of:</span> ' + all.join(', ') : '')
       + (any.length ? '<br><span class="muted">needs one of:</span> ' + any.join(' or ') : '')
       + (uses.length ? '<br><span class="muted">used by:</span> ' + uses.join('; ') : '');
     const chains = document.getElementById('showChains').checked;
