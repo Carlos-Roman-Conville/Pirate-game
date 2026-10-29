@@ -131,6 +131,16 @@ for control of the town hall."
   open (per character, Rex's).
 - **(open)** When a place turns `ghosted`; whether `ghosted` is its own slot
   state (as recorded for the farm and the butcher shop) or something else.
+- **(Rex, 2026-10-29) Death and transformation** (via the combat keeper; full record in
+  [`../combat/COMBAT.md`](../combat/COMBAT.md) §4e): a character becomes a ghost, or anything else, only after
+  **actual death**, and what they become depends on who did it (Cthulhu cult → fish person, devil cult → demon,
+  chaotic-evil kidnapping → missing, no ghost). A dead party member resurrected through a faction transforms
+  (Atlantean → mecha AI, Ghost → ghost, Free pirates → voodoo zombie, Imperial → angel, Merfolk undecided) and
+  that character's storyline ends. Some characters' own endings transform the people you bring them (the INTJ: no
+  test subjects → she seeks the fish people outside; bodies → her goals satisfied). "The community continues."
+- **(open, Rex's)** Whether the 2026-10-28 ghost rule (places ghosted for losing the pair competition) and this
+  one (people ghosted for dying) coexist, or one replaces the other; and what a character's death or
+  transformation does to their place.
 - **(Rex, 2026-10-28) The goal:** "I'd like it so that there is a route toward a perfectly working town by the end
   but that requires a complicated set of choices. Meaning you can't recruit everyone but who you choose to develop
   can help you get there."
@@ -294,3 +304,4 @@ abandoning it); whether it's a slot is open.
 | 2026-10-28 | `port.align` = mean of developed institutions' positions (via the balance keeper) | Rex |
 | 2026-10-28 | Decided: the ghost rule (neither → both ghosted, one → it develops and the rival ghosts, both → both develop) applies to all eight pairs; the duel stays food's (via the balance keeper) | Rex |
 | 2026-10-28 | Recruiting alone doesn't develop a place: developed = `recruit(x) AND` x's develop condition (food: the bodies; others open) (via the balance keeper) | Rex |
+| 2026-10-29 | Death and transformation: people become ghosts (or fish people, demons, missing, mecha, zombies, angels) only through actual death, by who did it or which faction resurrects them; whether this coexists with the pair ghost rule is open (via the combat keeper, COMBAT.md §4e) | Rex |
