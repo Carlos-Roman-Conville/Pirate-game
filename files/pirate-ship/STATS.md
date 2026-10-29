@@ -73,7 +73,8 @@ like the type is Rex's call.
 
 **The functions as attributes (Rex, 2026-10-29).** Eight attributes are the personality functions in combat:
 Eyesight Si, Perception Se, Pattern Recognition Ne, Hearing Fe, Intuition Ni, Spatial Reasoning Ti, Poise Fi,
-Efficiency Te. How each works in a fight (detection, aiming, poise damage and flinch levels) is in
+Efficiency Te. In a fight, **Endurance is the pool of points and Efficiency is how many each action spends** (Rex,
+2026-10-29). How each works in a fight (detection, aiming, poise damage and flinch levels) is in
 `combat/COMBAT.md` §6 and §6a; here they are character properties, used beyond combat (lookout, the sea, port).
 They gain experience like the rest.
 
@@ -215,4 +216,4 @@ furious with you is a worse surgeon tonight.
 - How the matrix types set the sliders.
 - What the personality type affects beyond the sliders.
 - Assertive ↔ Turbulent: a slider that shifts (as drafted) or fixed like the type.
-- What sets Intuition high or low; what Efficiency governs in a turn (`combat/COMBAT.md` §6a).
+- What sets Intuition high or low; the point costs per action (`combat/COMBAT.md` §6a).

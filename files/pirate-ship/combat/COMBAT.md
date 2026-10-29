@@ -175,11 +175,12 @@ whether what you intend happens.
   or a slight shift of when the unit's next turn comes: it waits one, two or three more units' turns before it
   goes. The heavy end is losing the whole turn, up to a full round where every unit on the board goes before it
   does. "In general, not as a rule": the ladder is the shape, not fixed steps.
-- **(Rex, 2026-10-29)** **Te → Efficiency** completes the eight. What Efficiency touches in a turn (action
-  points, movement cost, reload, recovery after an attack) is open; **(keeper)** it is the natural stat half of
-  the duel's "speed", beside Reflexes.
+- **(Rex, 2026-10-29)** **Te → Efficiency** completes the eight.
+- **(Rex, 2026-10-29)** **Endurance is the pool of points you have; Efficiency is how many points each action
+  spends per turn.** So a fight runs on a stamina pool (Endurance) drawn down by actions whose cost Efficiency
+  sets. **(keeper)** This makes Efficiency, beside Reflexes, the stat half of the duel's "speed".
 - **(open)** What Intuition is set by. Which strikes do poise damage, and how much Poise resists which flinch
-  level. What Efficiency governs in a turn.
+  level. The point costs themselves (move, strike, reload, prepared shot) and how the pool recovers.
 
 ## 7. Preparation and travel
 
@@ -213,8 +214,8 @@ whether what you intend happens.
 3. Actions per turn; what a prepared shot costs.
 4. Targeting: automatic parts, called shots, or both.
 5. Death for the player's crew: the wound ladder, or permanent death, or never.
-6. What sets Intuition; which strikes do poise damage and how Poise maps to flinch levels; what Efficiency
-   governs in a turn (Te → Efficiency decided 2026-10-29).
+6. What sets Intuition; which strikes do poise damage and how Poise maps to flinch levels; the point costs per
+   action and how the Endurance pool recovers (Te → Efficiency, and pool vs spend, decided 2026-10-29).
 7. Light and elevation as map properties (ChatGPT) or stats.
 8. Grid shape (square proposed); the team limit and what unlocks more units; the enemy's unit count; how the
    small scale converts to the tactical scale.
@@ -234,3 +235,4 @@ whether what you intend happens.
 | 2026-10-29 | 4-unit limit dropped for now; ammo and powder kinds integral to prep; Intuition (around corners) and sound (materials × terrain, Hearing); skill = intent happens more often; the functions as combat attributes (Si Eyesight, Se Perception, Ne Pattern Recognition, Fe Hearing, Ni Intuition, Ti Spatial Reasoning/aiming, Fi Poise/flinch) | Rex |
 | 2026-10-29 | Attributes live in `STATS.md`, their battle function here; flinch has levels, from a stat dip or a delayed turn up to a full round lost | Rex |
 | 2026-10-29 | Te → Efficiency: actions with minimal wasted time and effort; the eight functions now all have an attribute | Rex |
+| 2026-10-29 | Endurance = the pool of points; Efficiency = points spent per action each turn | Rex |
