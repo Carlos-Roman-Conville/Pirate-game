@@ -2440,7 +2440,7 @@
     ]
   },
   "regions": {
-    "note": "REGIONS.md: the four expansions confirmed by Rex 2026-10-29; tier is the proposed escalation order (1 easiest, 4 hardest), each raising the level cap",
+    "note": "REGIONS.md: the four expansions and their order confirmed by Rex 2026-10-29; tier is the escalation (1 easiest, 4 hardest), each raising the level cap",
     "list": [
       {
         "id": "caribbean",

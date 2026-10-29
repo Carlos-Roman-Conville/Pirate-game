@@ -149,7 +149,7 @@ escalation. The base game has a level cap; each expansion raises it, so encounte
 never a low thing at a high level (no level-65 rat). Levelling is slow and hard by design: playing well means
 recruiting the pre-built experts, not grinding characters up yourself.
 
-**What each region's advantage is, from the record (source), and the order it gives (proposed).** The economy can
+**What each region's advantage is, from the record (source), and the order it gives (Rex confirmed the order 2026-10-29).** The economy can
 only speak to metals, tech, wealth and ships; creatures are the story's and the art's to add on top.
 
 | Order | Region | Its advantage in the record | What it leans on (proposed) | Where the truth is stretched |
@@ -170,9 +170,8 @@ a Master; what he lacks is the wootz recipe and the crucible. The cap rise is wh
 
 ## Open for Rex
 
-1. Confirmed, 2026-10-29: the four expansions. The escalation order (Barbary, Malacca, Indian Ocean, East China Sea)
-   is proposed from each region's advantage in the record; Rex to confirm or reorder. Barbary's economy of captives
-   waits on the slave-trade decision.
+1. Confirmed, 2026-10-29: the four expansions and their order, Barbary, Malacca, Indian Ocean, East China Sea,
+   easiest to hardest. Barbary's economy of captives waits on the slave-trade decision.
 2. Which items leak: the lists above are proposals; Rex said "select items".
 3. Whether porcelain making becomes a skill of its own (the one craft with no Caribbean neighbour) or a Founding
    or Cabinetmaking recipe set.
@@ -184,3 +183,4 @@ a Master; what he lacks is the wootz recipe and the crucible. The cap rise is wh
 |---|---|---|
 | 2026-10-29 | Created: the three tests, verdicts on ten candidate regions (four pass), what stays in each, what may leak, how the data keeps them apart | research session, at Rex's request |
 | 2026-10-29 | Rex confirmed the four; §5 escalation: his direction (hardest region last, caps rise, slow levelling, recruit experts) and the order proposed from each region's advantage | Rex (direction); research session |
+| 2026-10-29 | Rex confirmed the escalation order: Barbary, Malacca, Indian Ocean, East China Sea | Rex |

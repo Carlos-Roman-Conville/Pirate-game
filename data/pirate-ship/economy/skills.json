@@ -34,7 +34,7 @@
   ],
   "rule": "Every recipe needs materials + equipment + a minimum skill band (Rex, 2026-10-28). Skill never creates a material: a master spinner cannot spin silk without silk. No skill or recipe is ever manifested by levelling: each is learned a real way (a book, a blueprint, a recipe, a teacher). Skill level sets speed, quality and success, and some items need a level besides (Rex, 2026-10-29).",
   "regions": {
-    "note": "REGIONS.md: the four expansions confirmed by Rex 2026-10-29; tier is the proposed escalation order (1 easiest, 4 hardest), each raising the level cap",
+    "note": "REGIONS.md: the four expansions and their order confirmed by Rex 2026-10-29; tier is the escalation (1 easiest, 4 hardest), each raising the level cap",
     "list": [
       {
         "id": "caribbean",
