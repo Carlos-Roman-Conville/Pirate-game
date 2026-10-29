@@ -132,9 +132,11 @@ intake; the deficiency clocks.
   cargo (`GOODS.md` row 18); knowing to use it is the knowledge rule of `GOODS.md` §3f.
 - **[model] (proposed)** A meal is a list of (good, grams); the engine sums the profile. Cooking changes
   it: boiling leaches half the vitamin C and some potassium into the water (kept if the broth is drunk);
-  salt meat soaked a day loses a third of its sodium; biscuit does not change. Spoilage: each good's
-  "keeps" clock from `GOODS.md`; a spoiled good gives half its energy and a food-poisoning roll
-  (`MEDICINE.md` §6).
+  salt meat soaked a day loses a third of its sodium; biscuit does not change. Spoilage (fixed after the
+  audit): each good's "keeps" clock from `GOODS.md`; a spoiled good keeps its energy and protein (mould and
+  rancidity waste little of either), loses its remaining vitamins (×0.5 per spoilage stage), carries a
+  food-poisoning roll (`MEDICINE.md` §6), and may be refused (satiation unfilled, mood push) unless the
+  crew is hungry; only a good gone to rot (the last stage) is thrown over the side and counts for nothing.
 - **Visible face:** the galley menu the cook names; the hold's stores count; "biscuit and salt horse again";
   a crew mate who hoards oranges.
 - **Mark:** **(proposed)**, every number a belt data task to verify; the scurvy mechanism **(Rex)**.
@@ -194,14 +196,14 @@ intake; the deficiency clocks.
 ## 5. Deficiency clocks
 
 <!-- table:nutrition.depletion -->
-*Deficiency clocks (the reserve model)* (model; confidence medium; source: Each nutrient is a pool filled by intake and drained by a daily use; signs begin when the pool crosses its threshold. Vitamin C: pool 1500 mg, use about 3% of the pool a day (so about 40 mg at full, falling), signs under 300 mg: about 42 to 84 days from the last fresh food, matching the historical 6 to 12 weeks (NUT-SCURVY). The other clocks are set to match the medical ranges in the nutrients table.)
+*Deficiency clocks (the reserve model)* (model; confidence medium; source: Each nutrient is a pool filled by intake and drained by a daily use; signs begin when the pool crosses its threshold, on the day the formula says, never on a separate timer. Vitamin C: pool 1500 mg, use about 3% of the pool a day (about 45 mg at full, falling; floor 10 mg), signs under 300 mg: day 53 from a 1,500 mg start, and 42 to 84 days across the realistic starting pools, matching the historical 6 to 12 weeks (NUT-SCURVY). The other clocks are set to match the medical ranges in the nutrients table.)
 
 | Nutrient | Pool full | Daily use | Signs below | Stage 1 face | Stage 2 face | Stage 3 face | Recovery on full intake | Mark |
 |---|---|---|---|---|---|---|---|---|
-| Vitamin C | 1,500 mg | 3% of pool (min 10 mg) | 300 mg | lassitude, low mood (day 40 to 60) | bleeding gums, bruises, aching legs (day 60 to 90) | old wounds open, teeth loose, swollen legs, death (day 90+) | days to feel better; 2 to 4 weeks to heal | rex (scurvy real), proposed (clock) |
+| Vitamin C | 1,500 mg (range 1,200 to 2,500 by prior diet) | 3% of pool (min 10 mg) | 300 mg | lassitude, low mood (the formula: pool x 0.97^n reaches 500 mg on day 36 from a 1,500 mg start) | bleeding gums, bruises, aching legs (300 mg crossed on day 53 from 1,500 mg; day 46 from 1,200; day 70 from 2,500: the 42 to 84 day range is the formula's output over the pool range, not a separate timer) | old wounds open, teeth loose, swollen legs, death risk (under 100 mg: day 85 from 1,500 mg) | days to feel better; 2 to 4 weeks to heal | rex (scurvy real), proposed (clock) |
 | Thiamin | 30 mg | 1.2 mg | 8 mg | irritable, tired (week 3) | weak legs, swollen ankles (week 5) | heart failure (week 6+) | 1 week | proposed |
 | Niacin | a tryptophan buffer worth 90 days | 16 mg NE | 20 days left | rash on the hands and neck in sun (month 2) | diarrhoea (month 3) | confusion (month 4+) | 2 weeks | proposed |
-| Vitamin A | 500 mg (liver) | 0.9 mg | 50 mg | night blindness (month 6) | dry eyes, infections (month 9) | blindness (month 12+) | weeks | proposed |
+| Vitamin A | 500,000 mcg RAE (500 mg retinol in the liver, a well-fed adult) | 900 mcg RAE | 50,000 mcg RAE | night blindness (month 12 to 18 at zero intake; sooner on a part ration) | dry eyes, infections | blindness | weeks | proposed |
 | Iron | 1,000 mg (men), 300 (women) | 1 mg; +1 per menstrual day; +250 per litre of blood lost | 150 mg | tired, pale (month 3) | breathless on the rigging (month 5) | heart strain (month 8+) | months | proposed |
 | Sodium | a 3-day buffer | 1.5 g + 1 g per litre of sweat | 1 g | cramps in heat | confusion | collapse | hours | proposed |
 | Water | - | PHYSIOLOGY | 2% of body mass | thirst | dizziness | delirium | hours | **Rex** |
@@ -281,6 +283,13 @@ intake; the deficiency clocks.
 3. Boosts beyond the real ones (the table's fiction rows), and whether rum gives Dutch courage.
 4. Habit (rum, laudanum, tobacco) as a system: here, `PSYCHOLOGY.md`, or not at all.
 5. Every food number is a belt verification task against FoodData Central before tuning.
+6. **(proposed, outside AI, audit 2026-10-29)** The audit lists what §1 leaves out: vitamins E, K, B2,
+   B5, B6, B7, B9 (folate) and B12; magnesium, phosphorus, selenium, copper; essential fatty acids;
+   absorption and bioavailability (iron from meat vs pease, niacin from alkali-treated maize); protein
+   quality; and the split of fullness, appetite, hunger and energy sufficiency into separate states. Folate
+   and B12 would let anaemia emerge from diet as scurvy does from vitamin C. The keeper agrees these are
+   the honest next rows if Rex wants "the rest of what a body needs" taken to the full list; each is one
+   row in `nutrients` and one column per food, so the structure does not change. Open for Rex: how far.
 
 ## Sources
 

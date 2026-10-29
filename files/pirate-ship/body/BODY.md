@@ -78,20 +78,20 @@ discovered ones are tracked as named characters with daily summaries; the rest a
 
 | Output | Formula (each factor 1.0 when healthy) | Inputs from | Mark |
 |---|---|---|---|
-| Strength_today(limb) | Strength_attr(limb) x muscleFactor(limb) x woundDip(limb) x coldFactor x hydrationFactor(Strength) x capFactor(limb); Strength_attr computed from the limb's groups if Rex picks 'compute' (MUSCULAR 8), else stored | MUSCULAR, MEDICINE, PHYSIOLOGY | proposed |
-| Dexterity_today(limb) | Dexterity_attr(limb) x woundDip(limb) x coldFactor(Dex) x painFactor(limb) x drinkFactor x muscleFatigueCap(limb) | MEDICINE, PHYSIOLOGY, STATS state | proposed |
+| Strength_today(limb) | Strength_attr(limb) x forceAvailable(limb) x woundDip(limb) x coldFactor x hydrationFactor(Strength) x capFactor(limb). One pathway per impairment: forceAvailable carries muscle fatigue and muscle condition (MUSCULAR, strains); woundDip carries MEDICINE wounds (cuts, fractures, gunshot) and never also sets a muscle's condition; a wound to a limb counts once. Strength_attr computed from the limb's groups at full rest if Rex picks 'compute' (MUSCULAR 8), else stored | MUSCULAR, MEDICINE, PHYSIOLOGY | proposed |
+| Dexterity_today(limb) | Dexterity_attr(limb) x woundDip(limb) x coldFactor(Dex) x painFactor(limb) x drinkFactor x muscleFatigueCap(limb). painFactor is pain's own pathway (coordination); the injury itself reaches Dexterity only through woundDip | MEDICINE, PHYSIOLOGY, STATS state | proposed |
 | Reflexes_today(limb) | Reflexes_attr(limb) x alertness x drinkFactor x woundDip(limb) x coldFactor | PHYSIOLOGY, MEDICINE | proposed |
 | Movement (tiles) | MUSCULAR 8 movement row: the weaker leg limits; x alertness x heatState x load | MUSCULAR, PHYSIOLOGY | proposed (outside AI shape), proposed (formula) |
 | Endurance pool ceiling | Endurance_attr x (aerobic_today / 40) | PHYSIOLOGY 6 | rex (pool), proposed (formula) |
 | Endurance pool now | ceiling x (1 - 0.5 fatigueDay) x alertness x hydrationFactor x glycogenFactor x feverFactor x bloodFactor x heatFactor | PHYSIOLOGY, NUTRITION, MEDICINE | rex (pool), proposed (formula) |
 | Efficiency | Efficiency_attr (Te): untouched by the body except alertness x (Rex: the spend is Efficiency's; the keeper proposes only that exhaustion makes a character waste motion: x alertness, open) | STATS | rex (attribute), open (the alertness factor) |
 | Constitution_today | Constitution_attr x bloodFactor x nutritionFactor x torsoWoundDip | MEDICINE, NUTRITION | proposed |
-| Agility_today | Agility_attr x legsFactor (min leg condition) x balanceFactor (glute_med, deep_core fatigue) x alertness x drinkFactor x seaLegs | MUSCULAR, PHYSIOLOGY | proposed |
-| Head attributes today (Eyesight Si, Perception Se, Pattern Recognition Ne, Hearing Fe, Intuition Ni, Spatial Reasoning Ti, Wits, Memory, Taste and smell) | attr x alertness x circadian x headWoundDip x feverFactor x (Eyesight: light from the map, COMBAT 6; night blindness from vitamin A) | PHYSIOLOGY, MEDICINE, NUTRITION, the map | rex (the attributes), proposed (factors) |
+| Agility_today | Agility_attr x legsFactor (the worse leg's woundDip) x balanceFactor (glute_med, deep_core forceAvailable) x alertness x drinkFactor x seaLegs | MUSCULAR, PHYSIOLOGY | proposed |
+| Head attributes today (Eyesight Si, Perception Se, Pattern Recognition Ne, Hearing Fe, Intuition Ni, Spatial Reasoning Ti, Wits, Memory, Taste and smell) | attr x alertness x headWoundDip x feverFactor x (Eyesight: light from the map, COMBAT 6; night blindness from vitamin A). alertness already contains the circadian factor (PHYSIOLOGY 3); it is never applied twice | PHYSIOLOGY, MEDICINE, NUTRITION, the map | rex (the attributes), proposed (factors) |
 | Poise (Fi) | Poise_attr x painFactor? (open: Rex's Poise resists flinching from strikes; whether pain feeds it is MEDICINE open 3) | STATS | rex (attribute), open |
 | Nerve | Nerve_attr x alertness x drinkFactor(+) (rum raises Nerve read, NUTRITION boosts: fiction, open) | STATS, NUTRITION | proposed |
-| Work capacity (duties) | min over the duty's activation groups of (force available / force required) x fatigueDay x heatState x alertness | MUSCULAR 3, PHYSIOLOGY | proposed |
-| state (STATS 4) | mood x madness x drink x fatigue x sickness x injury, each mapped to 0.5 to 1.0; computed here once | the crew engine (mood, madness), this file (the rest) | proposed (STATS 4 proposed the shape) |
+| Work capacity (duties) | min over the duty's activation groups of (force available / force required) x (1 - 0.5 fatigueDay) x heatState x alertness; fatigueDay is 0 fresh and 1 exhausted, so the factor falls from 1.0 to 0.5 | MUSCULAR 3, PHYSIOLOGY | proposed |
+| state (STATS 4) | mood x madness x drink only, each mapped to 0.5 to 1.0; computed here once. Fatigue, sickness and injury are NOT in state: they already reach performance through the attributes-today above (one pathway per impairment), so STATS 4's list of six becomes three here, the other three carried by the attribute factor | the crew engine (mood, madness), this file (drink) | proposed (STATS 4 proposed the shape; the split is the keeper's) |
 | Accident chance (a fall, a burn, a cut) | base(place hazard, ENVIRONMENT) x (2 - alertness) x (1 + fatigueDay) x drinkFactor(-) x seaState | ENVIRONMENT, PHYSIOLOGY | proposed |
 | Appearance (the visible face for the art keeper) | build (lean mass, fat mass), scars and missing parts, pallor (blood, anaemia), jaundice, sunburn, sweat, bandages | all | proposed |
 <!-- /table -->
@@ -223,6 +223,64 @@ The dashboard's "Chains" view follows each of these step by step with the tables
 - The gym as a town place: the town keeper; the gym minigame: Rex.
 - Which remedies are goods and knowledge: `../economy/GOODS.md` §1k, §3f.
 
+## 10. The audit of 2026-10-29 (ChatGPT, outside AI): what was fixed, what is proposed, what is Rex's
+
+Rex pasted a systems audit of the family the day it was filed. It is outside AI; its findings are recorded
+here the house way. **Fixed the same day (the keeper agreed they were errors):**
+
+- **Double counting.** One pathway per impairment, written into the capability table (§2): muscle fatigue
+  and strains reach a limb through `forceAvailable`; wounds through `woundDip`; pain through `painFactor`
+  (coordination) only; the `state` multiplier is now mood × madness × drink, since fatigue, sickness and
+  injury already arrive through the attributes-today. Work capacity used `fatigueDay` the wrong way round
+  (a fresh body scored zero); it is `(1 − 0.5·fatigueDay)`. Circadian sat inside `alertness` and was applied
+  again to the head attributes; once now.
+- **Units and time.** MET costs are kcal/kg/h against the character's own resting rate, not RMR × MET
+  (`PHYSIOLOGY.md` §1); Banister loads are normalised and the clamp calibrated (§2); the 3CC fatigue
+  equations integrate in seconds with the closed form for the night (`MUSCULAR.md` §4); vitamin A's pool
+  and need are both in mcg RAE; the scurvy stage days are the formula's output (day 53 from a 1,500 mg
+  pool), not a second timer.
+- **Biology and history.** Epidemic typhus is louse-borne; the rat flea carries murine typhus, now its own
+  row. Syphilis and gonorrhoea are two rows. The seasoning is an immunity state, not a disease. Heat stroke
+  may still sweat (exertional). Immersion times carry their variance. A spoiled food keeps its energy and
+  loses its vitamins instead of "half its energy". Overtraining no longer zeroes a day's adaptation;
+  conversion scales with rest and carries over.
+- **Disease onset by cause.** Each category now needs its real source present (a mosquito population, a
+  louse, a flea, foul water, a case aboard, a wound, a pool crossing) with its own onset rule, under one
+  shared state interface (`MEDICINE.md` §1); blood loss, shock, infection and sepsis are four processes
+  (§3), bleeding by rate × time.
+- **The build.** Floats render as written (0.00058 no longer rounds to 0.001); the script validates row
+  widths, kinds and marks. The cold-water chart no longer draws "indefinite" as 24 hours.
+
+**Proposed by the audit, recorded, not adopted (Rex's call):**
+
+- **A nervous-system layer** (sensory input → neural processing → motor planning → motor execution →
+  learning) under `PHYSIOLOGY.md` or a `NEUROLOGY.md`, beneath the eight function attributes, so that
+  speed and accuracy come from coordination and practice rather than muscle. The keeper's view: the
+  function attributes and the skills already stand for processing and learned technique by Rex's design
+  (`COMBAT.md` §5, §6a); a physiological layer under them would be new structure, and the per-limb
+  Reflexes attribute is where "motor execution" already lives. Worth a doc if Rex wants the realism; not
+  started.
+- **Homeostasis** (blood glucose, electrolyte regulation, kidney, endocrine, immune, oxygen transport,
+  digestion) as a regulating system instead of independent meters; **tendon capacity, joint range,
+  contraction velocity, bone adaptation** in `MUSCULAR.md`; **the remaining vitamins and minerals,
+  absorption, protein quality, essential fatty acids, and fullness vs appetite vs hunger** in
+  `NUTRITION.md` (listed there, open 6); **organ injuries, respiratory progression, dental and
+  reproductive health, a larger disease catalogue** in `MEDICINE.md`; **learning consolidation,
+  habituation, addiction, trauma, cognitive fatigue, attention, stress adaptation** as further inputs in
+  `PSYCHOLOGY.md`; **adaptive expenditure** in place of the fixed 7,700 kcal/kg; a homeostatic
+  sleep-pressure model in place of the debt table.
+- **A Simulation Laboratory tab** on the dashboard that runs the equations on a persistent character and
+  shows the values evolve. This is engine work, which the brief for this family excluded ("do not implement
+  the simulation engine"); it is the natural next belt unit once Rex keeps the rules, and the JSON is
+  shaped for it.
+- **Three layers** (biological mechanisms → functional capabilities → game systems) named explicitly. The
+  family already has that shape (the subsystems → `BODY.md` §2 → `STATS.md` and `COMBAT.md`); the audit
+  asks for the mechanisms between the first two layers to be complete. That is the list above, and it is
+  Rex's to size.
+
+The audit's scores (architecture 8, physiology 6, musculature 6, nutrition 5, medicine 6, psychology 5,
+integration 5, out of 10) are its own qualitative judgement, recorded as such.
+
 ## Open for Rex (the family's list, gathered)
 
 1. **Named-character mortality** from disease, accident, weather and far-away butterflies (full, protected,
@@ -241,9 +299,16 @@ The dashboard's "Chains" view follows each of these step by step with the tables
 10. **Habit** (rum, laudanum, tobacco) as a system or not.
 11. Every number in the family is a placeholder for the simulator; the facts are sourced in
     `../SOURCES.md`.
+12. **From the audit (§10):** a nervous-system layer; homeostasis; the full nutrient list; the deeper
+    muscular, medical and psychological mechanisms; a simulation laboratory on the dashboard (engine
+    work). How far the realism goes is Rex's; the structure takes each as rows or a doc without change.
+13. `STATS.md` §4's "state" list (mood, madness, drink, fatigue, sickness, injury) is read here as three in
+    `state` and three through the attributes (§2), to count each once; `STATS.md` has no keeper, so the
+    sentence there still says six. Rex's say, or the keeper's one-line edit.
 
 ## Log
 
 | Date | What | Who |
 |---|---|---|
 | 2026-10-29 | File opened; the record, the capabilities, the pool, the tick order, ten chains, states of being, visible faces, levels, the gathered open list; `data/body.json` | keeper |
+| 2026-10-29 | ChatGPT's audit (outside AI) recorded in §10: double counting, units, biology and build errors fixed across the family; its expansions (nervous system, homeostasis, full nutrients, a simulation lab) recorded as proposed for Rex | keeper |

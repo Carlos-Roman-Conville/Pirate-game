@@ -46,13 +46,28 @@ per character a list of `conditions` (id, stage, day, severity), each with its m
   Jamaica never grew by births; 50,000 arrived 1700–1750 and the white population rose by 5,000), the bloody
   flux and ship fever aboard, scurvy on long passages, and the pox in port. Trapham (1679) and Sloane
   (1707) describe the island diseases; Woodall (1617) and Moyle (1693) what a sea surgeon did (MED-*).
-- **[model] Catching it (proposed):** each overnight tick, for each disease d with an exposure source present,
+- **[model] Catching it (proposed; rewritten after the audit of 2026-10-29 so that each disease needs its
+  real cause present):** every disease shares one **state interface** (incubating → ill by stage → resolved
+  or dead, with immunity) but its **onset** runs by its category, and nothing starts without its source:
 
-      p_catch = base_d × exposure_mult (§6) × season_mult (ENVIRONMENT) × (1 − immunity_d)
-                × (1 − 0.05·(Constitution − 10)) × deficiencyMult (NUTRITION: vitamin A or protein low ×1.5)
+  | Category | Needs present | Daily onset chance | Diseases |
+  |---|---|---|---|
+  | Vector-borne | an infected vector population at the place (ENVIRONMENT: mosquito season × place; a port's epidemic state from POPULATION) and bites (nights ashore or at anchor, no netting) | `bites/day × p_infectedVector(place, season) × p_transmit × (1 − immunity)` | yellow fever, malaria (both) |
+  | Louse-borne | lice on the character (the lice state: unwashed days, crowding, prisoners) and an infected case in the group | `p_lousy × contacts × p_caseInGroup × 0.1` | epidemic typhus |
+  | Flea-borne | rats in the stores (the rat meter, DUTIES) | `rat level × 0.002` | murine typhus |
+  | Faecal-oral | foul water or dirty food eaten that day (the water cask's age, the cleanliness meter, a carrier in the galley) | `dose × hygiene_mult (§6) × (1 − immunity)` | dysentery, typhoid, worms |
+  | Droplet and contact | a case aboard or in the scene | `cases × contacts/day × p_transmit (influenza 0.1, smallpox 0.05, consumption 0.001)` | influenza, smallpox, consumption |
+  | Sexual contact | the brothel, a partner with the disease | `p_partnerInfected × p_transmit` | syphilis, gonorrhoea |
+  | Soil and wound | a deep dirty wound (tetanus, gangrene); bare feet on contaminated soil (hookworm) | per wound (§3); `days barefoot × soil load` | tetanus, gangrene, hookworm, yaws (skin contact) |
+  | Deficiency | **no roll**: the condition begins on the day `NUTRITION.md`'s pool crosses its threshold | - | scurvy, beriberi, pellagra, anaemia, night blindness |
+  | Poisoning | the dose (rum from lead-worm stills, months) | cumulative lead load over a threshold | the dry gripes |
+  | Environmental | `PHYSIOLOGY.md`'s thresholds crossed | - | heat stroke, hypothermia |
 
-  then incubation (no signs), course (signs and multipliers), and a daily death roll at the row's untreated
-  risk divided over the course days, scaled by treatment (§5) and nursing (rest, water, food).
+  Constitution modifies **severity and death risk**, not whether the mosquito bites (the immunity table);
+  a vitamin A or protein deficit raises the droplet and faecal-oral chances ×1.5 and worsens every course.
+  Then incubation (no signs), course (signs and multipliers), and a daily death roll at the row's untreated
+  risk divided over the course days, scaled by treatment (§5) and nursing (rest, water, food). The daily
+  rates are model placeholders, not clinical rates.
 
 <!-- table:medicine.diseases -->
 *The disease list (period names in brackets)* (science; confidence medium; source: Causes and courses are modern medicine (textbook; MED-* keys in SOURCES.md). Period presence and names from Trapham 1679, Sloane 1707, Woodall 1617, Moyle 1693, the Burnard mortality study, the Hektoen ship-fever article and the Cardiff sea-surgeons piece. Mortality figures are ranges, untreated, confidence as given per row.)
@@ -73,13 +88,14 @@ per character a list of `conditions` (id, stage, day, severity), each with its m
 | pellagra | Pellagra [not named in the period] | niacin deficiency (NUTRITION.md) | a maize-only diet for months (coast provisions); not alkali-treated | 60 to 180 | months | moderate over years | dermatitis scars; dementia if long | the 4 Ds: dermatitis on sun-exposed skin, diarrhoea, dementia, death | unknown; first described 1735 in Spain | meat, fish, pease, nixtamalised maize | medium | proposed |
 | dry_gripes | Lead poisoning [the dry gripes, West India dry belly-ache] | lead from still worms and pewter; rum, cider | heavy rum or cider drinking from lead-worm stills over months | 30 to 90 | weeks; recurs while drinking | low directly; palsy disables | wrist drop (palsy), gut pain, lasting nerve damage | colic without diarrhoea, constipation, wrist drop | Cadwalader 1745 described it; purges; the cause (lead) shown by Franklin later | stop the rum | medium | proposed |
 | yaws | Yaws [the yaws] | Treponema pallidum pertenue, skin contact; tropical | skin contact in crowded tropical quarters; children mostly | 9 to 90 | months to years in stages | very low | bone and skin deformity in late stage | the raspberry 'mother yaw', then skin sores, then bone pain | treated like the pox (mercury, sweating); African inoculation practice suppressed by planters (Paugh) | later, one shot of penicillin; then, nothing | medium | proposed |
-| pox | Syphilis and gonorrhoea [the pox, the French disease; the clap] | Treponema pallidum; Neisseria gonorrhoeae; sexual contact | the brothel, the port | 21 (syphilis), 2 to 7 (clap) | syphilis in stages over years; clap 2 to 4 weeks | syphilis: about a third progress to late disease over decades | late syphilis: madness, heart, bone; clap: sterility, joint pain | chancre, then rash and fever; years later the tertiary signs; clap: burning, discharge | mercury (salivation to the point of poisoning), guaiacum wood, sweating tubs | nothing effective; mercury partly suppressed signs at great cost | high | proposed |
+| syphilis | Syphilis [the pox, the French disease, the great pox] | Treponema pallidum; sexual contact (and mother to child) | the brothel, the port | 10 to 90 (typically 21) | primary 3 to 6 weeks; secondary months; latent years; tertiary decades later | about a third of the untreated progress to late disease over decades; rarely quick | late syphilis: madness (general paresis), heart (aortitis), bone (gummas), blindness | a painless chancre, then rash, fever and sore throat; years later the tertiary signs | mercury (unction, salivation to the point of poisoning), guaiacum wood, sweating tubs | nothing effective; mercury partly suppressed signs at great cost | high | proposed |
+| gonorrhoea | Gonorrhoea [the clap, the running of the reins] | Neisseria gonorrhoeae; sexual contact | the brothel, the port | 2 to 7 | 2 to 4 weeks acute; chronic if untreated | very low | sterility (both sexes), chronic pelvic pain, joint infection, stricture | burning, discharge; often silent in women | injections, purges, mercury (confused with the pox: one disease to the period) | nothing effective | high | proposed |
 | hookworm | Hookworm [not named; 'the cachexia'] | Necator, Ancylostoma; larvae enter bare feet from contaminated soil | bare feet on plantation or camp soil in the tropics | 40 to 60 to egg-laying | chronic, years | low; anaemia disables | chronic anaemia, weakness | pallor, breathlessness, pica, swollen belly | unknown; iron 'steel wine' for pallor by luck | shoes, latrines; iron | medium | proposed |
 | worms | Intestinal worms [the worms] | Ascaris, tapeworm; faecal contamination, undercooked pork | dirty food and water; salt pork badly cured | 14 to 60 | chronic | very low | loss of nutrients | passing worms; belly pain; a child's swollen belly | wormseed, purges; Woodall lists vermifuges | purges did pass them | medium | proposed |
 | tetanus | Tetanus [lockjaw] | Clostridium tetani in soil and manure, through a deep wound | a deep dirty wound (a nail, a splinter, a bayonet) | 3 to 21 | 14 to 28 | 50 to 90% before antitoxin | none if survived | jaw stiff, then arching spasms | opium, warm baths; usually fatal | nothing then | high | proposed |
 | gangrene | Gas gangrene and wound sepsis [mortification, the gangrene] | Clostridium perfringens and others in a crushed or dirty wound | an untreated gunshot or crush wound, foul dressings | 1 to 4 | days | near certain untreated; amputation above it the only cure | a limb lost | swelling, crackling skin, black tissue, foul smell, then fever and death | amputation (over half died of it in the 18th century: Bell); cautery | early amputation | high | proposed |
-| heat_stroke | Heat stroke [a stroke of the sun, calenture] | core temperature over 40 C with brain signs (PHYSIOLOGY.md) | heavy work in the noon heat without water | 0 | 1 to 3 | 30 to 50% without cooling | lasting weakness in some | collapse, hot dry skin, raving | cooling, bleeding; 'calenture' was thought a madness that made men leap into the sea | shade, water, cooling | high | proposed |
-| seasoning | The seasoning [seasoning fever] | a first bout of the local fevers (yellow fever, malaria) in a newcomer | the first wet season in the tropics for a European | as the fevers above | as the fevers above | a third of newcomers died in their first years in Jamaica by period estimates (Burnard; confidence low on the exact fraction) | immunity to what was survived | 'He has not had his seasoning yet' (dialogue); the newcomer who sickens in his first summer | the same as the fevers | survival | low | proposed |
+| heat_stroke | Heat stroke [a stroke of the sun, calenture] | core temperature over 40 C with brain signs (PHYSIOLOGY.md); not an infection: onset is PHYSIOLOGY's heat model, this row holds only the condition | heavy work in the noon heat without water | 0 | 1 to 3 | 30 to 50% without cooling | lasting weakness in some | collapse, hot skin (dry in the classic form, still sweating in the exertional form), confusion, raving | cooling, bleeding; 'calenture' was thought a madness that made men leap into the sea | shade, water, cooling | high | proposed |
+| murine_typhus | Murine typhus [not told from ship fever in the period] | Rickettsia typhi, the rat flea | rats in the stores and their fleas; a separate, milder disease from louse-borne epidemic typhus | 6 to 14 | 7 to 14 | under 2% | none usually | fever, headache, rash; milder than ship fever | as for typhus | rat catching | medium | proposed |
 <!-- /table -->
 
 - **Effects (model):** each disease carries multipliers `BODY.md` reads: fevers set `feverFactor` on the
@@ -152,22 +168,27 @@ burns, crushes, with chance raised by fatigue and sleep debt, `PHYSIOLOGY.md`). 
 - **[science]** Blood volume is about 70 mL/kg; the ATLS classes describe how loss shows (MED-ATLS).
   Before antibiotics, septicaemia "almost always killed"; tetanus killed 50–90%; gas gangrene was fatal
   without amputation above it (MED-SEPSIS, medium confidence on the percentages).
-- **[model] (proposed):** in a fight, a class-II+ wound bleeds its class's amount over 10 turns unless
-  bound (an action: `COMBAT.md` decides its cost); after the fight, binding stops it. Blood regenerates about
-  1% of volume a day with food and iron (NUTRITION: protein, iron), slower in anaemia. Infection: one roll at
-  the wound's chance, modified by treatment within the day (§5); if infected, a daily fever and a daily
-  sepsis roll (5% a day, ×0.3 if the wound is opened and drained, ×0 after an amputation that succeeds);
-  sepsis is `dying` with a 30%/day death roll.
+- **[model] (proposed; rewritten after the audit):** four processes, kept apart. **Blood loss:** an open
+  wound bleeds at its class's rate (mL/min, the table) for the minutes elapsed (a combat turn's length is
+  the combat keeper's), the cumulative loss sets the class the body reads, and binding or ligature stops
+  it; blood regenerates about 1% of volume a day with food and iron (NUTRITION), slower in anaemia.
+  **Circulatory shock:** the class-III and IV signs (confusion, collapse) and the Nerve check of §4, driven
+  by loss alone. **Infection:** one roll at the wound's contamination chance (the kind, the cleanliness,
+  treatment within the day, §5); an infected wound runs its own local course (fever, pain, the healing clock
+  paused). **Sepsis:** a separate daily roll from an infected wound (5% a day, ×0.3 if opened and drained,
+  ×0 after an amputation that succeeds), which is `dying` with a 30%/day death roll. The daily rates are
+  game placeholders for the simulator, not clinical rates; the *shape* (loss by rate and time, shock by
+  loss, infection by contamination, sepsis from infection) is the clinical one.
 
 <!-- table:medicine.bleeding -->
-*Blood loss classes (ATLS teaching values) and what the sim does* (science; confidence high; source: ATLS classes of haemorrhagic shock (teaching values; the current manual gives trends). Blood volume about 70 mL/kg (standard). MED-ATLS)
+*Blood loss classes (ATLS teaching values) and what the sim does* (science; confidence high; source: ATLS classes of haemorrhagic shock (teaching values; the current manual gives trends). Blood volume about 70 mL/kg (standard). The class is read from the cumulative loss; the loss grows by the wound's rate x elapsed minutes (a combat turn's length is the combat keeper's), and stops when bound or when the surgeon ligates. The bleeding rates and the death risks are model placeholders, not clinical rates. MED-ATLS)
 
-| Class | Loss (% of blood volume) | Loss for a 70 kg man (mL) | Signs | Sim: Endurance pool and Constitution | Death risk per hour untreated | Mark |
-|---|---|---|---|---|---|---|
-| I | up to 15 | up to 750 | pulse under 100; little change | pool x0.95 | 0 | proposed |
-| II | 15 to 30 | 750 to 1500 | pulse 100 to 120; anxious; pale | pool x0.8; Constitution x0.9 | 1% | proposed |
-| III | 30 to 40 | 1500 to 2000 | pulse 120 to 140; blood pressure falls; confused | pool x0.5; Wits x0.7; collapse risk per turn | 10% | proposed |
-| IV | over 40 | over 2000 | pulse over 140; lethargic; unconscious | incapacitated; dying (COMBAT 4 wound ladder) | 50% | proposed |
+| Class | Loss (% of blood volume) | Loss for a 70 kg man (mL) | Signs | Sim: Endurance pool and Constitution | Model: bleeding rate of an open wound of this class (mL per minute, until bound) | Death risk per hour at this loss, untreated (model placeholder) | Mark |
+|---|---|---|---|---|---|---|---|
+| I | up to 15 | up to 750 | pulse under 100; little change | pool x0.95 | 5 (a cut: stops on its own in 10 to 20 min) | 0 | proposed |
+| II | 15 to 30 | 750 to 1500 | pulse 100 to 120; anxious; pale | pool x0.8; Constitution x0.9 | 30 (a deep thrust) | 1% | proposed |
+| III | 30 to 40 | 1500 to 2000 | pulse 120 to 140; blood pressure falls; confused | pool x0.5; Wits x0.7; collapse risk per turn | 100 (a severed artery or a shattered limb) | 10% | proposed |
+| IV | over 40 | over 2000 | pulse over 140; lethargic; unconscious | incapacitated; dying (COMBAT 4 wound ladder) | 300 (a great vessel) | 50% | proposed |
 <!-- /table -->
 
 - **Effects:** the torso rule (Rex): bleeding drains the Endurance pool and dips Constitution; class III+
@@ -253,7 +274,7 @@ chances and clocks on §1–§4.
 | Condition (ship or place) | Raises the chance of | Multiplier on daily exposure | What lowers it | Visible face | Mark |
 |---|---|---|---|---|---|
 | Days unswabbed (PIRATE.md 5a cleanliness) | dysentery, typhoid, worms | x1 at 0 days, x2 at 7, x4 at 14 | swabbing the deck (DUTIES) | the smell; rats seen | proposed |
-| Rats in the stores | typhus (fleas, murine), food loss, worms | x1.5 | rat catching, the cat | gnawed biscuit | proposed |
+| Rats in the stores | murine typhus (the rat flea; a separate, milder disease from louse-borne ship fever), food loss, worms | x1.5 | rat catching, the cat | gnawed biscuit | proposed |
 | Lice (no washing, no clean clothes, prisoners aboard) | typhus | x1 clean, x5 lousy | washing, boiling clothes, shaving heads (the Navy's cure by accident) | scratching in dialogue | proposed |
 | Foul water casks (green water, 'the water stinks') | dysentery, typhoid | x3 | fresh water, rain catch, beer or grog instead of water | the cask smell; the cook refuses it | proposed |
 | Crowding (men per ton) | smallpox, influenza, consumption, typhus | x1 at 1 man per 2 tons, x2 at 1 per ton | a bigger ship, fewer prisoners | no room to swing a hammock | proposed |
@@ -304,6 +325,7 @@ chances and clocks on §1–§4.
 | Typhus | mostly immune; late recurrence (Brill-Zinsser) | none | each point: -3% death | proposed |
 | Dysentery, typhoid, influenza | short or none | none | each point: -5% catch chance | proposed |
 | Scurvy, beriberi, pellagra | none: they return when the nutrient does not | - | none (Rex: nutrition is real) | **Rex** |
+| The seasoning (a state, not a disease) | a newcomer who has survived his first bouts of the local fevers is 'seasoned': an immunity record, held here, not a row in the disease list. Period estimates put newcomer deaths in Jamaica's first years as high as a third (Burnard; confidence low on the fraction) | - | none; the record is per disease survived | proposed |
 <!-- /table -->
 
 - **[history]** "Seasoning" was the period's word for a newcomer's first bouts of the local fevers; those who
@@ -356,3 +378,4 @@ sea-surgeons note, the Antigua lead study, Paugh on yaws.
 | Date | What | Who |
 |---|---|---|
 | 2026-10-29 | File opened; disease list (20), wounds, bleeding, pain, treatments (16), hygiene, healing, immunity; tables in `data/medicine.json` | keeper |
+| 2026-10-29 | After ChatGPT's audit (outside AI): onset by disease category (a mosquito, a louse, a flea, foul water, a case, a wound, a pool crossing); syphilis and gonorrhoea split; murine typhus its own row (fleas), ship fever lice only; the seasoning moved to the immunity table as a state; bleeding by rate × time; blood loss, shock, infection and sepsis as four processes; heat stroke may still sweat | keeper |

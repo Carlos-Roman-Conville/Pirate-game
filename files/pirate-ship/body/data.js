@@ -78,13 +78,13 @@ window.BODY_DATA = {
    "rows": [
     [
      "Strength_today(limb)",
-     "Strength_attr(limb) x muscleFactor(limb) x woundDip(limb) x coldFactor x hydrationFactor(Strength) x capFactor(limb); Strength_attr computed from the limb's groups if Rex picks 'compute' (MUSCULAR 8), else stored",
+     "Strength_attr(limb) x forceAvailable(limb) x woundDip(limb) x coldFactor x hydrationFactor(Strength) x capFactor(limb). One pathway per impairment: forceAvailable carries muscle fatigue and muscle condition (MUSCULAR, strains); woundDip carries MEDICINE wounds (cuts, fractures, gunshot) and never also sets a muscle's condition; a wound to a limb counts once. Strength_attr computed from the limb's groups at full rest if Rex picks 'compute' (MUSCULAR 8), else stored",
      "MUSCULAR, MEDICINE, PHYSIOLOGY",
      "proposed"
     ],
     [
      "Dexterity_today(limb)",
-     "Dexterity_attr(limb) x woundDip(limb) x coldFactor(Dex) x painFactor(limb) x drinkFactor x muscleFatigueCap(limb)",
+     "Dexterity_attr(limb) x woundDip(limb) x coldFactor(Dex) x painFactor(limb) x drinkFactor x muscleFatigueCap(limb). painFactor is pain's own pathway (coordination); the injury itself reaches Dexterity only through woundDip",
      "MEDICINE, PHYSIOLOGY, STATS state",
      "proposed"
     ],
@@ -126,13 +126,13 @@ window.BODY_DATA = {
     ],
     [
      "Agility_today",
-     "Agility_attr x legsFactor (min leg condition) x balanceFactor (glute_med, deep_core fatigue) x alertness x drinkFactor x seaLegs",
+     "Agility_attr x legsFactor (the worse leg's woundDip) x balanceFactor (glute_med, deep_core forceAvailable) x alertness x drinkFactor x seaLegs",
      "MUSCULAR, PHYSIOLOGY",
      "proposed"
     ],
     [
      "Head attributes today (Eyesight Si, Perception Se, Pattern Recognition Ne, Hearing Fe, Intuition Ni, Spatial Reasoning Ti, Wits, Memory, Taste and smell)",
-     "attr x alertness x circadian x headWoundDip x feverFactor x (Eyesight: light from the map, COMBAT 6; night blindness from vitamin A)",
+     "attr x alertness x headWoundDip x feverFactor x (Eyesight: light from the map, COMBAT 6; night blindness from vitamin A). alertness already contains the circadian factor (PHYSIOLOGY 3); it is never applied twice",
      "PHYSIOLOGY, MEDICINE, NUTRITION, the map",
      "rex (the attributes), proposed (factors)"
     ],
@@ -150,15 +150,15 @@ window.BODY_DATA = {
     ],
     [
      "Work capacity (duties)",
-     "min over the duty's activation groups of (force available / force required) x fatigueDay x heatState x alertness",
+     "min over the duty's activation groups of (force available / force required) x (1 - 0.5 fatigueDay) x heatState x alertness; fatigueDay is 0 fresh and 1 exhausted, so the factor falls from 1.0 to 0.5",
      "MUSCULAR 3, PHYSIOLOGY",
      "proposed"
     ],
     [
      "state (STATS 4)",
-     "mood x madness x drink x fatigue x sickness x injury, each mapped to 0.5 to 1.0; computed here once",
-     "the crew engine (mood, madness), this file (the rest)",
-     "proposed (STATS 4 proposed the shape)"
+     "mood x madness x drink only, each mapped to 0.5 to 1.0; computed here once. Fatigue, sickness and injury are NOT in state: they already reach performance through the attributes-today above (one pathway per impairment), so STATS 4's list of six becomes three here, the other three carried by the attribute factor",
+     "the crew engine (mood, madness), this file (drink)",
+     "proposed (STATS 4 proposed the shape; the split is the keeper's)"
     ],
     [
      "Accident chance (a fall, a burn, a cut)",
@@ -1815,17 +1815,32 @@ window.BODY_DATA = {
      "proposed"
     ],
     [
-     "pox",
-     "Syphilis and gonorrhoea [the pox, the French disease; the clap]",
-     "Treponema pallidum; Neisseria gonorrhoeae; sexual contact",
+     "syphilis",
+     "Syphilis [the pox, the French disease, the great pox]",
+     "Treponema pallidum; sexual contact (and mother to child)",
      "the brothel, the port",
-     "21 (syphilis), 2 to 7 (clap)",
-     "syphilis in stages over years; clap 2 to 4 weeks",
-     "syphilis: about a third progress to late disease over decades",
-     "late syphilis: madness, heart, bone; clap: sterility, joint pain",
-     "chancre, then rash and fever; years later the tertiary signs; clap: burning, discharge",
-     "mercury (salivation to the point of poisoning), guaiacum wood, sweating tubs",
+     "10 to 90 (typically 21)",
+     "primary 3 to 6 weeks; secondary months; latent years; tertiary decades later",
+     "about a third of the untreated progress to late disease over decades; rarely quick",
+     "late syphilis: madness (general paresis), heart (aortitis), bone (gummas), blindness",
+     "a painless chancre, then rash, fever and sore throat; years later the tertiary signs",
+     "mercury (unction, salivation to the point of poisoning), guaiacum wood, sweating tubs",
      "nothing effective; mercury partly suppressed signs at great cost",
+     "high",
+     "proposed"
+    ],
+    [
+     "gonorrhoea",
+     "Gonorrhoea [the clap, the running of the reins]",
+     "Neisseria gonorrhoeae; sexual contact",
+     "the brothel, the port",
+     "2 to 7",
+     "2 to 4 weeks acute; chronic if untreated",
+     "very low",
+     "sterility (both sexes), chronic pelvic pain, joint infection, stricture",
+     "burning, discharge; often silent in women",
+     "injections, purges, mercury (confused with the pox: one disease to the period)",
+     "nothing effective",
      "high",
      "proposed"
     ],
@@ -1892,31 +1907,31 @@ window.BODY_DATA = {
     [
      "heat_stroke",
      "Heat stroke [a stroke of the sun, calenture]",
-     "core temperature over 40 C with brain signs (PHYSIOLOGY.md)",
+     "core temperature over 40 C with brain signs (PHYSIOLOGY.md); not an infection: onset is PHYSIOLOGY's heat model, this row holds only the condition",
      "heavy work in the noon heat without water",
      "0",
      "1 to 3",
      "30 to 50% without cooling",
      "lasting weakness in some",
-     "collapse, hot dry skin, raving",
+     "collapse, hot skin (dry in the classic form, still sweating in the exertional form), confusion, raving",
      "cooling, bleeding; 'calenture' was thought a madness that made men leap into the sea",
      "shade, water, cooling",
      "high",
      "proposed"
     ],
     [
-     "seasoning",
-     "The seasoning [seasoning fever]",
-     "a first bout of the local fevers (yellow fever, malaria) in a newcomer",
-     "the first wet season in the tropics for a European",
-     "as the fevers above",
-     "as the fevers above",
-     "a third of newcomers died in their first years in Jamaica by period estimates (Burnard; confidence low on the exact fraction)",
-     "immunity to what was survived",
-     "'He has not had his seasoning yet' (dialogue); the newcomer who sickens in his first summer",
-     "the same as the fevers",
-     "survival",
-     "low",
+     "murine_typhus",
+     "Murine typhus [not told from ship fever in the period]",
+     "Rickettsia typhi, the rat flea",
+     "rats in the stores and their fleas; a separate, milder disease from louse-borne epidemic typhus",
+     "6 to 14",
+     "7 to 14",
+     "under 2%",
+     "none usually",
+     "fever, headache, rash; milder than ship fever",
+     "as for typhus",
+     "rat catching",
+     "medium",
      "proposed"
     ]
    ]
@@ -2032,14 +2047,15 @@ window.BODY_DATA = {
    "title": "Blood loss classes (ATLS teaching values) and what the sim does",
    "kind": "science",
    "conf": "high",
-   "source": "ATLS classes of haemorrhagic shock (teaching values; the current manual gives trends). Blood volume about 70 mL/kg (standard). MED-ATLS",
+   "source": "ATLS classes of haemorrhagic shock (teaching values; the current manual gives trends). Blood volume about 70 mL/kg (standard). The class is read from the cumulative loss; the loss grows by the wound's rate x elapsed minutes (a combat turn's length is the combat keeper's), and stops when bound or when the surgeon ligates. The bleeding rates and the death risks are model placeholders, not clinical rates. MED-ATLS",
    "columns": [
     "Class",
     "Loss (% of blood volume)",
     "Loss for a 70 kg man (mL)",
     "Signs",
     "Sim: Endurance pool and Constitution",
-    "Death risk per hour untreated",
+    "Model: bleeding rate of an open wound of this class (mL per minute, until bound)",
+    "Death risk per hour at this loss, untreated (model placeholder)",
     "Mark"
    ],
    "rows": [
@@ -2049,6 +2065,7 @@ window.BODY_DATA = {
      "up to 750",
      "pulse under 100; little change",
      "pool x0.95",
+     "5 (a cut: stops on its own in 10 to 20 min)",
      "0",
      "proposed"
     ],
@@ -2058,6 +2075,7 @@ window.BODY_DATA = {
      "750 to 1500",
      "pulse 100 to 120; anxious; pale",
      "pool x0.8; Constitution x0.9",
+     "30 (a deep thrust)",
      "1%",
      "proposed"
     ],
@@ -2067,6 +2085,7 @@ window.BODY_DATA = {
      "1500 to 2000",
      "pulse 120 to 140; blood pressure falls; confused",
      "pool x0.5; Wits x0.7; collapse risk per turn",
+     "100 (a severed artery or a shattered limb)",
      "10%",
      "proposed"
     ],
@@ -2076,6 +2095,7 @@ window.BODY_DATA = {
      "over 2000",
      "pulse over 140; lethargic; unconscious",
      "incapacitated; dying (COMBAT 4 wound ladder)",
+     "300 (a great vessel)",
      "50%",
      "proposed"
     ]
@@ -2331,7 +2351,7 @@ window.BODY_DATA = {
     ],
     [
      "Rats in the stores",
-     "typhus (fleas, murine), food loss, worms",
+     "murine typhus (the rat flea; a separate, milder disease from louse-borne ship fever), food loss, worms",
      "x1.5",
      "rat catching, the cat",
      "gnawed biscuit",
@@ -2516,6 +2536,13 @@ window.BODY_DATA = {
      "-",
      "none (Rex: nutrition is real)",
      "rex"
+    ],
+    [
+     "The seasoning (a state, not a disease)",
+     "a newcomer who has survived his first bouts of the local fevers is 'seasoned': an immunity record, held here, not a row in the disease list. Period estimates put newcomer deaths in Jamaica's first years as high as a third (Burnard; confidence low on the fraction)",
+     "-",
+     "none; the record is per disease survived",
+     "proposed"
     ]
    ]
   }
@@ -3986,7 +4013,7 @@ window.BODY_DATA = {
      "Conversion window",
      "24 to 72",
      "h",
-     "stimulus converts to development only after this rest for the group; converts 0 if the group works hard again inside 24 h (overtraining)",
+     "stimulus converts to development across this window after a hard session; a second hard session inside it does not cancel the first: conversion that night is scaled by min(1, hoursSinceLastHardSession / 48) and unconverted stimulus carries over, so adaptation is continuous and only sustained overload with no rest days (fatigue over 0.6 at the tick) stalls it",
      "proposed"
     ],
     [
@@ -5586,7 +5613,7 @@ window.BODY_DATA = {
    "title": "Deficiency clocks (the reserve model)",
    "kind": "model",
    "conf": "medium",
-   "source": "Each nutrient is a pool filled by intake and drained by a daily use; signs begin when the pool crosses its threshold. Vitamin C: pool 1500 mg, use about 3% of the pool a day (so about 40 mg at full, falling), signs under 300 mg: about 42 to 84 days from the last fresh food, matching the historical 6 to 12 weeks (NUT-SCURVY). The other clocks are set to match the medical ranges in the nutrients table.",
+   "source": "Each nutrient is a pool filled by intake and drained by a daily use; signs begin when the pool crosses its threshold, on the day the formula says, never on a separate timer. Vitamin C: pool 1500 mg, use about 3% of the pool a day (about 45 mg at full, falling; floor 10 mg), signs under 300 mg: day 53 from a 1,500 mg start, and 42 to 84 days across the realistic starting pools, matching the historical 6 to 12 weeks (NUT-SCURVY). The other clocks are set to match the medical ranges in the nutrients table.",
    "columns": [
     "Nutrient",
     "Pool full",
@@ -5601,12 +5628,12 @@ window.BODY_DATA = {
    "rows": [
     [
      "Vitamin C",
-     "1,500 mg",
+     "1,500 mg (range 1,200 to 2,500 by prior diet)",
      "3% of pool (min 10 mg)",
      "300 mg",
-     "lassitude, low mood (day 40 to 60)",
-     "bleeding gums, bruises, aching legs (day 60 to 90)",
-     "old wounds open, teeth loose, swollen legs, death (day 90+)",
+     "lassitude, low mood (the formula: pool x 0.97^n reaches 500 mg on day 36 from a 1,500 mg start)",
+     "bleeding gums, bruises, aching legs (300 mg crossed on day 53 from 1,500 mg; day 46 from 1,200; day 70 from 2,500: the 42 to 84 day range is the formula's output over the pool range, not a separate timer)",
+     "old wounds open, teeth loose, swollen legs, death risk (under 100 mg: day 85 from 1,500 mg)",
      "days to feel better; 2 to 4 weeks to heal",
      "rex (scurvy real), proposed (clock)"
     ],
@@ -5634,12 +5661,12 @@ window.BODY_DATA = {
     ],
     [
      "Vitamin A",
-     "500 mg (liver)",
-     "0.9 mg",
-     "50 mg",
-     "night blindness (month 6)",
-     "dry eyes, infections (month 9)",
-     "blindness (month 12+)",
+     "500,000 mcg RAE (500 mg retinol in the liver, a well-fed adult)",
+     "900 mcg RAE",
+     "50,000 mcg RAE",
+     "night blindness (month 12 to 18 at zero intake; sooner on a part ration)",
+     "dry eyes, infections",
+     "blindness",
      "weeks",
      "proposed"
     ],
@@ -6026,7 +6053,7 @@ window.BODY_DATA = {
      ">= 40.0",
      "heat stroke",
      "collapse; a MEDICINE.md condition; death risk per hour untreated",
-     "falls on deck, hot dry skin, raving",
+     "falls on deck, hot skin (dry in classic heat stroke; a man who collapses at the capstan may still be sweating: exertional heat stroke), confusion or raving",
      "proposed"
     ],
     [
@@ -6077,7 +6104,7 @@ window.BODY_DATA = {
    "title": "Survival in the water (immersion), by water temperature",
    "kind": "science",
    "conf": "medium",
-   "source": "Computational immersion study (PMC11234009): still fresh water 136/113/100 min at 5/2/0 C; static salt water 111/88/80/66 min at 5/2/0/-2 C. Boating-safety charts: under 15 min to exhaustion at 0 C, 1 to 2 h at 10 to 15 C, 2 to 12 h at 15 to 21 C, indefinite above about 26 C. Cold shock (gasp, loss of breathing control) worst at 10 to 15 C; drowning in the first minutes is the main killer. PHY-COLD",
+   "source": "Computational immersion study (PMC11234009): still fresh water 136/113/100 min at 5/2/0 C; static salt water 111/88/80/66 min at 5/2/0/-2 C. Boating-safety charts: under 15 min to exhaustion at 0 C, 1 to 2 h at 10 to 15 C, 2 to 12 h at 15 to 21 C, indefinite above about 26 C. Cold shock (gasp, loss of breathing control) worst at 10 to 15 C; drowning in the first minutes is the main killer. The times are central estimates with wide variance: body fat, clothing, flotation, swimming ability, exhaustion, sea state and whether the man can keep his head up move them by hours either way; the model rolls around them, never reads them as fixed. PHY-COLD",
    "columns": [
     "Water (C)",
     "Time to exhaustion or unconsciousness",

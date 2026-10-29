@@ -121,7 +121,7 @@
     "rows": [
       ["Stimulus per hour of work", "sum over groups of activation% x minutes / 60 x intensity factor", "index", "the activation profile times time; heavy loads count more (intensity = MET/6)", "proposed"],
       ["Overload threshold", 40, "% of the group's max", "below it, work maintains but does not grow the group (endurance only)", "proposed"],
-      ["Conversion window", "24 to 72", "h", "stimulus converts to development only after this rest for the group; converts 0 if the group works hard again inside 24 h (overtraining)", "proposed"],
+      ["Conversion window", "24 to 72", "h", "stimulus converts to development across this window after a hard session; a second hard session inside it does not cancel the first: conversion that night is scaled by min(1, hoursSinceLastHardSession / 48) and unconverted stimulus carries over, so adaptation is continuous and only sustained overload with no rest days (fatigue over 0.6 at the tick) stalls it", "proposed"],
       ["Conversion rate (novice, development under 40)", 0.5, "development per 10 stimulus", "fast beginner gains", "proposed"],
       ["Conversion rate (trained, development 40 to 70)", 0.2, "development per 10 stimulus", "", "proposed"],
       ["Conversion rate (advanced, over 70)", 0.07, "development per 10 stimulus", "the hidden genetic max caps it (STATS.md)", "proposed"],

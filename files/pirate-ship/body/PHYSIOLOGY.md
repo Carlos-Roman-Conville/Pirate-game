@@ -48,8 +48,16 @@ fatigue load (MET-hours).
       RMR_kcal = 10·mass_kg + 6.25·height_cm − 5·age_years + 5   (men)
       RMR_kcal = 10·mass_kg + 6.25·height_cm − 5·age_years − 161 (women)
 
-- **[science] Total expenditure** = RMR × PAL, or, when the day's activities are known, RMR × Σ(MET_i × h_i)/24
-  (confidence high; PHY-FAO, PHY-MET). The period diet made this large: the Navy's 1677 ration gave something
+- **[science] Total expenditure** = RMR × PAL for a day described only by its type (PHY-FAO). When the
+  day's activities are known, each is costed in its own unit: one MET is defined as 1 kcal per kg per hour
+  (3.5 mL O₂/kg/min), so
+
+      kcal_activity = MET_i × h_i × mass_kg × (RMR / (mass_kg × 24))
+
+  where the last factor (about 0.9–1.1) corrects the standard MET reference to this character's measured
+  resting rate, since the compendium's 1 kcal/kg/h overestimates resting cost for heavy or old bodies
+  (PHY-MET; the correction is the compendium's own advice). The day's total is the sum over its hours,
+  sleep included at 0.95 MET. The period diet made this large: the Navy's 1677 ration gave something
   near 5,000 kcal a day when fully issued, beer the largest part of it ([history], PHY-RATION).
 - **[model] Which one the sim uses (proposed):** the activity sum for active characters (their day is known
   from the duty roster), the PAL band for everyone else.
@@ -113,8 +121,13 @@ fatigue load (MET-hours).
       aerobic_today = ceiling(age, sex, genetics) × clamp(0.6 + k1·fitness − k2·fatigue, 0.6, 1.0)
 
   `ceiling` is the hidden genetic max of `STATS.md` Endurance for this character, scaled by the ageing curve
-  (§8). The 42/7 constants are the TrainingPeaks convention, not a universal truth; they are what the
-  simulator tunes.
+  (§8). **Calibration (proposed):** `load_i` is the day's MET-hours above 2 MET divided by 8, so an ordinary
+  sea day scores about 1.0, a hard day 2.0, a sick day 0; with τ 42 and 7 the steady-state sums are then
+  about 42 and 7 for a daily load of 1, so the multiplier is normalised as `k1 = 0.4/42` and `k2 = 0.4/7`
+  (a long run of ordinary days settles the clamp at about 0.6 + 0.4 − 0.4 = 0.6 of ceiling, a run of hard
+  days nearer 1.0 once fatigue decays, a month idle back to 0.6). The clamp's floor 0.6 is the untrained
+  body, its ceiling 1.0 the genetic max; the simulator tunes the three numbers. The 42/7 constants are the
+  TrainingPeaks convention, not a universal truth.
 
 <!-- table:physiology.banister -->
 *Cardiovascular fitness: the fitness-fatigue model constants* (model; confidence medium; source: Banister impulse-response model (Morton, Fitz-Clarke, Banister 1990): performance = base + k1*fitness - k2*fatigue, each an exponentially decaying sum of daily training loads. The 42-day / 7-day constants are the TrainingPeaks CTL/ATL convention, not a universal fit. PHY-BAN)
@@ -215,7 +228,14 @@ acclimatisation days; hydration. **Outputs:** `coreTemp` (°C), `sweatRate` (L/h
       coreTemp += over × drift_c − cooling(wind, shade, rest, drinking)
       sweatRate = clamp(0.3 + 0.25·MET + 0.1·over, 0.3, 2.5) L/h   →   hydration (§5), salt (NUTRITION)
 
-  WBGT itself is estimated in `../world/ENVIRONMENT.md` from temperature, humidity and sun.
+  WBGT itself is estimated in `../world/ENVIRONMENT.md` from temperature, humidity and sun. **Why a
+  drift rule and not the full heat balance (keeper's note):** the balance S = M − W − (R + C + E + K) is the
+  truth, and the drift rule is its one-line shadow: `over` stands for the gap between heat produced
+  (M, from the MET) and heat the air can take (R + C + E at this WBGT and wind), with `cooling` the
+  evaporative and convective terms the rule can still buy (shade, wind, rest, drinking). Heat and cold (§5)
+  share one `coreTemp` and one sign convention (gain above the ceiling, loss below 20 °C felt), so the two
+  never fight; a full balance with clothing insulation (clo) and skin wettedness is the upgrade if the
+  simulator finds the shadow too coarse (proposed, after the audit of 2026-10-29).
 
 <!-- table:physiology.wbgt_limits -->
 *Heat stress: WBGT ceilings for continuous work (acclimatised), and the model's core-temperature drift* (science; confidence medium; source: NIOSH criteria (2016) and ACGIH TLVs as summarised by the US Navy heat-flag tables: light about 30 C, moderate about 28 C, heavy about 25 C WBGT for continuous acclimatised work; unacclimatised 1 to 2 C lower. PHY-WBGT)
@@ -232,7 +252,7 @@ acclimatisation days; hydration. **Outputs:** `coreTemp` (°C), `sweatRate` (L/h
 
 | Core (C) | State | What the sim does | Visible face | Mark |
 |---|---|---|---|---|
-| >= 40.0 | heat stroke | collapse; a MEDICINE.md condition; death risk per hour untreated | falls on deck, hot dry skin, raving | proposed |
+| >= 40.0 | heat stroke | collapse; a MEDICINE.md condition; death risk per hour untreated | falls on deck, hot skin (dry in classic heat stroke; a man who collapses at the capstan may still be sweating: exertional heat stroke), confusion or raving | proposed |
 | 38.5 to 40.0 | heat exhaustion | work capacity x0.6; sweat rate at max; hydration drains fast | pale, soaked, dizzy; asks to sit down | proposed |
 | 38.0 to 38.5 | heat strain | work capacity x0.85 | red-faced, drinking more | proposed |
 | 36.5 to 38.0 | normal | none | none | proposed |
@@ -266,7 +286,7 @@ acclimatisation days; hydration. **Outputs:** `coreTemp` (°C), `sweatRate` (L/h
   costs less).
 
 <!-- table:physiology.cold_water -->
-*Survival in the water (immersion), by water temperature* (science; confidence medium; source: Computational immersion study (PMC11234009): still fresh water 136/113/100 min at 5/2/0 C; static salt water 111/88/80/66 min at 5/2/0/-2 C. Boating-safety charts: under 15 min to exhaustion at 0 C, 1 to 2 h at 10 to 15 C, 2 to 12 h at 15 to 21 C, indefinite above about 26 C. Cold shock (gasp, loss of breathing control) worst at 10 to 15 C; drowning in the first minutes is the main killer. PHY-COLD)
+*Survival in the water (immersion), by water temperature* (science; confidence medium; source: Computational immersion study (PMC11234009): still fresh water 136/113/100 min at 5/2/0 C; static salt water 111/88/80/66 min at 5/2/0/-2 C. Boating-safety charts: under 15 min to exhaustion at 0 C, 1 to 2 h at 10 to 15 C, 2 to 12 h at 15 to 21 C, indefinite above about 26 C. Cold shock (gasp, loss of breathing control) worst at 10 to 15 C; drowning in the first minutes is the main killer. The times are central estimates with wide variance: body fat, clothing, flotation, swimming ability, exhaustion, sea state and whether the man can keep his head up move them by hours either way; the model rolls around them, never reads them as fixed. PHY-COLD)
 
 | Water (C) | Time to exhaustion or unconsciousness | Expected survival | Caribbean relevance | Mark |
 |---|---|---|---|---|

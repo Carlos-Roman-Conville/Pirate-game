@@ -180,21 +180,25 @@ group; endurance time for a hold.
       dMA/dt = e·MR_available − F·MA ;   dMF/dt = F·MA − R·MF ;   MR = 1 − MA − MF
       fatigue_g = MF ;  force available = (MR + MA) × development × condition
 
-  with F and R from the table, R multiplied by `restMult` (1.0 resting, 0.5 light work, 0.3 at sea in a
-  storm) and by whole-body factors (aerobic_today/40, hydration, glycogen: each a multiplier 0.5–1.0).
-  A rest day returns a group to near zero fatigue; a hard day leaves 0.2–0.4 by morning.
+  with F and R from the table **per second**, R multiplied by `restMult` (1.0 resting, 0.5 light work,
+  0.3 at sea in a storm) and by whole-body factors (aerobic_today/40, hydration, glycogen: each a
+  multiplier 0.5–1.0). **Time step (fixed after the audit):** the equations integrate in seconds; an
+  action of m minutes steps 60·m times (or uses the closed form, since F and R are constants), a combat
+  turn steps its length in seconds (the combat keeper's number), and the overnight recovery uses the
+  closed form `MF(t) = MF₀·e^(−R·restMult·t)` over the night's seconds. Nothing in the family quotes F or
+  R per minute. A rest day returns a group to near zero fatigue; a hard day leaves 0.2–0.4 by morning.
 
 <!-- table:muscular.fatigue_rates -->
 *Three-compartment fatigue model (3CC): rates by joint* (science; confidence medium; source: Xia and Frey Law 2008 (J Biomech): muscle in resting, active, fatigued compartments; F = fatigue rate active to fatigued, R = recovery rate fatigued to resting, per second. Fitted values from Frey Law, Looft and Heitsman 2012: ankle F 0.00589 R 0.0182; shoulder F 0.00058 R 0.00168; a 2018 extension adds a rest multiplier. MUS-3CC)
 
 | Joint (groups) | F (per s) | R (per s) | Note | Mark |
 |---|---|---|---|---|
-| Shoulder (deltoids, rotator cuff) | 0.001 | 0.002 | fitted 2012 | proposed |
-| Elbow (biceps, brachialis, triceps) | 0.001 | 0.004 | interpolated by the keeper between shoulder and ankle | proposed |
-| Grip (forearm, hand) | 0.003 | 0.007 | interpolated; grip tires fast and recovers fast | proposed |
+| Shoulder (deltoids, rotator cuff) | 0.00058 | 0.00168 | fitted 2012 | proposed |
+| Elbow (biceps, brachialis, triceps) | 0.0012 | 0.0036 | interpolated by the keeper between shoulder and ankle | proposed |
+| Grip (forearm, hand) | 0.0025 | 0.0075 | interpolated; grip tires fast and recovers fast | proposed |
 | Trunk (erectors, abs, obliques) | 0.001 | 0.003 | interpolated | proposed |
 | Hip and knee (glutes, quads, hamstrings) | 0.003 | 0.009 | interpolated | proposed |
-| Ankle (calves, tibialis) | 0.006 | 0.018 | fitted 2012 | proposed |
+| Ankle (calves, tibialis) | 0.00589 | 0.0182 | fitted 2012 | proposed |
 <!-- /table -->
 
 <!-- table:muscular.endurance_time -->
@@ -226,7 +230,7 @@ group; endurance time for a hold.
 |---|---|---|---|---|
 | Stimulus per hour of work | sum over groups of activation% x minutes / 60 x intensity factor | index | the activation profile times time; heavy loads count more (intensity = MET/6) | proposed |
 | Overload threshold | 40 | % of the group's max | below it, work maintains but does not grow the group (endurance only) | proposed |
-| Conversion window | 24 to 72 | h | stimulus converts to development only after this rest for the group; converts 0 if the group works hard again inside 24 h (overtraining) | proposed |
+| Conversion window | 24 to 72 | h | stimulus converts to development across this window after a hard session; a second hard session inside it does not cancel the first: conversion that night is scaled by min(1, hoursSinceLastHardSession / 48) and unconverted stimulus carries over, so adaptation is continuous and only sustained overload with no rest days (fatigue over 0.6 at the tick) stalls it | proposed |
 | Conversion rate (novice, development under 40) | 0.5 | development per 10 stimulus | fast beginner gains | proposed |
 | Conversion rate (trained, development 40 to 70) | 0.2 | development per 10 stimulus |  | proposed |
 | Conversion rate (advanced, over 70) | 0.07 | development per 10 stimulus | the hidden genetic max caps it (STATS.md) | proposed |
@@ -317,6 +321,12 @@ group; endurance time for a hold.
 | Whole-body lift and carry | erectors + glutes + quads + grip, the weakest of them limiting | - | proposed |
 <!-- /table -->
 
+- **(proposed, after the audit of 2026-10-29)** The weighted mean is the **character-sheet** reading:
+  what Strength *is* when nothing is loading it. What a character can *do* is the action's own question,
+  answered by §3's effort-required rule: each action's activation profile asks each group for its share of
+  the load, and the weakest required group limits the action. So two sailors with the same sheet Strength
+  can differ at pulling and pushing without a class bonus; the sheet number is for display and broad skill
+  checks, the profile for the act. Joint range and tendon capacity are not modelled (open 7).
 - **(open, Rex's)** Replace or compute. The computed reading above keeps `STATS.md`'s Strength number alive
   (every skill row reads it) while muscles underneath make it per limb and trainable by what you do; the
   replace reading would mean every skill row names groups instead. The keeper recommends **compute**, for
@@ -344,6 +354,11 @@ group; endurance time for a hold.
 4. Whether a fatigued limb raises an action's point cost in a fight (touches Efficiency, Rex's).
 5. The gym minigame and the gym as a town place (town keeper).
 6. All numbers are placeholders; the activation profiles are a belt data task once the rules stand.
+7. **(proposed, outside AI, audit 2026-10-29)** Tendon capacity, joint range of motion, contraction velocity,
+   neural recruitment, bilateral coordination, flexibility and bone adaptation are not modelled; the audit
+   asks for them. The keeper's view: velocity and recruitment belong to a nervous-system layer (the audit's
+   NEUROLOGY proposal, `BODY.md` audit section), tendon and joint range to this file as a cap per group.
+   Whether the sim goes that deep is Rex's.
 
 ## Sources
 
