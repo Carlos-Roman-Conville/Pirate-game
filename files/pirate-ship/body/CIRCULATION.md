@@ -3,8 +3,10 @@
 Rex's blood simulator (2026-10-29), written on ChatGPT's shape (outside AI) with its third requirement:
 blood composition and transport distinguished (plasma, red cells, haemoglobin, platelets, clotting
 factors) alongside oxygen delivery, perfusion and fluid balance, so that anaemia, dehydration, haemorrhage
-and clotting disorders are different problems with different cures. **All of it proposed**; the values
-are textbook; the chances are placeholders.
+and clotting disorders are different problems with different cures. **(Rex, 2026-10-29)** The structure is his decision: the quantities, the bleeding classes' reading, the
+three delivery failures, the events and their preconditions, the regulation loops. The values are
+textbook; **every chance, threshold and time constant is a placeholder** (Rex's words: "numbers still
+placeholders").
 
 **Why blood is the connector.** Every organ in `ANATOMY.md` needs what the blood brings (oxygen, fuel,
 water, salts, hormones, the immune cells) and gives what it carries away. One set of quantities, read by
@@ -46,24 +48,24 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
 
 | Quantity | Normal (70 kg man) | Unit | Made or set by | Lost or moved by | What it drives | Mark |
 |---|---|---|---|---|---|---|
-| Blood volume | 4,900 (70 mL/kg) | mL | water intake (NUTRITION), kidneys (retention), albumin (liver) | haemorrhage (MEDICINE wounds), sweat and the fluxes (dehydration), burns | pressure, perfusion, the shock classes | proposed |
-| Plasma volume | 2,700 (55%) | mL | water and salt balance | dehydration first; haemorrhage with the cells | the part dehydration takes | proposed |
-| Red cell mass | 2,200 (45%, haematocrit) | mL | marrow (iron, folate, B12, protein; the kidney's signal); 120-day life | haemorrhage; malaria (cells burst); hookworm (slow loss); lead | haemoglobin | proposed |
-| Haemoglobin | 15 (men), 13.5 (women) | g/dL | red cell mass / blood volume | as red cells; dilution by fluids | oxygen content: CaO2 = 1.34 x Hb x SaO2 (+ a little dissolved) | proposed |
-| Arterial oxygen saturation | 0.97 | fraction | lungs (ANATOMY) | lung failure, drowning, smoke, opioid breathing depression (NEUROLOGY) | oxygen content | proposed |
-| Cardiac output | 5 at rest; up to 20 to 25 at maximal work (trained), 15 (untrained) | L/min | heart function (ANATOMY) x stroke volume x rate; rate by NEUROLOGY tone and demand | heart failure, low volume (less return), arrhythmia | perfusion and oxygen delivery | proposed |
-| Oxygen delivery (DO2) | about 1,000 at rest; 4,000+ at maximal work | mL/min | CO x CaO2 x 10 | any of the above | every organ's oxygen adequacy; PHYSIOLOGY's aerobic_today is this at maximal CO | proposed |
-| Mean arterial pressure | 90 | mmHg | CO x vascular resistance; the kidneys long-term | haemorrhage, dehydration, sepsis (vessels open), heart failure | perfusion: organs fail under about 60; the brain faints under 50 | proposed |
-| Perfusion (per organ) | 1.0 | fraction of normal flow | pressure and the organ's own vessels (plaques narrow them) | pressure down, plaque, clot, cold (skin shuts down to save heat) | each organ's function (ANATOMY) | proposed |
-| Platelets | 250 | x10^9/L | marrow | bleeding (consumed), sepsis, some poisons | clotting speed with the factors | proposed |
-| Clotting factors | 1.0 | fraction of normal | liver (needs vitamin K: NUTRITION) | liver failure, vitamin K deficiency, massive bleeding (consumed), dilution | a wound's bleeding rate x (2 - clotting); under 0.3 class +1 on every wound | proposed |
-| Sodium | 140 | mmol/L | intake and kidneys | sweat and the fluxes (lost), water excess (diluted) | under 125: confusion, fits; over 150: thirst, confusion (the seawater drinker) | proposed |
-| Potassium | 4.0 | mmol/L | intake (NUTRITION) and kidneys | the fluxes and vomiting (lost: under 3.0 weakness and arrhythmia); kidney failure and crush (retained: over 6.0 arrhythmia, over 7 arrest) | the heart's rhythm; muscle weakness | proposed |
-| Calcium, magnesium | 2.4; 0.8 | mmol/L | diet, bone, kidneys | deficiency (NUTRITION), the fluxes | cramps, tetany, arrhythmia at the extremes | proposed |
-| Glucose | 5 | mmol/L | liver (glycogen), gut (meals), pancreas (insulin, glucagon) | starvation, hard work with glycogen gone, drink on an empty stomach (the liver busy with alcohol) | the brain fails first: under 3 confusion, under 2 unconscious (the drunk who collapses after a day without food) | proposed |
-| pH and lactate | 7.40; under 2 | -; mmol/L | lungs (CO2) and kidneys | maximal work (lactate up: the burn, part of the Endurance pool's floor), shock, kidney failure | under 7.2 the heart weakens | proposed |
-| White cells and inflammatory signals | 7; 0 | x10^9/L; index | marrow; infection and injury raise the signal | sepsis (exhausted), starvation, lead | MEDICINE's catch chances x (2 - immuneFunction); fever is the signal's face; chronic inflammation feeds the endothelium's damage | proposed |
-| Blood lipids (cholesterol, fats) | normal | index | diet (NUTRITION fat and energy surplus), liver, age | - | the atherosclerosis index (events table) | proposed |
+| Blood volume | 4,900 (70 mL/kg) | mL | water intake (NUTRITION), kidneys (retention), albumin (liver) | haemorrhage (MEDICINE wounds), sweat and the fluxes (dehydration), burns | pressure, perfusion, the shock classes | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Plasma volume | 2,700 (55%) | mL | water and salt balance | dehydration first; haemorrhage with the cells | the part dehydration takes | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Red cell mass | 2,200 (45%, haematocrit) | mL | marrow (iron, folate, B12, protein; the kidney's signal); 120-day life | haemorrhage; malaria (cells burst); hookworm (slow loss); lead | haemoglobin | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Haemoglobin | 15 (men), 13.5 (women) | g/dL | red cell mass / blood volume | as red cells; dilution by fluids | oxygen content: CaO2 = 1.34 x Hb x SaO2 (+ a little dissolved) | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Arterial oxygen saturation | 0.97 | fraction | lungs (ANATOMY) | lung failure, drowning, smoke, opioid breathing depression (NEUROLOGY) | oxygen content | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Cardiac output | 5 at rest; up to 20 to 25 at maximal work (trained), 15 (untrained) | L/min | heart function (ANATOMY) x stroke volume x rate; rate by NEUROLOGY tone and demand | heart failure, low volume (less return), arrhythmia | perfusion and oxygen delivery | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Oxygen delivery (DO2) | about 1,000 at rest; 4,000+ at maximal work | mL/min | CO x CaO2 x 10 | any of the above | every organ's oxygen adequacy; PHYSIOLOGY's aerobic_today is this at maximal CO | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Mean arterial pressure | 90 | mmHg | CO x vascular resistance; the kidneys long-term | haemorrhage, dehydration, sepsis (vessels open), heart failure | perfusion: organs fail under about 60; the brain faints under 50 | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Perfusion (per organ) | 1.0 | fraction of normal flow | pressure and the organ's own vessels (plaques narrow them) | pressure down, plaque, clot, cold (skin shuts down to save heat) | each organ's function (ANATOMY) | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Platelets | 250 | x10^9/L | marrow | bleeding (consumed), sepsis, some poisons | clotting speed with the factors | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Clotting factors | 1.0 | fraction of normal | liver (needs vitamin K: NUTRITION) | liver failure, vitamin K deficiency, massive bleeding (consumed), dilution | a wound's bleeding rate x (2 - clotting); under 0.3 class +1 on every wound | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Sodium | 140 | mmol/L | intake and kidneys | sweat and the fluxes (lost), water excess (diluted) | under 125: confusion, fits; over 150: thirst, confusion (the seawater drinker) | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Potassium | 4.0 | mmol/L | intake (NUTRITION) and kidneys | the fluxes and vomiting (lost: under 3.0 weakness and arrhythmia); kidney failure and crush (retained: over 6.0 arrhythmia, over 7 arrest) | the heart's rhythm; muscle weakness | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Calcium, magnesium | 2.4; 0.8 | mmol/L | diet, bone, kidneys | deficiency (NUTRITION), the fluxes | cramps, tetany, arrhythmia at the extremes | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Glucose | 5 | mmol/L | liver (glycogen), gut (meals), pancreas (insulin, glucagon) | starvation, hard work with glycogen gone, drink on an empty stomach (the liver busy with alcohol) | the brain fails first: under 3 confusion, under 2 unconscious (the drunk who collapses after a day without food) | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| pH and lactate | 7.40; under 2 | -; mmol/L | lungs (CO2) and kidneys | maximal work (lactate up: the burn, part of the Endurance pool's floor), shock, kidney failure | under 7.2 the heart weakens | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| White cells and inflammatory signals | 7; 0 | x10^9/L; index | marrow; infection and injury raise the signal | sepsis (exhausted), starvation, lead | MEDICINE's catch chances x (2 - immuneFunction); fever is the signal's face; chronic inflammation feeds the endothelium's damage | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Blood lipids (cholesterol, fats) | normal | index | diet (NUTRITION fat and energy surplus), liver, age | - | the atherosclerosis index (events table) | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
 <!-- /table -->
 
 - **[science]** CIR-DO2, CIR-ELEC. The two formulas the file runs on:
@@ -85,10 +87,10 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
 
 | Class | Loss (% of blood volume) | Loss for a 70 kg man (mL) | Signs | Pressure and perfusion (model) | Organ consequences (ANATOMY) | Death risk per hour at this loss, untreated (placeholder) | Mark |
 |---|---|---|---|---|---|---|---|
-| I | up to 15 | up to 750 | pulse under 100; little change | pressure held by vessel tightening; perfusion 1.0 | none | 0 | proposed |
-| II | 15 to 30 | 750 to 1500 | pulse 100 to 120; anxious; pale; cold hands | pressure held, skin and gut perfusion 0.6 | kidneys 0.8; the Endurance pool x0.8 (BODY) | 1% | proposed |
-| III | 30 to 40 | 1500 to 2000 | pulse 120 to 140; pressure falls; confused | MAP 65; brain 0.8, kidneys 0.5, gut 0.3 | confusion (Wits x0.7); kidney damage begins after an hour; collapse risk per turn | 10% | proposed |
-| IV | over 40 | over 2000 | pulse over 140; unconscious | MAP under 50; brain 0.5 | unconscious; the heart fails as volume falls; dying (COMBAT 4 wound ladder) | 50% | proposed |
+| I | up to 15 | up to 750 | pulse under 100; little change | pressure held by vessel tightening; perfusion 1.0 | none | 0 | rex (the class and its reading, 2026-10-29); proposed (the death risks) |
+| II | 15 to 30 | 750 to 1500 | pulse 100 to 120; anxious; pale; cold hands | pressure held, skin and gut perfusion 0.6 | kidneys 0.8; the Endurance pool x0.8 (BODY) | 1% | rex (the class and its reading, 2026-10-29); proposed (the death risks) |
+| III | 30 to 40 | 1500 to 2000 | pulse 120 to 140; pressure falls; confused | MAP 65; brain 0.8, kidneys 0.5, gut 0.3 | confusion (Wits x0.7); kidney damage begins after an hour; collapse risk per turn | 10% | rex (the class and its reading, 2026-10-29); proposed (the death risks) |
+| IV | over 40 | over 2000 | pulse over 140; unconscious | MAP under 50; brain 0.5 | unconscious; the heart fails as volume falls; dying (COMBAT 4 wound ladder) | 50% | rex (the class and its reading, 2026-10-29); proposed (the death risks) |
 <!-- /table -->
 
 - **[model]** Loss accrues by the wound's rate (the `MEDICINE.md` wound table) × elapsed minutes ×
@@ -106,11 +108,11 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
 
 | Failure | Volume | Haemoglobin | Cardiac output | DO2 (rest) | Face | What helps | Recovery | Mark |
 |---|---|---|---|---|---|---|---|---|
-| Anaemia (iron, folate, B12, hookworm, malaria) | normal | 8 (half) | up to 7 (the heart compensates) | about 700: fine at rest, breathless at work; aerobic x0.6 | pallor, breathless on the rigging, a racing heart | iron (haem iron absorbs best: NUTRITION 2a), food, treating the cause | weeks to months as the marrow rebuilds (a donation's worth in under 40 days with iron) | proposed |
-| Haemorrhage (a wound) | down (class II to IV) | normal at first, then falls as fluid refills the volume | down (less return); then up (compensating) | falls with volume: shock | pale, cold, fast pulse, confusion | bind the wound; fluids by mouth; rest; the marrow | volume in days (water), cells in weeks (iron) | proposed |
-| Dehydration (sweat, the fluxes) | plasma down | rises (concentrated) | down (thick blood, less return) | falls with volume | thirst, dark urine, dizziness, cramps (salt), collapse in heat | water and salt (hours) | hours | proposed |
-| Lung failure (drowning, pneumonia, opioid breathing) | normal | normal | normal then down | saturation down: delivery falls regardless of blood | blue lips, gasping, confusion | air; the cause | minutes (drowning) to weeks (pneumonia) | proposed |
-| Heart failure | normal or up (retained) | normal | down | falls | breathless lying down, swollen ankles, the dropsy | rest; the period could do little | chronic; damage permanent | proposed |
+| Anaemia (iron, folate, B12, hookworm, malaria) | normal | 8 (half) | up to 7 (the heart compensates) | about 700: fine at rest, breathless at work; aerobic x0.6 | pallor, breathless on the rigging, a racing heart | iron (haem iron absorbs best: NUTRITION 2a), food, treating the cause | weeks to months as the marrow rebuilds (a donation's worth in under 40 days with iron) | rex (the distinction, 2026-10-29); proposed (numbers) |
+| Haemorrhage (a wound) | down (class II to IV) | normal at first, then falls as fluid refills the volume | down (less return); then up (compensating) | falls with volume: shock | pale, cold, fast pulse, confusion | bind the wound; fluids by mouth; rest; the marrow | volume in days (water), cells in weeks (iron) | rex (the distinction, 2026-10-29); proposed (numbers) |
+| Dehydration (sweat, the fluxes) | plasma down | rises (concentrated) | down (thick blood, less return) | falls with volume | thirst, dark urine, dizziness, cramps (salt), collapse in heat | water and salt (hours) | hours | rex (the distinction, 2026-10-29); proposed (numbers) |
+| Lung failure (drowning, pneumonia, opioid breathing) | normal | normal | normal then down | saturation down: delivery falls regardless of blood | blue lips, gasping, confusion | air; the cause | minutes (drowning) to weeks (pneumonia) | rex (the distinction, 2026-10-29); proposed (numbers) |
+| Heart failure | normal or up (retained) | normal | down | falls | breathless lying down, swollen ankles, the dropsy | rest; the period could do little | chronic; damage permanent | rex (the distinction, 2026-10-29); proposed (numbers) |
 <!-- /table -->
 
 - **[science]** Each failure takes a different term of DO2, which is why the cures differ: iron and weeks
@@ -149,14 +151,14 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
 
 | Event | Precondition (the state it needs) | Daily or per-event chance (placeholder) | What happens | Damage | Visible face | Mark |
 |---|---|---|---|---|---|---|
-| Atherosclerosis (the index) | none: it accrues | index += 0.0001 x (lipids + pressure + tobacco x2 + sugar sickness x2 + inflammation) x ageFactor (x0.2 under 30, x1 at 50, x2 at 70) a day | coronary and other vessels narrow: perfusion of the heart, brain, legs falls with the index; the brain's small vessels | the index is damage: it only rises | the old captain's angina on the stairs; the merchant's short breath | proposed |
-| Angina | index over 0.5 and demand over supply (hard work, cold, fear) | per hard-work event: index x 0.2 | chest pain, work stopped; no damage if it stops | none | the hand to the chest; sits down | proposed |
-| Myocardial infarction | index over 0.4 (a plaque to rupture); triggers: a maximal effort, cold, fear, a clot-prone state (dehydration, tobacco, inflammation) | per day: index^2 x 0.001, x5 on a trigger day; near zero under 35 with no index | a clot blocks coronary flow: heart function falls at once (0.3 to 0.6 by size); pain 8; a death roll in the first hours (arrhythmia): 30% untreated in the period (no treatment existed) | heart damage += 0.2 to 0.5 (permanent: scarred muscle); heart failure follows at damage over 0.5 | collapse clutching the chest; the surgeon bleeds him (useless); 'a fit of the heart' | proposed |
-| Arrhythmia | potassium under 3.0 or over 6.0; magnesium low; hypoxia (saturation under 0.8); drugs (withdrawal, high-dose bark, stimulants); heart damage over 0.3; fever over 40 | per hour while the precondition holds: 2% (electrolytes), 5% (potassium over 7), 1% (drugs), 3% (damage) | cardiac output falls to 0.3 to 0.7 for minutes to hours (palpitations, faintness); the fatal kind (fibrillation) at potassium over 7, infarction, or damage over 0.6: a death roll 20% | none unless prolonged | palpitations; fainting at the pump | proposed |
-| Heart failure | heart damage over 0.5, or function under 0.5 for days (beriberi's wet heart, the drinker's heart, a scarred heart) | a state, not a roll | output down for good: aerobic x0.5, fluid retained (the dropsy), breathless lying down | progressive | swollen legs and belly; sleeps sitting up | proposed |
-| Stroke | atherosclerosis index over 0.5 or a clot from an arrhythmia or pressure very high; age | per day: index^2 x 0.0005 | a brain region loses perfusion: the head attributes or one side's limbs capped (MEDICINE: a permanent cap), speech | brain damage permanent | the dropped face; the useless arm | proposed |
-| Thrombosis and embolism | clot-prone states: immobility (a splinted leg for weeks), dehydration, injury, sepsis, the pox's late vessels | per day immobile: 0.5% | a clot in the leg (swelling, pain) that may travel to the lungs (sudden breathlessness, a death roll 10%) | lung damage if survived | the swollen leg after the fracture; the sudden collapse | proposed |
-| Shock (circulatory) | volume loss class III+, sepsis (vessels open), heart failure acute, a bad burn, anaphylaxis (fiction, rare) | a state | pressure under 60: every organ's perfusion falls; the ischaemia clock damages kidneys, brain, heart after an hour | by duration | cold, grey, confused, no urine | proposed |
+| Atherosclerosis (the index) | none: it accrues | index += 0.0001 x (lipids + pressure + tobacco x2 + sugar sickness x2 + inflammation) x ageFactor (x0.2 under 30, x1 at 50, x2 at 70) a day | coronary and other vessels narrow: perfusion of the heart, brain, legs falls with the index; the brain's small vessels | the index is damage: it only rises | the old captain's angina on the stairs; the merchant's short breath | rex (the event and its precondition, 2026-10-29); proposed (the chances) |
+| Angina | index over 0.5 and demand over supply (hard work, cold, fear) | per hard-work event: index x 0.2 | chest pain, work stopped; no damage if it stops | none | the hand to the chest; sits down | rex (the event and its precondition, 2026-10-29); proposed (the chances) |
+| Myocardial infarction | index over 0.4 (a plaque to rupture); triggers: a maximal effort, cold, fear, a clot-prone state (dehydration, tobacco, inflammation) | per day: index^2 x 0.001, x5 on a trigger day; near zero under 35 with no index | a clot blocks coronary flow: heart function falls at once (0.3 to 0.6 by size); pain 8; a death roll in the first hours (arrhythmia): 30% untreated in the period (no treatment existed) | heart damage += 0.2 to 0.5 (permanent: scarred muscle); heart failure follows at damage over 0.5 | collapse clutching the chest; the surgeon bleeds him (useless); 'a fit of the heart' | rex (the event and its precondition, 2026-10-29); proposed (the chances) |
+| Arrhythmia | potassium under 3.0 or over 6.0; magnesium low; hypoxia (saturation under 0.8); drugs (withdrawal, high-dose bark, stimulants); heart damage over 0.3; fever over 40 | per hour while the precondition holds: 2% (electrolytes), 5% (potassium over 7), 1% (drugs), 3% (damage) | cardiac output falls to 0.3 to 0.7 for minutes to hours (palpitations, faintness); the fatal kind (fibrillation) at potassium over 7, infarction, or damage over 0.6: a death roll 20% | none unless prolonged | palpitations; fainting at the pump | rex (the event and its precondition, 2026-10-29); proposed (the chances) |
+| Heart failure | heart damage over 0.5, or function under 0.5 for days (beriberi's wet heart, the drinker's heart, a scarred heart) | a state, not a roll | output down for good: aerobic x0.5, fluid retained (the dropsy), breathless lying down | progressive | swollen legs and belly; sleeps sitting up | rex (the event and its precondition, 2026-10-29); proposed (the chances) |
+| Stroke | atherosclerosis index over 0.5 or a clot from an arrhythmia or pressure very high; age | per day: index^2 x 0.0005 | a brain region loses perfusion: the head attributes or one side's limbs capped (MEDICINE: a permanent cap), speech | brain damage permanent | the dropped face; the useless arm | rex (the event and its precondition, 2026-10-29); proposed (the chances) |
+| Thrombosis and embolism | clot-prone states: immobility (a splinted leg for weeks), dehydration, injury, sepsis, the pox's late vessels | per day immobile: 0.5% | a clot in the leg (swelling, pain) that may travel to the lungs (sudden breathlessness, a death roll 10%) | lung damage if survived | the swollen leg after the fracture; the sudden collapse | rex (the event and its precondition, 2026-10-29); proposed (the chances) |
+| Shock (circulatory) | volume loss class III+, sepsis (vessels open), heart failure acute, a bad burn, anaphylaxis (fiction, rare) | a state | pressure under 60: every organ's perfusion falls; the ischaemia clock damages kidneys, brain, heart after an hour | by duration | cold, grey, confused, no urine | rex (the event and its precondition, 2026-10-29); proposed (the chances) |
 <!-- /table -->
 
 - **[science]** Rex's picture of fat clogging an artery is corrected to the real course: lipids,
@@ -181,13 +183,13 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
 
 | Loop | Target | Corrects by | Time constant | Fails when | Mark |
 |---|---|---|---|---|---|
-| Baroreflex | MAP 90 | heart rate and vessel tone (NEUROLOGY noradrenaline) | seconds | volume too low to compensate (class III+), nervous depression (deep drink, opioids) | proposed |
-| Volume and salt (kidney) | blood volume and sodium | urine output, thirst (NUTRITION water need), salt appetite | hours to days | kidney function low; no water to drink | proposed |
-| Red cell mass (kidney to marrow) | haemoglobin 15 | the kidney's signal to the marrow | days to weeks | no iron, folate or B12; marrow or kidney failure | proposed |
-| Glucose | 5 mmol/L | insulin and glucagon (pancreas), liver glycogen, appetite | minutes to hours | glycogen gone and no food; the sugar sickness; the liver busy with alcohol | proposed |
-| Oxygen (demand to delivery) | tissue oxygen adequate | cardiac output up with demand (to the maximum), breathing up, extraction up (to about 70%) | seconds | the maximum reached (the Endurance pool's wall), lungs or heart failing, anaemia | proposed |
-| Potassium | 4.0 | kidneys; cells take it up with insulin and adrenaline | hours | kidney failure; crush and burns releasing it; the fluxes losing it | proposed |
-| Acid-base | pH 7.40 | breathing (fast), kidneys (slow) | minutes; days | shock, kidney failure, breathing depression | proposed |
+| Baroreflex | MAP 90 | heart rate and vessel tone (NEUROLOGY noradrenaline) | seconds | volume too low to compensate (class III+), nervous depression (deep drink, opioids) | rex (the loop, 2026-10-29); proposed (time constants) |
+| Volume and salt (kidney) | blood volume and sodium | urine output, thirst (NUTRITION water need), salt appetite | hours to days | kidney function low; no water to drink | rex (the loop, 2026-10-29); proposed (time constants) |
+| Red cell mass (kidney to marrow) | haemoglobin 15 | the kidney's signal to the marrow | days to weeks | no iron, folate or B12; marrow or kidney failure | rex (the loop, 2026-10-29); proposed (time constants) |
+| Glucose | 5 mmol/L | insulin and glucagon (pancreas), liver glycogen, appetite | minutes to hours | glycogen gone and no food; the sugar sickness; the liver busy with alcohol | rex (the loop, 2026-10-29); proposed (time constants) |
+| Oxygen (demand to delivery) | tissue oxygen adequate | cardiac output up with demand (to the maximum), breathing up, extraction up (to about 70%) | seconds | the maximum reached (the Endurance pool's wall), lungs or heart failing, anaemia | rex (the loop, 2026-10-29); proposed (time constants) |
+| Potassium | 4.0 | kidneys; cells take it up with insulin and adrenaline | hours | kidney failure; crush and burns releasing it; the fluxes losing it | rex (the loop, 2026-10-29); proposed (time constants) |
+| Acid-base | pH 7.40 | breathing (fast), kidneys (slow) | minutes; days | shock, kidney failure, breathing depression | rex (the loop, 2026-10-29); proposed (time constants) |
 <!-- /table -->
 
 - **[science]** The baroreflex holds pressure in seconds; the kidney holds volume and salt over days and
@@ -212,7 +214,7 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
 
 ## Open for Rex
 
-1. The whole file: keep, cut, or stamp.
+1. ~~The whole file: keep, cut, or stamp~~ stamped (Rex, 2026-10-29): structure canon, numbers placeholders.
 2. Which cardiac events the game includes (the old captain's infarction; the dropsy; the stroke) and whether
    named characters are fenced from them (the mortality question, `BALANCE.md` C5 32).
 3. Whether the player ever sees a pulse or a colour (the surgeon's report is the proposed face).
@@ -229,4 +231,5 @@ cell recovery after bleeding (under 40 days for a donation's worth).
 
 | Date | What | Who |
 |---|---|---|
+| 2026-10-29 | Rex stamped the structure as his; numbers placeholders; marks updated | Rex |
 | 2026-10-29 | File opened on Rex's blood-simulator idea and ChatGPT's notes (outside AI); quantities (18), bleeding classes moved in, the three delivery failures, clotting, chemistry, conditional cardiac events (8), regulation loops (7); all proposed | keeper |
