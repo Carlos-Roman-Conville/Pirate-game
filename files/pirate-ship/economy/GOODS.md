@@ -520,9 +520,29 @@ which equipment they use**. Gathering a thing and processing it are separate ski
 | Crafting | Weaving | new | yarn to cloth: cotton cloth, linen, woollens, canvas, silk |
 | Crafting | Ropemaking | new (Rex) | the ropewalk: twine, cordage, cables; takes raw hemp or a spinner's yarn |
 | Crafting | Tailoring | new (Rex) | cloth to clothes; sewing, embroidery, knitting, repair as activities inside it |
-| Crafting | Surgery and medicine | yes | the apothecary |
+| Crafting | Surgery (Surgery and medicine) | yes | wounds, bleeding, bones, amputation; the surgeon's mate (services) |
+| Crafting | Apothecary | new (Rex) | simples, salves, compound and chemical medicines; the surgeon's chest stocked |
+| Crafting | Physic (the physician) | new (Rex) | diagnosis, regimen, prescribing; the learned branch (services) |
 
-**38 skills, 32 new.** The wood split (Rex, 2026-10-28), checked against the record (`research-wood-trades.md`):
+**40 skills, 34 new.** The medical split (Rex, 2026-10-28), checked against the record
+(`research-medical-trades.md`): Campbell 1747 opens his medical chapter with five separate "Professors": Physician,
+Surgeon, Chymist, Druggist, Apothecary. So **Surgery and medicine becomes Surgery** (the surgeon's craft: bound seven
+years, examined by the Barber-Surgeons' Company, one company until 1745; the surgeon's mate a rank under him), and
+two skills stand beside it: **Apothecary** (Society of Apothecaries chartered 6 December 1617; could prescribe after
+the Rose case of 1703/04; Ligon's "Apothecary of the Plantation, which we call Doctor"; Campbell: "The Chymists are
+generally Apothecaries", so chemical medicines sit here and draw on Chemical Refining) and **Physic** (the College of
+Physicians, 1518; "Doctor in Physic" as a status word at Port Royal, 1725; rare in the colonies, so its top sits
+off-map). Surgery and Physic make no goods: their chips are **services**, what that level can do to a patient, the way
+Carpentry's "ship's repairs" is a service. Not skills: the druggist (a merchant of drugs, Campbell), the midwife
+(licensed by the bishop, but the game has no childbirth system: open), and the bonesetter, tooth-drawer and quack
+(empirics, not trades; teeth and bones sit in Surgery's tiers). Black healers and obeah are in the secondary
+literature only (open). A physic garden (simples) is added to Farming as the apothecary's raw stuff.
+
+The chest: Blackbeard's Charleston chest was valued at £300–400 (J); the buccaneers' articles set 200–250 pieces of
+eight for the surgeon's chest (E); the Queen Anne's Revenge gave up a urethral syringe that held mercury, clyster
+pumps and a mortar (QAR).
+
+**38 before the medical split.** The wood split (Rex, 2026-10-28), checked against the record (`research-wood-trades.md`):
 three trades stand apart from Carpentry because Campbell 1747 and the companies treat them so: **Shipwrighting**
 (Shipwrights' Company 1605 and 1612; Campbell's ship-builder, boat-builder and block-maker; Bermuda's cedar sloops
 from the mid-1600s), **Cabinetmaking** (Campbell's cabinet-maker and carver, apart from the joiner; "Cabanittmakers"
@@ -586,7 +606,7 @@ below. Mining and Weaving are nearly all off-map; Rex can cut them and treat tho
 | 65 | Boats, sloops and ships; caulking and refit | manufactured | Shipwrighting | Sourced: the ship itself was the most valuable prize (Part 2); Bermuda cedar sloops from the mid-1600s; careening (DUTIES). Added with the wood split |
 
 **Where each good sits: `skill-tree.json` and `skill-tree.html`** (this folder). Every one of the 61 goods is placed
-on one of these 38 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
+on one of these 40 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
 Master 100), with a one-line reason and the good it needs from another tree (sugar cane → molasses → rum; rived
 staves → dressed staves → tight cask). The JSON is the source; `build-skill-tree.py` rebuilds the HTML, which opens in
 any browser with no server. Goods made outside the Caribbean in the period are flagged off-map. Four goods have no
@@ -850,12 +870,12 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
    versus plain names is Rex's choice.
 8. **Cask size.** Which standard hogshead does the game use: one 63-gallon cask for sugar, molasses and rum (proposed,
    fits the 17th-century evidence), the large tobacco-size cask for sugar, or casks that grow over the timeline (1j)?
-9. **The 38 skills (3c, `skill-tree.json`).** Rex's two splits stand provisionally. Still to confirm: the seven
+9. **The 40 skills (3c, `skill-tree.json`).** Rex's two splits stand provisionally. Still to confirm: the seven
    earlier new ones (Farming, Hunting, Woodcutting, Mining, Sugar boiling, Distilling, Weaving), whether Mining and
    Weaving go, the Swimming gate level for pearls, and every placement.
 10. **Occupations (3d).** Confirm the 31 period words and which skills each groups; whether a label ever does
     anything in play (Rex: maybe a synergy later, from the skills, never from the label); whether Apothecary becomes
-    a skill apart from Surgery and medicine (raised in Rex's notes, not decided). Metallurgy: Rex's metal notes keep
+    a skill: done, 2026-10-28 (3c). Midwifery as a skill: open (no childbirth system). Metallurgy: Rex's metal notes keep
     Mining and refining as suppliers, so smelting stays in Mining; no separate skill unless Rex says so.
 11. **STATS.md.** Once confirmed, the new skills need their primary and secondary attributes and personality pull in
     `STATS.md` §2, which belongs to another keeper.
@@ -877,3 +897,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-28 | Powder Making and Chemical Refining trees (Rex); gunpowder's three inputs. 3d occupations: labels over the skills, 31 period words from wills and indentures (research-occupations.md); 'Alchemist' replaced by Chymist | Rex (decision); research session |
 | 2026-10-28 | Rex's metal split, checked against the companies and Campbell 1747: Blacksmithing (the old Smithing), Gunsmithing, Bladesmithing, Founding, Precious Metalworking; Fine Metalworking rejected (no evidence); five metal occupations; row 64 pewter | Rex (decision); research session |
 | 2026-10-28 | The wood split, checked against Campbell 1747 and the companies: Shipwrighting, Cabinetmaking, Millwrighting apart from Carpentry; joiner, sawyer, caulker, mast-maker, turner folded in on the evidence; three wood occupations; row 65 boats and ships; build stamp on the dashboard | Rex (decision); research session |
+| 2026-10-28 | The medical split, checked against Campbell 1747 and the companies: Surgery, Apothecary, Physic; service chips for skills that make no goods; physic garden on Farming; Physician, Druggist, Midwife occupations | Rex (decision); research session |

@@ -1,6 +1,6 @@
 {
   "title": "Pirate Ship: goods on the skill trees (proposed)",
-  "status": "Rex's splits of 2026-10-28 applied: Farming group; Cooking group; Tanning, Leatherworking, Shoemaking; Spinning, Weaving, Ropemaking, Tailoring; Smithing into Blacksmithing, Gunsmithing, Bladesmithing, Founding, Precious Metalworking; Carpentry into Carpentry, Shipwrighting, Cabinetmaking, Millwrighting. Placements still proposed",
+  "status": "Rex's splits of 2026-10-28 applied: Farming group; Cooking group; Tanning, Leatherworking, Shoemaking; Spinning, Weaving, Ropemaking, Tailoring; Smithing into Blacksmithing, Gunsmithing, Bladesmithing, Founding, Precious Metalworking; Carpentry into Carpentry, Shipwrighting, Cabinetmaking, Millwrighting; Surgery and medicine into Surgery, Apothecary, Physic. Placements still proposed",
   "bands": [
     {
       "key": "novice",
@@ -39,7 +39,8 @@
     "gate": "needs another skill at some level to reach the place (Swimming for depth); that skill makes nothing",
     "unsourced": "Rex's addition with no period source found; a design good, not a historical record",
     "inputAny": "one of several inputs will do (a ropewalk spins its own yarn from raw fibre, or takes a spinner's)",
-    "inputs": "every listed input is needed (gunpowder takes all three)"
+    "inputs": "every listed input is needed (gunpowder takes all three)",
+    "service": "a service, not a traded good: the skill is used on people or ships, and the chip shows what that level can do"
   },
   "groups": [
     {
@@ -152,6 +153,12 @@
               "band": "apprentice",
               "offMap": true,
               "note": "European fibre crops for linen and rope; no Caribbean crop in the sources"
+            },
+            {
+              "good": 48,
+              "name": "Physic garden (simples)",
+              "band": "apprentice",
+              "note": "the herbs an apothecary works from; Culpeper's book was for householders (research). Caribbean physic gardens: open"
             }
           ]
         },
@@ -1613,22 +1620,137 @@
         },
         {
           "key": "medicine",
-          "name": "Surgery and medicine",
+          "name": "Surgery (Surgery and medicine)",
           "existing": true,
-          "covers": "the apothecary's medicines and the surgeon's chest",
-          "why": "Already a skill. Apothecary work is folded in: a town with a surgeon has its medicines from the same hands.",
+          "covers": "wounds, bleeding and purging, bones, amputation; the ship's surgeon and his mate",
+          "why": "The existing STATS.md skill, now the surgeon's craft alone (Rex, 2026-10-28). Campbell 1747 lists Physician, Surgeon, Chymist, Druggist and Apothecary as five separate 'Professors'. The surgeon was bound seven years and examined by the Barber-Surgeons' Company (one company until 1745); the surgeon's mate was a rank under him, examined too. Exquemelin served the buccaneers 'in the capacity of barber-surgeon'; Roberts' fleet elected a chief surgeon (J). Every item here is a service, not a good.",
           "items": [
             {
               "good": 48,
-              "name": "Simple medicines",
-              "band": "journeyman",
-              "note": "the apothecary's stock; 'some of the Ship's Medicines' pressed (J)"
+              "name": "Dressing wounds (the surgeon's mate)",
+              "band": "novice",
+              "service": true,
+              "note": "recruited at about 16 with basic training (research)"
             },
             {
               "good": 48,
-              "name": "Surgeon's chest and instruments",
+              "name": "Bleeding, purging, the clyster",
+              "band": "apprentice",
+              "service": true,
+              "input": "bladesmithing:Knives and razors",
+              "note": "lancets from the cutler; clyster pumps on the QAR wreck (QAR)"
+            },
+            {
+              "good": 48,
+              "name": "Setting bones, drawing teeth",
+              "band": "journeyman",
+              "service": true,
+              "note": "barber-surgeons drew teeth; the 'pretending bone-setters' were the empirics (Turner 1694)"
+            },
+            {
+              "good": 48,
+              "name": "Amputation and the great operations",
               "band": "expert",
-              "note": "£300–400 at Charleston (J); 200–250 pieces of eight as a fixed share (E)"
+              "service": true,
+              "input": "bladesmithing:Knives and razors",
+              "note": "Exquemelin's compensation table: a lost limb paid in pieces of eight or slaves (E)"
+            },
+            {
+              "good": 48,
+              "name": "Chief surgeon (examined, elected)",
+              "band": "master",
+              "service": true,
+              "note": "examined at Surgeons' Hall for the navy (Campbell); elected chief surgeon in Roberts' fleet (J)"
+            }
+          ]
+        },
+        {
+          "key": "apothecary",
+          "name": "Apothecary",
+          "existing": false,
+          "covers": "simples, salves, compound medicines; laudanum, mercury and bark; stocking the surgeon's chest",
+          "why": "Its own trade (Rex, 2026-10-28): the Society of Apothecaries was chartered 6 December 1617, apart from the Grocers; a seven-year apprenticeship; after the Rose case (1703/04) apothecaries could prescribe. Ligon: 'the Apothecary of the Plantation, which we call Doctor'. Campbell: 'The Chymists are generally Apothecaries', so the chymist's preparations sit here, drawing on Chemical Refining. The INTJ's calling.",
+          "items": [
+            {
+              "good": 48,
+              "name": "Simples and herb remedies",
+              "band": "novice",
+              "input": "farming:Physic garden (simples)",
+              "note": "Culpeper's householder medicine; the plantation doctor's dram of kill-devil (L)"
+            },
+            {
+              "good": 48,
+              "name": "Salves, plasters, lime-juice regimen",
+              "band": "apprentice",
+              "inputs": [
+                "farming:Physic garden (simples)",
+                "cooking:Lime juice"
+              ],
+              "note": "lime juice against scurvy (DUTIES); whether it stood in the Pharmacopoeia: open"
+            },
+            {
+              "good": 48,
+              "name": "Compound medicines (the Pharmacopoeia)",
+              "band": "journeyman",
+              "inputs": [
+                "farming:Physic garden (simples)",
+                "distilling:Aqua vitae (kill-devil)"
+              ],
+              "note": "Pharmacopoeia Londinensis 1618 and after; spirits for tinctures"
+            },
+            {
+              "good": 48,
+              "name": "Chemical medicines: mercury, antimony, laudanum",
+              "band": "expert",
+              "offMap": true,
+              "input": "refining:Reagents and salts",
+              "note": "the QAR syringe held mercury for the pox (QAR); opium preparations in the Pharmacopoeia (research)"
+            },
+            {
+              "good": 48,
+              "name": "The surgeon's chest, stocked",
+              "band": "master",
+              "input": "apothecary:Compound medicines (the Pharmacopoeia)",
+              "note": "£300–400 at Charleston (J); 200–250 pieces of eight as the buccaneers' fixed share (E)"
+            }
+          ]
+        },
+        {
+          "key": "physic",
+          "name": "Physic (the physician)",
+          "existing": false,
+          "covers": "diagnosis, fevers, regimen, prescribing; the learned branch",
+          "why": "Its own trade (Rex, 2026-10-28): the College of Physicians (1518) licensed practice and its Fellows held university degrees; 'Doctor in Physic' is a status word in a Port Royal will (1725). Campbell keeps the physician apart from the surgeon and the apothecary. Rare in the colonies: most 'doctors' were apothecaries or surgeons, so the top tiers sit off-map. Services, not goods.",
+          "items": [
+            {
+              "good": 48,
+              "name": "Regimen and diet",
+              "band": "apprentice",
+              "service": true,
+              "note": "the plantation doctor's level"
+            },
+            {
+              "good": 48,
+              "name": "Diagnosing fevers and the flux",
+              "band": "journeyman",
+              "service": true,
+              "note": "scurvy and fever killed more than battle (DUTIES)"
+            },
+            {
+              "good": 48,
+              "name": "Prescribing (the apothecary makes it up)",
+              "band": "expert",
+              "service": true,
+              "input": "apothecary:Compound medicines (the Pharmacopoeia)",
+              "note": "the physician prescribes, the apothecary compounds; the Rose case blurred it (research)"
+            },
+            {
+              "good": 48,
+              "name": "Doctor in Physic (university)",
+              "band": "master",
+              "service": true,
+              "offMap": true,
+              "note": "'Doctor in Physic' at Port Royal, 1725; Campbell sneers at bought Latin diplomas"
             }
           ]
         }
@@ -1655,7 +1777,7 @@
   "bandsSource": "research-trade-grades.md (shared notes folder): guild ladder, sea ranks, Ligon's overseers and tradesmen; 'novice' and 'expert' found as no grade",
   "rule": "Every recipe needs materials + equipment + a minimum skill band (Rex, 2026-10-28). Skill never creates a material: a master spinner cannot spin silk without silk.",
   "occupations": {
-    "note": "An occupation is a label, not a skill: it groups the skills a person of that calling practised, levels nothing, grants nothing, and a character may carry more than one (Rex, 2026-10-28). The words are the ones period wills and indentures use; the record styles a person by ONE word, and a second appears for a small minority (under 5% of mariners), nearly always sea + shipboard craft: 'Mariner and Cooper', 'Mariner and Surgeon'. 'Alchemist' was never an occupation (0 wills; 'Chymist' 40): use Chymist. Status words (Gentleman, Yeoman, Captain) sat in the same slot as trades. Grey chips are STATS.md skills with no goods tree. Source: research-occupations.md. Metal trades: six London companies back the split (research-metal-trades.md); whitesmith found no evidence and is not a skill; locksmith, farrier, nailer and anchorsmith fold into Blacksmithing on Campbell's word.",
+    "note": "An occupation is a label, not a skill: it groups the skills a person of that calling practised, levels nothing, grants nothing, and a character may carry more than one (Rex, 2026-10-28). The words are the ones period wills and indentures use; the record styles a person by ONE word, and a second appears for a small minority (under 5% of mariners), nearly always sea + shipboard craft: 'Mariner and Cooper', 'Mariner and Surgeon'. 'Alchemist' was never an occupation (0 wills; 'Chymist' 40): use Chymist. Status words (Gentleman, Yeoman, Captain) sat in the same slot as trades. Grey chips are STATS.md skills with no goods tree. Source: research-occupations.md. Metal trades: six London companies back the split (research-metal-trades.md); whitesmith found no evidence and is not a skill; locksmith, farrier, nailer and anchorsmith fold into Blacksmithing on Campbell's word. Medical trades: Campbell's five 'Professors' back the split; bonesetter, tooth-drawer and quack were empirics, not trades, and fold into Surgery's tiers; Black healers and obeah are in the secondary literature only (open).",
     "rules": [
       "one word per character by default; the word of their highest skill group",
       "a second word for a few: sea + craft ('Mariner and Cooper'), or 'Merchant, Commander'; 'Barber-Chirurgeon' is one compound trade",
@@ -1799,12 +1921,12 @@
         "period": "'Chymist' (Southwark 1728), 'Chemist and Apothecary' (1729); never 'Alchymist'",
         "skills": [
           "Chemical Refining",
-          "Surgery and medicine",
+          "Apothecary",
           "Distilling",
           "Dye Making",
           "Powder Making"
         ],
-        "note": "Rex's 'Alchemist' group, under its period name. The apothecary's remedies sit in Surgery and medicine for now (Apothecary as a skill: open)"
+        "note": "Rex's 'Alchemist' group, under its period name. Campbell: 'The Chymists are generally Apothecaries'"
       },
       {
         "name": "Powder-maker",
@@ -1938,22 +2060,52 @@
         "note": "the ship's tradesman; needle and palm"
       },
       {
-        "name": "Chirurgeon (barber-chirurgeon)",
+        "name": "Chirurgeon (barber-chirurgeon, surgeon's mate)",
         "period": "'Chirurgeon' (Barbados 1675); 'Barber Chirurgeon' (306 wills 1660–1730); 'Mariner and Surgeon' (1706)",
         "skills": [
-          "Surgery and medicine"
+          "Surgery (Surgery and medicine)",
+          "Apothecary"
         ],
-        "note": "a craft, not the learned 'Doctor in Physic'. Ligon: 'the Apothecary of the Plantation, which we call Doctor'"
+        "note": "a craft, bound seven years and examined by the Company; the ship's and the pirates' surgeon. The ISFJ doctor's calling"
       },
       {
         "name": "Apothecary",
         "period": "'Apothecary' (Jamaica-bound 1702)",
         "skills": [
-          "Surgery and medicine",
+          "Apothecary",
           "Chemical Refining",
           "Distilling"
         ],
-        "note": "the INTJ's calling; whether Apothecary becomes a skill apart from Surgery is open"
+        "note": "Society of Apothecaries 1617; could prescribe after the Rose case (1703/04). Ligon's plantation 'Doctor'. The INTJ's calling"
+      },
+      {
+        "name": "Physician (Doctor in Physic)",
+        "period": "'Doctor in Physic' (Port Royal 1725); College of Physicians 1518; Campbell's first 'Professor' of the medical trades",
+        "skills": [
+          "Physic (the physician)",
+          "Apothecary"
+        ],
+        "note": "a learned status as much as a trade; rare in the colonies"
+      },
+      {
+        "name": "Druggist",
+        "period": "Campbell 1747: 'to buy up, in large Quantities, all manner of uncompounded Drugs'; a weekly printed bill gave drug prices",
+        "skills": [
+          "Haggling",
+          "Apothecary"
+        ],
+        "outside": [
+          "Haggling"
+        ],
+        "note": "a merchant of drugs, not a maker; the shopkeeping kind"
+      },
+      {
+        "name": "Midwife",
+        "period": "licensed by the diocesan bishop, c. 1500–18th c.; an 'unofficial apprenticeship' (Evenden)",
+        "skills": [
+          "Surgery (Surgery and medicine)"
+        ],
+        "note": "a licensed calling with no skill of its own here: the game has no childbirth system (open for Rex)"
       },
       {
         "name": "Mariner",
@@ -2052,6 +2204,7 @@
   },
   "sources": {
     "metal": "research-metal-trades.md (shared notes): Campbell 1747, livery company charters, London Museum (Hounslow), QAR pewter, Museum of Miami on Port Royal",
-    "wood": "research-wood-trades.md (shared notes): Campbell 1747, Carpenters' and Shipwrights' and Coopers' company histories, Ligon, Dampier 1705, Johnson"
+    "wood": "research-wood-trades.md (shared notes): Campbell 1747, Carpenters' and Shipwrights' and Coopers' company histories, Ligon, Dampier 1705, Johnson",
+    "medical": "research-medical-trades.md (shared notes): Campbell 1747, Society of Apothecaries, Ligon, Exquemelin, Johnson, QAR finds, the Williamsburg apothecary booklet"
   }
 }
