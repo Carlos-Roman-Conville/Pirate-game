@@ -51,6 +51,7 @@
   .tier-row.journeyman { background: var(--journeyman); } .tier-row.expert { background: var(--expert); } .tier-row.master { background: var(--master); }
   .chip { font: 13px/1.2 system-ui, sans-serif; padding: 4px 8px; border-radius: 12px; background: var(--panel); border: 1px solid var(--line); cursor: pointer; }
   .chip.off { border-style: dashed; color: var(--off); }
+  .chip.unsourced { border-style: dotted; border-color: var(--accent); }
   .chip.hit { outline: 2px solid var(--accent); }
   .chip.dim { opacity: .35; }
   .chip .row { color: var(--muted); font-size: 11px; margin-left: 4px; }
@@ -68,6 +69,7 @@
   <p class="sub" id="status"></p>
   <div class="controls">
     <label><input type="checkbox" id="showOff" checked> show goods made off-map (dashed)</label>
+    <span class="count">dotted red = Rex's addition, no period source</span>
     <label><input type="checkbox" id="showChains" checked> click a good to light its chain</label>
     <span class="count" id="count"></span>
   </div>
@@ -104,7 +106,7 @@
         const row = document.createElement('div'); row.className = 'tier-row ' + b.key;
         for (const it of s.items.filter(i => i.band === b.key)) {
           const c = document.createElement('button'); c.type = 'button';
-          c.className = 'chip' + (it.offMap ? ' off' : '');
+          c.className = 'chip' + (it.offMap ? ' off' : '') + (it.unsourced ? ' unsourced' : '');
           c.innerHTML = it.name + '<span class="row">#' + it.good + '</span>';
           const key = s.key + ':' + it.name;
           c.dataset.key = key; it._skill = s; it._band = b;
@@ -144,6 +146,7 @@
       '<b>' + it.name + '</b> <span class="muted">(GOODS.md row ' + it.good + ')</span> · ' + s.name + ', ' + b.name + ' ' + b.range
       + (it.offMap ? ' · <span class="muted">off-map in this period</span>' : '')
       + (it.gate ? ' · <span class="muted">gate:</span> ' + it.gate : '')
+      + (it.unsourced ? ' · <span class="muted">unsourced (Rex\'s addition)</span>' : '')
       + '<br>' + it.note
       + (inp ? '<br><span class="muted">needs:</span> ' + inp.it._skill.name + ': ' + inp.it.name : (it.input ? '<br><span class="muted">needs:</span> ' + it.input : ''))
       + (uses.length ? '<br><span class="muted">used by:</span> ' + uses.join('; ') : '');

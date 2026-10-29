@@ -1,6 +1,6 @@
 {
   "title": "Pirate Ship: goods on the skill trees (proposed)",
-  "status": "Rex's split of 2026-10-28 applied (Farming, Animal Husbandry, Marine Gathering, Dye Making, Perfumery; Swimming is a gate, not a goods skill); placements still proposed",
+  "status": "Rex's splits of 2026-10-28 applied (Farming group; Cooking into Milling, Baking, Butchering, Preserving, Dairying, Waxworking; Tanning apart); placements still proposed",
   "bands": [
     {
       "key": "novice",
@@ -36,7 +36,8 @@
   "flags": {
     "offMap": "made outside the game's Caribbean in this period (Europe, Asia, Africa, the Spanish mainland); the skill tree says where it would sit if a town ever makes it",
     "input": "needs a good from another skill (the chain the economy follows)",
-    "gate": "needs another skill at some level to reach the place (Swimming for depth); that skill makes nothing"
+    "gate": "needs another skill at some level to reach the place (Swimming for depth); that skill makes nothing",
+    "unsourced": "Rex's addition with no period source found; a design good, not a historical record"
   },
   "groups": [
     {
@@ -134,7 +135,8 @@
               "good": 62,
               "name": "Aromatic flowers and herbs",
               "band": "apprentice",
-              "note": "Rex's addition: a crop for Perfumery. No period Caribbean source; marked unsourced"
+              "note": "Rex's addition: a crop for Perfumery. No period Caribbean source; marked unsourced",
+              "unsourced": true
             }
           ]
         },
@@ -162,12 +164,6 @@
               "name": "Milk",
               "band": "apprentice",
               "note": "for Cooking's cheese and butter"
-            },
-            {
-              "good": 16,
-              "name": "Hides (farm)",
-              "band": "novice",
-              "note": "from slaughtered farm stock; wild hides are Hunting"
             },
             {
               "good": 33,
@@ -221,7 +217,8 @@
               "good": 63,
               "name": "Seaweed",
               "band": "novice",
-              "note": "Rex's addition; no period trade in the sources, marked unsourced"
+              "note": "Rex's addition; no period trade in the sources, marked unsourced",
+              "unsourced": true
             }
           ]
         },
@@ -229,38 +226,20 @@
           "key": "hunting",
           "name": "Hunting",
           "existing": false,
-          "covers": "wild cattle, hogs and deer; hides and tallow; the hunters' own smoking and salting (boucan); tanning",
-          "why": "Exquemelin's hunters took hides, tallow and meat and cured it themselves (E2). Tanning is folded in: it was a one-off here.",
+          "covers": "tracking and killing wild cattle, hogs, deer; the carcass",
+          "why": "Obtaining the animal only (Rex, 2026-10-28). Skinning is Butchering, curing is Preserving, leather is Tanning. A hunter with low Butchering wastes the carcass.",
           "items": [
             {
               "good": 16,
-              "name": "Hides",
+              "name": "Wild cattle and hog carcasses",
               "band": "novice",
-              "note": "the kill and the flaying; Spanish Hispaniola 'exercising no other traffic' (E2)"
-            },
-            {
-              "good": 17,
-              "name": "Tallow",
-              "band": "novice",
-              "note": "rendering the fat; sold with the hides (E2)"
+              "note": "Hispaniola's wild herds (E2)"
             },
             {
               "good": 32,
-              "name": "Deerskins",
+              "name": "Deer carcasses",
               "band": "apprentice",
               "note": "Carolina's trade with the Indian nations (CCR)"
-            },
-            {
-              "good": 61,
-              "name": "Boucan and salted boar",
-              "band": "apprentice",
-              "note": "smoked on the boucan frame; the hunters' own craft (E2)"
-            },
-            {
-              "good": 16,
-              "name": "Tanned leather",
-              "band": "journeyman",
-              "note": "tanning folded in; a separate skill only if the game makes leather goods"
             },
             {
               "good": 57,
@@ -275,7 +254,7 @@
           "key": "fishing",
           "name": "Fishing",
           "existing": true,
-          "covers": "the catch; the salt-fish cure on the beach; turtling at sea",
+          "covers": "the catch; turtling at sea",
           "why": "Already a skill with its own minigame. Turtling is netting at sea from sloops (D), so it stays here; shells and pearls are Marine Gathering.",
           "items": [
             {
@@ -283,12 +262,6 @@
               "name": "Fresh fish",
               "band": "novice",
               "note": "the minigame's catch"
-            },
-            {
-              "good": 24,
-              "name": "Salt fish",
-              "band": "apprentice",
-              "note": "split, salted and dried on the flakes; the poor grade went to the islands (HV)"
             },
             {
               "good": 60,
@@ -404,16 +377,9 @@
           "key": "cooking",
           "name": "Cooking",
           "existing": true,
-          "covers": "milling, baking, butchering and salting, dairying, tallow candles, chocolate; the galley",
-          "why": "Already a skill. Every preserved food is folded in: miller, baker, butcher and chandler were separate trades in London but one-offs in a small port, and the game's cook already handles stores (DUTIES).",
+          "covers": "meals and dishes; the galley; chocolate",
+          "why": "Meals only (Rex, 2026-10-28). Milling, Baking, Butchering, Preserving, Dairying and Waxworking are skills of their own.",
           "items": [
-            {
-              "good": 20,
-              "name": "Flour and meal",
-              "band": "novice",
-              "input": "farming:Grain for meal and flour",
-              "note": "grinding; New York's bolting monopoly guarded the quality (VR)"
-            },
             {
               "good": 18,
               "name": "Lime juice",
@@ -421,32 +387,11 @@
               "note": "pressed and casked; 1,512 gallons to London in one month (C81)"
             },
             {
-              "good": 45,
-              "name": "Tallow candles",
-              "band": "apprentice",
-              "input": "hunting:Tallow",
-              "note": "dipping; they fuse in the heat (L)"
-            },
-            {
               "good": 21,
-              "name": "Ship's biscuit",
+              "name": "Salmagundi and the hot meal",
               "band": "apprentice",
-              "input": "cooking:Flour and meal",
-              "note": "baked hard, twice; 16s a hundredweight (PY)"
-            },
-            {
-              "good": 22,
-              "name": "Salt beef and pork",
-              "band": "apprentice",
-              "input": "husbandry:Cattle and hogs (farm)",
-              "note": "cut, brined and packed in barrel; a short barrel was noticed (PY)"
-            },
-            {
-              "good": 43,
-              "name": "Cheese and butter",
-              "band": "journeyman",
-              "input": "husbandry:Milk",
-              "note": "dairying; spoils in the heat (L), so an off-map import in practice"
+              "input": "preserving:Salt beef and pork",
+              "note": "the one hot meal from the galley (DUTIES); not a traded good"
             },
             {
               "good": 11,
@@ -454,6 +399,230 @@
               "band": "journeyman",
               "input": "farming:Cacao, sweated and dried",
               "note": "roasting and grinding the nut; a Spanish taste first"
+            }
+          ]
+        },
+        {
+          "key": "milling",
+          "name": "Milling",
+          "existing": false,
+          "covers": "grinding grain to flour and meal; the sugar mill is Sugar boiling",
+          "why": "Its own skill (Rex, 2026-10-28). New York guarded its flour's name with a bolting monopoly (VR).",
+          "items": [
+            {
+              "good": 44,
+              "name": "Meal (coarse)",
+              "band": "novice",
+              "input": "farming:Grain for meal and flour",
+              "note": "'Barrels of meale close put up' (L)"
+            },
+            {
+              "good": 26,
+              "name": "Oatmeal",
+              "band": "apprentice",
+              "input": "farming:Grain for meal and flour",
+              "note": "Roberts took '10 Casks of Oatmeal' (J)"
+            },
+            {
+              "good": 20,
+              "name": "Flour (bolted)",
+              "band": "journeyman",
+              "input": "farming:Grain for meal and flour",
+              "note": "bolted fine; 196 lb to the barrel (FL)"
+            }
+          ]
+        },
+        {
+          "key": "baking",
+          "name": "Baking",
+          "existing": false,
+          "covers": "bread and ship's biscuit",
+          "why": "Its own skill (Rex, 2026-10-28). Large quantities of biscuit were baked in the Connecticut Valley and Philadelphia for the islands (PH).",
+          "items": [
+            {
+              "good": 21,
+              "name": "Bread",
+              "band": "novice",
+              "input": "milling:Meal (coarse)",
+              "note": "daily bread; not a cargo"
+            },
+            {
+              "good": 21,
+              "name": "Ship's biscuit",
+              "band": "apprentice",
+              "input": "milling:Flour (bolted)",
+              "note": "baked hard, twice; 16s a hundredweight (PY); well baked, it keeps for years (SV)"
+            }
+          ]
+        },
+        {
+          "key": "butchering",
+          "name": "Butchering",
+          "existing": false,
+          "covers": "skinning and dividing a carcass: meat, raw hide, fat, bone",
+          "why": "Its own skill (Rex, 2026-10-28): obtaining the animal is Hunting or Animal Husbandry; the carcass is this. Raw hides come from here.",
+          "items": [
+            {
+              "good": 22,
+              "name": "Fresh meat",
+              "band": "novice",
+              "input": "husbandry:Cattle and hogs (farm)",
+              "note": "for the galley and for Preserving"
+            },
+            {
+              "good": 16,
+              "name": "Raw hides",
+              "band": "apprentice",
+              "input": "hunting:Wild cattle and hog carcasses",
+              "note": "flaying clean; 'cow hides 69 ... buff hides 768' to London (C81)"
+            },
+            {
+              "good": 17,
+              "name": "Tallow (rendered)",
+              "band": "apprentice",
+              "input": "hunting:Wild cattle and hog carcasses",
+              "note": "the fat rendered; sold with the hides (E2)"
+            },
+            {
+              "good": 32,
+              "name": "Deerskins (raw)",
+              "band": "journeyman",
+              "input": "hunting:Deer carcasses",
+              "note": "a clean skin is worth more; 'Skinns' from Carolina (CCR)"
+            }
+          ]
+        },
+        {
+          "key": "preserving",
+          "name": "Preserving",
+          "existing": false,
+          "covers": "salting, smoking, drying: meat and fish that keep at sea",
+          "why": "Its own skill (Rex, 2026-10-28). The boucaniers' smoking frame and the salt-fish flakes are the same expertise: keeping food.",
+          "items": [
+            {
+              "good": 24,
+              "name": "Salt fish",
+              "band": "novice",
+              "input": "fishing:Fresh fish",
+              "note": "split, salted and dried; the poor grade went to the islands (HV)"
+            },
+            {
+              "good": 61,
+              "name": "Boucan (smoked meat)",
+              "band": "apprentice",
+              "input": "butchering:Fresh meat",
+              "note": "hardened with smoke for sea voyages (E2)"
+            },
+            {
+              "good": 22,
+              "name": "Salt beef and pork",
+              "band": "journeyman",
+              "input": "butchering:Fresh meat",
+              "note": "cut, brined and packed tight in barrel; a short barrel was noticed (PY)"
+            },
+            {
+              "good": 61,
+              "name": "Salted boar",
+              "band": "journeyman",
+              "input": "butchering:Fresh meat",
+              "note": "'salt it, and sell it so to the planters' (E2)"
+            }
+          ]
+        },
+        {
+          "key": "dairying",
+          "name": "Dairying",
+          "existing": false,
+          "covers": "butter and cheese from milk",
+          "why": "Its own skill (Rex, 2026-10-28). Nearly all of it was off-map: Ligon says butter and cheese from England or Holland often spoil on the way (L).",
+          "items": [
+            {
+              "good": 43,
+              "name": "Butter",
+              "band": "apprentice",
+              "input": "husbandry:Milk",
+              "note": "in firkins; weight open (ML)"
+            },
+            {
+              "good": 43,
+              "name": "Cheese",
+              "band": "journeyman",
+              "input": "husbandry:Milk",
+              "note": "'a hundred-weight of Gloucester cheese' to Virginia (BR)"
+            }
+          ]
+        },
+        {
+          "key": "waxworking",
+          "name": "Waxworking",
+          "existing": false,
+          "covers": "candles first, then wax seals, moulded and ceremonial candles, wax portraits and figures",
+          "why": "Rex's skill (2026-10-28), renamed from Candlemaking so it has a ladder to Master. Tallow candles are sourced (L); beeswax and wax sculpture were real European trades but nothing in the period Caribbean sources, so those tiers are marked unsourced. Wax sculpture was an artist's trade, not the top of the chandler's; joining them is a design choice.",
+          "items": [
+            {
+              "good": 45,
+              "name": "Tallow candles",
+              "band": "novice",
+              "input": "butchering:Tallow (rendered)",
+              "note": "dipped; they fuse in the heat (L)"
+            },
+            {
+              "good": 45,
+              "name": "Wax seals",
+              "band": "novice",
+              "unsourced": true,
+              "note": "sealing wax for letters; no Caribbean source"
+            },
+            {
+              "good": 45,
+              "name": "Beeswax candles",
+              "band": "apprentice",
+              "unsourced": true,
+              "note": "cleaner burning, for church and the cabin; beeswax supply in the Caribbean open"
+            },
+            {
+              "good": 45,
+              "name": "Moulded and altar candles",
+              "band": "journeyman",
+              "unsourced": true,
+              "note": "consistent sizes, ceremonial forms"
+            },
+            {
+              "good": 45,
+              "name": "Wax portraits and anatomical models",
+              "band": "expert",
+              "unsourced": true,
+              "note": "a European art of the period; unsourced here"
+            },
+            {
+              "good": 45,
+              "name": "Lifelike wax figures",
+              "band": "master",
+              "unsourced": true,
+              "note": "the INFP's signature work (story: brothel, wax figures); a design good"
+            }
+          ]
+        },
+        {
+          "key": "tanning",
+          "name": "Tanning",
+          "existing": false,
+          "covers": "raw hide to leather",
+          "why": "Kept apart from Butchering (Rex, 2026-10-28): a butcher skins, a tanner makes leather. Leatherworking (goods made from leather) is not a skill yet; open.",
+          "items": [
+            {
+              "good": 32,
+              "name": "Dressed deerskin",
+              "band": "apprentice",
+              "input": "butchering:Deerskins (raw)",
+              "note": "the Carolina export went raw or half-dressed (open)"
+            },
+            {
+              "good": 16,
+              "name": "Tanned leather",
+              "band": "journeyman",
+              "input": "butchering:Raw hides",
+              "note": "bark pits take months; no Caribbean tannery in the sources, so off-map in practice"
             }
           ]
         },
@@ -591,14 +760,16 @@
               "name": "Fragrant oils and waters",
               "band": "journeyman",
               "input": "farming:Aromatic flowers and herbs",
-              "note": "unsourced for the Caribbean; a cultural good if one region prizes it"
+              "note": "unsourced for the Caribbean; a cultural good if one region prizes it",
+              "unsourced": true
             },
             {
               "good": 62,
               "name": "Perfume",
               "band": "expert",
               "input": "perfumery:Fragrant oils and waters",
-              "note": "unsourced; the finished luxury"
+              "note": "unsourced; the finished luxury",
+              "unsourced": true
             }
           ]
         },
