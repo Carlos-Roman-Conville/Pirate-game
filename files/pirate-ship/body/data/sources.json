@@ -861,6 +861,30 @@
         "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Villette",
         "history",
         "2026-10-29"
+      ],
+      [
+        "EQ-VESS-WIKI",
+        "Wikipedia: Alembic; Retort; Crucible; Pot still; Mortar and pestle; Florence flask; Lute (material); Cupellation; Aludel; Evaporating dish; Distillation",
+        "dates, materials, terminology and temperatures for the vessels; where a page gave none the row says open",
+        "https://en.wikipedia.org/wiki/Alembic",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-VESS-GLASS",
+        "Wikipedia: Glass onion; Country Life, 'Why are wine bottles all the same shape and colour'",
+        "Digby's c. 1632 coal-fired bottle, Mansell's 1623 monopoly, shaft-and-globe to onion by the 1670s",
+        "https://en.wikipedia.org/wiki/Glass_onion",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-VESS-RUM",
+        "Wikipedia: Rum; Barbados Today on West Indies Rum Distillery",
+        "Barbados distilling from 1637, 'Rumbullion' 1651, Ligon 1650, stills by 1667; no source on worms",
+        "https://barbadostoday.bb/2020/11/20/west-indies-rum-distillery-recapturing-the-rum-of-yesteryear/",
+        "history",
+        "2026-10-29"
       ]
     ]
   }
