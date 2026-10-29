@@ -4163,9 +4163,10 @@ window.BODY_DATA = {
    "title": "Movement patterns (neural recruitment lives here, not per muscle and not in the skill)",
    "kind": "model",
    "conf": "medium",
-   "source": "ChatGPT's point (outside AI), kept: a man gets stronger at a movement by recruiting more of the muscle he has, without more muscle and without more skill; Swordplay is technique and timing, Reflexes is response speed, neither is maximal recruitment. The pattern set is the keeper's; each activation row names its patterns.",
+   "source": "ChatGPT's point (outside AI), kept: a man gets stronger at a movement by recruiting more of the muscle he has, without more muscle and without more skill; Swordplay is technique and timing, Reflexes is response speed, neither is maximal recruitment. The pattern set is the keeper's; each activation row names its patterns. Patterns that one arm performs are tracked per side (L/R), like the muscles, so handedness, a lost hand and one-sided training matter; the trunk and leg patterns are one.",
    "columns": [
     "Pattern",
+    "Sides",
     "What it is",
     "Main groups",
     "Example actions",
@@ -4175,6 +4176,7 @@ window.BODY_DATA = {
    "rows": [
     [
      "Horizontal pull",
+     "L/R",
      "pulling toward the body",
      "lats, trap_mid, rhomboids, delt_rear, biceps, forearm_flex",
      "hauling a line, rope rows, pulling apart",
@@ -4183,6 +4185,7 @@ window.BODY_DATA = {
     ],
     [
      "Vertical pull",
+     "L/R",
      "pulling down from overhead",
      "lats, trap_lower, biceps, forearm_flex",
      "climbing the shrouds, pull-ups on a yard",
@@ -4191,6 +4194,7 @@ window.BODY_DATA = {
     ],
     [
      "Horizontal push",
+     "L/R",
      "pushing away",
      "pec_stern, pec_clav, delt_front, triceps",
      "a thrust, pushing a gun carriage, a shove in a grapple",
@@ -4199,6 +4203,7 @@ window.BODY_DATA = {
     ],
     [
      "Vertical push",
+     "L/R",
      "pushing overhead",
      "delt_front, delt_mid, triceps, trap_upper",
      "pressing a cask, working a yard overhead",
@@ -4207,6 +4212,7 @@ window.BODY_DATA = {
     ],
     [
      "Squat and hinge",
+     "one",
      "driving with the legs and hips from a bend",
      "quads, glute_max, hamstrings, erectors",
      "lifting a stone, the capstan, standing from a crouch under a load",
@@ -4215,6 +4221,7 @@ window.BODY_DATA = {
     ],
     [
      "Grip",
+     "L/R",
      "holding on",
      "forearm_flex, hand",
      "everything with a rope, a cutlass, a fish on the line",
@@ -4223,6 +4230,7 @@ window.BODY_DATA = {
     ],
     [
      "Rotation",
+     "one",
      "twisting the trunk",
      "obliques, abs, erectors",
      "a cutlass cut, a cast, the hammer at the anvil",
@@ -4231,6 +4239,7 @@ window.BODY_DATA = {
     ],
     [
      "Carry and brace",
+     "one",
      "holding a load against the body",
      "trap_upper, erectors, deep_core, forearm_flex",
      "carrying a cask, bracing on a rolling deck",
@@ -4239,6 +4248,7 @@ window.BODY_DATA = {
     ],
     [
      "Locomotion",
+     "one",
      "running and jumping",
      "glute_max, hamstrings, quads, calves, hip_flex",
      "a charge, a jump between rails, the beach run",
@@ -4247,11 +4257,12 @@ window.BODY_DATA = {
     ],
     [
      "Fine manipulation",
-     "the hand's control (overlaps Dexterity; here only the recruitment side)",
+     "L/R",
+     "the hand's learned control of its small muscles (ChatGPT, outside AI, 2026-10-29: Dexterity is the general fine-motor capability, this is the recruitment the hand has practised, the skill is the task's technique; a swordsman and a surgeon share Dexterity, not this)",
      "hand, forearm_ext",
-     "needle, cards, a knot",
+     "needle, cards, a knot, a lancet, a lock; the off hand learns it after the dominant hand is lost without relearning the skill",
      "per character",
-     "proposed (open: whether this pattern exists apart from Dexterity)"
+     "proposed (outside AI recommends keeping it as its own pattern, per hand; Rex's stamp wanted)"
     ]
    ]
   },

@@ -300,20 +300,20 @@ All **(proposed)**; the biology is established, the numbers are placeholders.
   fitness; a gym that can aim at size, endurance, tendon or technique.
 
 <!-- table:muscular.patterns -->
-*Movement patterns (neural recruitment lives here, not per muscle and not in the skill)* (model; confidence medium; source: ChatGPT's point (outside AI), kept: a man gets stronger at a movement by recruiting more of the muscle he has, without more muscle and without more skill; Swordplay is technique and timing, Reflexes is response speed, neither is maximal recruitment. The pattern set is the keeper's; each activation row names its patterns.)
+*Movement patterns (neural recruitment lives here, not per muscle and not in the skill)* (model; confidence medium; source: ChatGPT's point (outside AI), kept: a man gets stronger at a movement by recruiting more of the muscle he has, without more muscle and without more skill; Swordplay is technique and timing, Reflexes is response speed, neither is maximal recruitment. The pattern set is the keeper's; each activation row names its patterns. Patterns that one arm performs are tracked per side (L/R), like the muscles, so handedness, a lost hand and one-sided training matter; the trunk and leg patterns are one.)
 
-| Pattern | What it is | Main groups | Example actions | Recruitment index (0 to 100; 50 ordinary) | Mark |
-|---|---|---|---|---|---|
-| Horizontal pull | pulling toward the body | lats, trap_mid, rhomboids, delt_rear, biceps, forearm_flex | hauling a line, rope rows, pulling apart | per character | proposed |
-| Vertical pull | pulling down from overhead | lats, trap_lower, biceps, forearm_flex | climbing the shrouds, pull-ups on a yard | per character | proposed |
-| Horizontal push | pushing away | pec_stern, pec_clav, delt_front, triceps | a thrust, pushing a gun carriage, a shove in a grapple | per character | proposed |
-| Vertical push | pushing overhead | delt_front, delt_mid, triceps, trap_upper | pressing a cask, working a yard overhead | per character | proposed |
-| Squat and hinge | driving with the legs and hips from a bend | quads, glute_max, hamstrings, erectors | lifting a stone, the capstan, standing from a crouch under a load | per character | proposed |
-| Grip | holding on | forearm_flex, hand | everything with a rope, a cutlass, a fish on the line | per character | proposed |
-| Rotation | twisting the trunk | obliques, abs, erectors | a cutlass cut, a cast, the hammer at the anvil | per character | proposed |
-| Carry and brace | holding a load against the body | trap_upper, erectors, deep_core, forearm_flex | carrying a cask, bracing on a rolling deck | per character | proposed |
-| Locomotion | running and jumping | glute_max, hamstrings, quads, calves, hip_flex | a charge, a jump between rails, the beach run | per character | proposed |
-| Fine manipulation | the hand's control (overlaps Dexterity; here only the recruitment side) | hand, forearm_ext | needle, cards, a knot | per character | proposed (open: whether this pattern exists apart from Dexterity) |
+| Pattern | Sides | What it is | Main groups | Example actions | Recruitment index (0 to 100; 50 ordinary) | Mark |
+|---|---|---|---|---|---|---|
+| Horizontal pull | L/R | pulling toward the body | lats, trap_mid, rhomboids, delt_rear, biceps, forearm_flex | hauling a line, rope rows, pulling apart | per character | proposed |
+| Vertical pull | L/R | pulling down from overhead | lats, trap_lower, biceps, forearm_flex | climbing the shrouds, pull-ups on a yard | per character | proposed |
+| Horizontal push | L/R | pushing away | pec_stern, pec_clav, delt_front, triceps | a thrust, pushing a gun carriage, a shove in a grapple | per character | proposed |
+| Vertical push | L/R | pushing overhead | delt_front, delt_mid, triceps, trap_upper | pressing a cask, working a yard overhead | per character | proposed |
+| Squat and hinge | one | driving with the legs and hips from a bend | quads, glute_max, hamstrings, erectors | lifting a stone, the capstan, standing from a crouch under a load | per character | proposed |
+| Grip | L/R | holding on | forearm_flex, hand | everything with a rope, a cutlass, a fish on the line | per character | proposed |
+| Rotation | one | twisting the trunk | obliques, abs, erectors | a cutlass cut, a cast, the hammer at the anvil | per character | proposed |
+| Carry and brace | one | holding a load against the body | trap_upper, erectors, deep_core, forearm_flex | carrying a cask, bracing on a rolling deck | per character | proposed |
+| Locomotion | one | running and jumping | glute_max, hamstrings, quads, calves, hip_flex | a charge, a jump between rails, the beach run | per character | proposed |
+| Fine manipulation | L/R | the hand's learned control of its small muscles (ChatGPT, outside AI, 2026-10-29: Dexterity is the general fine-motor capability, this is the recruitment the hand has practised, the skill is the task's technique; a swordsman and a surgeon share Dexterity, not this) | hand, forearm_ext | needle, cards, a knot, a lancet, a lock; the off hand learns it after the dominant hand is lost without relearning the skill | per character | proposed (outside AI recommends keeping it as its own pattern, per hand; Rex's stamp wanted) |
 <!-- /table -->
 
 <!-- table:muscular.tendons -->
@@ -334,8 +334,15 @@ All **(proposed)**; the biology is established, the numbers are placeholders.
   (technique and timing, `STATS.md` §2) and not Reflexes (response speed); it is how much of the muscle
   the nerves can call on in that pattern, and it sits with the pattern. Tendon tolerance is not the
   muscle's condition; it sits with the joint.
+- **Handedness (ChatGPT's refinement, outside AI, 2026-10-29; kept):** the one-arm patterns (pulls,
+  pushes, grip, fine manipulation) are per side like the muscles, so a man who loses his sword hand can
+  build the off hand's recruitment over months without relearning Swordplay, which is knowledge; the
+  trunk and leg patterns are one.
 - **Mark:** structure **(proposed, outside AI)**; the pattern and tendon sets and every number
-  **(proposed)**; whether fine manipulation is a pattern apart from Dexterity **(open)**.
+  **(proposed)**. ChatGPT's closing recommendation (2026-10-29): keep all four levels and keep fine
+  manipulation as its own pattern per hand, apart from Dexterity (the general capability) and the skills
+  (the task's technique). Recorded as its recommendation; **Rex's stamp wanted** before any of §5a is
+  canon.
 
 ## 6. Injuries and recovery
 
@@ -439,7 +446,8 @@ All **(proposed)**; the biology is established, the numbers are placeholders.
 7. ~~Tendon capacity, neural recruitment~~ now in §5a (proposed). Still not modelled from the audit's
    list: joint range of motion, contraction velocity, bilateral coordination, flexibility, bone
    adaptation. Whether the sim goes that deep is Rex's.
-8. §5a itself: keep the four-level structure, or cut back to the two muscle states.
+8. §5a itself: keep the four-level structure with fine manipulation per hand (ChatGPT recommends; the
+   keeper agrees), or cut back. Rex's stamp makes it canon; until then every row stays proposed.
 
 ## Sources
 
