@@ -256,6 +256,33 @@ nothing is built. The current simulator verdicts (OG 61, CG 68, OE 49, CE 57) st
     the town's clock while fishing for convoys; whether a town's institutions can ghost from neglect while the
     player is away is the same open as "when a slot turns ghosted" (UPGRADES.md). Decide together.
 
+28. **The ghost rule vs "only death transforms" (Rex, 2026-10-29, COMBAT.md §4e).** C1 b ghosts the rival for
+    losing the pair competition; Rex's new framing says a character becomes a ghost or anything else only on
+    actual death, and the form depends on who did it. Both can't stand as written. Options: (a) the pair loser
+    *dies* of something the story gives, and the form follows the killer (keeps scarcity, needs a cause per
+    pair); (b) the pair loser leaves or stays undeveloped, nobody ghosts from losing, and ghosts come only from
+    death (scarcity has to come from elsewhere, C5 item 1); (c) both coexist, institutional ghosts (a place
+    ghosted) stay as they are and character forms are a separate thing (the engine already keeps the two apart,
+    item 4). Rex's call; the sim reruns under whichever.
+29. **Fates become fate + form.** `alive | dead | missing`, and for the dead a form (ghost, mecha, zombie,
+    angel, demon, fish-person) granted by the resurrecting faction or the killer. All data; the engine needs
+    `die`, `transform`, `resurrect` and a rule for what a formed character still does to the town (a mecha still
+    runs the forge? a ghost still counts toward the mean? Rex). "Missing" has no form and no influence; whether
+    a missing character can return is the story keeper's.
+30. **Resurrection is a recovery path the sim may lean on.** If every death can be undone by a faction at the
+    price of a storyline, no ending closes from a death, only from the faction's cost; the sim must then check
+    that the cost (which faction you have to deal with, and what that does to the square) doesn't itself close
+    the ending the resurrection was meant to save. Deliberate sacrifice (kill a recruit for a stronger form,
+    proposed) is a strategy the sim should find and Rex should price, not a bypass to propose.
+31. **"Perfect" may change meaning.** ChatGPT's proposal (not Rex's yet): a perfect ending is completing certain
+    influential characters' personal endings, some mutually exclusive. Today perfect means every slot developed
+    in one quadrant. If Rex takes it, the simulator's search target changes and so do the four verdicts; if he
+    folds it in beside the present rule, perfect gets harder, not easier. Ask before anything else in Phase 3.
+32. **New ways a sector's only developer dies** (disease, accident, a far-away butterfly: the body and world docs
+    the combat keeper's note lists) are the same problem as the siege fates (item 13). The sim can only hold the
+    guarantee if named characters are fenced (story deaths only), or every unscripted death has a succession or a
+    resurrection. Rex hasn't said which; the combat keeper's note offers ChatGPT's "conditional with succession".
+
 ## Are the alignment maps on file?
 
 **Yes.** Rex's maps are recorded by the story keeper as Rex (each character file's "Inner rules" section and the
@@ -560,3 +587,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | C5 items 24–27: where the economy lives, three engines one clock, economic viability unowned, ocean waiting vs town neglect | keeper |
 | 2026-10-28 | C5 item 24 decided: the economy engine is a Toolchain package | Rex |
 | 2026-10-28 | C5 items 16–19 revised for the final nine factions on the square (16 superseded, 17 answered with a new open, 18 sharpened, 19 widened to nine with Rex's allowed list) | Rex (chart); keeper |
+| 2026-10-29 | C5 items 28–32: ghost rule vs death, fate + form, resurrection as recovery, perfect redefined, unscripted deaths; from Rex's death decision in COMBAT.md §4e | Rex (via combat keeper); keeper |

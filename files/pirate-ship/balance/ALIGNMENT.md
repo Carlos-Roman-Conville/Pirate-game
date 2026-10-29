@@ -483,6 +483,40 @@ The square, the charts, the player's movement, the overnight rule, the mean and 
   `imperial`, `ghost-fleet`, `free-pirates`, `abyssal-cult`, `devil-cult`, `criminal-pirates`, each with its region
   key (`og`, `og-cg`, `cg`, `og-oe`, `neutral`, `cg-ce`, `oe`, `oe-ce`, `ce`) and Rex's sub-label as display text.
 
+### Seventh run-down, 2026-10-29: death, resurrection by faction, transformation through character endings (Rex, recorded by the combat keeper in `combat/COMBAT.md` §4e; carried here, nothing built)
+
+Rex decided this in the combat session; the combat keeper recorded his words in `combat/COMBAT.md` §4e and told
+this keeper. Provenance below is "(Rex, per COMBAT.md §4e)"; this keeper has not heard it from Rex directly.
+
+- **(Rex, per COMBAT.md §4e)** A dead party member can be **resurrected through the faction you choose**, and
+  **each resurrection ends that character's storyline**: Atlanteans → mecha AI (memories, thoughts, beliefs
+  frozen at death; no development; mecha upgrades); Ghost Fleet → ghost; Free Pirates → voodoo zombie;
+  Imperials (orderly) → angel; Merfolk → not decided. "Lose a player, get a stronger one, but lose out on the
+  story": a built-in crutch.
+- **(Rex, per COMBAT.md §4e)** Becoming a ghost (or anything else) follows **actual death**, not losing to
+  another character ("not so simple"). **The state depends on who did it:** Cthulhu cult → fish person; devil
+  cult → demon; a chaotic-evil kidnapping → **missing**, no ghost. The community continues; that storyline ends.
+- **(Rex, per COMBAT.md §4e)** Your actions can **butterfly** into a death far away; the game is completable with
+  everyone dead (ghosts have their own needs); or there are **game modes**, since the game treats death as a
+  penalty.
+- **(Rex, per COMBAT.md §4e, later the same day)** "Getting too convoluted": the cleaner shape is that
+  **transformation is part of character endings.** Some characters have their own endings (a secondary ending
+  system, not enforced yet) that require you to bring them people; those people are transformed, you get an
+  upgraded unit, and the character's storyline advances down their alignment, so it stays inside the alignment
+  system. The INTJ with no test subjects seeks the fish people outside; given bodies, her goals are satisfied.
+  Many storylines follow, so some procedural generation is needed.
+- **(proposed, outside AI; in §4e)** Two ending layers, town and character, the second feeding the first; a
+  **perfect** alignment ending redefined as completing the personal endings of certain influential characters,
+  some mutually exclusive; death, transformation and role succession kept apart; a deliberate sacrifice for a
+  stronger form as a priced dark strategy; game modes as a table over one simulation.
+- **(keeper)** What this does to this lane, each an open in BALANCE C5 (items 28–32): the ghost rule (C1 b:
+  losing the pair competition ghosts the rival) and Rex's new "only actual death transforms" can't both stand
+  as written; the engine's planned fate set (`alive | dead | ghost`, PLAN unit 21) becomes a fate plus a **form**
+  (missing, mecha, zombie, angel, demon, fish-person, ghost) whose value is data keyed by faction and killer;
+  resurrection is a recovery path the reachability sim may count on, and "perfect" may stop meaning "all
+  developed" and start meaning "these characters' endings completed". The engine still needs only verbs
+  (`die`, `transform`, `resurrect`) and data; which forms exist and who grants them never enters the code.
+
 ## Change log
 
 | Date | Change | By |
@@ -505,3 +539,4 @@ The square, the charts, the player's movement, the overnight rule, the mean and 
 | 2026-10-28 | §10 fifth run-down: the Caribbean map, fast travel with days and dots, ocean locales and waiting, companies that respond, and the economy as a reusable simulation (three goods types, cache and consumption per settlement) | Rex (scope); keeper |
 | 2026-10-28 | The economy engine lives in the Toolchain as a shared package; pirate-ship imports it and keeps goods, ports and companies as data | Rex |
 | 2026-10-28 | §10 sixth run-down: the final nine factions placed on the square (Atlantean, Merfolk, Lost Boys, Imperial, Ghost Fleet, Free Pirates, Abyssal Cult, Devil Cult, Criminal Pirates), one per engine region; Holy Order folded into Imperial; factions now carry a fixed alignment | Rex (scope); keeper |
+| 2026-10-29 | §10 seventh run-down: death, resurrection by faction (each ends a storyline), transformation by killer, transformation through character endings, perfect possibly redefined (Rex, per COMBAT.md §4e; told by the combat keeper) | Rex (scope, via combat keeper); keeper |
