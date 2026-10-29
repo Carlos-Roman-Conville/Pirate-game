@@ -26,7 +26,7 @@ Columns:
 
 | # | Good | Kind | Origin → destination | Package | Spoils | Value | Type | Sources |
 |---|---|---|---|---|---|---|---|---|
-| 1 | Muscovado (brown) sugar | semi | Barbados and the other plantations → London, Bristol; also → New England for provisions | "Caskes and Chests" (Ligon, 1650s); hogsheads (Pynchon 1665; Teach's haul 1718). Hogshead weight for 1650–1730: open. Hints: Ligon's curing pots each held about 30–35 lb, and a customs note says two Barbados hogsheads held "nine hundred weight" | Drains in the hold. A loss of about 5% is reported, but from 19th-century evidence (late) | 3d/lb on Barbados and 12d/lb in London (1650s). 33–47s per cwt in London (1701–05). 13s 6d–14s per cwt on Barbados (1685) | specialty (proposed) | L, PY, J, ML, JEH, C85, LAW |
+| 1 | Muscovado (brown) sugar | semi | Barbados and the other plantations → London, Bristol; also → New England for provisions | "Caskes and Chests" (Ligon, 1650s); hogsheads (Pynchon 1665; Teach's haul 1718). Hogshead weight for 1650–1730: open. Hints: Ligon's curing pots each held about 30–35 lb, and a customs note says two Barbados hogsheads held "nine hundred weight" | Drains in the hold. A loss of about 5% is reported, but from 19th-century evidence (late) | 3d/lb on Barbados and 12d/lb in London (1650s). 33–47s per cwt in London (1701–05). 13s 6d–14s per cwt on Barbados (1685). 25s per cwt as a legal rate for payments, Jamaica 1661 | specialty (proposed) | L, PY, J, ML, JEH, C85, LAW, C61 |
 | 2 | Clayed (white) sugar | semi | Barbados → London | casks and chests | open | 20d/lb in London (1650s) | specialty (proposed) | L, C81 |
 | 3 | Refined loaf sugar | manufactured | Muscovado refined in Bristol and London. Pirates also took "loaf sugar" from a New England ship (1722) | loaf (cone mould) | open | open | specialty (proposed) | DB1, J |
 | 4 | Molasses | by-product of sugar | Reboiled on the plantation into rum or low-grade sugar; → London (91½ cwt in one month, 1681); → New England to be distilled | hogshead (Bonnet took "two Hogsheads ... of Molosses", 1718) | open | open | base (proposed) | L, C81, J, HV |
@@ -36,15 +36,15 @@ Columns:
 | 8 | Cotton wool | raw | Barbados and the plantations → London, New England | bag ("221 bags", 1681); bale (Teach's haul, 1718) | open | open | base (proposed) | C81, PY, J |
 | 9 | Indigo | raw dye, worked in vats | English West Indies → London (168,807 lb, 1687–88); Puerto Rico → Jamaica, smuggled | lb. Barrel (Teach's haul). Leather sacks (Exquemelin) | open | 8–9s/lb (Boston 1720, unverified). 3 rials/lb bought in Puerto Rico, worth 3s 6d/lb in Jamaica (1680s) | specialty (proposed) | C88, D, J, E, HW |
 | 10 | Annatto ("otta") | raw dye | Puerto Rico → Jamaica | lb | open | 5s/lb in Jamaica (1680s) | specialty (proposed) | D |
-| 11 | Cacao (cocoa) | raw nut, sweated and sun-dried | Caracas coast → Holland on Dutch ships; Jamaica (small, crops failed in the 1660s); Martinique → France; → Spain on the fleets | bag (Teach's haul: 145 bags, 1718). L'Olonnais took "120,000 weight" | Crop disease (Jamaica, the "blast"); storm losses (Martinique, 1718) | open | cultural (proposed: chocolate was a Spanish taste first; Rex to decide) | D, PT, J, E, EB15, WHF |
-| 12 | Logwood | raw dyewood | Cut at Campeche and in the Bay of Honduras by men from Jamaica → London, Amsterdam, and by the 1720s via New England. Spain expelled the cutters from Campeche in 1717 | cwt, ton (725 cwt in one month, 1681) | no (wood) | open | specialty (proposed) | C81, D, BAY |
+| 11 | Cacao (cocoa) | raw nut, sweated and sun-dried | Caracas coast → Holland on Dutch ships; Jamaica (small, crops failed in the 1660s); Martinique → France; → Spain on the fleets | bag (Teach's haul: 145 bags, 1718). L'Olonnais took "120,000 weight" | Crop disease (Jamaica, the "blast"); storm losses (Martinique, 1718) | 4d/lb as a legal rate for payments, Jamaica 1661 | cultural (proposed: chocolate was a Spanish taste first; Rex to decide) | D, PT, J, E, EB15, WHF |
+| 12 | Logwood | raw dyewood | Cut at Campeche and in the Bay of Honduras by men from Jamaica → London, Amsterdam, and by the 1720s via New England. Spain expelled the cutters from Campeche in 1717 | cwt, ton (725 cwt in one month, 1681) | no (wood) | £5/ton in trade goods at the cutters' camps (1670s); £14–15/ton market price (Dampier's time); £25–30/ton sold from Jamaica (1670); £15/ton (1704 estimate); £13–15/ton Charleston (1715) | specialty (proposed) | C81, D, DV, BAY, CSP |
 | 13 | Other dyewoods and hardwoods: fustic, brazeletto, Nicaragua wood, lignum vitae | raw | Plantations → London (1681) | cwt, tons | no | open | specialty (proposed) | C81 |
 | 14 | Mahogany | raw timber | Jamaica → Britain. A small trade after 1700, which grew once the 1721 Act took off the duty | logs or planks: open. Described as "bulky and relatively light" | no | Imports were worth £695 (1723) and £4,060 (1729). These are totals, not unit prices | specialty (proposed) | MH, VA |
 | 15 | Tortoise shell | raw | Plantations → London (632 lb, 1681) | lb | no | open | specialty (proposed) | C81 |
 | 16 | Hides: cow, buff, cat | raw | Plantations → London (1681); Spanish Hispaniola ("vast quantities"); Cuba → the homeward fleet; Brazil (Roberts' prize, "Skins") | counted by the piece | open | open | base (proposed) | C81, E2, J, WHF |
 | 17 | Tallow | raw (rendered fat) | Spanish Hispaniola | open | open | open | base (proposed) | E2 |
 | 18 | Lime juice, aqua vitae | manufactured | Plantations → London (1,512 gal of lime juice and 944 gal of aqua vitae, 1681). Salt Tortuga rakers were supplied with lime juice | gallon | open | open | base (proposed) | C81, D |
-| 19 | Tobacco | raw, cured leaf | Virginia and Maryland → London. Also Cuba → the fleet, Brazil → Portugal, and Caribbean-grown tobacco → New England | hogshead, about 1,000 lb (950–1,200 lb packed). The 1730 Virginia Act set the cask at no more than 48 in long and 30 in at the head, at least 800 lb net, with 30 lb allowed for the cask | Dirt and stalks were sometimes packed in to add weight (quality, not spoilage) | open | specialty (proposed) | NPS, BIAS, VA30, E2, J, HV |
+| 19 | Tobacco | raw, cured leaf | Virginia and Maryland → London. Also Cuba → the fleet, Brazil → Portugal, and Caribbean-grown tobacco → New England | hogshead, about 1,000 lb (950–1,200 lb packed). The 1730 Virginia Act set the cask at no more than 48 in long and 30 in at the head, at least 800 lb net, with 30 lb allowed for the cask | Dirt and stalks were sometimes packed in to add weight (quality, not spoilage) | Planters got 10–20s per cwt (Virginia 1696) and at most 1s/lb (Maryland 1678); 4d/lb (Jamaica legal rate, 1661); 2s 6d/lb Charleston (1715); 8d/lb Newfoundland (1725); 1s 3d–1s 3¾d/lb in London lists (1715–20) | specialty (proposed) | NPS, BIAS, VA30, E2, J, HV, CSP, TR |
 
 ### 1b. The mainland colonies to the islands
 
@@ -68,14 +68,14 @@ Columns:
 
 | # | Good | Kind | Origin → destination | Package | Spoils | Value | Type | Sources |
 |---|---|---|---|---|---|---|---|---|
-| 33 | Linen and woollen cloth (lockram, canvas, dowlas, Scotch cloth, kentings, "Stuffs") | manufactured | England, Holland → Barbados, Virginia; Holland → the Spanish Main ("especially linen") | cases, chests, trunks; bales (Roberts took "twenty five Bales of Goods") | open | open | base (proposed) | L, BR, D, J |
+| 33 | Linen and woollen cloth (lockram, canvas, dowlas, Scotch cloth, kentings, "Stuffs") | manufactured | England, Holland → Barbados, Virginia; Holland → the Spanish Main ("especially linen") | cases, chests, trunks; bales (Roberts took "twenty five Bales of Goods") | open | In England: dowlas (coarse linen) 1s 5d–1s 8d per ell, holland 2s 4d–2s 8d per yard (1690s); broadcloth 10s (1687) to 23s 6d (1655) per yard. At Albany: duffels 7s 6d per yard, Stroudwater £12 10s per piece (1698) | base (proposed) | L, BR, D, J, TR, CSP |
 | 34 | Silk, chintz, muslin (Asian textiles) | manufactured | Asia → Europe → the Atlantic. Pirates took silk and linen at Maracaibo, chintzes from a French sloop (1721) and muslins from the Quedagh Merchant (1698, unverified) | bale | open | open | specialty (proposed) | E, J, WK |
 | 35 | Clothing: hats, hose, shoes, boots, gloves | manufactured | England → Barbados | open | open | open | base (proposed) | L |
-| 36 | Iron, steel, lead, brass, pewter (raw metal) | raw / bar | England → Barbados; voyage iron → West Africa (row 53) | bar; ton | no | open | base (proposed) | L, JS |
-| 37 | Iron tools and hardware: nails, hoes, axes, knives | manufactured | England → Virginia, Barbados | cases, casks | open | open | base (proposed) | BR, L |
+| 36 | Iron, steel, lead, brass, pewter (raw metal) | raw / bar | England → Barbados; voyage iron → West Africa (row 53) | bar; ton | no | Bar iron £16 10s–£18 per ton in London (1690s); Bilbao £15 10s and Swedish £16 10s per ton (London, 1728). Colonial price: open | base (proposed) | L, JS, TR |
+| 37 | Iron tools and hardware: nails, hoes, axes, knives | manufactured | England → Virginia, Barbados | cases, casks | open | Great nails 6d/lb; wrought ironwork 4d/lb (Westminster, 1703–11, retail) | base (proposed) | BR, L, TR |
 | 38 | Edged weapons and firearms: swords, muskets, great guns | manufactured | Europe → the colonies, → West Africa | open | no | open | base (proposed) | L, BR, JS, E |
 | 39 | Gunpowder and shot | manufactured | England → Virginia ("one barrel of powder, five barrels of shot") | barrel; quarter-cask (Low took six, 1722). Keg size: open | Spoils if it gets damp (no source opened) | open | base (proposed) | BR, J |
-| 40 | Wine (French, Spanish, Madeira) | manufactured | Europe and Madeira → the colonies | hogshead, pipe (sizes in 1g) | Ligon: wine in hogsheads loses its spirit in the heat | open | cultural (proposed: valued most by Europeans; Rex to decide) | L, J |
+| 40 | Wine (French, Spanish, Madeira) | manufactured | Europe and Madeira → the colonies | hogshead, pipe (sizes in 1g) | Ligon: wine in hogsheads loses its spirit in the heat | Fayal wine £8 per pipe at Jamestown (1676). On Barbados, taverns were capped at 12d a quart for Madeira, Spanish and Portuguese wine and 8d for French (1672). In London, Madeira 6s 8d and sherry 8s a gallon (1697–98); claret £16 a hogshead (1699) | cultural (proposed: valued most by Europeans; Rex to decide) | L, J |
 | 41 | Brandy | manufactured | France → the colonies (Lowther took "thirty Casks of Brandy", 1721); England → Virginia (100 gal) | cask, gallon | open | open | cultural (proposed) | J, BR |
 | 42 | Beer ("good English Beer") | manufactured | England → Barbados | hogshead (beer, 54 gal) | open | open | cultural (proposed) | L, WC |
 | 43 | Cheese, butter | manufactured food | England, Holland → Barbados, Virginia | firkin (butter; weight open); cheese by the cwt ("a hundred-weight of Gloucester cheese") | Ligon: butter and cheese often spoil | open | cultural (proposed) | L, BR |
@@ -91,7 +91,7 @@ Columns:
 |---|---|---|---|---|---|---|---|---|
 | 49 | Silver (bars, plate, pieces of eight) | raw / coin | Potosí → Panama → Portobelo by mule → Spain on the galleons. Plate valued "ten pieces of eight to a pound" (Exquemelin) | open | no | about 9 million pesos a year passed this way around 1600 (early) | specialty (proposed), or money (Open for Rex) | WHF, E |
 | 50 | Gold, gold dust, coin (moidores) | raw / coin | Brazil → Portugal (Roberts took 40,000 moidores); gold dust from West Africa | open | no | open | money (Open for Rex) | J |
-| 51 | Cochineal | raw dye (insect) | Oaxaca → Veracruz → Havana → Spain on the flota, 250,000–300,000 lb a year by 1600 (early); bought by Dutch dyers; second only to silver in value | open | open | open | specialty (proposed) | COC, WHF |
+| 51 | Cochineal | raw dye (insect) | Oaxaca → Veracruz → Havana → Spain on the flota, 250,000–300,000 lb a year by 1600 (early); bought by Dutch dyers; second only to silver in value | open | open | 18s–45s/lb in London (1714–29); 9–18 guilders per Amsterdam lb (1650–1728). Colonial price: open | specialty (proposed) | COC, WHF, TR, PO |
 | 52 | Pearls | raw | Taken from a Dutch pearl vessel, worth "above 100,000 pieces of eight" (Exquemelin) | open | no | see Origin | specialty (proposed) | E |
 
 ### 1e. The Africa trade
@@ -155,11 +155,44 @@ The sources give prices in different places, years and units, so these are rough
 | Horse | about £12 each (calc) | — | New England, 1662 | PY |
 | Enslaved person | £13.89–14.58, average | — | Barbados, 1663–64 | EL |
 | Medicine chest | £300–400 | — | Charleston, 1718 | J |
-| Logwood, cochineal, tobacco, cacao, wine, cloth, iron, salt | open | — | — | — |
+| Sugar (legal rate) | 25s per cwt | about 2.7d | Jamaica, 1661 | C61 |
+| Cacao (legal rate) | 4d/lb | 4d | Jamaica, 1661 | C61 |
+| Tobacco (legal rate) | 4d/lb | 4d | Jamaica, 1661 | C61 |
+| Tobacco, planter's price | 10–20s per cwt | about 1.1–2.1d | Virginia, 1696 | CSP |
+| Tobacco | 2s 6d/lb | 30d | Charleston, 1715 | CSP |
+| Tobacco, London list | 1s 3d–1s 3¾d/lb | 15–15.75d | London, 1715–20 | TR |
+| Logwood | £5 per ton in trade goods | about 0.5d | Campeche camps, 1670s | DV |
+| Logwood | £14–15 per ton | about 1.5–1.6d | market, Dampier's time | DV |
+| Logwood | £25–30 per ton | about 2.7–3.2d | Jamaica, 1670 | CSP |
+| Logwood | £13–15 per ton | about 1.4–1.6d | Charleston, 1715 | CSP |
+| Cochineal | 18s–45s/lb | 216–540d | London, 1714–29 | TR |
+| Bar iron | £16 10s–£18 per ton | about 1.8–1.9d | London, 1690s | TR |
+| Nails (retail) | 6d/lb | 6d | Westminster, 1705 | TR |
+| Wine (Fayal) | £8 per pipe (126 gal) | about 1s 3d a gallon (calc) | Jamestown, 1676 | CSP |
+| Wine (Madeira) | 6s 8d a gallon | — | London, 1697 | TR |
+| Wine (tavern cap) | 12d a quart (Madeira, Spanish, Portuguese); 8d (French) | — | Barbados, 1672 | CSP |
+| Linen (dowlas) | 1s 5d–1s 8d per ell | — | England, 1690s | TR |
+| Woollen (broadcloth) | 10s–23s 6d per yard | — | England, 1655–87 | TR |
+| Woollen (duffels) | 7s 6d per yard | — | Albany, New York, 1698 | CSP |
+| Salt, cotton, ginger, pimento, rice, naval stores, hides, salt meat, powder | open | — | — | — |
 
-The pattern in these numbers (calc): dyes (indigo, annatto) were worth about 10–30 times muscovado sugar by the pound,
-and sugar several times flour or biscuit. The sources reached say cochineal was second only to silver in value (COC),
-but they give no price.
+Amsterdam prices in guilders, 1650–1728 (PO), for comparison inside one market. Swedish iron: 4.75–8 guilders per
+100 lb. Virginia tobacco: 0.18–0.42 per lb. Cochineal: 9–18 per lb. Bordeaux wine: 81–162 per tun in peace, and
+360–450 in the 1690s war. Sherry: 141–345 per tun.
+
+The pattern in these numbers (calc), counting by the pound:
+- **Cochineal** (216–540d) is about 50–150 times muscovado sugar (about 3–4d).
+- **Indigo and annatto** (42–108d) are 10–30 times sugar.
+- **Sugar** is several times flour or biscuit.
+- **Logwood and bar iron** (about 1.5–2d) are bulk goods, worth less by the pound than flour.
+
+The same good cost very different amounts in different places. Tobacco brought 1–2d at a Virginia plantation and
+15d in a London list. Logwood went for £5 a ton in trade goods at the camps and £25–30 sold from Jamaica. The sources
+do not split that gap into freight, duty and profit, except for one duty figure: £4 15s per ton on logwood imported
+into England (1701, CSP).
+
+**Caveat.** Most of Rogers' English prices are retail purchases by colleges and households, and the OCR of his book
+is rough (TR).
 
 ### 1i. Spoilage summary (source)
 
@@ -431,6 +464,64 @@ ship's duties are in `DUTIES.md`. Everything in this part is **(proposed)**.
 - **Apothecary:** medicine.
 - **Refining:** loaf sugar.
 
+## 3c. Trade professions: grouping the trade skills (proposed, Rex's notes of 2026-10-28)
+
+**Where this comes from.** Rex pasted a design note, not decided. It proposes:
+- **Three progression systems, kept apart:**
+  - trade skills (making, processing, keeping and carrying goods);
+  - combat classes;
+  - magic disciplines (Voodoo, necromancy, holy magic, Atlantean machinery).
+
+  This part covers only the trade skills.
+- **Twelve broad professions that level, instead of 27 narrow skills.** Narrow activities such as ropemaking,
+  candle making, sugar refining and tar burning become **techniques** inside a profession. Techniques unlock through
+  training, quests and equipment rather than levelling on their own. The note favours this, and Rex has not decided
+  it (Open for Rex, item 10).
+- **Skill level drives the simulation, not just unlocks.** Higher level means more output per production cycle, less
+  waste and better goods. Thresholds open new recipes: a novice smith makes nails, a master makes guns. The note's
+  numbers are only illustrations.
+- **The economy engine reads a worker's profession level and nothing else** about the character: not class, romance
+  or personality. This keeps the Toolchain economy package reusable (ALIGNMENT §10).
+- **Possible later documents,** none written yet:
+  - `TRADE_SKILLS.md`: the professions;
+  - `TRADE_SPECIALIZATIONS.md`: techniques and their unlocks;
+  - `PRODUCTION_RECIPES.md`: inputs, outputs, skill needed and time;
+  - `SKILL_PROGRESSION.md`: experience, efficiency, quality.
+
+**Every trade skill from 3b placed in a profession.** "Note" means the note names the placement. "Suggested" means the
+note leaves it out and this session proposes a home; those placements are for Rex to confirm.
+
+| Profession (note) | Trade skills and techniques it takes | Goods (Part 1 rows) |
+|---|---|---|
+| Agriculture | Planting (note) | sugar cane, tobacco, cotton, rice, ginger, pimento, indigo plant, cacao, pease, grain (1–2, 6–11, 19, 25, 30) |
+| Animal Husbandry | Herding, Dairying (note) | horses, cheese, butter (27, 43) |
+| Hunting & Trapping | Hunting, Turtling (note). Tanning (suggested) | hides, tallow, deerskins, boucan, ivory, turtle, tortoise shell (15–17, 32, 57, 60–61) |
+| Fishing & Diving | Fishing, Pearl diving (note). Salt raking (suggested: "marine harvesting") | salt fish, pearls, salt (24, 52, 59) |
+| Forestry | Woodcutting (note). Tar burning as a technique (note) | logwood, dyewoods, mahogany, lumber, tar, pitch (12–14, 28–29, 31) |
+| Mining & Metallurgy | Mining and smelting (note) | silver, iron and other metals (36, 49) |
+| Cooking & Preservation | Baking, Butchering and salting, smoking (note). Milling (suggested) | biscuit, salt meat, boucan, flour, meal, oatmeal (20–23, 26, 44, 61) |
+| Brewing & Distilling | Brewing, Winemaking, Distilling (note). Sugar boiling and refining (suggested: the still stood in the sugar works, L) | rum, brandy, wine, beer, aqua vitae, molasses, sugar (1–5, 18, 40–42) |
+| Textile Crafting | Weaving, Tailoring, dyeing (note). Ropemaking as a technique (note). Dye making from plants and insects (suggested) | cloth, canvas, clothing, cordage, indigo, annatto, cochineal (9–10, 33–35, 46, 51) |
+| Woodworking & Cooperage | Carpentry, Cooperage (note) | casks, staves, hoops; repairs (28, and keeping about half the goods aboard, 3b) |
+| Smithing & Gunsmithing | Smithing, Gunsmithing, shot casting (note) | tools, nails, weapons, shot, voyage iron, manillas (37–39, 54, 56) |
+| Alchemy & Apothecary | Apothecary (note). Powder making and Candle making (suggested) | medicine, gunpowder, candles (39, 45, 48) |
+
+**What the grouping doesn't settle yet:**
+- **Sugar has no profession named in the note.** It is the biggest cash crop here (rows 1–4). Brewing & Distilling is
+  only a suggestion.
+- **Overlaps with the crew skills in `STATS.md` §2** (another keeper's file; not edited here):
+  - "Woodworking & Cooperage" merges two separate crew skills, Carpentry and Cooperage.
+  - "Cooking & Preservation" contains the crew skill Cooking.
+  - "Fishing & Diving" contains Fishing, which the fishing minigame already raises.
+  - "Smithing & Gunsmithing" contains Smithing.
+  - Sailmaking (crew) and Textile Crafting (sailcloth) touch.
+  - Surgery and medicine (crew) and Alchemy & Apothecary (making medicine) touch.
+  - Swimming (crew) and Diving touch.
+
+  Rex decides between one skill list (crew skills become professions), two lists that share names, or two separate
+  lists (Open for Rex, item 11).
+- **Turtling:** the note's prose says Hunting *or* Fishing; its table puts it under Hunting.
+
 ---
 
 ## 4. Sources
@@ -452,6 +543,30 @@ Primary or period works:
   London imports). https://www.british-history.ac.uk/node/60590
 - **C85**: CSP Colonial, vol. 12, September 1685 (Barbados sugar price).
   https://www.british-history.ac.uk/cal-state-papers/colonial/america-west-indies/vol12/pp86-99
+- **C61**: CSP Colonial, vol. 5, no. 108, Orders of the Governor and Council of Jamaica, 18 June 1661 (sugar 25s per
+  cwt, cocoa and tobacco 4d per lb as legal rates for payments).
+  https://www.british-history.ac.uk/cal-state-papers/colonial/america-west-indies/vol5/pp35-42
+- **CSP**: CSP Colonial, price entries 1661–1731. Each one is cited by volume and number in the notes file
+  `research-prices-2.md` (shared notes folder). The main ones:
+  - vol. 7 no. 310, Modyford, 1670 (logwood);
+  - vol. 22 no. 36, Jamaica export estimate, 1704 (logwood);
+  - vol. 28 no. 691.i, Tate, Charleston, 1715 (logwood, tobacco);
+  - vol. 10 no. 633, Baltimore, 1678 (tobacco);
+  - vol. 15, Blair, 1697 (tobacco);
+  - vol. 34 no. 757, Bouler, Newfoundland, 1725 (tobacco);
+  - vol. 7 no. 890, Barbados Council, 1672 (wine caps);
+  - vol. 10 no. 441, Jeffreys, 1676 (Fayal wine);
+  - vol. 16, the Albany conference, 1698 (cloth);
+  - vol. 19, 1701 (logwood duty).
+
+  https://www.british-history.ac.uk/cal-state-papers/colonial/america-west-indies
+- **DV**: William Dampier, *Voyages and Descriptions*, vol. II (1699), "Voyages to Campeachy" (logwood at £5 per ton in
+  goods at the camps; "14 or 15" pounds a ton on the market). https://archive.org/details/voyagesdescripti00damp
+- **TR**: J. E. Thorold Rogers, *A History of Agriculture and Prices in England*, vol. VI (1887) and vol. VII part 1
+  (1902). Mostly retail purchases by colleges and households, plus London price lists (Houghton, 1691–1703). Internet
+  Archive OCR: https://archive.org/details/cu31924052143777 ; https://archive.org/details/cu31924052143785
+- **PO**: N. W. Posthumus, *Inquiry into the History of Prices in Holland* (1946), Amsterdam price lists, via the
+  Rutgers database. https://memdb.libraries.rutgers.edu/posthumus-prices
 - **C88**: CSP Colonial, vol. 17, Addenda 1688 (indigo account).
   https://www.british-history.ac.uk/cal-state-papers/colonial/america-west-indies/vol17/p606
 - **PY**: *Pynchon Papers* vol. II, "The West Indies Trade" (Colonial Society of Massachusetts).
@@ -587,6 +702,13 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 9. **Trade skills (3b).** Making most goods needs a skill that `STATS.md` doesn't have (Sugar boiling, Distilling,
    Woodcutting and the rest). Options: add some to the crew skills (Distilling and Salting fit a ship); keep them as
    settlement knowledge, which marks the specialty goods; or both. Which names stay, merge or go?
+10. **How professions level (3c).** Either only the twelve broad professions level and techniques unlock through
+    training, quests and equipment (the note's preference), or specializations get levels of their own too.
+11. **Crew skills and professions (3c).** `STATS.md` §2 already has Carpentry, Cooperage, Cooking, Fishing,
+    Smithing, Sailmaking and Surgery. Do the trade professions replace them, sit beside them with shared names, or
+    stay a separate list? This needs whoever keeps STATS.md.
+12. **Unplaced trade skills (3c).** Sugar boiling and refining, Milling, Tanning, Salt raking, Dye making, Powder
+    making and Candle making: confirm or move their suggested professions.
 
 ## Change log
 
@@ -594,3 +716,5 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 |---|---|---|
 | 2026-10-28 | Created. Part 1: cargo table of 61 goods with routes, packages, spoilage, prices and units. Part 2: what pirates took, ranked from Johnson and Exquemelin. Part 3: base / specialty / cultural classes (proposed). Part 4: sources. Plus Open for Rex | research session (Rex to steer) |
 | 2026-10-28 | Added 1j cask estimates (sugar, molasses, rum: volume × density + oak cask) and 3b skills each good needs (crew skills from STATS.md, trade skills proposed); Open for Rex items 8–9 | research session, at Rex's request |
+| 2026-10-28 | Prices added for logwood, cochineal, tobacco, wine, cloth and iron, plus Jamaica's 1661 legal rates for sugar, cocoa and tobacco (CSP Colonial, Thorold Rogers, Posthumus, Dampier); 1h extended | research session, at Rex's request |
+| 2026-10-28 | 3c: Rex's notes on trade professions recorded (twelve broad professions, techniques inside them); every trade skill placed, gaps marked suggested; Open for Rex items 10-12 | research session, at Rex's request |
