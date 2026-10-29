@@ -11,8 +11,12 @@ correction; `../world/ATMOSPHERE.md` is now a consumer of it.
 
 **(Rex, 2026-10-29)** The universal scope, the equipment-as-limiter rule, the time-anomaly journal and the
 plug-in rule for anomalous equipment are his, as are the schema, the database and the scope statement
-stamped earlier the same day; the domains table, the reaction record and the honesty rule are the
-keeper's **(proposed)**; every constant a placeholder; recipes-as-reactions stays open (Rex).
+stamped earlier the same day; the domains table, the reaction record and the honesty rule were
+stamped as his the same day (the science folder's structure, Rex, 2026-10-29); every constant and catalogue entry stays a placeholder; recipes-as-reactions stays open (Rex). **Rex, the
+same day: the architecture is canon, but each specific reaction and each historical claim remains
+proposed until verified against a source** (the belt's database tasks carry that verification). **Rex, the same day: the
+architecture is canon, but each specific reaction and each historical claim remains proposed until
+verified against a source** (the belt's database tasks carry that verification).
 
 **Ownership.** This file: substances, reactions, the chemical principles (composition, properties,
 thermodynamics, kinetics, equilibrium, phases) and the domains. `PHYSICS.md` the shared physical layer.

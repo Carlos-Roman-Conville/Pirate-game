@@ -2,8 +2,8 @@
 
 Rex's objective (2026-10-29): a reusable scientific simulation engine in which the laws of nature stay
 consistent, the equipment decides what can be done, and the journal records what the player discovers,
-including discoveries that break the world's expected timeline. The pirate game is the first
-configuration. This plan sizes ChatGPT's priorities (outside AI) against what exists and what the belt
+including discoveries that break the world's expected timeline. The pirate game is the first configuration **(Rex, 2026-10-29: the science folder stays independently
+reusable across future games; the pirate setting is its first technology profile)**. This plan sizes ChatGPT's priorities (outside AI) against what exists and what the belt
 can do; every row is proposed; nothing here is engine code.
 
 ## The three layers (Rex's, via ChatGPT; adopted)
@@ -65,11 +65,13 @@ can do; every row is proposed; nothing here is engine code.
 ## Open for Rex
 
 1. ~~Keep the three layers and the folder~~ stamped with the folder's structure (Rex, 2026-10-29); still: assign a keeper for `science/` (the body keeper opened it).
-2. Start the catalogue lane now, or after the first build.
+2. ~~Start the catalogue lane now~~ approved (Rex, 2026-10-29): the equipment catalogue is the next
+   research task; 300 items a target, not a maximum. Lane tasks are in the games belt (`Card Games/_agent`).
 3. The minigames for the apparatus (yours).
 
 ## Log
 
 | Date | What | Who |
 |---|---|---|
+| 2026-10-29 | Rex: the folder's architecture is canon, constants and claims proposed until validated; the catalogue lane approved as the next research task (expandable); the minigame principle kept (skill changes how hard an apparatus is to operate, never what it can do); the folder stays independently reusable with the pirate setting as its first profile | Rex |
 | 2026-10-29 | Plan opened after Rex's correction of the chemistry scope; the audit, the three layers, ten phases, the belt list | keeper |
