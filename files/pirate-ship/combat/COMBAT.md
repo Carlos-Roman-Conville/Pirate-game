@@ -221,6 +221,64 @@ Battle Brothers (lasting injuries).
   FISHING.md`; combat reads nothing from the tag (an enemy's tag never changes a rule). `SOURCES.md` and the
   economy's period verification are where "historical" is already being proven.
 
+### 4e. Death, and resurrection by faction (Rex, 2026-10-29)
+
+What happens when a crew mate dies in a fight. The in-fight side (the wound ladder, when a wound becomes a death)
+is §4 and still open; what follows the death is Rex's, below, and mostly the story, town and balance keepers' to
+carry into their docs.
+
+- **(Rex, 2026-10-29)** **A dead party member can be "resurrected" through the alignment system you choose, and
+  each resurrection ends that character's storyline.** The Atlanteans rebuild them as a **mecha AI** with the
+  memories, thoughts and beliefs of the person, frozen in time: they don't develop, but can still do what they
+  did, and get mecha upgrades. The same for the ghost faction and the rest: the free pirates give **voodoo
+  zombies**; the orderly factions, the Imperials, bring you back as an **angel**; the merfolk give something not
+  yet decided. The penalty stands (their story is stuck) but it helps the player move the game: a built-in
+  crutch. "Lose a player, get a stronger one, but lose out on the story."
+- **(Rex, 2026-10-29)** Before that, the broader rethink: a character becomes something else not for *losing* to
+  another character but for **actual death**, and there are **several states of being depending on who did
+  what**: a Cthulhu cult turns them into a fish person; a devil cult into a demon; a chaotic-evil actor might
+  simply kidnap them, so there's no ghost, the person is **missing**. The replacement is a person in a specific
+  state based on who killed them (ghost, Cthulhu, demon, mecha). The community continues; that person's storyline
+  ends.
+- **(Rex, 2026-10-29)** Your own actions can have a **butterfly effect** that ends up killing someone far away.
+  The game is completable with everyone dead, because ghosts have their own physiological needs and desires;
+  they just aren't that NPC any more. Or: a set of **game modes**, since the game treats death as a penalty.
+- **(proposed, outside AI)** Three things kept apart: the character's death (their life and story end), their
+  transformation (they may go on in another state), and role succession (someone else does the work). A
+  transformation needn't be a death: a cult can take a living person. The replacement is separate from the
+  original (the apprentice gets the forge, not the memories). Each state of being is a physiological profile on
+  the `body/` architecture (mecha: power, parts; ghost: spiritual attachment; zombie: ritual upkeep; angel:
+  divine energy by alignment; demon: infernal sustenance; fish-person: aquatic needs), each exposing the same
+  capabilities to the economy (can they do the task, what do they consume).
+- **(proposed, outside AI)** The frozen-vs-living split: a resurrected character keeps skills, knowledge and
+  memories at the moment of death; personality, relationships and personal story stop; their new form has its
+  own progression (mechanical arms, upgraded senses). Rule: resurrection preserves accumulated investment and
+  ends growth as a person.
+- **(proposed, outside AI)** Players may kill recruits on purpose for a stronger form: a legitimate dark
+  strategy the alignment system can price, if the game distinguishes a death in battle from a deliberate
+  sacrifice, which factions and crew react to.
+- **(proposed, outside AI)** Simulation levels (unvisited: aggregate economy, politics, mortality; discovered:
+  named characters tracked; active: full detail), with unvisited never meaning unaffected. No essential function
+  should depend on one irreplaceable person (a shipwright's vessel also reachable by blueprint, apprentice,
+  purchase or your own skill), so no plot armour is needed: finishing the game always possible, a particular
+  ending dependent on what happened, a personal story sometimes closed for good. Modes as a table (Story:
+  named characters safe from random death; Adventure: death with succession; Simulation: full mortality and
+  butterfly effects; Ironman: restricted saving), one simulation underneath, modes only changing how
+  consequences resolve.
+- **(proposed, outside AI)** The one decision to make before writing the mortality system: whether a
+  transformed character keeps identity, memories and personality (a ghost who remembers, a demon who remembers
+  but wants otherwise, a replica with nothing) — Rex's mecha answer ("memories, thoughts and beliefs, frozen")
+  settles it for the Atlanteans; the other forms: open.
+- **(keeper, to Rex)** **This collides with decided canon in other lanes.** The ghost rule in `town/UPGRADES.md`
+  and `balance/BALANCE.md` (decided 2026-10-28: neither of a pair recruited → both ghosted; one → the rival
+  ghosts) makes ghosting the result of *losing* the pair competition, which is exactly the "so simple" Rex is
+  revising. The fate set in the alignment engine is alive / dead / ghost; this adds missing, mecha, zombie,
+  angel, demon, fish-person. Resurrection by faction sits on the nine factions (`balance/ALIGNMENT.md` sixth
+  run-down). Owners: town keeper (UPGRADES, fates), balance keeper (the ghost rule, the sim's reachability
+  guarantee, the sacrifice pricing), story keeper (what each form is, the merfolk's form, who kidnaps). Combat
+  owns only: a crew mate can die in a fight (settles the first half of open item 5), and what a resurrected
+  form does on the grid (mecha upgrades, a ghost's physical limits): open.
+
 ## 5. Progression: skill, not levels
 
 - **(Rex, 2026-10-29)** Combat stats can be raised, but it's mainly the **skill** that rises, and skill makes
@@ -348,7 +406,8 @@ whether what you intend happens.
 2. Turn structure: settle on initiative turns with reactions, or keep simultaneous on the table.
 3. Actions per turn; what a prepared shot costs.
 4. Targeting: automatic parts, called shots, or both.
-5. Death for the player's crew: the wound ladder, or permanent death, or never.
+5. Death for the player's crew: **they can die (decided 2026-10-29, §4e)**; still open: the wound ladder, when a
+   wound becomes a death in a fight, and what each resurrected form does on the grid.
 6. What sets Intuition; which strikes do poise damage and how Poise maps to flinch levels; the point costs per
    action and how the Endurance pool recovers (Te → Efficiency, and pool vs spend, decided 2026-10-29).
 7. Light and elevation as map properties (ChatGPT) or stats.
@@ -382,4 +441,5 @@ whether what you intend happens.
 | 2026-10-29 | Decided: head and torso carry no stats of their own (hit location → stats dipped); Te floor cost stands; STATS.md body attributes rewritten per limb | Rex |
 | 2026-10-29 | The muscular system: each counting muscle (split by head, as real) gets stats trained by what you do; the gym simulator (design and run a regimen); ChatGPT's functional model, activation profiles, development/fatigue/condition recorded as proposed | Rex / outside AI |
 | 2026-10-29 | The body as a family of docs feeding BODY.md (disease, sleep, thermoregulation, metabolism, ageing, hygiene, pain and stress, cardio, psychology) and world docs (weather, ship wear, agriculture, ecology, sanitation, fire, population); keeper's organisation and issues in the shared notes | Rex |
+| 2026-10-29 | Death and resurrection by faction: a dead crew mate can be brought back through the alignment faction you choose (mecha AI, ghost, voodoo zombie, angel, merfolk's form open), frozen at death, storyline ended, stronger form; states of being by who did it (fish person, demon, missing); butterfly deaths; game modes as an option; collision with the ghost rule flagged to town/balance/story | Rex |
 | 2026-10-29 | `MUSCULAR.md` and `NUTRITION.md` to be written (via ChatGPT); nutrition as calories, macros, micros, water and salt with scurvy emergent; provenance tags (mythical, Triassic, sci-fi) on the item screen, never in battle | Rex |
