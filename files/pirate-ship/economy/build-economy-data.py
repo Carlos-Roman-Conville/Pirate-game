@@ -56,6 +56,7 @@ skills, recipes, goods, by_chip = [], [], {}, {}
 for g in tree["groups"]:
     for s in g["skills"]:
         skills.append({"id": s["key"], "name": s["name"], "group": g["key"], "inStats": s["existing"],
+                       "region": s.get("region", "caribbean"), "learnedBy": s.get("learnedBy", "open"),
                        "covers": s["covers"], "why": s["why"]})
         for it in s["items"]:
             chip = s["key"] + ":" + it["name"]
@@ -73,7 +74,7 @@ for g in tree["groups"]:
                               "kind": "raw" if g["key"] == "gathering" else "manufactured",
                               "type": t, "typeMark": tmark, "basePrice": None,
                               "offMap": bool(it.get("offMap")), "mark": mark, "madeBy": s["key"],
-                              "note": it.get("note", "")}
+                              "region": it.get("region", "caribbean"), "note": it.get("note", "")}
 
 # imported-only goods: no recipe here; a European ship's or a far-travelled merchant's cargo
 for it in tree.get("imported", {}).get("items", []):
@@ -83,7 +84,8 @@ for it in tree.get("imported", {}).get("items", []):
     t, tmark = type_of(row.get("type", "open"))
     goods.setdefault(gid, {"id": gid, "name": it["name"], "row": it["good"], "kind": "imported", "type": t, "typeMark": tmark,
                            "basePrice": None, "offMap": True, "mark": "source", "madeBy": None,
-                           "knowledge": it.get("knowledge", "common"), "note": it.get("note", "")})
+                           "knowledge": it.get("knowledge", "common"), "region": it.get("region", "caribbean"),
+                           "note": it.get("note", "")})
 
 # the GOODS.md rows, with the sourced detail that belongs to the row, not to every good made from it
 row_list = [{"row": n, **r} for n, r in sorted(rows.items())]
@@ -99,7 +101,8 @@ for g in tree["groups"]:
                  "service": bool(it.get("service")), "offMap": bool(it.get("offMap")),
                  "inputs": [by_chip[x] for x in ([it["input"]] if it.get("input") else []) + it.get("inputs", [])],
                  "inputsAny": [by_chip[x] for x in it.get("inputAny", [])],
-                 "gate": it.get("gate"), "knowledge": it.get("knowledge", "common"), "note": it.get("note", "")}
+                 "gate": it.get("gate"), "knowledge": it.get("knowledge", "common"),
+                 "region": it.get("region", "caribbean"), "note": it.get("note", "")}
             if it.get("service"):
                 r["name"] = it["name"]
             recipes.append(r)

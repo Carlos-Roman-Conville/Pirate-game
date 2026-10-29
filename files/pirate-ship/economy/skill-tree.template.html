@@ -173,6 +173,7 @@
       + (it.unsourced ? ' · <span class="muted">unsourced (Rex\'s addition)</span>' : '')
       + (it.service ? ' · <span class="muted">a service, not a good</span>' : '')
       + (it.knowledge && it.knowledge !== 'common' ? ' · <span class="muted">' + it.knowledge + ' knowledge</span>' : '')
+      + (it.region && it.region !== 'caribbean' ? ' · <span class="muted">region: ' + it.region + '</span>' : '')
       + '<br>' + it.note
       + (inp ? '<br><span class="muted">needs:</span> ' + inp.it._skill.name + ': ' + inp.it.name : (it.input ? '<br><span class="muted">needs:</span> ' + it.input : ''))
       + (all.length ? '<br><span class="muted">needs all of:</span> ' + all.join(', ') : '')

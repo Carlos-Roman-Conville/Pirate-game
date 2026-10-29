@@ -8,7 +8,8 @@
     "inputAny": "one of several inputs will do (a ropewalk spins its own yarn from raw fibre, or takes a spinner's)",
     "inputs": "every listed input is needed (gunpowder takes all three)",
     "service": "a service, not a traded good: the skill is used on people or ships, and the chip shows what that level can do",
-    "knowledge": "common = every tradesman of the skill knows it here; learned = must be taught or read; foreign = comes only with a far-travelled merchant or a book from another continent (Rex, 2026-10-29). Unset means common"
+    "knowledge": "common = every tradesman of the skill knows it here; learned = must be taught or read; foreign = comes only with a far-travelled merchant or a book from another continent (Rex, 2026-10-29). Unset means common",
+    "region": "where a good or recipe belongs: caribbean (the base game) or an expansion region from REGIONS.md. Unset means caribbean. A good from another region reaches the Caribbean only through a rare-items trader, the odd ship, or a merchant's stall (Rex, 2026-10-29)"
   },
   "recipes": [
     {
@@ -23,6 +24,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "a field crop any hand could grow and pick"
     },
     {
@@ -37,6 +39,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "planting and reaping; milling is Cooking"
     },
     {
@@ -51,6 +54,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "picking and ginning before bagging (C81)"
     },
     {
@@ -65,6 +69,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the root is scraped so it stays white and does not sprout (L)"
     },
     {
@@ -79,6 +84,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "topping and suckering the plant; the cure is the harder part"
     },
     {
@@ -93,6 +99,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the tree; Jamaica's crops failed to a 'blast' (PT)"
     },
     {
@@ -107,6 +114,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "planting, cutting and carting to the mill within a day of cutting (L); the boiling is Sugar boiling"
     },
     {
@@ -121,6 +129,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "wet-field rice took skill the Carolina planters bought from West Africa (SCR)"
     },
     {
@@ -135,6 +144,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "curing, prizing into the hogshead to at least 800 lb (VA30)"
     },
     {
@@ -149,6 +159,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "picked green and sun-dried, kept from the dew (EB78)"
     },
     {
@@ -163,6 +174,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the crop; the paste is Dye Making (D)"
     },
     {
@@ -177,6 +189,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "sweated under plantain leaves, three or four weeks' sun (PT)"
     },
     {
@@ -191,6 +204,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the crop; the vats are Dye Making"
     },
     {
@@ -205,6 +219,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the insect reared on the cactus in Oaxaca (COC); the dye is Dye Making"
     },
     {
@@ -219,6 +234,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Rex's addition: a crop for Perfumery. No period Caribbean source; marked unsourced"
     },
     {
@@ -233,6 +249,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "European fibre crops for linen and rope; no Caribbean crop in the sources"
     },
     {
@@ -247,6 +264,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the herbs an apothecary works from; Culpeper's book was for householders (research). Caribbean physic gardens: open"
     },
     {
@@ -261,6 +279,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Ligon's island breads: 'Tobacco, Ginger, Cotten-wool, Maies, Yeames, and Potatoes'"
     },
     {
@@ -275,6 +294,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "limes 'much fitter for sauce then the Limon' (L); the juice to London (C81)"
     },
     {
@@ -289,6 +309,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'Pines worth all that went before' (L)"
     },
     {
@@ -303,6 +324,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "35 lb to London in one month (C81); Blome lists it for Jamaica (1672)"
     },
     {
@@ -317,6 +339,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Blome 1672 lists them among Jamaica's commodities"
     },
     {
@@ -331,6 +354,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Spanish America; Dampier: 'three pence a cod'"
     },
     {
@@ -345,6 +369,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Martinique 1723, Jamaica 1721/1728: the end of the period"
     },
     {
@@ -359,6 +384,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "bred in New England and shipped at about £12 each (PY)"
     },
     {
@@ -373,6 +399,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the meat for Cooking's salt beef and pork"
     },
     {
@@ -387,6 +414,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "for Cooking's cheese and butter"
     },
     {
@@ -401,6 +429,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "English sheep; no Caribbean flock in the sources"
     },
     {
@@ -415,6 +444,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "penned at Port Royal until sold (D); catching them is Fishing"
     },
     {
@@ -429,6 +459,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "sun does the work; raking the pans was ordinary labour (D, TC)"
     },
     {
@@ -443,6 +474,7 @@
       "inputsAny": [],
       "gate": "Swimming",
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the Rancheria banks; needs Swimming for the depth (E)"
     },
     {
@@ -457,6 +489,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the hawksbill's plates (method open)"
     },
     {
@@ -471,6 +504,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Maldives shells, a currency (UWF)"
     },
     {
@@ -485,6 +519,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Rex's addition; no period trade in the sources, marked unsourced"
     },
     {
@@ -499,6 +534,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Hispaniola's wild herds (E2)"
     },
     {
@@ -513,6 +549,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Carolina's trade with the Indian nations (CCR)"
     },
     {
@@ -527,6 +564,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'Elephant's Teeth' from the Guinea coast (J)"
     },
     {
@@ -541,6 +579,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the minigame's catch"
     },
     {
@@ -555,6 +594,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "netted at the Caymans and kept alive in crawls at Port Royal (D, HA)"
     },
     {
@@ -569,6 +609,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "felling and hauling; any hand with an axe"
     },
     {
@@ -583,6 +624,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "cut and chipped at the Campeche camps, sold at £5 a ton in goods (DV)"
     },
     {
@@ -597,6 +639,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "riving stave bolts for the cooper; Connecticut's cargo to Barbados (CT)"
     },
     {
@@ -611,6 +654,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "rived and shaved; late evidence only (CTH)"
     },
     {
@@ -625,6 +669,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "as logwood; fustic and brazeletto in the 1681 return (C81)"
     },
     {
@@ -639,6 +684,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the kiln burn takes judgement; 40,000 barrels a year by 1720 (SCN)"
     },
     {
@@ -653,6 +699,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "choosing, felling and squaring the great logs; 'bulky and relatively light' (MH)"
     },
     {
@@ -669,6 +716,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the collier's clamp; Rex keeps charcoal burning inside Woodcutting (2026-10-28)"
     },
     {
@@ -683,6 +731,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "nitrate-bearing earth from dovecotes, stables and caves; the saltpetre-men's raw stuff. Caribbean source open"
     },
     {
@@ -697,6 +746,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "dug from volcanic deposits; Sicily supplied Europe. Nothing in the Caribbean sources (open)"
     },
     {
@@ -711,6 +761,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "lead for shot; no Caribbean mine in the sources"
     },
     {
@@ -725,6 +776,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "£16 10s–£18 a ton in London (TR); 'voyage iron' to Africa (JS)"
     },
     {
@@ -739,6 +791,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "blister steel from Sheffield; brass from calamine; pewter from tin and lead. No colonial steel before the 1720s (research), so all off-map"
     },
     {
@@ -753,6 +806,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Potosí to Portobelo; refining with mercury (WHF)"
     },
     {
@@ -767,6 +821,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Brazil and the Guinea coast; washing dust takes less than refining silver"
     },
     {
@@ -781,6 +836,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "pressed and casked; 1,512 gallons to London in one month (C81)"
     },
     {
@@ -797,6 +853,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the one hot meal from the galley (DUTIES); not a traded good"
     },
     {
@@ -813,6 +870,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "roasting and grinding the nut; a Spanish taste first"
     },
     {
@@ -831,6 +889,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "rum, water, lime, sugar, 'a little Nutmeg scrap'd on the top' (Sloane); Avery 'mightily addicted to Punch' (J)"
     },
     {
@@ -848,6 +907,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'a sort of Sailors Drink, made of Ale, Brandy and Sugar' (Bailey 1724), heated with a loggerhead"
     },
     {
@@ -865,6 +925,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "preserves need white sugar (L); preserved ginger 0.64 and white candy 0.50 guilders a lb at Amsterdam (1691)"
     },
     {
@@ -879,6 +940,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Roberts 'drank his Tea constantly' (J); the tea itself is imported (below)"
     },
     {
@@ -895,6 +957,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'Barrels of meale close put up' (L)"
     },
     {
@@ -911,6 +974,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Roberts took '10 Casks of Oatmeal' (J)"
     },
     {
@@ -927,6 +991,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "bolted fine; 196 lb to the barrel (FL)"
     },
     {
@@ -943,6 +1008,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'The third sort of bread we use, is only Potatoes' (L)"
     },
     {
@@ -959,6 +1025,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "daily bread; not a cargo"
     },
     {
@@ -975,6 +1042,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "baked hard, twice; 16s a hundredweight (PY); well baked, it keeps for years (SV)"
     },
     {
@@ -991,6 +1059,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "for the galley and for Preserving"
     },
     {
@@ -1007,6 +1076,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "flaying clean; 'cow hides 69 ... buff hides 768' to London (C81)"
     },
     {
@@ -1023,6 +1093,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the fat rendered; sold with the hides (E2)"
     },
     {
@@ -1039,6 +1110,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "a clean skin is worth more; 'Skinns' from Carolina (CCR)"
     },
     {
@@ -1055,6 +1127,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "split, salted and dried; the poor grade went to the islands (HV)"
     },
     {
@@ -1071,6 +1144,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "hardened with smoke for sea voyages (E2)"
     },
     {
@@ -1087,6 +1161,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "cut, brined and packed tight in barrel; a short barrel was noticed (PY)"
     },
     {
@@ -1103,6 +1178,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'salt it, and sell it so to the planters' (E2)"
     },
     {
@@ -1119,6 +1195,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "in firkins; weight open (ML)"
     },
     {
@@ -1135,6 +1212,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'a hundred-weight of Gloucester cheese' to Virginia (BR)"
     },
     {
@@ -1151,6 +1229,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "dipped; they fuse in the heat (L)"
     },
     {
@@ -1165,6 +1244,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "sealing wax for letters; no Caribbean source"
     },
     {
@@ -1179,6 +1259,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "cleaner burning, for church and the cabin; beeswax supply in the Caribbean open"
     },
     {
@@ -1193,6 +1274,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "consistent sizes, ceremonial forms"
     },
     {
@@ -1207,6 +1289,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "a European art of the period; unsourced here"
     },
     {
@@ -1221,6 +1304,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the INFP's signature work (story: brothel, wax figures); a design good"
     },
     {
@@ -1237,6 +1321,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the Carolina export went raw or half-dressed (open)"
     },
     {
@@ -1253,6 +1338,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "bark pits take months; no Caribbean tannery in the sources, so off-map in practice"
     },
     {
@@ -1269,6 +1355,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "indigo moved in 'leather sacks' at Maracaibo (E)"
     },
     {
@@ -1285,6 +1372,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "for the swords Ligon lists among imports (L); the pirate's gear"
     },
     {
@@ -1301,6 +1389,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "for the horse trade (PY); no period Caribbean saddler in the sources: open"
     },
     {
@@ -1317,6 +1406,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'Gloves' among Ligon's imports (L)"
     },
     {
@@ -1333,6 +1423,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the cobbler's work"
     },
     {
@@ -1349,6 +1440,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'shooes' at £50 in Ligon's outfit (L)"
     },
     {
@@ -1365,6 +1457,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'some bootes' (L)"
     },
     {
@@ -1381,6 +1474,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "fitted; no period Caribbean maker in the sources (open)"
     },
     {
@@ -1397,6 +1491,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "a design tier (open)"
     },
     {
@@ -1413,6 +1508,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "what drains from the pots; the apprentice's share of the work (L)"
     },
     {
@@ -1429,6 +1525,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "boiling through the coppers and striking; 3d a pound on Barbados (L)"
     },
     {
@@ -1445,6 +1542,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "claying the pot so the molasses drains out; 20d a pound in London (L)"
     },
     {
@@ -1461,6 +1559,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "refined in Bristol and London cone moulds (DB1)"
     },
     {
@@ -1477,6 +1576,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "seed pulp worked to a paste (D)"
     },
     {
@@ -1493,6 +1593,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "steeping, beating and judging the cut (C88, D)"
     },
     {
@@ -1509,6 +1610,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "killing and drying the insect; 18–45s a pound in London (TR)"
     },
     {
@@ -1525,6 +1627,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the dye bath with a mordant; needs a dye from this tree too"
     },
     {
@@ -1541,6 +1644,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'as bad as water bewitched' (Barlow 1667); Anstis's mock trial: 'guilty of drinking Small-Beer' (J)"
     },
     {
@@ -1557,6 +1661,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'Mobbie, a drink made of Potatoes'; perino 'which the Indians make'; grippo 'few make it well' (L)"
     },
     {
@@ -1574,6 +1679,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'spring water, white sugar, and juyce of Orenges' (L)"
     },
     {
@@ -1590,6 +1696,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'the incomparable wine of Pines' (L); Dampier's 'pine-drink'"
     },
     {
@@ -1606,6 +1713,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'one gallon, wine measure, of beer' (Navy contract 1678); spoils in the tropics"
     },
     {
@@ -1620,6 +1728,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "New England and Virginia; a boat 'brought Apples and Sider to sell to the Sloop's Men' (J). Apples: no Caribbean crop"
     },
     {
@@ -1636,6 +1745,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'good English Beer' (L); Ligon's outlay 'Strong Beer 50 l.'"
     },
     {
@@ -1652,6 +1762,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the rough first spirit from the skimmings (L)"
     },
     {
@@ -1668,6 +1779,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "half a crown a gallon on Barbados (L); cask size open (1j)"
     },
     {
@@ -1682,6 +1794,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Madeira, Fayal, Canary, claret: £8 a pipe at Jamestown (CSP)"
     },
     {
@@ -1698,6 +1811,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "distilled wine; thirty casks in one prize (J)"
     },
     {
@@ -1712,6 +1826,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "foreign",
+      "region": "caribbean",
       "note": "East Indies palm or cane spirit; 'rum or arrack in lieu' of wine (Navy 1731); Barlow at Goa 1697 priced it by the keg. A far-travelled merchant's recipe (3f)"
     },
     {
@@ -1728,6 +1843,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "melted and skimmed"
     },
     {
@@ -1744,6 +1860,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "leached, boiled and crystallised; the hardest of the three ingredients to get right"
     },
     {
@@ -1758,6 +1875,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "for the apothecary and the dyer; a design tier (open)"
     },
     {
@@ -1772,6 +1890,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "keeping it dry (DUTIES: the gunner's duty)"
     },
     {
@@ -1790,6 +1909,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "saltpetre, sulphur and charcoal, all three"
     },
     {
@@ -1806,6 +1926,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "corned to grain sizes; 'five Barrels of Powder' taken by Roberts (J)"
     },
     {
@@ -1822,6 +1943,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "a design tier (open)"
     },
     {
@@ -1838,6 +1960,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Rex's design tier"
     },
     {
@@ -1854,6 +1977,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "unsourced for the Caribbean; a cultural good if one region prizes it"
     },
     {
@@ -1870,6 +1994,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "unsourced; the finished luxury"
     },
     {
@@ -1886,6 +2011,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "6d a pound retail (TR); the Midlands nail trade was a by-employment, not a company"
     },
     {
@@ -1902,6 +2028,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "for the cooper"
     },
     {
@@ -1918,6 +2045,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'nails, hoes, and axes' to Virginia (BR)"
     },
     {
@@ -1934,6 +2062,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Farriers' Company 1674; 'makes Shoes for Horses, and puts them on' (Campbell)"
     },
     {
@@ -1950,6 +2079,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the ship's fittings the carpenter needs"
     },
     {
@@ -1966,6 +2096,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the gunsmith bought barrels in and made the lock (Campbell)"
     },
     {
@@ -1982,6 +2113,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'see Smith' (Campbell's index); needs ingenuity 'almost as any Branch of the Trade'"
     },
     {
@@ -1998,6 +2130,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the anchor-smith, 'laborious and profitable Branch of the Smith Trade' (Campbell)"
     },
     {
@@ -2012,6 +2145,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the ship's armourer; 'Mariner and Armourer' in a will (research-occupations.md)"
     },
     {
@@ -2029,6 +2163,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "lock, stock and barrel; the stock is the carpenter's wood"
     },
     {
@@ -2046,6 +2181,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'a great number of muskets' taken (E); proofed in London"
     },
     {
@@ -2062,6 +2198,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the gunmaker's best work; a design tier (open)"
     },
     {
@@ -2078,6 +2215,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the cutler's staple; surgeon's lancets too"
     },
     {
@@ -2094,6 +2232,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the boarder's weapon; blades from abroad, mounted here"
     },
     {
@@ -2111,6 +2250,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "hilt, grip and scabbard; 'Swords, knives' shipped to Barbados (L)"
     },
     {
@@ -2127,6 +2267,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the German smiths' work; nothing like it in the colonies (research)"
     },
     {
@@ -2143,6 +2284,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "1,281 lead shot in one QAR lab batch (QAR); any hand with a mould"
     },
     {
@@ -2159,6 +2301,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "33 pieces on the QAR, London marks c. 1689–1712 (QAR); Port Royal had pewterers"
     },
     {
@@ -2175,6 +2318,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Campbell: the founder casts all that is brass in a brazier's shop"
     },
     {
@@ -2191,6 +2335,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "small guns; 'four Swivels' taken by Low (J)"
     },
     {
@@ -2207,6 +2352,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the gunfounder's furnace and boring mill; 29 located on the QAR wreck (QAR)"
     },
     {
@@ -2223,6 +2369,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "small work"
     },
     {
@@ -2239,6 +2386,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "uncoined plate shared out by weight (E)"
     },
     {
@@ -2255,6 +2403,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'chains and trinkets' in Roberts' Brazil prize (J)"
     },
     {
@@ -2269,6 +2418,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "judging and refining the metal; the diamond cross for the King of Portugal (J) as the kind of piece"
     },
     {
@@ -2285,6 +2435,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the saw pit (L)"
     },
     {
@@ -2301,6 +2452,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Ligon wanted 'Carpenters, Joyners, Masons' as servants (L)"
     },
     {
@@ -2317,6 +2469,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the ship's carpenter; pirates 'forced away the Carpenter from the Pink' (J)"
     },
     {
@@ -2333,6 +2486,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the 1631 aldermen's ruling listed joiners' work (research)"
     },
     {
@@ -2350,6 +2504,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "wood and iron; a great gun is useless without one"
     },
     {
@@ -2366,6 +2521,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "also needs old rope picked to oakum (DUTIES); the caulker's rung"
     },
     {
@@ -2382,6 +2538,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Campbell's boat and lighter builders"
     },
     {
@@ -2399,6 +2556,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Low took 'a mast, yard and hawsers' (J); Campbell's block-maker"
     },
     {
@@ -2415,6 +2573,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the ship hauled down on a beach and the bottom scraped (DUTIES)"
     },
     {
@@ -2433,6 +2592,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Bermuda cedar sloops from the mid-1600s (research); Bonnet's and Teach's sloops"
     },
     {
@@ -2450,6 +2610,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Boston and the Thames yards; no Caribbean ship of size in the sources (open)"
     },
     {
@@ -2466,6 +2627,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the joiner's edge of the trade"
     },
     {
@@ -2482,6 +2644,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the 1720s trade (MH)"
     },
     {
@@ -2498,6 +2661,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Campbell's carver; a ship's stern-work too"
     },
     {
@@ -2514,6 +2678,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the London cabinet-maker's best work; a design tier (open)"
     },
     {
@@ -2531,6 +2696,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Ligon: 'the Christian that has the charge of the carriages'"
     },
     {
@@ -2548,6 +2714,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "three rollers driven by oxen or horses (L); Sugar boiling needs it"
     },
     {
@@ -2565,6 +2732,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Barbados's windmills; a design tier for the engine (open)"
     },
     {
@@ -2581,6 +2749,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "jointing and hollowing the staves"
     },
     {
@@ -2597,6 +2766,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the turner's lathe; Campbell folds him into the cooper"
     },
     {
@@ -2613,6 +2783,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "flour barrels, sugar hogsheads; 196 lb of flour to the barrel (FL)"
     },
     {
@@ -2629,6 +2800,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "must hold liquid; a leaking cask loses the rum (DUTIES)"
     },
     {
@@ -2645,6 +2817,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the island's own fibre (C81)"
     },
     {
@@ -2661,6 +2834,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "English wool"
     },
     {
@@ -2677,6 +2851,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "for dowlas, holland and sailcloth"
     },
     {
@@ -2691,6 +2866,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Asian silk; the hardest fibre to handle"
     },
     {
@@ -2707,6 +2883,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "under 4s a yard, the colonial ceiling (CSP)"
     },
     {
@@ -2723,6 +2900,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "1s 5d–1s 8d an ell (TR); servants' and slaves' cloth"
     },
     {
@@ -2739,6 +2917,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "10s–23s 6d a yard (TR); duffels for the Indian trade (CSP)"
     },
     {
@@ -2755,6 +2934,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the sailmaker sews it; the weaver makes it"
     },
     {
@@ -2771,6 +2951,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "2s 4d–2s 8d a yard (TR)"
     },
     {
@@ -2787,6 +2968,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Asian looms; chintzes in a French prize (J)"
     },
     {
@@ -2804,6 +2986,7 @@
       ],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "marline, spun yarn; the sailmaker's twine"
     },
     {
@@ -2821,6 +3004,7 @@
       ],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'several Coils of Rope' taken from the King Solomon (J)"
     },
     {
@@ -2838,6 +3022,7 @@
       ],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'two Cables' (J); the anchor cable is the ropewalk's largest work"
     },
     {
@@ -2854,6 +3039,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "a servant's shirt at 2s 6d (CSP)"
     },
     {
@@ -2870,6 +3056,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "a cloth coat at 15s 6d (CSP)"
     },
     {
@@ -2886,6 +3073,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'a suit of clothes, a wig' taken at the King Solomon (J)"
     },
     {
@@ -2902,6 +3090,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "silk and linen shared out at Maracaibo (E)"
     },
     {
@@ -2916,6 +3105,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "recruited at about 16 with basic training (research)",
       "name": "Dressing wounds (the surgeon's mate)"
     },
@@ -2933,6 +3123,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "lancets from the cutler; clyster pumps on the QAR wreck (QAR)",
       "name": "Bleeding, purging, the clyster"
     },
@@ -2948,6 +3139,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "barber-surgeons drew teeth; the 'pretending bone-setters' were the empirics (Turner 1694)",
       "name": "Setting bones, drawing teeth"
     },
@@ -2965,6 +3157,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Exquemelin's compensation table: a lost limb paid in pieces of eight or slaves (E)",
       "name": "Amputation and the great operations"
     },
@@ -2980,6 +3173,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "examined at Surgeons' Hall for the navy (Campbell); elected chief surgeon in Roberts' fleet (J)",
       "name": "Chief surgeon (examined, elected)"
     },
@@ -2997,6 +3191,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Culpeper's householder medicine; the plantation doctor's dram of kill-devil (L)"
     },
     {
@@ -3014,6 +3209,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "lime juice against scurvy (DUTIES); whether it stood in the Pharmacopoeia: open"
     },
     {
@@ -3031,6 +3227,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "Pharmacopoeia Londinensis 1618 and after; spirits for tinctures"
     },
     {
@@ -3047,6 +3244,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "learned",
+      "region": "caribbean",
       "note": "sold by London chemists from 1658; Talbor's cure 1672–78. The bark is Spanish and the use was a secret: learned knowledge (3f)"
     },
     {
@@ -3063,6 +3261,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the QAR syringe held mercury for the pox (QAR); opium preparations in the Pharmacopoeia (research)"
     },
     {
@@ -3079,6 +3278,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "£300–400 at Charleston (J); 200–250 pieces of eight as the buccaneers' fixed share (E)"
     },
     {
@@ -3093,6 +3293,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the plantation doctor's level",
       "name": "Regimen and diet"
     },
@@ -3108,6 +3309,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "scurvy and fever killed more than battle (DUTIES)",
       "name": "Diagnosing fevers and the flux"
     },
@@ -3125,6 +3327,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "the physician prescribes, the apothecary compounds; the Rose case blurred it (research)",
       "name": "Prescribing (the apothecary makes it up)"
     },
@@ -3140,6 +3343,7 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
+      "region": "caribbean",
       "note": "'Doctor in Physic' at Port Royal, 1725; Campbell sneers at bought Latin diplomas",
       "name": "Doctor in Physic (university)"
     }

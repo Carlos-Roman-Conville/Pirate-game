@@ -770,10 +770,19 @@ choice, not decided.
 challenge is new knowledge, new resources and new facilities, not re-levelling the same skill. A foreign recipe is
 not harder because it is foreign.
 
+**The rule, in Rex's words (2026-10-29).** Nobody learns a skill by levelling up. A skill, like a recipe, is learned
+the way a real person would learn it: a blueprint, a book, a recipe, or someone teaching it. Nothing is ever
+manifested from thin air. Skill level then sets speed, quality and the chance of success, and some items need a
+certain level besides. This is what keeps expansions fresh: a new region's skills and recipes are unknown until
+learned there, and its goods stay there unless a rare-items trader, the odd ship or a merchant's stall carries one
+across. The roadmap of regions and what stays in each is `REGIONS.md` (this folder).
+
 **What this does to the data (proposed).** Each recipe carries a `knowledge` field: `common` (every tradesman of the
 skill knows it in the Caribbean), `learned` (must be taught or read: the chemical medicines, fine blades, the
 surgeon's chest), or `foreign` (comes only with a traveller or a book from another continent: arrack, silk,
-porcelain, the Asian spices' uses). The engine checks knowledge before band. The field is set `common` everywhere
+porcelain, the Asian spices' uses). Skills carry the same rule: a character has a skill at 0 only once it was
+learned (`skills.json`, `learnedBy`: open until Rex fills it per skill). Every good, recipe and skill also carries a
+`region` (default `caribbean`; the expansion regions are in `REGIONS.md`). The engine checks knowledge before band. The field is set `common` everywhere
 now; the research pass on spices and drinks (3g, pending) will mark the first foreign ones. Which recipes are
 `learned` is Rex's call; the sources say only which trades were apprenticed, not which recipes were secret.
 
@@ -993,3 +1002,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-29 | 3f: knowledge apart from skill, recipes with a knowledge field (common / learned / foreign), far-travelled merchants as the source of foreign goods and recipes, expansion balance by knowledge, resources and facilities (Rex's notes; recorded, nothing built) | Rex (direction); research session |
 | 2026-10-29 | 1k: spices, drugs, island foods and drinks, rows 66–81 (CSP 1681, Posthumus, Blome 1672, Ligon, Dampier, Navy victualling); Brewing split from Distilling; imported-only goods and the first foreign and learned recipes (arrack, Peruvian bark); Brewer and Vintner occupations | research session, at Rex's request |
 | 2026-10-29 | Brewing confirmed as its own skill | Rex |
+| 2026-10-29 | 3f: Rex's rule that no skill or recipe is ever manifested, only learned a real way; skill level sets speed, quality and success; regions and the leak rule recorded in REGIONS.md | Rex (rule); research session |

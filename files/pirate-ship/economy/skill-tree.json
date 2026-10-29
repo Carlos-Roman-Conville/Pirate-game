@@ -41,7 +41,8 @@
     "inputAny": "one of several inputs will do (a ropewalk spins its own yarn from raw fibre, or takes a spinner's)",
     "inputs": "every listed input is needed (gunpowder takes all three)",
     "service": "a service, not a traded good: the skill is used on people or ships, and the chip shows what that level can do",
-    "knowledge": "common = every tradesman of the skill knows it here; learned = must be taught or read; foreign = comes only with a far-travelled merchant or a book from another continent (Rex, 2026-10-29). Unset means common"
+    "knowledge": "common = every tradesman of the skill knows it here; learned = must be taught or read; foreign = comes only with a far-travelled merchant or a book from another continent (Rex, 2026-10-29). Unset means common",
+    "region": "where a good or recipe belongs: caribbean (the base game) or an expansion region from REGIONS.md. Unset means caribbean. A good from another region reaches the Caribbean only through a rare-items trader, the odd ship, or a merchant's stall (Rex, 2026-10-29)"
   },
   "groups": [
     {
@@ -1939,7 +1940,7 @@
     }
   ],
   "bandsSource": "research-trade-grades.md (shared notes folder): guild ladder, sea ranks, Ligon's overseers and tradesmen; 'novice' and 'expert' found as no grade",
-  "rule": "Every recipe needs materials + equipment + a minimum skill band (Rex, 2026-10-28). Skill never creates a material: a master spinner cannot spin silk without silk.",
+  "rule": "Every recipe needs materials + equipment + a minimum skill band (Rex, 2026-10-28). Skill never creates a material: a master spinner cannot spin silk without silk. No skill or recipe is ever manifested by levelling: each is learned a real way (a book, a blueprint, a recipe, a teacher). Skill level sets speed, quality and success, and some items need a level besides (Rex, 2026-10-29).",
   "occupations": {
     "note": "An occupation is a label, not a skill: it groups the skills a person of that calling practised, levels nothing, grants nothing, and a character may carry more than one (Rex, 2026-10-28). The words are the ones period wills and indentures use; the record styles a person by ONE word, and a second appears for a small minority (under 5% of mariners), nearly always sea + shipboard craft: 'Mariner and Cooper', 'Mariner and Surgeon'. 'Alchemist' was never an occupation (0 wills; 'Chymist' 40): use Chymist. Status words (Gentleman, Yeoman, Captain) sat in the same slot as trades. Grey chips are STATS.md skills with no goods tree. Source: research-occupations.md. Metal trades: six London companies back the split (research-metal-trades.md); whitesmith found no evidence and is not a skill; locksmith, farrier, nailer and anchorsmith fold into Blacksmithing on Campbell's word. Medical trades: Campbell's five 'Professors' back the split; bonesetter, tooth-drawer and quack were empirics, not trades, and fold into Surgery's tiers; Black healers and obeah are in the secondary literature only (open).",
     "rules": [
