@@ -168,8 +168,8 @@ Battle Brothers (lasting injuries).
   movement executes, skill decides technique, fatigue and injury modify the day. A weaker master swordsman still
   beats the blacksmith, unless the blacksmith gets him in a grapple.
 - **(Rex, 2026-10-29)** The muscular system gets its own doc, **`MUSCULAR.md`**, which Rex is having ChatGPT
-  write; and a **`NUTRITION.md`** beside it. Where they go in the tree and whose lane: open (the keeper's
-  suggestion: a `body/` folder, `STATS.md` §1 pointing at both). Whether muscle **replaces** per-limb Strength
+  write; and a **`NUTRITION.md`** beside it. **(Rex, 2026-10-29)** Both go under `files/pirate-ship/body/`,
+  with `STATS.md` pointing at them once they arrive; the combat keeper files them. Whose lane after that: open. Whether muscle **replaces** per-limb Strength
   (§4a) or is what Strength is computed from: open, ChatGPT says replaces.
 - **(keeper)** The system touches lanes beyond combat: every duty in `DUTIES.md` would carry an activation
   profile; the gym is a town place (town keeper) and a regimen a minigame (Rex's to design); food and rest are
@@ -347,8 +347,9 @@ whether what you intend happens.
 10. Ammunition and powder kinds: which exist and what each does in a fight.
 12. Per-limb stats (§4a): the global/local split as ChatGPT drew it, or changed; the Te floor value N; whether
     genetic min–max is per limb (head/torso and the floor decided 2026-10-29).
-13. The muscular system (§4b): `MUSCULAR.md` coming from ChatGPT; where it and `NUTRITION.md` sit in the tree
-    and whose lane; replaces per-limb Strength or computes it; the gym as a town place and a minigame.
+13. The muscular system (§4b): `MUSCULAR.md` and `NUTRITION.md` coming from ChatGPT, to be filed under `body/`
+    (decided 2026-10-29); whose lane after filing; replaces per-limb Strength or computes it; the gym as a town
+    place and a minigame.
 14. What combat reads from the body docs: fatigue, injury, hunger, thirst and deficiency as battle penalties;
     consumables in a fight (food boosts, rum, medicine).
 11. ~~Where the attribute table lives~~ decided: `STATS.md` (Rex, 2026-10-29); the five new attributes written
