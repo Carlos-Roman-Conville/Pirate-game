@@ -215,8 +215,8 @@ whether what you intend happens.
    small scale converts to the tactical scale.
 9. Who owns combat balance (encounter difficulty, unit numbers): `balance/BALANCE.md` item 14 says not balance.
 10. Ammunition and powder kinds: which exist and what each does in a fight.
-11. ~~Where the attribute table lives~~ decided: `STATS.md` (Rex, 2026-10-29). Still to do: write the five new
-    attributes into `STATS.md` (no keeper owns it; Rex says who).
+11. ~~Where the attribute table lives~~ decided: `STATS.md` (Rex, 2026-10-29); the five new attributes written
+    there the same day on Rex's say.
 
 ## Log
 

@@ -64,6 +64,17 @@ like the type is Rex's call.
 | Wits | reasoning and numbers | navigation is arithmetic; counting cards; range-finding |
 | Memory | holding facts, faces, routes, recipes | charts, signals, who said what |
 | Nerve | steadiness under fear or pain | surgery without anaesthetic, boarding, holding a bluff |
+| Perception (Rex, 2026-10-29) | immediate awareness of movement, threats and activity | the hand who notices the sail move before the lookout calls it |
+| Pattern Recognition (Rex, 2026-10-29) | telling a shape from its surroundings: unusual configurations, likely hiding places, indirect clues | a still man in cover; a reef by the colour of the water |
+| Intuition (Rex, 2026-10-29) | unconscious anticipation of threats and where an enemy is; "sees around corners" | the old pirate who knows the alley is wrong before anything shows; what sets it high or low is open |
+| Spatial Reasoning (Rex, 2026-10-29) | angles, distances, trajectories, mechanical interactions | aiming a musket or a gun; judging a jump between rails |
+| Poise (Rex, 2026-10-29) | staying steady when struck; resists flinching | the boarder who takes a cut and keeps coming |
+
+**The functions as attributes (Rex, 2026-10-29).** Seven attributes are the personality functions in combat:
+Eyesight Si, Perception Se, Pattern Recognition Ne, Hearing Fe, Intuition Ni, Spatial Reasoning Ti, Poise Fi. Te
+has no attribute yet (open). How each works in a fight (detection, aiming, poise damage and flinch levels) is in
+`combat/COMBAT.md` §6 and §6a; here they are character properties, used beyond combat (lookout, the sea, port).
+They gain experience like the rest.
 
 **Genetic potential (Rex, 2026-10-26).** Every attribute has a hidden **minimum and maximum** the character was
 born with, so not everyone can reach the top of every stat. A crew mate can be born with great potential strength
@@ -203,3 +214,4 @@ furious with you is a worse surgeon tonight.
 - How the matrix types set the sliders.
 - What the personality type affects beyond the sliders.
 - Assertive ↔ Turbulent: a slider that shifts (as drafted) or fixed like the type.
+- Te's attribute (the other seven functions have one, §1); what sets Intuition high or low.
