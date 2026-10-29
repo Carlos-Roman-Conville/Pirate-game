@@ -146,8 +146,8 @@ jalap, sassafras and ipecacuanha prices, a "Vintner of Nevis" will text.
 **What the drinks research says about the trades.** The brewer was a trade of his own: Brewers' Company chartered
 1438; colonial breweries in Massachusetts (1637), New Netherland (1630s) and Virginia (1652); the Navy used contract
 brewers and its own Hartshorn brewhouse (1678). The vintner imported wine and the taverner sold it (Strype 1720).
-Ligon's six Barbados drinks are all fermented, none distilled. So **Brewing is proposed as a skill apart from
-Distilling** (3c), and Brewer and Vintner / Taverner as occupations (3d). Grog (rum and water 4:1) dates from
+Ligon's six Barbados drinks are all fermented, none distilled. So **Brewing is a skill apart from
+Distilling** (3c; Rex, 2026-10-29), and Brewer and Vintner / Taverner as occupations (3d). Grog (rum and water 4:1) dates from
 21 August 1740, after the period, so it is not a good here.
 
 ### 1g. Units and sizes (source)
@@ -561,7 +561,7 @@ which equipment they use**. Gathering a thing and processing it are separate ski
 **Reviewed by Rex, 2026-10-29: the 40 skills, the placements and the occupations stand as the working set.** Later
 moves go through `skill-tree.json`.
 
-**41 skills, 35 new** (Brewing added 2026-10-29, 1k; Rex to confirm).
+**41 skills, 35 new** (Brewing added 2026-10-29, 1k; Rex confirmed it the same day).
 
 **40 before Brewing.** The medical split (Rex, 2026-10-28), checked against the record
 (`research-medical-trades.md`): Campbell 1747 opens his medical chapter with five separate "Professors": Physician,
@@ -992,3 +992,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-29 | 3e: the data files generated under data/pirate-ship/economy/ (goods, skills, recipes, occupations) by build-economy-data.py; six glossary terms | research session, at Rex's request |
 | 2026-10-29 | 3f: knowledge apart from skill, recipes with a knowledge field (common / learned / foreign), far-travelled merchants as the source of foreign goods and recipes, expansion balance by knowledge, resources and facilities (Rex's notes; recorded, nothing built) | Rex (direction); research session |
 | 2026-10-29 | 1k: spices, drugs, island foods and drinks, rows 66–81 (CSP 1681, Posthumus, Blome 1672, Ligon, Dampier, Navy victualling); Brewing split from Distilling; imported-only goods and the first foreign and learned recipes (arrack, Peruvian bark); Brewer and Vintner occupations | research session, at Rex's request |
+| 2026-10-29 | Brewing confirmed as its own skill | Rex |

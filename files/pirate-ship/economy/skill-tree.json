@@ -1,6 +1,6 @@
 {
   "title": "Pirate Ship: goods on the skill trees (proposed)",
-  "status": "Reviewed by Rex 2026-10-29 ('looks good'): the 40 skills, the placements and the occupations stand as the working set. 2026-10-29: spices, drugs, island foods and drinks added from the research (Brewing split from Distilling, to confirm; imported-only goods listed). Later moves go through this JSON; the record of each split is in GOODS.md 3c and 3d.",
+  "status": "Reviewed by Rex 2026-10-29 ('looks good'): the 40 skills, the placements and the occupations stand as the working set. 2026-10-29: spices, drugs, island foods and drinks added from the research (Brewing apart from Distilling, Rex 2026-10-29; imported-only goods listed). Later moves go through this JSON; the record of each split is in GOODS.md 3c and 3d.",
   "bands": [
     {
       "key": "novice",
@@ -927,7 +927,7 @@
           "name": "Brewing",
           "existing": false,
           "covers": "fermented drinks: small beer and strong beer, mobbie, perino, grippo, plantain drink, wine of pines, cider",
-          "why": "Its own trade (2026-10-29, from the drinks research): Brewers' Company chartered 1438; colonial breweries in Massachusetts 1637, New Netherland 1630s, Virginia 1652; the Navy had contract brewers and its own Hartshorn brewhouse (1678). Ligon's Barbados drinks are all fermented, not distilled. Split out of Distilling on that evidence; Rex to confirm.",
+          "why": "Its own trade (2026-10-29, from the drinks research): Brewers' Company chartered 1438; colonial breweries in Massachusetts 1637, New Netherland 1630s, Virginia 1652; the Navy had contract brewers and its own Hartshorn brewhouse (1678). Ligon's Barbados drinks are all fermented, not distilled. Split out of Distilling on that evidence; Rex confirmed it 2026-10-29.",
           "items": [
             {
               "good": 78,

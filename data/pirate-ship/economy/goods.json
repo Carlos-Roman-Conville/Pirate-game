@@ -1,6 +1,6 @@
 {
   "_about": "Built by files/pirate-ship/economy/build-economy-data.py from skill-tree.json and GOODS.md. Do not edit by hand. Marks: source = a period record (GOODS.md Part 4); proposed = this session's placement for Rex; unsourced = Rex's design addition with no period source; estimate = worked out from sourced inputs (GOODS.md 1j). basePrice is null everywhere: the balance lane sets it; the sourced price text is beside it. The five per-settlement numbers (stock, consumption per day, target reserve, production per day, base price) belong to a ports file that does not exist yet (ALIGNMENT §10).",
-  "reviewed": "Reviewed by Rex 2026-10-29 ('looks good'): the 40 skills, the placements and the occupations stand as the working set. 2026-10-29: spices, drugs, island foods and drinks added from the research (Brewing split from Distilling, to confirm; imported-only goods listed). Later moves go through this JSON; the record of each split is in GOODS.md 3c and 3d.",
+  "reviewed": "Reviewed by Rex 2026-10-29 ('looks good'): the 40 skills, the placements and the occupations stand as the working set. 2026-10-29: spices, drugs, island foods and drinks added from the research (Brewing apart from Distilling, Rex 2026-10-29; imported-only goods listed). Later moves go through this JSON; the record of each split is in GOODS.md 3c and 3d.",
   "rowsNote": "rows = the 65 cargo rows of GOODS.md Part 1 with their sourced kind, route, package, spoilage, price and type; goods = the engine's goods, one per recipe output, each pointing at its row",
   "rows": [
     {
