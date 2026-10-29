@@ -325,9 +325,9 @@
       "name": "English Harbour (Antigua)",
       "region": "caribbean",
       "origin": "caribbean",
-      "tier": "major",
+      "tier": "minor",
       "verdict": "outside: dockyard 1725",
-      "role": "a careening anchorage before 1725",
+      "role": "a careening anchorage before 1725 (demoted, Rex 2026-10-29)",
       "produces": [],
       "consumes": [
         "tar-pitch-turpentine"
@@ -414,13 +414,13 @@
       "note": ""
     },
     {
-      "id": "scarborough",
-      "name": "Scarborough (Tobago)",
+      "id": "tobago",
+      "name": "Tobago (watering place)",
       "region": "caribbean",
       "origin": "caribbean",
-      "tier": "major",
+      "tier": "minor",
       "verdict": "outside: capital from 1769",
-      "role": "a watering place for pirates",
+      "role": "pirates' watering and careening place; no town in the period (demoted, Rex 2026-10-29)",
       "produces": [],
       "consumes": [],
       "note": ""
@@ -610,11 +610,18 @@
       "name": "Petit-Goâve",
       "region": "caribbean",
       "origin": "caribbean",
-      "tier": "minor",
+      "tier": "major",
       "verdict": "documented: the buccaneers' port; promote (proposed)",
-      "role": "small settlement",
-      "produces": [],
-      "consumes": [],
+      "role": "the buccaneers' port: Grammont, de Graaf, van Hoorn (promoted, Rex 2026-10-29)",
+      "produces": [
+        "indigo-dye",
+        "muscovado-sugar"
+      ],
+      "consumes": [
+        "common-powder",
+        "muskets",
+        "wine"
+      ],
       "note": ""
     },
     {
@@ -742,9 +749,9 @@
       "name": "Providencia",
       "region": "caribbean",
       "origin": "caribbean",
-      "tier": "candidate",
+      "tier": "major",
       "verdict": "documented: Morgan 1670",
-      "role": "an addition from the record",
+      "role": "Morgan's base 1670; the island fortress (promoted, Rex 2026-10-29)",
       "produces": [],
       "consumes": [],
       "note": ""

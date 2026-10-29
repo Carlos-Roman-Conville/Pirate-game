@@ -66,8 +66,8 @@ buildings can stand for a city that moves thousands of cargoes (Rex's note).
 | 29 | St George's (Grenada) | the French Fort Royal | sugar (3 estates), indigo (52 plantations), cattle; cacao and coffee from 1714 | Dutch privateers 1675 | fits with a caveat |
 | 30 | St George's (Bermuda) | cedar sloops, Turks salt, letters of marque | sloops, salt; provisions in | Bennett's letters of marque 1701; Middleton 1709; Jennings and 150 pirates surrendered 1718 | fits |
 
-**Proposed (to Rex):** drop English Harbour and Scarborough as towns; promote Petit-Goâve (documented, below) and
-Providencia (Morgan 1670) to majors in their places, which keeps thirty.
+**Decided (Rex, 2026-10-29):** English Harbour and Scarborough are out as towns (English Harbour stays a careening
+anchorage, Tobago a watering place); Petit-Goâve and Providencia are majors in their places. Thirty majors stand.
 
 ### 2b. Twenty smaller settlements
 
@@ -82,7 +82,7 @@ Providencia (Morgan 1670) to majors in their places, which keeps thirty.
 | 37 | Little Cayman | settlers 1661–71; Spanish raid 1669; turtles | documented |
 | 38 | Cayman Brac | a pirate supply stop in guides; turtles | plausible adaptation |
 | 39 | Île-à-Vache | Morgan's rendezvous, January 1669: ten ships, 800 men, the Oxford exploded; Hamlin hid there 1682–84 | documented |
-| 40 | Petit-Goâve | the buccaneers' port: Grammont, de Graaf, van Hoorn sailed from it to Veracruz 1683 and Campeche 1685 | documented; **promote to major (proposed)** |
+| 40 | Petit-Goâve | the buccaneers' port: Grammont, de Graaf, van Hoorn sailed from it to Veracruz 1683 and Campeche 1685 | documented; **a major town (Rex, 2026-10-29)** |
 | 41 | La Gonâve | nothing | nothing found |
 | 42 | Isla de Pinos | L'Olonnais passed by (Exquemelin, by search only) | plausible adaptation |
 | 43 | Cayo Largo | "likely" a base, undated | plausible adaptation |
@@ -94,8 +94,8 @@ Providencia (Morgan 1670) to majors in their places, which keeps thirty.
 | 49 | Union Island | nothing | nothing found |
 | 50 | Los Roques | the 1678 d'Estrées wreck was at Las Aves, not here | plausible adaptation (move the wreck to Las Aves) |
 
-**Belong on the map on the record (proposed additions):** Providencia (Morgan 1670), the Bay of Honduras logwood
-camps, Roatán, the Mosquito Coast. Weak: Baracoa (a smuggling port only), Samaná (no source).
+**Belong on the map on the record:** Providencia (Morgan 1670; **a major town, Rex 2026-10-29**), and as proposed
+additions the Bay of Honduras logwood camps, Roatán, the Mosquito Coast. Weak: Baracoa (a smuggling port only), Samaná (no source).
 
 ## 3. The African coast: five settings, one spectrum (source)
 
@@ -172,8 +172,7 @@ region and origin; the rest is open until the balance lane fills it.
 
 1. **Reconciling with the twelve locales** of ALIGNMENT §10 and the town keeper's files: this list is seventy-odd;
    which of the twelve map onto which nodes, and who keeps what.
-2. **The two that fail the period:** English Harbour (1725) and Scarborough (1769). Proposed replacements:
-   Petit-Goâve and Providencia.
+2. Decided 2026-10-29: English Harbour and Scarborough out as towns; Petit-Goâve and Providencia in as majors.
 3. **The candidates:** Newport, New Orleans, Bacalar, Sisal, Rio, the Guianas, Nantes, Cork, and the four additions
    from the record (Providencia, the Bay of Honduras camps, Roatán, the Mosquito Coast).
 4. **The three empty small settlements** (Abaco, La Gonâve, Union Island): keep as pure invention, or swap for Las
@@ -186,3 +185,4 @@ region and origin; the rest is open until the balance lane fills it.
 |---|---|---|
 | 2026-10-29 | Created from Rex's six regional lists: the count, the Caribbean's fifty with verdicts, the five African settings on one spectrum from period sources, the mainland and Europe, the data plan | Rex (decision); research session |
 | 2026-10-29 | §4 filled from the mainland and Europe verification: 29 ports, 23 fit, 6 with a caveat, none outside; Portobelo and Panama noted | research session |
+| 2026-10-29 | Rex: English Harbour and Scarborough out as towns, Petit-Goâve and Providencia in as majors | Rex |
