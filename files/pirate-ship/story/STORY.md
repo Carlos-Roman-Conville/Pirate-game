@@ -163,6 +163,13 @@ Decided in the combat session; mechanics in `../combat/COMBAT.md` §4e. The fict
   down their alignment, so it stays inside the alignment system.
   - The INTJ: support her with no test subjects and she seeks a solution outside (the fish people); give her the
     bodies and her personal goals are satisfied.
+- **(Rex, via the body keeper)** Named characters are vulnerable to cardiac events, and organ failures are crises
+  with four outcomes (temporary, chronic, irreversible, death), so an old captain's heart or a drinker's dropsy can
+  be an ending without a scripted death (`../body/CIRCULATION.md` 6, `../body/ANATOMY.md` 3a).
+- **(open, for the body files)** Per character: favourite and hated foods from their history (`../body/NUTRITION.md`
+  4); habits (rum, laudanum, tobacco) as traits with a dependence number (`../body/NEUROLOGY.md` 4); body-state
+  madness triggers (`../body/PSYCHOLOGY.md` 2); the forms' physiology (`../body/BODY.md` 6, species shape in
+  `ANATOMY.md` 5); whether named characters can become pregnant.
 - **(Rex)** Many storylines follow, so they need procedural generation: fill the system with data so it feels fresh.
 - **(proposed, outside AI)** Authored identity and milestones per character, with procedural events between; the
   economy as the source of quest variation; two ending layers (town and character), the second feeding the first.
@@ -255,4 +262,5 @@ Decided in the combat session; mechanics in `../combat/COMBAT.md` §4e. The fict
 | 2026-10-28 | The alignment system (`balance/ALIGNMENT.md`): the player earns alignment too; three sources of change (dialogue, quests, independent actions), only those present witness, a continuous square, alignment persists through rotation; starting positions for now set for all 16 charted characters | Rex (via the balance keeper) |
 | 2026-10-28 | Recruiting alone doesn't develop a character's place: it takes a sub quest or supplying what they need (the farm's bodies are the example); new field `develops_place` | Rex (via the balance keeper) |
 | 2026-10-29 | Death and resurrection through a faction (mecha, ghost, zombie, angel; merfolk open), each ending that storyline; transformations depend on who did it (fish person, demon, missing if kidnapped); transformation is part of character endings, which can need you to bring people (the INTJ: test subjects or the fish people) | Rex (via the combat keeper) |
+| 2026-10-29 | Named characters are vulnerable to cardiac events; organ failures are crises (temporary, chronic, irreversible, death), so a body can end a story without a scripted death | Rex (via the body keeper) |
 | 2026-10-26 | The essence of ISTP is hunting perfection. Second character: the ISTP man, a stoic hunter by trade chasing the biggest, most dangerous prey; the shark scene; in the water you're at his mercy | Rex |
