@@ -69,10 +69,11 @@ like the type is Rex's call.
 | Intuition (Rex, 2026-10-29) | unconscious anticipation of threats and where an enemy is; "sees around corners" | the old pirate who knows the alley is wrong before anything shows; what sets it high or low is open |
 | Spatial Reasoning (Rex, 2026-10-29) | angles, distances, trajectories, mechanical interactions | aiming a musket or a gun; judging a jump between rails |
 | Poise (Rex, 2026-10-29) | staying steady when struck; resists flinching | the boarder who takes a cut and keeps coming |
+| Efficiency (Rex, 2026-10-29) | executing actions with minimal wasted time and effort | the gunner's crew that reloads in half the time; no motion spare |
 
-**The functions as attributes (Rex, 2026-10-29).** Seven attributes are the personality functions in combat:
-Eyesight Si, Perception Se, Pattern Recognition Ne, Hearing Fe, Intuition Ni, Spatial Reasoning Ti, Poise Fi. Te
-has no attribute yet (open). How each works in a fight (detection, aiming, poise damage and flinch levels) is in
+**The functions as attributes (Rex, 2026-10-29).** Eight attributes are the personality functions in combat:
+Eyesight Si, Perception Se, Pattern Recognition Ne, Hearing Fe, Intuition Ni, Spatial Reasoning Ti, Poise Fi,
+Efficiency Te. How each works in a fight (detection, aiming, poise damage and flinch levels) is in
 `combat/COMBAT.md` §6 and §6a; here they are character properties, used beyond combat (lookout, the sea, port).
 They gain experience like the rest.
 
@@ -214,4 +215,4 @@ furious with you is a worse surgeon tonight.
 - How the matrix types set the sliders.
 - What the personality type affects beyond the sliders.
 - Assertive ↔ Turbulent: a slider that shifts (as drafted) or fixed like the type.
-- Te's attribute (the other seven functions have one, §1); what sets Intuition high or low.
+- What sets Intuition high or low; what Efficiency governs in a turn (`combat/COMBAT.md` §6a).
