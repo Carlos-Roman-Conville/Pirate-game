@@ -5765,7 +5765,7 @@ window.BODY_DATA = {
     ],
     [
      "Appetite",
-     "the wish to eat this food now, 0 to 1 per meal offered: hunger x palatability (a hot meal 1.0, fresh meat 1.0, biscuit and salt horse for the 30th day 0.6, spoiled food 0.3, a favourite 1.2) x state (fever x0.3, drunk x0.7, seasick x0.2, grief x0.6); a man full but wanting pudding is appetite over fullness; a man hungry but off his food is hunger without appetite",
+     "the wish to eat this food now, 0 to 1 per meal offered: hunger x palatability x state. Palatability: a hot meal 1.0, fresh meat 1.0, biscuit and salt horse for the 30th day 0.6, spoiled food 0.3, a favourite 1.2, a hated one 0.5 (per character, the story keeper's); raised by the cook's skill (STATS Cooking: +0.1 at 30, +0.3 at 70; the skilled cook makes the same stores eaten, so consumption, mood and hearts toward the cook follow: ChatGPT's point, agreed). State: fever x0.3, drunk x0.7, seasick x0.2, grief x0.6. A man full but wanting pudding is appetite over fullness; a man hungry but off his food is hunger without appetite",
      "index",
      "proposed (Rex's go-ahead 2026-10-29)"
     ],
@@ -7814,11 +7814,19 @@ window.BODY_DATA = {
     ],
     [
      "Hunger over 0.8 for 3+ days",
-     "Patient <-> Impulsive; Generous <-> Greedy (slow)",
-     "toward Impulsive and Greedy, +0.5 a day",
+     "mood only (temporary irritability): -2 a day; the sliders untouched",
      "the whole crew: loyalty (mean mood) falls with it",
-     "fights over rations; hoarding",
-     "proposed (Rex's go-ahead 2026-10-29)"
+     "",
+     "fights over rations",
+     "proposed (Rex's go-ahead 2026-10-29; ChatGPT's adjustment: hunger alone never moves a slider)"
+    ],
+    [
+     "Prolonged deprivation: starvation stage 2+ for 14+ days, and what happened in it (who hoarded, who shared, who was cheated)",
+     "Patient <-> Impulsive; Generous <-> Greedy (slow), read through the memories (PIRATE 7: key moments)",
+     "toward Impulsive and Greedy +0.3 a day for the cheated and the hoarders; toward Generous for one who shared and was thanked",
+     "a lasting change needs the experience, not the hunger: it is the memory of the short voyage that moves the man (Rex: sliders move by how people treat them)",
+     "'remember the Spanish Main, when he kept the last biscuit'",
+     "proposed (ChatGPT's reading, outside AI, 2026-10-29); whether body states may move sliders at all is open 1"
     ],
     [
      "Appetite: a meal eaten with appetite over 0.8 (a hot meal, fresh meat, a favourite)",
@@ -7837,11 +7845,11 @@ window.BODY_DATA = {
      "proposed (Rex's go-ahead 2026-10-29)"
     ],
     [
-     "Appetite and personality (the story keeper's per character)",
-     "appetite's palatability factor read through type",
-     "a favourite food per character (+0.2); a hated one (-0.3)",
-     "open: which foods per character",
-     "the ESTP cook's secret; a crew mate who hoards oranges",
+     "Appetite and the person (the story keeper's per character)",
+     "appetite's palatability factor read through the character's history and personality, not the type alone (ChatGPT's point, agreed)",
+     "a favourite food per character (+0.2); a hated one (-0.3); a food tied to a memory either way",
+     "open: which foods per character, from their histories",
+     "the ESTP cook's secret; a crew mate who hoards oranges; the one who cannot face salt pork since the wreck",
      "open"
     ],
     [
