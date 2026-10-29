@@ -1,6 +1,6 @@
 {
   "title": "Pirate Ship: goods on the skill trees (proposed)",
-  "status": "Rex's splits of 2026-10-28 applied (Farming group; Cooking into Milling, Baking, Butchering, Preserving, Dairying, Waxworking; Tanning apart); placements still proposed",
+  "status": "Rex's splits of 2026-10-28 applied (Farming group; Cooking into Milling, Baking, Butchering, Preserving, Dairying, Waxworking; Tanning apart; Leatherworking added); placements still proposed",
   "bands": [
     {
       "key": "novice",
@@ -614,7 +614,7 @@
           "name": "Tanning",
           "existing": false,
           "covers": "raw hide to leather",
-          "why": "Kept apart from Butchering (Rex, 2026-10-28): a butcher skins, a tanner makes leather. Leatherworking (goods made from leather) is not a skill yet; open.",
+          "why": "Kept apart from Butchering (Rex, 2026-10-28): a butcher skins, a tanner makes leather. Leatherworking makes the goods.",
           "items": [
             {
               "good": 32,
@@ -629,6 +629,52 @@
               "band": "journeyman",
               "input": "butchering:Raw hides",
               "note": "bark pits take months; no Caribbean tannery in the sources, so off-map in practice"
+            }
+          ]
+        },
+        {
+          "key": "leatherworking",
+          "name": "Leatherworking",
+          "existing": false,
+          "covers": "goods made from leather: sacks and straps, belts and baldrics, shoes and boots, harness and saddles, gloves",
+          "why": "Added by Rex (2026-10-28) after Tanning. Shoes, boots and gloves were imported from England in the period (L), so those sit off-map; the shoemaker (cordwainer) was a seven-year trade. Leather sacks carried indigo (E).",
+          "items": [
+            {
+              "good": 16,
+              "name": "Leather sacks and straps",
+              "band": "novice",
+              "input": "tanning:Tanned leather",
+              "note": "indigo moved in 'leather sacks' at Maracaibo (E)"
+            },
+            {
+              "good": 38,
+              "name": "Belts, baldrics, scabbards",
+              "band": "apprentice",
+              "input": "tanning:Tanned leather",
+              "note": "for the swords Ligon lists among imports (L); the pirate's gear"
+            },
+            {
+              "good": 35,
+              "name": "Shoes and boots",
+              "band": "journeyman",
+              "offMap": true,
+              "input": "tanning:Tanned leather",
+              "note": "'shooes, and some bootes' at £50 in Ligon's outfit (L); the cordwainer's trade"
+            },
+            {
+              "good": 27,
+              "name": "Harness and saddles",
+              "band": "expert",
+              "input": "tanning:Tanned leather",
+              "note": "for the horse trade (PY); no period Caribbean saddler in the sources: open"
+            },
+            {
+              "good": 35,
+              "name": "Gloves and fine leather",
+              "band": "master",
+              "offMap": true,
+              "input": "tanning:Tanned leather",
+              "note": "'Gloves' among Ligon's imports (L)"
             }
           ]
         },

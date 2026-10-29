@@ -499,7 +499,8 @@ which equipment they use**. Gathering a thing and processing it are separate ski
 | Crafting | Preserving | new (Rex) | salting, smoking, drying: salt fish, salt meat, boucan |
 | Crafting | Dairying | new (Rex) | butter, cheese (off-map in practice) |
 | Crafting | Waxworking | new (Rex) | tallow candles up to wax figures (upper tiers unsourced) |
-| Crafting | Tanning | new (Rex) | raw hide to leather; Leatherworking not a skill yet |
+| Crafting | Tanning | new (Rex) | raw hide to leather |
+| Crafting | Leatherworking | new (Rex) | sacks, belts, shoes and boots, harness, gloves |
 | Crafting | Sugar boiling | new | the boiling house: molasses, muscovado, clayed; refining off-map |
 | Crafting | Dye Making | new (Rex) | the vats and the dye bath: indigo, annatto, cochineal; dyeing cloth |
 | Crafting | Distilling | new | the still: rum, aqua vitae; beer and wine off-map |
@@ -510,7 +511,9 @@ which equipment they use**. Gathering a thing and processing it are separate ski
 | Crafting | Weaving | new | spinning, weaving, rope, tailoring |
 | Crafting | Surgery and medicine | yes | the apothecary |
 
-**24 skills, 18 new.** Rex's second split (2026-10-28, from his notes): Cooking keeps meals only; Milling, Baking,
+**25 skills, 19 new.** Leatherworking added after Tanning (Rex, 2026-10-28).
+
+**24 before it.** Rex's second split (2026-10-28, from his notes): Cooking keeps meals only; Milling, Baking,
 Butchering, Preserving, Dairying and Waxworking are skills of their own, and Tanning is kept apart from Butchering.
 The chain is Hunting (the kill) → Butchering (meat, raw hide, tallow) → Preserving (salt, smoke) and → Tanning
 (leather). A hunter with low Butchering wastes the carcass. Candlemaking is renamed Waxworking so it has a ladder:
@@ -529,7 +532,7 @@ below. Mining and Weaving are nearly all off-map; Rex can cut them and treat tho
 | 63 | Seaweed | raw | Marine Gathering | No period trade found; use open |
 
 **Where each good sits: `skill-tree.json` and `skill-tree.html`** (this folder). Every one of the 61 goods is placed
-on one of these 24 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
+on one of these 25 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
 Master 100), with a one-line reason and the good it needs from another tree (sugar cane → molasses → rum; rived
 staves → dressed staves → tight cask). The JSON is the source; `build-skill-tree.py` rebuilds the HTML, which opens in
 any browser with no server. Goods made outside the Caribbean in the period are flagged off-map. Four goods have no
@@ -757,9 +760,9 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
    versus plain names is Rex's choice.
 8. **Cask size.** Which standard hogshead does the game use: one 63-gallon cask for sugar, molasses and rum (proposed,
    fits the 17th-century evidence), the large tobacco-size cask for sugar, or casks that grow over the timeline (1j)?
-9. **The 24 skills (3c, `skill-tree.json`).** Rex's two splits stand provisionally. Still to confirm: the seven
+9. **The 25 skills (3c, `skill-tree.json`).** Rex's two splits stand provisionally. Still to confirm: the seven
    earlier new ones (Farming, Hunting, Woodcutting, Mining, Sugar boiling, Distilling, Weaving), whether Mining and
-   Weaving go, whether Leatherworking becomes a skill, the Swimming gate level for pearls, and every placement.
+   Weaving go, the Swimming gate level for pearls, and every placement.
 10. **STATS.md.** Once confirmed, the new skills need their primary and secondary attributes and personality pull in
     `STATS.md` §2, which belongs to another keeper.
 
@@ -775,3 +778,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-28 | Condensed to 13 goods skills (5 gathering, 8 crafting; 7 new), one-offs folded in; every good placed on a tree and band in `skill-tree.json`, dashboard `skill-tree.html` built by `build-skill-tree.py` | research session, at Rex's request |
 | 2026-10-28 | Rex's split: Animal Husbandry, Marine Gathering, Dye Making out of Farming; Perfumery added; Swimming a gate. 17 skills; rows 62–63 added unsourced; trees and dashboard rebuilt | Rex (decision); research session |
 | 2026-10-28 | Rex's second split: Milling, Baking, Butchering, Preserving, Dairying, Waxworking out of Cooking; Tanning apart; Hunting is the kill only. 24 skills; unsourced goods dotted on the dashboard | Rex (decision); research session |
+| 2026-10-28 | Leatherworking added after Tanning (Rex); five leather goods placed | Rex (decision); research session |
