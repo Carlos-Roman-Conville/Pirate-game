@@ -17,9 +17,11 @@ Battle Brothers (lasting injuries).
 ## 1. Shape of the game's combat
 
 - **(Rex, 2026-10-26)** Not an action game.
-- **(Rex, 2026-10-28)** Turn-based RPG, **4 units on your side**; the enemy's count open. Converts to a
-  **turn-based tactical RPG** for invasions and large battles (Suikoden's two scales): ship warfare at the large
-  scale, RPG combat once ships are close. The 108 recruits are for the large scale later.
+- **(Rex, 2026-10-28)** Turn-based RPG. Converts to a **turn-based tactical RPG** for invasions and large battles
+  (Suikoden's two scales): ship warfare at the large scale, RPG combat once ships are close. The 108 recruits are
+  for the large scale later.
+- **(Rex, 2026-10-29)** The **4-unit limit is dropped for now**; a team limit comes later. It could be something
+  you unlock: more units as you raise something (what, arbitrary for now: open). The enemy's count stays open.
 - **(Rex, 2026-10-29)** Grid-based, Baldur's Gate feel: a wide variety of options, and deadly.
 - **(Rex, 2026-10-29)** **One map.** The map you walk on and the combat map are the same; walking into combat is
   seamless, as in BG3. (`PIRATE.md` §8 and §10 had proposed the same square tiles; the tile shape itself: open.)
@@ -86,6 +88,9 @@ Battle Brothers (lasting injuries).
 
 ## 5. Progression: skill, not levels
 
+- **(Rex, 2026-10-29)** Combat stats can be raised, but it's mainly the **skill** that rises, and skill makes
+  **what you intend to do happen more often**: a strike lands, a critical hit comes off. Mental stats affect other
+  things (§6a) and do gain experience.
 - **(Rex, 2026-10-29)** "The Dark Souls of RPGs": levelling does nothing, only skill gets you forward. "Maybe
   combat levels shouldn't even be a thing?" Yet you should still feel stronger the more you progress. Dark Souls'
   own levelling is a clue but "just results in more damage".
@@ -127,21 +132,54 @@ Battle Brothers (lasting injuries).
 - **(proposed, outside AI)** Detection range = base Vision × light modifier × environment modifier; detected =
   line of sight ∧ in range ∧ Perception check. For an 8-tile Vision: day 8, elevated 10, dusk 5, night 2, night
   with a torch nearby 5.
+- **(Rex, 2026-10-29)** **Intuition.** Besides the visual and detection stats, a stat that sees around corners and
+  through walls: a miraculous knowledge of where an enemy is. Some characters have it high, some low; what sets
+  it, Rex hasn't decided.
+- **(Rex, 2026-10-29)** **Sound.** Materials make different sounds on different terrain; sound works the way sight
+  does (a source, a medium, a listener) and is read with the **Hearing** stat.
 - **(proposed, outside AI)** Camouflage computed from clothing, posture, terrain and preparation, not a levelled
-  skill; Stealth (moving unnoticed) separate from camouflage (blending while still). Hearing as the next sense.
+  skill; Stealth (moving unnoticed) separate from camouflage (blending while still).
 - **(proposed, outside AI)** One authoritative world state (positions, elevation, light, obstacles, detection) for
   walking and fighting alike; walking continuous with a grid overlaid at combat, or always on cells.
 - **(proposed, outside AI)** Keep `STATS.md`'s Eyesight and Hearing as they are (Vision = Eyesight); add Pattern
   Recognition as a new attribute. Perception not placed.
 - **(keeper)** The same detection would serve the lookout duty (`DUTIES.md`), the sea (sails on the horizon) and
   fishing's reading-the-water stage, so this is a world system, not a combat-only one.
-- **(open)** Is Vision Eyesight? Perception: new attribute, or under Wits? Light and elevation: stats or map
-  properties (Rex's question; ChatGPT: map)?
+- **(open)** Light and elevation: stats or map properties (Rex's question; ChatGPT: map)? (Vision is Eyesight, and
+  Perception and Pattern Recognition are attributes of their own, by §6a.)
+
+## 6a. The combat attributes and the personality functions (Rex, 2026-10-29)
+
+Rex's way of bringing the personality functions into combat, worked out with ChatGPT: each perceiving and judging
+function is one combat attribute. The mental stats affect these and gain experience; the skills (§5) decide
+whether what you intend happens.
+
+| Attribute | Function | What it does in a fight |
+|---|---|---|
+| Eyesight | Si | retaining visual detail; recognising familiar appearances and changes in the environment |
+| Perception | Se | immediate awareness of movement, threats and activity |
+| Pattern Recognition | Ne | unusual configurations, likely hiding places, indirect clues |
+| Hearing | Fe | sounds, voices, emotional cues, social activity |
+| Intuition | Ni | unconscious anticipation of threats and enemy positions (the around-corners stat) |
+| Spatial Reasoning | Ti | angles, distances, trajectories, mechanical interactions: **aiming** |
+| Poise | Fi | staying steady: certain strikes do **poise damage** and the target **flinches**; high Poise doesn't flinch easily |
+
+- **(Rex)** The five sense rows are his concept as pasted; Ti → Spatial Reasoning and Fi → Poise are his own
+  additions in the same message.
+- **(open)** **Te** has no attribute yet. What Intuition is set by. Whether a flinch costs the reaction, the turn,
+  or position.
+- **(keeper)** This reaches into `STATS.md`: Eyesight and Hearing exist there; Perception, Pattern Recognition,
+  Intuition, Spatial Reasoning and Poise would be new attributes, and `STATS.md` §6 already has the idea of
+  functions absorbing parts of a fight ("Se takes the timing, Ne the options"). `STATS.md` has no keeper; Rex
+  decides where the table lives.
 
 ## 7. Preparation and travel
 
 - **(Rex, 2026-10-29)** Emphasis on preparation before a fight, like Monster Hunter. Travel by boat already
   carries it: like Oregon Trail, you travel a distance, need provisions, and things at sea cause events.
+- **(Rex, 2026-10-29)** **Items are integral to preparedness**, above all **what ammunition you bring**. Rex
+  plans different kinds of powder and different weapons to help in combat. (The goods and recipes are the
+  economy docs'; which ammo does what in a fight is this file's.)
 - **(proposed, outside AI)** The voyage: pick destination and route; prepare the ship (hull, sails, guns, cargo);
   prepare the crew (skills, health, morale, posts); load supplies (food, water, medicine, ammunition); gather
   intelligence (weather, threats, routes, rumours); days pass; safe passage, encounter or crisis; arrive, retreat,
@@ -167,11 +205,13 @@ Battle Brothers (lasting injuries).
 3. Actions per turn; what a prepared shot costs.
 4. Targeting: automatic parts, called shots, or both.
 5. Death for the player's crew: the wound ladder, or permanent death, or never.
-6. Vision = Eyesight? Perception and Pattern Recognition as new attributes?
+6. Te's combat attribute; what sets Intuition; what a flinch costs.
 7. Light and elevation as map properties (ChatGPT) or stats.
-8. Grid shape (square proposed) and the enemy's unit count; how 4-a-side converts to the tactical scale.
+8. Grid shape (square proposed); the team limit and what unlocks more units; the enemy's unit count; how the
+   small scale converts to the tactical scale.
 9. Who owns combat balance (encounter difficulty, unit numbers): `balance/BALANCE.md` item 14 says not balance.
-10. Hearing as a detection sense.
+10. Ammunition and powder kinds: which exist and what each does in a fight.
+11. Where the attribute table (§6a) lives: `STATS.md` or here.
 
 ## Log
 
@@ -181,3 +221,4 @@ Battle Brothers (lasting injuries).
 | 2026-10-29 | Rex's walkthrough (via ChatGPT): fights as duels of skill, speed and position; grid-based, deadly, regional damage; skill not levels; Monster Hunter prep; Vision shaped by light and elevation; pattern seeking; one seamless map; Oregon Trail travel; locales as puzzles | Rex (recorded) |
 | 2026-10-29 | ChatGPT's recommendations on the open items added as proposed; reactions as the duel feel under turns | keeper (outside AI) |
 | 2026-10-29 | Rex likes the prepared shot; references set (XCOM 2, Phoenix Point, BG3); record confirmed and reshaped into design sections for refining | Rex |
+| 2026-10-29 | 4-unit limit dropped for now; ammo and powder kinds integral to prep; Intuition (around corners) and sound (materials × terrain, Hearing); skill = intent happens more often; the functions as combat attributes (Si Eyesight, Se Perception, Ne Pattern Recognition, Fe Hearing, Ni Intuition, Ti Spatial Reasoning/aiming, Fi Poise/flinch) | Rex |
