@@ -1,0 +1,67 @@
+{
+  "_about": "Tables for world/POPULATION.md. The aggregate settlement model: a pool of unnamed people a town draws from. It never writes a named character's fate (town/UPGRADES.md, balance/ALIGNMENT.md and BALANCE.md own fates). Historical rates from Wrigley and Schofield (England) and Burnard (Jamaica). mark: rex | proposed | open.",
+  "rates": {
+    "title": "Historical vital rates (per 1,000 per year)",
+    "kind": "history", "conf": "medium",
+    "source": "England 1690s to 1720s: births about 28 to 33, deaths about 26 to 28, life expectancy at birth 35 to 38, a crisis year (1726) with deaths near 37 (Wrigley and Schofield via the Toronto tables; POP-WS). Jamaica: white deaths far above births; 50,000 Europeans arrived 1700 to 1750 and the white population grew by about 5,000; median settler marriage about six years (Burnard; POP-BURN). Port Royal 1692: about 6,500 people, about 2,000 killed in the earthquake and 3,000 more of injury and disease after (POP-PR). Enslaved populations in the sugar islands also fell without imports (Burnard, general).",
+    "columns": ["Population", "Births", "Deaths (normal year)", "Deaths (epidemic year)", "Natural change", "Life expectancy at birth", "Note", "Mark"],
+    "rows": [
+      ["England, rural parish", 30, 27, 40, "+3", 36, "the baseline the sim scales from", "history"],
+      ["A Caribbean port, white settlers", 25, 50, 100, "-25", 25, "newcomers die in the seasoning; growth only by immigration", "history (medium)"],
+      ["A Caribbean port, seasoned residents", 30, 35, 70, "-5", 32, "survivors of yellow fever are immune", "proposed (derived)"],
+      ["A plantation's enslaved people", 25, 45, 90, "-20", 23, "Burnard: no natural increase in the sugar islands", "history (medium)"],
+      ["A pirate crew (at sea, no women)", 0, 60, 300, "-60", "-", "recruited, never born: wholly a migration population", "proposed (derived)"],
+      ["A Miskito or Arawak village", 35, 35, 150, "0", 30, "smallpox and measles the epidemic killers of the unexposed", "proposed (derived)"]
+    ]
+  },
+  "cohorts": {
+    "title": "The settlement record: cohorts the aggregate model keeps",
+    "kind": "model", "conf": "medium",
+    "source": "A compact age-sex-role structure, updated daily for a visited town (the overnight tick) and in a batch for a distant one (the days elapsed). ChatGPT's three simulation levels (unvisited aggregate; discovered named characters tracked; active full detail) recorded in COMBAT.md 4e, proposed; kept.",
+    "columns": ["Field", "Type", "What it holds", "Mark"],
+    "rows": [
+      ["children", "count", "under 15", "proposed"],
+      ["adults_m, adults_f", "count", "15 to 50, by sex", "proposed"],
+      ["elders", "count", "over 50", "proposed"],
+      ["seasoned_share", "0 to 1", "fraction of adults immune to the local fevers", "proposed"],
+      ["enslaved", "count", "a plantation town's enslaved people; whether this appears in the game at all is Rex's (GOODS.md Open for Rex 1)", "open"],
+      ["transient", "count", "sailors, soldiers, visitors in port this week (the recruit pool's visitors, PIRATE.md 7b)", "proposed"],
+      ["health", "0 to 1", "mean body condition of the pool (food sufficiency, epidemic state)", "proposed"],
+      ["food_days", "number", "stores against need (ECOLOGY and the economy)", "proposed"],
+      ["epidemic", "disease id or none, with day", "the current outbreak (MEDICINE parameters)", "proposed"],
+      ["labour", "person-days per day", "= adults x health x (1 - sick share)", "proposed"],
+      ["occupations", "map", "how many farmers, fishers, smiths, sailors (GOODS.md 3d labels) the pool supplies", "proposed"]
+    ]
+  },
+  "tick": {
+    "title": "The aggregate daily update",
+    "kind": "model", "conf": "medium",
+    "source": "Standard cohort-component demography reduced to daily rates; epidemic as a simple SIR-type pulse using MEDICINE.md catch and death rates; migration from the economy's prosperity and the town's reputation. Numbers placeholders.",
+    "columns": ["Step", "Rule", "Reads", "Mark"],
+    "rows": [
+      ["Births", "children += adults_f x birth_rate/365 x health", "rates table", "proposed"],
+      ["Deaths, background", "each cohort -= n x death_rate/365 x (2 - health) ; elders x2", "rates, health", "proposed"],
+      ["Epidemic", "on outbreak: sick share rises by the disease's catch rate x (1 - seasoned_share) daily for its course; deaths = sick x the disease's untreated risk; survivors join seasoned_share (yellow fever, smallpox)", "MEDICINE.md diseases", "proposed"],
+      ["Ageing", "children -> adults at 15 (1/5475 a day), adults -> elders at 50", "-", "proposed"],
+      ["Food", "food_days -= 1; if under 0: health -= 0.02 a day; births x0.5; deaths x1.5 (famine)", "ECOLOGY, economy", "proposed"],
+      ["Migration in", "transient += arrivals (ships in port x crew share ashore); adults += settlers (prosperity x reputation x 0.001 a day)", "economy, town reputation", "proposed"],
+      ["Migration out", "adults -= leavers (fear of fever x epidemic; the dying port's pressure: Rex, everyone thinking of abandoning the port)", "town state", "proposed"],
+      ["Labour supply", "labour = adults x health x (1 - sick); the town's places draw workers from it; a place with no labour stalls (an input to the economy, not a fate)", "cohorts", "proposed"],
+      ["Recruit pool refresh", "the unnamed candidates (merc, hire) a port offers are drawn from transient and adults by occupation; named characters are never drawn or removed here", "PIRATE.md 7b", "proposed"]
+    ]
+  },
+  "fences": {
+    "title": "What this model may not do (the fates fence)",
+    "kind": "fiction", "conf": "high",
+    "source": "town/UPGRADES.md (slots, the ghost rule, succession: the farm passes to the daughter), balance/ALIGNMENT.md (fates alive/dead/ghost; departed; ownerDeparted freeze), balance/BALANCE.md C5 items 4, 13, 28 to 32 (death, succession and the reachability guarantee are Rex's open decisions), COMBAT.md 4e (states of being).",
+    "columns": ["Named-character thing", "Owner", "This model", "Mark"],
+    "rows": [
+      ["Whether a named character dies, of what, when", "Rex; the story, town and balance keepers; the combat keeper in a fight", "never rolls it; at most reports 'an epidemic is in town' as an event the owners may use", "rex (fates are theirs)"],
+      ["Succession (who runs the farm when the farmer goes)", "town keeper (UPGRADES.md)", "supplies the labour pool a successor is drawn from, nothing more", "rex"],
+      ["Ghosting a place", "the ghost rule (Rex, ALIGNMENT.md 5)", "untouched", "rex"],
+      ["Migration of a named character (leaving, departed)", "the alignment engine's location (town/aboard/departed)", "untouched", "rex"],
+      ["States of being (ghost, mecha, zombie, angel, demon, fish-person, missing)", "Rex (COMBAT.md 4e); story keeper for the fiction", "a cohort count of unnamed transformed people at most (open: whether a town's pool has them)", "open"],
+      ["The 108 characters and their alignments", "balance keeper", "untouched", "rex"]
+    ]
+  }
+}

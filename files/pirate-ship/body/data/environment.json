@@ -1,0 +1,95 @@
+{
+  "_about": "Tables for world/ENVIRONMENT.md. Climate numbers are modern climatology (the 1650 to 1730 Caribbean sat in the Little Ice Age: cooler and, 1645 to 1715, with far fewer hurricanes). Weather generation is a model. mark: rex | proposed | open.",
+  "climate": {
+    "title": "Caribbean monthly climatology (Kingston-type lowland station; modern normals)",
+    "kind": "science", "conf": "medium",
+    "source": "FAO regional description (trade winds 24 to 32 km/h from the east, 13 to 17 knots; Montserrat 24.7 C February low to 27.2 C July high); CIMH Caribbean climatology (SST 27 to 30 C, highest September to October); UK Met Office for Kingston (750 mm a year, February about 15 mm, October the wettest at about 130 mm); hurricane season June to November, peak mid-August to late October (NHC). ENV-FAO, ENV-CIMH, ENV-MET",
+    "columns": ["Month", "Air mean (C)", "Air day max (C)", "Night min (C)", "SST (C)", "Rain (mm)", "Rain days", "Humidity (%)", "Wind (knots, E to NE)", "Hurricane risk", "Season", "Mark"],
+    "rows": [
+      ["Jan", 25.5, 30, 21, 27.0, 25, 4, 72, 15, "none", "dry", "proposed"],
+      ["Feb", 25.5, 30, 21, 26.8, 15, 3, 70, 16, "none", "dry", "proposed"],
+      ["Mar", 26.0, 31, 21, 26.8, 20, 3, 69, 16, "none", "dry", "proposed"],
+      ["Apr", 26.5, 31, 22, 27.2, 35, 4, 70, 15, "none", "dry", "proposed"],
+      ["May", 27.5, 32, 23, 28.0, 100, 8, 74, 13, "very low", "wet (early rains)", "proposed"],
+      ["Jun", 28.0, 32, 24, 28.5, 90, 7, 75, 14, "low", "wet", "proposed"],
+      ["Jul", 28.5, 33, 24, 28.8, 50, 5, 73, 15, "low", "wet (mid-summer drought)", "proposed"],
+      ["Aug", 28.5, 33, 24, 29.2, 95, 8, 76, 13, "high", "wet", "proposed"],
+      ["Sep", 28.0, 32, 24, 29.5, 110, 9, 78, 11, "peak", "wet", "proposed"],
+      ["Oct", 27.5, 32, 23, 29.3, 130, 12, 79, 11, "high", "wet", "proposed"],
+      ["Nov", 27.0, 31, 23, 28.5, 70, 7, 76, 13, "low", "wet (ending)", "proposed"],
+      ["Dec", 26.0, 30, 22, 27.6, 35, 5, 73, 15, "none", "dry", "proposed"]
+    ]
+  },
+  "period_climate": {
+    "title": "The period's climate: what was different in 1650 to 1730",
+    "kind": "history", "conf": "medium",
+    "source": "Hurricane frequency fell about 75% between 1645 and 1715 (the Maunder Minimum), from Spanish shipwreck records and Florida tree rings (Trouet et al. 2016, ENV-LIA); Bahamian blue-hole records show regional variation. Kentucky study: the Caribbean saw a lull in storms, epidemic disease and drought while Europe cooled (ENV-LIA2). A measured Caribbean temperature anomaly was not found; cooler by a fraction of a degree is the general Little Ice Age picture.",
+    "columns": ["Factor", "Modern", "1650 to 1730", "Sim use", "Mark"],
+    "rows": [
+      ["Hurricanes a year reaching the islands", "about 1 to 3 named systems affect the central Caribbean", "about a quarter of that, 1645 to 1715; rising after", "hurricane chance per wet-season month x0.25 before 1715, x0.6 after", "proposed"],
+      ["Air and sea temperature", "the table above", "a fraction of a degree cooler (unmeasured)", "none (within noise)", "proposed"],
+      ["Trade winds", "13 to 17 knots", "assumed the same", "none", "proposed"],
+      ["Storm records", "-", "Barbados 1675, Jamaica 1712 and 1722 hurricanes are recorded (Johnson mentions the 1722 Jamaica storm)", "named events for the story keeper, not a rule", "proposed"]
+    ]
+  },
+  "weather_states": {
+    "title": "Daily weather states and their effects (the generator)",
+    "kind": "model", "conf": "low",
+    "source": "A per-day Markov chain by month: each state has a stay probability and transitions; the effects are the keeper's placeholders. Wind and current set the ship's speed with PIRATE.md 5a's daily speed formula.",
+    "columns": ["State", "Wind (knots)", "Sea state", "Rain", "Cloud/sun", "Stay chance", "Dry-season weight", "Wet-season weight", "Effect on the ship", "Effect on the body", "Mark"],
+    "rows": [
+      ["Calm (the doldrums near the coast)", "0 to 5", "flat", "none", "full sun", 0.4, 0.1, 0.15, "speed x0.2; rowing the boat; water use up", "WBGT high: heat strain; sunburn", "proposed"],
+      ["Trade-wind fair", "12 to 18", "moderate", "none or a passing shower", "scattered cloud", 0.7, 0.6, 0.4, "speed x1.0", "comfortable on deck; seasickness low", "proposed"],
+      ["Fresh trades", "18 to 25", "rough", "showers", "cloud", 0.5, 0.2, 0.2, "speed x1.1 but sail wear x1.5; hull strain", "seasickness x2; falls aloft x1.5", "proposed"],
+      ["Squalls", "25 to 35, gusting", "rough, confused", "heavy, short", "dark", 0.3, 0.05, 0.15, "a torn sail event; rain catch for water", "wet, cold at night; falls x2", "proposed"],
+      ["Gale", "35 to 47", "very rough", "driving rain", "overcast", 0.4, 0.03, 0.07, "reef or lose sails; hull leaks; cargo shifts; 'all hands'", "no sleep; cold wet; falls x3; a man overboard roll", "proposed"],
+      ["Hurricane", "over 64", "phenomenal", "torrential", "black", 0.6, 0.0, "0.03 (x0.25 before 1715)", "the ship may be lost; a port may be wrecked (town keeper's event)", "injuries, drownings, exposure", "proposed"],
+      ["Norther (winter cold front, Gulf and western Caribbean)", "20 to 30 from the N", "rough", "rain then clear", "clear and cool", 0.5, 0.1, 0.0, "a lee shore on the Mosquito Coast", "night air 15 to 18 C: the one cold hazard of the region", "proposed"]
+    ]
+  },
+  "currents": {
+    "title": "Ocean currents the voyage loop uses",
+    "kind": "science", "conf": "medium",
+    "source": "Florida Current 1.8 m/s (about 3.5 knots) at its core, transport 30 Sv; the Caribbean Current reaches 60 to 70 cm/s (1.2 to 1.4 knots) along the Venezuelan, Colombian and Panamanian coasts, with a 1953 Navy survey reporting 'often exceeding one knot'; Antilles Current sluggish at the surface (about 10 cm/s); the Gulf Stream carries the Florida Current north then east. ENV-CUR",
+    "columns": ["Current", "Where", "Direction", "Typical surface speed (knots)", "Sim use", "Mark"],
+    "rows": [
+      ["Caribbean Current", "the southern Caribbean, strongest along the Venezuelan and Colombian coasts", "west, then north-west toward Yucatan", "0.5 to 1.4", "a free knot westbound; a knot against eastbound (why ships beat east along the islands)", "proposed"],
+      ["Yucatan Current and the Loop Current", "the Yucatan Channel into the Gulf", "north", "1 to 2", "the way into the Gulf of Mexico", "proposed"],
+      ["Florida Current", "the Straits of Florida", "north", "2 to 3.5", "the homeward highway of the Spanish fleets; the Bahamas wreckers' hunting ground", "proposed"],
+      ["Gulf Stream", "off the American coast to the Grand Banks", "north-east", "1 to 2.5", "the crossing to Europe", "proposed"],
+      ["North Equatorial Current", "the open Atlantic, 10 to 20 N", "west", "0.5 to 1", "the outbound crossing from the Canaries and the Guinea coast", "proposed"],
+      ["Antilles Current", "north of the Greater Antilles", "north-west", "0.2 (sluggish, variable)", "negligible", "proposed"],
+      ["Canary and Guinea Currents", "off Africa", "south then east", "0.5 to 1", "the Africa trade route", "proposed"]
+    ]
+  },
+  "exposure": {
+    "title": "Where a character is: the exposure the body reads",
+    "kind": "model", "conf": "medium",
+    "source": "WBGT estimated from air temperature, humidity and sun (the Australian Bureau of Meteorology approximation is the usual shortcut; shade and wind lower it); the mosquito and water multipliers are MEDICINE.md hygiene rows placed by terrain; the rest are the keeper's placeholders.",
+    "columns": ["Place / terrain", "Shade", "Wind felt", "WBGT vs open deck", "Wet", "Mosquito exposure", "Foul-water exposure", "Fall or accident hazard", "Mark"],
+    "rows": [
+      ["Open deck, day", "none", "full", "+0", "spray", "x0.3 (at sea), x1 at anchor", "the casks", "x1", "proposed"],
+      ["Aloft", "none", "more", "-1 C", "spray, rain", "x0.3", "-", "x5 (falls); x10 in a gale", "proposed"],
+      ["Below decks, under way", "full", "none", "+3 C (crowding, the galley)", "damp", "x1 at anchor", "bilge x2", "x1 (a loose cask)", "proposed"],
+      ["The galley", "full", "none", "+6 C", "dry", "x1", "x1", "burns x3", "proposed"],
+      ["A swampy anchorage or river mouth (wet season)", "some", "little", "+1 C", "rain", "x4", "x3", "x1", "proposed"],
+      ["A dry coral island, the beach (careening)", "palms", "trades", "+2 C in the sun", "dry", "x1", "x1 (no fresh water: the casks)", "x2 (the ship on its side)", "proposed"],
+      ["Rainforest hills", "full", "none", "-2 C, humid", "wet", "x3", "x2 (streams)", "x2", "proposed"],
+      ["A plantation town", "buildings", "some", "+1 C", "dry season dry", "x2 wet season", "x2 (wells)", "x1", "proposed"],
+      ["The tavern, the brothel", "full", "none", "+2 C", "dry", "x1", "x1", "brawls x3; the pox (MEDICINE)", "proposed"],
+      ["The Guinea coast", "some", "little", "+2 C", "wet", "x6 (falciparum)", "x3", "x1", "proposed"],
+      ["North Atlantic winter", "none", "gale", "cold: PHYSIOLOGY cold rules", "soaked", "0", "x1", "x4", "proposed"]
+    ]
+  },
+  "sun": {
+    "title": "Sun and daylight",
+    "kind": "science", "conf": "high",
+    "source": "At 15 to 20 N day length runs from about 11 h (December) to 13 h (June); the sun is overhead twice a year; UV index at noon 11+ in summer (modern). Sunburn in untanned skin in 15 to 30 minutes at noon.",
+    "columns": ["Month", "Daylight (h)", "Noon sun", "Sunburn time, untanned (min)", "Sim use", "Mark"],
+    "rows": [
+      ["Dec to Jan", 11.0, "high", 30, "watches and the day loop's day length; night work longer", "proposed"],
+      ["Mar and Sep", 12.0, "overhead", 20, "", "proposed"],
+      ["Jun to Jul", 13.0, "overhead", 15, "sunburn a MEDICINE minor condition (pain 2, sleep x0.9) for the new hand", "proposed"]
+    ]
+  }
+}
