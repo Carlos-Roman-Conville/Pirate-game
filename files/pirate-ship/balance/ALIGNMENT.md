@@ -448,6 +448,41 @@ The square, the charts, the player's movement, the overnight rule, the mean and 
   the economy feeds the town and the world (a shortage as an event; a company's retaliation as a faction's
   influence), which are commands between modules, not shared state.
 
+### Sixth run-down, the same day: the final faction grouping on the square (Rex; recorded, nothing built)
+
+- **(Rex)** "The final faction grouping and where they land on the alignment scale": **nine factions**, one per
+  region of the square, from Rex's chart (axes labelled Orderly/Chaotic × Good/Evil, as the engine's):
+
+  | Region (engine) | Faction (Rex) | Rex's sub-label |
+  |---|---|---|
+  | Orderly Good (pure) | Atlantean | Machina |
+  | upper hybrid (OG+CG) | Merfolk | Tritons / Sirens |
+  | Chaotic Good (pure) | Lost Boys | Peter Pan Pirates |
+  | left hybrid (OG+OE) | Imperial | Crown + Church |
+  | neutral centre | Ghost | Fleet |
+  | right hybrid (CG+CE) | Free | Pirates |
+  | Orderly Evil (pure) | Abyssal | Cult |
+  | lower hybrid (OE+CE) | Devil | Cult |
+  | Chaotic Evil (pure) | Criminal | Pirates |
+
+  Against the third run-down's six: the Holy Order is folded into the Imperial faction (Crown + Church); the
+  demonic force Rex first tied to the criminals is now its own **Devil Cult**, separate from the **Abyssal Cult**;
+  three factions are new (Atlantean Machina, Merfolk, Lost Boys). The chart places Merfolk, Imperial, Free and
+  Devil astride the axes and the Ghost Fleet on the crossing; this keeper reads those as the four hybrid bands and
+  the neutral centre, which is what the engine already has (§1), so the nine factions and the nine town endings
+  line up one to one. **(open)** whether that lining-up is intended, i.e. whether a town's ending *is* the faction
+  it has come to resemble, or the two merely share a map.
+- **(keeper)** This reverses the third run-down's reading that factions are kept apart from alignment: a faction
+  now has a fixed position on the square, so it can carry alignment into the engine without a new rule (a
+  faction's regional influence, if it ever becomes a town event, is just an event with that faction's coordinates
+  as its vector; data in `events.json`, no engine change). What it does not do is make factions and alignment the
+  same thing: a character's own position still comes from their chart, and a region's controlling faction is a
+  world-module tag; the lining-up gives the epilogue a reading ("the town became Atlantean") rather than a
+  mechanic. Recorded here; the ids below are proposed for the data, nothing more.
+- **(proposed)** Faction ids for `factions.json` when unit 32 is queued: `atlantean`, `merfolk`, `lost-boys`,
+  `imperial`, `ghost-fleet`, `free-pirates`, `abyssal-cult`, `devil-cult`, `criminal-pirates`, each with its region
+  key (`og`, `og-cg`, `cg`, `og-oe`, `neutral`, `cg-ce`, `oe`, `oe-ce`, `ce`) and Rex's sub-label as display text.
+
 ## Change log
 
 | Date | Change | By |
@@ -469,3 +504,4 @@ The square, the charts, the player's movement, the overnight rule, the mean and 
 | 2026-10-28 | §10 fourth run-down: the world answers to the player's actions (power vacuums, regional takeovers), the last fight engineered from it; two acts (the town, then liberating the lands from the faction that took over) | Rex (scope); keeper |
 | 2026-10-28 | §10 fifth run-down: the Caribbean map, fast travel with days and dots, ocean locales and waiting, companies that respond, and the economy as a reusable simulation (three goods types, cache and consumption per settlement) | Rex (scope); keeper |
 | 2026-10-28 | The economy engine lives in the Toolchain as a shared package; pirate-ship imports it and keeps goods, ports and companies as data | Rex |
+| 2026-10-28 | §10 sixth run-down: the final nine factions placed on the square (Atlantean, Merfolk, Lost Boys, Imperial, Ghost Fleet, Free Pirates, Abyssal Cult, Devil Cult, Criminal Pirates), one per engine region; Holy Order folded into Imperial; factions now carry a fixed alignment | Rex (scope); keeper |

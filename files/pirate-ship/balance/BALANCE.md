@@ -200,19 +200,28 @@ nothing is built. The current simulator verdicts (OG 61, CG 68, OE 49, CE 57) st
 15. **The world map** isn't designed; recruits are found by region, so joining gates may gain "reached region X"
     conditions (data in `gates.json`, no engine change).
 
-16. **Factions vs the square.** The six factions sit near quadrants (free pirates ~ chaotic good, crown ~ orderly,
-    holy order ~ orderly good, criminals ~ chaotic evil, cult ~ evil, ghosts ~ the ghost ending) but Rex's own note
-    and ChatGPT both keep them apart from alignment. If a faction ever *moves* the square (joining the Crown shifts
-    the town orderly), that's a new event source and needs a rule; if it only gates recruits, regions and the siege,
-    it's data (faction tags, per-group reputation) and the engine doesn't change. Rex's call.
-17. **Criminals and the cult: one faction or two.** Rex's words associated the criminal pirates with the demonic
-    force; ChatGPT split them and Rex took "the six". The split matters for routes: an evil ending through greed
-    (criminals) and one through corruption (cult) are two chaotic-evil stories or one; the town's evil forms (the
-    chthonic church) belong to the cult or to both.
-18. **Factions and the endings.** Whether "who rules the port" (a faction outcome) is a dimension beside the nine
-    alignment endings and the three neutrals, or folded into them, decides how many endings the sim must reach.
+16. **Factions vs the square.** ~~The six sit near quadrants but apart from alignment.~~ Superseded (Rex,
+    2026-10-28): the final nine factions each sit *on* one of the engine's nine regions (ALIGNMENT §10, sixth
+    run-down). So a faction carries a fixed alignment. Still Rex's call: whether a faction ever *moves* the town's
+    square (joining the Imperials shifts the town toward the left hybrid). If yes, it is an event with that
+    faction's coordinates as its vector, data in `events.json`, no engine change; if it only gates recruits, regions
+    and the siege, it is a tag. Either way the engine doesn't change; what changes is how many event sources the
+    sim must model.
+17. ~~**Criminals and the cult: one faction or two.**~~ Answered by the chart (Rex, 2026-10-28): three evil
+    factions, Abyssal Cult (orderly evil), Devil Cult (neutral evil), Criminal Pirates (chaotic evil). New open in
+    its place: which of the two cults the town's evil forms belong to (the chthonic church: Abyssal, Devil, or
+    either by the town's lean); story keeper's, with a balance reading once decided (an OE town that can only be
+    Abyssal has one fewer route than a town that can be either).
+18. **Factions and the endings.** Sharpened by the chart: with nine factions on the nine regions, the simplest
+    reading is that a town's ending *is* the faction it has come to resemble (an OG town is an Atlantean town; the
+    neutral ghost town is the Ghost Fleet's), and "who rules the port" stops being a separate dimension. The
+    three neutral endings don't fit that reading cleanly: only the ghost neutral has a faction (Ghost Fleet); the
+    ordinary and living neutrals have none. Rex says which reading holds; the count of endings the sim must reach
+    follows from it (nine, or nine × who rules).
 
-19. **Six Act II antagonists, each must be reachable.** The world sim has to prove every faction can end Act I
+19. **Act II antagonists, each must be reachable.** Now nine factions, not six; Rex says which can be the Act II
+    antagonist (all nine, or only those the player's town opposes: a good faction as the antagonist of an evil town
+    is a real route or an excluded one). The world sim has to prove every allowed faction can end Act I
     dominant and hostile, the way the town sim proves the four perfect towns. Factions aren't meant to be equally
     likely (the Ghost Fleet only through curses and mass death, the Free Pirates rarely), so some routes will be
     long and hidden; that's earned, like the OG hospital, as long as each exists. The one that can close by
@@ -550,3 +559,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | C5 items 19–23: six antagonists reachable, milestone vs threshold, regional rules as data, endings multiply, world module apart | keeper |
 | 2026-10-28 | C5 items 24–27: where the economy lives, three engines one clock, economic viability unowned, ocean waiting vs town neglect | keeper |
 | 2026-10-28 | C5 item 24 decided: the economy engine is a Toolchain package | Rex |
+| 2026-10-28 | C5 items 16–19 revised for the final nine factions on the square (16 superseded, 17 answered with a new open, 18 sharpened, 19 widened to nine with Rex's allowed list) | Rex (chart); keeper |
