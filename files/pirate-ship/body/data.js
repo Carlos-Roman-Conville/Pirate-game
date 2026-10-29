@@ -2860,12 +2860,20 @@ window.BODY_DATA = {
    ],
    "rows": [
     [
-     "development",
+     "contractile (was 'development')",
      "0 to 100 (genetic max per group, inherited from the limb's hidden max)",
      "index: 50 is an ordinary sailor",
-     "training stimulus after rest and food; disuse decay",
-     "limb Strength (computed), endurance time",
-     "proposed (outside AI)"
+     "the tension stimulus after rest and food (hypertrophy: more contractile protein); disuse decay",
+     "force potential, muscle mass, limb Strength (computed)",
+     "proposed (outside AI; split 2026-10-29)"
+    ],
+    [
+     "oxidative",
+     "0 to 100",
+     "index: mitochondria, capillaries and fuel enzymes as one number",
+     "the aerobic stimulus (long work at a share of capacity); disuse decay faster than contractile (weeks)",
+     "the group's endurance time and its recovery rate R between efforts; local muscular endurance",
+     "proposed (outside AI; split 2026-10-29)"
     ],
     [
      "fatigue",
@@ -2884,18 +2892,18 @@ window.BODY_DATA = {
      "proposed (outside AI)"
     ],
     [
-     "stimulus",
-     "0 to 100",
-     "index of unconverted training load",
-     "added by work; converted to development at the overnight tick if rest and protein allow; decays if not",
-     "development",
-     "proposed (outside AI)"
+     "stimulus_tension, stimulus_aerobic",
+     "0 to 100 each",
+     "two indices of unconverted training signal",
+     "added by work by the stimuli table; each converts to its own state at the overnight tick if rest and food allow; decays if not. Fatigue is not stimulus: a man can be exhausted with no useful signal, and a good session needs no exhaustion",
+     "contractile, oxidative",
+     "proposed (outside AI; split 2026-10-29)"
     ],
     [
      "mass",
      "kg (derived)",
      "kg",
-     "development x the body's lean mass share (NUTRITION)",
+     "contractile x the body's lean mass share (NUTRITION)",
      "body composition",
      "proposed"
     ]
@@ -3996,17 +4004,31 @@ window.BODY_DATA = {
    ],
    "rows": [
     [
-     "Stimulus per hour of work",
-     "sum over groups of activation% x minutes / 60 x intensity factor",
+     "Tension stimulus (per action)",
+     "sum over groups of activation% x reps x loadFactor, loadFactor = 0 under 40% of the group's max, rising to 1.0 at 80%+",
      "index",
-     "the activation profile times time; heavy loads count more (intensity = MET/6)",
+     "mechanical tension, not energy: a MET says how much a body burns, not how hard a muscle pulls (fixed 2026-10-29 after ChatGPT's point)",
      "proposed"
     ],
     [
-     "Overload threshold",
+     "Aerobic stimulus (per action)",
+     "sum over groups of activation% x minutes / 60 x min(1, effort / oxidativeShare), counted only while the action lasts over 10 minutes at 20 to 70% of the group's max",
+     "index",
+     "long work at a sustainable share of capacity: rowing, pumping, the capstan, a climb that goes on",
+     "proposed"
+    ],
+    [
+     "Technical practice (per action)",
+     "minutes x the movement pattern's share of the action",
+     "index",
+     "feeds the pattern's neural recruitment (patterns table) and the skill (STATS 2), not the muscle",
+     "proposed"
+    ],
+    [
+     "Overload threshold (tension)",
      40,
      "% of the group's max",
-     "below it, work maintains but does not grow the group (endurance only)",
+     "below it, work builds oxidative capacity and technique but not contractile size",
      "proposed"
     ],
     [
@@ -4077,6 +4099,230 @@ window.BODY_DATA = {
      "x1.0 to 30, x0.8 at 45, x0.6 at 60",
      "multiplier",
      "PHYSIOLOGY ageing",
+     "proposed"
+    ]
+   ]
+  },
+  "adaptation": {
+   "title": "The adaptation model: what lives at which level (after ChatGPT's two notes of 2026-10-29)",
+   "kind": "science",
+   "conf": "medium",
+   "source": "Exercise physiology: hypertrophy from mechanical tension and protein accretion; mitochondrial biogenesis, capillarisation and enzyme changes from sustained aerobic demand; early strength gains largely neural (motor-unit recruitment, 4 to 8 weeks) and movement-specific; tendons remodel slowly (months) and tolerate repeated load by that remodelling (standard references: ACSM, McArdle Katch and Katch). The structure is ChatGPT's (outside AI), the keeper agreeing: two long-term states per muscle, tendons per joint, recruitment per movement pattern, three stimuli per activity. MUS-ADAPT",
+   "columns": [
+    "Level",
+    "States",
+    "Changed by",
+    "Timescale",
+    "Feeds",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Per muscle group",
+     "contractile, oxidative, fatigue (3CC), condition",
+     "tension stimulus; aerobic stimulus; work; injury",
+     "contractile weeks to months; oxidative days to weeks (and lost in weeks); fatigue minutes to a night",
+     "force potential and mass; endurance and recovery; today's force",
+     "proposed (outside AI)"
+    ],
+    [
+     "Per tendon and joint",
+     "load tolerance, injury state, recovery",
+     "repeated loading below the tolerance raises it slowly; a load over it strains it; rest heals it (MEDICINE clock)",
+     "months to gain; days to weeks to heal a strain; a rupture months",
+     "the cap on how hard the muscles across it may pull without injury (the injuries table); joint range of motion as a cap on reach (open)",
+     "proposed (outside AI)"
+    ],
+    [
+     "Per movement pattern",
+     "neural recruitment efficiency, coordination",
+     "technical practice of actions that use the pattern",
+     "fast: weeks for the first gains, then slow",
+     "force actually produced in that pattern (recruitment x contractile), and the skill's technique side (STATS 2) which stays the skill's",
+     "proposed (outside AI)"
+    ],
+    [
+     "Per activity (the activation row)",
+     "tension stimulus, aerobic stimulus, technical practice",
+     "the action's nature: load, reps, duration, effort, which patterns it uses",
+     "-",
+     "the three levels above",
+     "proposed (outside AI)"
+    ],
+    [
+     "Whole body (PHYSIOLOGY)",
+     "cardio fitness (Banister), systemic fatigue, oxygen delivery",
+     "the day's MET-hours",
+     "weeks",
+     "aerobic_today and the Endurance pool; the oxidative states read it as a ceiling",
+     "proposed"
+    ]
+   ]
+  },
+  "patterns": {
+   "title": "Movement patterns (neural recruitment lives here, not per muscle and not in the skill)",
+   "kind": "model",
+   "conf": "medium",
+   "source": "ChatGPT's point (outside AI), kept: a man gets stronger at a movement by recruiting more of the muscle he has, without more muscle and without more skill; Swordplay is technique and timing, Reflexes is response speed, neither is maximal recruitment. The pattern set is the keeper's; each activation row names its patterns.",
+   "columns": [
+    "Pattern",
+    "What it is",
+    "Main groups",
+    "Example actions",
+    "Recruitment index (0 to 100; 50 ordinary)",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Horizontal pull",
+     "pulling toward the body",
+     "lats, trap_mid, rhomboids, delt_rear, biceps, forearm_flex",
+     "hauling a line, rope rows, pulling apart",
+     "per character",
+     "proposed"
+    ],
+    [
+     "Vertical pull",
+     "pulling down from overhead",
+     "lats, trap_lower, biceps, forearm_flex",
+     "climbing the shrouds, pull-ups on a yard",
+     "per character",
+     "proposed"
+    ],
+    [
+     "Horizontal push",
+     "pushing away",
+     "pec_stern, pec_clav, delt_front, triceps",
+     "a thrust, pushing a gun carriage, a shove in a grapple",
+     "per character",
+     "proposed"
+    ],
+    [
+     "Vertical push",
+     "pushing overhead",
+     "delt_front, delt_mid, triceps, trap_upper",
+     "pressing a cask, working a yard overhead",
+     "per character",
+     "proposed"
+    ],
+    [
+     "Squat and hinge",
+     "driving with the legs and hips from a bend",
+     "quads, glute_max, hamstrings, erectors",
+     "lifting a stone, the capstan, standing from a crouch under a load",
+     "per character",
+     "proposed"
+    ],
+    [
+     "Grip",
+     "holding on",
+     "forearm_flex, hand",
+     "everything with a rope, a cutlass, a fish on the line",
+     "per character",
+     "proposed"
+    ],
+    [
+     "Rotation",
+     "twisting the trunk",
+     "obliques, abs, erectors",
+     "a cutlass cut, a cast, the hammer at the anvil",
+     "per character",
+     "proposed"
+    ],
+    [
+     "Carry and brace",
+     "holding a load against the body",
+     "trap_upper, erectors, deep_core, forearm_flex",
+     "carrying a cask, bracing on a rolling deck",
+     "per character",
+     "proposed"
+    ],
+    [
+     "Locomotion",
+     "running and jumping",
+     "glute_max, hamstrings, quads, calves, hip_flex",
+     "a charge, a jump between rails, the beach run",
+     "per character",
+     "proposed"
+    ],
+    [
+     "Fine manipulation",
+     "the hand's control (overlaps Dexterity; here only the recruitment side)",
+     "hand, forearm_ext",
+     "needle, cards, a knot",
+     "per character",
+     "proposed (open: whether this pattern exists apart from Dexterity)"
+    ]
+   ]
+  },
+  "tendons": {
+   "title": "Tendons and joints: load tolerance",
+   "kind": "model",
+   "conf": "medium",
+   "source": "Tendons adapt slower than muscle (months) so a fast-growing muscle can outrun its tendon: the overuse injuries of the injuries table. Rupture needs a load far over tolerance on a cold or fatigued tendon. The set and numbers are the keeper's placeholders.",
+   "columns": [
+    "Tendon or joint",
+    "Spans",
+    "Tolerance index (0 to 100)",
+    "Common strain here",
+    "Raised by",
+    "Mark"
+   ],
+   "rows": [
+    [
+     "Rotator cuff and shoulder joint",
+     "shoulder",
+     "per character",
+     "the rigger's shoulder; a dislocation in a fall",
+     "repeated overhead and pulling work under tolerance",
+     "proposed"
+    ],
+    [
+     "Elbow (biceps and common flexor and extensor tendons)",
+     "elbow",
+     "per character",
+     "the oarsman's and smith's elbow",
+     "repeated pulling and hammering",
+     "proposed"
+    ],
+    [
+     "Wrist and finger flexor tendons",
+     "wrist and hand",
+     "per character",
+     "the climber's finger; the line that strips a tendon",
+     "grip work",
+     "proposed"
+    ],
+    [
+     "Lower back (lumbar discs and ligaments)",
+     "trunk",
+     "per character",
+     "the lift with a bent back",
+     "hinge work under tolerance; bracing",
+     "proposed"
+    ],
+    [
+     "Hip and groin (adductor and flexor tendons)",
+     "hip",
+     "per character",
+     "the groin strain gripping a yard",
+     "squat and hinge work",
+     "proposed"
+    ],
+    [
+     "Knee (patellar and hamstring tendons)",
+     "knee",
+     "per character",
+     "the jump that lands wrong",
+     "locomotion and squat work",
+     "proposed"
+    ],
+    [
+     "Achilles and ankle",
+     "ankle",
+     "per character",
+     "the rupture in a sprint on a cold morning",
+     "locomotion",
      "proposed"
     ]
    ]
@@ -4230,7 +4476,7 @@ window.BODY_DATA = {
    "rows": [
     [
      "Right arm Strength",
-     "weighted mean of the right arm's groups, scaled to the STATS 1 to 20 range",
+     "weighted mean of the right arm's groups' contractile x mean recruitment of the arm's patterns, scaled to the STATS 1 to 20 range (the character-sheet number); the force in a given action is the action's own: contractile x the pattern's recruitment x (1 - fatigue) x condition per required group, the weakest limiting",
      "grip 0.2, lats 0.15, biceps+brachialis 0.15, triceps 0.15, deltoids 0.15, pecs 0.1, trap_mid+rhomboids 0.1",
      "proposed"
     ],
@@ -8366,6 +8612,14 @@ window.BODY_DATA = {
      "https://pmc.ncbi.nlm.nih.gov/articles/PMC7734360/",
      "science",
      "2026-10-29"
+    ],
+    [
+     "MUS-ADAPT",
+     "Exercise physiology of adaptation: hypertrophy by mechanical tension and protein accretion; mitochondrial biogenesis and capillarisation by aerobic demand; early neural strength gains; tendon remodelling (standard references: ACSM's Guidelines; McArdle, Katch and Katch, Exercise Physiology)",
+     "the adaptation model's biology (MUSCULAR 5a)",
+     "https://en.wikipedia.org/wiki/Muscle_hypertrophy",
+     "science",
+     "standard reference"
     ],
     [
      "MUS-GYM",

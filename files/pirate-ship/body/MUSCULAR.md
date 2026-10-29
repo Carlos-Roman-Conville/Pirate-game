@@ -93,11 +93,12 @@ local side is here).
 
 | Value | Range | Unit | Changes by | Reads | Mark |
 |---|---|---|---|---|---|
-| development | 0 to 100 (genetic max per group, inherited from the limb's hidden max) | index: 50 is an ordinary sailor | training stimulus after rest and food; disuse decay | limb Strength (computed), endurance time | proposed (outside AI) |
+| contractile (was 'development') | 0 to 100 (genetic max per group, inherited from the limb's hidden max) | index: 50 is an ordinary sailor | the tension stimulus after rest and food (hypertrophy: more contractile protein); disuse decay | force potential, muscle mass, limb Strength (computed) | proposed (outside AI; split 2026-10-29) |
+| oxidative | 0 to 100 | index: mitochondria, capillaries and fuel enzymes as one number | the aerobic stimulus (long work at a share of capacity); disuse decay faster than contractile (weeks) | the group's endurance time and its recovery rate R between efforts; local muscular endurance | proposed (outside AI; split 2026-10-29) |
 | fatigue | 0 to 1 | fraction of fibres in the fatigued compartment (3CC) | work by the activation profile; recovers by R | today's force = development x (1 - fatigue) | proposed (outside AI) |
 | condition | 0 to 1 | 1 = sound; strain grades 1 to 3 at 0.8, 0.5, 0.2 | injury; healing (MEDICINE clock) | force cap; pain | proposed (outside AI) |
-| stimulus | 0 to 100 | index of unconverted training load | added by work; converted to development at the overnight tick if rest and protein allow; decays if not | development | proposed (outside AI) |
-| mass | kg (derived) | kg | development x the body's lean mass share (NUTRITION) | body composition | proposed |
+| stimulus_tension, stimulus_aerobic | 0 to 100 each | two indices of unconverted training signal | added by work by the stimuli table; each converts to its own state at the overnight tick if rest and food allow; decays if not. Fatigue is not stimulus: a man can be exhausted with no useful signal, and a good session needs no exhaustion | contractile, oxidative | proposed (outside AI; split 2026-10-29) |
+| mass | kg (derived) | kg | contractile x the body's lean mass share (NUTRITION) | body composition | proposed |
 <!-- /table -->
 
 - **[model]** Today's force from a group = `development × (1 − fatigue) × condition`. The hidden genetic
@@ -228,8 +229,10 @@ group; endurance time for a hold.
 
 | Constant | Value | Unit | Note | Mark |
 |---|---|---|---|---|
-| Stimulus per hour of work | sum over groups of activation% x minutes / 60 x intensity factor | index | the activation profile times time; heavy loads count more (intensity = MET/6) | proposed |
-| Overload threshold | 40 | % of the group's max | below it, work maintains but does not grow the group (endurance only) | proposed |
+| Tension stimulus (per action) | sum over groups of activation% x reps x loadFactor, loadFactor = 0 under 40% of the group's max, rising to 1.0 at 80%+ | index | mechanical tension, not energy: a MET says how much a body burns, not how hard a muscle pulls (fixed 2026-10-29 after ChatGPT's point) | proposed |
+| Aerobic stimulus (per action) | sum over groups of activation% x minutes / 60 x min(1, effort / oxidativeShare), counted only while the action lasts over 10 minutes at 20 to 70% of the group's max | index | long work at a sustainable share of capacity: rowing, pumping, the capstan, a climb that goes on | proposed |
+| Technical practice (per action) | minutes x the movement pattern's share of the action | index | feeds the pattern's neural recruitment (patterns table) and the skill (STATS 2), not the muscle | proposed |
+| Overload threshold (tension) | 40 | % of the group's max | below it, work builds oxidative capacity and technique but not contractile size | proposed |
 | Conversion window | 24 to 72 | h | stimulus converts to development across this window after a hard session; a second hard session inside it does not cancel the first: conversion that night is scaled by min(1, hoursSinceLastHardSession / 48) and unconverted stimulus carries over, so adaptation is continuous and only sustained overload with no rest days (fatigue over 0.6 at the tick) stalls it | proposed |
 | Conversion rate (novice, development under 40) | 0.5 | development per 10 stimulus | fast beginner gains | proposed |
 | Conversion rate (trained, development 40 to 70) | 0.2 | development per 10 stimulus |  | proposed |
@@ -254,6 +257,85 @@ group; endurance time for a hold.
 - **Visible face:** a crew mate who "filled out" after a season on the pumps; the gym's progress in the
   player's own regimen (fiction: the one place a body number may be shown as a lift that comes up or not).
 - **Mark:** **(proposed)**; constants placeholders.
+
+## 5a. The adaptation model: why a muscle changes (2026-10-29, after ChatGPT's two notes, outside AI)
+
+Rex asked whether there is a logical system for muscles to grow, the way fat has one. There is, and §5's
+single development score hid it: one stimulus pool fed one number, so a rower and a smith would have
+grown the same way. The split below is ChatGPT's structure, which the keeper agrees with after arguing it
+down from six states per muscle: **two long-term states per muscle** (contractile, oxidative), **the
+tendons per joint**, **neural recruitment per movement pattern**, and **three stimuli per activity**.
+All **(proposed)**; the biology is established, the numbers are placeholders.
+
+<!-- table:muscular.adaptation -->
+*The adaptation model: what lives at which level (after ChatGPT's two notes of 2026-10-29)* (science; confidence medium; source: Exercise physiology: hypertrophy from mechanical tension and protein accretion; mitochondrial biogenesis, capillarisation and enzyme changes from sustained aerobic demand; early strength gains largely neural (motor-unit recruitment, 4 to 8 weeks) and movement-specific; tendons remodel slowly (months) and tolerate repeated load by that remodelling (standard references: ACSM, McArdle Katch and Katch). The structure is ChatGPT's (outside AI), the keeper agreeing: two long-term states per muscle, tendons per joint, recruitment per movement pattern, three stimuli per activity. MUS-ADAPT)
+
+| Level | States | Changed by | Timescale | Feeds | Mark |
+|---|---|---|---|---|---|
+| Per muscle group | contractile, oxidative, fatigue (3CC), condition | tension stimulus; aerobic stimulus; work; injury | contractile weeks to months; oxidative days to weeks (and lost in weeks); fatigue minutes to a night | force potential and mass; endurance and recovery; today's force | proposed (outside AI) |
+| Per tendon and joint | load tolerance, injury state, recovery | repeated loading below the tolerance raises it slowly; a load over it strains it; rest heals it (MEDICINE clock) | months to gain; days to weeks to heal a strain; a rupture months | the cap on how hard the muscles across it may pull without injury (the injuries table); joint range of motion as a cap on reach (open) | proposed (outside AI) |
+| Per movement pattern | neural recruitment efficiency, coordination | technical practice of actions that use the pattern | fast: weeks for the first gains, then slow | force actually produced in that pattern (recruitment x contractile), and the skill's technique side (STATS 2) which stays the skill's | proposed (outside AI) |
+| Per activity (the activation row) | tension stimulus, aerobic stimulus, technical practice | the action's nature: load, reps, duration, effort, which patterns it uses | - | the three levels above | proposed (outside AI) |
+| Whole body (PHYSIOLOGY) | cardio fitness (Banister), systemic fatigue, oxygen delivery | the day's MET-hours | weeks | aerobic_today and the Endurance pool; the oxidative states read it as a ceiling | proposed |
+<!-- /table -->
+
+- **[science]** Muscle grows (hypertrophy) by laying down contractile protein under mechanical tension;
+  mitochondria, capillaries and fuel enzymes grow under sustained aerobic demand and make a muscle last
+  and recover, not get bigger (Rex's premise corrected by ChatGPT, rightly); the first weeks of any new
+  lift make a man stronger by recruiting more of the muscle he has, before it grows; tendons remodel over
+  months, so a fast-growing muscle can outrun its tendon (MUS-ADAPT).
+- **[model]** Each state keeps the logistic-toward-max shape of §5 with its own stimulus, gates and
+  timescale:
+
+      Δcontractile_g = k_c · S_tension_g · restGate · proteinGate · energyGate · sleepGate · (1 − contractile_g / max_g)
+      Δoxidative_g   = k_o · S_aerobic_g · restGate · energyGate · (1 − oxidative_g / max_g)      (lost at 3× the rate in disuse)
+      Δrecruitment_p = k_n · practice_p · (1 − recruitment_p / 100)                               (fast at first, then slow)
+      Δtolerance_t   = k_t · loadUnderTolerance_t · (1 − tolerance_t / max_t)                     (months); strain if load > tolerance
+
+  Today's force in an action = Σ over required groups of `contractile × recruitment(pattern) × (1 −
+  fatigue) × condition`, the weakest limiting; endurance in it reads `oxidative`, the group's R and the
+  whole body's `aerobic_today`. Fatigue (3CC, §4) stays the short-term state and is **not** a stimulus.
+- **What it buys:** the rower and the smith after three months (endurance versus force and grip); the
+  jobs swapped; the one-armed smith; a leg that loses muscle in a splint while the heart keeps its
+  fitness; a gym that can aim at size, endurance, tendon or technique.
+
+<!-- table:muscular.patterns -->
+*Movement patterns (neural recruitment lives here, not per muscle and not in the skill)* (model; confidence medium; source: ChatGPT's point (outside AI), kept: a man gets stronger at a movement by recruiting more of the muscle he has, without more muscle and without more skill; Swordplay is technique and timing, Reflexes is response speed, neither is maximal recruitment. The pattern set is the keeper's; each activation row names its patterns.)
+
+| Pattern | What it is | Main groups | Example actions | Recruitment index (0 to 100; 50 ordinary) | Mark |
+|---|---|---|---|---|---|
+| Horizontal pull | pulling toward the body | lats, trap_mid, rhomboids, delt_rear, biceps, forearm_flex | hauling a line, rope rows, pulling apart | per character | proposed |
+| Vertical pull | pulling down from overhead | lats, trap_lower, biceps, forearm_flex | climbing the shrouds, pull-ups on a yard | per character | proposed |
+| Horizontal push | pushing away | pec_stern, pec_clav, delt_front, triceps | a thrust, pushing a gun carriage, a shove in a grapple | per character | proposed |
+| Vertical push | pushing overhead | delt_front, delt_mid, triceps, trap_upper | pressing a cask, working a yard overhead | per character | proposed |
+| Squat and hinge | driving with the legs and hips from a bend | quads, glute_max, hamstrings, erectors | lifting a stone, the capstan, standing from a crouch under a load | per character | proposed |
+| Grip | holding on | forearm_flex, hand | everything with a rope, a cutlass, a fish on the line | per character | proposed |
+| Rotation | twisting the trunk | obliques, abs, erectors | a cutlass cut, a cast, the hammer at the anvil | per character | proposed |
+| Carry and brace | holding a load against the body | trap_upper, erectors, deep_core, forearm_flex | carrying a cask, bracing on a rolling deck | per character | proposed |
+| Locomotion | running and jumping | glute_max, hamstrings, quads, calves, hip_flex | a charge, a jump between rails, the beach run | per character | proposed |
+| Fine manipulation | the hand's control (overlaps Dexterity; here only the recruitment side) | hand, forearm_ext | needle, cards, a knot | per character | proposed (open: whether this pattern exists apart from Dexterity) |
+<!-- /table -->
+
+<!-- table:muscular.tendons -->
+*Tendons and joints: load tolerance* (model; confidence medium; source: Tendons adapt slower than muscle (months) so a fast-growing muscle can outrun its tendon: the overuse injuries of the injuries table. Rupture needs a load far over tolerance on a cold or fatigued tendon. The set and numbers are the keeper's placeholders.)
+
+| Tendon or joint | Spans | Tolerance index (0 to 100) | Common strain here | Raised by | Mark |
+|---|---|---|---|---|---|
+| Rotator cuff and shoulder joint | shoulder | per character | the rigger's shoulder; a dislocation in a fall | repeated overhead and pulling work under tolerance | proposed |
+| Elbow (biceps and common flexor and extensor tendons) | elbow | per character | the oarsman's and smith's elbow | repeated pulling and hammering | proposed |
+| Wrist and finger flexor tendons | wrist and hand | per character | the climber's finger; the line that strips a tendon | grip work | proposed |
+| Lower back (lumbar discs and ligaments) | trunk | per character | the lift with a bent back | hinge work under tolerance; bracing | proposed |
+| Hip and groin (adductor and flexor tendons) | hip | per character | the groin strain gripping a yard | squat and hinge work | proposed |
+| Knee (patellar and hamstring tendons) | knee | per character | the jump that lands wrong | locomotion and squat work | proposed |
+| Achilles and ankle | ankle | per character | the rupture in a sprint on a cold morning | locomotion | proposed |
+<!-- /table -->
+
+- **Where the lines fall (ChatGPT's correction of the keeper, agreed):** recruitment is not the skill
+  (technique and timing, `STATS.md` §2) and not Reflexes (response speed); it is how much of the muscle
+  the nerves can call on in that pattern, and it sits with the pattern. Tendon tolerance is not the
+  muscle's condition; it sits with the joint.
+- **Mark:** structure **(proposed, outside AI)**; the pattern and tendon sets and every number
+  **(proposed)**; whether fine manipulation is a pattern apart from Dexterity **(open)**.
 
 ## 6. Injuries and recovery
 
@@ -312,7 +394,7 @@ group; endurance time for a hold.
 
 | Limb stat | Formula (development x (1 - fatigue) x condition, per group) | Weights | Mark |
 |---|---|---|---|
-| Right arm Strength | weighted mean of the right arm's groups, scaled to the STATS 1 to 20 range | grip 0.2, lats 0.15, biceps+brachialis 0.15, triceps 0.15, deltoids 0.15, pecs 0.1, trap_mid+rhomboids 0.1 | proposed |
+| Right arm Strength | weighted mean of the right arm's groups' contractile x mean recruitment of the arm's patterns, scaled to the STATS 1 to 20 range (the character-sheet number); the force in a given action is the action's own: contractile x the pattern's recruitment x (1 - fatigue) x condition per required group, the weakest limiting | grip 0.2, lats 0.15, biceps+brachialis 0.15, triceps 0.15, deltoids 0.15, pecs 0.1, trap_mid+rhomboids 0.1 | proposed |
 | Left arm Strength | the same with the left groups | the same | proposed |
 | Right leg Strength | weighted mean of the right leg's groups | quads 0.3, glute_max 0.25, hamstrings 0.2, calves 0.15, hip_flex+adductors 0.1 | proposed |
 | Left leg Strength | the same | the same | proposed |
@@ -354,11 +436,10 @@ group; endurance time for a hold.
 4. Whether a fatigued limb raises an action's point cost in a fight (touches Efficiency, Rex's).
 5. The gym minigame and the gym as a town place (town keeper).
 6. All numbers are placeholders; the activation profiles are a belt data task once the rules stand.
-7. **(proposed, outside AI, audit 2026-10-29)** Tendon capacity, joint range of motion, contraction velocity,
-   neural recruitment, bilateral coordination, flexibility and bone adaptation are not modelled; the audit
-   asks for them. The keeper's view: velocity and recruitment belong to a nervous-system layer (the audit's
-   NEUROLOGY proposal, `BODY.md` audit section), tendon and joint range to this file as a cap per group.
-   Whether the sim goes that deep is Rex's.
+7. ~~Tendon capacity, neural recruitment~~ now in §5a (proposed). Still not modelled from the audit's
+   list: joint range of motion, contraction velocity, bilateral coordination, flexibility, bone
+   adaptation. Whether the sim goes that deep is Rex's.
+8. §5a itself: keep the four-level structure, or cut back to the two muscle states.
 
 ## Sources
 
@@ -371,3 +452,4 @@ grip-strength norms (Tomkinson 2025), Mercurialis 1569.
 | Date | What | Who |
 |---|---|---|
 | 2026-10-29 | File opened from Rex's §4b decisions; groups, values, activation profiles (26 actions), 3CC fatigue, training constants, injuries, the gym week, the computed-Strength reading; tables in `data/muscular.json` | keeper |
+| 2026-10-29 | Rex asked whether muscles have a logical growth system; ChatGPT's two notes (outside AI) and the keeper's reply: §5a, the adaptation model (contractile and oxidative per muscle, tendons per joint, recruitment per movement pattern, tension / aerobic / practice stimuli per activity); development split into contractile and oxidative; the tension stimulus no longer uses MET | keeper / outside AI |
