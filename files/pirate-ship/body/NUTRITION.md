@@ -382,9 +382,9 @@ intake; the deficiency clocks.
 |---|---|---|---|
 | A meal of fresh meat or fish after training (protein over 1.6 g/kg that day) | conversion gate x1.0 | none beyond the real one | proposed |
 | A hot meal before a fight (carbs, glycogen full) | Endurance pool glycogenFactor 1.0 | none beyond | proposed |
-| Rum before boarding (Rex's PIRATE.md: too much rum, accidents) | pain -2, alertness x0.8, Nerve +1 (fiction), Dexterity x0.9 | 'Dutch courage': the Brave slider read +10 for the fight (fiction, open) | proposed |
-| Coffee, tea, chocolate (74, 75, 11) | alertness x1.1 for 4 h (caffeine; science) | none beyond | proposed |
-| Kola nut (88) | caffeine: as coffee | none beyond | proposed |
+| Rum before boarding (Rex's PIRATE.md: too much rum, accidents) | NEUROLOGY.md circuits: gaba up (fear reading down: the real Dutch courage), motor control down, encoding down; the numbers are that file's outputs now | none beyond the real one; the 'Brave +10' fiction dropped | proposed (reads NEUROLOGY, 2026-10-29) |
+| Coffee, tea, chocolate (74, 75, 11) | NEUROLOGY.md: adenosine blocked, arousal up for about 5 h; the sleep pressure itself stays (caffeine's half-life 3 to 6 h) | none beyond | proposed (reads NEUROLOGY, 2026-10-29) |
+| Kola nut (88) | caffeine: as coffee (NEUROLOGY.md) | none beyond | proposed |
 | A sci-fi or mythical food (provenance-tagged) | whatever values its row gives | a tagged boost the item screen shows; the engine reads values, never the tag (Rex) | **open** |
 <!-- /table -->
 

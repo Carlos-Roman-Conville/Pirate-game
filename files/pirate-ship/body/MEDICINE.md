@@ -204,7 +204,7 @@ burns, crushes, with chance raised by fatigue and sleep debt, `PHYSIOLOGY.md`). 
 | Pain | Cause examples | Sim effect | Relief | Visible face | Mark |
 |---|---|---|---|---|---|
 | 0 to 2 | bruise, small cut | none | - | none | proposed |
-| 3 to 5 | deep cut, sprain, toothache | sleep quality x0.7; Dexterity x0.9 on that limb; PSYCHOLOGY push to Volatile | rum (-2 for 4 h, costs alertness), laudanum (-4 for 6 h, costs alertness and habit) | winces; short temper | proposed |
+| 3 to 5 | deep cut, sprain, toothache | sleep quality x0.7; Dexterity x0.9 on that limb; PSYCHOLOGY push to Volatile | rum and laudanum through NEUROLOGY.md's pain-gating circuit (relief by dose and tolerance; the old fixed -2 and -4 are its typical outputs) | winces; short temper | proposed |
 | 6 to 8 | fracture, burn, gunshot | sleep x0.4; the limb x0.5; Nerve check to keep working; Calm pressure | laudanum | cannot sleep; asks the surgeon | proposed |
 | 9 to 10 | amputation, crushed limb, gangrene | cannot act except by Nerve; shock risk | laudanum, rum, the surgeon's speed | screams below; the crew goes quiet | proposed |
 <!-- /table -->
@@ -249,7 +249,7 @@ chances and clocks on §1–§4.
 | Sweating, blistering, cautery | the pox, fevers, bleeding wounds | cautery stopped bleeding (at a cost); the rest no | 30 | fire, cantharides | bleeding class -1 at a burn wound; pain +3 | burns, infection | proposed |
 | Mercury (unction, pills, salivation) | the pox, yaws | suppressed signs, poisoned the patient | 40 | mercury (row 108) | pox signs hidden for months; Constitution x0.9; tremor (Dexterity x0.9) after long courses | lead-like palsy, lost teeth | proposed |
 | Peruvian bark (cinchona) | intermittent fevers (malaria) | yes: quinine | 30 (and the knowledge, GOODS 3f) | Peruvian bark (row 72) | malaria course halved, relapse chance x0.5 while taken | none to speak of | proposed |
-| Opium (laudanum) | pain, the flux, sleeplessness | yes for pain and diarrhoea | 30 | drugs (row 48) | pain -4 for 6 h; dysentery stools halved; alertness x0.7; habit after 30 days | habit; overdose | proposed |
+| Opium (laudanum) | pain, the flux, sleeplessness | yes for pain and diarrhoea | 30 | drugs (row 48) | NEUROLOGY.md: opioid tone up by dose: pain relief (the pain-gating circuit), stools halved, arousal down, breathing drive down (an overdose roll with rum); habit after about 30 days of daily dosing is the dependence clock there | habit; overdose | proposed |
 | Lemon or lime juice, fresh greens | scurvy | yes (Woodall 1617 already; proved by Lind 1747) | 10 (the knowledge: GOODS 3f) | limes, oranges (row 77), lime juice (row 18) | vitamin C restored: NUTRITION.md | none | **Rex** |
 | Washing wounds, dry lint, bandage, stitching | cuts | yes, partly (cleanliness mattered though nobody knew why) | 20 | lint, linen, needle, thread (row 47) | infection chance x0.5; healing clock starts | none | proposed |
 | Extracting balls and splinters | gunshot | yes if done early | 40 | forceps, probe | infection chance x0.6 if within a day | more bleeding | proposed |
@@ -259,7 +259,7 @@ chances and clocks on §1–§4.
 | Trepanning | depressed skull fracture | sometimes | 70 | trepan | head wound death risk x0.6; infection 30% | death | proposed |
 | Inoculation (variolation) | smallpox, from 1721 | yes: about 2% died of the inoculation vs 20 to 30% of the disease | 50 (and the knowledge, after 1721) | a lancet, a pustule | immunity after 3 weeks of mild illness | 2% death; spreads smallpox if not isolated | proposed |
 | Quarantine and airing the ship | fevers, ship fever | yes for lice-borne and person-to-person disease; useless against the mosquito | none (the captain's call) | - | contagion chance x0.3 for lice and droplet diseases | lost days | proposed |
-| Rum and 'drinking the fever away' | everything | no; it dehydrated | none | rum | pain -2; hydration -0.5 L; alertness x0.8 | the dry gripes over months | proposed |
+| Rum and 'drinking the fever away' | everything | no; it dehydrated | none | rum | NEUROLOGY.md: the alcohol row (motor control, fear, encoding, sleep quality); hydration -0.5 L | the dry gripes over months | proposed |
 <!-- /table -->
 
 - **Visible face:** the surgeon's report says what he did and what he thinks; the patient's course says

@@ -65,7 +65,7 @@ madness, respect, the sliders (slow) and "read as" states for the day.
 | Starvation stage 2+ (NUTRITION) | madness (PIRATE 7) | +1 a day for everyone | the crew's loyalty (mean mood) also falls | the mutiny event opens sooner | proposed |
 | Thirst over 2% (PHYSIOLOGY) | mood | -2 a day |  | fights over the cask | proposed |
 | Drink: a ration of rum (STATS 4 drink state) | mood | +1 that evening | PIRATE 5a: too much rum, accidents | singing in the den | rex (rum moves mood), proposed (size) |
-| Drink: drunk | Calm <-> Volatile (that evening only, not the slow slider) | state read as Volatile +20 for the night | the day-loop fight event | the brawl | proposed |
+| Drink: drunk | Calm <-> Volatile (that evening only, not the slow slider) | state read as Volatile by NEUROLOGY's fear and arousal outputs (about +20 for the night at a gill or two) | the day-loop fight event | the brawl | proposed (reads NEUROLOGY, 2026-10-29) |
 | Heat strain (PHYSIOLOGY) | mood; Calm <-> Volatile | -1 a day; Volatile pressure while over 38 C |  | tempers at noon | proposed |
 | Fever (MEDICINE) | mood; alertness | -2 a day; delirium: dialogue goes strange (the keyword answers from the madness pool) |  | raving in the hammock | proposed |
 | Scurvy stage 1 (NUTRITION: lassitude and low mood are the first signs) | mood | -1 a day | before any physical sign | a crew mate 'down' for no reason: the early warning | rex (scurvy real), proposed (push) |
@@ -78,7 +78,7 @@ madness, respect, the sliders (slow) and "read as" states for the day.
 | Fear: outnumbered, a storm, a fever aboard | Brave <-> Fearful read for the day; mood | state read as Fearful +10; -1 | contagious: each fearful crew mate adds +2 to the others (PSY-FEAR) | panic in the rigging | proposed |
 | Winning a fight, a prize, fresh food after a long passage | mood; respect | +2; + | per event | the feast | proposed |
 | A romance partner wounded or sick | hearts (PIRATE 7) unchanged; mood -2; madness +1 for the jealous or possessive type | per day |  | at the bedside | proposed |
-| Long habit of rum or laudanum broken (NUTRITION open 4) | mood; Calm <-> Volatile | -2 a day for 5 days; Volatile pressure | if habit is a system (open) | the shakes | **open** |
+| Withdrawal (NEUROLOGY.md clock 4: a habit broken) | mood; Calm <-> Volatile | mood by the mood-bias output (about -2 a day for 5 days); Volatile pressure; the craving push toward the habit; a slight if denied (open) | now a system (NEUROLOGY, proposed) | the shakes | proposed (reads NEUROLOGY, 2026-10-29) |
 <!-- /table -->
 
 - **Effects:** mood → loyalty → mutiny events (Rex); madness → the character's act (Rex); respect and hearts
