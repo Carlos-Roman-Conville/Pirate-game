@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pirate Body Atlas</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a surgeon's atlas. One sticky rail of tabs, one reading column with wide tables that scroll in their own frame. */
+:root {
+  --bg: #f6f3ec; --surface: #fcfbf7; --surface-2: #efeae0; --line: #d8d1c2; --ink: #1d1b16; --ink-2: #5a5648; --ink-3: #8a8574;
+  --accent: #8a3b2a; --accent-ink: #fff;
+  --rex: #0ca30c; --proposed: #2a78d6; --open: #d03b3b;
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --seq-1: #cde2fb; --seq-7: #0d366b; --grid: #e2dccd;
+  --display: "IM Fell English", "Iowan Old Style", Georgia, serif;
+  --body: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", Consolas, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #16150f; --surface: #1f1d16; --surface-2: #2a271e; --line: #3b382c; --ink: #efeadb; --ink-2: #c3bca6; --ink-3: #8c8672;
+  --accent: #e0825f; --accent-ink: #16150f; --rex: #0ca30c; --proposed: #3987e5; --open: #e66767;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --seq-1: #184f95; --seq-7: #cde2fb; --grid: #2f2c22; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #16150f; --surface: #1f1d16; --surface-2: #2a271e; --line: #3b382c; --ink: #efeadb; --ink-2: #c3bca6; --ink-3: #8c8672;
+  --accent: #e0825f; --accent-ink: #16150f; --rex: #0ca30c; --proposed: #3987e5; --open: #e66767;
+  --s1: #3987e5; --s2: #d95926; --s3: #199e70; --seq-1: #184f95; --seq-7: #cde2fb; --grid: #2f2c22; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { margin: 0; }
+body { background: var(--bg); color: var(--ink); font-family: var(--body); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 1280px; margin: 0 auto; padding-block: 0 48px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header.top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 8px 24px; padding-block: 22px 10px; border-bottom: 1px solid var(--line); }
+header.top h1 { font-family: var(--display); font-weight: 400; font-size: 2rem; margin: 0; letter-spacing: .01em; }
+header.top .sub { color: var(--ink-2); font-size: .95rem; }
+nav.tabs { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); display: flex; gap: 4px; overflow-x: auto; padding-block: 10px; border-bottom: 1px solid var(--line); scrollbar-width: thin; }
+nav.tabs a { white-space: nowrap; padding: 6px 12px; border-radius: 999px; color: var(--ink-2); text-decoration: none; font-size: .9rem; border: 1px solid transparent; }
+nav.tabs a:hover { border-color: var(--line); color: var(--ink); }
+nav.tabs a.on { background: var(--accent); color: var(--accent-ink); }
+nav.tabs a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+main { padding-top: 18px; }
+section.tab { display: none; } section.tab.on { display: block; }
+h2 { font-family: var(--display); font-weight: 400; font-size: 1.7rem; margin: 10px 0 4px; text-wrap: balance; }
+h3 { font-size: 1.05rem; font-weight: 600; margin: 28px 0 6px; }
+.lede { max-width: 70ch; color: var(--ink-2); margin: 0 0 14px; }
+.lede a, .meta a, td a { color: var(--accent); }
+.toolbar { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin: 10px 0 6px; }
+.toolbar input[type=search] { font: inherit; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink); min-width: 220px; }
+.toolbar label { font-size: .85rem; color: var(--ink-2); }
+.toolbar select { font: inherit; padding: 5px 8px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink); }
+.meta { font-size: .82rem; color: var(--ink-2); margin: 2px 0 8px; max-width: 95ch; }
+.chip { display: inline-block; font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; padding: 1px 7px; border-radius: 4px; border: 1px solid var(--line); color: var(--ink-2); margin-right: 6px; vertical-align: middle; }
+.chip.science { border-color: var(--s1); } .chip.history { border-color: var(--s2); } .chip.model { border-color: var(--s3); } .chip.fiction { border-style: dashed; }
+.pill { display: inline-block; font-size: .74rem; padding: 1px 8px; border-radius: 999px; color: var(--ink); background: var(--surface-2); white-space: nowrap; }
+.pill::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 5px; vertical-align: -1px; background: var(--ink-3); }
+.pill.rex::before { background: var(--rex); } .pill.proposed::before { background: var(--proposed); } .pill.open::before { background: var(--open); }
+.pill.rex { font-weight: 600; }
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 8px; background: var(--surface); }
+table { border-collapse: collapse; width: 100%; font-size: .86rem; }
+th, td { text-align: left; vertical-align: top; padding: 7px 10px; border-bottom: 1px solid var(--line); min-width: 0; }
+th { position: sticky; top: 0; background: var(--surface-2); font-weight: 600; font-size: .78rem; letter-spacing: .03em; text-transform: uppercase; color: var(--ink-2); z-index: 1; }
+td.num, th.num { text-align: right; font-family: var(--mono); font-variant-numeric: tabular-nums; }
+tr.hide { display: none; }
+tr.hit td { background: color-mix(in oklab, var(--accent) 10%, transparent); }
+.count { font-size: .8rem; color: var(--ink-3); margin-left: auto; }
+figure { margin: 10px 0 0; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 12px 14px; }
+figure figcaption { font-size: .85rem; color: var(--ink-2); margin-bottom: 6px; }
+figure svg { width: 100%; max-width: 820px; height: auto; display: block; font-family: var(--body); }
+svg text { fill: var(--ink-2); font-size: 11px; } svg .lab { fill: var(--ink); } svg .grid { stroke: var(--grid); stroke-width: 1; } svg .axis { stroke: var(--line); }
+.legend { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .8rem; color: var(--ink-2); margin-top: 6px; }
+.legend i { display: inline-block; width: 12px; height: 12px; border-radius: 3px; vertical-align: -2px; margin-right: 5px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 14px; }
+#tip { position: fixed; pointer-events: none; background: var(--ink); color: var(--bg); padding: 6px 9px; border-radius: 6px; font-size: .8rem; max-width: 280px; z-index: 20; display: none; font-family: var(--body); }
+.chainlist { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; }
+.chain { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; cursor: pointer; text-align: left; font: inherit; color: var(--ink); }
+.chain.on { border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+.flow { display: flex; flex-direction: column; gap: 0; margin-top: 14px; max-width: 80ch; }
+.step { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: start; padding: 8px 0; }
+.step .dot { width: 28px; height: 28px; border-radius: 50%; background: var(--surface-2); border: 1px solid var(--line); display: grid; place-items: center; font-family: var(--mono); font-size: .75rem; }
+.step + .step { border-top: 1px dashed var(--line); }
+.step .doc { font-size: .72rem; letter-spacing: .04em; text-transform: uppercase; color: var(--accent); text-decoration: none; }
+.step .doc:hover { text-decoration: underline; }
+.kv { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin: 12px 0; }
+.kv div { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+.kv b { display: block; font-size: 1.5rem; font-family: var(--mono); font-weight: 500; }
+.kv span { font-size: .8rem; color: var(--ink-2); }
+footer { margin-top: 40px; font-size: .8rem; color: var(--ink-3); border-top: 1px solid var(--line); padding-top: 12px; }
+@media (prefers-reduced-motion: no-preference) { nav.tabs a, .chain { transition: background .15s, border-color .15s; } }
+@media (max-width: 600px) { header.top h1 { font-size: 1.5rem; } .toolbar input[type=search] { min-width: 0; width: 100%; } }
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+  <h1>Pirate Body Atlas</h1>
+  <div class="sub">The body and world simulation for Pirate Ship, 1650–1730. Research, models and open questions; nothing here is canon until Rex marks it. Built from <code>body/data/*.json</code>.</div>
+</header>
+<nav class="tabs" id="tabs"></nav>
+<main id="main"></main>
+<footer>Marks: <span class="pill rex">Rex</span> decided · <span class="pill proposed">proposed</span> the keeper's or ChatGPT's suggestion (outside AI where said) · <span class="pill open">open</span> undecided. Statement kinds: <span class="chip science">science</span><span class="chip history">history</span><span class="chip model">model</span><span class="chip fiction">fiction</span>. Rerun <code>build-body-data.py</code> after editing the JSON.</footer>
+</div>
+<div id="tip" role="status"></div>
+<script src="data.js"></script>
+<script>
+(function () {
+  const D = window.BODY_DATA || {};
+  const TABS = [
+    { id: 'body', label: 'Body', file: 'body', title: 'BODY.md: the hub', intro: 'One shared body record; the subsystems produce states, this hub turns them into the capabilities STATS.md and COMBAT.md read, computed once. Rex’s decisions are preserved in BODY.md §0.', tables: ['record', 'capabilities', 'tick', 'states_of_being', 'visible_faces'], charts: ['deps'] },
+    { id: 'physiology', label: 'Physiology', file: 'physiology', title: 'Physiology', intro: 'Metabolism, cardio fitness, sleep and the watches, heat, cold, hydration, exertion, recovery, ageing. Produces alertness, core temperature, water deficit, fatigue and the Endurance pool fill.', tables: ['met', 'pal', 'banister', 'sleep_debt', 'circadian', 'wbgt_limits', 'core_temp', 'cold_water', 'hydration', 'acclimatisation', 'ageing', 'recovery'], charts: ['sleep', 'coldwater', 'hydration'] },
+    { id: 'medicine', label: 'Medicine', file: 'medicine', title: 'Medicine', intro: 'The disease list (cause, course, treatment, face), wounds, bleeding classes, pain and shock, what a surgeon of the period could do, hygiene as exposure, healing and immunity.', tables: ['diseases', 'wounds', 'bleeding', 'pain', 'treatments', 'hygiene', 'healing', 'immunity'], charts: ['diseases'] },
+    { id: 'muscular', label: 'Muscular', file: 'muscular', title: 'The muscular system and the gym', intro: 'Rex’s groups split by head and trained by what you do. Activation profiles per action, three-compartment fatigue, training gates, injuries, the gym week, and the computed-Strength reading (replace or compute is Rex’s to decide).', tables: ['groups', 'values', 'activations', 'fatigue_rates', 'endurance_time', 'training', 'injuries', 'gym', 'limb_strength'], charts: ['activation'] },
+    { id: 'nutrition', label: 'Nutrition', file: 'nutrition', title: 'Nutrition', intro: 'Calories, macros, micros, water and salt as real needs; food profiles for the goods in GOODS.md; the 1677 ration; body composition; the deficiency clocks that make scurvy emerge.', tables: ['nutrients', 'foods', 'ration', 'body_composition', 'depletion', 'boosts'], charts: ['vitc', 'ration'] },
+    { id: 'psychology', label: 'Psychology', file: 'psychology', title: 'Psychology', intro: 'No meter of its own. Body and social states push the meters that already exist: mood, madness, respect, the sliders. Plausible madness triggers are for the story keeper per character.', tables: ['pushes', 'madness_links'], charts: [] },
+    { id: 'environment', label: 'Environment', file: 'environment', title: 'Environment', intro: 'Climate, the period’s Little Ice Age hurricane lull, a daily weather generator, wind and currents for the voyage loop, and exposure by place for the body.', tables: ['climate', 'period_climate', 'weather_states', 'currents', 'exposure', 'sun'], charts: ['climate'] },
+    { id: 'ecology', label: 'Ecology', file: 'ecology', title: 'Ecology', intro: 'Every living thing is a stock with r and K (Schaefer): fish, turtle, game; crops and soil; the year’s calendar. Fewer silhouettes when reading the water is the visible face.', tables: ['stocks', 'depletion_rules', 'crops', 'soil', 'seasons'], charts: ['schaefer'] },
+    { id: 'population', label: 'Population', file: 'population', title: 'Population', intro: 'The aggregate settlement a town draws from: births, deaths, migration, labour. It never writes a named character’s fate; the fence table says who does.', tables: ['rates', 'cohorts', 'tick', 'fences'], charts: ['rates'] },
+    { id: 'chains', label: 'Chains', file: 'body', title: 'Interaction chains', intro: 'Pick a chain to follow a cause through the docs to a capability. Each step names the doc; the doc name opens its tab.', tables: [], charts: ['chains'] }
+  ];
+  const $ = (s, el) => (el || document).querySelector(s);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+  const markClass = v => { const s = String(v).toLowerCase(); if (s.startsWith('rex')) return 'rex'; if (s.startsWith('open')) return 'open'; if (s.includes('proposed') || s === 'history' || s === 'model' || s === 'science') return 'proposed'; return ''; };
+  const fmt = v => v == null ? 'open' : (typeof v === 'number' ? (Number.isInteger(v) ? String(v) : String(+v.toFixed(3))) : String(v));
+  const tip = $('#tip');
+  function showTip(e, html) { tip.innerHTML = html; tip.style.display = 'block'; moveTip(e); }
+  function moveTip(e) { const x = Math.min(e.clientX + 14, innerWidth - 300), y = e.clientY + 14; tip.style.left = x + 'px'; tip.style.top = y + 'px'; }
+  function hideTip() { tip.style.display = 'none'; }
+  function hover(el, html) { el.addEventListener('mouseenter', e => showTip(e, html)); el.addEventListener('mousemove', moveTip); el.addEventListener('mouseleave', hideTip); }
+
+  // ---------- tables ----------
+  function sourceLinks(txt) {
+    return esc(txt).replace(/\b([A-Z]{3}-[A-Z0-9]+)\b/g, '<a href="#body-sources" data-src="$1">$1</a>');
+  }
+  function renderTable(file, key) {
+    const t = D[file] && D[file][key]; if (!t) return '';
+    const cols = t.columns, markIdx = cols.findIndex(c => c.toLowerCase() === 'mark');
+    const numeric = cols.map((c, i) => t.rows.every(r => typeof r[i] === 'number' || r[i] == null) && t.rows.some(r => typeof r[i] === 'number'));
+    let h = `<h3 id="${file}-${key}">${esc(t.title)}</h3>`;
+    h += `<div class="meta"><span class="chip ${esc(t.kind)}">${esc(t.kind)}</span> confidence ${esc(t.conf)} · ${sourceLinks(t.source || '')}</div>`;
+    h += `<div class="tablewrap"><table data-table="${file}.${key}"><thead><tr>` + cols.map((c, i) => `<th class="${numeric[i] ? 'num' : ''}">${esc(c)}</th>`).join('') + `</tr></thead><tbody>`;
+    for (const r of t.rows) {
+      h += '<tr data-mark="' + (markIdx >= 0 ? markClass(r[markIdx]) : '') + '">' + r.map((v, i) => {
+        if (i === markIdx) return `<td><span class="pill ${markClass(v)}">${esc(fmt(v))}</span></td>`;
+        return `<td class="${numeric[i] ? 'num' : ''}">${esc(fmt(v))}</td>`;
+      }).join('') + '</tr>';
+    }
+    return h + '</tbody></table></div>';
+  }
+
+  // ---------- charts (inline SVG, drawn to scale) ----------
+  function svgOpen(w, h) { return `<svg viewBox="0 0 ${w} ${h}" role="img">`; }
+  function hbars(rows, opt) {
+    // rows: [{label, value, note}], single series: no legend. 4px rounded data end, baseline anchored.
+    const w = 640, rowH = 22, padL = opt.padL || 200, padR = 60, h = rows.length * rowH + 30;
+    const max = opt.max || Math.max(...rows.map(r => r.value)) * 1.05;
+    const x = v => padL + (v / max) * (w - padL - padR);
+    let s = svgOpen(w, h);
+    const ticks = opt.ticks || 4;
+    for (let i = 0; i <= ticks; i++) { const v = max * i / ticks; s += `<line class="grid" x1="${x(v)}" y1="8" x2="${x(v)}" y2="${h - 20}"/><text x="${x(v)}" y="${h - 6}" text-anchor="middle">${+v.toFixed(opt.dec ?? 0)}${opt.unit || ''}</text>`; }
+    rows.forEach((r, i) => {
+      const y = 10 + i * rowH; const bw = Math.max(0, x(r.value) - padL);
+      s += `<text class="lab" x="${padL - 8}" y="${y + 14}" text-anchor="end">${esc(r.label)}</text>`;
+      s += `<path d="M${padL},${y + 3} h${Math.max(bw - 4, 0)} a4,4 0 0 1 4,4 v8 a4,4 0 0 1 -4,4 h-${Math.max(bw - 4, 0)} z" fill="${r.color || 'var(--s1)'}" data-tip="${esc(r.label)}: ${fmt(r.value)}${opt.unit || ''}${r.note ? ' · ' + esc(r.note) : ''}"/>`;
+      if (opt.labelEvery || i % 3 === 0) s += `<text x="${x(r.value) + 5}" y="${y + 14}">${fmt(r.value)}${opt.unit || ''}</text>`;
+    });
+    return s + '</svg>';
+  }
+  function rangeBars(rows, opt) {
+    // rows: [{label, a, b, c?, d?}] two ranges per row on one scale (incubation then course), categorical slots 1 and 2, legend present.
+    const w = 640, rowH = 22, padL = 230, padR = 20, h = rows.length * rowH + 30, max = opt.max;
+    const x = v => padL + (Math.min(v, max) / max) * (w - padL - padR);
+    let s = svgOpen(w, h);
+    for (let v = 0; v <= max; v += opt.tick) s += `<line class="grid" x1="${x(v)}" y1="8" x2="${x(v)}" y2="${h - 20}"/><text x="${x(v)}" y="${h - 6}" text-anchor="middle">${v}${opt.unit}</text>`;
+    rows.forEach((r, i) => {
+      const y = 10 + i * rowH;
+      s += `<text class="lab" x="${padL - 8}" y="${y + 14}" text-anchor="end">${esc(r.label)}</text>`;
+      s += `<rect x="${x(r.a)}" y="${y + 4}" width="${Math.max(2, x(r.b) - x(r.a))}" height="6" rx="3" fill="var(--s1)" data-tip="${esc(r.label)} · incubation ${r.a} to ${r.b} days"/>`;
+      s += `<rect x="${x(r.b)}" y="${y + 11}" width="${Math.max(2, x(r.b + r.c) - x(r.b))}" height="6" rx="3" fill="var(--s2)" data-tip="${esc(r.label)} · course about ${r.c} days after incubation${r.d ? ' · ' + esc(r.d) : ''}"/>`;
+    });
+    return s + '</svg>';
+  }
+  function heatmap(rowsL, colsL, grid, opt) {
+    const cw = 20, ch = 18, padL = 230, padT = 90, w = padL + colsL.length * cw + 10, h = padT + rowsL.length * ch + 10;
+    let s = svgOpen(w, h);
+    colsL.forEach((c, j) => s += `<text transform="translate(${padL + j * cw + 13},${padT - 6}) rotate(-60)" text-anchor="start" font-size="10">${esc(c)}</text>`);
+    rowsL.forEach((r, i) => {
+      s += `<text class="lab" x="${padL - 8}" y="${padT + i * ch + 13}" text-anchor="end" font-size="11">${esc(r)}</text>`;
+      colsL.forEach((c, j) => { const v = grid[i][j] || 0; const t = v / 100; s += `<rect x="${padL + j * cw + 1}" y="${padT + i * ch + 1}" width="${cw - 2}" height="${ch - 2}" rx="2" fill="color-mix(in oklab, var(--seq-7) ${Math.round(t * 100)}%, var(--seq-1))" fill-opacity="${v ? 1 : 0.25}" data-tip="${esc(r)} · ${esc(c)}: ${v}%"/>`; });
+    });
+    return s + '</svg>';
+  }
+  function lines(series, opt) {
+    // series: [{name, color, pts:[y...]}] over 12 months, one axis.
+    const w = 640, h = 220, padL = 44, padR = 16, padT = 14, padB = 28, n = 12;
+    const min = opt.min, max = opt.max; const x = i => padL + i * (w - padL - padR) / (n - 1); const y = v => padT + (1 - (v - min) / (max - min)) * (h - padT - padB);
+    let s = svgOpen(w, h);
+    for (let v = min; v <= max; v += opt.tick) s += `<line class="grid" x1="${padL}" y1="${y(v)}" x2="${w - padR}" y2="${y(v)}"/><text x="${padL - 6}" y="${y(v) + 4}" text-anchor="end">${v}${opt.unit}</text>`;
+    opt.months.forEach((m, i) => s += `<text x="${x(i)}" y="${h - 8}" text-anchor="middle">${m}</text>`);
+    series.forEach(se => {
+      s += `<path d="${se.pts.map((v, i) => (i ? 'L' : 'M') + x(i) + ',' + y(v)).join(' ')}" fill="none" stroke="${se.color}" stroke-width="2" stroke-linejoin="round"/>`;
+      se.pts.forEach((v, i) => s += `<circle cx="${x(i)}" cy="${y(v)}" r="4" fill="${se.color}" stroke="var(--surface)" stroke-width="2" data-tip="${esc(se.name)} · ${opt.months[i]}: ${v}${opt.unit}"/>`);
+      s += `<text x="${x(n - 1) + 4}" y="${y(se.pts[n - 1]) + 4}" font-size="10">${esc(se.name)}</text>`;
+    });
+    return s + '</svg>';
+  }
+  function vbars(vals, opt) {
+    const w = 640, h = 200, padL = 44, padR = 16, padT = 14, padB = 28, n = vals.length, bw = (w - padL - padR) / n;
+    const max = opt.max; const y = v => padT + (1 - v / max) * (h - padT - padB);
+    let s = svgOpen(w, h);
+    for (let v = 0; v <= max; v += opt.tick) s += `<line class="grid" x1="${padL}" y1="${y(v)}" x2="${w - padR}" y2="${y(v)}"/><text x="${padL - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+    vals.forEach((v, i) => { const x0 = padL + i * bw + 3, bh = y(0) - y(v); s += `<path d="M${x0},${y(0)} v-${Math.max(bh - 4, 0)} a4,4 0 0 1 4,-4 h${bw - 14} a4,4 0 0 1 4,4 v${Math.max(bh - 4, 0)} z" fill="var(--s1)" data-tip="${opt.months[i]}: ${v} ${opt.unit}"/><text x="${x0 + (bw - 6) / 2}" y="${h - 8}" text-anchor="middle">${opt.months[i]}</text>`; });
+    return s + '</svg>';
+  }
+  function fig(cap, svg, legend) { return `<figure><figcaption>${cap}</figcaption>${svg}${legend ? `<div class="legend">${legend}</div>` : ''}</figure>`; }
+
+  const CH = {
+    sleep() { const t = D.physiology.sleep_debt; return fig('Alertness multiplier by cumulative sleep debt (model from Van Dongen 2003). Lower is worse.', hbars(t.rows.map(r => ({ label: r[0] + ' h', value: r[1], note: r[2] })), { max: 1, dec: 1, labelEvery: true, padL: 110 })); },
+    coldwater() { const t = D.physiology.cold_water; const parse = s => { const m = String(s).match(/[\d.]+/g); return m ? +m[m.length - 1] : 0; }; return fig('Time to exhaustion in the water by temperature band (upper end of each range, hours). The Caribbean sits in the warm bands.', hbars(t.rows.map(r => { const s = String(r[1]); let v = parse(s); if (/min/.test(s)) v = v / 60; if (/indefinite/.test(s)) v = 24; return { label: r[0] + ' °C', value: +v.toFixed(1), note: r[1] }; }), { unit: ' h', dec: 0, labelEvery: true, padL: 110 })); },
+    hydration() { const t = D.physiology.hydration; const m = r => { const x = String(r[1]).match(/Endurance(?: pool)? x([\d.]+)/); return x ? +x[1] : 1; }; return fig('Endurance pool multiplier by water deficit (% of body mass).', hbars(t.rows.map(r => ({ label: r[0] + ' %', value: m(r), note: r[1] })), { max: 1, dec: 1, labelEvery: true, padL: 110 })); },
+    diseases() {
+      const t = D.medicine.diseases; const num = s => { const m = String(s).match(/\d+/g); return m ? m.map(Number) : [0]; };
+      const rows = t.rows.filter(r => !/seasoning|scurvy|pellagra|consumption|yaws|pox|hookworm/.test(r[0])).map(r => { const inc = num(r[4]), c = num(r[5]); return { label: r[1].replace(/\s*\[.*$/, ''), a: inc[0], b: inc[inc.length - 1], c: c[c.length - 1] || c[0], d: r[6] }; });
+      return fig('Incubation (first bar) and course (second bar) in days, for the acute diseases. Hover for the untreated death risk.', rangeBars(rows, { max: 60, tick: 10, unit: 'd' }), '<span><i style="background:var(--s1)"></i>incubation</span><span><i style="background:var(--s2)"></i>course</span>');
+    },
+    activation() {
+      const t = D.muscular.activations; const cols = t.columns.slice(3, -1); const grid = t.rows.map(r => r.slice(3, -1).map(Number));
+      return fig('Activation profiles: % of each group’s maximum per action (illustrative; one hue, darker is more). Hover a cell.', heatmap(t.rows.map(r => r[0]), cols, grid, {}));
+    },
+    vitc() {
+      const t = D.nutrition.foods; const rows = t.rows.map(r => ({ label: r[0].replace(/\s*\(.*?\)\s*$/, ''), value: +r[8] })).filter(r => r.value > 0).sort((a, b) => b.value - a.value);
+      return fig('Vitamin C per 100 g: the only foods that stop scurvy. Everything else in the hold scores zero.', hbars(rows, { unit: ' mg', labelEvery: true, padL: 230 }));
+    },
+    ration() { const t = D.nutrition.ration; const rows = t.rows.filter(r => !/Total/.test(r[0])).map(r => ({ label: r[0], value: r[2] })); return fig('The 1677 Navy ration: kcal a day by item (calc). Beer and biscuit carry most of it.', hbars(rows, { unit: ' kcal', labelEvery: true, padL: 110 })); },
+    climate() {
+      const t = D.environment.climate; const months = t.rows.map(r => r[0]);
+      const a = fig('Monthly temperature (°C): air day max, air mean, night min, sea surface. One scale.', lines([
+        { name: 'day max', color: 'var(--s2)', pts: t.rows.map(r => r[2]) }, { name: 'air mean', color: 'var(--s1)', pts: t.rows.map(r => r[1]) }, { name: 'sea', color: 'var(--s3)', pts: t.rows.map(r => r[4]) }], { min: 20, max: 34, tick: 2, unit: '°', months }),
+        '<span><i style="background:var(--s2)"></i>day max</span><span><i style="background:var(--s1)"></i>air mean</span><span><i style="background:var(--s3)"></i>sea surface</span>');
+      const b = fig('Monthly rain (mm). Hurricane risk peaks with the rains, August to October.', vbars(t.rows.map(r => r[5]), { max: 150, tick: 50, unit: 'mm', months }));
+      return `<div class="grid2">${a}${b}</div>`;
+    },
+    schaefer() {
+      const t = D.ecology.stocks; const w = 640, h = 230, padL = 50, padR = 16, padT = 14, padB = 30;
+      const x = f => padL + f * (w - padL - padR), ymax = 1400, y = v => padT + (1 - v / ymax) * (h - padT - padB);
+      let s = svgOpen(w, h);
+      for (let v = 0; v <= ymax; v += 350) s += `<line class="grid" x1="${padL}" y1="${y(v)}" x2="${w - padR}" y2="${y(v)}"/><text x="${padL - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+      [0, .25, .5, .75, 1].forEach(f => s += `<text x="${x(f)}" y="${h - 8}" text-anchor="middle">${f * 100}% of K</text>`);
+      const pick = t.rows.filter(r => /Pelagics|Reef fish|Green turtle/.test(r[0])); const col = ['var(--s1)', 'var(--s2)', 'var(--s3)'];
+      pick.forEach((r, k) => { const rr = r[2], K = r[3]; let d = ''; for (let i = 0; i <= 40; i++) { const f = i / 40; const sp = rr * K * f * (1 - f); d += (i ? 'L' : 'M') + x(f) + ',' + y(sp); } s += `<path d="${d}" fill="none" stroke="${col[k]}" stroke-width="2"/>`; const msy = rr * K / 4; s += `<circle cx="${x(.5)}" cy="${y(msy)}" r="5" fill="${col[k]}" stroke="var(--surface)" stroke-width="2" data-tip="${esc(r[0])} · MSY ${Math.round(msy)} catch-days a year at half of K (r ${rr}, K ${K})"/>`; });
+      return fig('Surplus production (catch-days a year the stock can give back) against stock size, for three stocks. The peak is the maximum sustainable yield at half of K; take more and the stock falls.', s + '</svg>', pick.map((r, k) => `<span><i style="background:${col[k]}"></i>${esc(r[0])}</span>`).join(''));
+    },
+    rates() { const t = D.population.rates; return fig('Deaths per 1,000 a year in a normal year (first) and an epidemic year (second), by population.', rangeBarsSimple(t.rows.map(r => ({ label: r[0], a: r[2], b: r[3] })))); },
+    deps() {
+      const docs = ['ENVIRONMENT', 'ECOLOGY', 'POPULATION', 'PHYSIOLOGY', 'NUTRITION', 'MUSCULAR', 'MEDICINE', 'BODY', 'PSYCHOLOGY', 'STATS', 'COMBAT', 'DUTIES', 'GOODS', 'PIRATE', 'BALANCE'];
+      const idx = Object.fromEntries(docs.map((d, i) => [d, i])); const grid = docs.map(() => docs.map(() => 0));
+      for (const ch of D.body.chains.rows) { const steps = ch[1].split('->').map(s => { const m = s.match(/\b(ENVIRONMENT|ECOLOGY|POPULATION|PHYSIOLOGY|NUTRITION|MUSCULAR|MEDICINE|BODY|PSYCHOLOGY|STATS|COMBAT|DUTIES|GOODS|PIRATE|BALANCE)\b/); return m ? m[1] : null; }); for (let i = 1; i < steps.length; i++) { const a = steps[i - 1], b = steps[i]; if (a && b && a !== b) grid[idx[a]][idx[b]] += 1; } }
+      const max = Math.max(1, ...grid.flat()); const cw = 30, padL = 110, padT = 100, w = padL + docs.length * cw + 10, h = padT + docs.length * cw + 10;
+      let s = svgOpen(w, h); docs.forEach((d, j) => s += `<text transform="translate(${padL + j * cw + 18},${padT - 6}) rotate(-60)" font-size="10">${d}</text>`);
+      docs.forEach((d, i) => { s += `<text class="lab" x="${padL - 8}" y="${padT + i * cw + 19}" text-anchor="end" font-size="11">${d}</text>`; docs.forEach((e, j) => { const v = grid[i][j]; s += `<rect x="${padL + j * cw + 1}" y="${padT + i * cw + 1}" width="${cw - 2}" height="${cw - 2}" rx="3" fill="color-mix(in oklab, var(--seq-7) ${Math.round(v / max * 100)}%, var(--seq-1))" fill-opacity="${v ? 1 : .2}" data-tip="${d} → ${e}: ${v} chain step${v === 1 ? '' : 's'}"/>`; }); });
+      const n = D.body.chains.rows.length;
+      return `<div class="kv"><div><b>${n}</b><span>interaction chains</span></div><div><b>${Object.keys(D).length - 1}</b><span>data files behind the docs</span></div><div><b>${countRows()}</b><span>table rows across the family</span></div><div><b>${countMark('rex')}</b><span>rows carrying a Rex decision</span></div><div><b>${countMark('open')}</b><span>rows marked open</span></div></div>` + fig('Who hands what to whom: how often one doc’s output is the next step’s input across the ten chains (row gives to column; darker is more). Hover a cell.', s + '</svg>');
+    },
+    chains() {
+      const t = D.body.chains; let h = `<div class="chainlist">` + t.rows.map((r, i) => `<button class="chain" data-chain="${i}"><div><span class="pill ${markClass(r[2])}">${esc(r[2])}</span></div><div style="margin-top:6px;font-weight:600">${esc(r[0])}</div></button>`).join('') + `</div><div id="flow" class="flow"></div>`;
+      return h;
+    }
+  };
+  function rangeBarsSimple(rows) {
+    const w = 640, rowH = 22, padL = 230, padR = 40, h = rows.length * rowH + 30, max = 320; const x = v => padL + (v / max) * (w - padL - padR);
+    let s = svgOpen(w, h); for (let v = 0; v <= max; v += 80) s += `<line class="grid" x1="${x(v)}" y1="8" x2="${x(v)}" y2="${h - 20}"/><text x="${x(v)}" y="${h - 6}" text-anchor="middle">${v}</text>`;
+    rows.forEach((r, i) => { const y = 10 + i * rowH; s += `<text class="lab" x="${padL - 8}" y="${y + 14}" text-anchor="end">${esc(r.label)}</text><rect x="${padL}" y="${y + 4}" width="${x(r.a) - padL}" height="6" rx="3" fill="var(--s1)" data-tip="${esc(r.label)} · normal year ${r.a} per 1,000"/><rect x="${padL}" y="${y + 11}" width="${x(r.b) - padL}" height="6" rx="3" fill="var(--s2)" data-tip="${esc(r.label)} · epidemic year ${r.b} per 1,000"/>`; });
+    return s + '</svg><div class="legend"><span><i style="background:var(--s1)"></i>normal year</span><span><i style="background:var(--s2)"></i>epidemic year</span></div>';
+  }
+  function countRows() { let n = 0; for (const f in D) if (f !== 'sources') for (const k in D[f]) if (D[f][k] && D[f][k].rows) n += D[f][k].rows.length; return n; }
+  function countMark(m) { let n = 0; for (const f in D) if (f !== 'sources') for (const k in D[f]) { const t = D[f][k]; if (!t || !t.rows) continue; const i = t.columns.findIndex(c => c.toLowerCase() === 'mark'); if (i < 0) continue; for (const r of t.rows) if (markClass(r[i]) === m) n++; } return n; }
+
+  // ---------- build ----------
+  const nav = $('#tabs'), main = $('#main');
+  nav.innerHTML = TABS.map(t => `<a href="#${t.id}" data-tab="${t.id}">${t.label}</a>`).join('');
+  main.innerHTML = TABS.map(t => {
+    let h = `<section class="tab" id="tab-${t.id}" data-tab="${t.id}"><h2>${esc(t.title)}</h2><p class="lede">${t.intro}</p>`;
+    if (t.tables.length) h += `<div class="toolbar"><input type="search" id="search-${t.id}" placeholder="Find in this tab (a disease, a muscle, a food)…" aria-label="Find in this tab"><label>Mark <select id="mark-${t.id}"><option value="">all</option><option value="rex">Rex</option><option value="proposed">proposed</option><option value="open">open</option></select></label><span class="count" id="count-${t.id}"></span></div>`;
+    for (const c of t.charts) h += CH[c]();
+    for (const k of t.tables) h += renderTable(t.file, k);
+    if (t.id === 'body') h += `<h3 id="body-sources">Sources</h3>` + renderTable('sources', 'sources').replace(/^<h3[^>]*>.*?<\/h3>/, '');
+    return h + '</section>';
+  }).join('');
+
+  // tooltips on marks
+  main.querySelectorAll('[data-tip]').forEach(el => hover(el, el.getAttribute('data-tip')));
+  // filters
+  TABS.forEach(t => {
+    const s = $(`#search-${t.id}`), m = $(`#mark-${t.id}`); if (!s) return;
+    const run = () => {
+      const q = s.value.trim().toLowerCase(), mk = m.value; let shown = 0, total = 0;
+      $(`#tab-${t.id}`).querySelectorAll('tbody tr').forEach(tr => { total++; const ok = (!mk || tr.dataset.mark === mk) && (!q || tr.textContent.toLowerCase().includes(q)); tr.classList.toggle('hide', !ok); tr.classList.toggle('hit', ok && !!q); if (ok) shown++; });
+      $(`#count-${t.id}`).textContent = (q || mk) ? `${shown} of ${total} rows` : `${total} rows`;
+    };
+    s.addEventListener('input', run); m.addEventListener('change', run); run();
+    try { const saved = localStorage.getItem('atlas-mark-' + t.id); if (saved) { m.value = saved; run(); } } catch (e) {}
+    m.addEventListener('change', () => { try { localStorage.setItem('atlas-mark-' + t.id, m.value); } catch (e) {} });
+  });
+  // chains
+  const DOCTAB = { ENVIRONMENT: 'environment', ECOLOGY: 'ecology', POPULATION: 'population', PHYSIOLOGY: 'physiology', NUTRITION: 'nutrition', MUSCULAR: 'muscular', MEDICINE: 'medicine', BODY: 'body', PSYCHOLOGY: 'psychology' };
+  function showChain(i) {
+    const r = D.body.chains.rows[i]; main.querySelectorAll('.chain').forEach(b => b.classList.toggle('on', +b.dataset.chain === i));
+    const steps = r[1].split('->').map(s => s.trim());
+    $('#flow').innerHTML = `<h3>${esc(r[0])} <span class="pill ${markClass(r[2])}">${esc(r[2])}</span></h3>` + steps.map((st, k) => { const m = st.match(/^([A-Z][A-Z ]*?[A-Z])(?:\s+\d+[a-z]?)?\s*:/); const doc = m ? m[1].trim() : null; const key = doc && doc.split(' ')[0]; const link = key && DOCTAB[key] ? `<a class="doc" href="#${DOCTAB[key]}">${esc(doc)}</a>` : (doc ? `<span class="doc">${esc(doc)}</span>` : ''); return `<div class="step"><div class="dot">${k + 1}</div><div>${link}<div>${esc(doc ? st.slice(m[0].length).trim() : st)}</div></div></div>`; }).join('');
+    try { localStorage.setItem('atlas-chain', String(i)); } catch (e) {}
+  }
+  main.querySelectorAll('.chain').forEach(b => b.addEventListener('click', () => showChain(+b.dataset.chain)));
+  let c0 = 0; try { c0 = +(localStorage.getItem('atlas-chain') || 0) || 0; } catch (e) {} showChain(c0);
+  // source key links scroll to the row
+  main.addEventListener('click', e => { const a = e.target.closest('a[data-src]'); if (!a) return; e.preventDefault(); route('body'); const key = a.dataset.src; const row = [...$('#tab-body').querySelectorAll('table[data-table="sources.sources"] tbody tr')].find(tr => tr.firstElementChild.textContent.trim() === key); if (row) { row.scrollIntoView({ block: 'center' }); row.classList.add('hit'); setTimeout(() => row.classList.remove('hit'), 2500); } });
+  // routing
+  function route(id) { if (!TABS.some(t => t.id === id)) id = 'body'; nav.querySelectorAll('a').forEach(a => a.classList.toggle('on', a.dataset.tab === id)); main.querySelectorAll('section.tab').forEach(s => s.classList.toggle('on', s.dataset.tab === id)); if (location.hash !== '#' + id) history.replaceState(null, '', '#' + id); }
+  addEventListener('hashchange', () => route(location.hash.slice(1)));
+  route(location.hash.slice(1) || 'body');
+})();
+</script>
+</body>
+</html>

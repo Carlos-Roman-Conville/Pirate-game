@@ -80,6 +80,8 @@ attributes below live in the head, the whole-body stats in the torso, and a woun
 
 (Nerve, Poise and Efficiency sit with the whole body as a first placement; Rex may move them.)
 
+**The body underneath (Rex, 2026-10-29; filed 2026-10-29):** the muscles under the limbs are `body/MUSCULAR.md`, food is `body/NUTRITION.md`, and the whole family (physiology, medicine, psychology, the world docs) feeds `body/BODY.md`, which computes each attribute's value *today* from the body's states (fatigue, wounds, hunger, sleep, heat) so no system invents a penalty of its own. All of it is proposed except what Rex decided in `combat/COMBAT.md` §4a–§4e; the dashboard is `body/dashboard.html`.
+
 **The functions as attributes (Rex, 2026-10-29).** Eight attributes are the personality functions in combat:
 Eyesight Si, Perception Se, Pattern Recognition Ne, Hearing Fe, Intuition Ni, Spatial Reasoning Ti, Poise Fi,
 Efficiency Te. In a fight, **Endurance is the pool of points and Efficiency is how many each action spends** (Rex,
