@@ -133,6 +133,83 @@ Battle Brothers (lasting injuries).
   adds to initiative; every action keeps a floor cost (no action below N points however efficient). N: open.
 - **(keeper)** Written into `STATS.md` §1 the same day on Rex's say: the body attributes per limb.
 
+### 4b. Under the limbs: the muscular system and the gym (Rex, 2026-10-29)
+
+- **(Rex, 2026-10-29)** Go further than per limb: a system based on the real body, where **each major muscle
+  gets its own set of stats**. The stats interact in tandem and are set by overall movement: **training them is
+  based on what you do**. Walking trains certain muscles by a certain percentage; lifting something trains
+  others. Not every muscle, only the ones that count, split the way real muscles split: the deltoid into front,
+  middle and rear heads; the chest into upper, middle and lower; the same for any group with several parts.
+  Someone with a weak rear deltoid has a lower chance of pulling something apart. "With AI it's totally possible
+  to program."
+- **(Rex, 2026-10-29)** This opens the **gym simulator** Rex wanted: the character goes to the gym, designs a
+  regimen and conducts it. Pirates probably didn't have gyms; disbelief suspended for now.
+- **(proposed, outside AI)** Per-limb Strength becomes an output of muscular development rather than a stored
+  number. A starting functional model of 25–40 groups, left/right where it matters: deltoids (front, middle,
+  rear); chest (clavicular and sternocostal portions, since upper/middle/lower are training regions, not three
+  muscles); back (trapezius, latissimus, rhomboids, erectors); arms (biceps, brachialis, triceps, forearms); core
+  (abdominals, obliques, deep stabilisers); hips (glutes, flexors, abductors, adductors); thighs (quadriceps,
+  hamstrings); lower legs (calves, tibialis). Pulling apart recruits several muscles by direction and grip, not
+  the rear delt alone, which supports the idea: an action recruits several groups at different intensities.
+- **(proposed, outside AI)** Every action has an **activation profile** (hauling rope: lats 90%, grip 85%, biceps
+  70%, rear delts 45%, core 55%, legs 35%; illustrative). Occupations then build different bodies: rigging →
+  back, grip, arms, core; swordplay → shoulders, forearms, core, legs; hauling → back, legs, grip; smithing →
+  shoulders, forearms, triceps, grip; fishing → forearms, shoulders, back. One shared muscle model that actions
+  reference; each profile drives effort required, fatigue, training stimulus and how injuries bite, so new
+  activities never rewrite the system.
+- **(proposed, outside AI)** Three values per group: **development** (long-term capacity), **fatigue**
+  (temporary), **condition** (injury and recovery); plus accumulated **training stimulus** that turns into
+  development after rest. A day of heavy lifting makes you weaker that evening and stronger days later, which
+  ties in rest, nutrition and the food economy. Movement tiles = f(leg development, balance, fatigue, injuries,
+  load): six tiles fresh, three with cargo and a torn hamstring.
+- **(proposed, outside AI)** The gym as a weekly regimen (push, pull, legs, cardio, combat, rest days); early
+  training by stones, ropes, rowing, barrels and weapon drill, later facilities as town progression.
+- **(proposed, outside AI)** Muscle is force only: Reflexes and coordination decide how fast and accurately a
+  movement executes, skill decides technique, fatigue and injury modify the day. A weaker master swordsman still
+  beats the blacksmith, unless the blacksmith gets him in a grapple.
+- **(Rex, 2026-10-29)** The muscular system gets its own doc, **`MUSCULAR.md`**, which Rex is having ChatGPT
+  write; and a **`NUTRITION.md`** beside it. Where they go in the tree and whose lane: open (the keeper's
+  suggestion: a `body/` folder, `STATS.md` §1 pointing at both). Whether muscle **replaces** per-limb Strength
+  (§4a) or is what Strength is computed from: open, ChatGPT says replaces.
+- **(keeper)** The system touches lanes beyond combat: every duty in `DUTIES.md` would carry an activation
+  profile; the gym is a town place (town keeper) and a regimen a minigame (Rex's to design); food and rest are
+  the economy's and the balance keeper's. What combat owns of it: how fatigue, injury, hunger, thirst and
+  deficiency read as battle penalties, and what consumables do in a fight.
+
+### 4c. Nutrition (Rex, 2026-10-29; `NUTRITION.md`, not combat's to own)
+
+- **(Rex, 2026-10-29)** Simulate satiation, fat gain "and all that": every food gets **calories, macro- and
+  micronutrients**, and those affect things. So **real scurvy** if they forget vitamin C on a long trip; the need
+  for water, salt, potassium and the rest of what a body needs. Eat enough of something that pumps up muscles and
+  you get a boost.
+- **(proposed, outside AI)** Per food a profile (salt beef, biscuit, orange, beans, fresh fish, rum, with
+  illustrative numbers); the body tracks four layers: energy balance (calories in/out, fat reserve), macros
+  (protein, carbs, fat → recovery, training adaptation), micros (deficiency diseases, performance), hydration
+  (water, electrolytes). The muscular system reads these rather than keeping its own food rules. Immediate vs
+  long-term kept apart: a meal restores energy, weeks of eating build muscle; one low day loses nothing.
+  Scurvy emerges from a hold of beef, biscuit, beans and rum with no vitamin C, reserves falling over ~60–75
+  days to fatigue, slow wound healing, bleeding gums; fresh produce spoils, preserved food lacks C.
+- **(keeper)** Lanes: the foods are `economy/GOODS.md` (goods already have nutrition-adjacent rows); the
+  day-loop and voyage provisioning are the balance keeper's and `PIRATE.md` §5; combat owns only what a deficit
+  does in a fight. `PIRATE.md` §5 and `DUTIES.md` already list scurvy, limes and grog as the real thing.
+
+### 4d. Provenance tags (Rex, 2026-10-29; not combat's to own)
+
+- **(Rex, 2026-10-29)** A **time-anomaly tag** on things that don't belong to the period: a creature that isn't
+  real is tagged *mythical*; a Triassic creature *Triassic*; an unreal ingredient *sci-fi*. Several concepts can
+  then exist in one universe without confusing the player about what they are. The tags don't show in battle;
+  they show on the item screen: a sci-fi fish, a mythical fish, a prehistoric fish. Things can be added and the
+  game keeps its historical relevance.
+- **(proposed, outside AI)** A tag set: Historical, Anachronistic (real, other period), Prehistoric (with an
+  era), Mythological (with a tradition), Fantasy, Science Fiction, Original Fiction; shown in inventory,
+  bestiary, crafting encyclopaedia and descriptions. **Provenance and gameplay properties kept separate**: the
+  nutrition and crafting engines read values, never the tag. A real animal outside its period keeps its real
+  classification (a Triassic reptile is still a real extinct species; its appearance is what's fictional). A
+  `PROVENANCE.md`.
+- **(keeper)** Lanes: items are `economy/GOODS.md`, creatures and fish the story keeper's and `minigames/
+  FISHING.md`; combat reads nothing from the tag (an enemy's tag never changes a rule). `SOURCES.md` and the
+  economy's period verification are where "historical" is already being proven.
+
 ## 5. Progression: skill, not levels
 
 - **(Rex, 2026-10-29)** Combat stats can be raised, but it's mainly the **skill** that rises, and skill makes
@@ -270,6 +347,10 @@ whether what you intend happens.
 10. Ammunition and powder kinds: which exist and what each does in a fight.
 12. Per-limb stats (§4a): the global/local split as ChatGPT drew it, or changed; the Te floor value N; whether
     genetic min–max is per limb (head/torso and the floor decided 2026-10-29).
+13. The muscular system (§4b): `MUSCULAR.md` coming from ChatGPT; where it and `NUTRITION.md` sit in the tree
+    and whose lane; replaces per-limb Strength or computes it; the gym as a town place and a minigame.
+14. What combat reads from the body docs: fatigue, injury, hunger, thirst and deficiency as battle penalties;
+    consumables in a fight (food boosts, rum, medicine).
 11. ~~Where the attribute table lives~~ decided: `STATS.md` (Rex, 2026-10-29); the five new attributes written
     there the same day on Rex's say.
 
@@ -287,3 +368,5 @@ whether what you intend happens.
 | 2026-10-29 | Endurance = the pool of points; Efficiency = points spent per action each turn | Rex |
 | 2026-10-29 | Physical attributes per limb (Rex's idea); three distinct stat sets agreed (body, eight functions, skills); ChatGPT's global/local split, head/torso rows and Te fence recorded as proposed; keeper's readings on head/torso and a Te floor | Rex / outside AI / keeper |
 | 2026-10-29 | Decided: head and torso carry no stats of their own (hit location → stats dipped); Te floor cost stands; STATS.md body attributes rewritten per limb | Rex |
+| 2026-10-29 | The muscular system: each counting muscle (split by head, as real) gets stats trained by what you do; the gym simulator (design and run a regimen); ChatGPT's functional model, activation profiles, development/fatigue/condition recorded as proposed | Rex / outside AI |
+| 2026-10-29 | `MUSCULAR.md` and `NUTRITION.md` to be written (via ChatGPT); nutrition as calories, macros, micros, water and salt with scurvy emergent; provenance tags (mythical, Triassic, sci-fi) on the item screen, never in battle | Rex |
