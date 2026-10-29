@@ -250,6 +250,12 @@ intake; the deficiency clocks.
   (pease with the beef; lime with the fish) matters as it did.
 - **Visible face:** the surgeon notices the pale man who "eats well"; the cook's recipe choices; pease
   with the salt horse as the period's own good sense.
+- **Four stages, kept apart (principle, stated after ChatGPT's second note of 2026-10-29, outside AI; the
+  docs already run this way):** *intake* (what was eaten, §2) → *absorption* (what the gut kept, §2a) →
+  *reserve* (the pool, §5) → *effect* (the condition and its own recovery clock, `MEDICINE.md`). Eating
+  enough iron is not absorbing enough; absorbing enough does not end an anaemia that day: the condition
+  recovers on its own clock (months for iron, weeks for folate, days for scurvy's lassitude) once the pool
+  is back over its threshold. No stage writes a later stage directly.
 
 ## 3. The period ration
 
@@ -301,6 +307,16 @@ intake; the deficiency clocks.
   (`MEDICINE.md` §7); satiation pushes mood (`PSYCHOLOGY.md`).
 - **Visible face:** "he's gone thin"; the cook's rations shortening; the quartermaster's count of days of
   food left (the one number the player sees: stores, not stats).
+- **(proposed, outside AI, 2026-10-29; not adopted)** ChatGPT recommends splitting today's one satiation
+  index into four states: **fullness** (the stomach's distension, from the meal's mass; falls over hours),
+  **hunger** (the drive to eat, from energy deficit and time since eating), **appetite** (the wish to eat,
+  shaped by the food, illness, drink, stress and personality: a man full but wanting pudding, a feverish
+  man hungry but off his food), and **energy balance** (already this file's, §4). Its reading: keep all
+  four, energy balance here, the other three as inputs to the existing crew psychology (hunger and
+  appetite as pushes, `PSYCHOLOGY.md`), so illness, rum and personality change eating without a hunger
+  penalty of their own. The keeper's view: fullness and hunger are two numbers the sim already half-keeps
+  (satiation and energy balance) and the split costs little; appetite touches personality and belongs to
+  the story keeper's characters if it is kept at all. **Rex's call** (open 6).
 - **Mark:** **(Rex)** that energy and fat are simulated; **(proposed)** the rules.
 
 ## 5. Deficiency clocks
@@ -401,9 +417,11 @@ intake; the deficiency clocks.
 5. Every food number is a belt verification task against FoodData Central before tuning.
 6. ~~The audit's missing nutrients and absorption~~ added as proposed rows on Rex's go-ahead
    (2026-10-29): §1 (13 nutrients), §2 (their food values), §2a (absorption, protein quality). Still open
-   from the audit: the split of fullness, appetite, hunger and energy sufficiency into separate states
-   (today one satiation index), and whether the game surfaces any of the new deficiencies beyond anaemia,
-   cramps and bleeding.
+   from the audit: the split of fullness, hunger, appetite and energy balance into separate states (§4,
+   ChatGPT's table recorded there, not adopted), and whether the game surfaces any of the new deficiencies
+   beyond anaemia, cramps and bleeding.
+7. The `foods_more` values are low-confidence estimates (ChatGPT's caution, agreed): no deficiency
+   timeline built on them is reliable until the belt verifies them against FoodData Central.
 
 ## Sources
 
@@ -416,4 +434,5 @@ physiology, lime-vs-lemon composition.
 | Date | What | Who |
 |---|---|---|
 | 2026-10-29 | File opened from Rex's §4c decisions; nutrients (18), food profiles (50 goods), the 1677 ration, body composition, deficiency clocks, water and salt, boosts; tables in `data/nutrition.json` | keeper |
+| 2026-10-29 | ChatGPT's second note (outside AI): the four-stage principle (intake, absorption, reserve, effect) stated in §2a; its fullness / hunger / appetite / energy-balance split recorded in §4 as proposed, not adopted; its caution on the food values added to open 7 | keeper |
 | 2026-10-29 | On Rex's go-ahead after the audit: 13 more nutrients (B2, B5, B6, B7, folate, B12, E, K, Mg, P, Se, Cu, essential fatty acids), their deficiency clocks, their food values (`foods_more`), and the absorption table (§2a); all proposed | keeper (Rex's go-ahead) |
