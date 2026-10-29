@@ -123,7 +123,7 @@ about = ("Built by files/pirate-ship/economy/build-economy-data.py from skill-tr
 (out / "goods.json").write_text(json.dumps({"_about": about, "reviewed": tree["status"],
     "rowsNote": "rows = the 65 cargo rows of GOODS.md Part 1 with their sourced kind, route, package, spoilage, price and type; goods = the engine's goods, one per recipe output, each pointing at its row",
     "rows": row_list, "goods": sorted(goods.values(), key=lambda g: (g["row"], g["id"]))}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-(out / "skills.json").write_text(json.dumps({"_about": about, "bands": tree["bands"], "rule": tree.get("rule", ""), "skills": skills}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+(out / "skills.json").write_text(json.dumps({"_about": about, "bands": tree["bands"], "rule": tree.get("rule", ""), "regions": tree.get("regions"), "skills": skills}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 (out / "recipes.json").write_text(json.dumps({"_about": about, "flags": tree["flags"], "recipes": recipes}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 (out / "occupations.json").write_text(json.dumps({"_about": about, "note": tree["occupations"]["note"], "rules": tree["occupations"]["rules"], "occupations": occupations}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 

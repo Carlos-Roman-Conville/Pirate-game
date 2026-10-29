@@ -140,9 +140,39 @@ traveller.
   it cannot make it, whatever their band.
 - Skills carry over between regions; knowledge, resources and facilities do not (GOODS.md 3f).
 
+## 5. Escalation across the four (Rex, 2026-10-29; the order proposed)
+
+**Rex's direction.** The four expansions escalate. The region with the strongest creatures, the toughest metals
+and the best tech comes last; the easiest comes first. The truth can be stretched to make that so, and each region
+may lean on its own skills, tech trees and resources. Whatever advantage a region has is what sets its place in the
+escalation. The base game has a level cap; each expansion raises it, so encounters there are tougher by nature, but
+never a low thing at a high level (no level-65 rat). Levelling is slow and hard by design: playing well means
+recruiting the pre-built experts, not grinding characters up yourself.
+
+**What each region's advantage is, from the record (source), and the order it gives (proposed).** The economy can
+only speak to metals, tech, wealth and ships; creatures are the story's and the art's to add on top.
+
+| Order | Region | Its advantage in the record | What it leans on (proposed) | Where the truth is stretched |
+|---|---|---|---|---|
+| 1 | **Barbary** | ships and seamanship (xebecs, galleys, renegade round ships) and a ransom economy; no metals or tech beyond Europe's; its goods thin | sea fighting and chase, Shipwrighting (galley, xebec), Haggling and ransom, Tanning and Dye Making (morocco) | none needed: the weakest material advantage in the record, so the first step |
+| 2 | **Malacca** | the spices Europe fought wars for, under a monopoly; tin; kris steel with pamor; prahus; poisons and drugs of the forest (open) | Farming and Marine Gathering (spice, sago, trepang), Bladesmithing (kris), Apothecary, smuggling against the VOC | a little: the kris's pattern-welded steel is fine work but not stronger than European steel; the region's creatures and poisons would carry the escalation |
+| 3 | **Indian Ocean** | the richest prizes of the age (Every's £325,000–600,000), wootz crucible steel, the best cotton and dye work in the world, big ships (East Indiamen, pilgrim ships) | Mining and Bladesmithing (wootz, the period's hardest steel), Dye Making and Spinning (calico, chintz), Marine Gathering (pearls), wealth and big-ship fights | the Pirate Round was the Caribbean's own next step historically (1693–1720); placing it third stretches the story's order, not the materials. The Argosy merchants can carry the link early |
+| 4 | **East China Sea** | gunpowder's homeland and cannon founding; porcelain, which no one else could make; silk; Japanese swords and Japanese copper and silver; state-scale navies and war junks; a pirate who ran a kingdom (Koxinga) | Founding and Powder Making at their top, Porcelain (a skill of its own), Spinning (silk reeling), Shipwrighting (junks with bulkheads), fleet battles and a sea ban to run | the stretch is in creatures and scale, not metals: the tech and wealth are real; the hardest region by the record |
+
+**The cap and the enemies (proposed from Rex's words).** Each region raises the cap by one band's worth, and the
+cap rises because the region's facilities, metals and knowledge let characters do more, not because the same
+enemies grew numbers. A region's tough encounters are its own things: galley fleets and fortress guns at Barbary,
+the forest and the reef at Malacca, Indiamen and Mughal escorts in the Indian Ocean, war junks and the Qing navy in
+the East China Sea. Low things stay low everywhere.
+
+**Why the material order still works with knowledge (3f).** A Master bladesmith arriving in the Indian Ocean is still
+a Master; what he lacks is the wootz recipe and the crucible. The cap rise is what he can reach once he has them.
+
 ## Open for Rex
 
-1. Confirm the four expansions and their order; Barbary's economy of captives waits on the slave-trade decision.
+1. Confirmed, 2026-10-29: the four expansions. The escalation order (Barbary, Malacca, Indian Ocean, East China Sea)
+   is proposed from each region's advantage in the record; Rex to confirm or reorder. Barbary's economy of captives
+   waits on the slave-trade decision.
 2. Which items leak: the lists above are proposals; Rex said "select items".
 3. Whether porcelain making becomes a skill of its own (the one craft with no Caribbean neighbour) or a Founding
    or Cabinetmaking recipe set.
@@ -153,3 +183,4 @@ traveller.
 | Date | Change | Who |
 |---|---|---|
 | 2026-10-29 | Created: the three tests, verdicts on ten candidate regions (four pass), what stays in each, what may leak, how the data keeps them apart | research session, at Rex's request |
+| 2026-10-29 | Rex confirmed the four; §5 escalation: his direction (hardest region last, caps rise, slow levelling, recruit experts) and the order proposed from each region's advantage | Rex (direction); research session |

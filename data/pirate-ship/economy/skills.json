@@ -33,6 +33,41 @@
     }
   ],
   "rule": "Every recipe needs materials + equipment + a minimum skill band (Rex, 2026-10-28). Skill never creates a material: a master spinner cannot spin silk without silk. No skill or recipe is ever manifested by levelling: each is learned a real way (a book, a blueprint, a recipe, a teacher). Skill level sets speed, quality and success, and some items need a level besides (Rex, 2026-10-29).",
+  "regions": {
+    "note": "REGIONS.md: the four expansions confirmed by Rex 2026-10-29; tier is the proposed escalation order (1 easiest, 4 hardest), each raising the level cap",
+    "list": [
+      {
+        "id": "caribbean",
+        "name": "The Caribbean",
+        "tier": 0,
+        "leansOn": "the base game"
+      },
+      {
+        "id": "barbary",
+        "name": "Barbary coast",
+        "tier": 1,
+        "leansOn": "ships, chase, ransom; morocco leather"
+      },
+      {
+        "id": "malacca",
+        "name": "Malacca and the Spice Islands",
+        "tier": 2,
+        "leansOn": "spices, sago, trepang; kris; drugs and poisons; smuggling"
+      },
+      {
+        "id": "indian-ocean",
+        "name": "Indian Ocean",
+        "tier": 3,
+        "leansOn": "wealth; wootz steel; calico and chintz; pearls; big ships"
+      },
+      {
+        "id": "east-china-sea",
+        "name": "East China Sea",
+        "tier": 4,
+        "leansOn": "gunpowder and founding; porcelain; silk; junks; state navies"
+      }
+    ]
+  },
   "skills": [
     {
       "id": "farming",

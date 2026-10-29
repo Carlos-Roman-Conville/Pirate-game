@@ -1004,3 +1004,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-29 | Brewing confirmed as its own skill | Rex |
 | 2026-10-29 | 3f: Rex's rule that no skill or recipe is ever manifested, only learned a real way; skill level sets speed, quality and success; regions and the leak rule recorded in REGIONS.md | Rex (rule); research session |
 | 2026-10-29 | REGIONS.md: the expansion roadmap (four regions pass the tests); imported goods and arrack tagged with their region | research session, at Rex's request |
+| 2026-10-29 | REGIONS.md §5: Rex confirmed the four expansions; escalation by each region's advantage, rising level caps, slow levelling (direction); the order proposed | Rex (direction); research session |

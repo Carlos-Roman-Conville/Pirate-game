@@ -2440,13 +2440,38 @@
     ]
   },
   "regions": {
-    "note": "REGIONS.md (this folder): the four expansion regions and the leak rule",
+    "note": "REGIONS.md: the four expansions confirmed by Rex 2026-10-29; tier is the proposed escalation order (1 easiest, 4 hardest), each raising the level cap",
     "list": [
-      "caribbean",
-      "indian-ocean",
-      "malacca",
-      "east-china-sea",
-      "barbary"
+      {
+        "id": "caribbean",
+        "name": "The Caribbean",
+        "tier": 0,
+        "leansOn": "the base game"
+      },
+      {
+        "id": "barbary",
+        "name": "Barbary coast",
+        "tier": 1,
+        "leansOn": "ships, chase, ransom; morocco leather"
+      },
+      {
+        "id": "malacca",
+        "name": "Malacca and the Spice Islands",
+        "tier": 2,
+        "leansOn": "spices, sago, trepang; kris; drugs and poisons; smuggling"
+      },
+      {
+        "id": "indian-ocean",
+        "name": "Indian Ocean",
+        "tier": 3,
+        "leansOn": "wealth; wootz steel; calico and chintz; pearls; big ships"
+      },
+      {
+        "id": "east-china-sea",
+        "name": "East China Sea",
+        "tier": 4,
+        "leansOn": "gunpowder and founding; porcelain; silk; junks; state navies"
+      }
     ]
   }
 }
