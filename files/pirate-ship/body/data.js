@@ -2865,7 +2865,7 @@ window.BODY_DATA = {
      "index: 50 is an ordinary sailor",
      "the tension stimulus after rest and food (hypertrophy: more contractile protein); disuse decay",
      "force potential, muscle mass, limb Strength (computed)",
-     "proposed (outside AI; split 2026-10-29)"
+     "rex (the split, 2026-10-29); proposed (ranges)"
     ],
     [
      "oxidative",
@@ -2873,7 +2873,7 @@ window.BODY_DATA = {
      "index: mitochondria, capillaries and fuel enzymes as one number",
      "the aerobic stimulus (long work at a share of capacity); disuse decay faster than contractile (weeks)",
      "the group's endurance time and its recovery rate R between efforts; local muscular endurance",
-     "proposed (outside AI; split 2026-10-29)"
+     "rex (the split, 2026-10-29); proposed (ranges)"
     ],
     [
      "fatigue",
@@ -2897,7 +2897,7 @@ window.BODY_DATA = {
      "two indices of unconverted training signal",
      "added by work by the stimuli table; each converts to its own state at the overnight tick if rest and food allow; decays if not. Fatigue is not stimulus: a man can be exhausted with no useful signal, and a good session needs no exhaustion",
      "contractile, oxidative",
-     "proposed (outside AI; split 2026-10-29)"
+     "rex (the split, 2026-10-29); proposed (ranges)"
     ],
     [
      "mass",
@@ -4104,7 +4104,7 @@ window.BODY_DATA = {
    ]
   },
   "adaptation": {
-   "title": "The adaptation model: what lives at which level (after ChatGPT's two notes of 2026-10-29)",
+   "title": "The adaptation model: what lives at which level (Rex, 2026-10-29; structure from ChatGPT's notes, outside AI)",
    "kind": "science",
    "conf": "medium",
    "source": "Exercise physiology: hypertrophy from mechanical tension and protein accretion; mitochondrial biogenesis, capillarisation and enzyme changes from sustained aerobic demand; early strength gains largely neural (motor-unit recruitment, 4 to 8 weeks) and movement-specific; tendons remodel slowly (months) and tolerate repeated load by that remodelling (standard references: ACSM, McArdle Katch and Katch). The structure is ChatGPT's (outside AI), the keeper agreeing: two long-term states per muscle, tendons per joint, recruitment per movement pattern, three stimuli per activity. MUS-ADAPT",
@@ -4123,7 +4123,7 @@ window.BODY_DATA = {
      "tension stimulus; aerobic stimulus; work; injury",
      "contractile weeks to months; oxidative days to weeks (and lost in weeks); fatigue minutes to a night",
      "force potential and mass; endurance and recovery; today's force",
-     "proposed (outside AI)"
+     "rex (the level and its states, 2026-10-29); proposed (timescales, numbers)"
     ],
     [
      "Per tendon and joint",
@@ -4131,7 +4131,7 @@ window.BODY_DATA = {
      "repeated loading below the tolerance raises it slowly; a load over it strains it; rest heals it (MEDICINE clock)",
      "months to gain; days to weeks to heal a strain; a rupture months",
      "the cap on how hard the muscles across it may pull without injury (the injuries table); joint range of motion as a cap on reach (open)",
-     "proposed (outside AI)"
+     "rex (the level and its states, 2026-10-29); proposed (timescales, numbers)"
     ],
     [
      "Per movement pattern",
@@ -4139,7 +4139,7 @@ window.BODY_DATA = {
      "technical practice of actions that use the pattern",
      "fast: weeks for the first gains, then slow",
      "force actually produced in that pattern (recruitment x contractile), and the skill's technique side (STATS 2) which stays the skill's",
-     "proposed (outside AI)"
+     "rex (the level and its states, 2026-10-29); proposed (timescales, numbers)"
     ],
     [
      "Per activity (the activation row)",
@@ -4147,7 +4147,7 @@ window.BODY_DATA = {
      "the action's nature: load, reps, duration, effort, which patterns it uses",
      "-",
      "the three levels above",
-     "proposed (outside AI)"
+     "rex (the level and its states, 2026-10-29); proposed (timescales, numbers)"
     ],
     [
      "Whole body (PHYSIOLOGY)",
@@ -4155,7 +4155,7 @@ window.BODY_DATA = {
      "the day's MET-hours",
      "weeks",
      "aerobic_today and the Endurance pool; the oxidative states read it as a ceiling",
-     "proposed"
+     "rex (the level and its states, 2026-10-29); proposed (timescales, numbers)"
     ]
    ]
   },
@@ -4181,7 +4181,7 @@ window.BODY_DATA = {
      "lats, trap_mid, rhomboids, delt_rear, biceps, forearm_flex",
      "hauling a line, rope rows, pulling apart",
      "per character",
-     "proposed"
+     "rex (the pattern, per side, 2026-10-29); proposed (the index)"
     ],
     [
      "Vertical pull",
@@ -4190,7 +4190,7 @@ window.BODY_DATA = {
      "lats, trap_lower, biceps, forearm_flex",
      "climbing the shrouds, pull-ups on a yard",
      "per character",
-     "proposed"
+     "rex (the pattern, per side, 2026-10-29); proposed (the index)"
     ],
     [
      "Horizontal push",
@@ -4199,7 +4199,7 @@ window.BODY_DATA = {
      "pec_stern, pec_clav, delt_front, triceps",
      "a thrust, pushing a gun carriage, a shove in a grapple",
      "per character",
-     "proposed"
+     "rex (the pattern, per side, 2026-10-29); proposed (the index)"
     ],
     [
      "Vertical push",
@@ -4208,7 +4208,7 @@ window.BODY_DATA = {
      "delt_front, delt_mid, triceps, trap_upper",
      "pressing a cask, working a yard overhead",
      "per character",
-     "proposed"
+     "rex (the pattern, per side, 2026-10-29); proposed (the index)"
     ],
     [
      "Squat and hinge",
@@ -4217,7 +4217,7 @@ window.BODY_DATA = {
      "quads, glute_max, hamstrings, erectors",
      "lifting a stone, the capstan, standing from a crouch under a load",
      "per character",
-     "proposed"
+     "rex (the pattern, per side, 2026-10-29); proposed (the index)"
     ],
     [
      "Grip",
@@ -4226,7 +4226,7 @@ window.BODY_DATA = {
      "forearm_flex, hand",
      "everything with a rope, a cutlass, a fish on the line",
      "per character",
-     "proposed"
+     "rex (the pattern, per side, 2026-10-29); proposed (the index)"
     ],
     [
      "Rotation",
@@ -4235,7 +4235,7 @@ window.BODY_DATA = {
      "obliques, abs, erectors",
      "a cutlass cut, a cast, the hammer at the anvil",
      "per character",
-     "proposed"
+     "rex (the pattern, per side, 2026-10-29); proposed (the index)"
     ],
     [
      "Carry and brace",
@@ -4244,7 +4244,7 @@ window.BODY_DATA = {
      "trap_upper, erectors, deep_core, forearm_flex",
      "carrying a cask, bracing on a rolling deck",
      "per character",
-     "proposed"
+     "rex (the pattern, per side, 2026-10-29); proposed (the index)"
     ],
     [
      "Locomotion",
@@ -4253,7 +4253,7 @@ window.BODY_DATA = {
      "glute_max, hamstrings, quads, calves, hip_flex",
      "a charge, a jump between rails, the beach run",
      "per character",
-     "proposed"
+     "rex (the pattern, per side, 2026-10-29); proposed (the index)"
     ],
     [
      "Fine manipulation",
@@ -4262,7 +4262,7 @@ window.BODY_DATA = {
      "hand, forearm_ext",
      "needle, cards, a knot, a lancet, a lock; the off hand learns it after the dominant hand is lost without relearning the skill",
      "per character",
-     "proposed (outside AI recommends keeping it as its own pattern, per hand; Rex's stamp wanted)"
+     "rex (the pattern, per side, 2026-10-29); proposed (the index)"
     ]
    ]
   },
@@ -4286,7 +4286,7 @@ window.BODY_DATA = {
      "per character",
      "the rigger's shoulder; a dislocation in a fall",
      "repeated overhead and pulling work under tolerance",
-     "proposed"
+     "rex (tendons per joint, 2026-10-29); proposed (this set, the numbers)"
     ],
     [
      "Elbow (biceps and common flexor and extensor tendons)",
@@ -4294,7 +4294,7 @@ window.BODY_DATA = {
      "per character",
      "the oarsman's and smith's elbow",
      "repeated pulling and hammering",
-     "proposed"
+     "rex (tendons per joint, 2026-10-29); proposed (this set, the numbers)"
     ],
     [
      "Wrist and finger flexor tendons",
@@ -4302,7 +4302,7 @@ window.BODY_DATA = {
      "per character",
      "the climber's finger; the line that strips a tendon",
      "grip work",
-     "proposed"
+     "rex (tendons per joint, 2026-10-29); proposed (this set, the numbers)"
     ],
     [
      "Lower back (lumbar discs and ligaments)",
@@ -4310,7 +4310,7 @@ window.BODY_DATA = {
      "per character",
      "the lift with a bent back",
      "hinge work under tolerance; bracing",
-     "proposed"
+     "rex (tendons per joint, 2026-10-29); proposed (this set, the numbers)"
     ],
     [
      "Hip and groin (adductor and flexor tendons)",
@@ -4318,7 +4318,7 @@ window.BODY_DATA = {
      "per character",
      "the groin strain gripping a yard",
      "squat and hinge work",
-     "proposed"
+     "rex (tendons per joint, 2026-10-29); proposed (this set, the numbers)"
     ],
     [
      "Knee (patellar and hamstring tendons)",
@@ -4326,7 +4326,7 @@ window.BODY_DATA = {
      "per character",
      "the jump that lands wrong",
      "locomotion and squat work",
-     "proposed"
+     "rex (tendons per joint, 2026-10-29); proposed (this set, the numbers)"
     ],
     [
      "Achilles and ankle",
@@ -4334,7 +4334,7 @@ window.BODY_DATA = {
      "per character",
      "the rupture in a sprint on a cold morning",
      "locomotion",
-     "proposed"
+     "rex (tendons per joint, 2026-10-29); proposed (this set, the numbers)"
     ]
    ]
   },
