@@ -1,6 +1,6 @@
 {
   "title": "Pirate Ship: goods on the skill trees (proposed)",
-  "status": "Rex's splits of 2026-10-28 applied: Farming group; Cooking group; Tanning, Leatherworking, Shoemaking; Spinning, Weaving, Ropemaking, Tailoring. Placements still proposed",
+  "status": "Rex's splits of 2026-10-28 applied: Farming group; Cooking group; Tanning, Leatherworking, Shoemaking; Spinning, Weaving, Ropemaking, Tailoring; Smithing into Blacksmithing, Gunsmithing, Bladesmithing, Founding, Precious Metalworking. Placements still proposed",
   "bands": [
     {
       "key": "novice",
@@ -380,10 +380,10 @@
             },
             {
               "good": 36,
-              "name": "Brass, pewter, steel",
+              "name": "Steel, brass, pewter (alloys)",
               "band": "expert",
               "offMap": true,
-              "note": "alloying and steeling; European works"
+              "note": "blister steel from Sheffield; brass from calamine; pewter from tin and lead. No colonial steel before the 1720s (research), so all off-map"
             },
             {
               "good": 49,
@@ -978,74 +978,237 @@
         },
         {
           "key": "smithing",
-          "name": "Smithing",
+          "name": "Blacksmithing (Smithing)",
           "existing": true,
-          "covers": "the forge: nails, hoops, tools, blades, shot; gunsmithing at the top",
-          "why": "Already a skill. Gunsmithing is folded in as its top tier rather than a skill of its own. The great guns stay off-map: a foundry, not a forge.",
+          "covers": "the forge: nails, hoops, chains, tools, horseshoes, locks, anchors; forged gun barrels",
+          "why": "The existing STATS.md Smithing, now the blacksmith's trade alone (Rex, 2026-10-28). Campbell 1747 calls it 'the most comprehensive Branch of all the Mechanic' trades and lists the anchor-smith as its own laborious branch; the locksmith is 'see Smith'; the farrier 'a compound of the smith and' the horse-doctor. Nailer, locksmith, farrier and anchorsmith are folded in here on that evidence (research-metal-trades.md).",
           "items": [
             {
               "good": 37,
               "name": "Nails",
               "band": "novice",
               "input": "mining:Bar iron",
-              "note": "6d a pound retail (TR); the first thing an apprentice makes"
-            },
-            {
-              "good": 39,
-              "name": "Shot (cast lead)",
-              "band": "novice",
-              "input": "mining:Ore and lead",
-              "note": "1,281 lead shot in one QAR lab batch (QAR)"
+              "note": "6d a pound retail (TR); the Midlands nail trade was a by-employment, not a company"
             },
             {
               "good": 37,
               "name": "Iron hoops",
               "band": "apprentice",
               "input": "mining:Bar iron",
-              "note": "for the cooper; wooden hoops were the cheaper kind"
+              "note": "for the cooper"
             },
             {
               "good": 37,
-              "name": "Tools: hoes, axes, knives",
+              "name": "Tools: hoes, axes, knives (rough)",
               "band": "apprentice",
               "input": "mining:Bar iron",
               "note": "'nails, hoes, and axes' to Virginia (BR)"
             },
             {
-              "good": 47,
-              "name": "Small wares: pins, needles, combs",
+              "good": 27,
+              "name": "Horseshoes (farriery)",
               "band": "apprentice",
-              "offMap": true,
-              "note": "Bonnet took 'a few Combs, Pins and Needles' (J)"
+              "input": "mining:Bar iron",
+              "note": "Farriers' Company 1674; 'makes Shoes for Horses, and puts them on' (Campbell)"
             },
             {
-              "good": 56,
-              "name": "Manillas",
-              "band": "apprentice",
-              "offMap": true,
-              "input": "mining:Brass, pewter, steel",
-              "note": "brass currency for the Africa trade; 600 on the Whydah (WBUR)"
-            },
-            {
-              "good": 38,
-              "name": "Swords and cutlasses",
+              "good": 37,
+              "name": "Chains, hinges, ship's ironwork",
               "band": "journeyman",
-              "input": "mining:Brass, pewter, steel",
-              "note": "steel blades; 'Swords, knives' shipped to Barbados (L)"
+              "input": "mining:Bar iron",
+              "note": "the ship's fittings the carpenter needs"
             },
             {
               "good": 38,
-              "name": "Muskets and pistols",
+              "name": "Gun barrels (forged)",
+              "band": "journeyman",
+              "input": "mining:Bar iron",
+              "note": "the gunsmith bought barrels in and made the lock (Campbell)"
+            },
+            {
+              "good": 37,
+              "name": "Locks and keys",
+              "band": "expert",
+              "input": "mining:Steel, brass, pewter (alloys)",
+              "note": "'see Smith' (Campbell's index); needs ingenuity 'almost as any Branch of the Trade'"
+            },
+            {
+              "good": 37,
+              "name": "Anchors",
               "band": "expert",
               "input": "mining:Bar iron",
-              "note": "gunsmithing: lock, stock and barrel"
+              "note": "the anchor-smith, 'laborious and profitable Branch of the Smith Trade' (Campbell)"
+            }
+          ]
+        },
+        {
+          "key": "gunsmithing",
+          "name": "Gunsmithing",
+          "existing": false,
+          "covers": "the lock, the stock and the mounting; repairs of small arms",
+          "why": "Its own trade (Rex, 2026-10-28): Gunmakers' Company chartered 1637 with powers of 'search view gage proof trial'; proof house from 1657. Campbell: the gunsmith made the lock and bought barrels. Port Royal had gun and sword smiths (Museum of Miami). The ship's armourer (repairs) is folded in: by 1747 the armourer's own trade was 'merely nominal'.",
+          "items": [
+            {
+              "good": 38,
+              "name": "Small-arms repair (the armourer)",
+              "band": "novice",
+              "note": "the ship's armourer; 'Mariner and Armourer' in a will (research-occupations.md)"
+            },
+            {
+              "good": 38,
+              "name": "Pistols",
+              "band": "journeyman",
+              "inputs": [
+                "smithing:Gun barrels (forged)",
+                "carpentry:Planks and boards (sawn)"
+              ],
+              "note": "lock, stock and barrel; the stock is the carpenter's wood"
+            },
+            {
+              "good": 38,
+              "name": "Muskets",
+              "band": "journeyman",
+              "offMap": true,
+              "inputs": [
+                "smithing:Gun barrels (forged)",
+                "carpentry:Planks and boards (sawn)"
+              ],
+              "note": "'a great number of muskets' taken (E); proofed in London"
+            },
+            {
+              "good": 38,
+              "name": "Fine locks and fowling pieces",
+              "band": "expert",
+              "offMap": true,
+              "input": "mining:Steel, brass, pewter (alloys)",
+              "note": "the gunmaker's best work; a design tier (open)"
+            }
+          ]
+        },
+        {
+          "key": "bladesmithing",
+          "name": "Bladesmithing (cutler)",
+          "existing": false,
+          "covers": "knives, razors, scissors; cutlasses and swords; hilts and scabbards",
+          "why": "Its own trade (Rex, 2026-10-28): Cutlers' Company chartered 1416; Campbell separates the cutler (knives, razors, scissors, lancets) from the sword-cutler who mounts hilts. Blades 'come mostly from abroad' (Campbell): Hounslow (1630s–70s) and Shotley Bridge (1691) were German-staffed works, so sword blades sit off-map.",
+          "items": [
+            {
+              "good": 37,
+              "name": "Knives and razors",
+              "band": "apprentice",
+              "input": "mining:Steel, brass, pewter (alloys)",
+              "note": "the cutler's staple; surgeon's lancets too"
+            },
+            {
+              "good": 38,
+              "name": "Cutlasses",
+              "band": "journeyman",
+              "offMap": true,
+              "input": "mining:Steel, brass, pewter (alloys)",
+              "note": "the boarder's weapon; blades from abroad, mounted here"
+            },
+            {
+              "good": 38,
+              "name": "Swords, mounted (sword-cutler)",
+              "band": "expert",
+              "offMap": true,
+              "inputs": [
+                "mining:Steel, brass, pewter (alloys)",
+                "leatherworking:Belts, baldrics, scabbards"
+              ],
+              "note": "hilt, grip and scabbard; 'Swords, knives' shipped to Barbados (L)"
+            },
+            {
+              "good": 38,
+              "name": "Fine blades (Hounslow, Solingen)",
+              "band": "master",
+              "offMap": true,
+              "input": "mining:Steel, brass, pewter (alloys)",
+              "note": "the German smiths' work; nothing like it in the colonies (research)"
+            }
+          ]
+        },
+        {
+          "key": "founding",
+          "name": "Founding",
+          "existing": false,
+          "covers": "casting metal: shot, pewter ware, brass fittings, bells, great guns",
+          "why": "Its own trade (Rex, 2026-10-28): Founders' Company 1614; the King's Gunfounder post from 1615 (the Brownes, Weald furnaces); Woolwich brass foundry 1716–18. Pewterers (company by 1348) are folded in: pewter is cast in a mould (Campbell). 33 pewter pieces with London touch-marks of c. 1689–1712 came off the QAR wreck. No cannon was founded in an English colony before 1730 (research), so the guns sit off-map.",
+          "items": [
+            {
+              "good": 39,
+              "name": "Shot (cast lead)",
+              "band": "novice",
+              "input": "mining:Ore and lead",
+              "note": "1,281 lead shot in one QAR lab batch (QAR); any hand with a mould"
+            },
+            {
+              "good": 64,
+              "name": "Pewter plates and mugs",
+              "band": "apprentice",
+              "offMap": true,
+              "input": "mining:Steel, brass, pewter (alloys)",
+              "note": "33 pieces on the QAR, London marks c. 1689–1712 (QAR); Port Royal had pewterers"
+            },
+            {
+              "good": 37,
+              "name": "Brass fittings, buckles, candlesticks",
+              "band": "journeyman",
+              "offMap": true,
+              "input": "mining:Steel, brass, pewter (alloys)",
+              "note": "Campbell: the founder casts all that is brass in a brazier's shop"
+            },
+            {
+              "good": 38,
+              "name": "Bells and swivel guns",
+              "band": "expert",
+              "offMap": true,
+              "input": "mining:Steel, brass, pewter (alloys)",
+              "note": "small guns; 'four Swivels' taken by Low (J)"
             },
             {
               "good": 38,
               "name": "Great guns (cannon)",
               "band": "master",
               "offMap": true,
-              "note": "cast at a foundry; 29 located on the QAR wreck (QAR)"
+              "input": "mining:Bar iron",
+              "note": "the gunfounder's furnace and boring mill; 29 located on the QAR wreck (QAR)"
+            }
+          ]
+        },
+        {
+          "key": "goldsmithing",
+          "name": "Precious Metalworking (goldsmith)",
+          "existing": false,
+          "covers": "plate, buttons and buckles, jewellery; assaying",
+          "why": "Its own trade (Rex, 2026-10-28): Goldsmiths' Company (Campbell dates it 1180) and 'employs several distinct' workmen, almost one per article. 'Goldsmith of Jamaica' in a 1693 will; silversmiths and goldsmiths at Port Royal (Museum of Miami). Plate was valued at 'ten pieces of eight to a pound' (E).",
+          "items": [
+            {
+              "good": 49,
+              "name": "Silver buttons and buckles",
+              "band": "apprentice",
+              "input": "mining:Silver",
+              "note": "small work"
+            },
+            {
+              "good": 49,
+              "name": "Plate (cups, dishes)",
+              "band": "journeyman",
+              "input": "mining:Silver",
+              "note": "uncoined plate shared out by weight (E)"
+            },
+            {
+              "good": 50,
+              "name": "Jewellery and chains",
+              "band": "expert",
+              "input": "mining:Gold and gold dust",
+              "note": "'chains and trinkets' in Roberts' Brazil prize (J)"
+            },
+            {
+              "good": 49,
+              "name": "Assay and fine work",
+              "band": "master",
+              "note": "judging and refining the metal; the diamond cross for the King of Portugal (J) as the kind of piece"
             }
           ]
         },
@@ -1320,7 +1483,7 @@
   "bandsSource": "research-trade-grades.md (shared notes folder): guild ladder, sea ranks, Ligon's overseers and tradesmen; 'novice' and 'expert' found as no grade",
   "rule": "Every recipe needs materials + equipment + a minimum skill band (Rex, 2026-10-28). Skill never creates a material: a master spinner cannot spin silk without silk.",
   "occupations": {
-    "note": "An occupation is a label, not a skill: it groups the skills a person of that calling practised, levels nothing, grants nothing, and a character may carry more than one (Rex, 2026-10-28). The words are the ones period wills and indentures use; the record styles a person by ONE word, and a second appears for a small minority (under 5% of mariners), nearly always sea + shipboard craft: 'Mariner and Cooper', 'Mariner and Surgeon'. 'Alchemist' was never an occupation (0 wills; 'Chymist' 40): use Chymist. Status words (Gentleman, Yeoman, Captain) sat in the same slot as trades. Grey chips are STATS.md skills with no goods tree. Source: research-occupations.md.",
+    "note": "An occupation is a label, not a skill: it groups the skills a person of that calling practised, levels nothing, grants nothing, and a character may carry more than one (Rex, 2026-10-28). The words are the ones period wills and indentures use; the record styles a person by ONE word, and a second appears for a small minority (under 5% of mariners), nearly always sea + shipboard craft: 'Mariner and Cooper', 'Mariner and Surgeon'. 'Alchemist' was never an occupation (0 wills; 'Chymist' 40): use Chymist. Status words (Gentleman, Yeoman, Captain) sat in the same slot as trades. Grey chips are STATS.md skills with no goods tree. Source: research-occupations.md. Metal trades: six London companies back the split (research-metal-trades.md); whitesmith found no evidence and is not a skill; locksmith, farrier, nailer and anchorsmith fold into Blacksmithing on Campbell's word.",
     "rules": [
       "one word per character by default; the word of their highest skill group",
       "a second word for a few: sea + craft ('Mariner and Cooper'), or 'Merchant, Commander'; 'Barber-Chirurgeon' is one compound trade",
@@ -1481,12 +1644,45 @@
         "note": ""
       },
       {
-        "name": "Smith / Armourer",
-        "period": "'Blacksmith' (Port Royal 1692); 'Armourers' at Port Royal 1688; Armourer among a ship's tradesmen",
+        "name": "Blacksmith (anchorsmith, farrier, locksmith)",
+        "period": "'Blacksmith' (Port Royal 1692); Blacksmiths' Co. 1571; Campbell: anchor-smith a branch, locksmith 'see Smith', Farriers' Co. 1674",
         "skills": [
-          "Smithing"
+          "Blacksmithing (Smithing)"
         ],
-        "note": "Rex's 'Metalworker'. Gunsmithing is Smithing's top tier"
+        "note": "Rex's 'Metalworker', the common kind. Ligon's plantation had a 'Smiths forge'"
+      },
+      {
+        "name": "Gunsmith (armourer)",
+        "period": "Gunmakers' Co. 1637; 'gun and sword smiths' at Port Royal; 'Mariner and Armourer' (will); Campbell: armourer 'merely nominal' by 1747",
+        "skills": [
+          "Gunsmithing",
+          "Blacksmithing (Smithing)"
+        ],
+        "note": "the ship's armourer repairs; the gunsmith makes"
+      },
+      {
+        "name": "Cutler (sword-cutler)",
+        "period": "Cutlers' Co. 1416; Campbell separates cutler from sword-cutler; Hounslow and Shotley Bridge sword works (1630, 1691)",
+        "skills": [
+          "Bladesmithing (cutler)"
+        ],
+        "note": ""
+      },
+      {
+        "name": "Founder (gunfounder, pewterer, brazier)",
+        "period": "Founders' Co. 1614; King's Gunfounder 1615; Pewterers' Co. by 1348; Armourers merged with Brasiers 1708",
+        "skills": [
+          "Founding"
+        ],
+        "note": "all off-map until a foundry exists in the game's Caribbean"
+      },
+      {
+        "name": "Goldsmith (silversmith)",
+        "period": "'Goldsmith of Jamaica' (1693); Goldsmiths' Co.; silversmiths at Port Royal",
+        "skills": [
+          "Precious Metalworking (goldsmith)"
+        ],
+        "note": ""
       },
       {
         "name": "Carpenter / Joiner / Shipwright",
@@ -1655,5 +1851,8 @@
         "note": "the den's people"
       }
     ]
+  },
+  "sources": {
+    "metal": "research-metal-trades.md (shared notes): Campbell 1747, livery company charters, London Museum (Hounslow), QAR pewter, Museum of Miami on Port Royal"
   }
 }

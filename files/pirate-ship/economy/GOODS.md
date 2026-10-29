@@ -506,7 +506,11 @@ which equipment they use**. Gathering a thing and processing it are separate ski
 | Crafting | Dye Making | new (Rex) | the vats and the dye bath: indigo, annatto, cochineal; dyeing cloth |
 | Crafting | Distilling | new | the still: rum, aqua vitae; beer and wine off-map |
 | Crafting | Perfumery | new (Rex) | extraction and blending: fragrant oils, perfume |
-| Crafting | Smithing | yes | nails, hoops, tools, blades, shot; gunsmithing at the top |
+| Crafting | Blacksmithing (Smithing) | yes | the forge: nails, hoops, tools, horseshoes, chains, gun barrels, locks, anchors |
+| Crafting | Gunsmithing | new (Rex) | the lock, stock and mounting; the armourer's repairs |
+| Crafting | Bladesmithing (cutler) | new (Rex) | knives, razors; cutlasses, swords mounted; fine blades off-map |
+| Crafting | Founding | new (Rex) | casting: shot, pewter, brass, bells, great guns (off-map) |
+| Crafting | Precious Metalworking | new (Rex) | the goldsmith: buttons, plate, jewellery, assay |
 | Crafting | Carpentry | yes | sawing, joinery |
 | Crafting | Cooperage | yes | slack and tight casks as its tiers |
 | Crafting | Spinning | new (Rex) | fibre to yarn and thread: cotton, wool, flax, silk |
@@ -515,7 +519,25 @@ which equipment they use**. Gathering a thing and processing it are separate ski
 | Crafting | Tailoring | new (Rex) | cloth to clothes; sewing, embroidery, knitting, repair as activities inside it |
 | Crafting | Surgery and medicine | yes | the apothecary |
 
-**31 skills, 25 new.** Powder Making and Chemical Refining added (Rex, 2026-10-28): the powder-maker and the
+**35 skills, 29 new.** Rex's metal split (2026-10-28, from his notes), checked against the record
+(`research-metal-trades.md`, shared notes): the six trades his notes name were real, separate London companies with
+their own apprenticeships: Blacksmiths (1571), Gunmakers (1637, with proof of barrels), Cutlers (1416), Founders
+(1614; the King's Gunfounder from 1615), Goldsmiths, Pewterers (by 1348). Campbell's *London Tradesman* (1747)
+gives each its own entry. So **Smithing becomes Blacksmithing** and four skills stand beside it: Gunsmithing,
+Bladesmithing, Founding, Precious Metalworking. Not a skill: **Fine Metalworking**. Nothing opened shows a whitesmith
+as a separate trade, and Campbell's index says "Lock-smith, see Smith", so locks and keys sit at Blacksmithing
+Expert. Also folded into Blacksmithing on Campbell's word: the anchor-smith ("a laborious and profitable Branch of
+the Smith Trade"), the farrier (a company from 1674, but "a compound of the smith and" the horse-doctor), and the
+nailer (a Midlands by-employment). The armourer's trade was "merely nominal" by 1747; the ship's armourer repaired
+arms, so he sits at Gunsmithing Novice. The pewterer casts in a mould, so pewter sits in Founding; 33 pewter
+pieces with London marks of 1689–1712 came off the Queen Anne's Revenge (QAR).
+
+What the colonies could do: Port Royal had blacksmiths, gun and sword smiths, pewterers, silversmiths and
+goldsmiths. It had no steel furnace (none in the English colonies before the 1720s) and no cannon foundry
+(none before 1730), and sword blades "come mostly from abroad" (Campbell). So steel, blades and great guns are
+off-map; the town can forge, mount, repair and cast small things.
+
+**31 before the metal split.** Powder Making and Chemical Refining added (Rex, 2026-10-28): the powder-maker and the
 saltpetre-maker were trades of their own, apart from gunsmith, smith and gunner. Gunpowder needs all three of
 saltpetre (Chemical Refining, from nitre earth), refined sulphur (Chemical Refining, from Mining's brimstone) and
 charcoal (kept inside Woodcutting). No Caribbean powder mill is in the sources, so the town imports powder until it
@@ -545,9 +567,10 @@ below. Mining and Weaving are nearly all off-map; Rex can cut them and treat tho
 |---|---|---|---|---|
 | 62 | Aromatic flowers and herbs; fragrant oils; perfume | raw → manufactured | Farming → Perfumery | No period Caribbean trade found. A cultural or specialty good for one region: a flower-growing region and a perfume-making region give a reason to trade |
 | 63 | Seaweed | raw | Marine Gathering | No period trade found; use open |
+| 64 | Pewter plates and mugs | manufactured | Founding | Sourced (QAR, Part 2): 33 pieces on the Queen Anne's Revenge wreck, London touch-marks c. 1689–1712; pewterers at Port Royal. Added with the metal split |
 
 **Where each good sits: `skill-tree.json` and `skill-tree.html`** (this folder). Every one of the 61 goods is placed
-on one of these 31 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
+on one of these 35 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
 Master 100), with a one-line reason and the good it needs from another tree (sugar cane → molasses → rum; rived
 staves → dressed staves → tight cask). The JSON is the source; `build-skill-tree.py` rebuilds the HTML, which opens in
 any browser with no server. Goods made outside the Caribbean in the period are flagged off-map. Four goods have no
@@ -811,13 +834,13 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
    versus plain names is Rex's choice.
 8. **Cask size.** Which standard hogshead does the game use: one 63-gallon cask for sugar, molasses and rum (proposed,
    fits the 17th-century evidence), the large tobacco-size cask for sugar, or casks that grow over the timeline (1j)?
-9. **The 31 skills (3c, `skill-tree.json`).** Rex's two splits stand provisionally. Still to confirm: the seven
+9. **The 35 skills (3c, `skill-tree.json`).** Rex's two splits stand provisionally. Still to confirm: the seven
    earlier new ones (Farming, Hunting, Woodcutting, Mining, Sugar boiling, Distilling, Weaving), whether Mining and
    Weaving go, the Swimming gate level for pearls, and every placement.
 10. **Occupations (3d).** Confirm the 31 period words and which skills each groups; whether a label ever does
     anything in play (Rex: maybe a synergy later, from the skills, never from the label); whether Apothecary becomes
-    a skill apart from Surgery and medicine, and Metallurgy apart from Mining and Smithing (both raised in Rex's
-    notes, neither decided).
+    a skill apart from Surgery and medicine (raised in Rex's notes, not decided). Metallurgy: Rex's metal notes keep
+    Mining and refining as suppliers, so smelting stays in Mining; no separate skill unless Rex says so.
 11. **STATS.md.** Once confirmed, the new skills need their primary and secondary attributes and personality pull in
     `STATS.md` §2, which belongs to another keeper.
 
@@ -836,3 +859,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-28 | Leatherworking added after Tanning (Rex); five leather goods placed | Rex (decision); research session |
 | 2026-10-28 | Rex's third split: Spinning, Weaving, Ropemaking, Tailoring; Shoemaking apart from Leatherworking; the recipe rule (materials + equipment + band); flax and hemp added off-map. 29 skills | Rex (decision); research session |
 | 2026-10-28 | Powder Making and Chemical Refining trees (Rex); gunpowder's three inputs. 3d occupations: labels over the skills, 31 period words from wills and indentures (research-occupations.md); 'Alchemist' replaced by Chymist | Rex (decision); research session |
+| 2026-10-28 | Rex's metal split, checked against the companies and Campbell 1747: Blacksmithing (the old Smithing), Gunsmithing, Bladesmithing, Founding, Precious Metalworking; Fine Metalworking rejected (no evidence); five metal occupations; row 64 pewter | Rex (decision); research session |
