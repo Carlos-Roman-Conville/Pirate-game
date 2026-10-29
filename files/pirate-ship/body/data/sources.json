@@ -805,6 +805,62 @@
         "https://www.worldhistory.org/Golden_Age_of_Piracy/",
         "history",
         "2026-10-29"
+      ],
+      [
+        "EQ-HEAT-WIKI",
+        "Wikipedia: Bellows; Reverberatory furnace; Cupellation; Blowpipe (tool); Kiln; Burning glass; Candle; Oil lamp; Spirit lamp; Forge; Oven; Hearth; Bloomery; Lime kiln",
+        "dates, uses, fuels and temperatures for bellows, furnaces, kilns, lamps, candle, oven, forge, blowpipe and lens; where the page gave no figure the row says so",
+        "https://en.wikipedia.org/wiki/Reverberatory_furnace",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-HEAT-ATH",
+        "Athanor ('Slow Harry', Piger Henricus): Wikipedia and dictionary entries; Ercker 1574, English edition 1683",
+        "the self-feeding charcoal tower, Arabic at-tannur, the 1683 'Slow Harry' engraving",
+        "https://www.wikipedia.org/wiki/Athanor",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-HEAT-ASSAY",
+        "Cupellation and assay furnaces: Agricola 1556 and Ercker 1574 via Royal College of Art 'Charcoal fire assaying' and Guirado et al. 2010, Historical Metallurgy",
+        "the muffle's role, litharge liquid over 890 C, charcoal-fired assay furnaces",
+        "https://www.rca.ac.uk/research-innovation/projects/charcoal-fire-assaying/",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-HEAT-BATH",
+        "Wikipedia: Bain-marie; Sand bath",
+        "Zosimos c. 300 AD crediting Mary the Jewess; Ulstad 1528; sand bath (qadr) and the Latin names for sand, ash, dry baths",
+        "https://en.wikipedia.org/wiki/Bain-marie",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-HEAT-DUNG",
+        "Source Library encyclopedia: Horse dung (as a heat source), venter equinus, fimus equinus",
+        "dung as a gentle constant heat for digestion; no temperature",
+        "https://sourcelibrary.org/encyclopedia/Horse%20dung%20(as%20a%20heat%20source)",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-HEAT-LIME",
+        "Historic England, Pre-industrial lime kilns; Wikipedia, Lime kiln",
+        "lime burning above 900 C (about 1,000 C usual); Roman origin in England; clamp kilns; about a week a batch",
+        "https://historicengland.org.uk/images-books/publications/iha-preindustrial-lime-kilns/heag222-pre-industrial-lime-kilns/",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-HEAT-LENS",
+        "Francois Villette (Wikipedia); Tschirnhaus (MacTutor and the arXiv 'Discovery of European Porcelain Technology')",
+        "Tschirnhaus's 1686 mirror above 1,400 C; Villette melting pot-iron in 50 s; large lenses; Lavoisier's 89 cm lens",
+        "https://en.wikipedia.org/wiki/Fran%C3%A7ois_Villette",
+        "history",
+        "2026-10-29"
       ]
     ]
   }
