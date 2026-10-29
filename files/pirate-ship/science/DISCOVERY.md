@@ -68,6 +68,11 @@ rule (Rex) this file extends to things nobody has named yet.
    §3f: written knowledge survives him; unwritten dies with him), teachable, and tradeable to a town's
    books.
 
+- **Three achievements, told apart (ChatGPT's point, 2026-10-29, agreed):** producing a thing, measuring
+  it and identifying it are separate. A drifted instrument (`SCIENTIFIC_EQUIPMENT.md` §4) gives wrong
+  observed properties, so a character can make a compound and enter it wrong until a later experiment
+  corrects the page. Success never hands the player perfect information, which is Rex's hidden-stat
+  design applied to the bench.
 - **[model]** No step consults the year. The only period facts are in `TECHNOLOGY.md` (what is
   available) and the journal's reference (what history says).
 - **Visible face:** the bench, the flask of "an unknown liquid", the journal page filling in, the

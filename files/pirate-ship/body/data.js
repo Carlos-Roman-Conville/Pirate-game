@@ -5954,10 +5954,10 @@ window.BODY_DATA = {
    ]
   },
   "wear": {
-   "title": "Wear and calibration (proposed; ties the science system to the ship's maintenance loop)",
+   "title": "Wear and calibration: condition as three independent properties (proposed; ties the science system to the ship's maintenance loop)",
    "kind": "model",
    "conf": "low",
-   "source": "ChatGPT's suggestion (outside AI), recorded: a poorly kept balance drifts, a damaged furnace will not hold heat. Rex's maintenance design is PIRATE.md 5a and DUTIES.md (keeps / if skipped); this table is the same shape for apparatus, so the economy's facilities and the laboratory age like the ship.",
+   "source": "ChatGPT's suggestion (outside AI), recorded: a poorly kept balance drifts, a damaged furnace will not hold heat. Rex's maintenance design is PIRATE.md 5a and DUTIES.md (keeps / if skipped); this table is the same shape for apparatus, so the economy's facilities and the laboratory age like the ship. Refined 2026-10-29 (ChatGPT, outside AI, agreed): condition is not one number; a damaged furnace may still reach its maximum and fail to hold it, a worn seal lowers pressure and not heat, a drifted thermometer misreports while the reaction proceeds normally.",
    "columns": [
     "Rule",
     "Statement",
@@ -5967,38 +5967,59 @@ window.BODY_DATA = {
    ],
    "rows": [
     [
-     "Condition",
-     "each piece carries condition 0 to 1 (like a ship part): its capability numbers scale with it (a furnace at 0.5 holds half the control, reaches 80% of its max; a balance at 0.5 reads to 5x its precision)",
-     "DUTIES-style keeps and if-skipped rows per apparatus (open)",
-     "the cracked crucible; the balance that will not settle",
+     "Three properties per piece",
+     "capability (what it can physically reach: the catalogue's max numbers), control (how reliably it holds a condition: the +/- and the drift over a run), accuracy (how truly its measure roles report: precision and offset). Each wears on its own",
+     "the roles' numbers",
+     "-",
+     "proposed (ChatGPT's refinement, agreed)"
+    ],
+    [
+     "Capability wear",
+     "a cracked crucible, a burnt-out furnace lining, a worn pump leather: the max falls (temperature, pressure, vacuum floor, capacity)",
+     "wear by use and material",
+     "the furnace that will not reach red heat",
      "proposed"
     ],
     [
-     "Wear by use",
-     "condition falls per run by the process's severity (heat over 80% of max, corrosive reagents, pressure) and the material (clay fast, glass medium, brass slow)",
-     "the reaction record's conditions",
-     "'the retort is pitted'",
+     "Control wear",
+     "a leaking seal, a sagging bellows, a cracked athanor: the piece reaches its max but cannot hold it; the +/- widens, a run drifts",
+     "the same",
+     "the bath that boils over and cools; the pressure that will not stay",
      "proposed"
     ],
     [
-     "Calibration",
-     "measuring pieces drift: precision x (1 + drift x days since calibration); calibrating needs a standard (weights, a fixed-point bath for a thermometer, a known acid)",
+     "Accuracy drift",
+     "measuring pieces drift: offset and precision worsen with days since calibration and with rough use; calibrating needs a standard (weights, a fixed-point bath for a thermometer, a known acid for litmus)",
      "the catalogue's precision",
      "'the glass reads a degree high'",
      "proposed"
     ],
     [
-     "Repair",
-     "a trade repairs or replaces: the smith for iron, the glassblower for glass, the instrument maker for brass (TECHNOLOGY manufacture prerequisites)",
-     "GOODS trades",
+     "Wear by use",
+     "each property falls per run by the process's severity (heat over 80% of max, corrosive reagents, pressure) and the material (clay fast, glass medium, brass slow)",
+     "the reaction record's conditions",
+     "'the retort is pitted'",
+     "proposed"
+    ],
+    [
+     "Repair and calibration",
+     "a trade repairs or replaces (the smith for iron, the glassblower for glass, the instrument maker for brass: TECHNOLOGY manufacture prerequisites); calibration is a measurement against a standard the character must hold",
+     "GOODS trades; the standards as goods (open)",
      "the voyage to the instrument maker",
      "proposed"
     ],
     [
-     "A bad instrument and discovery",
-     "a drifted balance or thermometer gives wrong observed properties: DISCOVERY's observed state can be wrong, and a later better instrument corrects the journal",
-     "DISCOVERY states",
-     "the entry revised",
+     "Three achievements told apart",
+     "producing a thing (the apparatus's capability and control), measuring it (accuracy), identifying it (DISCOVERY): a character can synthesise a compound, measure it wrong on a drifted instrument, and enter it wrong in the journal until a later experiment corrects it. Success never hands the player perfect information",
+     "DISCOVERY states, JOURNAL's personal column",
+     "the entry revised; 'the glass was wrong'",
+     "proposed (ChatGPT's point, agreed; it fits Rex's hidden-information design)"
+    ],
+    [
+     "Minigame primitives",
+     "the three properties map onto the reusable controls (phase 7 of the plan): control is what the temperature and pressure minigames fight; accuracy is what the measurement minigame reads; capability is the wall",
+     "PLAN 7",
+     "-",
      "proposed"
     ]
    ]
