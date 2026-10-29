@@ -1,8 +1,8 @@
 # Technology: the availability layer (body-and-world keeper, 2026-10-29)
 
 The layer between the universal engine and the pirate world: what a setting makes available, in
-equipment, fuel, power, materials, infrastructure and knowledge. The engine never checks a year; this layer
-is where the year lives, as a **world profile**. Rex (2026-10-29): the world is ours in a space-time
+equipment, fuel, power, materials, infrastructure and knowledge. The engine never checks a year; this layer is where the year lives, as a **world profile** **(Rex,
+2026-10-29: the profile's fields are his; the defaults are proposed)**. Rex (2026-10-29): the world is ours in a space-time
 anomaly version, so the profile is the period's defaults plus whatever anomalous pieces the story adds,
 and adding one never rebuilds the engine.
 
@@ -21,13 +21,13 @@ holds the catalogue the profile selects from.
 
 | Field | What it holds | Pirate-world default (1650 to 1730, Atlantic) | Where it already lives | Mark |
 |---|---|---|---|---|
-| equipment available | which catalogue items a place can hold: common (bought), rare (one maker, a city), none (only as a time anomaly) | the catalogue's availability column | GOODS facilities list (the still, the forge, the furnace, the chymist's laboratory) | proposed |
-| manufacture prerequisites | what it takes to make a piece: materials, a trade, a facility (a glassblower for a retort; a founder for a brass pump) | glass from Europe; copper work in the islands; brass instruments from London and Amsterdam makers | GOODS recipes (equipment is a good) | proposed |
-| fuel and power | charcoal, wood, bagasse, spirit, oil; the sun; wind, water and animal power; later gas, steam, electricity | charcoal and wood everywhere; a water wheel at a mill; no steam (Newcomen 1712 is in the period but not in the islands), no gas, no electricity | GOODS (charcoal, firewood as goods: open) | proposed |
+| equipment available | which catalogue items a place can hold: common (bought), rare (one maker, a city), none (only as a time anomaly) | the catalogue's availability column | GOODS facilities list (the still, the forge, the furnace, the chymist's laboratory) | rex (the field, 2026-10-29); proposed (defaults) |
+| manufacture prerequisites | what it takes to make a piece: materials, a trade, a facility (a glassblower for a retort; a founder for a brass pump) | glass from Europe; copper work in the islands; brass instruments from London and Amsterdam makers | GOODS recipes (equipment is a good) | rex (the field, 2026-10-29); proposed (defaults) |
+| fuel and power | charcoal, wood, bagasse, spirit, oil; the sun; wind, water and animal power; later gas, steam, electricity | charcoal and wood everywhere; a water wheel at a mill; no steam (Newcomen 1712 is in the period but not in the islands), no gas, no electricity | GOODS (charcoal, firewood as goods: open) | rex (the field, 2026-10-29); proposed (defaults) |
 | knowledge | who knows the process: common, learned, foreign (GOODS 3f), or nobody yet (the discovery is the player's) | the apothecary and the chymist know the period's preparations; everything after is nobody's | GOODS 3f (Rex) | rex (knowledge rule) |
-| infrastructure | what a place can supply continuously: running water, ice, a gasworks, mains power | water by bucket; ice none (the freezing mixture needs it); the rest none | the town keeper's places | proposed |
+| infrastructure | what a place can supply continuously: running water, ice, a gasworks, mains power | water by bucket; ice none (the freezing mixture needs it); the rest none | the town keeper's places | rex (the field, 2026-10-29); proposed (defaults) |
 | the anomaly plug | a tagged piece of equipment, fuel or power source introduced by the story; its catalogue numbers make its processes possible at once, with no change to CHEMISTRY.md | none unless the story adds one | COMBAT 4d provenance (Rex); the story keeper's rows | rex (2026-10-29) |
-| world profile | the whole table as one record per setting (pirate 1700; a modern city; a prehistoric camp; a science-fiction ship) | this column | - | proposed |
+| world profile | the whole table as one record per setting (pirate 1700; a modern city; a prehistoric camp; a science-fiction ship) | this column | - | rex (the field, 2026-10-29); proposed (defaults) |
 <!-- /table -->
 
 - **[history]** The period's technology is well recorded in `GOODS.md`: Rex's recipe rule (materials +
@@ -63,4 +63,5 @@ holds the catalogue the profile selects from.
 
 | Date | What | Who |
 |---|---|---|
+| 2026-10-29 | Rex stamped the profile's fields as his; defaults placeholders | Rex |
 | 2026-10-29 | File opened; the world profile's fields, the pirate defaults, the anomaly plug | keeper |

@@ -442,7 +442,7 @@
         "minutes",
         "absorbs heat",
         "Priestley 1774 (Scheele 1771 to 72 unpublished); Lavoisier named it 1777. Every piece is within 1700's reach: a Time Anomaly if done",
-        "proposed"
+        "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
       ],
       [
         "hydrogen_acid",
@@ -453,7 +453,7 @@
         "minutes",
         "small",
         "Cavendish 1766 ('inflammable air'); Boyle made it in 1671 without knowing it: Historical as a phenomenon, anomaly as an identified element",
-        "proposed"
+        "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
       ],
       [
         "phosphorus_urine",
@@ -464,7 +464,7 @@
         "days",
         "endothermic",
         "Brand 1669 (Hamburg): Historical for the period; the first element discovered by a known person",
-        "proposed"
+        "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
       ],
       [
         "chlorine_scheele",
@@ -475,7 +475,7 @@
         "minutes",
         "small",
         "Scheele 1774; bleaching (Berthollet 1785). All three reagents period goods: an anomaly within reach, and a laboratory accident waiting",
-        "proposed"
+        "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
       ],
       [
         "ether_cordus",
@@ -486,7 +486,7 @@
         "hours",
         "small",
         "Valerius Cordus 1540; the anaesthetic use 1846 (Morton): the substance Historical, its use an anomaly if a 1700 surgeon learns it (MEDICINE: surgery without pain)",
-        "proposed"
+        "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
       ],
       [
         "voltaic_pile",
@@ -497,7 +497,7 @@
         "runs for hours",
         "-",
         "Volta 1800. Both metals are GOODS goods (voyage iron is iron; zinc arrives as spelter and in brass: open whether pure zinc is obtainable in 1700); an anomaly if someone knows the stack",
-        "proposed"
+        "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
       ],
       [
         "water_electrolysis",
@@ -508,7 +508,7 @@
         "hours",
         "absorbs energy",
         "Nicholson and Carlisle 1800",
-        "proposed"
+        "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
       ],
       [
         "soap",
@@ -519,7 +519,7 @@
         "hours",
         "small",
         "antiquity: Historical; the Castile soap of GOODS row 98",
-        "proposed"
+        "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
       ],
       [
         "calomel",
@@ -530,7 +530,7 @@
         "hours",
         "-",
         "the apothecary's purge, period; the pox cure's cousin",
-        "proposed"
+        "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
       ],
       [
         "aqua_fortis",
@@ -541,7 +541,7 @@
         "hours",
         "-",
         "medieval; the assayer's parting acid (gold from silver): Historical",
-        "proposed"
+        "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
       ],
       [
         "unknown",
@@ -552,7 +552,7 @@
         "-",
         "-",
         "the engine answers 'unknown', records the attempt in the journal, and the belt adds the record if the chemistry is real",
-        "proposed (the honesty rule)"
+        "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
       ],
       [
         "(general)",
@@ -744,7 +744,7 @@
         "silver salts darkening (known 1727, Schulze)",
         "-",
         "later",
-        "proposed"
+        "rex (the domain is supported, 2026-10-29); proposed (records)"
       ],
       [
         "Interactions with other systems",
@@ -774,61 +774,61 @@
         "id, name",
         "text",
         "every doc",
-        "proposed"
+        "rex (the field, 2026-10-29)"
       ],
       [
         "reactants and products with stoichiometry",
         "substance ids and moles",
         "mass conservation; GAS_DYNAMICS sources; inventories",
-        "proposed"
+        "rex (the field, 2026-10-29)"
       ],
       [
         "possibility: free-energy sign at conditions, or 'spontaneous above T'",
         "sign or a temperature",
         "whether it can happen at all",
-        "proposed"
+        "rex (the field, 2026-10-29)"
       ],
       [
         "conditions: temperature range, pressure, atmosphere, catalyst, solvent, contact time",
         "numbers and ids",
         "the assembly pipeline (SCIENTIFIC_EQUIPMENT 3): the roles an apparatus must supply",
-        "proposed"
+        "rex (the field, 2026-10-29)"
       ],
       [
         "rate: a rate law and an activation energy, or a half-time at a reference temperature",
         "placeholder constants",
         "how long; whether the fuel lasts",
-        "proposed"
+        "rex (the field, 2026-10-29)"
       ],
       [
         "equilibrium constant (if reversible)",
         "number at a reference temperature",
         "yield",
-        "proposed"
+        "rex (the field, 2026-10-29)"
       ],
       [
         "heat",
         "kJ/mol or MJ/kg",
         "the box's temperature; fires",
-        "proposed"
+        "rex (the field, 2026-10-29)"
       ],
       [
         "side reactions and failure modes",
         "reaction ids; what happens off-conditions (too hot: charring; too little air: CO)",
         "the engine's answer when conditions are missed",
-        "proposed"
+        "rex (the field, 2026-10-29)"
       ],
       [
         "hazards",
         "explosion limits, toxic products, pressure",
         "accidents (ATMOSPHERE laboratory scenario; MEDICINE)",
-        "proposed"
+        "rex (the field, 2026-10-29)"
       ],
       [
         "identification: what a period test shows, what an instrument shows",
         "tests and instrument ids",
         "DISCOVERY: observed vs identified",
-        "proposed"
+        "rex (the field, 2026-10-29)"
       ],
       [
         "history: first performed, by whom, where; disputes",
@@ -840,7 +840,7 @@
         "coverage: supported | unknown",
         "the engine's honesty flag: a reaction not in the database is unknown, never impossible",
         "DISCOVERY's answer to an attempt the database does not hold",
-        "proposed (ChatGPT's point, agreed)"
+        "rex (the field, 2026-10-29)"
       ]
     ]
   }

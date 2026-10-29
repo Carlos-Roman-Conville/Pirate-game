@@ -31,10 +31,10 @@ game's; this is its content rule.
 | Time Anomaly | real, but discovered, introduced or met outside its historical timeline (earlier or later) | oxygen isolated in 1700 (historically 1774); a Bunsen burner in a 1700 laboratory; a creature from another century | Historical (a real thing), Prehistoric | 'first recorded in <year> by <who>; you have it in <game year>' | rex (the tag), proposed (the stacking) |
 | Prehistoric | from an earlier geological period, named | a Triassic reptile; a Devonian fish | Time Anomaly | 'extinct since the <period>' | rex (COMBAT 4d: Triassic) |
 | Mythological | from a real tradition's myth or folklore | a kraken, a mermaid, a voodoo loa's gift | - | 'from the <tradition>' | rex (mythical) |
-| Fantasy | fictional supernatural | the angel's energy, a demon's form | - | 'no record' | proposed (outside AI) |
+| Fantasy | fictional supernatural | the angel's energy, a demon's form | - | 'no record' | rex (the label, 2026-10-29) |
 | Science Fiction | fictional technology or material on speculative science | the Atlantean mecha's power cell; a sci-fi fish (Rex's example) | - | 'no record' | rex (sci-fi), proposed (the label) |
-| Original Fiction | made for this universe | the Ghost Fleet's needs | - | 'this world's own' | proposed (outside AI) |
-| Unknown | the engine has no record of the reaction or thing: not impossible, not yet supported | a synthesis the database does not hold | - | 'nothing known; try, and the world will answer what it can' | proposed (ChatGPT's 'unknown, not physically impossible', agreed) |
+| Original Fiction | made for this universe | the Ghost Fleet's needs | - | 'this world's own' | rex (the label, 2026-10-29) |
+| Unknown | the engine has no record of the reaction or thing: not impossible, not yet supported | a synthesis the database does not hold | - | 'nothing known; try, and the world will answer what it can' | rex (the label, 2026-10-29) |
 <!-- /table -->
 
 - **(Rex)** Labels are informational. They never change a thing's behaviour; the engine reads the
@@ -50,24 +50,24 @@ game's; this is its content rule.
 | Field | Holds | Shown when | Mark |
 |---|---|---|---|
 | kind | chemical \| element \| mineral \| plant \| fungus \| animal \| fish \| creature \| disease \| equipment \| material \| object \| place \| phenomenon | always | rex (everything you can encounter) |
-| state | encountered \| observed \| identified \| understood | always | proposed |
+| state | encountered \| observed \| identified \| understood | always | rex (the field, 2026-10-29) |
 | classification | one or more labels (classifications table) with the reason | on identification (before that: 'unclassified') | rex (labels) |
-| name, formula or species; provisional name before identification | - | by state | proposed |
-| observed properties | what the player's own tests found, dated and with the instrument used | as found | proposed |
-| reference properties | the engine's record (CHEMISTRY, ECOLOGY, MEDICINE rows) | on identification | proposed |
-| natural occurrence | where it is found in the world | on identification | proposed |
+| name, formula or species; provisional name before identification | - | by state | rex (the field, 2026-10-29) |
+| observed properties | what the player's own tests found, dated and with the instrument used | as found | rex (the field, 2026-10-29) |
+| reference properties | the engine's record (CHEMISTRY, ECOLOGY, MEDICINE rows) | on identification | rex (the field, 2026-10-29) |
+| natural occurrence | where it is found in the world | on identification | rex (the field, 2026-10-29) |
 | uses and effects | what it does and what it is used for: on a body (the body docs), in a recipe (GOODS), in a fight (COMBAT) | on identification, growing with understanding | rex (the blurb) |
-| history: existence | when it existed (a mineral: always; a species: its era; a compound: made by nature or first made by people) | on identification | proposed |
-| history: first observation | first documented noticing (Leeuwenhoek's animalcules 1676) | on identification | proposed |
+| history: existence | when it existed (a mineral: always; a species: its era; a compound: made by nature or first made by people) | on identification | rex (the field, 2026-10-29) |
+| history: first observation | first documented noticing (Leeuwenhoek's animalcules 1676) | on identification | rex (the field, 2026-10-29) |
 | history: isolation | first obtained pure (oxygen 1774, Scheele and Priestley) | on identification | rex (when and by whom) |
-| history: identification | first recognised for what it is (oxygen as an element: Lavoisier 1777) | on identification | proposed |
-| history: synthesis | first made from other things (urea 1828, Wohler) | on identification | proposed |
+| history: identification | first recognised for what it is (oxygen as an element: Lavoisier 1777) | on identification | rex (the field, 2026-10-29) |
+| history: synthesis | first made from other things (urea 1828, Wohler) | on identification | rex (the field, 2026-10-29) |
 | credited to, and the dispute | names; where credit is contested, say so | on identification | rex (by whom) |
-| historical production | how it was made then | on identification | proposed |
-| significance | why it mattered | on identification | proposed |
+| historical production | how it was made then | on identification | rex (the field, 2026-10-29) |
+| significance | why it mattered | on identification | rex (the field, 2026-10-29) |
 | your discovery | the in-game date, place, process and apparatus by which the player found or made it; the character who did it | always | **Rex** |
 | anomaly note | if the game date is before the historical date: 'first recorded <year> by <who>; found here in <game year>: a Time Anomaly' | on identification | **Rex** |
-| personal vs reference | two columns kept apart: what you found, what the books say | always | proposed (outside AI: educational as well) |
+| personal vs reference | two columns kept apart: what you found, what the books say | always | rex (the field, 2026-10-29) |
 <!-- /table -->
 
 - **[history]** The five dates are kept apart because they differ: oxygen existed always, was made by
@@ -100,7 +100,7 @@ entry). **(Rex)** essentially anything you can encounter.
 
 ## Open for Rex
 
-1. Keep, cut, or stamp the entry shape and the labels.
+1. ~~Keep, cut, or stamp the entry shape and the labels~~ stamped (Rex, 2026-10-29).
 2. Whether people have journal pages or only the crew system's cards.
 3. The first entries: a belt data task (the goods, the diseases, the fish, the period apparatus); the
    fiction entries the story keeper's.
@@ -110,4 +110,5 @@ entry). **(Rex)** essentially anything you can encounter.
 
 | Date | What | Who |
 |---|---|---|
+| 2026-10-29 | Rex stamped the labels and the entry's fields as his | Rex |
 | 2026-10-29 | File opened on Rex's journal; classifications (8, with Unknown), the entry's fields with the five dates, the view per state, the kinds | keeper |

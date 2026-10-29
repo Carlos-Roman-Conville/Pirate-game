@@ -1953,7 +1953,7 @@ window.BODY_DATA = {
      "minutes",
      "absorbs heat",
      "Priestley 1774 (Scheele 1771 to 72 unpublished); Lavoisier named it 1777. Every piece is within 1700's reach: a Time Anomaly if done",
-     "proposed"
+     "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
     ],
     [
      "hydrogen_acid",
@@ -1964,7 +1964,7 @@ window.BODY_DATA = {
      "minutes",
      "small",
      "Cavendish 1766 ('inflammable air'); Boyle made it in 1671 without knowing it: Historical as a phenomenon, anomaly as an identified element",
-     "proposed"
+     "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
     ],
     [
      "phosphorus_urine",
@@ -1975,7 +1975,7 @@ window.BODY_DATA = {
      "days",
      "endothermic",
      "Brand 1669 (Hamburg): Historical for the period; the first element discovered by a known person",
-     "proposed"
+     "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
     ],
     [
      "chlorine_scheele",
@@ -1986,7 +1986,7 @@ window.BODY_DATA = {
      "minutes",
      "small",
      "Scheele 1774; bleaching (Berthollet 1785). All three reagents period goods: an anomaly within reach, and a laboratory accident waiting",
-     "proposed"
+     "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
     ],
     [
      "ether_cordus",
@@ -1997,7 +1997,7 @@ window.BODY_DATA = {
      "hours",
      "small",
      "Valerius Cordus 1540; the anaesthetic use 1846 (Morton): the substance Historical, its use an anomaly if a 1700 surgeon learns it (MEDICINE: surgery without pain)",
-     "proposed"
+     "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
     ],
     [
      "voltaic_pile",
@@ -2008,7 +2008,7 @@ window.BODY_DATA = {
      "runs for hours",
      "-",
      "Volta 1800. Both metals are GOODS goods (voyage iron is iron; zinc arrives as spelter and in brass: open whether pure zinc is obtainable in 1700); an anomaly if someone knows the stack",
-     "proposed"
+     "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
     ],
     [
      "water_electrolysis",
@@ -2019,7 +2019,7 @@ window.BODY_DATA = {
      "hours",
      "absorbs energy",
      "Nicholson and Carlisle 1800",
-     "proposed"
+     "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
     ],
     [
      "soap",
@@ -2030,7 +2030,7 @@ window.BODY_DATA = {
      "hours",
      "small",
      "antiquity: Historical; the Castile soap of GOODS row 98",
-     "proposed"
+     "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
     ],
     [
      "calomel",
@@ -2041,7 +2041,7 @@ window.BODY_DATA = {
      "hours",
      "-",
      "the apothecary's purge, period; the pox cure's cousin",
-     "proposed"
+     "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
     ],
     [
      "aqua_fortis",
@@ -2052,7 +2052,7 @@ window.BODY_DATA = {
      "hours",
      "-",
      "medieval; the assayer's parting acid (gold from silver): Historical",
-     "proposed"
+     "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
     ],
     [
      "unknown",
@@ -2063,7 +2063,7 @@ window.BODY_DATA = {
      "-",
      "-",
      "the engine answers 'unknown', records the attempt in the journal, and the belt adds the record if the chemistry is real",
-     "proposed (the honesty rule)"
+     "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
     ],
     [
      "(general)",
@@ -2255,7 +2255,7 @@ window.BODY_DATA = {
      "silver salts darkening (known 1727, Schulze)",
      "-",
      "later",
-     "proposed"
+     "rex (the domain is supported, 2026-10-29); proposed (records)"
     ],
     [
      "Interactions with other systems",
@@ -2285,61 +2285,61 @@ window.BODY_DATA = {
      "id, name",
      "text",
      "every doc",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "reactants and products with stoichiometry",
      "substance ids and moles",
      "mass conservation; GAS_DYNAMICS sources; inventories",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "possibility: free-energy sign at conditions, or 'spontaneous above T'",
      "sign or a temperature",
      "whether it can happen at all",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "conditions: temperature range, pressure, atmosphere, catalyst, solvent, contact time",
      "numbers and ids",
      "the assembly pipeline (SCIENTIFIC_EQUIPMENT 3): the roles an apparatus must supply",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "rate: a rate law and an activation energy, or a half-time at a reference temperature",
      "placeholder constants",
      "how long; whether the fuel lasts",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "equilibrium constant (if reversible)",
      "number at a reference temperature",
      "yield",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "heat",
      "kJ/mol or MJ/kg",
      "the box's temperature; fires",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "side reactions and failure modes",
      "reaction ids; what happens off-conditions (too hot: charring; too little air: CO)",
      "the engine's answer when conditions are missed",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "hazards",
      "explosion limits, toxic products, pressure",
      "accidents (ATMOSPHERE laboratory scenario; MEDICINE)",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "identification: what a period test shows, what an instrument shows",
      "tests and instrument ids",
      "DISCOVERY: observed vs identified",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "history: first performed, by whom, where; disputes",
@@ -2351,7 +2351,7 @@ window.BODY_DATA = {
      "coverage: supported | unknown",
      "the engine's honesty flag: a reaction not in the database is unknown, never impossible",
      "DISCOVERY's answer to an attempt the database does not hold",
-     "proposed (ChatGPT's point, agreed)"
+     "rex (the field, 2026-10-29)"
     ]
    ]
   }
@@ -4001,63 +4001,63 @@ window.BODY_DATA = {
      "removal of heat, condensation",
      "min temperature (C), rate",
      "can it condense this vapour (boiling point) fast enough",
-     "proposed"
+     "rex (the role, 2026-10-29); proposed (fields)"
     ],
     [
      "vessel",
      "containment of a phase under conditions",
      "volume (L), max temperature, max pressure (atm), material (what it survives: acids, alkalis, mercury), seal",
      "does it hold the reactants at the conditions without breaking or reacting",
-     "proposed"
+     "rex (the role, 2026-10-29); proposed (fields)"
     ],
     [
      "pressure",
      "pressure above or below atmospheric",
      "range (atm), vacuum floor (mmHg)",
      "does the process need pressure or vacuum",
-     "proposed"
+     "rex (the role, 2026-10-29); proposed (fields)"
     ],
     [
      "separate",
      "distillation, filtration, sublimation, crystallisation, centrifugation, extraction, chromatography",
      "the kind and its resolution (boiling-point difference it can split, particle size, purity reached)",
      "can the product be separated to the purity needed",
-     "proposed"
+     "rex (the role, 2026-10-29); proposed (fields)"
     ],
     [
      "measure",
      "a quantity read",
      "the quantity, precision, range",
      "can the character know what he has (DISCOVERY identification)",
-     "proposed"
+     "rex (the role, 2026-10-29); proposed (fields)"
     ],
     [
      "power",
      "electrical or mechanical energy",
      "volts, amps or watts; duration",
      "electrochemistry, motors, light",
-     "proposed"
+     "rex (the role, 2026-10-29); proposed (fields)"
     ],
     [
      "atmosphere",
      "a controlled gas over the reaction",
      "which gas, how pure",
      "air-sensitive chemistry",
-     "proposed"
+     "rex (the role, 2026-10-29); proposed (fields)"
     ],
     [
      "handle",
      "manipulation and safety: tongs, gloves, a fume hood",
      "what it protects against",
      "the character's exposure (ATMOSPHERE, MEDICINE)",
-     "proposed"
+     "rex (the role, 2026-10-29); proposed (fields)"
     ],
     [
      "light and optics",
      "magnification, light sources, lenses",
      "magnification, resolution, focal power (a burning lens's temperature)",
      "observation; a burning glass as a heat source",
-     "proposed"
+     "rex (the role, 2026-10-29); proposed (fields)"
     ]
    ]
   },
@@ -4105,7 +4105,7 @@ window.BODY_DATA = {
      "any",
      "grinding, mixing",
      "common",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "balance_assay",
@@ -4125,7 +4125,7 @@ window.BODY_DATA = {
      "Assaying, Apothecary",
      "weighing; identification by weight",
      "common (trade), rare (assay)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "balance_lavoisier",
@@ -4145,7 +4145,7 @@ window.BODY_DATA = {
      "Assaying",
      "quantitative chemistry (mass balance of a reaction)",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "balance_analytical",
@@ -4165,7 +4165,7 @@ window.BODY_DATA = {
      "-",
      "modern analysis",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "furnace_charcoal",
@@ -4185,7 +4185,7 @@ window.BODY_DATA = {
      "Smithing, Assaying, Alchemy (the chymist)",
      "melting copper (1085), silver (962), gold (1064), glass; not iron to liquid (1538) without a blast",
      "common",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "athanor",
@@ -4205,7 +4205,7 @@ window.BODY_DATA = {
      "Alchemy",
      "long digestions at steady heat (days to weeks)",
      "rare (the apothecary, the chymist)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "bath_water",
@@ -4225,7 +4225,7 @@ window.BODY_DATA = {
      "any",
      "gentle digestion, drying, low distillation",
      "common",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "bath_sand",
@@ -4245,7 +4245,7 @@ window.BODY_DATA = {
      "any",
      "moderate heat without flame on glass",
      "common",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "lamp_spirit",
@@ -4265,7 +4265,7 @@ window.BODY_DATA = {
      "any",
      "small-scale heating",
      "common where spirit is",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "bunsen",
@@ -4285,7 +4285,7 @@ window.BODY_DATA = {
      "any",
      "clean steady flame",
      "none (anomaly: needs gas)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "lens_burning",
@@ -4305,7 +4305,7 @@ window.BODY_DATA = {
      "any",
      "heating without fuel or contamination: Priestley's oxygen from mercury calx (1774) needs only this and a vessel: a time-anomaly discovery within reach in 1700",
      "rare (a small lens common; a great lens none)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "crucible",
@@ -4325,7 +4325,7 @@ window.BODY_DATA = {
      "Smithing, Assaying",
      "melting metals and glass",
      "common",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "cupel",
@@ -4345,7 +4345,7 @@ window.BODY_DATA = {
      "Assaying",
      "assaying silver and gold; refining",
      "common where there is an assayer",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "touchstone",
@@ -4365,7 +4365,7 @@ window.BODY_DATA = {
      "Assaying",
      "testing gold",
      "common",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "alembic",
@@ -4385,7 +4385,7 @@ window.BODY_DATA = {
      "Distilling, Apothecary, Alchemy",
      "distilling spirits, essential oils, acids (aqua fortis, oil of vitriol from vitriol)",
      "common",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "retort",
@@ -4405,7 +4405,7 @@ window.BODY_DATA = {
      "Alchemy, Apothecary",
      "dry distillation: spirit of salt, oil of vitriol, phosphorus from urine (Brand 1669: within the period), mercury from cinnabar",
      "rare (the apothecary, the chymist)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "pelican",
@@ -4425,7 +4425,7 @@ window.BODY_DATA = {
      "Alchemy",
      "repeated distillation without opening (digestion, reflux)",
      "rare",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "aludel",
@@ -4445,7 +4445,7 @@ window.BODY_DATA = {
      "Alchemy",
      "sublimation: sal ammoniac, calomel (mercury chloride), sulphur, arsenic",
      "rare",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "worm",
@@ -4465,7 +4465,7 @@ window.BODY_DATA = {
      "Distilling",
      "efficient distillation of rum, brandy, arrack",
      "common (every still)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "still_pot",
@@ -4485,7 +4485,7 @@ window.BODY_DATA = {
      "Distilling",
      "rum, brandy, aqua vitae, spirit of wine for the apothecary",
      "common",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "still_column",
@@ -4505,7 +4505,7 @@ window.BODY_DATA = {
      "Distilling",
      "pure spirit; petroleum fractions",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "condenser_liebig",
@@ -4525,7 +4525,7 @@ window.BODY_DATA = {
      "Apothecary, Chymistry",
      "laboratory distillation",
      "none (anomaly; a worm does the work)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "filter",
@@ -4545,7 +4545,7 @@ window.BODY_DATA = {
      "any",
      "clarifying, separating solids",
      "common",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "crystallise",
@@ -4565,7 +4565,7 @@ window.BODY_DATA = {
      "Apothecary, Refining (saltpetre, sugar, salt)",
      "saltpetre refining (GOODS row 39), sugar, salts, alum",
      "common",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "thermoscope",
@@ -4585,7 +4585,7 @@ window.BODY_DATA = {
      "any",
      "comparing hot and cold; no number",
      "rare",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "thermometer_fahrenheit",
@@ -4605,7 +4605,7 @@ window.BODY_DATA = {
      "any",
      "controlling a bath; identifying a boiling point (DISCOVERY)",
      "none to rare (1714 onward, Amsterdam and London instrument makers; the end of the period)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "barometer",
@@ -4625,7 +4625,7 @@ window.BODY_DATA = {
      "Navigation, any",
      "weather (the glass: ENVIRONMENT's navigator line is this), altitude, vacuum measurement",
      "rare (London makers from the 1670s)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "air_pump",
@@ -4645,7 +4645,7 @@ window.BODY_DATA = {
      "Natural philosophy",
      "experiments on air (Boyle's law 1662), combustion in vacuum",
      "rare (the Royal Society; a few makers)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "digester",
@@ -4665,7 +4665,7 @@ window.BODY_DATA = {
      "Natural philosophy, Cooking",
      "cooking bones to jelly; reactions above the boiling point (an autoclave's ancestor)",
      "rare (demonstrated to the Royal Society; a curiosity)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "pneumatic_trough",
@@ -4685,7 +4685,7 @@ window.BODY_DATA = {
      "Chymistry",
      "collecting and measuring gases: the key to pneumatic chemistry (hydrogen 1766, oxygen 1774); water-soluble gases need the mercury trough",
      "none (1727 is the period's last year; a simple tub and inverted jar are makeable in 1700: an anomaly within reach)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "eudiometer",
@@ -4705,7 +4705,7 @@ window.BODY_DATA = {
      "Chymistry",
      "measuring the goodness of air (oxygen fraction): ATMOSPHERE's own instrument",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "woulfe",
@@ -4725,7 +4725,7 @@ window.BODY_DATA = {
      "Chymistry",
      "absorbing gases in liquids: acids from gases",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "kipp",
@@ -4745,7 +4745,7 @@ window.BODY_DATA = {
      "Chymistry",
      "hydrogen, CO2, H2S on demand (a laboratory gas source for GAS_DYNAMICS)",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "leyden",
@@ -4765,7 +4765,7 @@ window.BODY_DATA = {
      "Natural philosophy",
      "sparks: igniting gases (the eudiometer), shocks",
      "none (the Hauksbee machine 1705 is within the period as a curiosity; the jar is not)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "voltaic_pile",
@@ -4785,7 +4785,7 @@ window.BODY_DATA = {
      "Natural philosophy",
      "electrolysis of water (1800), of salts to sodium and potassium (Davy 1807): the whole of electrochemistry",
      "none (anomaly within material reach)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "electrolysis",
@@ -4805,7 +4805,7 @@ window.BODY_DATA = {
      "Chymistry",
      "splitting water; isolating the alkali metals; electroplating (1840)",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "microscope_compound",
@@ -4825,7 +4825,7 @@ window.BODY_DATA = {
      "Natural philosophy, Surgery",
      "seeing cells, insects, fibres",
      "rare (London makers; the Royal Society)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "microscope_simple",
@@ -4845,7 +4845,7 @@ window.BODY_DATA = {
      "Lens-grinding",
      "animalcules: microbes seen 1676 (nobody knew what they meant until the 1860s: DISCOVERY identification vs understanding)",
      "rare (Leeuwenhoek did not sell them)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "microscope_achromatic",
@@ -4865,7 +4865,7 @@ window.BODY_DATA = {
      "-",
      "cells and bacteria as structures; medicine's germ theory tool",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "telescope",
@@ -4885,7 +4885,7 @@ window.BODY_DATA = {
      "Navigation",
      "the lookout's glass; navigation (DUTIES)",
      "common (ships carried them)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "hydrometer",
@@ -4905,7 +4905,7 @@ window.BODY_DATA = {
      "Distilling, Assaying",
      "proof of spirits; strength of brines and acids",
      "rare to common (the excise used them from the 1700s)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "clock_pendulum",
@@ -4925,7 +4925,7 @@ window.BODY_DATA = {
      "any",
      "timing a reaction; the sandglass does the ship's watches (DUTIES)",
      "rare (a clock ashore; a sandglass aboard)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "calorimeter",
@@ -4945,7 +4945,7 @@ window.BODY_DATA = {
      "Chymistry",
      "measuring heat of reaction and of breathing: thermochemistry",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "burette",
@@ -4965,7 +4965,7 @@ window.BODY_DATA = {
      "Chymistry",
      "titration: quantitative analysis",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "spectroscope",
@@ -4985,7 +4985,7 @@ window.BODY_DATA = {
      "Chymistry",
      "identification of elements (caesium, rubidium 1860); DISCOVERY's identification jump",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "centrifuge",
@@ -5005,7 +5005,7 @@ window.BODY_DATA = {
      "-",
      "separating suspensions; blood (CIRCULATION's haematocrit measured)",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "autoclave",
@@ -5025,7 +5025,7 @@ window.BODY_DATA = {
      "Surgery, Chymistry",
      "sterilisation: surgery without sepsis (MEDICINE's biggest what-if)",
      "none (anomaly; the digester reaches it in principle)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "stethoscope",
@@ -5045,7 +5045,7 @@ window.BODY_DATA = {
      "Surgery",
      "hearing the heart and lungs (the surgeon's report sharpens)",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "thermometer_clinical",
@@ -5065,7 +5065,7 @@ window.BODY_DATA = {
      "Surgery",
      "a fever read as a number (PHYSIOLOGY core temperature made visible)",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "syringe",
@@ -5085,7 +5085,7 @@ window.BODY_DATA = {
      "Surgery",
      "injecting a drug: NEUROLOGY's fastest route",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "davy_lamp",
@@ -5105,7 +5105,7 @@ window.BODY_DATA = {
      "Mining",
      "a flame safe in methane; a gas detector (GAS_DYNAMICS's lamp face)",
      "none (anomaly; the candle that gutters is the period's)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "furnace_blast",
@@ -5125,7 +5125,7 @@ window.BODY_DATA = {
      "Smelting",
      "liquid pig iron (GOODS row 130: the first colonial furnaces 1720s)",
      "rare (none in the islands; Principio 1723)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "furnace_reverberatory",
@@ -5145,7 +5145,7 @@ window.BODY_DATA = {
      "Smelting, Glassmaking",
      "smelting copper and lead without contact with fuel; glass",
      "rare",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "crucible_steel",
@@ -5165,7 +5165,7 @@ window.BODY_DATA = {
      "Smithing",
      "homogeneous steel for blades and springs",
      "none (anomaly; the furnace reaches it if the crucible survives)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "bessemer",
@@ -5185,7 +5185,7 @@ window.BODY_DATA = {
      "Smelting",
      "cheap steel",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "furnace_electric",
@@ -5205,7 +5205,7 @@ window.BODY_DATA = {
      "-",
      "calcium carbide, carborundum, any metal",
      "none (anomaly: needs power)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "refrigerator",
@@ -5225,7 +5225,7 @@ window.BODY_DATA = {
      "-",
      "cold storage (GOODS spoilage halted), liquefying gases",
      "none (anomaly; a freezing mixture of ice and salt reaches -20 C and is period, if there is ice)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "dewar",
@@ -5245,7 +5245,7 @@ window.BODY_DATA = {
      "-",
      "keeping liquefied gases",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "ph_meter",
@@ -5265,7 +5265,7 @@ window.BODY_DATA = {
      "-",
      "acidity as a number (litmus gives the period's yes or no)",
      "none (anomaly; litmus is period)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "mass_spec",
@@ -5285,7 +5285,7 @@ window.BODY_DATA = {
      "-",
      "identification of any substance: DISCOVERY's full identification",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "gas_chromatograph",
@@ -5305,7 +5305,7 @@ window.BODY_DATA = {
      "-",
      "analysis of mixtures",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "nmr",
@@ -5325,7 +5325,7 @@ window.BODY_DATA = {
      "-",
      "structure of organic molecules",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "pcr",
@@ -5345,7 +5345,7 @@ window.BODY_DATA = {
      "-",
      "copying DNA: biology's identification",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "sequencer",
@@ -5365,7 +5365,7 @@ window.BODY_DATA = {
      "-",
      "species identified by sequence (ECOLOGY's tagged creatures named)",
      "none (anomaly)",
-     "proposed"
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be researched)"
     ],
     [
      "tagged",
@@ -5414,21 +5414,21 @@ window.BODY_DATA = {
      "Does the assembled apparatus meet the process's conditions? For each role the process needs (heat to T, hold it +/- x for t; a vessel of volume V that survives the reagents at T and P; a condenser for a vapour at b.p.; vacuum to p), is there a piece whose numbers cover it?",
      "the catalogue's numbers; the process's conditions (CHEMISTRY reaction record)",
      "the process does not run, or runs partway (a lower yield, a different product: what the simulation supports), or the vessel breaks (an accident: ATMOSPHERE's laboratory scenario)",
-     "proposed"
+     "rex (the step, 2026-10-29)"
     ],
     [
      3,
      "Is there fuel or power for the duration?",
      "charcoal, spirit, the sun, a water wheel, a pile (TECHNOLOGY)",
      "the process stops when it runs out",
-     "proposed"
+     "rex (the step, 2026-10-29)"
     ],
     [
      4,
      "Can the pieces be connected (joints, seals, a receiver)?",
      "a joints rule: glass to glass needs lute or ground joints (period: clay lute); gases need a trough or a tube",
      "leaks (exposure, loss)",
-     "proposed"
+     "rex (the step, 2026-10-29)"
     ],
     [
      5,
@@ -5442,14 +5442,14 @@ window.BODY_DATA = {
      "Do the actual conditions reached permit the transformation?",
      "CHEMISTRY kinetics and equilibrium at the conditions reached",
      "nothing happens, or something else does (the engine's answer; an unsupported reaction is 'unknown', not impossible)",
-     "proposed"
+     "rex (the step, 2026-10-29)"
     ],
     [
      7,
      "Can the character tell what he made?",
      "the measure roles present (DISCOVERY: observed vs identified)",
      "a product he cannot name: an 'unknown liquid' in the journal",
-     "proposed"
+     "rex (the step, 2026-10-29)"
     ]
    ]
   }
@@ -13293,21 +13293,21 @@ window.BODY_DATA = {
      "which catalogue items a place can hold: common (bought), rare (one maker, a city), none (only as a time anomaly)",
      "the catalogue's availability column",
      "GOODS facilities list (the still, the forge, the furnace, the chymist's laboratory)",
-     "proposed"
+     "rex (the field, 2026-10-29); proposed (defaults)"
     ],
     [
      "manufacture prerequisites",
      "what it takes to make a piece: materials, a trade, a facility (a glassblower for a retort; a founder for a brass pump)",
      "glass from Europe; copper work in the islands; brass instruments from London and Amsterdam makers",
      "GOODS recipes (equipment is a good)",
-     "proposed"
+     "rex (the field, 2026-10-29); proposed (defaults)"
     ],
     [
      "fuel and power",
      "charcoal, wood, bagasse, spirit, oil; the sun; wind, water and animal power; later gas, steam, electricity",
      "charcoal and wood everywhere; a water wheel at a mill; no steam (Newcomen 1712 is in the period but not in the islands), no gas, no electricity",
      "GOODS (charcoal, firewood as goods: open)",
-     "proposed"
+     "rex (the field, 2026-10-29); proposed (defaults)"
     ],
     [
      "knowledge",
@@ -13321,7 +13321,7 @@ window.BODY_DATA = {
      "what a place can supply continuously: running water, ice, a gasworks, mains power",
      "water by bucket; ice none (the freezing mixture needs it); the rest none",
      "the town keeper's places",
-     "proposed"
+     "rex (the field, 2026-10-29); proposed (defaults)"
     ],
     [
      "the anomaly plug",
@@ -13335,7 +13335,7 @@ window.BODY_DATA = {
      "the whole table as one record per setting (pirate 1700; a modern city; a prehistoric camp; a science-fiction ship)",
      "this column",
      "-",
-     "proposed"
+     "rex (the field, 2026-10-29); proposed (defaults)"
     ]
    ]
   },
@@ -13359,7 +13359,7 @@ window.BODY_DATA = {
      "seeing, catching, buying, making it",
      "a sketch and a provisional name ('an unknown liquid'; 'a red fish with a horn'); observed appearance",
      "use it blindly: eat it, burn it, throw it",
-     "proposed"
+     "rex (the state, 2026-10-29); proposed (what moves it)"
     ],
     [
      "Observed",
@@ -13367,7 +13367,7 @@ window.BODY_DATA = {
      "the measure roles present (balance, thermometer, hydrometer, litmus, the taste and smell, a trial by fire); time with the thing",
      "the properties found (boils at the water bath's heat; sinks in water; turns litmus red; the fish bites at dusk)",
      "repeat what worked; predict a little",
-     "proposed"
+     "rex (the state, 2026-10-29); proposed (what moves it)"
     ],
     [
      "Identified",
@@ -13375,7 +13375,7 @@ window.BODY_DATA = {
      "a match to a known entry: a book, a teacher, a measuring instrument that names it (spectroscope, mass spectrometer), or the period's test (a flame colour, a precipitate)",
      "its name, formula or species, its known uses, the historical entry (JOURNAL 7)",
      "name it in trade and dialogue; look it up; use it in a recipe that calls for it",
-     "proposed"
+     "rex (the state, 2026-10-29); proposed (what moves it)"
     ],
     [
      "Understood",
@@ -13383,7 +13383,7 @@ window.BODY_DATA = {
      "experiment and theory: the player's own, or a book of a later century (a time anomaly in itself)",
      "the mechanism, the reactions it takes part in, what it does to a body",
      "design new processes with it; teach it (GOODS 3f: knowledge that survives you if written)",
-     "proposed"
+     "rex (the state, 2026-10-29); proposed (what moves it)"
     ]
    ]
   },
@@ -13439,7 +13439,7 @@ window.BODY_DATA = {
      "the angel's energy, a demon's form",
      "-",
      "'no record'",
-     "proposed (outside AI)"
+     "rex (the label, 2026-10-29)"
     ],
     [
      "Science Fiction",
@@ -13455,7 +13455,7 @@ window.BODY_DATA = {
      "the Ghost Fleet's needs",
      "-",
      "'this world's own'",
-     "proposed (outside AI)"
+     "rex (the label, 2026-10-29)"
     ],
     [
      "Unknown",
@@ -13463,7 +13463,7 @@ window.BODY_DATA = {
      "a synthesis the database does not hold",
      "-",
      "'nothing known; try, and the world will answer what it can'",
-     "proposed (ChatGPT's 'unknown, not physically impossible', agreed)"
+     "rex (the label, 2026-10-29)"
     ]
    ]
   },
@@ -13489,7 +13489,7 @@ window.BODY_DATA = {
      "state",
      "encountered | observed | identified | understood",
      "always",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "classification",
@@ -13501,25 +13501,25 @@ window.BODY_DATA = {
      "name, formula or species; provisional name before identification",
      "-",
      "by state",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "observed properties",
      "what the player's own tests found, dated and with the instrument used",
      "as found",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "reference properties",
      "the engine's record (CHEMISTRY, ECOLOGY, MEDICINE rows)",
      "on identification",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "natural occurrence",
      "where it is found in the world",
      "on identification",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "uses and effects",
@@ -13531,13 +13531,13 @@ window.BODY_DATA = {
      "history: existence",
      "when it existed (a mineral: always; a species: its era; a compound: made by nature or first made by people)",
      "on identification",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "history: first observation",
      "first documented noticing (Leeuwenhoek's animalcules 1676)",
      "on identification",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "history: isolation",
@@ -13549,13 +13549,13 @@ window.BODY_DATA = {
      "history: identification",
      "first recognised for what it is (oxygen as an element: Lavoisier 1777)",
      "on identification",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "history: synthesis",
      "first made from other things (urea 1828, Wohler)",
      "on identification",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "credited to, and the dispute",
@@ -13567,13 +13567,13 @@ window.BODY_DATA = {
      "historical production",
      "how it was made then",
      "on identification",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "significance",
      "why it mattered",
      "on identification",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "your discovery",
@@ -13591,7 +13591,7 @@ window.BODY_DATA = {
      "personal vs reference",
      "two columns kept apart: what you found, what the books say",
      "always",
-     "proposed (outside AI: educational as well)"
+     "rex (the field, 2026-10-29)"
     ]
    ]
   },

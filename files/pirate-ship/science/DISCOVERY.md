@@ -35,10 +35,10 @@ rule (Rex) this file extends to things nobody has named yet.
 
 | State | Meaning | Reached by | What the journal shows | What the engine lets you do | Mark |
 |---|---|---|---|---|---|
-| Encountered | it exists and you have met it | seeing, catching, buying, making it | a sketch and a provisional name ('an unknown liquid'; 'a red fish with a horn'); observed appearance | use it blindly: eat it, burn it, throw it | proposed |
-| Observed | you have measured or tested properties | the measure roles present (balance, thermometer, hydrometer, litmus, the taste and smell, a trial by fire); time with the thing | the properties found (boils at the water bath's heat; sinks in water; turns litmus red; the fish bites at dusk) | repeat what worked; predict a little | proposed |
-| Identified | you know what it is | a match to a known entry: a book, a teacher, a measuring instrument that names it (spectroscope, mass spectrometer), or the period's test (a flame colour, a precipitate) | its name, formula or species, its known uses, the historical entry (JOURNAL 7) | name it in trade and dialogue; look it up; use it in a recipe that calls for it | proposed |
-| Understood | you know why it does what it does | experiment and theory: the player's own, or a book of a later century (a time anomaly in itself) | the mechanism, the reactions it takes part in, what it does to a body | design new processes with it; teach it (GOODS 3f: knowledge that survives you if written) | proposed |
+| Encountered | it exists and you have met it | seeing, catching, buying, making it | a sketch and a provisional name ('an unknown liquid'; 'a red fish with a horn'); observed appearance | use it blindly: eat it, burn it, throw it | rex (the state, 2026-10-29); proposed (what moves it) |
+| Observed | you have measured or tested properties | the measure roles present (balance, thermometer, hydrometer, litmus, the taste and smell, a trial by fire); time with the thing | the properties found (boils at the water bath's heat; sinks in water; turns litmus red; the fish bites at dusk) | repeat what worked; predict a little | rex (the state, 2026-10-29); proposed (what moves it) |
+| Identified | you know what it is | a match to a known entry: a book, a teacher, a measuring instrument that names it (spectroscope, mass spectrometer), or the period's test (a flame colour, a precipitate) | its name, formula or species, its known uses, the historical entry (JOURNAL 7) | name it in trade and dialogue; look it up; use it in a recipe that calls for it | rex (the state, 2026-10-29); proposed (what moves it) |
+| Understood | you know why it does what it does | experiment and theory: the player's own, or a book of a later century (a time anomaly in itself) | the mechanism, the reactions it takes part in, what it does to a body | design new processes with it; teach it (GOODS 3f: knowledge that survives you if written) | rex (the state, 2026-10-29); proposed (what moves it) |
 <!-- /table -->
 
 - **[history]** The microbe is the model: seen in 1676, understood in the 1860s. A thing can sit at
@@ -75,7 +75,7 @@ rule (Rex) this file extends to things nobody has named yet.
 
 ## Open for Rex
 
-1. Keep, cut, or stamp the states and the attempt flow.
+1. ~~Keep, cut, or stamp the states and the attempt flow~~ stamped (Rex, 2026-10-29).
 2. The identification tests per substance: a belt data task once the reaction records exist.
 3. Whether "understood" needs a theory minigame or only books and experiments.
 
@@ -83,4 +83,5 @@ rule (Rex) this file extends to things nobody has named yet.
 
 | Date | What | Who |
 |---|---|---|
+| 2026-10-29 | Rex stamped the separations, the states and the attempt flow as his | Rex |
 | 2026-10-29 | File opened; the five separations, the four states, the attempt flow, period identification tests | keeper |

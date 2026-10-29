@@ -64,7 +64,7 @@ can do; every row is proposed; nothing here is engine code.
 
 ## Open for Rex
 
-1. Keep the three layers and the folder; assign a keeper for `science/` (the body keeper opened it).
+1. ~~Keep the three layers and the folder~~ stamped with the folder's structure (Rex, 2026-10-29); still: assign a keeper for `science/` (the body keeper opened it).
 2. Start the catalogue lane now, or after the first build.
 3. The minigames for the apparatus (yours).
 
