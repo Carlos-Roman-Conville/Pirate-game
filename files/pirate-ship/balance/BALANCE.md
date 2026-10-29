@@ -288,7 +288,13 @@ nothing is built. The current simulator verdicts (OG 61, CG 68, OE 49, CE 57) st
     irreversible, death), never a death by itself, and needs preconditions built over years, so a young crew's
     risk is near zero. The fate systems (item 29) decide what follows. For the sim: an unscripted death of a
     sector's only developer is now possible, so the guarantee must rest on succession or resurrection (item 30),
-    not on a fence; the general fence for the other causes is still Rex's.
+    not on a fence. **Extended the same day (Rex, per `body/BODY.md` open 1, `MEDICINE.md` open 1,
+    `world/POPULATION.md` §4, commit 9d5a005):** no biological immunity for named characters to disease, accident
+    or weather deaths either; every death opens a crisis first; any protection comes from the story, the surgeon
+    or the crew's care, never from the body. So the body side of this item is answered in full: the sim reads
+    every death risk in `MEDICINE.md`, `CIRCULATION.md` and `ENVIRONMENT.md` as an input, and the guarantee
+    rests entirely on the fate side, items 28–30 (succession, resurrection by faction, and whether story-only
+    protection exists for anyone). That fate side is still Rex's.
 
 ## Are the alignment maps on file?
 
@@ -596,3 +602,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | C5 items 16–19 revised for the final nine factions on the square (16 superseded, 17 answered with a new open, 18 sharpened, 19 widened to nine with Rex's allowed list) | Rex (chart); keeper |
 | 2026-10-29 | C5 items 28–32: ghost rule vs death, fate + form, resurrection as recovery, perfect redefined, unscripted deaths; from Rex's death decision in COMBAT.md §4e | Rex (via combat keeper); keeper |
 | 2026-10-29 | C5 item 32 partly decided: named characters vulnerable to cardiac events (crisis, never a death by itself); the guarantee must rest on succession or resurrection | Rex (via body keeper); keeper |
+| 2026-10-29 | C5 item 32 body side answered in full: no biological immunity for named characters to any death; guarantee rests on items 28–30 | Rex (via body keeper); keeper |
