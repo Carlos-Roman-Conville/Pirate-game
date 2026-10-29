@@ -503,6 +503,70 @@
         "2026-10-29"
       ],
       [
+        "ANA-ORG",
+        "Guyton and Hall, Textbook of Medical Physiology; Boron and Boulpaep, Medical Physiology (the organs' functions and dependencies)",
+        "the organ table",
+        "https://en.wikipedia.org/wiki/Organ_(biology)",
+        "science",
+        "standard reference"
+      ],
+      [
+        "ANA-TIS",
+        "Histology and nutrition biochemistry: vitamin C as the collagen cross-linking cofactor; vitamin K and the clotting factors; bone and vitamin D (standard references)",
+        "the tissue table; scurvy as a connective-tissue failure",
+        "https://en.wikipedia.org/wiki/Scurvy#Pathophysiology",
+        "science",
+        "standard reference"
+      ],
+      [
+        "ANA-LIVER",
+        "Alcoholic liver disease thresholds: autopsy and cohort studies (over 80 g a day raises bridging fibrosis and cirrhosis, RR 8.8; 5 to 40 years from steatosis to cirrhosis; women more vulnerable)",
+        "the liver's damage rule",
+        "https://wjgnet.com/1948-5182/full/v4/i3/81.htm",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "ANA-WILLIS",
+        "Thomas Willis, Pharmaceutice rationalis (1674): the sweet urine of diabetes (standard history)",
+        "the sugar sickness known in the period",
+        "https://en.wikipedia.org/wiki/Thomas_Willis",
+        "history",
+        "standard reference"
+      ],
+      [
+        "CIR-DO2",
+        "Oxygen delivery and arterial content formulas and normal values (respiratory therapy references; EMS and EPFL summaries: DO2 about 1 L/min at rest, CaO2 16 to 22 mL/dL)",
+        "DO2 = CO x CaO2 x 10; CaO2 = 1.34 x Hb x SaO2",
+        "https://www.respiratorytherapyzone.com/?p=332091",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "CIR-ELEC",
+        "Hypokalaemia and arrhythmia review (PMC6234658); clinical electrolyte cut-offs (vary by source)",
+        "potassium and sodium thresholds",
+        "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6234658/",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "CIR-MI",
+        "Atherosclerosis and plaque rupture as the mechanism of infarction (standard cardiology; ChatGPT's correction of the fat-clogs-artery picture, agreed)",
+        "the conditional events table",
+        "https://en.wikipedia.org/wiki/Myocardial_infarction#Pathophysiology",
+        "science",
+        "standard reference"
+      ],
+      [
+        "CIR-RBC",
+        "Red cell recovery after blood loss: a donation's worth (about 550 mL) back in under 40 days; marrow response from days 2 to 4, peak day 7 (modelling and veterinary references)",
+        "recovery of red cells in weeks",
+        "https://en.wikivet.net/Special:MobileDiff/207139...207356",
+        "science",
+        "2026-10-29"
+      ],
+      [
         "ENV-FAO",
         "FAO regional climate note for the Caribbean (P4495E02)",
         "trade winds 24 to 32 km/h from the east; Montserrat 24.7 to 27.2 C",

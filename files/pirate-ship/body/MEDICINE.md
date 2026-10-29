@@ -180,16 +180,10 @@ burns, crushes, with chance raised by fatigue and sleep debt, `PHYSIOLOGY.md`). 
   game placeholders for the simulator, not clinical rates; the *shape* (loss by rate and time, shock by
   loss, infection by contamination, sepsis from infection) is the clinical one.
 
-<!-- table:medicine.bleeding -->
-*Blood loss classes (ATLS teaching values) and what the sim does* (science; confidence high; source: ATLS classes of haemorrhagic shock (teaching values; the current manual gives trends). Blood volume about 70 mL/kg (standard). The class is read from the cumulative loss; the loss grows by the wound's rate x elapsed minutes (a combat turn's length is the combat keeper's), and stops when bound or when the surgeon ligates. The bleeding rates and the death risks are model placeholders, not clinical rates. MED-ATLS)
-
-| Class | Loss (% of blood volume) | Loss for a 70 kg man (mL) | Signs | Sim: Endurance pool and Constitution | Model: bleeding rate of an open wound of this class (mL per minute, until bound) | Death risk per hour at this loss, untreated (model placeholder) | Mark |
-|---|---|---|---|---|---|---|---|
-| I | up to 15 | up to 750 | pulse under 100; little change | pool x0.95 | 5 (a cut: stops on its own in 10 to 20 min) | 0 | proposed |
-| II | 15 to 30 | 750 to 1500 | pulse 100 to 120; anxious; pale | pool x0.8; Constitution x0.9 | 30 (a deep thrust) | 1% | proposed |
-| III | 30 to 40 | 1500 to 2000 | pulse 120 to 140; blood pressure falls; confused | pool x0.5; Wits x0.7; collapse risk per turn | 100 (a severed artery or a shattered limb) | 10% | proposed |
-| IV | over 40 | over 2000 | pulse over 140; lethargic; unconscious | incapacitated; dying (COMBAT 4 wound ladder) | 300 (a great vessel) | 50% | proposed |
-<!-- /table -->
+- **The blood loss classes moved to `CIRCULATION.md` section 2 (2026-10-29)**, where the blood lives: loss by
+  rate x time x clotting, the class from cumulative loss over volume, perfusion per organ, and the
+  recovery of volume (days) and red cells (weeks). This file keeps the wound's rate (the wound table),
+  infection, shock as a named state, and sepsis.
 
 - **Effects:** the torso rule (Rex): bleeding drains the Endurance pool and dips Constitution; class III+
   dips Wits (confusion); the blood factor stays on the pool until regenerated.

@@ -120,7 +120,8 @@ docs at the tick and on events.
   near-constant 0.015 g/dL per hour (7–10 g an hour) and which distributes by the Widmark factor
   (0.68 men, 0.55 women), peaking 30–90 minutes after drinking and slower with food (NEU-PK, NEU-ALC).
   Caffeine's half-life is 3–6 hours; nicotine's about 2; morphine's 2–4; quinine's about 11; mercury and
-  lead accumulate (NEU-CAF).
+  lead accumulate (NEU-CAF). **Since 2026-10-29 every clearance is the liver's** (`ANATOMY.md`): the rate
+  above × liver function, so a damaged liver keeps a man drunk longer and makes the surgeon's draught last.
 - **[history]** Rum, beer and wine were the ration; laudanum was in the chest from the 1660s; tobacco was
   universal; coffee houses opened in London in 1652 and chocolate was sold there by 1657 (NEU-HIST);
   Peruvian bark cured agues and deafened at high dose; mercury was the pox cure and poisoned its

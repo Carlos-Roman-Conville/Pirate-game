@@ -121,7 +121,10 @@ fatigue load (MET-hours).
       aerobic_today = ceiling(age, sex, genetics) × clamp(0.6 + k1·fitness − k2·fatigue, 0.6, 1.0)
 
   `ceiling` is the hidden genetic max of `STATS.md` Endurance for this character, scaled by the ageing curve
-  (§8). **Calibration (proposed):** `load_i` is the day's MET-hours above 2 MET divided by 8, so an ordinary
+  (§8). **Since 2026-10-29 `aerobic_today` is oxygen delivery at maximal cardiac output
+  (`CIRCULATION.md` §1): Banister fitness sets the maximal output, the heart's function and damage cap it
+  (`ANATOMY.md`), haemoglobin and lung saturation scale it. So anaemia, heart failure and lung disease
+  lower endurance through this one number.** **Calibration (proposed):** `load_i` is the day's MET-hours above 2 MET divided by 8, so an ordinary
   sea day scores about 1.0, a hard day 2.0, a sick day 0; with τ 42 and 7 the steady-state sums are then
   about 42 and 7 for a daily load of 1, so the multiplier is normalised as `k1 = 0.4/42` and `k2 = 0.4/7`
   (a long run of ordinary days settles the clamp at about 0.6 + 0.4 − 0.4 = 0.6 of ceiling, a run of hard

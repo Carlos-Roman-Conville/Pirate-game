@@ -461,7 +461,7 @@
     ]
   },
   "bleeding": {
-    "title": "Blood loss classes (ATLS teaching values) and what the sim does",
+    "title": "(moved to circulation.bleeding on 2026-10-29; kept here unrendered for the record)",
     "kind": "science",
     "conf": "high",
     "source": "ATLS classes of haemorrhagic shock (teaching values; the current manual gives trends). Blood volume about 70 mL/kg (standard). The class is read from the cumulative loss; the loss grows by the wound's rate x elapsed minutes (a combat turn's length is the combat keeper's), and stops when bound or when the surgeon ligates. The bleeding rates and the death risks are model placeholders, not clinical rates. MED-ATLS",

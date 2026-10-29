@@ -43,6 +43,12 @@
         "proposed"
       ],
       [
+        "organs and tissues",
+        "ANATOMY.md, CIRCULATION.md",
+        "per organ: function, damage; per tissue: integrity; the blood: volume, plasma, redCellMass, Hb, SaO2, CO, DO2, MAP, perfusion{organ}, platelets, clotting, Na, K, Ca, Mg, glucose, pH, lactate, immune, lipids, atherosclerosis index",
+        "proposed (2026-10-29)"
+      ],
+      [
         "nervous",
         "NEUROLOGY.md",
         "per system: tone, sensitivity; per substance: concentration, dependence, withdrawal; habits{}; burdens{mercury, lead}; the circuit outputs (arousal, coordination, attention, encoding, painRelief, breathing, moodBias, fear, appetiteMod, sleepQuality)",
@@ -112,7 +118,7 @@
       ],
       [
         "Endurance pool now",
-        "ceiling x (1 - 0.5 fatigueDay) x alertness x hydrationFactor x glycogenFactor x feverFactor x bloodFactor x heatFactor",
+        "ceiling x (1 - 0.5 fatigueDay) x alertness x hydrationFactor x glycogenFactor x feverFactor x bloodFactor (CIRCULATION: the class and the oxygen delivery) x heatFactor",
         "PHYSIOLOGY, NUTRITION, MEDICINE",
         "rex (pool), proposed (formula)"
       ],
@@ -438,6 +444,16 @@
       [
         "Rum -> the body (the neurology chain)",
         "GOODS: a gill of rum -> NEUROLOGY 3: 14 g alcohol absorbed over 30 to 90 min, cleared at 0.015 g/dL per hour -> gaba tone up, glutamate down, dopamine and opioid up (x the drinker's sensitivity) -> circuits: motor control down (BODY: Dexterity, Agility, the accident roll: Rex's 'too much rum, accidents'), fear down (COMBAT Nerve: Dutch courage), encoding down over 0.08 g/dL (the memories system records nothing), sleep quality x0.7 (PHYSIOLOGY), mood bias + then - (PSYCHOLOGY) -> nightly for 3 weeks: gaba sensitivity falls (tolerance), dependence rises -> a dry passage: withdrawal (tremor, no sleep, fits at 24 to 48 h, delirium at 48 to 72 h: MEDICINE condition) -> the craving push (PSYCHOLOGY) and the habit the story keeper can write",
+        "proposed (2026-10-29)"
+      ],
+      [
+        "Scurvy through the tissues (the organ-layer chain)",
+        "GOODS: no fresh food -> NUTRITION 5: vitamin C pool under 300 mg (day 53) -> ANATOMY 2: connective tissue integrity falls 0.02 a day (collagen cannot cross-link) -> CIRCULATION: vessel walls leak (bruises; gums bleed; blood volume trickles) -> MEDICINE: every wound's healing x3, old scars reopen (the tissue, not a scurvy rule) -> BODY: Constitution and the pool through the blood factor; PSYCHOLOGY: lassitude from day 36 -> limes: the pool refills, integrity rebuilds over 2 to 4 weeks",
+        "proposed (2026-10-29)"
+      ],
+      [
+        "The old captain's heart (a conditional event)",
+        "forty years of pipe and salt pork -> CIRCULATION: lipids and tobacco damage the endothelium (ANATOMY tissues) -> the atherosclerosis index climbs with age (x2 at 70) -> coronary perfusion narrows: angina on the stairs (face) -> a cold morning hauling with the crew (trigger x5) -> plaque rupture, a clot: infarction (index^2 x 0.001 x 5 that day) -> ANATOMY: heart function 0.4, damage +0.3 for good; CIRCULATION: output down -> kidneys, the dropsy -> MEDICINE names heart failure; the story keeper has an ending that was never a scripted death",
         "proposed (2026-10-29)"
       ]
     ]

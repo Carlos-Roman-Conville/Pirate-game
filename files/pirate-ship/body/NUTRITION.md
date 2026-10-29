@@ -348,6 +348,10 @@ intake; the deficiency clocks.
   is fast (days to feel better; Lind's sailors fit for duty in six days).
 - **[model]** `pool += intake − use` daily; stages by pool; recovery by intake. The disease itself (its
   effects, its face, its death risk) is `MEDICINE.md`'s row; this file only runs the clock.
+  **Since 2026-10-29 the pools act on tissues and organs, not on a disease row:** vitamin C on connective
+  tissue (`ANATOMY.md` section 2), iron, folate and B12 on the marrow's red cells (`CIRCULATION.md`
+  section 3), vitamin K on the liver's clotting factors, thiamin and B12 on nerves, calcium and vitamin D on
+  bone; the symptoms follow from those structures.
 - **Effects:** stage multipliers go to `MEDICINE.md` as conditions (scurvy, beriberi, pellagra, anaemia,
   night blindness); vitamin C under 300 mg triples healing time and reopens wounds (`MEDICINE.md` §7).
 - **Visible face:** stage 1 is invisible except to a surgeon who knows it; stage 2 is bleeding gums in
