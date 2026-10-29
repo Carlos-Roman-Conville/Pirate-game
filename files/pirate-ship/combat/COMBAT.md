@@ -86,6 +86,53 @@ Battle Brothers (lasting injuries).
   rule (alive / dead / ghost, `balance/BALANCE.md` item 4): the balance and town keepers' once Rex decides.
 - **(open)** Bleeding, fatigue and stamina as turn-by-turn conditions.
 
+### 4a. The body's own stats: per limb (Rex, 2026-10-29)
+
+- **(Rex, 2026-10-29)** **Physical attributes are per limb.** The limbs are responsible for the actions they
+  perform: a right arm and a left arm each with their own Strength, Dexterity and Reflexes; each leg its own, and
+  the legs together decide how many tiles a character moves in a turn. A character can have a strong right arm
+  and a weak left; a wounded leg changes how they move. This is what makes regional damage (§4) bite: a hit to a
+  part lowers that part's stats.
+- **(Rex, 2026-10-29)** Agrees with ChatGPT's structure of **three stat sets** that stay distinct:
+  1. the **physical body** (per-limb Strength, Dexterity, Reflexes, speed, local fatigue, injury; global
+     Constitution, Endurance pool, Agility);
+  2. the **eight function attributes** (§6a: Eyesight Si, Perception Se, Pattern Recognition Ne, Hearing Fe,
+     Intuition Ni, Spatial Reasoning Ti, Poise Fi, Efficiency Te), their own progression category, never
+     substitutes for physical stats;
+  3. the **learned skills** (Swordplay, Marksmanship, Gunnery, Brawling).
+  Combat performance comes from all three: a musket shot = the shooting arm's steadiness + Eyesight + Spatial
+  Reasoning + Marksmanship + the weapon's condition + the target's position.
+- **(proposed, outside AI)** Which attributes are global and which local: Strength per limb; Dexterity mainly
+  arms and hands; speed mainly legs; Reflexes global reaction with local execution; Endurance global stamina with
+  local muscular fatigue; Constitution global; Agility whole-body coordination and balance. Movement per turn
+  derived from both legs with the weaker one limiting, less fatigue; not a plain sum (coordination and balance
+  count).
+- **(proposed, outside AI)** Two swordsmen at Swordplay 80 fight differently by their arms: one precise and fast
+  (high right-arm Dexterity and Reflexes), the other hard-hitting and slow, possibly better left-handed. A wounded
+  sword arm forces the off hand, with its weaker control.
+- **(proposed, outside AI)** Injury severities, so a minor leg wound doesn't halve movement outright.
+- **(proposed, outside AI)** Head and torso in the limb table: head = the sensory and cognitive attributes;
+  torso = Constitution, Endurance, "Stability". **(keeper)** See the note on head and torso below.
+- **(proposed, outside AI)** **Te balance:** extra actions are the strongest thing in a turn-based game, so
+  Efficiency should lower specific action costs (reload, preparation, equipment handling), never grant turns.
+  Each function pair valuable in a different situation, not numerically equal: Si+Ti long-range accuracy, Se+Fi
+  detection and resisting interruption, Ne+Ni concealed enemies and ambushes, Fe+Te hearing and acting.
+- **(Rex, 2026-10-29)** **Head and torso carry no stats of their own.** The eight function attributes live in the
+  head; the global body stats (Constitution, the Endurance pool, Agility) in the torso. Every hit location maps
+  to the stats it dips:
+
+| Hit location | What it dips |
+|---|---|
+| an arm | that arm's Strength, Dexterity, Reflexes (weapon handling, parry, off hand) |
+| a leg | that leg's stats, and movement |
+| head | the senses (Eyesight, Perception, Hearing, Intuition) and Spatial Reasoning; a bad one takes awareness |
+| torso | the Endurance pool drains (bleeding) and Constitution |
+
+  ChatGPT's "Stability" is Poise (Fi) under another name; not added.
+- **(Rex, 2026-10-29)** **Te floor cost.** Efficiency lowers what an action costs and never enlarges the pool or
+  adds to initiative; every action keeps a floor cost (no action below N points however efficient). N: open.
+- **(keeper)** Written into `STATS.md` §1 the same day on Rex's say: the body attributes per limb.
+
 ## 5. Progression: skill, not levels
 
 - **(Rex, 2026-10-29)** Combat stats can be raised, but it's mainly the **skill** that rises, and skill makes
@@ -221,6 +268,8 @@ whether what you intend happens.
    small scale converts to the tactical scale.
 9. Who owns combat balance (encounter difficulty, unit numbers): `balance/BALANCE.md` item 14 says not balance.
 10. Ammunition and powder kinds: which exist and what each does in a fight.
+12. Per-limb stats (§4a): the global/local split as ChatGPT drew it, or changed; the Te floor value N; whether
+    genetic min–max is per limb (head/torso and the floor decided 2026-10-29).
 11. ~~Where the attribute table lives~~ decided: `STATS.md` (Rex, 2026-10-29); the five new attributes written
     there the same day on Rex's say.
 
@@ -236,3 +285,5 @@ whether what you intend happens.
 | 2026-10-29 | Attributes live in `STATS.md`, their battle function here; flinch has levels, from a stat dip or a delayed turn up to a full round lost | Rex |
 | 2026-10-29 | Te → Efficiency: actions with minimal wasted time and effort; the eight functions now all have an attribute | Rex |
 | 2026-10-29 | Endurance = the pool of points; Efficiency = points spent per action each turn | Rex |
+| 2026-10-29 | Physical attributes per limb (Rex's idea); three distinct stat sets agreed (body, eight functions, skills); ChatGPT's global/local split, head/torso rows and Te fence recorded as proposed; keeper's readings on head/torso and a Te floor | Rex / outside AI / keeper |
+| 2026-10-29 | Decided: head and torso carry no stats of their own (hit location → stats dipped); Te floor cost stands; STATS.md body attributes rewritten per limb | Rex |

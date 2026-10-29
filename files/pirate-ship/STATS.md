@@ -50,26 +50,35 @@ like the type is Rex's call.
 
 ## 1. Attributes (proposed: 1–20, 10 is an ordinary sailor)
 
-| Attribute | What it is | Realism notes |
-|---|---|---|
-| Strength | lifting, hauling, hitting | hauling lines, working the capstan, running out a two-ton gun |
-| Endurance | how long before tiring; long watches, pumping | builds slowly with hard work |
-| Agility | balance and whole-body movement | moving aloft in a rolling sea; dodging |
-| Dexterity | fine hand control | needle, knife, knots, cards, a steady saw |
-| Reflexes | reaction speed | parries, catching a falling line, a fish striking |
-| Constitution | resisting sickness, drink, wounds, seasickness | scurvy and fever killed more than battle |
-| Eyesight | seeing far and fine detail | lookouts; reading the sea; threading canvas |
-| Hearing | small sounds, rhythm | a creaking mast, footsteps on deck, music |
-| Taste and smell | the nose and palate | cooking; spotting spoiled stores or gunpowder gone damp |
-| Wits | reasoning and numbers | navigation is arithmetic; counting cards; range-finding |
-| Memory | holding facts, faces, routes, recipes | charts, signals, who said what |
-| Nerve | steadiness under fear or pain | surgery without anaesthetic, boarding, holding a bluff |
-| Perception (Rex, 2026-10-29) | immediate awareness of movement, threats and activity | the hand who notices the sail move before the lookout calls it |
-| Pattern Recognition (Rex, 2026-10-29) | telling a shape from its surroundings: unusual configurations, likely hiding places, indirect clues | a still man in cover; a reef by the colour of the water |
-| Intuition (Rex, 2026-10-29) | unconscious anticipation of threats and where an enemy is; "sees around corners" | the old pirate who knows the alley is wrong before anything shows; what sets it high or low is open |
-| Spatial Reasoning (Rex, 2026-10-29) | angles, distances, trajectories, mechanical interactions | aiming a musket or a gun; judging a jump between rails |
-| Poise (Rex, 2026-10-29) | staying steady when struck; resists flinching | the boarder who takes a cut and keeps coming |
-| Efficiency (Rex, 2026-10-29) | executing actions with minimal wasted time and effort | the gunner's crew that reloads in half the time; no motion spare |
+**The body is per limb (Rex, 2026-10-29).** The physical attributes belong to the limbs that do the work: each
+arm and each leg carries its own Strength, Dexterity and Reflexes (the legs together set how far a character
+moves in a turn); Endurance, Constitution and Agility are whole-body. A character can have a strong right arm and
+a weak left; a wounded leg changes how they move. The head and torso carry no stats of their own: the function
+attributes below live in the head, the whole-body stats in the torso, and a wound to either dips those
+(`combat/COMBAT.md` §4a). The **Scope** column says which.
+
+| Attribute | Scope | What it is | Realism notes |
+|---|---|---|---|
+| Strength | per limb | lifting, hauling, hitting | hauling lines, working the capstan, running out a two-ton gun |
+| Endurance | whole body | how long before tiring; long watches, pumping; the point pool in a fight | builds slowly with hard work |
+| Agility | whole body | balance and whole-body coordination | moving aloft in a rolling sea; dodging |
+| Dexterity | per limb (mainly arms and hands) | fine control | needle, knife, knots, cards, a steady saw |
+| Reflexes | per limb (global reaction, local execution: proposed) | reaction speed | parries, catching a falling line, a fish striking |
+| Constitution | whole body | resisting sickness, drink, wounds, seasickness | scurvy and fever killed more than battle |
+| Eyesight | head | seeing far and fine detail | lookouts; reading the sea; threading canvas |
+| Hearing | head | small sounds, rhythm | a creaking mast, footsteps on deck, music |
+| Taste and smell | head | the nose and palate | cooking; spotting spoiled stores or gunpowder gone damp |
+| Wits | head | reasoning and numbers | navigation is arithmetic; counting cards; range-finding |
+| Memory | head | holding facts, faces, routes, recipes | charts, signals, who said what |
+| Nerve | whole body | steadiness under fear or pain | surgery without anaesthetic, boarding, holding a bluff |
+| Perception (Rex, 2026-10-29) | head | immediate awareness of movement, threats and activity | the hand who notices the sail move before the lookout calls it |
+| Pattern Recognition (Rex, 2026-10-29) | head | telling a shape from its surroundings: unusual configurations, likely hiding places, indirect clues | a still man in cover; a reef by the colour of the water |
+| Intuition (Rex, 2026-10-29) | head | unconscious anticipation of threats and where an enemy is; "sees around corners" | the old pirate who knows the alley is wrong before anything shows; what sets it high or low is open |
+| Spatial Reasoning (Rex, 2026-10-29) | head | angles, distances, trajectories, mechanical interactions | aiming a musket or a gun; judging a jump between rails |
+| Poise (Rex, 2026-10-29) | whole body | staying steady when struck; resists flinching | the boarder who takes a cut and keeps coming |
+| Efficiency (Rex, 2026-10-29) | whole body | executing actions with minimal wasted time and effort; every action keeps a floor cost | the gunner's crew that reloads in half the time; no motion spare |
+
+(Nerve, Poise and Efficiency sit with the whole body as a first placement; Rex may move them.)
 
 **The functions as attributes (Rex, 2026-10-29).** Eight attributes are the personality functions in combat:
 Eyesight Si, Perception Se, Pattern Recognition Ne, Hearing Fe, Intuition Ni, Spatial Reasoning Ti, Poise Fi,
@@ -87,7 +96,8 @@ and not realise it until he keeps training strength. The current value moves ins
 - **Disuse lowers it** toward the minimum: a smart crew mate who is never challenged intellectually starts losing
   mind stats.
 
-This holds for all three groups: body, senses and mind.
+This holds for all three groups: body, senses and mind. Whether the min–max is per limb for the per-limb
+attributes (a born-strong right arm): open.
 
 **Age (proposed):** the maximum itself falls with age after the 20s–30s, while skill keeps rising with practice.
 An old surgeon has the best skill and the shakiest hands. **Injuries** cut attributes, and may lower the maximum
@@ -95,7 +105,9 @@ for good (a lost eye halves eyesight; a peg leg takes agility).
 
 ## 2. Skills (proposed: 0–100)
 
-Primary attributes count double; personality is how the sliders (§3) push learning speed.
+Primary attributes count double; personality is how the sliders (§3) push learning speed. Where a skill names a
+per-limb attribute (Strength, Dexterity, Reflexes), it reads the limb doing the work: the weapon arm for Swordplay
+and Marksmanship, both legs for movement, both arms for hauling (proposed reading of Rex's per-limb rule).
 
 | Skill | Primary | Secondary | Personality pull | Duty / post |
 |---|---|---|---|---|
@@ -216,4 +228,5 @@ furious with you is a worse surgeon tonight.
 - How the matrix types set the sliders.
 - What the personality type affects beyond the sliders.
 - Assertive ↔ Turbulent: a slider that shifts (as drafted) or fixed like the type.
-- What sets Intuition high or low; the point costs per action (`combat/COMBAT.md` §6a).
+- What sets Intuition high or low; the point costs per action and the floor (`combat/COMBAT.md` §6a).
+- Per-limb body (§1): is the genetic min–max per limb; are Nerve, Poise and Efficiency whole-body as placed.
