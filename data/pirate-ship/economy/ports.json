@@ -1,0 +1,1764 @@
+{
+  "_about": "The base game's locales (ATLANTIC-MAP.md). produces / consumes use goods.json ids and come from the verification notes; the five per-settlement numbers are the balance lane's. Verdicts: fits / caveat / outside / documented / plausible / nothing found. Generated from atlantic-map.json; the five per-settlement numbers are null until the balance lane sets them.",
+  "regions": [
+    "caribbean",
+    "north-america",
+    "mexico",
+    "south-america",
+    "europe",
+    "west-africa"
+  ],
+  "ports": [
+    {
+      "id": "nassau",
+      "name": "Nassau (New Providence)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "the pirate republic",
+      "produces": [],
+      "consumes": [
+        "fresh-meat",
+        "limes-oranges-lemons",
+        "rum"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "port-royal",
+      "name": "Port Royal (Jamaica)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: peak before 1692",
+      "role": "the buccaneers' capital",
+      "produces": [
+        "muscovado-sugar",
+        "rum"
+      ],
+      "consumes": [
+        "flour",
+        "ship-s-biscuit",
+        "salt-beef-and-pork"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "tortuga",
+      "name": "Tortuga",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: mostly before 1684",
+      "role": "French buccaneers",
+      "produces": [
+        "tobacco-cured-and-packed",
+        "boucan",
+        "raw-hides"
+      ],
+      "consumes": [
+        "common-powder",
+        "muskets"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "havana",
+      "name": "Havana",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "the fleet's harbour",
+      "produces": [
+        "tobacco-cured-and-packed",
+        "raw-hides",
+        "mahogany"
+      ],
+      "consumes": [
+        "flour",
+        "wine"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "santiago-de-cuba",
+      "name": "Santiago de Cuba",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: one event",
+      "role": "fortress port, El Cobre copper",
+      "produces": [
+        "raw-hides"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "santo-domingo",
+      "name": "Santo Domingo",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: thin",
+      "role": "the old Spanish capital",
+      "produces": [
+        "raw-hides",
+        "tallow"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "cap-fran-ais",
+      "name": "Cap-Français",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: a town from 1711",
+      "role": "the northern plain's sugar",
+      "produces": [
+        "muscovado-sugar",
+        "indigo-dye"
+      ],
+      "consumes": [
+        "salt-beef-and-pork",
+        "flour"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "l-og-ne",
+      "name": "Léogâne",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: founding date unclear",
+      "role": "the French west",
+      "produces": [
+        "indigo-dye",
+        "muscovado-sugar"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "san-juan",
+      "name": "San Juan (Puerto Rico)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "the fortress and the guardacostas",
+      "produces": [
+        "ginger",
+        "raw-hides"
+      ],
+      "consumes": [
+        "flour"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "bridgetown",
+      "name": "Bridgetown (Barbados)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "the sugar island's port",
+      "produces": [
+        "muscovado-sugar",
+        "clayed-sugar",
+        "rum",
+        "molasses"
+      ],
+      "consumes": [
+        "flour",
+        "ship-s-biscuit",
+        "salt-beef-and-pork",
+        "lumber",
+        "staves-and-hoops"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "speightstown",
+      "name": "Speightstown (Barbados)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: no events",
+      "role": "Little Bristol",
+      "produces": [
+        "muscovado-sugar"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "kingston",
+      "name": "Kingston (Jamaica)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "the merchants' capital from 1692",
+      "produces": [
+        "muscovado-sugar",
+        "rum",
+        "pimento"
+      ],
+      "consumes": [
+        "flour",
+        "salt-fish"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "spanish-town",
+      "name": "Spanish Town (Jamaica)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "fits (inland)",
+      "role": "the seat of government",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "willemstad",
+      "name": "Willemstad (Curaçao)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "the Dutch entrepôt",
+      "produces": [
+        "salt"
+      ],
+      "consumes": [
+        "cacao-sweated-and-dried",
+        "raw-hides"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "oranjestad",
+      "name": "Oranjestad (St Eustatius)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: the boom is later",
+      "role": "Dutch trading outpost",
+      "produces": [
+        "muscovado-sugar",
+        "cotton-wool",
+        "tobacco-cured-and-packed"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "charlotte-amalie",
+      "name": "Charlotte Amalie (St Thomas)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat",
+      "role": "Danish harbour",
+      "produces": [
+        "muscovado-sugar",
+        "tobacco-cured-and-packed"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "basseterre",
+      "name": "Basseterre (St Kitts)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: French until 1713",
+      "role": "the shared island",
+      "produces": [
+        "tobacco-cured-and-packed",
+        "muscovado-sugar"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "charlestown",
+      "name": "Charlestown (Nevis)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "plantation wealth",
+      "produces": [
+        "muscovado-sugar"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "st-john-s",
+      "name": "St John's (Antigua)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "the island's port",
+      "produces": [
+        "muscovado-sugar"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "english-harbour",
+      "name": "English Harbour (Antigua)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "outside: dockyard 1725",
+      "role": "a careening anchorage before 1725",
+      "produces": [],
+      "consumes": [
+        "tar-pitch-turpentine"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "basse-terre",
+      "name": "Basse-Terre (Guadeloupe)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: burned 1691, 1703",
+      "role": "French government",
+      "produces": [
+        "muscovado-sugar"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "saint-pierre",
+      "name": "Saint-Pierre (Martinique)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "the French commercial port",
+      "produces": [
+        "muscovado-sugar",
+        "rum",
+        "annatto-dye",
+        "indigo-dye",
+        "cacao-sweated-and-dried",
+        "cotton-wool"
+      ],
+      "consumes": [
+        "wine",
+        "flour"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "fort-royal",
+      "name": "Fort Royal (Martinique)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "the naval base",
+      "produces": [],
+      "consumes": [
+        "common-powder"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "plymouth",
+      "name": "Plymouth (Montserrat)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: small",
+      "role": "the Irish island",
+      "produces": [
+        "tobacco-cured-and-packed",
+        "indigo-dye",
+        "cotton-wool",
+        "muscovado-sugar"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "road-town",
+      "name": "Road Town (Tortola)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: no events",
+      "role": "small-island trade",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "scarborough",
+      "name": "Scarborough (Tobago)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "outside: capital from 1769",
+      "role": "a watering place for pirates",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "port-of-spain",
+      "name": "Port of Spain (Trinidad)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: tiny",
+      "role": "Spanish frontier",
+      "produces": [
+        "cacao-sweated-and-dried"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "grand-turk",
+      "name": "Grand Turk",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat: a seasonal camp",
+      "role": "the salt rakers",
+      "produces": [
+        "salt"
+      ],
+      "consumes": [
+        "flour",
+        "salt-beef-and-pork"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "st-george-s",
+      "name": "St George's (Grenada)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "caveat",
+      "role": "French Fort Royal",
+      "produces": [
+        "muscovado-sugar",
+        "indigo-dye"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "st-george-s",
+      "name": "St George's (Bermuda)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "cedar sloops and Turks salt",
+      "produces": [
+        "sloop",
+        "salt",
+        "ambergris"
+      ],
+      "consumes": [
+        "flour"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "harbour-island",
+      "name": "Harbour Island",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "documented (settlement)",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "eleuthera",
+      "name": "Eleuthera",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "documented",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "exuma-cays",
+      "name": "Exuma Cays",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "plausible",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "abaco",
+      "name": "Abaco",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "nothing found",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "inagua",
+      "name": "Inagua",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "plausible; salt",
+      "role": "small settlement",
+      "produces": [
+        "salt"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "salt-cay",
+      "name": "Salt Cay (Turks)",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "documented; salt",
+      "role": "small settlement",
+      "produces": [
+        "salt"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "little-cayman",
+      "name": "Little Cayman",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "documented; turtle",
+      "role": "small settlement",
+      "produces": [
+        "turtle-live"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "cayman-brac",
+      "name": "Cayman Brac",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "plausible; turtle",
+      "role": "small settlement",
+      "produces": [
+        "turtle-live"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "le-vache",
+      "name": "Île-à-Vache",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "documented: Morgan 1669",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "petit-go-ve",
+      "name": "Petit-Goâve",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "documented: the buccaneers' port; promote (proposed)",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "la-gon-ve",
+      "name": "La Gonâve",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "nothing found",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "isla-de-pinos",
+      "name": "Isla de Pinos",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "plausible",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "cayo-largo",
+      "name": "Cayo Largo",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "plausible",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "vieques",
+      "name": "Vieques",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "documented (claims)",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "culebra",
+      "name": "Culebra",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "plausible",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "anegada",
+      "name": "Anegada",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "plausible; wrecks",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "jost-van-dyke",
+      "name": "Jost Van Dyke",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "plausible",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "bequia",
+      "name": "Bequia",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "plausible",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "union-island",
+      "name": "Union Island",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "nothing found",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "los-roques",
+      "name": "Los Roques",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "minor",
+      "verdict": "plausible",
+      "role": "small settlement",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "providencia",
+      "name": "Providencia",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "candidate",
+      "verdict": "documented: Morgan 1670",
+      "role": "an addition from the record",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "bay-of-honduras-logwood-camps",
+      "name": "Bay of Honduras logwood camps",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "candidate",
+      "verdict": "documented",
+      "role": "an addition from the record",
+      "produces": [
+        "logwood"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "roat-n",
+      "name": "Roatán",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "candidate",
+      "verdict": "documented",
+      "role": "an addition from the record",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "mosquito-coast",
+      "name": "Mosquito Coast",
+      "region": "caribbean",
+      "origin": "caribbean",
+      "tier": "candidate",
+      "verdict": "documented",
+      "role": "an addition from the record",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "st-augustine",
+      "name": "St Augustine",
+      "region": "north-america",
+      "origin": "north-america",
+      "tier": "major",
+      "verdict": "fits: Searles 1668, Moore 1702",
+      "role": "Spanish military frontier",
+      "produces": [],
+      "consumes": [
+        "flour"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "boston",
+      "name": "Boston",
+      "region": "north-america",
+      "origin": "north-america",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "shipbuilding, fish, timber, rum",
+      "produces": [
+        "salt-cod-by-grade",
+        "lumber",
+        "staves-and-hoops",
+        "sloop",
+        "rum",
+        "whale-oil-and-bone"
+      ],
+      "consumes": [
+        "muscovado-sugar",
+        "molasses"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "philadelphia",
+      "name": "Philadelphia",
+      "region": "north-america",
+      "origin": "north-america",
+      "tier": "major",
+      "verdict": "fits: founded 1682",
+      "role": "flour and provisions",
+      "produces": [
+        "flour",
+        "ship-s-biscuit",
+        "salt-beef-and-pork"
+      ],
+      "consumes": [
+        "muscovado-sugar",
+        "rum"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "norfolk",
+      "name": "Norfolk (Chesapeake)",
+      "region": "north-america",
+      "origin": "north-america",
+      "tier": "major",
+      "verdict": "fits: laid out 1680s",
+      "role": "tobacco",
+      "produces": [
+        "tobacco-cured-and-packed",
+        "pig-iron"
+      ],
+      "consumes": [
+        "rum",
+        "muscovado-sugar"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "charleston",
+      "name": "Charleston",
+      "region": "north-america",
+      "origin": "north-america",
+      "tier": "major",
+      "verdict": "fits: 1670; Blackbeard 1718",
+      "role": "rice, deerskins, naval stores",
+      "produces": [
+        "rice",
+        "deerskins",
+        "tar-pitch-turpentine"
+      ],
+      "consumes": [
+        "rum",
+        "muscovado-sugar"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "newport",
+      "name": "Newport (Rhode Island)",
+      "region": "north-america",
+      "origin": "north-america",
+      "tier": "candidate",
+      "verdict": "fits",
+      "role": "slave trade and privateers",
+      "produces": [
+        "rum",
+        "sloop"
+      ],
+      "consumes": [
+        "molasses"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "new-orleans",
+      "name": "New Orleans",
+      "region": "north-america",
+      "origin": "north-america",
+      "tier": "candidate",
+      "verdict": "caveat: founded 1718",
+      "role": "Louisiana",
+      "produces": [],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "veracruz",
+      "name": "Veracruz",
+      "region": "mexico",
+      "origin": "spanish-main",
+      "tier": "major",
+      "verdict": "fits: de Graaf 1683",
+      "role": "the treasure port",
+      "produces": [
+        "mexican-silver-pesos",
+        "cochineal-dye",
+        "vanilla"
+      ],
+      "consumes": [
+        "mercury",
+        "olive-oil",
+        "wine"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "campeche",
+      "name": "Campeche",
+      "region": "mexico",
+      "origin": "spanish-main",
+      "tier": "major",
+      "verdict": "fits: Myngs 1663, de Graaf 1685",
+      "role": "the contested frontier",
+      "produces": [
+        "logwood",
+        "yucat-n-cotton-cloth"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "laguna-de-t-rminos",
+      "name": "Laguna de Términos",
+      "region": "mexico",
+      "origin": "spanish-main",
+      "tier": "major",
+      "verdict": "fits: Dampier 1675–78; expelled 1717",
+      "role": "the logwood camps",
+      "produces": [
+        "logwood"
+      ],
+      "consumes": [
+        "rum",
+        "flour",
+        "common-powder"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "bacalar",
+      "name": "Bacalar",
+      "region": "mexico",
+      "origin": "spanish-main",
+      "tier": "candidate",
+      "verdict": "caveat: the fort is 1729",
+      "role": "the lagoon",
+      "produces": [
+        "logwood"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "sisal",
+      "name": "Sisal",
+      "region": "mexico",
+      "origin": "spanish-main",
+      "tier": "candidate",
+      "verdict": "open",
+      "role": "the Yucatán salt coast",
+      "produces": [
+        "salt"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "cartagena",
+      "name": "Cartagena",
+      "region": "south-america",
+      "origin": "spanish-main",
+      "tier": "major",
+      "verdict": "fits: de Pointis 1697",
+      "role": "the Spanish stronghold",
+      "produces": [
+        "gold-of-new-granada-and-darien",
+        "emeralds",
+        "pearls"
+      ],
+      "consumes": [
+        "wine",
+        "olive-oil",
+        "coarse-linen"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "maracaibo",
+      "name": "Maracaibo",
+      "region": "south-america",
+      "origin": "spanish-main",
+      "tier": "major",
+      "verdict": "fits: Morgan 1669",
+      "role": "cacao and smuggling",
+      "produces": [
+        "cacao-sweated-and-dried",
+        "raw-hides",
+        "mules",
+        "tobacco-cured-and-packed"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "salvador-da-bahia",
+      "name": "Salvador da Bahia",
+      "region": "south-america",
+      "origin": "brazil",
+      "tier": "major",
+      "verdict": "fits: Roberts 1719",
+      "role": "sugar, roll tobacco, the Africa run",
+      "produces": [
+        "muscovado-sugar",
+        "tobacco-rolled-the-bahia-way",
+        "cacha-a",
+        "manioc-flour"
+      ],
+      "consumes": [
+        "salt-cod-by-grade"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "bel-m",
+      "name": "Belém",
+      "region": "south-america",
+      "origin": "brazil",
+      "tier": "major",
+      "verdict": "fits: founded 1616",
+      "role": "the Amazon's gate",
+      "produces": [
+        "cacao-sweated-and-dried"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "rio-de-janeiro",
+      "name": "Rio de Janeiro",
+      "region": "south-america",
+      "origin": "brazil",
+      "tier": "candidate",
+      "verdict": "fits: Duguay-Trouin 1711",
+      "role": "gold and the fleet",
+      "produces": [
+        "muscovado-sugar"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "essequibo",
+      "name": "Essequibo (Guianas)",
+      "region": "south-america",
+      "origin": "atlantic-islands",
+      "tier": "candidate",
+      "verdict": "fits",
+      "role": "Dutch river posts",
+      "produces": [
+        "muscovado-sugar",
+        "annatto-dye"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "bristol",
+      "name": "Bristol",
+      "region": "europe",
+      "origin": "europe",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "Atlantic merchants, privateers, the slave trade",
+      "produces": [
+        "coarse-linen",
+        "nails",
+        "tools-hoes-axes-knives",
+        "brass-basins-and-kettles"
+      ],
+      "consumes": [
+        "muscovado-sugar",
+        "tobacco-cured-and-packed",
+        "logwood"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "london",
+      "name": "London",
+      "region": "europe",
+      "origin": "europe",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "finance, the Navy, the Company",
+      "produces": [
+        "woollens",
+        "muskets",
+        "common-powder",
+        "pewter-plates-and-mugs"
+      ],
+      "consumes": [
+        "muscovado-sugar",
+        "tobacco-cured-and-packed",
+        "indigo-dye",
+        "logwood"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "cadiz",
+      "name": "Cadiz",
+      "region": "europe",
+      "origin": "europe",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "the fleets' port",
+      "produces": [
+        "wine",
+        "olive-oil",
+        "mercury"
+      ],
+      "consumes": [
+        "mexican-silver-pesos",
+        "cochineal-dye",
+        "cacao-sweated-and-dried"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "lisbon",
+      "name": "Lisbon",
+      "region": "europe",
+      "origin": "europe",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "Brazil's gold and sugar",
+      "produces": [
+        "wine"
+      ],
+      "consumes": [
+        "muscovado-sugar",
+        "tobacco-rolled-the-bahia-way",
+        "brazilwood"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "amsterdam",
+      "name": "Amsterdam",
+      "region": "europe",
+      "origin": "europe",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "banking and the companies",
+      "produces": [
+        "gin",
+        "coarse-linen",
+        "bar-iron"
+      ],
+      "consumes": [
+        "muscovado-sugar",
+        "cacao-sweated-and-dried",
+        "logwood"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "saint-malo",
+      "name": "Saint-Malo",
+      "region": "europe",
+      "origin": "europe",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "the corsairs",
+      "produces": [
+        "salt-cod-by-grade"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "nantes",
+      "name": "Nantes",
+      "region": "europe",
+      "origin": "europe",
+      "tier": "candidate",
+      "verdict": "fits",
+      "role": "sugar refining, the slave trade",
+      "produces": [
+        "loaf-sugar"
+      ],
+      "consumes": [
+        "muscovado-sugar"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "cork",
+      "name": "Cork",
+      "region": "europe",
+      "origin": "europe",
+      "tier": "candidate",
+      "verdict": "fits",
+      "role": "provisions",
+      "produces": [
+        "irish-barrelled-beef-and-butter",
+        "butter",
+        "tallow"
+      ],
+      "consumes": [],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "saint-louis-and-gor-e",
+      "name": "Saint-Louis and Gorée (Senegambia)",
+      "region": "west-africa",
+      "origin": "west-africa",
+      "tier": "major",
+      "verdict": "fits: Nasir al-Din 1673–77",
+      "role": "the Sanctuary Coast",
+      "produces": [
+        "raw-hides",
+        "gum-arabic",
+        "beeswax",
+        "ivory"
+      ],
+      "consumes": [
+        "bar-iron",
+        "brandy",
+        "coarse-linen"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "mpinda",
+      "name": "Mpinda (Soyo, Kongo)",
+      "region": "west-africa",
+      "origin": "west-africa",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "the Compromised Kingdom",
+      "produces": [
+        "ivory",
+        "loango-copper-libongo-cloth-takula-elephants-tails",
+        "salt"
+      ],
+      "consumes": [
+        "muskets",
+        "common-powder",
+        "coarse-linen"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "luanda-and-matamba",
+      "name": "Luanda and Matamba",
+      "region": "west-africa",
+      "origin": "west-africa",
+      "tier": "major",
+      "verdict": "fits",
+      "role": "the Defiant Kingdom",
+      "produces": [
+        "ivory",
+        "beeswax",
+        "salt"
+      ],
+      "consumes": [
+        "cacha-a",
+        "tobacco-rolled-the-bahia-way"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "ouidah",
+      "name": "Ouidah (Hueda)",
+      "region": "west-africa",
+      "origin": "west-africa",
+      "tier": "major",
+      "verdict": "fits: Roberts 1722",
+      "role": "the Merchant Kingdom",
+      "produces": [
+        "palm-oil",
+        "gold-and-gold-dust"
+      ],
+      "consumes": [
+        "cowries-and-shells",
+        "brass-basins-and-kettles",
+        "coarse-linen",
+        "tobacco-rolled-the-bahia-way"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    },
+    {
+      "id": "old-calabar",
+      "name": "Old Calabar",
+      "region": "west-africa",
+      "origin": "west-africa",
+      "tier": "major",
+      "verdict": "fits: Roberts 1720–21",
+      "role": "the Cruel Port (Rex's fiction on the record)",
+      "produces": [
+        "ivory",
+        "palm-oil",
+        "cassava-maize-yams-potatoes"
+      ],
+      "consumes": [
+        "bar-iron",
+        "brass",
+        "coarse-linen"
+      ],
+      "note": "",
+      "stock": null,
+      "consumptionPerDay": null,
+      "targetReserve": null,
+      "productionPerDay": null,
+      "basePrices": null
+    }
+  ]
+}

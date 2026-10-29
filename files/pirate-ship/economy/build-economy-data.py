@@ -133,6 +133,18 @@ about = ("Built by files/pirate-ship/economy/build-economy-data.py from skill-tr
 (out / "recipes.json").write_text(json.dumps({"_about": about, "flags": tree["flags"], "facilities": tree.get("facilities"), "recipes": recipes}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 (out / "occupations.json").write_text(json.dumps({"_about": about, "note": tree["occupations"]["note"], "rules": tree["occupations"]["rules"], "occupations": occupations}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
+# ports from the Atlantic map
+mp = here / "atlantic-map.json"
+if mp.exists():
+    amap = json.loads(mp.read_text(encoding="utf-8"))
+    ports = []
+    for n in amap["nodes"]:
+        ports.append({**n, "stock": None, "consumptionPerDay": None, "targetReserve": None, "productionPerDay": None, "basePrices": None})
+    (out / "ports.json").write_text(json.dumps({"_about": amap["_about"] + " Generated from atlantic-map.json; the five per-settlement numbers are null until the balance lane sets them.",
+                                                "regions": amap["regions"], "ports": ports}, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    unknown = sorted({g for n in amap["nodes"] for g in n["produces"] + n["consumes"] if g not in goods})
+    print(f"ports {len(ports)}; goods named by ports but not in goods.json: {unknown or 'none'}")
+
 # checks
 ids = set(goods)
 missing = [(r["id"], x) for r in recipes for x in r["inputs"] + r["inputsAny"] if x not in ids]
