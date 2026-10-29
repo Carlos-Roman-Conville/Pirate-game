@@ -61,6 +61,10 @@
   .notree { grid-column: 1 / -1; }
   .notree ul { margin: 4px 0 0 18px; }
   .count { color: var(--muted); font-size: 13px; }
+  .occs { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 10px; }
+  .occ { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; }
+  .skills-of { margin: 6px 0 4px; display: flex; flex-wrap: wrap; gap: 4px; }
+  .skills-of .chip { cursor: default; }
 </style>
 </head>
 <body>
@@ -89,6 +93,15 @@
     const d = document.createElement('div'); d.className = 'band-key';
     d.innerHTML = '<b>' + b.name + ' ' + b.range + '</b><span>' + b.period + '</span>';
     bandsEl.appendChild(d);
+  }
+  if (data.occupations) {
+    const occ = document.createElement('section'); occ.className = 'group notree';
+    occ.innerHTML = '<h2>Occupations</h2><p class="note">' + (data.occupations.note || '') + '</p>'
+      + '<div class="occs">' + data.occupations.list.map(o =>
+        '<div class="occ"><b>' + o.name + '</b>' + (o.period ? ' <span class="count">' + o.period + '</span>' : '')
+        + '<div class="skills-of">' + o.skills.map(s => '<span class="chip' + (o.outside && o.outside.includes(s) ? ' off' : '') + '">' + s + '</span>').join(' ') + '</div>'
+        + (o.note ? '<div class="count">' + o.note + '</div>' : '') + '</div>').join('') + '</div>';
+    main.appendChild(occ);
   }
   const chips = [];
   const byKey = new Map();

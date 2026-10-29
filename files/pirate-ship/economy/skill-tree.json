@@ -1318,5 +1318,342 @@
     }
   ],
   "bandsSource": "research-trade-grades.md (shared notes folder): guild ladder, sea ranks, Ligon's overseers and tradesmen; 'novice' and 'expert' found as no grade",
-  "rule": "Every recipe needs materials + equipment + a minimum skill band (Rex, 2026-10-28). Skill never creates a material: a master spinner cannot spin silk without silk."
+  "rule": "Every recipe needs materials + equipment + a minimum skill band (Rex, 2026-10-28). Skill never creates a material: a master spinner cannot spin silk without silk.",
+  "occupations": {
+    "note": "An occupation is a label, not a skill: it groups the skills a person of that calling practised, levels nothing, grants nothing, and a character may carry more than one (Rex, 2026-10-28). The words are the ones period wills and indentures use; the record styles a person by ONE word, and a second appears for a small minority (under 5% of mariners), nearly always sea + shipboard craft: 'Mariner and Cooper', 'Mariner and Surgeon'. 'Alchemist' was never an occupation (0 wills; 'Chymist' 40): use Chymist. Status words (Gentleman, Yeoman, Captain) sat in the same slot as trades. Grey chips are STATS.md skills with no goods tree. Source: research-occupations.md.",
+    "rules": [
+      "one word per character by default; the word of their highest skill group",
+      "a second word for a few: sea + craft ('Mariner and Cooper'), or 'Merchant, Commander'; 'Barber-Chirurgeon' is one compound trade",
+      "status words are not occupations: Gentleman, Esquire, Yeoman, Husbandman, Captain/Colonel (militia), Servant, Labourer; they can sit beside a trade word",
+      "no bonus from the label itself; any synergy comes from the skills (Rex: later, if at all)"
+    ],
+    "list": [
+      {
+        "name": "Planter",
+        "period": "trade-cum-status; 'Planter of Saint James, Barbados' (1670)",
+        "skills": [
+          "Farming",
+          "Sugar boiling",
+          "Distilling",
+          "Animal Husbandry"
+        ],
+        "note": "The sugar planter's works: fields, boiling house, still-house (L). Boiler and distiller as job titles: open for 1657"
+      },
+      {
+        "name": "Husbandman",
+        "period": "status of a small farmer, used as a trade in indentures (1654–86)",
+        "skills": [
+          "Farming",
+          "Animal Husbandry",
+          "Dairying"
+        ],
+        "note": "Rex's 'Agriculturalist'. Yeoman is the richer man, same work"
+      },
+      {
+        "name": "Hunter (boucanier)",
+        "period": "Exquemelin: Hispaniola's three callings, 'hunt, plant, pirate' (1684)",
+        "skills": [
+          "Hunting",
+          "Butchering",
+          "Preserving",
+          "Tanning"
+        ],
+        "note": "the boucan is Preserving"
+      },
+      {
+        "name": "Fisherman / Turtler",
+        "period": "turtlers in sloops at the Caymans (D)",
+        "skills": [
+          "Fishing",
+          "Marine Gathering",
+          "Swimming"
+        ],
+        "outside": [
+          "Swimming"
+        ],
+        "note": "salt-rakers and pearl-divers fall here; no will title found for either (open)"
+      },
+      {
+        "name": "Woodcutter (logwood-cutter, collier)",
+        "period": "the Campeche cutters (D); collier for charcoal",
+        "skills": [
+          "Woodcutting"
+        ],
+        "note": "no will title found; the cutters were 'Jamaica men' by origin, not trade (open)"
+      },
+      {
+        "name": "Miner / Refiner",
+        "period": "off-map in this period (Spanish silver, European iron)",
+        "skills": [
+          "Mining",
+          "Chemical Refining"
+        ],
+        "note": "a label the Caribbean town will rarely use"
+      },
+      {
+        "name": "Victualler / Cook",
+        "period": "'Victualler' (Bristol 1694; Spalding 1642); the ship's Cook among the exempted tradesmen (Smith 1627)",
+        "skills": [
+          "Cooking",
+          "Baking",
+          "Butchering",
+          "Preserving",
+          "Milling"
+        ],
+        "note": "Rex's 'Food Artisan'. Miller, Baker and Butcher were each a trade of their own in a town; a small port lumps them"
+      },
+      {
+        "name": "Chandler",
+        "period": "'Tallow chandler' (Spalding 1642)",
+        "skills": [
+          "Waxworking"
+        ],
+        "note": "the INFP's calling; wax figures are a design extension"
+      },
+      {
+        "name": "Tanner / Currier",
+        "period": "'Tanners, Curriors, Shoemakers' at Port Royal 1688 (Taylor)",
+        "skills": [
+          "Tanning",
+          "Leatherworking"
+        ],
+        "note": "the currier dressed the tanned hide; folded into Tanning here"
+      },
+      {
+        "name": "Cordwainer",
+        "period": "'Cordwainer' (Spalding 1642; indentures); 'Shoemakers' at Port Royal 1688",
+        "skills": [
+          "Shoemaking"
+        ],
+        "note": ""
+      },
+      {
+        "name": "Sugar-baker",
+        "period": "'Sugar Baker' (Exeter 1661), 'Sugar Refiner' (London 1694)",
+        "skills": [
+          "Sugar boiling"
+        ],
+        "note": "in England the refiner; on the island the boiler. One label for both"
+      },
+      {
+        "name": "Distiller",
+        "period": "'Distiller' (London 1692; Distillers' Company 1638)",
+        "skills": [
+          "Distilling"
+        ],
+        "note": ""
+      },
+      {
+        "name": "Dyer",
+        "period": "a London company trade; no Caribbean will title found (open)",
+        "skills": [
+          "Dye Making"
+        ],
+        "note": "indigo-making on the plantation was planter's work under an overseer (D)"
+      },
+      {
+        "name": "Perfumer",
+        "period": "no period Caribbean source (Rex's addition)",
+        "skills": [
+          "Perfumery"
+        ],
+        "note": "unsourced"
+      },
+      {
+        "name": "Chymist",
+        "period": "'Chymist' (Southwark 1728), 'Chemist and Apothecary' (1729); never 'Alchymist'",
+        "skills": [
+          "Chemical Refining",
+          "Surgery and medicine",
+          "Distilling",
+          "Dye Making",
+          "Powder Making"
+        ],
+        "note": "Rex's 'Alchemist' group, under its period name. The apothecary's remedies sit in Surgery and medicine for now (Apothecary as a skill: open)"
+      },
+      {
+        "name": "Powder-maker",
+        "period": "powder mills in England; no Caribbean mill in the sources",
+        "skills": [
+          "Powder Making",
+          "Chemical Refining"
+        ],
+        "note": ""
+      },
+      {
+        "name": "Smith / Armourer",
+        "period": "'Blacksmith' (Port Royal 1692); 'Armourers' at Port Royal 1688; Armourer among a ship's tradesmen",
+        "skills": [
+          "Smithing"
+        ],
+        "note": "Rex's 'Metalworker'. Gunsmithing is Smithing's top tier"
+      },
+      {
+        "name": "Carpenter / Joiner / Shipwright",
+        "period": "'Carpenter' (Port Royal 1707), 'Joiner' (1723), 'Shipwright' (Stepney 1699); 'Mariner and Shipwright'",
+        "skills": [
+          "Carpentry",
+          "Woodcutting"
+        ],
+        "note": "Rex's 'Woodworker'. Caulker is the ship's own pairing"
+      },
+      {
+        "name": "Cooper (hooper)",
+        "period": "'Cooper' (Nevis 1705); 'Mariner and Cooper' (8 wills 1669–1725); 'Hooper' (Bristol)",
+        "skills": [
+          "Cooperage"
+        ],
+        "note": "the commonest sea + craft pairing"
+      },
+      {
+        "name": "Weaver / Spinster",
+        "period": "weaver by-employments at Spalding 1642; 'Spinster' is a status word for an unmarried woman in wills, from the trade",
+        "skills": [
+          "Spinning",
+          "Weaving"
+        ],
+        "note": "Rex's 'Textile Artisan', first half"
+      },
+      {
+        "name": "Ropemaker",
+        "period": "'Ropemakers' at Port Royal 1688 (Taylor)",
+        "skills": [
+          "Ropemaking"
+        ],
+        "note": ""
+      },
+      {
+        "name": "Taylor",
+        "period": "'Taylor' (Antigua 1707); 'Taylors, Hatters' at Port Royal 1688",
+        "skills": [
+          "Tailoring"
+        ],
+        "note": ""
+      },
+      {
+        "name": "Sailmaker",
+        "period": "'Petty, as Sail-maker' at the Cape Coast trial (J); indenture trade",
+        "skills": [
+          "Sailmaking",
+          "Tailoring",
+          "Ropemaking"
+        ],
+        "outside": [
+          "Sailmaker"
+        ],
+        "note": "the ship's tradesman; needle and palm"
+      },
+      {
+        "name": "Chirurgeon (barber-chirurgeon)",
+        "period": "'Chirurgeon' (Barbados 1675); 'Barber Chirurgeon' (306 wills 1660–1730); 'Mariner and Surgeon' (1706)",
+        "skills": [
+          "Surgery and medicine"
+        ],
+        "note": "a craft, not the learned 'Doctor in Physic'. Ligon: 'the Apothecary of the Plantation, which we call Doctor'"
+      },
+      {
+        "name": "Apothecary",
+        "period": "'Apothecary' (Jamaica-bound 1702)",
+        "skills": [
+          "Surgery and medicine",
+          "Chemical Refining",
+          "Distilling"
+        ],
+        "note": "the INTJ's calling; whether Apothecary becomes a skill apart from Surgery is open"
+      },
+      {
+        "name": "Mariner",
+        "period": "the catch-all sea word in wills ('Mariner of Port Royal', 1683); Smith 1627 splits Sailers (able) from Younkers (foremast men)",
+        "skills": [
+          "Seamanship",
+          "Climbing aloft",
+          "Helmsmanship",
+          "Navigation",
+          "Lookout",
+          "Swimming"
+        ],
+        "outside": [
+          "Seamanship",
+          "Climbing aloft",
+          "Helmsmanship",
+          "Navigation",
+          "Lookout",
+          "Swimming"
+        ],
+        "note": "Master and Mate are ranks inside it, not occupations"
+      },
+      {
+        "name": "Gunner",
+        "period": "'Mariner and Gunner' (1667); Gunner among the ship's officers (Smith 1627)",
+        "skills": [
+          "Gunnery",
+          "Powder Making"
+        ],
+        "outside": [
+          "Gunnery"
+        ],
+        "note": "fires the guns; does not make the powder unless he also has that skill"
+      },
+      {
+        "name": "Soldier (marine, militia)",
+        "period": "militia ranks 'Captain', 'Colonel' are status; the boarders in Roberts' articles",
+        "skills": [
+          "Swordplay",
+          "Marksmanship",
+          "Brawling",
+          "Intimidation"
+        ],
+        "outside": [
+          "Swordplay",
+          "Marksmanship",
+          "Brawling",
+          "Intimidation"
+        ],
+        "note": "Rex's 'Military Specialist'. Combat classes are a later topic"
+      },
+      {
+        "name": "Merchant / Factor",
+        "period": "the commonest Port Royal will word (19 of 100); 'Merchant, Commander' (1684)",
+        "skills": [
+          "Haggling",
+          "Reading and writing",
+          "Persuasion",
+          "Deception"
+        ],
+        "outside": [
+          "Haggling",
+          "Reading and writing",
+          "Persuasion",
+          "Deception"
+        ],
+        "note": "Rex's 'Merchant / Diplomat'. Grocer, Vintner, Linen-draper, Ironmonger are the shopkeeping kinds"
+      },
+      {
+        "name": "Musician",
+        "period": "'served as Musick' at the Cape Coast trial (J); musician by-employment at Spalding",
+        "skills": [
+          "Music"
+        ],
+        "outside": [
+          "Music"
+        ],
+        "note": "usually a second word: three of Spalding's four musicians had another trade"
+      },
+      {
+        "name": "Gamester / Sharper",
+        "period": "no will title (nobody wrote 'gamester' on a will); a reputation, not a trade",
+        "skills": [
+          "Gambling",
+          "Sleight of hand",
+          "Deception"
+        ],
+        "outside": [
+          "Gambling",
+          "Sleight of hand",
+          "Deception"
+        ],
+        "note": "the den's people"
+      }
+    ]
+  }
 }

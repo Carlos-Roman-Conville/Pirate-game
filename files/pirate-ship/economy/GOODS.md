@@ -515,7 +515,13 @@ which equipment they use**. Gathering a thing and processing it are separate ski
 | Crafting | Tailoring | new (Rex) | cloth to clothes; sewing, embroidery, knitting, repair as activities inside it |
 | Crafting | Surgery and medicine | yes | the apothecary |
 
-**29 skills, 23 new.** Rex's third split (2026-10-28, from his notes): Spinning, Weaving, Ropemaking and Tailoring
+**31 skills, 25 new.** Powder Making and Chemical Refining added (Rex, 2026-10-28): the powder-maker and the
+saltpetre-maker were trades of their own, apart from gunsmith, smith and gunner. Gunpowder needs all three of
+saltpetre (Chemical Refining, from nitre earth), refined sulphur (Chemical Refining, from Mining's brimstone) and
+charcoal (kept inside Woodcutting). No Caribbean powder mill is in the sources, so the town imports powder until it
+recruits a powder-maker. Recipes stay abstract: no manufacturing procedure is modelled.
+
+**29 before them.** Rex's third split (2026-10-28, from his notes): Spinning, Weaving, Ropemaking and Tailoring
 are four trades, not one; Shoemaking is its own trade after Tanning; Leatherworking (added the same day) keeps the
 leather goods other than footwear, four of them. Sailmaking stays the ship skill it is in `STATS.md`. Embroidery,
 knitting and repair are activities inside Tailoring, not skills (crochet is later than the period).
@@ -541,7 +547,7 @@ below. Mining and Weaving are nearly all off-map; Rex can cut them and treat tho
 | 63 | Seaweed | raw | Marine Gathering | No period trade found; use open |
 
 **Where each good sits: `skill-tree.json` and `skill-tree.html`** (this folder). Every one of the 61 goods is placed
-on one of these 29 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
+on one of these 31 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
 Master 100), with a one-line reason and the good it needs from another tree (sugar cane → molasses → rum; rived
 staves → dressed staves → tight cask). The JSON is the source; `build-skill-tree.py` rebuilds the HTML, which opens in
 any browser with no server. Goods made outside the Caribbean in the period are flagged off-map. Four goods have no
@@ -591,6 +597,42 @@ That is 8, added to the 26 in `STATS.md` §2.
 - The economy engine reads the workers' skill values and nothing else about them. This keeps the Toolchain package
   reusable (ALIGNMENT §10).
 - `STATS.md` belongs to another keeper. These skills go into it only when Rex confirms them.
+
+---
+
+## 3d. Occupations: labels over the skills (Rex, 2026-10-28; sourced)
+
+**The rule (Rex).** An occupation is a label that groups the skills a person of that calling practised. It levels
+nothing and grants nothing; the skills do. A character may carry two or more. It is for organising the roster and
+the trees now, and later for how the player reads a character ("a Mariner and Cooper").
+
+**What the period did (source: `research-occupations.md`, shared notes folder; the dashboard's Occupations panel
+carries the evidence per word).**
+- Wills and indentures style a person by **one word**: Merchant (the commonest at Port Royal, 19 of 100), Mariner,
+  Planter, Gentleman, Chirurgeon, Cooper, Carpenter, Apothecary, Taylor, Vintner, Victualler, Cordwainer,
+  Chandler, Distiller, Sugar-baker, Blacksmith, Joiner, Goldsmith.
+- **Status words sat in the same slot** as trades: Gentleman, Esquire, Yeoman, Husbandman, Labourer, Servant, and
+  militia Captain or Colonel. A man could be "maltster" in his will and "gentleman" on his memorial.
+- **Two words were real but rare:** under 5% of mariners, nearly always sea + shipboard craft: "Mariner and Cooper"
+  (eight wills 1669–1725), "Mariner and Shipwright", "Mariner and Caulker", "Mariner and Surgeon", "Mariner and
+  Gunner", "Merchant, Commander". "Planter and Merchant" as a formula: none found. "Barber Chirurgeon" (306 wills)
+  is the one compound trade.
+- **By-employments** in an English market town (Spalding, 1642): a husbandman who was a musician, a shoemaker who
+  was also a weaver, butchers who were graziers.
+- **"Alchemist" was never an occupation:** 0 wills, against 40 "Chymist" or "Chemist" (1662–1760); a 1728 record
+  calls a transmuter "a pretended alchimist". The game's label for Rex's "Alchemist" group is **Chymist**.
+- **A ship's company** (Smith, 1627; Johnson's trial, 1722): officers (Master, Mates, Boatswain, Gunner,
+  Quarter-master), the exempted tradesmen (Chirurgeon, Carpenter, Cooper, Sailmaker, Armourer, Cook, Musicians),
+  and the seamen (Sailers, the able men; Younkers, the foremast men; Boys).
+- **A plantation** (Ligon, 1657): the Overseer, the fire-man at the furnaces, the smith's forge, the carpenter's and
+  joiner's houses, "the Apothecary of the Plantation, which we call Doctor". Boiler and distiller as job titles:
+  open for 1657.
+
+**The list (proposed, 31 period words)** is in `skill-tree.json` under `occupations` and on the dashboard: each word
+with the skills it groups (goods skills and `STATS.md` skills alike), its evidence and date, and a note. The grouping
+is Rex's organising layer under period names; Rex's category names map as Agriculturalist → Husbandman, Food Artisan
+→ Victualler, Alchemist → Chymist, Textile Artisan → Weaver and Taylor, Metalworker → Smith, Woodworker → Carpenter
+and Cooper, Military Specialist → Soldier, Merchant/Diplomat → Merchant. Perfumer has no period source.
 
 ---
 
@@ -769,10 +811,14 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
    versus plain names is Rex's choice.
 8. **Cask size.** Which standard hogshead does the game use: one 63-gallon cask for sugar, molasses and rum (proposed,
    fits the 17th-century evidence), the large tobacco-size cask for sugar, or casks that grow over the timeline (1j)?
-9. **The 29 skills (3c, `skill-tree.json`).** Rex's two splits stand provisionally. Still to confirm: the seven
+9. **The 31 skills (3c, `skill-tree.json`).** Rex's two splits stand provisionally. Still to confirm: the seven
    earlier new ones (Farming, Hunting, Woodcutting, Mining, Sugar boiling, Distilling, Weaving), whether Mining and
    Weaving go, the Swimming gate level for pearls, and every placement.
-10. **STATS.md.** Once confirmed, the new skills need their primary and secondary attributes and personality pull in
+10. **Occupations (3d).** Confirm the 31 period words and which skills each groups; whether a label ever does
+    anything in play (Rex: maybe a synergy later, from the skills, never from the label); whether Apothecary becomes
+    a skill apart from Surgery and medicine, and Metallurgy apart from Mining and Smithing (both raised in Rex's
+    notes, neither decided).
+11. **STATS.md.** Once confirmed, the new skills need their primary and secondary attributes and personality pull in
     `STATS.md` §2, which belongs to another keeper.
 
 ## Change log
@@ -789,3 +835,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-28 | Rex's second split: Milling, Baking, Butchering, Preserving, Dairying, Waxworking out of Cooking; Tanning apart; Hunting is the kill only. 24 skills; unsourced goods dotted on the dashboard | Rex (decision); research session |
 | 2026-10-28 | Leatherworking added after Tanning (Rex); five leather goods placed | Rex (decision); research session |
 | 2026-10-28 | Rex's third split: Spinning, Weaving, Ropemaking, Tailoring; Shoemaking apart from Leatherworking; the recipe rule (materials + equipment + band); flax and hemp added off-map. 29 skills | Rex (decision); research session |
+| 2026-10-28 | Powder Making and Chemical Refining trees (Rex); gunpowder's three inputs. 3d occupations: labels over the skills, 31 period words from wills and indentures (research-occupations.md); 'Alchemist' replaced by Chymist | Rex (decision); research session |
