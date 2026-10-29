@@ -281,7 +281,14 @@ nothing is built. The current simulator verdicts (OG 61, CG 68, OE 49, CE 57) st
 32. **New ways a sector's only developer dies** (disease, accident, a far-away butterfly: the body and world docs
     the combat keeper's note lists) are the same problem as the siege fates (item 13). The sim can only hold the
     guarantee if named characters are fenced (story deaths only), or every unscripted death has a succession or a
-    resurrection. Rex hasn't said which; the combat keeper's note offers ChatGPT's "conditional with succession".
+    resurrection. Rex hasn't said which for disease, accident and weather; the combat keeper's note offers
+    ChatGPT's "conditional with succession". **Partly decided (Rex, 2026-10-29, per `body/CIRCULATION.md` open 2
+    and `body/BODY.md` §0, commit 80436c8, told by the body keeper):** named characters *are* vulnerable to
+    cardiac events, no biological immunity; a cardiac event is a crisis with four outcomes (temporary, chronic,
+    irreversible, death), never a death by itself, and needs preconditions built over years, so a young crew's
+    risk is near zero. The fate systems (item 29) decide what follows. For the sim: an unscripted death of a
+    sector's only developer is now possible, so the guarantee must rest on succession or resurrection (item 30),
+    not on a fence; the general fence for the other causes is still Rex's.
 
 ## Are the alignment maps on file?
 
@@ -588,3 +595,4 @@ To recheck after a map changes: edit `maps.json`, run `python reach.py`, read `T
 | 2026-10-28 | C5 item 24 decided: the economy engine is a Toolchain package | Rex |
 | 2026-10-28 | C5 items 16–19 revised for the final nine factions on the square (16 superseded, 17 answered with a new open, 18 sharpened, 19 widened to nine with Rex's allowed list) | Rex (chart); keeper |
 | 2026-10-29 | C5 items 28–32: ghost rule vs death, fate + form, resurrection as recovery, perfect redefined, unscripted deaths; from Rex's death decision in COMBAT.md §4e | Rex (via combat keeper); keeper |
+| 2026-10-29 | C5 item 32 partly decided: named characters vulnerable to cardiac events (crisis, never a death by itself); the guarantee must rest on succession or resurrection | Rex (via body keeper); keeper |
