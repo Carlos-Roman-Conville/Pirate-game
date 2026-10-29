@@ -187,12 +187,20 @@
       "why": "Its own trade (Rex, 2026-10-28): extraction, fermentation, mordants and colour. Farming grows the plant, Dye Making makes the dye and colours the cloth."
     },
     {
+      "id": "brewing",
+      "name": "Brewing",
+      "group": "crafting",
+      "inStats": false,
+      "covers": "fermented drinks: small beer and strong beer, mobbie, perino, grippo, plantain drink, wine of pines, cider",
+      "why": "Its own trade (2026-10-29, from the drinks research): Brewers' Company chartered 1438; colonial breweries in Massachusetts 1637, New Netherland 1630s, Virginia 1652; the Navy had contract brewers and its own Hartshorn brewhouse (1678). Ligon's Barbados drinks are all fermented, not distilled. Split out of Distilling on that evidence; Rex to confirm."
+    },
+    {
       "id": "distilling",
       "name": "Distilling",
       "group": "crafting",
       "inStats": false,
-      "covers": "the still and the brewhouse: rum, aqua vitae, brandy; beer and wine folded in",
-      "why": "Rex's own example. Brewing and winemaking are folded in as one-offs: no Caribbean town made wine or much beer in the sources, so they sit here off-map."
+      "covers": "the still: rum, aqua vitae, brandy; arrack as foreign knowledge",
+      "why": "Rex's own example. Brewing stands apart (2026-10-29); winemaking stays here off-map."
     },
     {
       "id": "refining",

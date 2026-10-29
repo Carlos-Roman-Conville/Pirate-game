@@ -116,6 +116,40 @@ historical fact. How the game treats it, and whether it appears at all, is Rex's
 | 60 | Green turtle | live | Cayman → Port Royal in sloops, kept in sea pens ("crawls"). The Port Royal market was "every day plentifully stored". Buccaneers lived on "tortoises" | live | Kept alive so it stays fresh; salted turtle: open | open | base (proposed: food for "the ordinary sort") | D, HA, E |
 | 61 | Boucan (smoked meat) and salted boar | preserved | French Hispaniola hunters → Tortuga planters and ships | open | Smoked to keep at sea | Hunters were paid "two or three hundredweight of tobacco" for supplies | cultural (proposed: the boucaniers' food) | E2 |
 
+### 1k. Spices, drugs, island foods and drinks (source; added 2026-10-29)
+
+Rex asked what was missing: spices, herbs, and drink beyond rum. The research note is `research-spices-drinks.md`
+(shared notes). Prices in guilders are Amsterdam exchange prices (PO), per Amsterdam pound. The same columns as 1a.
+
+| # | Good | Kind | Origin → destination | Package | Spoils | Value | Type | Sources |
+|---|---|---|---|---|---|---|---|---|
+| 66 | Pepper (black, white) | raw spice | Asia → Europe → the colonies. Lowther took "pepper" from a New England ship (1722) | bag; bahar (ML) | no | white 1.01, black 0.42 guilders/lb, Amsterdam 1691–94 | specialty (proposed); imported only | PO, J, ML |
+| 67 | Cloves, nutmeg, mace, cinnamon | raw spice | Asia → Europe → the colonies; Ligon's cookery used cloves, mace and cinnamon; nutmeg grated on punch (Sloane) | open | no | cloves 3.75, nutmeg 3.00, mace 8.40, cinnamon 3.00 guilders/lb, Amsterdam 1691 | specialty (proposed); imported only | PO, L, SD |
+| 68 | Saffron | raw spice | Europe → the colonies | open | no | 21.50 guilders/lb, Amsterdam 1691: dearer than cochineal | specialty (proposed); imported only | PO |
+| 69 | Preserves, sugar candy, preserved ginger | manufactured | the islands and Europe; preserves need white sugar (L) | jar, chest: open | open | white candy 0.50, preserved ginger 0.64 guilders/lb, Amsterdam 1691 | cultural (proposed) | PO, L |
+| 70 | Aloes | raw drug | Barbados, Jamaica → London (35 lb in one month, 1681) | open | no | open | specialty (proposed) | C81, BL |
+| 71 | Drug plants: sarsaparilla, china root, cassia fistula, tamarind, guaiacum | raw drug | Jamaica → London; Blome (1672) lists them among the island's commodities; guaiacum is lignum vitae (row 13) | open | open | open | specialty (proposed) | BL, C81 |
+| 72 | Peruvian bark (cinchona) | raw drug | Spanish Peru → Spain → London; sold by London chemists from 1658; Talbor's fever cure 1672–78 | open | open | open | specialty (proposed); imported only; its use is learned knowledge (3f) | SD |
+| 73 | Vanilla | raw | Spanish America (Campeche); "three pence a cod" (Dampier) | open | open | 3d a pod | specialty (proposed) | D |
+| 74 | Coffee | raw; brewed | Martinique (1723), Jamaica (1721/1728): planted at the very end of the period | open | open | open | cultural (proposed) | SD |
+| 75 | Tea | raw | Asia → England → the colonies; Roberts "drank his Tea constantly" | chest | keeps dry | open | cultural (proposed); imported only | J |
+| 76 | Cassava, maize, yams, potatoes; cassava and potato bread | raw; baked | the islands' own bread: "The third sort of bread we use, is only Potatoes" (L) | open | bread keeps days | open | base (proposed) | L |
+| 77 | Citrus (limes, oranges, lemons), pineapple, plantain | raw | the islands; limes "much fitter for sauce then the Limon"; "Pines worth all that went before" (L) | open | fresh fruit spoils | open | base (proposed) | L, C81 |
+| 78 | Beer: small beer, ship's beer, strong beer and ale; cider | manufactured (brewed) | England → ships and the islands: a gallon of beer a day by the Navy's 1678 contract; "Strong Beer 50 l." in Ligon's outlay; cider from New England and Virginia ("Apples and Sider" sold to Teach's sloop, J) | hogshead (54 gal), tun ("seventy-five tuns of Beer and Ale", Barbados 1731, search only) | beer spoils in the tropics; small beer "as bad as water bewitched" (Barlow 1667) | open | base (proposed) | SD, L, J, WC |
+| 79 | Island drinks: mobbie, perino, grippo, beveridge, plantain drink, wine of pines | manufactured (fermented) | made on Barbados by planters, housewives and Indian women; drunk there | bottle (wine of pines) | fermented; days | open | cultural (proposed) | L, D |
+| 80 | Punch, flip | manufactured (mixed) | ships and punch-houses; punch is rum (or brandy, arrack), water, lime, sugar and nutmeg; flip is beer, spirit and sugar heated with a loggerhead | bowl, can | made to drink | open | base (proposed) | SD, J |
+| 81 | Arrack | manufactured (distilled) | East Indies → ships; "rum or arrack in lieu" of wine (Navy 1731); the pirates' liquor in the Indian Ocean | keg (Barlow at Goa, 1697) | no | small arrack "eleven perdos the keg" (16s 6d), Goa 1697 | specialty (proposed); imported only; foreign knowledge (3f) | SD |
+
+**Searched, nothing found (open):** gin or Geneva in the colonies, port, bumbo before 1748, a Port Royal brewhouse,
+jalap, sassafras and ipecacuanha prices, a "Vintner of Nevis" will text.
+
+**What the drinks research says about the trades.** The brewer was a trade of his own: Brewers' Company chartered
+1438; colonial breweries in Massachusetts (1637), New Netherland (1630s) and Virginia (1652); the Navy used contract
+brewers and its own Hartshorn brewhouse (1678). The vintner imported wine and the taverner sold it (Strype 1720).
+Ligon's six Barbados drinks are all fermented, none distilled. So **Brewing is proposed as a skill apart from
+Distilling** (3c), and Brewer and Vintner / Taverner as occupations (3d). Grog (rum and water 4:1) dates from
+21 August 1740, after the period, so it is not a good here.
+
 ### 1g. Units and sizes (source)
 
 | Unit | Holds | Size | Date, place | Sources |
@@ -527,7 +561,9 @@ which equipment they use**. Gathering a thing and processing it are separate ski
 **Reviewed by Rex, 2026-10-29: the 40 skills, the placements and the occupations stand as the working set.** Later
 moves go through `skill-tree.json`.
 
-**40 skills, 34 new.** The medical split (Rex, 2026-10-28), checked against the record
+**41 skills, 35 new** (Brewing added 2026-10-29, 1k; Rex to confirm).
+
+**40 before Brewing.** The medical split (Rex, 2026-10-28), checked against the record
 (`research-medical-trades.md`): Campbell 1747 opens his medical chapter with five separate "Professors": Physician,
 Surgeon, Chymist, Druggist, Apothecary. So **Surgery and medicine becomes Surgery** (the surgeon's craft: bound seven
 years, examined by the Barber-Surgeons' Company, one company until 1745; the surgeon's mate a rank under him), and
@@ -609,7 +645,7 @@ below. Mining and Weaving are nearly all off-map; Rex can cut them and treat tho
 | 65 | Boats, sloops and ships; caulking and refit | manufactured | Shipwrighting | Sourced: the ship itself was the most valuable prize (Part 2); Bermuda cedar sloops from the mid-1600s; careening (DUTIES). Added with the wood split |
 
 **Where each good sits: `skill-tree.json` and `skill-tree.html`** (this folder). Every one of the 61 goods is placed
-on one of these 40 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
+on one of these 41 trees at one of Rex's five bands (Novice 0–24, Apprentice 25–49, Journeyman 50–74, Expert 75–99,
 Master 100), with a one-line reason and the good it needs from another tree (sugar cane → molasses → rum; rived
 staves → dressed staves → tight cask). The JSON is the source; `build-skill-tree.py` rebuilds the HTML, which opens in
 any browser with no server. Goods made outside the Caribbean in the period are flagged off-map. Four goods have no
@@ -830,6 +866,12 @@ Scholarship, archives and museums:
 - **MH**: A. Bowett, the 1721 Naval Stores Act and mahogany (Regional Furniture Society newsletter).
   https://regionalfurnituresociety.org/wp-content/uploads/2022/04/rfs-nl-21-stuart-2.pdf
 - **VA**: Victoria and Albert Museum, mahogany tea table. https://collections.vam.ac.uk/item/O78999/tea-table-unknown
+- **SD**: the spices-and-drinks research note `research-spices-drinks.md` (shared notes folder), with its own URL per row:
+  Navy victualling contracts 1678 and 1731, the grog order of 1740, Bailey's dictionary 1724 (flip), Sloane's punch
+  via a secondary page, Barlow's journal (1667, 1697), Ovington 1696 (Madeira), Strype 1720 (vintner), the Brewers'
+  Company history, cinchona in London 1658/1672.
+- **BL**: Richard Blome, *A Description of the Island of Jamaica* (1672): cacao "the principal ... Commodity", £18 a
+  cwt in London, packed in bags; guaiacum, china root, sarsaparilla, cassia fistula, tamarinds, vanilla, aloes.
 - **DB1 / DB2 / DB3**: Discovering Bristol, "Plantation sugar", "Middle Passage", "Africa cargo".
   https://www.discoveringbristol.org.uk/slavery/routes/america-to-bristol/luxuries-from-abroad/plantation-sugar/ ;
   https://www.discoveringbristol.org.uk/slavery/routes/from-africa-to-america/atlantic-crossing/middle-passage/ ;
@@ -918,7 +960,7 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
    versus plain names is Rex's choice.
 8. **Cask size.** Which standard hogshead does the game use: one 63-gallon cask for sugar, molasses and rum (proposed,
    fits the 17th-century evidence), the large tobacco-size cask for sugar, or casks that grow over the timeline (1j)?
-9. **The 40 skills (3c, `skill-tree.json`).** Rex's two splits stand provisionally. Still to confirm: the seven
+9. **The 41 skills (3c, `skill-tree.json`).** Rex's two splits stand provisionally. Still to confirm: the seven
    earlier new ones (Farming, Hunting, Woodcutting, Mining, Sugar boiling, Distilling, Weaving), whether Mining and
    Weaving go, the Swimming gate level for pearls, and every placement.
 10. **Occupations (3d).** Confirm the 31 period words and which skills each groups; whether a label ever does
@@ -949,3 +991,4 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 | 2026-10-29 | Rex reviewed the dashboard: the 40 skills, placements and occupations stand as the working set | Rex |
 | 2026-10-29 | 3e: the data files generated under data/pirate-ship/economy/ (goods, skills, recipes, occupations) by build-economy-data.py; six glossary terms | research session, at Rex's request |
 | 2026-10-29 | 3f: knowledge apart from skill, recipes with a knowledge field (common / learned / foreign), far-travelled merchants as the source of foreign goods and recipes, expansion balance by knowledge, resources and facilities (Rex's notes; recorded, nothing built) | Rex (direction); research session |
+| 2026-10-29 | 1k: spices, drugs, island foods and drinks, rows 66–81 (CSP 1681, Posthumus, Blome 1672, Ligon, Dampier, Navy victualling); Brewing split from Distilling; imported-only goods and the first foreign and learned recipes (arrack, Peruvian bark); Brewer and Vintner occupations | research session, at Rex's request |

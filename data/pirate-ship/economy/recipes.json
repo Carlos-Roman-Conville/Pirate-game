@@ -250,6 +250,104 @@
       "note": "the herbs an apothecary works from; Culpeper's book was for householders (research). Caribbean physic gardens: open"
     },
     {
+      "id": "farming-cassava-maize-yams-potatoes",
+      "skill": "farming",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "cassava-maize-yams-potatoes",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "Ligon's island breads: 'Tobacco, Ginger, Cotten-wool, Maies, Yeames, and Potatoes'"
+    },
+    {
+      "id": "farming-limes-oranges-lemons",
+      "skill": "farming",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "limes-oranges-lemons",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "limes 'much fitter for sauce then the Limon' (L); the juice to London (C81)"
+    },
+    {
+      "id": "farming-pineapple-plantain",
+      "skill": "farming",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "pineapple-plantain",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "'Pines worth all that went before' (L)"
+    },
+    {
+      "id": "farming-aloes",
+      "skill": "farming",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "aloes",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "35 lb to London in one month (C81); Blome lists it for Jamaica (1672)"
+    },
+    {
+      "id": "farming-drug-plants-sarsaparilla-china-root-cassia-tamarind",
+      "skill": "farming",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "drug-plants-sarsaparilla-china-root-cassia-tamarind",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "Blome 1672 lists them among Jamaica's commodities"
+    },
+    {
+      "id": "farming-vanilla",
+      "skill": "farming",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "vanilla",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "Spanish America; Dampier: 'three pence a cod'"
+    },
+    {
+      "id": "farming-coffee",
+      "skill": "farming",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "coffee",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "Martinique 1723, Jamaica 1721/1728: the end of the period"
+    },
+    {
       "id": "husbandry-horses",
       "skill": "husbandry",
       "band": "journeyman",
@@ -718,6 +816,72 @@
       "note": "roasting and grinding the nut; a Spanish taste first"
     },
     {
+      "id": "cooking-punch",
+      "skill": "cooking",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "punch",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "rum",
+        "limes-oranges-lemons",
+        "muscovado-sugar"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "rum, water, lime, sugar, 'a little Nutmeg scrap'd on the top' (Sloane); Avery 'mightily addicted to Punch' (J)"
+    },
+    {
+      "id": "cooking-flip",
+      "skill": "cooking",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "flip",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "small-beer",
+        "rum"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "'a sort of Sailors Drink, made of Ale, Brandy and Sugar' (Bailey 1724), heated with a loggerhead"
+    },
+    {
+      "id": "cooking-preserves-and-sugar-candy",
+      "skill": "cooking",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "preserves-and-sugar-candy",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "clayed-sugar",
+        "ginger"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "preserves need white sugar (L); preserved ginger 0.64 and white candy 0.50 guilders a lb at Amsterdam (1691)"
+    },
+    {
+      "id": "cooking-coffee-tea-and-chocolate",
+      "skill": "cooking",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "coffee-tea-and-chocolate",
+      "service": false,
+      "offMap": false,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "Roberts 'drank his Tea constantly' (J); the tea itself is imported (below)"
+    },
+    {
       "id": "milling-meal",
       "skill": "milling",
       "band": "novice",
@@ -764,6 +928,22 @@
       "gate": null,
       "knowledge": "common",
       "note": "bolted fine; 196 lb to the barrel (FL)"
+    },
+    {
+      "id": "baking-cassava-and-potato-bread",
+      "skill": "baking",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "cassava-and-potato-bread",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "cassava-maize-yams-potatoes"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "'The third sort of bread we use, is only Potatoes' (L)"
     },
     {
       "id": "baking-bread",
@@ -1348,11 +1528,76 @@
       "note": "the dye bath with a mordant; needs a dye from this tree too"
     },
     {
-      "id": "distilling-beer",
-      "skill": "distilling",
+      "id": "brewing-small-beer",
+      "skill": "brewing",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "small-beer",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "grain-for-meal-and-flour"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "'as bad as water bewitched' (Barlow 1667); Anstis's mock trial: 'guilty of drinking Small-Beer' (J)"
+    },
+    {
+      "id": "brewing-mobbie-perino-grippo",
+      "skill": "brewing",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "mobbie-perino-grippo",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "cassava-maize-yams-potatoes"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "'Mobbie, a drink made of Potatoes'; perino 'which the Indians make'; grippo 'few make it well' (L)"
+    },
+    {
+      "id": "brewing-beveridge-and-plantain-drink",
+      "skill": "brewing",
+      "band": "novice",
+      "minLevel": 0,
+      "output": "beveridge-and-plantain-drink",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "limes-oranges-lemons",
+        "clayed-sugar"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "'spring water, white sugar, and juyce of Orenges' (L)"
+    },
+    {
+      "id": "brewing-wine-of-pines",
+      "skill": "brewing",
       "band": "apprentice",
       "minLevel": 25,
-      "output": "beer",
+      "output": "wine-of-pines",
+      "service": false,
+      "offMap": false,
+      "inputs": [
+        "pineapple-plantain"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "'the incomparable wine of Pines' (L); Dampier's 'pine-drink'"
+    },
+    {
+      "id": "brewing-ship-s-beer",
+      "skill": "brewing",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "ship-s-beer",
       "service": false,
       "offMap": true,
       "inputs": [
@@ -1361,7 +1606,37 @@
       "inputsAny": [],
       "gate": null,
       "knowledge": "common",
-      "note": "'good English Beer' shipped out (L)"
+      "note": "'one gallon, wine measure, of beer' (Navy contract 1678); spoils in the tropics"
+    },
+    {
+      "id": "brewing-cider",
+      "skill": "brewing",
+      "band": "apprentice",
+      "minLevel": 25,
+      "output": "cider",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "New England and Virginia; a boat 'brought Apples and Sider to sell to the Sloop's Men' (J). Apples: no Caribbean crop"
+    },
+    {
+      "id": "brewing-strong-beer-stout-bottled-ale",
+      "skill": "brewing",
+      "band": "journeyman",
+      "minLevel": 50,
+      "output": "strong-beer-stout-bottled-ale",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "grain-for-meal-and-flour"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "common",
+      "note": "'good English Beer' (L); Ligon's outlay 'Strong Beer 50 l.'"
     },
     {
       "id": "distilling-aqua-vitae",
@@ -1424,6 +1699,20 @@
       "gate": null,
       "knowledge": "common",
       "note": "distilled wine; thirty casks in one prize (J)"
+    },
+    {
+      "id": "distilling-arrack",
+      "skill": "distilling",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "arrack",
+      "service": false,
+      "offMap": true,
+      "inputs": [],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "foreign",
+      "note": "East Indies palm or cane spirit; 'rum or arrack in lieu' of wine (Navy 1731); Barlow at Goa 1697 priced it by the keg. A far-travelled merchant's recipe (3f)"
     },
     {
       "id": "refining-refined-sulphur",
@@ -2743,6 +3032,22 @@
       "gate": null,
       "knowledge": "common",
       "note": "Pharmacopoeia Londinensis 1618 and after; spirits for tinctures"
+    },
+    {
+      "id": "apothecary-peruvian-bark-against-fevers",
+      "skill": "apothecary",
+      "band": "expert",
+      "minLevel": 75,
+      "output": "peruvian-bark-against-fevers",
+      "service": false,
+      "offMap": true,
+      "inputs": [
+        "peruvian-bark"
+      ],
+      "inputsAny": [],
+      "gate": null,
+      "knowledge": "learned",
+      "note": "sold by London chemists from 1658; Talbor's cure 1672–78. The bark is Spanish and the use was a secret: learned knowledge (3f)"
     },
     {
       "id": "apothecary-chemical-medicines-mercury-antimony-laudanum",

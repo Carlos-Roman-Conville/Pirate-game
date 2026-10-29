@@ -16,7 +16,8 @@
         "farming",
         "sugar-boiling",
         "distilling",
-        "husbandry"
+        "husbandry",
+        "brewing"
       ],
       "outside": [],
       "note": "The sugar planter's works: fields, boiling house, still-house (L). Boiler and distiller as job titles: open for 1657"
@@ -137,6 +138,16 @@
       "note": "in England the refiner; on the island the boiler. One label for both"
     },
     {
+      "id": "brewer",
+      "name": "Brewer",
+      "period": "Brewers' Company 1438; colonial breweries Massachusetts 1637, Virginia 1652; the Navy's contract brewers (1678)",
+      "skills": [
+        "brewing"
+      ],
+      "outside": [],
+      "note": "Port Royal brewhouse: open"
+    },
+    {
       "id": "distiller",
       "name": "Distiller",
       "period": "'Distiller' (London 1692; Distillers' Company 1638)",
@@ -145,6 +156,19 @@
       ],
       "outside": [],
       "note": ""
+    },
+    {
+      "id": "vintner-taverner",
+      "name": "Vintner / Taverner",
+      "period": "'Vintner' (Nevis 1723, Bridgetown 1679/80); Strype 1720: the vintner imports wine, the taverner retails it; Barbados capped tavern prices (1672)",
+      "skills": [
+        "haggling",
+        "cooking"
+      ],
+      "outside": [
+        "haggling"
+      ],
+      "note": "the punch-house keeper; sells, does not make"
     },
     {
       "id": "dyer",

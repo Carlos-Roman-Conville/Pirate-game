@@ -29,7 +29,7 @@ for line in goods_md.splitlines():
                    "spoils": m.group(6), "value": m.group(7), "type": m.group(8), "sources": m.group(9)}
 # rows 62-65 (Rex's additions and the later ones) have a shorter table: | # | Good | Kind | Skill | Note |
 for line in goods_md.splitlines():
-    m = re.match(r"^\| (6[2-9]) \| (.+?) \| (.+?) \| (.+?) \| (.+?) \|$", line)
+    m = re.match(r"^\| (6[2-5]) \| (.+?) \| (.+?) \| (.+?) \| (.+?) \|$", line)
     if m and int(m.group(1)) not in rows:
         rows[int(m.group(1))] = {"name": m.group(2), "kind": m.group(3), "route": "open", "package": "open",
                                  "spoils": "open", "value": "open", "type": "open", "sources": m.group(5)}
@@ -75,7 +75,17 @@ for g in tree["groups"]:
                               "offMap": bool(it.get("offMap")), "mark": mark, "madeBy": s["key"],
                               "note": it.get("note", "")}
 
-# the 65 GOODS.md rows, with the sourced detail that belongs to the row, not to every good made from it
+# imported-only goods: no recipe here; a European ship's or a far-travelled merchant's cargo
+for it in tree.get("imported", {}).get("items", []):
+    gid = slug(it["name"])
+    by_chip["imported:" + it["name"]] = gid
+    row = rows.get(it["good"], {})
+    t, tmark = type_of(row.get("type", "open"))
+    goods.setdefault(gid, {"id": gid, "name": it["name"], "row": it["good"], "kind": "imported", "type": t, "typeMark": tmark,
+                           "basePrice": None, "offMap": True, "mark": "source", "madeBy": None,
+                           "knowledge": it.get("knowledge", "common"), "note": it.get("note", "")})
+
+# the GOODS.md rows, with the sourced detail that belongs to the row, not to every good made from it
 row_list = [{"row": n, **r} for n, r in sorted(rows.items())]
 for r in row_list:
     r["type"], r["typeMark"] = type_of(r["type"])

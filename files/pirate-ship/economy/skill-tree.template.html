@@ -134,6 +134,12 @@
     }
     main.appendChild(sec);
   }
+  if (data.imported) {
+    const im = document.createElement('section'); im.className = 'group notree';
+    im.innerHTML = '<h2>Imported only</h2><p class="note">' + data.imported.note + '</p><ul>'
+      + data.imported.items.map(n => '<li><b>' + n.name + '</b> <span class="count">#' + n.good + (n.knowledge ? ' · ' + n.knowledge + ' knowledge' : '') + '</span>: ' + n.note + '</li>').join('') + '</ul>';
+    main.appendChild(im);
+  }
   const nt = document.createElement('section'); nt.className = 'group notree';
   nt.innerHTML = '<h2>No tree</h2><p class="note">Goods no skill makes in the game.</p><ul>'
     + data.noTree.map(n => '<li><b>' + n.name + '</b> <span class="count">#' + n.good + '</span>: ' + n.note + '</li>').join('') + '</ul>';
@@ -166,6 +172,7 @@
       + (it.gate ? ' · <span class="muted">gate:</span> ' + it.gate : '')
       + (it.unsourced ? ' · <span class="muted">unsourced (Rex\'s addition)</span>' : '')
       + (it.service ? ' · <span class="muted">a service, not a good</span>' : '')
+      + (it.knowledge && it.knowledge !== 'common' ? ' · <span class="muted">' + it.knowledge + ' knowledge</span>' : '')
       + '<br>' + it.note
       + (inp ? '<br><span class="muted">needs:</span> ' + inp.it._skill.name + ': ' + inp.it.name : (it.input ? '<br><span class="muted">needs:</span> ' + it.input : ''))
       + (all.length ? '<br><span class="muted">needs all of:</span> ' + all.join(', ') : '')

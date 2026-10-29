@@ -1,6 +1,6 @@
 {
   "title": "Pirate Ship: goods on the skill trees (proposed)",
-  "status": "Reviewed by Rex 2026-10-29 ('looks good'): the 40 skills, the placements and the occupations stand as the working set. Later moves go through this JSON; the record of each split is in GOODS.md 3c and 3d.",
+  "status": "Reviewed by Rex 2026-10-29 ('looks good'): the 40 skills, the placements and the occupations stand as the working set. 2026-10-29: spices, drugs, island foods and drinks added from the research (Brewing split from Distilling, to confirm; imported-only goods listed). Later moves go through this JSON; the record of each split is in GOODS.md 3c and 3d.",
   "bands": [
     {
       "key": "novice",
@@ -160,6 +160,49 @@
               "name": "Physic garden (simples)",
               "band": "apprentice",
               "note": "the herbs an apothecary works from; Culpeper's book was for householders (research). Caribbean physic gardens: open"
+            },
+            {
+              "good": 76,
+              "name": "Cassava, maize, yams, potatoes",
+              "band": "novice",
+              "note": "Ligon's island breads: 'Tobacco, Ginger, Cotten-wool, Maies, Yeames, and Potatoes'"
+            },
+            {
+              "good": 77,
+              "name": "Limes, oranges, lemons",
+              "band": "novice",
+              "note": "limes 'much fitter for sauce then the Limon' (L); the juice to London (C81)"
+            },
+            {
+              "good": 77,
+              "name": "Pineapple, plantain",
+              "band": "apprentice",
+              "note": "'Pines worth all that went before' (L)"
+            },
+            {
+              "good": 70,
+              "name": "Aloes",
+              "band": "apprentice",
+              "note": "35 lb to London in one month (C81); Blome lists it for Jamaica (1672)"
+            },
+            {
+              "good": 71,
+              "name": "Drug plants: sarsaparilla, china root, cassia, tamarind (gathered)",
+              "band": "journeyman",
+              "note": "Blome 1672 lists them among Jamaica's commodities"
+            },
+            {
+              "good": 73,
+              "name": "Vanilla",
+              "band": "journeyman",
+              "offMap": true,
+              "note": "Spanish America; Dampier: 'three pence a cod'"
+            },
+            {
+              "good": 74,
+              "name": "Coffee (from the 1720s)",
+              "band": "journeyman",
+              "note": "Martinique 1723, Jamaica 1721/1728: the end of the period"
             }
           ]
         },
@@ -442,6 +485,47 @@
               "band": "journeyman",
               "input": "farming:Cacao, sweated and dried",
               "note": "roasting and grinding the nut; a Spanish taste first"
+            },
+            {
+              "good": 80,
+              "name": "Punch",
+              "band": "apprentice",
+              "inputs": [
+                "distilling:Rum",
+                "farming:Limes, oranges, lemons",
+                "sugar-boiling:Muscovado sugar"
+              ],
+              "note": "rum, water, lime, sugar, 'a little Nutmeg scrap'd on the top' (Sloane); Avery 'mightily addicted to Punch' (J)"
+            },
+            {
+              "good": 80,
+              "name": "Flip",
+              "band": "apprentice",
+              "inputs": [
+                "brewing:Small beer",
+                "distilling:Rum"
+              ],
+              "note": "'a sort of Sailors Drink, made of Ale, Brandy and Sugar' (Bailey 1724), heated with a loggerhead"
+            },
+            {
+              "good": 69,
+              "name": "Preserves and sugar candy",
+              "band": "journeyman",
+              "inputs": [
+                "sugar-boiling:Clayed (white) sugar",
+                "farming:Ginger"
+              ],
+              "note": "preserves need white sugar (L); preserved ginger 0.64 and white candy 0.50 guilders a lb at Amsterdam (1691)"
+            },
+            {
+              "good": 74,
+              "name": "Coffee, tea and chocolate (brewed)",
+              "band": "novice",
+              "inputsAny": [
+                "farming:Coffee (from the 1720s)",
+                "cooking:Chocolate"
+              ],
+              "note": "Roberts 'drank his Tea constantly' (J); the tea itself is imported (below)"
             }
           ]
         },
@@ -482,6 +566,13 @@
           "covers": "bread and ship's biscuit",
           "why": "Its own skill (Rex, 2026-10-28). Large quantities of biscuit were baked in the Connecticut Valley and Philadelphia for the islands (PH).",
           "items": [
+            {
+              "good": 76,
+              "name": "Cassava and potato bread",
+              "band": "novice",
+              "input": "farming:Cassava, maize, yams, potatoes",
+              "note": "'The third sort of bread we use, is only Potatoes' (L)"
+            },
             {
               "good": 21,
               "name": "Bread",
@@ -832,20 +923,75 @@
           ]
         },
         {
-          "key": "distilling",
-          "name": "Distilling",
+          "key": "brewing",
+          "name": "Brewing",
           "existing": false,
-          "covers": "the still and the brewhouse: rum, aqua vitae, brandy; beer and wine folded in",
-          "why": "Rex's own example. Brewing and winemaking are folded in as one-offs: no Caribbean town made wine or much beer in the sources, so they sit here off-map.",
+          "covers": "fermented drinks: small beer and strong beer, mobbie, perino, grippo, plantain drink, wine of pines, cider",
+          "why": "Its own trade (2026-10-29, from the drinks research): Brewers' Company chartered 1438; colonial breweries in Massachusetts 1637, New Netherland 1630s, Virginia 1652; the Navy had contract brewers and its own Hartshorn brewhouse (1678). Ligon's Barbados drinks are all fermented, not distilled. Split out of Distilling on that evidence; Rex to confirm.",
           "items": [
             {
-              "good": 42,
-              "name": "Beer",
+              "good": 78,
+              "name": "Small beer",
+              "band": "novice",
+              "input": "farming:Grain for meal and flour",
+              "note": "'as bad as water bewitched' (Barlow 1667); Anstis's mock trial: 'guilty of drinking Small-Beer' (J)"
+            },
+            {
+              "good": 79,
+              "name": "Mobbie, perino, grippo (island drinks)",
+              "band": "novice",
+              "input": "farming:Cassava, maize, yams, potatoes",
+              "note": "'Mobbie, a drink made of Potatoes'; perino 'which the Indians make'; grippo 'few make it well' (L)"
+            },
+            {
+              "good": 79,
+              "name": "Beveridge and plantain drink",
+              "band": "novice",
+              "inputs": [
+                "farming:Limes, oranges, lemons",
+                "sugar-boiling:Clayed (white) sugar"
+              ],
+              "note": "'spring water, white sugar, and juyce of Orenges' (L)"
+            },
+            {
+              "good": 79,
+              "name": "Wine of pines",
+              "band": "apprentice",
+              "input": "farming:Pineapple, plantain",
+              "note": "'the incomparable wine of Pines' (L); Dampier's 'pine-drink'"
+            },
+            {
+              "good": 78,
+              "name": "Ship's beer (gallon a day)",
               "band": "apprentice",
               "offMap": true,
               "input": "farming:Grain for meal and flour",
-              "note": "'good English Beer' shipped out (L)"
+              "note": "'one gallon, wine measure, of beer' (Navy contract 1678); spoils in the tropics"
             },
+            {
+              "good": 78,
+              "name": "Cider",
+              "band": "apprentice",
+              "offMap": true,
+              "note": "New England and Virginia; a boat 'brought Apples and Sider to sell to the Sloop's Men' (J). Apples: no Caribbean crop"
+            },
+            {
+              "good": 78,
+              "name": "Strong beer, stout, bottled ale",
+              "band": "journeyman",
+              "offMap": true,
+              "input": "farming:Grain for meal and flour",
+              "note": "'good English Beer' (L); Ligon's outlay 'Strong Beer 50 l.'"
+            }
+          ]
+        },
+        {
+          "key": "distilling",
+          "name": "Distilling",
+          "existing": false,
+          "covers": "the still: rum, aqua vitae, brandy; arrack as foreign knowledge",
+          "why": "Rex's own example. Brewing stands apart (2026-10-29); winemaking stays here off-map.",
+          "items": [
             {
               "good": 18,
               "name": "Aqua vitae (kill-devil)",
@@ -874,6 +1020,14 @@
               "offMap": true,
               "input": "distilling:Wine",
               "note": "distilled wine; thirty casks in one prize (J)"
+            },
+            {
+              "good": 81,
+              "name": "Arrack",
+              "band": "expert",
+              "offMap": true,
+              "knowledge": "foreign",
+              "note": "East Indies palm or cane spirit; 'rum or arrack in lieu' of wine (Navy 1731); Barlow at Goa 1697 priced it by the keg. A far-travelled merchant's recipe (3f)"
             }
           ]
         },
@@ -1700,6 +1854,15 @@
               "note": "Pharmacopoeia Londinensis 1618 and after; spirits for tinctures"
             },
             {
+              "good": 72,
+              "name": "Peruvian bark against fevers",
+              "band": "expert",
+              "offMap": true,
+              "knowledge": "learned",
+              "input": "imported:Peruvian bark (cinchona)",
+              "note": "sold by London chemists from 1658; Talbor's cure 1672–78. The bark is Spanish and the use was a secret: learned knowledge (3f)"
+            },
+            {
               "good": 48,
               "name": "Chemical medicines: mercury, antimony, laudanum",
               "band": "expert",
@@ -1793,7 +1956,8 @@
           "Farming",
           "Sugar boiling",
           "Distilling",
-          "Animal Husbandry"
+          "Animal Husbandry",
+          "Brewing"
         ],
         "note": "The sugar planter's works: fields, boiling house, still-house (L). Boiler and distiller as job titles: open for 1657"
       },
@@ -1894,12 +2058,32 @@
         "note": "in England the refiner; on the island the boiler. One label for both"
       },
       {
+        "name": "Brewer",
+        "period": "Brewers' Company 1438; colonial breweries Massachusetts 1637, Virginia 1652; the Navy's contract brewers (1678)",
+        "skills": [
+          "Brewing"
+        ],
+        "note": "Port Royal brewhouse: open"
+      },
+      {
         "name": "Distiller",
         "period": "'Distiller' (London 1692; Distillers' Company 1638)",
         "skills": [
           "Distilling"
         ],
         "note": ""
+      },
+      {
+        "name": "Vintner / Taverner",
+        "period": "'Vintner' (Nevis 1723, Bridgetown 1679/80); Strype 1720: the vintner imports wine, the taverner retails it; Barbados capped tavern prices (1672)",
+        "skills": [
+          "Haggling",
+          "Cooking"
+        ],
+        "outside": [
+          "Haggling"
+        ],
+        "note": "the punch-house keeper; sells, does not make"
       },
       {
         "name": "Dyer",
@@ -2206,6 +2390,47 @@
   "sources": {
     "metal": "research-metal-trades.md (shared notes): Campbell 1747, livery company charters, London Museum (Hounslow), QAR pewter, Museum of Miami on Port Royal",
     "wood": "research-wood-trades.md (shared notes): Campbell 1747, Carpenters' and Shipwrights' and Coopers' company histories, Ligon, Dampier 1705, Johnson",
-    "medical": "research-medical-trades.md (shared notes): Campbell 1747, Society of Apothecaries, Ligon, Exquemelin, Johnson, QAR finds, the Williamsburg apothecary booklet"
+    "medical": "research-medical-trades.md (shared notes): Campbell 1747, Society of Apothecaries, Ligon, Exquemelin, Johnson, QAR finds, the Williamsburg apothecary booklet",
+    "spices": "research-spices-drinks.md (shared notes): CSP 1681 import return, Posthumus Amsterdam 1691–94, Blome 1672, Ligon, Dampier, Sloane via secondary, Navy victualling 1678/1731/1740, Bailey 1724, Johnson"
+  },
+  "imported": {
+    "note": "Goods no skill here makes in the period: they arrive in a European ship's cargo or a far-travelled merchant's (3f). They exist in the data as goods with no recipe.",
+    "items": [
+      {
+        "good": 66,
+        "name": "Pepper (black, white)",
+        "knowledge": "foreign",
+        "note": "white 1.01, black 0.42 guilders a lb at Amsterdam (1691–94); Lowther took 'pepper' from a prize (J)"
+      },
+      {
+        "good": 67,
+        "name": "Cloves, nutmeg, mace, cinnamon",
+        "knowledge": "foreign",
+        "note": "Amsterdam 1691: cloves 3.75, nutmeg 3.00, mace 8.40, cinnamon 3.00 guilders a lb; Ligon's cookery used them"
+      },
+      {
+        "good": 68,
+        "name": "Saffron",
+        "knowledge": "foreign",
+        "note": "21.50 guilders a lb at Amsterdam (1691): dearer than cochineal"
+      },
+      {
+        "good": 72,
+        "name": "Peruvian bark (cinchona)",
+        "knowledge": "foreign",
+        "note": "Spanish Peru → Spain → London chemists (1658)"
+      },
+      {
+        "good": 75,
+        "name": "Tea",
+        "knowledge": "foreign",
+        "note": "Roberts 'drank his Tea constantly' (J); Asia by the Company ships"
+      },
+      {
+        "good": 40,
+        "name": "Madeira, Canary, sherry, claret (the wines)",
+        "note": "Madeira shipped 8–9,000 pipes a year (Ovington 1696); the vintner imports, the taverner sells (Strype 1720)"
+      }
+    ]
   }
 }
