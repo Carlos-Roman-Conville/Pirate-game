@@ -504,70 +504,70 @@ window.BODY_DATA = {
      "air",
      "air | water | other",
      "the species profile (ANATOMY 5); under water a human has none",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "structure",
      "lungs",
      "lungs | gills | skin | other",
      "species",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "ventilation capacity (maximal)",
      "100 to 150 at full effort (trained higher)",
      "L/min",
      "lung function x chest wall intact (MEDICINE chest wounds) x age",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "exchange capacity (diffusing capacity)",
      "25 at rest, 60 at effort",
      "mL O2 per min per mmHg gradient",
      "lung damage (pneumonia, smoke injury, consumption), fluid in the lungs (heart failure), age",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "airway resistance",
      "1.0",
      "relative",
      "irritant gases (SO2, smoke) raise it: x2 to x5 during exposure; asthma (none modelled)",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "dead space",
      "150",
      "mL per breath",
      "fixed",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "tissue integrity",
      "1.0",
      "0 to 1 (ANATOMY lungs function and damage)",
      "smoke and irritant injury (MEDICINE), infection, drowning",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "gas tolerances (species)",
      "hypoxia under 16% O2; CO2 over 3%",
      "thresholds",
      "species profile (a diving mammal tolerates more CO2; open)",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Gas transfer (the model)",
      "transfer = exchange capacity x (inspired-alveolar gradient after the alveolar gas equation); arterial PO2 follows alveolar PO2 less a 5 to 10 mmHg gradient in health, more with damage",
      "mL/min",
      "the whole row above",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Two failures told apart",
      "not enough oxygen in the air (ATMOSPHERE: low fraction or low pressure) vs the lung failing to transfer it (damage, fluid, resistance): same saturation, different cure",
      "-",
      "-",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ]
    ]
   }
@@ -594,7 +594,7 @@ window.BODY_DATA = {
      593,
      "as the inert remainder",
      "fills the balance; matters only for diving (not in the game)",
-     "proposed"
+     "rex (the species tracked, 2026-10-29); science (values)"
     ],
     [
      "Oxygen O2",
@@ -602,7 +602,7 @@ window.BODY_DATA = {
      159,
      "yes",
      "the one that keeps a body alive; inspired partial pressure is what the lungs see",
-     "proposed"
+     "rex (the species tracked, 2026-10-29); science (values)"
     ],
     [
      "Argon and the traces",
@@ -610,7 +610,7 @@ window.BODY_DATA = {
      7,
      "no",
      "nothing for play; folded into the remainder",
-     "proposed"
+     "rex (the species tracked, 2026-10-29); science (values)"
     ],
     [
      "Carbon dioxide CO2",
@@ -618,7 +618,7 @@ window.BODY_DATA = {
      0.3,
      "yes",
      "accumulates in closed spaces; drives breathing",
-     "proposed"
+     "rex (the species tracked, 2026-10-29); science (values)"
     ],
     [
      "Water vapour H2O",
@@ -626,7 +626,7 @@ window.BODY_DATA = {
      "up to 47 at body temperature (the airways saturate inspired air)",
      "yes (from ENVIRONMENT)",
      "takes room from oxygen in the alveoli; the 47 mmHg in the alveolar gas equation",
-     "proposed"
+     "rex (the species tracked, 2026-10-29); science (values)"
     ]
    ]
   },
@@ -652,7 +652,7 @@ window.BODY_DATA = {
      99,
      "0.97",
      "the sea, every port",
-     "proposed"
+     "rex (the model, 2026-10-29); science (values)"
     ],
     [
      500,
@@ -661,7 +661,7 @@ window.BODY_DATA = {
      90,
      "0.96",
      "the hill towns, Jamaica's uplands",
-     "proposed"
+     "rex (the model, 2026-10-29); science (values)"
     ],
     [
      1000,
@@ -670,7 +670,7 @@ window.BODY_DATA = {
      81,
      "0.95",
      "coffee country",
-     "proposed"
+     "rex (the model, 2026-10-29); science (values)"
     ],
     [
      2256,
@@ -679,7 +679,7 @@ window.BODY_DATA = {
      61,
      "0.90",
      "the Blue Mountain peak (a day's climb; mild breathlessness)",
-     "proposed"
+     "rex (the model, 2026-10-29); science (values)"
     ],
     [
      3000,
@@ -688,7 +688,7 @@ window.BODY_DATA = {
      50,
      "0.88",
      "none in the Caribbean; the engine's other worlds",
-     "proposed"
+     "rex (the model, 2026-10-29); science (values)"
     ],
     [
      5000,
@@ -697,7 +697,7 @@ window.BODY_DATA = {
      25,
      "0.75",
      "none here; altitude sickness, impaired attention (BODY)",
-     "proposed"
+     "rex (the model, 2026-10-29); science (values)"
     ]
    ]
   },
@@ -719,42 +719,42 @@ window.BODY_DATA = {
      "the map's elevation",
      "total pressure (the table above)",
      "-",
-     "proposed"
+     "rex (the modifier, 2026-10-29); proposed (placeholder values)"
     ],
     [
      "Temperature and humidity",
      "ENVIRONMENT climate and weather",
      "water vapour partial pressure; gas density (buoyancy)",
      "humidity 60 to 85% in the Caribbean",
-     "proposed"
+     "rex (the modifier, 2026-10-29); proposed (placeholder values)"
     ],
     [
      "Wind",
      "ENVIRONMENT weather state",
      "ventilation of open and semi-open places; dispersal of a release (GAS_DYNAMICS)",
      "trades 13 to 17 knots",
-     "proposed"
+     "rex (the modifier, 2026-10-29); proposed (placeholder values)"
     ],
     [
      "Enclosure and ventilation",
      "the place's kind (ANATOMY of a ship: hold, orlop, cabin, gun deck; a room, a cave, a mine)",
      "air changes per hour (ACH): how fast the volume is replaced by outside air",
      "open deck infinite; gun deck with ports open 20; cabin with a window 5; hold with the hatch open 2; hold battened down 0.2; a cave 0.05; a room with a fire and a chimney 3",
-     "proposed"
+     "rex (the modifier, 2026-10-29); proposed (placeholder values)"
     ],
     [
      "Water depth",
      "under water",
      "pressure +1 atm per 10 m; no air at all: the breathing medium changes (ANATOMY respiratory profile)",
      "drowning is the lungs' medium, not a gas",
-     "proposed"
+     "rex (the modifier, 2026-10-29); proposed (placeholder values)"
     ],
     [
      "Stability and inversion",
      "ENVIRONMENT (calm nights, fog)",
      "a release lingers near the ground; smoke hangs on the water",
      "dispersion x0.3 on a calm night",
-     "proposed"
+     "rex (the modifier, 2026-10-29); proposed (placeholder values)"
     ]
    ]
   },
@@ -778,7 +778,7 @@ window.BODY_DATA = {
      "baseline plus ENVIRONMENT; a release makes it active for its cells (GAS_DYNAMICS grid)",
      "-",
      "infinite",
-     "proposed"
+     "rex (the region and its model, 2026-10-29); proposed (volumes, ACH)"
     ],
     [
      "Forest, swamp",
@@ -786,7 +786,7 @@ window.BODY_DATA = {
      "baseline; ECOLOGY's fluxes are aggregate, never a local oxygen bonus",
      "-",
      "infinite",
-     "proposed"
+     "rex (the region and its model, 2026-10-29); proposed (volumes, ACH)"
     ],
     [
      "The hold",
@@ -794,7 +794,7 @@ window.BODY_DATA = {
      "one well-mixed box (GAS_DYNAMICS box model)",
      "a sloop 60; a brig 250; a ship 800",
      "2 open, 0.2 battened",
-     "proposed"
+     "rex (the region and its model, 2026-10-29); proposed (volumes, ACH)"
     ],
     [
      "The gun deck in action",
@@ -802,7 +802,7 @@ window.BODY_DATA = {
      "one box per deck section; powder smoke as the source (CHEMISTRY black powder)",
      "300 per deck",
      "20 with ports open, 5 closed",
-     "proposed"
+     "rex (the region and its model, 2026-10-29); proposed (volumes, ACH)"
     ],
     [
      "A cabin, the great cabin",
@@ -810,7 +810,7 @@ window.BODY_DATA = {
      "box",
      "20 to 60",
      "5 window open, 0.5 shut",
-     "proposed"
+     "rex (the region and its model, 2026-10-29); proposed (volumes, ACH)"
     ],
     [
      "The orlop and the surgeon's cockpit",
@@ -818,7 +818,7 @@ window.BODY_DATA = {
      "box; wounded men and lamps",
      "150",
      "1",
-     "proposed"
+     "rex (the region and its model, 2026-10-29); proposed (volumes, ACH)"
     ],
     [
      "A tavern, a room ashore",
@@ -826,7 +826,7 @@ window.BODY_DATA = {
      "box",
      "80",
      "3",
-     "proposed"
+     "rex (the region and its model, 2026-10-29); proposed (volumes, ACH)"
     ],
     [
      "The apothecary's laboratory (the INTJ)",
@@ -834,7 +834,7 @@ window.BODY_DATA = {
      "box; CHEMISTRY reactions as sources",
      "40",
      "2, 8 with the window",
-     "proposed"
+     "rex (the region and its model, 2026-10-29); proposed (volumes, ACH)"
     ],
     [
      "A cave, a mine, a well",
@@ -842,7 +842,7 @@ window.BODY_DATA = {
      "box; natural sources (CO2, H2S)",
      "by the place",
      "0.05",
-     "proposed"
+     "rex (the region and its model, 2026-10-29); proposed (volumes, ACH)"
     ],
     [
      "A burning building or ship",
@@ -850,7 +850,7 @@ window.BODY_DATA = {
      "box per compartment with combustion sources; grid if on the combat map",
      "by the place",
      "fire-driven",
-     "proposed"
+     "rex (the region and its model, 2026-10-29); proposed (volumes, ACH)"
     ],
     [
      "Under water",
@@ -858,7 +858,7 @@ window.BODY_DATA = {
      "no gas model: the respiratory profile's medium",
      "-",
      "-",
-     "proposed"
+     "rex (the region and its model, 2026-10-29); proposed (volumes, ACH)"
     ]
    ]
   },
@@ -882,7 +882,7 @@ window.BODY_DATA = {
      "a box per compartment, fire-driven",
      "hypoxia, CO poisoning, smoke inhalation, heat (PHYSIOLOGY)",
      "the great fear of every wooden ship",
-     "proposed"
+     "rex (the scenario, 2026-10-29); proposed (numbers)"
     ],
     [
      "The gun deck in a long action",
@@ -890,7 +890,7 @@ window.BODY_DATA = {
      "box per deck, ports open (ACH 20) or shut",
      "eyes streaming (Eyesight x0.6), cough, headache after an hour (COHb 5 to 10%), the deafness is the guns' (ANATOMY senses)",
      "universal; 'clouds of hazardous smoke'",
-     "proposed"
+     "rex (the scenario, 2026-10-29); proposed (numbers)"
     ],
     [
      "A stinkpot thrown on deck or into a boarding boat",
@@ -898,7 +898,7 @@ window.BODY_DATA = {
      "a few grid cells for minutes (GAS_DYNAMICS), or a boat as a box",
      "choking, eyes shut, Nerve check to stay (COMBAT: a flinch source, combat keeper's), SO2 airway irritation (MEDICINE)",
      "attested 1669; a pirate and boarding weapon",
-     "proposed"
+     "rex (the scenario, 2026-10-29); proposed (numbers)"
     ],
     [
      "A charcoal brazier in a shut cabin on a cold night",
@@ -906,7 +906,7 @@ window.BODY_DATA = {
      "the cabin box at 0.5 ACH",
      "COHb rising over hours: headache, then sleep that does not end",
      "charcoal indoors kills; the north Atlantic leg is cold enough to want a brazier",
-     "proposed"
+     "rex (the scenario, 2026-10-29); proposed (numbers)"
     ],
     [
      "The hold battened down with men in it (prisoners, a storm)",
@@ -914,7 +914,7 @@ window.BODY_DATA = {
      "the hold box at 0.2 ACH with N occupants",
      "headache and panting at 3% CO2, confusion at 5%, unconscious near 10%; H2S if the bilge is foul",
      "the slave deck's horror is this scenario; the 1741 navy complaint",
-     "proposed"
+     "rex (the scenario, 2026-10-29); proposed (numbers)"
     ],
     [
      "Opening a long-sealed hold or well",
@@ -922,7 +922,7 @@ window.BODY_DATA = {
      "a box at 0.05 ACH; the first man down",
      "collapse in a breath at H2S over 500 ppm; the rescuer dies too (the classic)",
      "documented later; plausible for the period",
-     "proposed"
+     "rex (the scenario, 2026-10-29); proposed (numbers)"
     ],
     [
      "The apothecary's experiment gone wrong",
@@ -930,7 +930,7 @@ window.BODY_DATA = {
      "the laboratory box",
      "by the species' toxicity rows",
      "the INTJ's lane",
-     "proposed"
+     "rex (the scenario, 2026-10-29); proposed (numbers)"
     ],
     [
      "A volcanic fumarole or a sulphur mine",
@@ -938,7 +938,7 @@ window.BODY_DATA = {
      "a cave box or a grid patch on the slope",
      "irritation, collapse in a hollow",
      "the Soufrieres of the Lesser Antilles",
-     "proposed"
+     "rex (the scenario, 2026-10-29); proposed (numbers)"
     ],
     [
      "Lime kiln, tar kettle, smithy",
@@ -946,7 +946,7 @@ window.BODY_DATA = {
      "a semi-open box, ACH 3 to 10",
      "chronic low-grade exposure for the worker (a daily COHb of 5%: headaches)",
      "all period trades",
-     "proposed"
+     "rex (the scenario, 2026-10-29); proposed (numbers)"
     ],
     [
      "A tagged gas weapon or substance",
@@ -1013,7 +1013,7 @@ window.BODY_DATA = {
      "air",
      "ATMOSPHERE, GAS_DYNAMICS (world), ANATOMY 1a, CIRCULATION 1a",
      "the region the character is in and its concentrations; inspired PO2, PCO2; exposures{species: ppm-min}; the respiratory profile; PaO2, SaO2, COHb, PaCO2, pH",
-     "proposed (2026-10-29)"
+     "rex (the layer, 2026-10-29); proposed (fields)"
     ],
     [
      "nervous",
@@ -1522,13 +1522,13 @@ window.BODY_DATA = {
      "id",
      "string (chemistry id, e.g. co2)",
      "every doc",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "name, formula",
      "text",
      "the item screen, the docs",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "provenance",
@@ -1540,79 +1540,79 @@ window.BODY_DATA = {
      "molar mass",
      "g/mol",
      "stoichiometry, density",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "phase at 25 C and 1 atm; melting and boiling points",
      "solid | liquid | gas; C",
      "which engine handles it (GAS_DYNAMICS for gases and vapours)",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "density (gas: relative to air; liquid, solid: kg/m3)",
      "number",
      "pooling and rising; cargo weight",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "vapour pressure at 25 C",
      "mmHg",
      "how much a liquid puts into the air (mercury: 0.002 mmHg, enough to poison a shut room over months)",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "solubility in water",
      "g/L",
      "washing out by rain; dissolving in the body's fluids (uptake)",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "flammability: flash point, limits in air",
      "C; % by volume",
      "fires, explosions (the magazine)",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "reactivity notes",
      "text and reaction ids",
      "CHEMISTRY reactions",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "thermal: heat of combustion",
      "MJ/kg",
      "the fire's heat (PHYSIOLOGY, the box's temperature)",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "persistence in the environment",
      "half-life in air, water, soil (hours to years)",
      "GAS_DYNAMICS sinks; ECOLOGY",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "exposure routes",
      "inhalation | skin | ingestion | wound",
      "the body's uptake",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "uptake fraction by route",
      "0 to 1",
      "dose = exposure x uptake",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "toxicity references",
      "thresholds table rows (ppm and effect; mg/kg oral)",
      "MEDICINE, NEUROLOGY",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ],
     [
      "mechanism class",
      "asphyxiant (simple) | chemical asphyxiant (CO, H2S) | irritant | systemic toxin | neuroactive (NEUROLOGY row) | nutrient | inert",
      "which body pathway it takes",
-     "proposed"
+     "rex (the field, 2026-10-29)"
     ]
    ]
   },
@@ -1646,7 +1646,7 @@ window.BODY_DATA = {
      "under 19.5% work falls; 16% judgement and coordination; 12% unconscious; 6% death in minutes",
      "the air",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "n2",
@@ -1659,7 +1659,7 @@ window.BODY_DATA = {
      "none (simple asphyxiant only by displacement)",
      "the air",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "co2",
@@ -1672,7 +1672,7 @@ window.BODY_DATA = {
      "1% drowsy; 3% headache, panting; 5% confusion; 8 to 10% unconscious; pools low",
      "breathing, fires, fermentation (the brewer's vat), wells, volcanoes",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "co",
@@ -1685,7 +1685,7 @@ window.BODY_DATA = {
      "200 ppm headache in 2 to 3 h; 800 ppm nausea and convulsions in 45 min; 1,600 ppm death in 30 min; COHb 10 to 20% headache, 20 to 30% drowsy and ataxic, 30 to 50% seizures, over 50% death; half-life 4 to 6 h in air",
      "braziers, galley fires, the gun deck, any fire starved of air",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "h2o_v",
@@ -1698,7 +1698,7 @@ window.BODY_DATA = {
      "none",
      "humidity, breath, fires",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "h2s",
@@ -1711,7 +1711,7 @@ window.BODY_DATA = {
      "0.01 ppm rotten eggs; 10 ppm eye and airway irritation; 100 ppm olfactory fatigue, IDLH; 500 ppm collapse, death in 30 to 60 min; pools low",
      "the bilge, rot, sulphur springs, powder smoke (trace)",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "so2",
@@ -1724,7 +1724,7 @@ window.BODY_DATA = {
      "1 ppm smell; 5 ppm airway irritation; 20 ppm eyes stream, cough; 100 ppm IDLH; pools low",
      "burning sulphur (stinkpots, the match), volcanoes, the brimstone cure",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "smoke",
@@ -1737,7 +1737,7 @@ window.BODY_DATA = {
      "eyes stream and sight falls (Eyesight x0.6 at 100 mg/m3); cough; inhalation injury at high density with heat",
      "every fire; the gun deck",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "hg_v",
@@ -1750,7 +1750,7 @@ window.BODY_DATA = {
      "chronic: a shut room with spilt mercury reaches 0.1 mg/m3; months to erethism and tremor",
      "the pox cure, the apothecary, hatters later",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "ch4",
@@ -1763,7 +1763,7 @@ window.BODY_DATA = {
      "none until oxygen is displaced; an explosion with a lamp",
      "the bilge, swamps, mines",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "s",
@@ -1776,7 +1776,7 @@ window.BODY_DATA = {
      "-",
      "the stinkpot, the match, the powder mill, the brimstone cure",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "c",
@@ -1789,7 +1789,7 @@ window.BODY_DATA = {
      "-",
      "the brazier, the galley, the powder mill, the smith",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "kno3",
@@ -1802,7 +1802,7 @@ window.BODY_DATA = {
      "-",
      "the powder",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "ethanol",
@@ -1815,7 +1815,7 @@ window.BODY_DATA = {
      "the drink; its vapour in a still-house is a fire risk",
      "rum, brandy, arrack",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "pb",
@@ -1828,7 +1828,7 @@ window.BODY_DATA = {
      "by ingestion (MEDICINE)",
      "stills, pewter, shot",
      "Historical",
-     "proposed"
+     "rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders)"
     ],
     [
      "tagged",
@@ -1871,7 +1871,7 @@ window.BODY_DATA = {
      "by fuel surface and draught",
      "33 MJ/kg",
      "the galley, the smith",
-     "proposed"
+     "rex (the reaction, 2026-10-29); proposed (rates)"
     ],
     [
      "comb_c_starved",
@@ -1882,7 +1882,7 @@ window.BODY_DATA = {
      "the brazier in the cabin: 10 to 30% of carbon to CO",
      "10 MJ/kg",
      "the brazier, a smouldering hold",
-     "proposed"
+     "rex (the reaction, 2026-10-29); proposed (rates)"
     ],
     [
      "comb_wood",
@@ -1893,7 +1893,7 @@ window.BODY_DATA = {
      "by surface",
      "15 MJ/kg",
      "a ship on fire",
-     "proposed"
+     "rex (the reaction, 2026-10-29); proposed (rates)"
     ],
     [
      "comb_s",
@@ -1904,7 +1904,7 @@ window.BODY_DATA = {
      "a stinkpot: 100 g in a minute",
      "9 MJ/kg",
      "stinkpots, the match",
-     "proposed"
+     "rex (the reaction, 2026-10-29); proposed (rates)"
     ],
     [
      "black_powder",
@@ -1915,7 +1915,7 @@ window.BODY_DATA = {
      "instant",
      "3 MJ/kg",
      "the guns, the magazine, a grenade",
-     "proposed"
+     "rex (the reaction, 2026-10-29); proposed (rates)"
     ],
     [
      "ferment",
@@ -1926,7 +1926,7 @@ window.BODY_DATA = {
      "a vat: 1 L CO2 per litre of wort over days (a shut brew-house pools CO2)",
      "small",
      "GOODS brewing and distilling; a CO2 source for GAS_DYNAMICS",
-     "proposed"
+     "rex (the reaction, 2026-10-29); proposed (rates)"
     ],
     [
      "rot",
@@ -1937,7 +1937,7 @@ window.BODY_DATA = {
      "slow; by the cleanliness meter",
      "-",
      "the bilge, the stores",
-     "proposed"
+     "rex (the reaction, 2026-10-29); proposed (rates)"
     ],
     [
      "(general)",
@@ -1966,27 +1966,27 @@ window.BODY_DATA = {
     [
      "The substance schema and reaction schema are general: solids, liquids and gases; any route; any provenance",
      "established here",
-     "proposed"
+     "rex (the statement, 2026-10-29)"
     ],
     [
      "The initial database is the period's gases and fuels (16 substances, 7 reactions)",
      "established here",
-     "proposed"
+     "rex (the statement, 2026-10-29)"
     ],
     [
      "Crafting skill affects the minigame's control (temperature, timing, handling), never the chemistry (ChatGPT's rule, agreed)",
      "recorded",
-     "proposed (outside AI)"
+     "rex (the statement, 2026-10-29)"
     ],
     [
      "A player who knows a procedure may attempt it without a recipe; poor character skill makes it hard to execute",
      "recorded; touches GOODS 3f (knowledge apart from skill, Rex)",
-     "proposed (outside AI)"
+     "rex (the statement, 2026-10-29)"
     ],
     [
      "Whether GOODS.md's recipes become reactions of this engine",
      "not decided; the economy's lane and Rex's",
-     "open"
+     "open (Rex, 2026-10-29: stays open)"
     ],
     [
      "Who keeps CHEMISTRY.md after this (the body keeper, the economy, a new keeper)",
@@ -2488,49 +2488,49 @@ window.BODY_DATA = {
      "alveolar PO2 (ANATOMY 1a) minus the gradient",
      "95 mmHg at sea level",
      "low inspired oxygen; lung transfer failing",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Saturation SaO2",
      "Severinghaus: 1 / (1 + 23400 / (PaO2^3 + 150 PaO2)); shifted by pH, temperature and CO2",
      "0.97",
      "under 0.90 breathless and dull; 0.80 confused, blue; 0.70 unconscious; under 0.60 death in minutes",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Carboxyhaemoglobin COHb",
      "dCOHb/dt = (COHb_eq - COHb) x ln2 / t_half, COHb_eq about 0.16 x ppm / 100 (an approximation valid to a few thousand ppm), t_half 5 h in air (uptake faster at work: x VE/6)",
      "under 3% (smokers 3 to 10%)",
      "10 to 20% headache and nausea; 20 to 30% drowsy, ataxic, impaired; 30 to 50% seizures, unconscious, the heart starves; over 50% death. Oxygen content falls by the COHb share and the curve shifts left (the rest is held tighter): worse than the same loss of haemoglobin",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Oxygen content with CO",
      "CaO2 = 1.34 x Hb x (1 - COHb) x SaO2 + dissolved",
      "20 mL/dL",
      "the pulse and the colour look normal (cherry pink): the surgeon cannot tell",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Arterial PCO2",
      "set by ventilation against production: PaCO2 = 0.863 x VCO2 / alveolar ventilation",
      "40 mmHg",
      "over 50 drowsy, over 70 narcosis; under 30 (panic, hyperventilation) tingling and faintness",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Acid-base",
      "pH from bicarbonate and PaCO2 (Henderson-Hasselbalch); respiratory acidosis with CO2 retention, alkalosis with over-breathing; metabolic acidosis from shock and lactate (CIRCULATION 1)",
      "7.40",
      "under 7.2 the heart weakens; over 7.6 tetany",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Hydrogen sulphide",
      "not a blood-gas problem: it poisons the cells' use of oxygen (cytochrome oxidase) like cyanide; blood looks oxygenated while the tissues starve",
      "0",
      "over 500 ppm collapse in a breath",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ]
    ]
   }
@@ -3636,7 +3636,7 @@ window.BODY_DATA = {
      "partial pressure (mmHg) = fraction x total pressure",
      "GAS_DYNAMICS",
      "the respiratory profile (ANATOMY), CIRCULATION blood gas, MEDICINE exposure",
-     "proposed"
+     "rex (the interface, 2026-10-29)"
     ],
     [
      "Concentration of an aerosol or particle",
@@ -3644,7 +3644,7 @@ window.BODY_DATA = {
      "-",
      "GAS_DYNAMICS",
      "MEDICINE (smoke inhalation), ANATOMY senses (eyes)",
-     "proposed"
+     "rex (the interface, 2026-10-29)"
     ],
     [
      "Volume of a region",
@@ -3652,7 +3652,7 @@ window.BODY_DATA = {
      "-",
      "ATMOSPHERE regions table",
      "the box model",
-     "proposed"
+     "rex (the interface, 2026-10-29)"
     ],
     [
      "Ventilation",
@@ -3660,7 +3660,7 @@ window.BODY_DATA = {
      "ACH = flow / volume x 60",
      "ATMOSPHERE modifiers; a door opened, a hatch, a fan (none in the period), the wind",
      "the box model",
-     "proposed"
+     "rex (the interface, 2026-10-29)"
     ],
     [
      "Source strength",
@@ -3668,7 +3668,7 @@ window.BODY_DATA = {
      "a fire: from CHEMISTRY's reaction rate; a person: 0.25 L/min O2 in, 0.2 L/min CO2 out at rest, x MET at work (PHYSIOLOGY)",
      "CHEMISTRY, PHYSIOLOGY, ECOLOGY",
      "the box model",
-     "proposed"
+     "rex (the interface, 2026-10-29)"
     ],
     [
      "Exposure",
@@ -3676,7 +3676,7 @@ window.BODY_DATA = {
      "dose to the body = ventilation (L/min, PHYSIOLOGY) x concentration x minutes x uptake fraction",
      "GAS_DYNAMICS integrates per character present",
      "ANATOMY lungs, NEUROLOGY (absorbed dose), MEDICINE",
-     "proposed"
+     "rex (the interface, 2026-10-29)"
     ],
     [
      "Mass conservation",
@@ -3684,7 +3684,7 @@ window.BODY_DATA = {
      "a region's total moles = pressure x volume / (R T); sources add, sinks and ventilation remove, reactions convert",
      "the model",
      "a check the build script could run on scenario data (open)",
-     "proposed"
+     "rex (the interface, 2026-10-29)"
     ]
    ]
   },
@@ -3704,43 +3704,43 @@ window.BODY_DATA = {
      "Mass balance per species",
      "V dC/dt = S - Q (C - C_out) - R, Q = ACH x V / 60 per minute",
      "the hold at 250 m3, hatch shut (0.2 ACH), 30 men at rest (CO2 6 L/min): CO2 climbs toward 6 / 0.83 = 7.2% (steady state), passing 3% in about 90 minutes: headache and panting; oxygen falls at 7.5 L/min toward 13%",
-     "proposed"
+     "rex (the box model, 2026-10-29); proposed (rates, the example numbers)"
     ],
     [
      "Oxygen and carbon dioxide move together",
      "O2 consumed = CO2 produced / 0.8 (the respiratory quotient) for breathing; combustion by CHEMISTRY's stoichiometry",
      "a fire in the hold: oxygen falls faster than CO2 rises",
-     "proposed"
+     "rex (the box model, 2026-10-29); proposed (rates, the example numbers)"
     ],
     [
      "Heavier gases pool",
      "CO2 (1.5 x air) and H2S (1.2 x air) sink: in a still box the lower half's concentration is x1.5 the mean, the upper half x0.5 (placeholder); mixing restores it",
      "the man who crouches to the bilge; the well",
-     "proposed"
+     "rex (the box model, 2026-10-29); proposed (rates, the example numbers)"
     ],
     [
      "Lighter gases rise",
      "CO (0.97 x air) mixes; hot smoke rises to the deckhead first (the crawl-low rule of a fire)",
      "a crawling man breathes better air for a while",
-     "proposed"
+     "rex (the box model, 2026-10-29); proposed (rates, the example numbers)"
     ],
     [
      "Ventilation events",
      "ACH jumps when a hatch, port, door or window opens, or a wind-sail is rigged (period ventilators: wind-sails and Hales' ventilators from the 1740s, after the period)",
      "opening the hatch takes the hold from 0.2 to 2 ACH: the 7% falls to 1% in about 90 minutes",
-     "proposed"
+     "rex (the box model, 2026-10-29); proposed (rates, the example numbers)"
     ],
     [
      "Time step",
      "a minute for an occupied box; seconds for a fire or a release (the stability rule: step under volume / flow)",
      "the gun deck: per combat turn",
-     "proposed"
+     "rex (the box model, 2026-10-29); proposed (rates, the example numbers)"
     ],
     [
      "Return to baseline",
      "a region goes inactive when every species is within 10% of the baseline and no source remains",
      "the hold aired out",
-     "proposed"
+     "rex (the box model, 2026-10-29); proposed (rates, the example numbers)"
     ]
    ]
   },
@@ -3762,84 +3762,84 @@ window.BODY_DATA = {
      "O2 -0.25 L/min; CO2 +0.2 L/min; water vapour",
      "x MET at work (a man at the pumps x7)",
      "PHYSIOLOGY 1",
-     "proposed"
+     "rex (the source, 2026-10-29); proposed (rates)"
     ],
     [
      "Livestock (goats, pigs, hens)",
      "as a person x body-mass ratio",
      "a goat 0.1 L/min O2",
      "DUTIES livestock",
-     "proposed"
+     "rex (the source, 2026-10-29); proposed (rates)"
     ],
     [
      "A lamp or candle",
      "O2 -0.03 L/min each; CO2 +0.03; CO a little if it gutters",
      "-",
      "the ship's lights",
-     "proposed"
+     "rex (the source, 2026-10-29); proposed (rates)"
     ],
     [
      "A galley fire, a brazier",
      "O2 -; CO2 +; CO + (charcoal: up to 10% of the carbon as CO when starved of air)",
      "a brazier: CO 0.5 L/min in a shut cabin",
      "CHEMISTRY combustion",
-     "proposed"
+     "rex (the source, 2026-10-29); proposed (rates)"
     ],
     [
      "A fire (structure, cargo)",
      "by the fuel and the air available (CHEMISTRY): CO2, CO, water, soot, heat",
      "a cargo fire: 100 L/min CO2, 20 CO, smoke 1 g/min",
      "CHEMISTRY",
-     "proposed"
+     "rex (the source, 2026-10-29); proposed (rates)"
     ],
     [
      "Black powder fired",
      "330 cm3 of gas per gram of powder: CO2, N2, CO, H2S trace, H2, CH4; particles",
      "a 6-pounder's 1 kg charge: 330 L of gas per shot",
      "CHEMISTRY black powder; COMBAT guns",
-     "proposed"
+     "rex (the source, 2026-10-29); proposed (rates)"
     ],
     [
      "A stinkpot",
      "SO2 from burning sulphur, smoke",
      "100 g sulphur: about 70 L SO2 over a minute",
      "CHEMISTRY; COMBAT",
-     "proposed"
+     "rex (the source, 2026-10-29); proposed (rates)"
     ],
     [
      "Rot in the bilge and stores",
      "H2S, CH4, CO2",
      "a foul bilge: H2S 0.01 L/min (enough for 500 ppm in a shut hold over a day)",
      "the cleanliness meter (PIRATE 5a)",
-     "proposed"
+     "rex (the source, 2026-10-29); proposed (rates)"
     ],
     [
      "A reaction in the laboratory",
      "whatever CHEMISTRY computes",
      "by the reaction",
      "CHEMISTRY",
-     "proposed"
+     "rex (the source, 2026-10-29); proposed (rates)"
     ],
     [
      "Plants in a closed space",
      "O2 + by day, - by night; small",
      "negligible except a greenhouse (none)",
      "ECOLOGY",
-     "proposed"
+     "rex (the source, 2026-10-29); proposed (rates)"
     ],
     [
      "Natural vents",
      "CO2, H2S, SO2",
      "by the place",
      "ENVIRONMENT terrain",
-     "proposed"
+     "rex (the source, 2026-10-29); proposed (rates)"
     ],
     [
      "Sinks: surfaces, water, rain",
      "SO2 and H2S dissolve and react on wet surfaces; particles settle (half in an hour in still air); rain washes smoke",
      "placeholders",
      "GAS_DYNAMICS",
-     "proposed"
+     "rex (the source, 2026-10-29); proposed (rates)"
     ]
    ]
   },
@@ -3859,43 +3859,43 @@ window.BODY_DATA = {
      "Cells",
      "the combat map's tiles, each a small box with the units above; elevation and enclosure from the map (COMBAT 6: tile properties)",
      "deferred",
-     "proposed"
+     "rex (the deferred grid and its rules, 2026-10-29); deferred"
     ],
     [
      "Advection",
      "the wind (ENVIRONMENT) moves a cell's air downwind by u x step; indoors, the ventilation flow",
      "deferred",
-     "proposed"
+     "rex (the deferred grid and its rules, 2026-10-29); deferred"
     ],
     [
      "Diffusion and turbulent mixing",
      "each step a cell shares a fraction with its neighbours (D x step / cell size squared)",
      "deferred",
-     "proposed"
+     "rex (the deferred grid and its rules, 2026-10-29); deferred"
     ],
     [
      "Buoyancy",
      "hot and light gases move up a level (a deck) before spreading; heavy ones pool in hollows and the low tiles",
      "deferred",
-     "proposed"
+     "rex (the deferred grid and its rules, 2026-10-29); deferred"
     ],
     [
      "Deposition",
      "particles settle; SO2 and H2S lost to wet surfaces",
      "deferred",
-     "proposed"
+     "rex (the deferred grid and its rules, 2026-10-29); deferred"
     ],
     [
      "Step",
      "seconds during a release; a cell per step at most; the box model takes over once the cloud is uniform",
      "deferred",
-     "proposed"
+     "rex (the deferred grid and its rules, 2026-10-29); deferred"
     ],
     [
      "Exposure",
      "each character sums the concentration of the cell they stand in each step (ppm-min); crouching reads the lower half",
      "deferred",
-     "proposed"
+     "rex (the deferred grid and its rules, 2026-10-29); deferred"
     ]
    ]
   }
@@ -4889,7 +4889,7 @@ window.BODY_DATA = {
      "carry him into the air; bleeding (useless)",
      "air; the hatch opened",
      "blue lips, gasping, confusion, collapse",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Hypercapnia [the close air]",
@@ -4899,7 +4899,7 @@ window.BODY_DATA = {
      "air",
      "ventilation",
      "panting, flushed, headache, sleepy",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Carbon monoxide poisoning [the charcoal sickness; the brazier death]",
@@ -4909,7 +4909,7 @@ window.BODY_DATA = {
      "carry him out; bleeding; vinegar",
      "air (pure oxygen halves the half-life, none in the period)",
      "headache, nausea, then sleep; cherry-pink lips; the whole cabin found dead in the morning",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Smoke inhalation injury",
@@ -4919,7 +4919,7 @@ window.BODY_DATA = {
      "nothing",
      "air, rest; later weeks",
      "soot in the nose and mouth, hoarse, wheezing, the cough",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Irritant injury [the brimstone]",
@@ -4929,7 +4929,7 @@ window.BODY_DATA = {
      "water to the eyes; air",
      "air",
      "eyes streaming shut (Eyesight x0.3 for the exposure), coughing, cannot act (Nerve check)",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Hydrogen sulphide poisoning [the damp; the sewer gas]",
@@ -4939,7 +4939,7 @@ window.BODY_DATA = {
      "nothing; the rescuer dies too",
      "air; never go down after him without airing the hold",
      "the first man down the hold; the rescuer",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Altitude illness [the mountain sickness]",
@@ -4949,7 +4949,7 @@ window.BODY_DATA = {
      "-",
      "descent",
      "headache on the peak",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Respiratory failure (the end state)",
@@ -4959,7 +4959,7 @@ window.BODY_DATA = {
      "nothing",
      "the cause removed",
      "slow shallow breathing; blue; the man who cannot be woken",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ]
    ]
   }
@@ -10766,49 +10766,49 @@ window.BODY_DATA = {
      "VO2 = 3.5 x MET x mass_kg",
      "mL/min",
      "PHYSIOLOGY 1 MET table",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Minute ventilation",
      "VE = 6 + 0.025 x (VO2 - 250), capped by the profile's maximal capacity (ANATOMY 1a)",
      "L/min",
      "oxygen demand",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Inhaled dose of a gas",
      "VE x concentration x minutes x uptake fraction (CHEMISTRY)",
      "L or mg",
      "GAS_DYNAMICS exposure",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "The carbon dioxide drive",
      "VE x 2 per 5 mmHg of PaCO2 over 40 (the panting in a shut hold); over 70 mmHg the drive fails and sleepiness wins",
      "-",
      "CIRCULATION blood gas",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "The hypoxic drive",
      "VE up when PaO2 falls under 60 mmHg (altitude, a low-oxygen hold); carbon monoxide gives no drive at all: the body does not notice (the silent killer)",
      "-",
      "CIRCULATION",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Work of breathing",
      "at VE over 60 L/min, or airway resistance over 2, breathing itself costs: the Endurance pool x0.9; at resistance over 4 (smoke, SO2) x0.6 and the character stops working",
      "-",
      "ANATOMY 1a",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ],
     [
      "Breath-holding and drowning",
      "a trained diver 1 to 2 minutes; a panicked man 30 seconds; water in the lungs ends transfer: CIRCULATION saturation falls to unconsciousness in 1 to 3 minutes, death in 4 to 6 (PHYSIOLOGY 5 immersion covers the cold side)",
      "min",
      "Swimming skill, Nerve",
-     "proposed"
+     "rex (the row's structure, 2026-10-29); proposed (numbers)"
     ]
    ]
   }

@@ -502,70 +502,70 @@
         "air",
         "air | water | other",
         "the species profile (ANATOMY 5); under water a human has none",
-        "proposed"
+        "rex (the row's structure, 2026-10-29); proposed (numbers)"
       ],
       [
         "structure",
         "lungs",
         "lungs | gills | skin | other",
         "species",
-        "proposed"
+        "rex (the row's structure, 2026-10-29); proposed (numbers)"
       ],
       [
         "ventilation capacity (maximal)",
         "100 to 150 at full effort (trained higher)",
         "L/min",
         "lung function x chest wall intact (MEDICINE chest wounds) x age",
-        "proposed"
+        "rex (the row's structure, 2026-10-29); proposed (numbers)"
       ],
       [
         "exchange capacity (diffusing capacity)",
         "25 at rest, 60 at effort",
         "mL O2 per min per mmHg gradient",
         "lung damage (pneumonia, smoke injury, consumption), fluid in the lungs (heart failure), age",
-        "proposed"
+        "rex (the row's structure, 2026-10-29); proposed (numbers)"
       ],
       [
         "airway resistance",
         "1.0",
         "relative",
         "irritant gases (SO2, smoke) raise it: x2 to x5 during exposure; asthma (none modelled)",
-        "proposed"
+        "rex (the row's structure, 2026-10-29); proposed (numbers)"
       ],
       [
         "dead space",
         "150",
         "mL per breath",
         "fixed",
-        "proposed"
+        "rex (the row's structure, 2026-10-29); proposed (numbers)"
       ],
       [
         "tissue integrity",
         "1.0",
         "0 to 1 (ANATOMY lungs function and damage)",
         "smoke and irritant injury (MEDICINE), infection, drowning",
-        "proposed"
+        "rex (the row's structure, 2026-10-29); proposed (numbers)"
       ],
       [
         "gas tolerances (species)",
         "hypoxia under 16% O2; CO2 over 3%",
         "thresholds",
         "species profile (a diving mammal tolerates more CO2; open)",
-        "proposed"
+        "rex (the row's structure, 2026-10-29); proposed (numbers)"
       ],
       [
         "Gas transfer (the model)",
         "transfer = exchange capacity x (inspired-alveolar gradient after the alveolar gas equation); arterial PO2 follows alveolar PO2 less a 5 to 10 mmHg gradient in health, more with damage",
         "mL/min",
         "the whole row above",
-        "proposed"
+        "rex (the row's structure, 2026-10-29); proposed (numbers)"
       ],
       [
         "Two failures told apart",
         "not enough oxygen in the air (ATMOSPHERE: low fraction or low pressure) vs the lung failing to transfer it (damage, fluid, resistance): same saturation, different cure",
         "-",
         "-",
-        "proposed"
+        "rex (the row's structure, 2026-10-29); proposed (numbers)"
       ]
     ]
   }

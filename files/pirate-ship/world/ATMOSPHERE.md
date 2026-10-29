@@ -6,7 +6,9 @@ route, instead of a scripted debuff. ChatGPT (outside AI) drafted the architectu
 down to what pays in 1650–1730 and ChatGPT answered that the engine's capability must not be sized by the
 game's present need; Rex passed on the compromise: **build the atmosphere and the respiratory exchange
 now, establish the interfaces for gas dynamics and chemistry, keep the chemistry schema general and the
-database small.** This file is the atmosphere. **All of it proposed**; numbers placeholders where marked.
+database small.** This file is the atmosphere. **(Rex, 2026-10-29)** The structure of this file, `GAS_DYNAMICS.md`,
+`CHEMISTRY.md` and the respiratory tables is his decision; **every number is a placeholder** (Rex's
+words: "numbers still placeholders"); recipes-as-reactions stays open.
 
 **Ownership (the boundaries from the brief, kept exactly).** This file: the baseline composition, pressure
 with altitude, the local modifiers, which regions are active, and the period scenario list.
@@ -41,11 +43,11 @@ or per combat turn (`GAS_DYNAMICS.md`); exposure is integrated per character pre
 
 | Species | Dry-air fraction | Partial pressure at sea level (mmHg) | Tracked in play? | Why | Mark |
 |---|---|---|---|---|---|
-| Nitrogen N2 | 78.08% | 593 | as the inert remainder | fills the balance; matters only for diving (not in the game) | proposed |
-| Oxygen O2 | 20.95% | 159 | yes | the one that keeps a body alive; inspired partial pressure is what the lungs see | proposed |
-| Argon and the traces | 0.93% and less | 7 | no | nothing for play; folded into the remainder | proposed |
-| Carbon dioxide CO2 | 0.04% (about 400 ppm; about 280 ppm in 1700) | 0.3 | yes | accumulates in closed spaces; drives breathing | proposed |
-| Water vapour H2O | 0 to 4% by humidity and temperature | up to 47 at body temperature (the airways saturate inspired air) | yes (from ENVIRONMENT) | takes room from oxygen in the alveoli; the 47 mmHg in the alveolar gas equation | proposed |
+| Nitrogen N2 | 78.08% | 593 | as the inert remainder | fills the balance; matters only for diving (not in the game) | rex (the species tracked, 2026-10-29); science (values) |
+| Oxygen O2 | 20.95% | 159 | yes | the one that keeps a body alive; inspired partial pressure is what the lungs see | rex (the species tracked, 2026-10-29); science (values) |
+| Argon and the traces | 0.93% and less | 7 | no | nothing for play; folded into the remainder | rex (the species tracked, 2026-10-29); science (values) |
+| Carbon dioxide CO2 | 0.04% (about 400 ppm; about 280 ppm in 1700) | 0.3 | yes | accumulates in closed spaces; drives breathing | rex (the species tracked, 2026-10-29); science (values) |
+| Water vapour H2O | 0 to 4% by humidity and temperature | up to 47 at body temperature (the airways saturate inspired air) | yes (from ENVIRONMENT) | takes room from oxygen in the alveoli; the 47 mmHg in the alveolar gas equation | rex (the species tracked, 2026-10-29); science (values) |
 <!-- /table -->
 
 - **[science]** The air is well mixed: a forest has no meaningfully higher oxygen than the field beside
@@ -61,12 +63,12 @@ or per combat turn (`GAS_DYNAMICS.md`); exposure is integrated per character pre
 
 | Altitude (m) | Pressure (mmHg) | Inspired PO2 (mmHg) | Alveolar PO2 at PaCO2 40 (mmHg) | Typical resting saturation | Where in the game | Mark |
 |---|---|---|---|---|---|---|
-| 0 | 760 | 149 | 99 | 0.97 | the sea, every port | proposed |
-| 500 | 716 | 140 | 90 | 0.96 | the hill towns, Jamaica's uplands | proposed |
-| 1000 | 674 | 131 | 81 | 0.95 | coffee country | proposed |
-| 2256 | 577 | 111 | 61 | 0.90 | the Blue Mountain peak (a day's climb; mild breathlessness) | proposed |
-| 3000 | 526 | 100 | 50 | 0.88 | none in the Caribbean; the engine's other worlds | proposed |
-| 5000 | 405 | 75 | 25 | 0.75 | none here; altitude sickness, impaired attention (BODY) | proposed |
+| 0 | 760 | 149 | 99 | 0.97 | the sea, every port | rex (the model, 2026-10-29); science (values) |
+| 500 | 716 | 140 | 90 | 0.96 | the hill towns, Jamaica's uplands | rex (the model, 2026-10-29); science (values) |
+| 1000 | 674 | 131 | 81 | 0.95 | coffee country | rex (the model, 2026-10-29); science (values) |
+| 2256 | 577 | 111 | 61 | 0.90 | the Blue Mountain peak (a day's climb; mild breathlessness) | rex (the model, 2026-10-29); science (values) |
+| 3000 | 526 | 100 | 50 | 0.88 | none in the Caribbean; the engine's other worlds | rex (the model, 2026-10-29); science (values) |
+| 5000 | 405 | 75 | 25 | 0.75 | none here; altitude sickness, impaired attention (BODY) | rex (the model, 2026-10-29); science (values) |
 <!-- /table -->
 
 - **[science]** The lungs see inspired PO₂ = 0.2095 × (P − 47 mmHg) once the airways saturate the air
@@ -82,12 +84,12 @@ or per combat turn (`GAS_DYNAMICS.md`); exposure is integrated per character pre
 
 | Modifier | From | Changes | Placeholder values | Mark |
 |---|---|---|---|---|
-| Altitude | the map's elevation | total pressure (the table above) | - | proposed |
-| Temperature and humidity | ENVIRONMENT climate and weather | water vapour partial pressure; gas density (buoyancy) | humidity 60 to 85% in the Caribbean | proposed |
-| Wind | ENVIRONMENT weather state | ventilation of open and semi-open places; dispersal of a release (GAS_DYNAMICS) | trades 13 to 17 knots | proposed |
-| Enclosure and ventilation | the place's kind (ANATOMY of a ship: hold, orlop, cabin, gun deck; a room, a cave, a mine) | air changes per hour (ACH): how fast the volume is replaced by outside air | open deck infinite; gun deck with ports open 20; cabin with a window 5; hold with the hatch open 2; hold battened down 0.2; a cave 0.05; a room with a fire and a chimney 3 | proposed |
-| Water depth | under water | pressure +1 atm per 10 m; no air at all: the breathing medium changes (ANATOMY respiratory profile) | drowning is the lungs' medium, not a gas | proposed |
-| Stability and inversion | ENVIRONMENT (calm nights, fog) | a release lingers near the ground; smoke hangs on the water | dispersion x0.3 on a calm night | proposed |
+| Altitude | the map's elevation | total pressure (the table above) | - | rex (the modifier, 2026-10-29); proposed (placeholder values) |
+| Temperature and humidity | ENVIRONMENT climate and weather | water vapour partial pressure; gas density (buoyancy) | humidity 60 to 85% in the Caribbean | rex (the modifier, 2026-10-29); proposed (placeholder values) |
+| Wind | ENVIRONMENT weather state | ventilation of open and semi-open places; dispersal of a release (GAS_DYNAMICS) | trades 13 to 17 knots | rex (the modifier, 2026-10-29); proposed (placeholder values) |
+| Enclosure and ventilation | the place's kind (ANATOMY of a ship: hold, orlop, cabin, gun deck; a room, a cave, a mine) | air changes per hour (ACH): how fast the volume is replaced by outside air | open deck infinite; gun deck with ports open 20; cabin with a window 5; hold with the hatch open 2; hold battened down 0.2; a cave 0.05; a room with a fire and a chimney 3 | rex (the modifier, 2026-10-29); proposed (placeholder values) |
+| Water depth | under water | pressure +1 atm per 10 m; no air at all: the breathing medium changes (ANATOMY respiratory profile) | drowning is the lungs' medium, not a gas | rex (the modifier, 2026-10-29); proposed (placeholder values) |
+| Stability and inversion | ENVIRONMENT (calm nights, fog) | a release lingers near the ground; smoke hangs on the water | dispersion x0.3 on a calm night | rex (the modifier, 2026-10-29); proposed (placeholder values) |
 <!-- /table -->
 
 ## 4. Active and inactive regions
@@ -97,17 +99,17 @@ or per combat turn (`GAS_DYNAMICS.md`); exposure is integrated per character pre
 
 | Place | State | Model | Volume (m3, placeholder) | ACH (placeholder) | Mark |
 |---|---|---|---|---|---|
-| Open deck, beach, a street | inactive | baseline plus ENVIRONMENT; a release makes it active for its cells (GAS_DYNAMICS grid) | - | infinite | proposed |
-| Forest, swamp | inactive | baseline; ECOLOGY's fluxes are aggregate, never a local oxygen bonus | - | infinite | proposed |
-| The hold | active when occupied or the hatches are closed | one well-mixed box (GAS_DYNAMICS box model) | a sloop 60; a brig 250; a ship 800 | 2 open, 0.2 battened | proposed |
-| The gun deck in action | active during a fight | one box per deck section; powder smoke as the source (CHEMISTRY black powder) | 300 per deck | 20 with ports open, 5 closed | proposed |
-| A cabin, the great cabin | active when occupied with a brazier, a lamp or the window shut | box | 20 to 60 | 5 window open, 0.5 shut | proposed |
-| The orlop and the surgeon's cockpit | active in a fight | box; wounded men and lamps | 150 | 1 | proposed |
-| A tavern, a room ashore | active when crowded or heated | box | 80 | 3 | proposed |
-| The apothecary's laboratory (the INTJ) | active during an experiment | box; CHEMISTRY reactions as sources | 40 | 2, 8 with the window | proposed |
-| A cave, a mine, a well | active when entered | box; natural sources (CO2, H2S) | by the place | 0.05 | proposed |
-| A burning building or ship | active | box per compartment with combustion sources; grid if on the combat map | by the place | fire-driven | proposed |
-| Under water | the medium itself | no gas model: the respiratory profile's medium | - | - | proposed |
+| Open deck, beach, a street | inactive | baseline plus ENVIRONMENT; a release makes it active for its cells (GAS_DYNAMICS grid) | - | infinite | rex (the region and its model, 2026-10-29); proposed (volumes, ACH) |
+| Forest, swamp | inactive | baseline; ECOLOGY's fluxes are aggregate, never a local oxygen bonus | - | infinite | rex (the region and its model, 2026-10-29); proposed (volumes, ACH) |
+| The hold | active when occupied or the hatches are closed | one well-mixed box (GAS_DYNAMICS box model) | a sloop 60; a brig 250; a ship 800 | 2 open, 0.2 battened | rex (the region and its model, 2026-10-29); proposed (volumes, ACH) |
+| The gun deck in action | active during a fight | one box per deck section; powder smoke as the source (CHEMISTRY black powder) | 300 per deck | 20 with ports open, 5 closed | rex (the region and its model, 2026-10-29); proposed (volumes, ACH) |
+| A cabin, the great cabin | active when occupied with a brazier, a lamp or the window shut | box | 20 to 60 | 5 window open, 0.5 shut | rex (the region and its model, 2026-10-29); proposed (volumes, ACH) |
+| The orlop and the surgeon's cockpit | active in a fight | box; wounded men and lamps | 150 | 1 | rex (the region and its model, 2026-10-29); proposed (volumes, ACH) |
+| A tavern, a room ashore | active when crowded or heated | box | 80 | 3 | rex (the region and its model, 2026-10-29); proposed (volumes, ACH) |
+| The apothecary's laboratory (the INTJ) | active during an experiment | box; CHEMISTRY reactions as sources | 40 | 2, 8 with the window | rex (the region and its model, 2026-10-29); proposed (volumes, ACH) |
+| A cave, a mine, a well | active when entered | box; natural sources (CO2, H2S) | by the place | 0.05 | rex (the region and its model, 2026-10-29); proposed (volumes, ACH) |
+| A burning building or ship | active | box per compartment with combustion sources; grid if on the combat map | by the place | fire-driven | rex (the region and its model, 2026-10-29); proposed (volumes, ACH) |
+| Under water | the medium itself | no gas model: the respiratory profile's medium | - | - | rex (the region and its model, 2026-10-29); proposed (volumes, ACH) |
 <!-- /table -->
 
 - **[model]** A ship is a set of boxes (the hold, each gun deck, the orlop, the cabins) with volumes and
@@ -122,15 +124,15 @@ or per combat turn (`GAS_DYNAMICS.md`); exposure is integrated per character pre
 
 | Scenario | Source species | Place and model | What the body sees | Period provenance | Mark |
 |---|---|---|---|---|---|
-| Fire below decks | CO2, CO, smoke particles, heat; oxygen consumed | a box per compartment, fire-driven | hypoxia, CO poisoning, smoke inhalation, heat (PHYSIOLOGY) | the great fear of every wooden ship | proposed |
-| The gun deck in a long action | black powder smoke: CO2, CO, H2S (trace), SO2, particles | box per deck, ports open (ACH 20) or shut | eyes streaming (Eyesight x0.6), cough, headache after an hour (COHb 5 to 10%), the deafness is the guns' (ANATOMY senses) | universal; 'clouds of hazardous smoke' | proposed |
-| A stinkpot thrown on deck or into a boarding boat | sulphur burning: SO2; smoke; pitch | a few grid cells for minutes (GAS_DYNAMICS), or a boat as a box | choking, eyes shut, Nerve check to stay (COMBAT: a flinch source, combat keeper's), SO2 airway irritation (MEDICINE) | attested 1669; a pirate and boarding weapon | proposed |
-| A charcoal brazier in a shut cabin on a cold night | CO (incomplete combustion), CO2 | the cabin box at 0.5 ACH | COHb rising over hours: headache, then sleep that does not end | charcoal indoors kills; the north Atlantic leg is cold enough to want a brazier | proposed |
-| The hold battened down with men in it (prisoners, a storm) | CO2 up, O2 down, from breathing; bilge gases (H2S, CH4) from rot | the hold box at 0.2 ACH with N occupants | headache and panting at 3% CO2, confusion at 5%, unconscious near 10%; H2S if the bilge is foul | the slave deck's horror is this scenario; the 1741 navy complaint | proposed |
-| Opening a long-sealed hold or well | CO2 or H2S pooled low (heavier than air) | a box at 0.05 ACH; the first man down | collapse in a breath at H2S over 500 ppm; the rescuer dies too (the classic) | documented later; plausible for the period | proposed |
-| The apothecary's experiment gone wrong | whatever CHEMISTRY says the reaction makes (mercury vapour, SO2, H2S, chlorine-like fumes from salts and acids) | the laboratory box | by the species' toxicity rows | the INTJ's lane | proposed |
-| A volcanic fumarole or a sulphur mine | SO2, H2S, CO2 | a cave box or a grid patch on the slope | irritation, collapse in a hollow | the Soufrieres of the Lesser Antilles | proposed |
-| Lime kiln, tar kettle, smithy | CO2, CO, SO2, smoke | a semi-open box, ACH 3 to 10 | chronic low-grade exposure for the worker (a daily COHb of 5%: headaches) | all period trades | proposed |
+| Fire below decks | CO2, CO, smoke particles, heat; oxygen consumed | a box per compartment, fire-driven | hypoxia, CO poisoning, smoke inhalation, heat (PHYSIOLOGY) | the great fear of every wooden ship | rex (the scenario, 2026-10-29); proposed (numbers) |
+| The gun deck in a long action | black powder smoke: CO2, CO, H2S (trace), SO2, particles | box per deck, ports open (ACH 20) or shut | eyes streaming (Eyesight x0.6), cough, headache after an hour (COHb 5 to 10%), the deafness is the guns' (ANATOMY senses) | universal; 'clouds of hazardous smoke' | rex (the scenario, 2026-10-29); proposed (numbers) |
+| A stinkpot thrown on deck or into a boarding boat | sulphur burning: SO2; smoke; pitch | a few grid cells for minutes (GAS_DYNAMICS), or a boat as a box | choking, eyes shut, Nerve check to stay (COMBAT: a flinch source, combat keeper's), SO2 airway irritation (MEDICINE) | attested 1669; a pirate and boarding weapon | rex (the scenario, 2026-10-29); proposed (numbers) |
+| A charcoal brazier in a shut cabin on a cold night | CO (incomplete combustion), CO2 | the cabin box at 0.5 ACH | COHb rising over hours: headache, then sleep that does not end | charcoal indoors kills; the north Atlantic leg is cold enough to want a brazier | rex (the scenario, 2026-10-29); proposed (numbers) |
+| The hold battened down with men in it (prisoners, a storm) | CO2 up, O2 down, from breathing; bilge gases (H2S, CH4) from rot | the hold box at 0.2 ACH with N occupants | headache and panting at 3% CO2, confusion at 5%, unconscious near 10%; H2S if the bilge is foul | the slave deck's horror is this scenario; the 1741 navy complaint | rex (the scenario, 2026-10-29); proposed (numbers) |
+| Opening a long-sealed hold or well | CO2 or H2S pooled low (heavier than air) | a box at 0.05 ACH; the first man down | collapse in a breath at H2S over 500 ppm; the rescuer dies too (the classic) | documented later; plausible for the period | rex (the scenario, 2026-10-29); proposed (numbers) |
+| The apothecary's experiment gone wrong | whatever CHEMISTRY says the reaction makes (mercury vapour, SO2, H2S, chlorine-like fumes from salts and acids) | the laboratory box | by the species' toxicity rows | the INTJ's lane | rex (the scenario, 2026-10-29); proposed (numbers) |
+| A volcanic fumarole or a sulphur mine | SO2, H2S, CO2 | a cave box or a grid patch on the slope | irritation, collapse in a hollow | the Soufrieres of the Lesser Antilles | rex (the scenario, 2026-10-29); proposed (numbers) |
+| Lime kiln, tar kettle, smithy | CO2, CO, SO2, smoke | a semi-open box, ACH 3 to 10 | chronic low-grade exposure for the worker (a daily COHb of 5%: headaches) | all period trades | rex (the scenario, 2026-10-29); proposed (numbers) |
 | A tagged gas weapon or substance | its row's species (provenance-tagged: Rex) | as its release | by its rows | fiction | open (the story keeper's rows) |
 <!-- /table -->
 
@@ -159,7 +161,7 @@ time to saturation, carboxyhaemoglobin and the symptom tier.
 
 ## Open for Rex
 
-1. The whole layer: keep, cut, or stamp (every row proposed).
+1. ~~The whole layer: keep, cut, or stamp~~ stamped (Rex, 2026-10-29): structure canon, numbers placeholders.
 2. Which scenarios the first build needs (the keeper's order: the gun deck and fire below decks, then the
    hold and the brazier, then the stinkpot and the laboratory).
 3. Whether a wind-sail (a period ventilator) is a ship part and a duty (`DUTIES.md`, the ship keeper).
@@ -178,4 +180,5 @@ modelling (NIOSH).
 
 | Date | What | Who |
 |---|---|---|
+| 2026-10-29 | Rex stamped the air layer's structure as his; numbers placeholders; recipes-as-reactions open | Rex |
 | 2026-10-29 | File opened on Rex's gas layer and ChatGPT's architecture (outside AI), sized by the compromise; baseline, altitude, modifiers, regions, the period's scenarios, the body interfaces; tables in `../body/data/atmosphere.json` | keeper |

@@ -112,13 +112,13 @@ fatigue load (MET-hours).
 
 | Quantity | Formula or value | Unit | Reads | Mark |
 |---|---|---|---|---|
-| Oxygen demand | VO2 = 3.5 x MET x mass_kg | mL/min | PHYSIOLOGY 1 MET table | proposed |
-| Minute ventilation | VE = 6 + 0.025 x (VO2 - 250), capped by the profile's maximal capacity (ANATOMY 1a) | L/min | oxygen demand | proposed |
-| Inhaled dose of a gas | VE x concentration x minutes x uptake fraction (CHEMISTRY) | L or mg | GAS_DYNAMICS exposure | proposed |
-| The carbon dioxide drive | VE x 2 per 5 mmHg of PaCO2 over 40 (the panting in a shut hold); over 70 mmHg the drive fails and sleepiness wins | - | CIRCULATION blood gas | proposed |
-| The hypoxic drive | VE up when PaO2 falls under 60 mmHg (altitude, a low-oxygen hold); carbon monoxide gives no drive at all: the body does not notice (the silent killer) | - | CIRCULATION | proposed |
-| Work of breathing | at VE over 60 L/min, or airway resistance over 2, breathing itself costs: the Endurance pool x0.9; at resistance over 4 (smoke, SO2) x0.6 and the character stops working | - | ANATOMY 1a | proposed |
-| Breath-holding and drowning | a trained diver 1 to 2 minutes; a panicked man 30 seconds; water in the lungs ends transfer: CIRCULATION saturation falls to unconsciousness in 1 to 3 minutes, death in 4 to 6 (PHYSIOLOGY 5 immersion covers the cold side) | min | Swimming skill, Nerve | proposed |
+| Oxygen demand | VO2 = 3.5 x MET x mass_kg | mL/min | PHYSIOLOGY 1 MET table | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| Minute ventilation | VE = 6 + 0.025 x (VO2 - 250), capped by the profile's maximal capacity (ANATOMY 1a) | L/min | oxygen demand | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| Inhaled dose of a gas | VE x concentration x minutes x uptake fraction (CHEMISTRY) | L or mg | GAS_DYNAMICS exposure | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| The carbon dioxide drive | VE x 2 per 5 mmHg of PaCO2 over 40 (the panting in a shut hold); over 70 mmHg the drive fails and sleepiness wins | - | CIRCULATION blood gas | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| The hypoxic drive | VE up when PaO2 falls under 60 mmHg (altitude, a low-oxygen hold); carbon monoxide gives no drive at all: the body does not notice (the silent killer) | - | CIRCULATION | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| Work of breathing | at VE over 60 L/min, or airway resistance over 2, breathing itself costs: the Endurance pool x0.9; at resistance over 4 (smoke, SO2) x0.6 and the character stops working | - | ANATOMY 1a | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| Breath-holding and drowning | a trained diver 1 to 2 minutes; a panicked man 30 seconds; water in the lungs ends transfer: CIRCULATION saturation falls to unconsciousness in 1 to 3 minutes, death in 4 to 6 (PHYSIOLOGY 5 immersion covers the cold side) | min | Swimming skill, Nerve | rex (the row's structure, 2026-10-29); proposed (numbers) |
 <!-- /table -->
 
 - **[model]** How much air a body moves is set here from the MET table; what the air contains is

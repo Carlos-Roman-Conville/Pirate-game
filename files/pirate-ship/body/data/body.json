@@ -52,7 +52,7 @@
         "air",
         "ATMOSPHERE, GAS_DYNAMICS (world), ANATOMY 1a, CIRCULATION 1a",
         "the region the character is in and its concentrations; inspired PO2, PCO2; exposures{species: ppm-min}; the respiratory profile; PaO2, SaO2, COHb, PaCO2, pH",
-        "proposed (2026-10-29)"
+        "rex (the layer, 2026-10-29); proposed (fields)"
       ],
       [
         "nervous",

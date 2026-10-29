@@ -83,16 +83,16 @@ absorption. No organ applies a penalty of its own: `BODY.md` reads organ functio
 
 | Field | Human default | Unit | Changed by | Mark |
 |---|---|---|---|---|
-| medium | air | air \| water \| other | the species profile (ANATOMY 5); under water a human has none | proposed |
-| structure | lungs | lungs \| gills \| skin \| other | species | proposed |
-| ventilation capacity (maximal) | 100 to 150 at full effort (trained higher) | L/min | lung function x chest wall intact (MEDICINE chest wounds) x age | proposed |
-| exchange capacity (diffusing capacity) | 25 at rest, 60 at effort | mL O2 per min per mmHg gradient | lung damage (pneumonia, smoke injury, consumption), fluid in the lungs (heart failure), age | proposed |
-| airway resistance | 1.0 | relative | irritant gases (SO2, smoke) raise it: x2 to x5 during exposure; asthma (none modelled) | proposed |
-| dead space | 150 | mL per breath | fixed | proposed |
-| tissue integrity | 1.0 | 0 to 1 (ANATOMY lungs function and damage) | smoke and irritant injury (MEDICINE), infection, drowning | proposed |
-| gas tolerances (species) | hypoxia under 16% O2; CO2 over 3% | thresholds | species profile (a diving mammal tolerates more CO2; open) | proposed |
-| Gas transfer (the model) | transfer = exchange capacity x (inspired-alveolar gradient after the alveolar gas equation); arterial PO2 follows alveolar PO2 less a 5 to 10 mmHg gradient in health, more with damage | mL/min | the whole row above | proposed |
-| Two failures told apart | not enough oxygen in the air (ATMOSPHERE: low fraction or low pressure) vs the lung failing to transfer it (damage, fluid, resistance): same saturation, different cure | - | - | proposed |
+| medium | air | air \| water \| other | the species profile (ANATOMY 5); under water a human has none | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| structure | lungs | lungs \| gills \| skin \| other | species | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| ventilation capacity (maximal) | 100 to 150 at full effort (trained higher) | L/min | lung function x chest wall intact (MEDICINE chest wounds) x age | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| exchange capacity (diffusing capacity) | 25 at rest, 60 at effort | mL O2 per min per mmHg gradient | lung damage (pneumonia, smoke injury, consumption), fluid in the lungs (heart failure), age | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| airway resistance | 1.0 | relative | irritant gases (SO2, smoke) raise it: x2 to x5 during exposure; asthma (none modelled) | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| dead space | 150 | mL per breath | fixed | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| tissue integrity | 1.0 | 0 to 1 (ANATOMY lungs function and damage) | smoke and irritant injury (MEDICINE), infection, drowning | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| gas tolerances (species) | hypoxia under 16% O2; CO2 over 3% | thresholds | species profile (a diving mammal tolerates more CO2; open) | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| Gas transfer (the model) | transfer = exchange capacity x (inspired-alveolar gradient after the alveolar gas equation); arterial PO2 follows alveolar PO2 less a 5 to 10 mmHg gradient in health, more with damage | mL/min | the whole row above | rex (the row's structure, 2026-10-29); proposed (numbers) |
+| Two failures told apart | not enough oxygen in the air (ATMOSPHERE: low fraction or low pressure) vs the lung failing to transfer it (damage, fluid, resistance): same saturation, different cure | - | - | rex (the row's structure, 2026-10-29); proposed (numbers) |
 <!-- /table -->
 
 - **[model]** The lungs' interface to `../world/ATMOSPHERE.md`: the air (or water) supplies inspired
