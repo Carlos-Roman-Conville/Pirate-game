@@ -3,6 +3,7 @@
   "clock": { "dayStartH": 12, "stepS": 60 },
   "body": { "male": 1, "ageY": 30, "heightCm": 175, "massKg": 70, "fatKg": 15, "waterKg": 40 },
   "place": { "airC": 24, "volumeM3": 40, "ach": 2 },
+  "start": { "bodyTempC": 37, "conserveTolKg": 1e-9, "unbrokenSleepQuality": 1 },
   "sleepDuty": "Sleep",
   "watchDuties": ["Standing watch", "Lookout aloft"],
   "dutyActivity": {

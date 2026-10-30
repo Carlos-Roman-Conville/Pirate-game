@@ -66,7 +66,7 @@ export function scheduleOf(blocks: DutyBlock[]): ScheduleEntry[] {
   const watched = blocks.some(b => data.watchDuties.includes(b.duty))
   return blocks.map(b => ({
     fromH: b.fromH, toH: b.toH, activity: activityOf(b.duty),
-    ...(b.duty === data.sleepDuty ? { sleepQuality: watched ? splitSleepQuality() : 1 } : {}),
+    ...(b.duty === data.sleepDuty ? { sleepQuality: watched ? splitSleepQuality() : data.start.unbrokenSleepQuality } : {}),
   }))
 }
 
@@ -80,7 +80,7 @@ function component(id: string, kind: string, mass: number, temperatureC: number)
 function start(c: GameCharacter, place: Place): EngineBody {
   const phys = { ...fixturePhysique, ...c.physique }
   const world = new World(defaultRegistry())
-  const body = component('body', 'body', phys.massKg, 37)
+  const body = component('body', 'body', phys.massKg, data.start.bodyTempC)
   body.props = { height_cm: phys.heightCm, age_y: phys.ageY, male: phys.male ? 1 : 0, fat_kg: phys.fatKg }
   body.contents = [{ substance: 'water', phase: 'liquid', mass: phys.waterKg }]
   const room = component('room', 'room', airDensity(P_SEA_LEVEL, place.airC + C_TO_K) * place.volumeM3, place.airC)
@@ -89,8 +89,8 @@ function start(c: GameCharacter, place: Place): EngineBody {
   world.registry.addComponent(body)
   world.registry.addComponent(room)
   stockPools(world, 'body')
-  world.conserve('water', ['body', 'room'], 1e-9)
-  for (const id of pooledNutrients()) world.conserve(`nutrient:${id}`, ['body'], 1e-9)
+  world.conserve('water', ['body', 'room'], data.start.conserveTolKg)
+  for (const id of pooledNutrients()) world.conserve(`nutrient:${id}`, ['body'], data.start.conserveTolKg)
   return { world, body, nextDay: 1, noteCursor: 0, checkCursor: 0 }
 }
 

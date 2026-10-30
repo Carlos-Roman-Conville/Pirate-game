@@ -93,6 +93,16 @@ describe('the capability formulas', () => {
   })
 })
 
+describe('what one dry sedentary day gives', () => {
+  it('records water_deficit_pct after a day of standing watch with no drink (F-SE-11)', () => {
+    const dry = simulateDay({ slug: 'dry-sailor', plan: awake }, 1)
+    const threshold = (data.pushes.find(p => p.row === 12)!.when.find(c => c.output === 'water_deficit_pct') as { gt: number }).gt
+    // Recorded, not tuned: one dry sedentary day now leaves about 1.57 %, short of P12's threshold, so P12 no longer fires after a single dry day (FIXTURES.md F-SE-11)
+    expect(Number(dry.outputs.water_deficit_pct)).toBeCloseTo(1.57, 1)
+    expect(Number(dry.outputs.water_deficit_pct)).toBeLessThan(threshold)
+  })
+})
+
 describe('stats from the engine\'s outputs', () => {
   // A sailor with no sleep for a day, who owes 20 h at its end, and whose vitamin C pool has been used down to 250 mg (the table's 300 mg is where signs begin).
   const hand: GameCharacter = { slug: 'tired-sailor', plan: awake }

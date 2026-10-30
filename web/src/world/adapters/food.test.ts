@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { foodContent, foodRow } from '@rex/realism'
+import { absorbedFraction, foodContent, foodRow } from '@rex/realism'
 import economy from '../../../../data/pirate-ship/economy/goods.json'
 import data from '../../../../data/pirate-ship/world/food.json'
 import source from './food.ts?raw'
@@ -112,13 +112,18 @@ describe('an inventory feeds people', () => {
     const people = crew(12)
     const inv = new Inventory(stores(12, 7))
     const before = inv.totals()
-    let tableKcal = 0, tableProtein = 0, eatenVitC = 0
+    let tableKcal = 0, tableProtein = 0, eatenVitC = 0, keptVitC = 0, tableKeptVitC = 0
     const spent: Record<string, number> = {}   // the engine's expenditure output runs on; a day's intake is its balance plus the day's own spending
     for (const r of ration) {
       const food = foodRow(r.food.id), kg = r.weeklyKg / weekDays
       tableKcal += foodContent(food, 'energy', kg)
       tableProtein += foodContent(food, 'protein', kg)
       eatenVitC += foodContent(food, 'vit_c', kg)
+      // each line is its own meal (food.ts eats line by line); the engine's absorption fraction for vitamin C, applied to the engine's content and to the table's vitCDay
+      const meal = { vitCMg: foodContent(food, 'vit_c', kg), fatG: foodContent(food, 'fat', kg), flux: false, chronicFlux: false, rum: false }
+      const fraction = absorbedFraction('vit_c', food, meal)
+      keptVitC += meal.vitCMg * fraction
+      tableKeptVitC += r.table.vitCDay * fraction
     }
     for (let day = 1; day <= 7; day++) {
       const report = issueRation(inv, people, day)
@@ -134,6 +139,8 @@ describe('an inventory feeds people', () => {
         // the body keeps only the fraction of vitamin C the absorption table lets through
         expect(out.outputs.intake_vit_c as number, `${p.slug} day ${day} vitamin C`).toBeGreaterThan(0)
         expect(out.outputs.intake_vit_c as number).toBeLessThan(eatenVitC)
+        expect(out.outputs.intake_vit_c as number, `${p.slug} day ${day} kept vitamin C`).toBeCloseTo(keptVitC, 6)
+        expect(Math.abs((out.outputs.intake_vit_c as number) - tableKeptVitC), `${p.slug} day ${day} kept vitamin C against the table's`).toBeLessThan(0.5)
         expect(out.failedChecks).toEqual([])
         releaseDayTrace(p)
       }
@@ -142,7 +149,7 @@ describe('an inventory feeds people', () => {
     for (const r of ration) used[r.food.good!] = (used[r.food.good!] ?? 0) + r.weeklyKg * 12
     for (const [good, kg] of Object.entries(used)) expect(before[good]! - inv.kg(good), good).toBeCloseTo(kg, 9)
     expect(Object.values(inv.balance()).every(b => Math.abs(b) < 1e-9)).toBe(true)
-  })
+  }, 30_000)   // twelve bodies for seven days outrun vitest's 5 s default when files run in parallel
 
   it('gives a man the table\'s day: the kcal a day of each line, summed, is the table\'s total within rounding', () => {
     const [hand] = crew(1)
