@@ -75,3 +75,85 @@ its `environment.json`. The engine's `environment.ts` is now exported, so the co
 | F-PL-4 the day's curve | The climate table gives a day maximum and a night minimum, not the hours they fall at. | The engine's half-cosine; the minimum at sunrise (from the sun row's day length), the maximum at 15:00 (`diurnal.maxAtHour`). | The hours of the day's coldest and hottest moments. |
 | F-PL-5 months between the sun rows | The sun table names only Dec to Jan, Mar and Sep, Jun to Jul. | The other months interpolate linearly between the nearest named months, round the year (February 11.5 h, 25 min). | Rows for every month. |
 | F-PL-6 the weather draw | `weather_states` stay chances and weights (marked low confidence, placeholders). | A seeded chain from day 1 of the year: stay with the row's chance, else another state in proportion to the season's weights (the climate row's Season word, wet or dry). Wind is the middle of the state's knots; it rains where the Rain cell does not begin "none". The hurricane's `x0.25 before 1715` applies when `year` is passed. Humidity, air and sea temperature are the month's row, whatever the state; the state does not yet change them. | Whether a state changes the day's air and humidity (rain cools), the shower of "none or a passing shower", and the year to play. |
+
+## Stats and faces (`web/src/world/adapters/stats.ts`, task 2536)
+
+Rows are in `data/pirate-ship/world/stats.json`: the factors of each `body.json` `capabilities` formula (in the table's own
+words, checked against its text by the test), the face sources, and the `psychology.json` `pushes` rows the engine's outputs
+can drive. A factor with no engine output counts as 1 and the result names it in `missing`; nothing is guessed. A push or
+face the engine cannot drive is listed here, not played.
+
+| Fixture | Stands in for | Value used | Rex's decision |
+|---|---|---|---|
+| F-ST-1 the aerobic index | `Endurance_attr x aerobic_today / 40` reads `aerobic_today` as an index (PHYSIOLOGY 6: about 40 mL/kg/min). Since 2026-10-29 the engine's `aerobic_today` is oxygen delivery at maximal cardiac output (circulation.ts: mL of O2 a minute, no body mass in it). The two do not share a unit. | The adapter divides the engine's value by the body's mass in kg, then by the formula's 40 (read from the table). With no mass or no `aerobic_today` the ceiling is not computed (`missing: aerobicIndex`). `characters.ts` does not run the circulation process yet, so no day report carries `aerobic_today`; the settlement task (2539) wires it. | Is the index per kg of body mass, or per kg of lean mass, or does PHYSIOLOGY 6 want the engine to return the index itself? |
+| F-ST-2 factors with no engine output | The factors of the capability table the engine gives no number for (table below). | Counted as 1; named in `missing`. A body that is wounded, in pain, cold, feverish or bled is therefore not yet reduced by the adapter. | Which engine output (or which game table) supplies each. The wound dip is a range by depth (x0.8 to x0.5) and needs a wound's limb; the engine counts wounds by kind only. |
+| F-ST-3 the combined factors | `alertness` and `drinkFactor` in the formulas. `neurology.circuits.arousal` says the alertness factor is min(PHYSIOLOGY alertness, arousal); the motor-control circuit says Dexterity and Agility take coordination. | `alertness` is the smaller of the engine's `alertness` and `arousal`; `drinkFactor` is `motor-control` alone (arousal enters once, through `alertness`); `drinkFactor(+)` for Nerve (rum raises it: fiction, open) has no output. The row's `(1 - 0.5 fatigueDay)` term is not applied while `fatigueDay` is missing. | Confirm the min, and whether arousal over 1.5 dips Dexterity (the table's cell says so, with no size). |
+| F-ST-4 faces | Which channel a face reaches, and how it reads. | Physiology faces go to "Watching people work (duty results)" and "Dialogue on keywords"; nutrition's to the dialogue; medicine's and the haemorrhage face to "The surgeon's morning report" (and the dialogue). `shown` is the table's string without its parenthetical notes (the clocks in `depletion`); `text` keeps it whole. Class II to IV bleeding stands for the haemorrhage failure's face. A deficiency stage with a face of `-` or `none...` shows nothing. A disease shows its symptoms once ill (stage 2), not while it incubates. | Confirm the channels, the haemorrhage reading, and that incubating shows nothing. |
+| F-ST-5 pushes | `psychology.json` `pushes`: 27 rows, 8 pushes the engine can drive (P01, P02 slider, P03, P04, P12, P15 mood, P17, P27 mood). | Each push is `meter`, `delta`, `per` (a day) from the row, fired while its condition on outputs holds. `dayPushes` returns them; the caller applies them to its own meters (mood, the sliders), as the alignment code is not touched. P04 fires from the seventh day the condition held (the caller keeps the streaks the function returns). "Heat strain" is read as core temperature over 38 C (the row's own figure); "Scurvy stage 1" is stage 1 exactly (`deficiency_vit_c` is 1), as the row names no later stage; P27's size is the engine's `mood-regulation` output. | Confirm the readings of heat strain and scurvy; the meters' names and ranges. |
+
+Rows of the capability table the adapter does not compute: Movement (tiles), Work capacity (duties), state (STATS 4),
+Accident chance, Appearance. Each has a reason in `stats.json` `notComputed`.
+
+### Factors with no engine output (F-ST-2)
+
+| Factor | Impairment | Why there is no output |
+|---|---|---|
+| forceAvailable(limb) | muscle | no per-limb muscle force or fatigue output; the engine's muscular module holds indices, not a limb's force today |
+| woundDip(limb) | wound | the engine counts open wounds by kind but gives no limb and no depth; the dip is a range by depth (x0.8 to x0.5) |
+| headWoundDip | wound | as woundDip, for the head |
+| torsoWoundDip | wound | as woundDip, for the torso |
+| legsFactor | wound | the worse leg's woundDip: needs a wound's limb |
+| balanceFactor | muscle | forceAvailable of glute_med and deep_core: no per-group force output |
+| muscleFatigueCap(limb) | muscle | no per-limb muscle fatigue output |
+| capFactor(limb) | cap | permanent caps (a stroke, a lost limb) have no engine output |
+| coldFactor | cold | the engine's core-temperature table gives a state, not a capability factor |
+| coldFactor(Dex) | cold | as coldFactor, for the hands |
+| hydrationFactor(Strength) | hydration | the hydration table gives an Endurance multiplier only |
+| painFactor(limb) | pain | the engine gives pain (medicine.pain) and its gating, but no factor from pain to coordination |
+| drinkFactor(+) | drink | Nerve: rum raises the read (fiction, open in body.json); the coordination output falls with drink, so it cannot stand in |
+| feverFactor | fever | the engine's disease stages carry no fever flag or factor |
+| bloodFactor | blood | the bleeding class table names x0.8 for class II only; classes III and IV give no multiplier |
+| nutritionFactor | nutrition | deficiency stages are outputs (deficiency_<id>) but no table turns a stage into a Constitution factor |
+| fatigueDay | fatigue | fatigueDay needs the day's MET-hours against aerobic_today; the engine's fatigue_met_hours is a different accumulator |
+| seaLegs | sea-legs | no engine output; a ship's motion is not modelled |
+| light | light | light comes from the map (COMBAT 6), not the engine |
+| nightBlindness | vitamin-a | deficiency_vit_a is a stage; no table gives its Eyesight factor |
+
+### Pushes the engine's outputs cannot drive (F-ST-5)
+
+The row number is the row of `psychology.json` `pushes`. A part is the half of a row the engine cannot drive (the other half is a push above).
+
+| Push | State | Needs |
+|---|---|---|
+| P02 (madness +1 a day) | Sleep debt over 24 h | whether the character's madness trigger is being pushed (the story keeper's); not an engine output |
+| P05 | Hunger over 0.6 (NUTRITION 4: the drive, from hours and deficit) | hunger (the drive from hours and deficit): neurology reads it as an input; no engine output carries it. Meals missed are the host's |
+| P06 | Hunger over 0.8 for 3+ days | hunger over 0.8 for 3+ days: as row 5 |
+| P07 | Prolonged deprivation: starvation stage 2+ for 14+ days, and what happened in it (who hoarded, who shared, who was cheated) | starvation stage 2+ for 14+ days and the memories of who hoarded or shared: no starvation stage output, and the memories are the story keeper's |
+| P08 | Appetite: a meal eaten with appetite over 0.8 (a hot meal, fresh meat, a favourite) | a meal's appetite, per meal: a meal event is the food adapter's, appetite is a circuit output but the row asks for a meal eaten |
+| P09 | Appetite low while hunger is high (off his food: fever, seasickness, grief, 30 days of biscuit) | appetite low while hunger is high, per refused meal: hunger and a refused meal are host facts |
+| P10 | Appetite and the person (the story keeper's per character) | favourite and hated foods per character: open, the story keeper's |
+| P11 | Starvation stage 2+ (NUTRITION) | starvation stage: the engine's starvation_limit is a flag (0 or 1), not a stage; the row asks for stage 2+ |
+| P13 | Drink: a ration of rum (STATS 4 drink state) | a ration of rum drunk that evening: an event the host raises |
+| P14 | Drink: drunk | 'drunk' has no engine threshold on conc_alcohol; the row gives about +20 for the night, not a limit |
+| P15 (Volatile pressure while over 38 C) | Heat strain (PHYSIOLOGY) | the row gives no size for the slider pressure |
+| P16 | Fever (MEDICINE) | fever: the engine's disease stages carry no fever flag; the row also pushes alertness, which is the engine's already |
+| P18 | Seasickness day (PHYSIOLOGY) | seasickness: no engine output; a ship's motion is not modelled |
+| P19 | A crew mate's death (MEDICINE / COMBAT) | a crew mate's death: an event, with hearts from the relationship web |
+| P20 | A crew mate's resurrection in a new form (COMBAT 4e) | a resurrection: open, the story keeper's |
+| P21 | Isolation: no one talked to for 3+ days (the keyword dialogue) | no one talked to for 3+ days: the dialogue system's |
+| P22 | Being posted to the duty they are best at (STATS) | a post matching the character's best duty: the crew engine's |
+| P23 | Being posted where they are weak and failing | a post where they fail: the crew engine's |
+| P24 | Fear: outnumbered, a storm, a fever aboard | fear events (outnumbered, a storm): events, and the contagion between crew mates; fear-and-stress is an output but the row asks for the event |
+| P25 | Winning a fight, a prize, fresh food after a long passage | a win, a prize, fresh food: events the host raises |
+| P26 | A romance partner wounded or sick | a romance partner wounded or sick: the relationship web |
+| P27 (Volatile pressure; the craving push toward the habit; a slight if denied) | Withdrawal (NEUROLOGY.md clock 4: a habit broken) | the row gives no size for these (the last is open) |
+
+### Faces the engine's outputs cannot choose (F-ST-4)
+
+| Face | Why |
+|---|---|
+| anaemia-iron-folate-b12-hookworm-malaria | no output says which delivery failure is active; haemoglobin is an output but the table gives no threshold for the face |
+| dehydration-sweat-the-fluxes | dehydration surfaces through physiology.hydration (hydration_row) |
+| lung-failure-drowning-pneumonia-opioid-breathing | saturation is an output; the table gives no saturation threshold for the face (medicine.exposure covers hypoxia) |
+| heart-failure | heart failure is an event with no output by id |
+| circulation.events | the eight events (angina, infarction, stroke, ...) have no engine output by id |
