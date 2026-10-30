@@ -5,20 +5,18 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
 ## State
 
 - Stamped from the board kit; the placeholder engine stays only so the four checks pass. Not a board game.
-- PLAN units 1-10 done: the dock and every fishing stage (`web/src/world/`, pure logic in `web/src/fishing/`,
-  numbers in `data/pirate-ship/fishing.json`, all placeholders).
-- PLAN Phase 2 alignment units 11-15 built (tasks 2474-2478): `web/src/alignment/` (spec `balance/ALIGNMENT.md`).
-  `square.ts` classifies the ±100 square into 9 regions; `charts.ts`, `events.ts`, `state.ts`, `engine.ts` reduce a
-  command log; `institutions.ts`, `town.ts`, `endings.ts` do sleep transforms, the town mean and the 9 endings.
-  No UI uses it yet.
-- ghostRule is decided: every-pair-both-improve (Rex, task 2481; ALIGNMENT.md §8).
-- Numbers: `data/pirate-ship/alignment/` (`thresholds.json` holds every §8 key; `charts.json`, `starts.json`,
-  `institutions.json`, `events.json` placeholder events only). All placeholders.
-- Simulator: `cd web && npx vitest run src/alignment/sim`. Joining gates are in the sim (`gates.json`,
-  `unlock`; ISFJ needs the ESTP aboard; INTP, ESTP, ESFP and ISFJ are story-gated) and all four perfect towns are
-  still reachable with gates on (og 61, cg 68, oe 49, ce 57 steps).
-- Develop conditions are in the sim (`data/pirate-ship/alignment/conditions.json`, `conditions.ts`; the farm and the
-  butcher shop need `supply bodies`; placeholder: once is enough).
+- Fishing (PLAN 1-10): the dock and every stage (`web/src/world/`, logic in `web/src/fishing/`, numbers in
+  `data/pirate-ship/fishing.json`, all placeholders).
+- Alignment (PLAN 11-15, spec `balance/ALIGNMENT.md`): `web/src/alignment/` reduces a command log (square, charts,
+  events, institutions, town, endings). No UI uses it yet. Numbers in `data/pirate-ship/alignment/`, placeholders.
+  Simulator: `cd web && npx vitest run src/alignment/sim`; all four perfect towns reachable with gates on.
+  ghostRule decided: every-pair-both-improve (Rex, task 2481).
+- Equipment catalogue (`body/data/equipment.json`, about 313 items): all researched and reconciled, with
+  `conf_history` and `conf_capability` columns on every row; the state section is in `science/SCIENTIFIC_EQUIPMENT.md`.
+  Build: `python body/build-body-data.py` (must print 0 validation problems). Open: navigation has no GOODS 3c
+  skill (cells say `open`); `tools_gunsmith` has no 1650-1730 source (Rex).
+- Realism engine (`@rex/realism`) lives at `E:/AI Programs/Toolchain/realism`, outside this repo: fuller physics and
+  substance data are done; the reaction solver is task 2509.
 
 ## Next
 
