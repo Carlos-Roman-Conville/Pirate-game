@@ -41,7 +41,12 @@ export function economyMaterials(economy: EconomyRunner, aliases: Aliases): Mate
     rates: (recipe) => {
       const def = economy.state.recipes[recipe]
       if (!def) throw new Error(`unknown recipe: ${recipe}`)
-      return { ...def.rates }
+      // CONTRACTS §16, during the switch to person-hours: both fields, each derived from the other when only one is
+      // stored (the economy keeps rates as given). Settlement reads labourPerUnit until its unit 2617.
+      const perDay = economy.config.legacyHoursPerWorkerDay
+      const hours = def.rates.labourHoursPerUnit ?? def.rates.labourPerUnit! * perDay
+      const rates = { unitsPerFixtureDay: def.rates.unitsPerFixtureDay, labourPerUnit: def.rates.labourPerUnit ?? hours / perDay, labourHoursPerUnit: hours }
+      return rates
     },
   }
 }
