@@ -1,0 +1,68 @@
+{
+  "_about": "Adapter rows for web/src/world/adapters/medicine.ts (Phase 5 adapter 6). Nothing here is science: the engine (@rex/realism medicine.ts) owns every course, risk, healing time and efficacy; the numbers of a dip are read from files/pirate-ship/body/data/medicine.json `wounds` (What it dips), the skill from `treatments` (Skill needed). What this file holds is vocabulary and fixtures, each listed in web/src/world/FIXTURES.md (F-MD-*). `kinds` maps a damage kind of a hit to a `wounds` row id; `locations` names the hit locations of COMBAT.md 4a and the body parts that stand for each; `locationAttributes` is COMBAT.md 4a's 'Hit location / What it dips' table (the attributes a wound row that names no attribute dips); `attributes` are the stat names the wound rows use.",
+  "kinds": {
+    "cut": "medicine.wounds.cut-incised",
+    "thrust": "medicine.wounds.thrust-penetrating",
+    "shot": "medicine.wounds.gunshot-musket-ball-splinter",
+    "blunt": "medicine.wounds.blunt-bruise-fracture",
+    "burn": "medicine.wounds.burn-and-scald",
+    "crush": "medicine.wounds.crush-a-gun-a-cask-a-falling-yard",
+    "amputation": "medicine.wounds.amputation-the-surgeons-wound"
+  },
+  "headBlow": { "kind": "blunt", "location": "head", "wound": "medicine.wounds.head-blow-concussion" },
+  "locations": {
+    "arm": ["arm", "shoulder", "forearm", "hand", "wrist", "elbow"],
+    "leg": ["leg", "thigh", "knee", "shin", "calf", "foot", "ankle"],
+    "head": ["head", "face", "skull", "jaw", "eye", "neck"],
+    "torso": ["torso", "chest", "belly", "back", "gut", "ribs"]
+  },
+  "limbs": ["arm", "leg"],
+  "locationAttributes": {
+    "arm": ["Strength", "Dexterity", "Reflexes"],
+    "leg": ["Strength", "Dexterity", "Reflexes"],
+    "head": ["Eyesight", "Perception", "Hearing", "Intuition", "Spatial Reasoning"],
+    "torso": ["Constitution", "Endurance pool"]
+  },
+  "attributes": ["Strength", "Dexterity", "Reflexes", "Agility", "Eyesight", "Perception", "Hearing", "Intuition", "Spatial Reasoning", "Constitution", "Endurance pool"],
+  "variants": ["fracture"],
+  "zeroPhrases": ["out of use"],
+  "baseDose": 0.02,
+  "conditionsHour": 12,
+  "unitsPerUse": 1,
+  "vectors": {
+    "yellow_fever": "Mosquito exposure",
+    "malaria_vivax": "Mosquito exposure",
+    "malaria_falciparum": "Mosquito exposure",
+    "dysentery": "Foul-water exposure",
+    "typhoid": "Foul-water exposure"
+  },
+  "supplies": {
+    "bleeding-venesection-cupping-leeches": [{ "text": "lancet, basin", "any": ["the-surgeon-s-chest-stocked"], "kept": true }],
+    "purging-and-emetics-jalap-senna-antimony-ipecacuanha": [{ "text": "drugs", "any": ["compound-medicines", "simples-and-herb-remedies", "medicinal-herbs", "drug-plants-sarsaparilla-china-root-cassia-tamarind", "balsams-jalap-copal", "spanish-american-drugs"] }],
+    "sweating-blistering-cautery": [{ "text": "fire" }, { "text": "cantharides", "any": ["compound-medicines"] }],
+    "mercury-unction-pills-salivation": [{ "text": "mercury", "any": ["mercury"] }],
+    "peruvian-bark-cinchona": [{ "text": "Peruvian bark", "any": ["peruvian-bark", "peruvian-bark-against-fevers"] }],
+    "opium-laudanum": [{ "text": "drugs", "any": ["chemical-medicines-mercury-antimony-laudanum"] }],
+    "lemon-or-lime-juice-fresh-greens": [{ "text": "limes, oranges, lime juice", "any": ["limes-oranges-lemons", "lime-juice"] }],
+    "washing-wounds-dry-lint-bandage-stitching": [
+      { "text": "lint, linen", "any": ["coarse-linen", "fine-linen"] },
+      { "text": "thread", "any": ["linen-thread"] },
+      { "text": "needle", "any": ["the-surgeon-s-chest-stocked"], "kept": true }
+    ],
+    "extracting-balls-and-splinters": [{ "text": "forceps, probe", "any": ["the-surgeon-s-chest-stocked"], "kept": true }],
+    "splints-and-reduction": [{ "text": "wood" }, { "text": "bandage", "any": ["coarse-linen", "fine-linen"] }],
+    "tourniquet-and-ligature": [{ "text": "cord", "any": ["cordage"] }, { "text": "needle", "any": ["the-surgeon-s-chest-stocked"], "kept": true }],
+    "amputation": [
+      { "text": "saw, knife", "any": ["the-surgeon-s-chest-stocked"], "kept": true },
+      { "text": "rum", "any": ["rum"] },
+      { "text": "opium", "any": ["chemical-medicines-mercury-antimony-laudanum"] }
+    ],
+    "trepanning": [{ "text": "trepan", "any": ["the-surgeon-s-chest-stocked"], "kept": true }],
+    "inoculation-variolation": [
+      { "text": "lancet", "any": ["the-surgeon-s-chest-stocked"], "kept": true },
+      { "text": "pustule" }
+    ],
+    "quarantine-and-airing-the-ship": [],
+    "rum-and-drinking-the-fever-away": [{ "text": "rum", "any": ["rum"] }]
+  }
+}

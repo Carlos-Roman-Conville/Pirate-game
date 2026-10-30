@@ -54,7 +54,12 @@ const tables: Record<string, Table> = {
 }
 
 /** What the caller knows that the outputs do not: the body's mass (the aerobic index is per kg) and, for a row that differs by attribute, which one. */
-export interface Context { massKg?: number; attribute?: string }
+export interface Context {
+  massKg?: number
+  attribute?: string
+  /** Factors the caller supplies by name where the engine has no output for them (the wound dips of medicine.ts, F-MD-*); an engine output wins. */
+  supplied?: Record<string, number>
+}
 
 export interface Capability {
   row: string
@@ -143,8 +148,8 @@ export function tokenOf(name: string): string { return factorSpec(name).token ??
 /** The rows of the table the adapter does not compute, with why. */
 export function notComputed(): { row: string; why: string }[] { return data.notComputed }
 
-function factorValue(f: FactorSpec, outputs: BodyOutputs, ctx: Context): number | null {
-  if (f.outputs.length === 0) return null
+function factorValue(name: string, f: FactorSpec, outputs: BodyOutputs, ctx: Context): number | null {
+  if (f.outputs.length === 0) return ctx.supplied?.[name] ?? null
   let value: number | null = null
   for (const id of f.outputs) {
     const v = outputs[id]
@@ -166,7 +171,7 @@ export function capabilityToday(row: string, attr: number, outputs: BodyOutputs,
   const seen: Record<string, number | null> = {}
   let value = attr
   for (const n of names) {
-    const v = factorValue(factorSpec(n), outputs, ctx)
+    const v = factorValue(n, factorSpec(n), outputs, ctx)
     seen[n] = v
     if (v !== null) value *= v
   }

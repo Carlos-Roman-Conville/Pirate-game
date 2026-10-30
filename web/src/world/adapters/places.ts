@@ -199,6 +199,9 @@ function weightOf(cell: Cell, year: number | undefined): number {
 
 const wet = (month: number): boolean => String(cellOf(climate, climateRow(month), 'Season')).startsWith('wet')
 
+/** True when the climate table's Season cell for the month of this day of the year starts "wet" (the sickness adapter's season gate). */
+export function isWetSeason(dayOfYear: number): boolean { return wet(monthOf(dayOfYear)) }
+
 function draw(weights: number[], u: number): number {
   const total = weights.reduce((a, b) => a + b, 0)
   let at = u * total
