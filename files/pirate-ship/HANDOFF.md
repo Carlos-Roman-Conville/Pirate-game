@@ -1,4 +1,4 @@
-# Pirate Ship: handoff (rewritten 2026-10-29 by task 2517)
+# Pirate Ship: handoff (rewritten 2026-10-29 by task 2519)
 
 Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or something is parked.
 
@@ -16,7 +16,7 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
 - Equipment catalogue (`body/data/equipment.json`, about 313 items): all researched and reconciled, with
   `conf_history` and `conf_capability` columns on every row; the state section is in `science/SCIENTIFIC_EQUIPMENT.md`.
   Build: `python body/build-body-data.py` (must print 0 validation problems). Open: navigation has no GOODS 3c
-  skill (cells say `open`); `tools_gunsmith` has no 1650-1730 source (row `EQ-MET-19`, kind `searched`: Moxon, Colonial Williamsburg, Royal Armouries, probate inventories). Read in task 2517: Holme (1688) book III ch. 7 has no gunsmith (the printing ends at ch. 13); Diderot 'Arquebusier' seen only in catalogue records. The mark begins `searched:`; a hit on the plates or a probate list makes `EQ-MET-19` a `history` row.
+  skill (cells say `open`); `tools_gunsmith` has no 1650-1730 source (row `EQ-MET-19`, kind `searched`: Moxon, Colonial Williamsburg, Royal Armouries, probate inventories). Task 2519 tried to open EEBO-TCP Holme (403), the 1905 Roxburghe edition (no viewable pages) and Diderot 'Arquebusier' plates (404): none could be read, recorded in `EQ-MET-19` (6)-(7). Holme book III ch. 7 has no gunsmith. The mark begins `searched:`; a readable Roxburghe or plates page makes `EQ-MET-19` a `history` row.
 - Realism engine (`@rex/realism`) at `E:/AI Programs/Toolchain/realism`, outside this repo: phase 2 done. The game's data
   files hold id plus game columns; `build-body-data.py` reads `E:/AI Programs/Toolchain/realism/data/library` and counts
   a missing library as a validation problem.
