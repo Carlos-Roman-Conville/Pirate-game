@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@rex/realism": "file:../../../../Toolchain/realism",
+    "@rex/settlement": "file:../../../../Toolchain/settlement",
     "motion": "^13.4.4",
     "phaser": "^4.2.1",
     "react": "^19.2.8",

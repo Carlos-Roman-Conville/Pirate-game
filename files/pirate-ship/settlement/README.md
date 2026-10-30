@@ -14,7 +14,17 @@ extension of the slot system (2026-10-29). **Design only; nothing in this repo h
 | `TESTS.md` | test specs; the acceptance test A1 |
 | `QUESTIONS.md` | what only Rex can answer |
 
-What this folder will hold once Rex approves the plan: the adapter's design record (`rules.json` sources, the
-starting titles and businesses per `port.*` place, each row marked Rex / proposed / open). The town keeper keeps
-`../town/`; the slot model there is unchanged by any of this. The record types in `../town/FACILITIES.md` s7 are
-superseded by `PACKAGES.md` s2 only when Rex says so.
+**2026-10-29, later: Rex approved the architecture and the foundations** (agreeing with ChatGPT's review, then
+verbatim via the town keeper). Built the same day:
+
+| Where | What |
+|---|---|
+| `Toolchain/settlement/src/`, `test/` | the engine (step 1): records, ledger, titles with transfer terms, leases, projects and layouts, businesses, posts, assignments, offices, the seven-step tick; 23 tests |
+| `web/src/settlement/` | the adapter (step 2): `load.ts` replays `start.json` into engine commands and derives the `port.*` bindings; `bridge.ts` turns engine events into story hooks keyed on `port.*` and never issues an alignment command; `settlement.test.ts` holds T0 (alignment invariance under a seeded random walk), T1, A1 and A2 |
+| `data/pirate-ship/settlement/start.json` | the starting port as seed rows: holders, businesses, fixtures and transfer terms are FACILITIES s7's proposal, **every row proposed** (Q6 answered in part); geometry is an explicit placeholder until the derived map (step 3) |
+| `web/package.json`, `web/vite.config.ts` | `@rex/settlement` linked like `@rex/realism` |
+
+Untouched: `../town/`, `web/src/alignment/`, `data/pirate-ship/alignment/`, the economy data. The record types in
+`../town/FACILITIES.md` s7 are superseded by `PACKAGES.md` s2 only when Rex says so; the town keeper records what
+Rex decides. Questions that block the next phase are listed in `Toolchain/settlement/QUESTIONS.md` (Q1 for the
+map, Q6's rows for property sign-off, Q5 and Q10 for facilities and workforce).
