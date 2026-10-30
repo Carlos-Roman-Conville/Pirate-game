@@ -12,3 +12,20 @@ Conventions for agents: [AGENTS.md](AGENTS.md) and `../CARD_GAMEDEV.md`. Rules, 
 - `dotnet test engine.tests`
 - `dotnet run --project server` → http://localhost:5308 (serves the built client)
 - `npm install` then `npm run dev` in `web/` → http://localhost:5320
+
+## The platform engines
+
+`web/` depends on three packages of the [Reality-simulator](https://github.com/Carlos-Roman-Conville/Reality-simulator)
+platform: `@rex/realism`, `@rex/settlement`, `@rex/economy`. `web/package.json` points at them with `file:` paths to
+the local working copies (`Toolchain/<name>` on the development machine). On a fresh clone, install them from a
+checkout of the platform instead:
+
+    git clone https://github.com/Carlos-Roman-Conville/Reality-simulator ../Reality-simulator
+    cd web
+    npm install ../../Reality-simulator/packages/realism ../../Reality-simulator/packages/settlement ../../Reality-simulator/packages/economy
+    npm install
+
+`npm install <path>` rewrites the three `file:` entries to the checkout you gave it. The engines are independent of
+this game; the game reaches them only through its adapters in `web/src/settlement/`, `web/src/economy/` and
+`web/src/world/adapters/`. A pinned-dependency install that needs no sibling checkout is still open
+(`Reality-simulator/docs/MIGRATION.md`).
