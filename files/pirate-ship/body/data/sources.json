@@ -2349,6 +2349,158 @@
         "https://www.futuremuseum.co.uk/collections/life-work/social-history/home-life/housekeeping/tinderbox; https://collection.sciencemuseumgroup.org.uk/objects/co159067/tinder-box",
         "history",
         "2026-10-29"
+      ],
+      [
+        "EQ-SF-CROSS",
+        "Wikipedia Cross-staff",
+        "Levi ben Gerson 14th c., Jacob ben Makir; Dee 1550s; Dutch backstaves dropped 1731; spiegelboog 1660",
+        "https://en.wikipedia.org/wiki/Cross-staff",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-OCT",
+        "Wikipedia Octant",
+        "Hadley and Godfrey 1730; Newton 1699; accuracy 2 and 1 arcmin; materials",
+        "https://en.wikipedia.org/wiki/Octant_(instrument)",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-SEX",
+        "Wikipedia Sextant",
+        "1731; invar frames; 1 arcmin and 0.1; 120-degree scale; needs a horizon, time, tables",
+        "https://en.wikipedia.org/wiki/Sextant",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-CHRON",
+        "Wikipedia Marine chronometer",
+        "Harrison H1 1735, H4 1761; 0.5 s a day; materials; needs sextant, almanac; Navy 1825",
+        "https://en.wikipedia.org/wiki/Marine_chronometer",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-COMP",
+        "Wikipedia Compass",
+        "Europe about 1190, dry compass about 1300; Shen Kuo 1088; card, gimbal, binnacle; 32 points",
+        "https://en.wikipedia.org/wiki/Compass",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-TRAV",
+        "Wikipedia Traverse board",
+        "Bourne 1571; pegs, compass rose; half-hour headings; quarter-knot speeds",
+        "https://en.wikipedia.org/wiki/Traverse_board",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-PORT",
+        "Wikipedia Portolan chart",
+        "Carta Pisana 1280; vellum; makers; coastal use; first printed 1472",
+        "https://en.wikipedia.org/wiki/Portolan_chart",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-GUNT",
+        "Wikipedia Gunter's chain",
+        "1620; 66 ft; 100 links of 7.92 in; statutory by 1670s",
+        "https://en.wikipedia.org/wiki/Gunter%27s_chain",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-THEO",
+        "Wikipedia Theodolite",
+        "Digges 1571; Habermel 1576; Sisson 1725; Ramsden 1787 at 1 arcsec",
+        "https://en.wikipedia.org/wiki/Theodolite",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-HERB",
+        "Wikipedia Herbarium",
+        "Ghini pressed plants between paper, garden at Pisa 1544; flimsies, blotters; labels",
+        "https://en.wikipedia.org/wiki/Herbarium",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-SLOANE",
+        "Web search (Natural History Museum Sloane Herbarium, data portal)",
+        "Sloane in Jamaica 1687 to 1689; seven bound herbarium volumes; no spirit jars confirmed",
+        "https://nhm.ac.uk/research-curation/scientific-resources/collections/botanical-collections/sloane-herbarium",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-PET",
+        "Web search (Wikipedia James Petiver; Trinity Hall news; biostor 189012)",
+        "Petiver's 1690s kits of paper, pins, boxes, bottles; butterflies dried like plants; 79 correspondents",
+        "https://en.wikipedia.org/wiki/James_Petiver; https://archive.org/download/biostor-189012/biostor-189012.pdf",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-ASSAY",
+        "Web search (Ercker, Wikipedia; RCA charcoal assay furnace project) and Wikipedia Blowpipe (tool)",
+        "Ercker 1574 covers furnaces, cupels, balance; blowpipe analysis about 1738; Gahn's portable blowpipe",
+        "https://en.wikipedia.org/wiki/Lazarus_Ercker; https://en.wikipedia.org/wiki/Blowpipe_(tool)",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-BARO",
+        "Wikipedia Barometer",
+        "Torricelli 1643; Perier 1648; Hooke 1668; Halley 1698 to 1700; Nairne 1772",
+        "https://en.wikipedia.org/wiki/Barometer",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-SOUND",
+        "Wikipedia Sounding line and Royal Society picture library (Hooke's device)",
+        "Massey 1802, 150 fathoms; Kelvin 1876; Hooke shown 30 Sept 1663, printed 1666 and 1667; Moore 1678 report",
+        "https://en.wikipedia.org/wiki/Sounding_line; https://pictures.royalsociety.org/image-rs-15288",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-LANT",
+        "Wikipedia Lantern",
+        "horn plates before glass; 1361; ship lanterns; Mary Rose; pirate code below-deck rule",
+        "https://en.wikipedia.org/wiki/Lantern",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-CANDLE",
+        "Wikipedia Candle clock",
+        "You Jiangu 520; Alfred; al-Jazari 1206; 20 minutes a mark; horn lantern case",
+        "https://en.wikipedia.org/wiki/Candle_clock",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-LEVEL",
+        "Wikipedia Spirit level",
+        "Thevenot before 1661; alcohol preferred; 0.005 degree; common by 1700",
+        "https://en.wikipedia.org/wiki/Spirit_level",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-SF-GLOBE",
+        "Wikipedia Globe",
+        "Crates; Behaim 1492; paper gores on a sphere",
+        "https://en.wikipedia.org/wiki/Globe",
+        "history",
+        "2026-10-29"
       ]
     ]
   }
