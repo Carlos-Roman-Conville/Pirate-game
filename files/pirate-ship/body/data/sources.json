@@ -1181,6 +1181,150 @@
         "https://sciencehistory.org/distillations/medicinal-leeches-and-where-to-find-them",
         "history",
         "2026-10-29"
+      ],
+      [
+        "EQ-MET-1",
+        "Wikipedia: Blast furnace",
+        "earliest European blast furnaces (Durstel, Maerkische Sauerland, Lapphyttan, 12th-13th c.); first English furnace Queenstock, Buxted, about 1491; zone temperatures to about 1,200 C; Darby coke 1709; 18th c. furnaces about 360 t a year",
+        "https://en.wikipedia.org/wiki/Blast_furnace",
+        "reference",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-2",
+        "Wikipedia: Bloomery",
+        "bloomery below iron's melting point; blooms about 15 kg in the late 14th c., later to about 300 kg; water-driven bellows and hammers; last English bloomery about 1770; Catalan forges to the mid-19th c.",
+        "https://en.wikipedia.org/wiki/Bloomery",
+        "reference",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-3",
+        "HMS (Historical Metallurgy Society) and Don Wagner: smelting and fining pages (web search digest)",
+        "bloomery 1,200 to 1,300 C at the base; fining turns cast iron to wrought iron and used enormous charcoal; sources disagree on the first blast furnace (12th, 13th or 14th c.) and finery data is scanty",
+        "https://donwagner.dk/arch-iron/eu/fining-puddling-europe-eu.html",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-4",
+        "Wikipedia: Trip hammer",
+        "water-driven trip hammers in medieval Europe by the 12th c. (French records 1116 and 1249; Styrian 1135 and 1175); tilt head about 50 kg, German hammer mills to 300 kg; finery belly-helve head about a quarter ton",
+        "https://en.wikipedia.org/wiki/Trip_hammer",
+        "reference",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-5",
+        "Wikipedia: Slitting mill; John Spilman; Godfrey Box",
+        "first English slitting mill by Godfrey Box at Dartford, 1590 to 1595 (sources differ); later mills about 1611 and 1627; water-powered rolling and slitting of bar into nail rod",
+        "https://en.wikipedia.org/wiki/Slitting_mill",
+        "reference",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-6",
+        "Wikipedia: Wire drawing",
+        "drawing through dies, cold, 15 to 25 percent area reduction a draw for small wire, annealing between draws, tool-steel dies; the page does not give the 14th c. Nuremberg history (open)",
+        "https://en.wikipedia.org/wiki/Wire_drawing",
+        "reference",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-7",
+        "Wikipedia: Milled coinage; Screw press",
+        "Bramante's screw press for papal bullae; Aubin Olivier at the Paris mint 1551; Mestrelle in England 1560; Briot 1632; Blondeau 1662; hammered money not demonetised until 1695; no output figures (open)",
+        "https://en.wikipedia.org/wiki/Milled_coinage",
+        "reference",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-8",
+        "Science Museum Group, Jan Verbruggen (Wikipedia, Grace's Guide, ERIH)",
+        "Verbruggen boring mill at the Royal Brass Foundry, Woolwich, 1770 (one source says 1763 for an earlier attempt); horizontal boring of solid-cast guns, from Maritz; The Hague 1750s; before that guns cast hollow on a core and finished in vertical borers; Woolwich foundry built 1716-17",
+        "https://collection.sciencemuseumgroup.org.uk/objects/co46453/model-of-horse-power-gun-boring-machine",
+        "museum",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-9",
+        "Wikipedia: Cannon",
+        "bronze guns preferred over iron for stability; demi-cannon about 1,500 kg firing 15 kg shot; 32-pounder long gun over 3 t; proof by powder; the casting details (loam moulds, Hogge 1543) were not on the part read (open)",
+        "https://en.wikipedia.org/wiki/Cannon",
+        "reference",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-10",
+        "Wikipedia: Anvil",
+        "stone, then bronze, then wrought iron faced with steel; weights marked in cwt-qr-lb; cast iron unsuitable; hard face saves blow energy; London pattern is mid-19th c.",
+        "https://en.wikipedia.org/wiki/Anvil",
+        "reference",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-11",
+        "Wikipedia: Glass cone",
+        "the English glass cone: a central furnace with annealing furnaces round the wall; five survive; no dates or temperatures on the page (open)",
+        "https://en.wikipedia.org/wiki/Glass_cone",
+        "reference",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-12",
+        "Historic England (Oare Gunpowder Works), Mills Archive, St Martha Parish history",
+        "water-powered powder mills in England from the mid-16th c.; powder before that made by hand for at least 200 years; stamp mills replaced by edge-runner mills in the 1730s; pressing and corning introduced between the 16th and 19th c.",
+        "https://historicengland.org.uk/listing/the-list/list-entry/1016497",
+        "heritage",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-13",
+        "Wikipedia: Gunpowder mill",
+        "press (edge-runner) mill kneads the paste; corning (kernelling) mill cuts the cake with toothed wheels; mills powered by wind, water or horse; one weak wall for blasts",
+        "https://en.wikipedia.org/wiki/Gunpowder_mill",
+        "reference",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-14",
+        "Wikipedia: Ropewalk; History Hit on the Chatham Ropery; Good Old Boat",
+        "Chatham ropery built 1728 (other sources 1790 for the long building); ropewalks at Chatham and Rochefort at the end of the 17th c.; Copenhagen 980 ft walk early 17th c.; hemp hatchelled, spun, tarred",
+        "https://en.wikipedia.org/wiki/Ropewalk",
+        "reference",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-15",
+        "Encyclopaedia Britannica 3rd ed. 1797 (tanning), Bampton and other tannery pages",
+        "oak-bark tanning takes 11 to 18 months, sometimes two years (1797); modern account 12 months in graded liquors and pits; bark dried two to three years",
+        "https://jimclifford.ca/early_encyclopedia_britannica/articles/1797/eb_3rd_1797_018987.html",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-16",
+        "South African History Online (Pinetown vats), SC Parks Otranto vats, Reza Vis on the two-vat system",
+        "17th c. Indian two-vat indigo (Finch, Pelsaert; steeping 16 to 48 hours); American plantation steeper and beater vats; indigo insoluble, reduced to dye, blue on oxidation in air",
+        "https://schpr.sc.gov/index.php/Detail/objects/S10817708012",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-17",
+        "Wikipedia: Loom",
+        "warp-weighted loom; horizontal treadle loom; draw loom (Han China to Europe); flying shuttle patented by John Kay 1733; hand-thrown shuttle limits width to the weaver's armspan; 150 to 160 picks a minute for shuttle looms",
+        "https://en.wikipedia.org/wiki/Loom",
+        "reference",
+        "2026-10-29"
+      ],
+      [
+        "EQ-MET-18",
+        "Wikipedia: Cooper (profession)",
+        "1298 English coopers organise; 1420 ordinance for a cooper's mark on casks; dry (slack) vs wet (tight) coopering; English cask sizes firkin 8, kilderkin 16, barrel 32, hogshead 52, butt 104 gallons; croze and adze named, other tools not given (open)",
+        "https://en.wikipedia.org/wiki/Cooper_(profession)",
+        "reference",
+        "2026-10-29"
       ]
     ]
   }
