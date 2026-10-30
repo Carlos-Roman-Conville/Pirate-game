@@ -1,0 +1,11 @@
+{
+  "_about": "F-WK fixtures, not scientific or adopted economy rates. See web/src/world/FIXTURES.md. Recipe data currently has no quantities or time. Only mapped occupations and material-converting recipes can run.",
+  "batch": { "hours": 8, "inputQuantity": 1, "outputQuantity": 1 },
+  "rate": { "base": 1, "skillReference": 50, "skillPerLevel": 0.01, "fatiguePerMetHour": 0.01, "floor": 0, "alertnessCeiling": 1 },
+  "occupationDuty": {
+    "cooper": "Coopering",
+    "carpenter": "Patching and caulking",
+    "blacksmith": "Smithing",
+    "victualler-cook": "Cooking"
+  }
+}

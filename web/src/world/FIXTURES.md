@@ -1,5 +1,26 @@
 # Fixtures: stand-ins the engine adapters use where the game has no system yet
 
+## Work and production (`web/src/world/adapters/work.ts`, task 2537)
+
+Rows: `data/pirate-ship/world/work.json`. Sources: GOODS.md sections 3c, 3d and 3f;
+FACILITIES.md section 2 (existing equipment and institution slots, not the section 1 proposal).
+The current recipe rows contain **no input/output quantities or times**. None of these
+fixtures is a measured production rate or a scientific physiology model.
+
+| Fixture | Stands in for | Value used | Rex's decision |
+|---|---|---|---|
+| F-WK-1 recipe size and time | Missing recipe quantities, durations and partial completion | One of every required input and one output per 8 working hours at the reference rate; the first stocked `inputsAny` alternative in recipe order is used, without mixing alternatives. Fractional batches consume and produce proportionately, capped at available inputs; no stored work in progress. | Quantities, units and duration for each recipe; discrete casks vs continuous progress, input substitution and interrupted work. |
+| F-WK-2 production rate | GOODS.md 3f says skill changes speed but gives no equation. BODY.md's proposed work capacity needs limb force and fatigueDay, neither supplied by characters.ts. | `max(0, 1 + (level - 50) * 0.01) * max(0, 1 - fatigue_met_hours * 0.01) * min(1, alertness)`. Both body outputs come from the engine by id; missing/invalid outputs throw. This is an expressly linear game placeholder, not the BODY.md formula or a conversion to fatigueDay. The full scheduled day runs in characters.ts and the end-of-day outputs set the whole day's rate. | Real recipe speed curve and how within-shift fatigue/recovery affects work; which engine outputs to use. |
+| F-WK-3 stock and conservation | No quantities or mass for non-food goods | `WorkInventory` wraps the existing food `Inventory` (kg, spoilage and rations unchanged); non-food goods use abstract units without spoilage. Callers use `.food` for rations. Every conversion records consumed and produced quantities separately. In minus issued minus spoiled minus remaining closes per good; unlike goods are never summed as mass. Spoilage runs before production. No automatic stock, fuel or waste is invented. | Native units, masses, yields, fuel, waste and non-food spoilage; physical mass conservation cannot be asserted until these exist. |
+| F-WK-4 staffing, facility, ownership, wages, construction | Missing assignment/capacity and property rules in the current institution model | Caller assigns one worker and recipe to an existing slot plus an explicit list of settlement-wide equipment. Everyone works their assignment; slot owner is copied unchanged. No wages, ownership transfers, construction, capacity limit or development prerequisite. `workDay` runs once per character/day; working hours are only the assigned occupation duty in that character's plan. | Starting recipe/equipment assignments, staff counts, capacity, relation to developed status, wages and property/construction rules. |
+| F-WK-5 occupation activity | Occupations contain skills but no MET or schedule | Cooper -> Coopering; Carpenter -> Patching and caulking; Blacksmith -> Smithing; Victualler/Cook -> Cooking. The characters adapter supplies these activities' engine MET ids. Other occupations throw as unsupported. No occupation grants knowledge or skill; callers supply known recipes and skill levels independently. | MET mappings for the other occupations, starting knowledge/levels and schedules; skill progression, quality and failure rules (none applied here). |
+| F-WK-6 unsupported recipes | Missing resource pools, service effects, access and byproduct yields | Gathering/inputless, service, off-map, non-Caribbean, access-gated and byproduct recipes (including their parent runs) throw before advancing a body or converting stock. Only material conversions with mapped occupation activity run. | Resource availability, service effects, expansion/access gates and linked byproduct yields before enabling these paths. |
+
+Integration: issue rations through `inventory.food`, then call `workDay` instead of a
+separate `simulateDay` for an assigned worker. The returned report contains that day's
+body outputs/checks, duty/activity, rate, consumed/produced goods and spoilage. Institution
+alignment and the separate settlement backend are not modified.
+
 Phase 5 rule 6 (`Toolchain/realism/PHASES-4-5.md`): where the simulation needs something the game does not have, the
 adapter uses a named fixture declared here: what it stands in for, the value used, and the decision Rex must make. A
 fixture never silently decides a rule. Values live in data files, never in code. Each adapter adds its rows below.
