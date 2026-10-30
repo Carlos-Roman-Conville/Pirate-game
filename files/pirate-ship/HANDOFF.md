@@ -18,19 +18,15 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
 - Realism engine `@rex/realism` at `E:/AI Programs/Toolchain/realism`, outside this repo; the game's data files hold id plus
   game columns, `build-body-data.py` reads its `data/library`.
 
-### Settlement (task 2563 re-ran it on the engine of 2561/2562)
+### Settlement (re-run by task 2563)
 
 In `web/`: `node --experimental-strip-types src/world/settlement.run.ts` (Aug 1-30, about 22 s; the sim test asserts under 60 s).
-Circulation runs every body step (F-MD-9 retired); the ledger ends with peak memory.
-The sim test reads `bleedFactor()` from the engine. The body build's chemistry rows take "oxygen over 15%" (`minO2`) and
-"about 32.8 MJ/kg" from the engine; the rate "by fuel surface and draught" is the game's column in `chemistry.json` (2575).
-- Every path that can end a body opens an engine `Crisis`; `healDay` collects them before `releaseDayTrace` renews the trace.
-  Day 12 settler-4's unbound chest wound (F-MD-8, host rate) reaches class IV and opens a crisis; nobody is declared dead.
-- Hydration: `workRate` multiplies by `work_capacity_hydration`. Everyone drinks hourly (F-CH-9) except the bakery cooks from
-  day 20 (F-SE-12): two hydration crises each on day 21, the bakery stops.
-- 2562 found no vector source: `exposeAt` reads the engine's `vector` where a row has one, else F-MD-4 (`doseSource`).
-- Fixtures: `web/src/world/FIXTURES.md` (F-SE, F-MD-8, F-CH-9; retired rows say `retired by 2563` or `2570`). P12 thirst needs two
-  dry days (F-SE-11, Rex).
+Circulation runs every body step (F-MD-9 retired); the sim test reads `bleedFactor()` from the engine. The body build takes
+"oxygen over 15%" and "about 32.8 MJ/kg" from the engine; the rate by surface and draught is the game's column (2575).
+- Every path that can end a body opens an engine `Crisis`. Day 12 settler-4's chest wound reaches class IV: a crisis, no death.
+- Hydration: `workRate` scales by `work_capacity_hydration`; the bakery cooks stop drinking from day 20 (F-SE-12) and stop work.
+- `exposeAt` reads the engine's `vector` where a row has one, else F-MD-4. Fixtures: `web/src/world/FIXTURES.md`.
+  P12 thirst needs two dry days (F-SE-11, Rex).
 
 ## Next
 
