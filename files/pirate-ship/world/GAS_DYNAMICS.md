@@ -79,14 +79,14 @@ reaction produces (`../science/CHEMISTRY.md`) nor what a dose does (`../body/`).
 ## 4. The grid (deferred)
 
 <!-- table:library/gasdynamics.grid -->
-*The grid model (deferred): transport on the combat map* (science; confidence medium; source: Advection-diffusion-reaction: dC/dt = -div(u C) + div(D grad C) + S - R, with u the wind field, D an effective turbulent diffusion; implemented later as a coarse cellular model on the combat grid (COMBAT 6's tiles) for releases that cross cells in seconds; the stability constraint (a cell's air must not cross more than one cell per step) sets the step. Not built; the interface is the units table.)
+*The grid model (deferred): transport on a grid* (science; confidence medium; source: Advection-diffusion-reaction: dC/dt = -div(u C) + div(D grad C) + S - R, with u the wind field, D an effective turbulent diffusion; implemented later as a coarse cellular model on a grid the host supplies for releases that cross cells in seconds; the stability constraint (a cell's air must not cross more than one cell per step) sets the step. Not built; the interface is the units table.)
 
 | Element | Statement | Status | Mark |
 |---|---|---|---|
 | Cells | the cells of a grid, each a small box with the units above; elevation and enclosure from the grid's own cell properties | deferred | rex (the deferred grid and its rules, 2026-10-29); deferred |
 | Advection | the wind (ENVIRONMENT) moves a cell's air downwind by u x step; indoors, the ventilation flow | deferred | rex (the deferred grid and its rules, 2026-10-29); deferred |
 | Diffusion and turbulent mixing | each step a cell shares a fraction with its neighbours (D x step / cell size squared) | deferred | rex (the deferred grid and its rules, 2026-10-29); deferred |
-| Buoyancy | hot and light gases move up a level (a deck) before spreading; heavy ones pool in hollows and the low tiles | deferred | rex (the deferred grid and its rules, 2026-10-29); deferred |
+| Buoyancy | hot and light gases move up a level before spreading; heavy ones pool in hollows and the low cells | deferred | rex (the deferred grid and its rules, 2026-10-29); deferred |
 | Deposition | particles settle; SO2 and H2S lost to wet surfaces | deferred | rex (the deferred grid and its rules, 2026-10-29); deferred |
 | Step | seconds during a release; a cell per step at most; the box model takes over once the cloud is uniform | deferred | rex (the deferred grid and its rules, 2026-10-29); deferred |
 | Exposure | each character sums the concentration of the cell they stand in each step (ppm-min); crouching reads the lower half | deferred | rex (the deferred grid and its rules, 2026-10-29); deferred |
