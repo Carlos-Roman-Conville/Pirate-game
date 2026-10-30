@@ -134,6 +134,25 @@ condition, kept).
   fifteen people without fifteen storylines. This ties population, employment, wages, food demand and growth.
 - **(proposed)** The next decision is the map scale; it determines buildings, parcels, roads, interiors and expansion.
 
+### 6a. Approved by paste (Rex, 2026-10-29, by pasting ChatGPT's approvals without comment; correct me if any is not yours)
+
+| Decision | Approved form | Mark |
+|---|---|---|
+| Physical vs economic development | tracked independently | Rex (via paste) |
+| Resident, crew, employee, manager | **roles and assignments, not mutually exclusive states**: one character can be resident, employee and crew at once | Rex (via paste) |
+| Mayor | a position of authority inside `port.townhall`; the `sec.townhall` contest kept | Rex (via paste) |
+| Map | one continuous, expandable town map with districts and subdividable parcels, as the direction; **no fixed parcel or district count yet**: dimensions come from laying out the existing locales, housing, roads, harbour and undeveloped land | Rex (via paste) |
+| Brewery | an optional constructible facility | Rex (via paste) |
+| Institution alignment | developed institutions still determine the town's alignment (`port.align`), but **a change of owner or manager does not change an institution's alignment**; the story-driven transformation (the INTJ's apothecary stays hers in kind when she hires a manager) is preserved. This supersedes §7's "reads the business's operator" line | Rex (via paste) |
+| Ids | `port.*` and `sec.*` stay story and institution references; parcels, buildings, businesses and titles get their own ids | Rex (via paste) |
+| Ghosts | property and economy stay independent of the ghost / death-and-transformation question (`UPGRADES.md`, still unresolved): a business can close, change hands, be abandoned or transformed without deciding its occupants' supernatural fate; the story system resolves that | Rex (via paste) |
+| The shift | the town is **a simulated settlement that also contains upgradeable story institutions**, not a set of upgradeable story locations; built as a reusable settlement backend like `Toolchain/realism`, the pirate game supplying its rules through adapters | Rex (via paste) |
+
+The backend design set lives in `E:/AI Programs/Toolchain/settlement/` (own repo: `SCOPE.md`, `DEPENDENCIES.md`,
+`PACKAGES.md`, `MIGRATION.md` (12 steps), `TESTS.md` (acceptance test A1), `QUESTIONS.md` (14 for Rex)); the
+pirate repo's pointer is [`../settlement/README.md`](../settlement/README.md). Code waits on Rex's approval of the
+plan. §7 below is the first sketch it started from and is superseded where the two differ.
+
 ## 7. The parcel and property system, first design (proposed; keeper's shape on the resolutions above)
 
 Records, each with a stable id, in the `UPGRADES.md` style:
@@ -173,3 +192,4 @@ Records, each with a stable id, in the `UPGRADES.md` style:
 |---|---|---|
 | 2026-10-29 | File created: ChatGPT's facility / property / workforce proposal (pasted by Rex) laid against an audit of the economy data, the duties, the dock tilemap and the slot model; eleven collisions; seven questions for Rex. Nothing adopted | proposed |
 | 2026-10-29 | §6 six resolutions (ownership ≠ control is Rex's direction; the rest proposed); §7 parcel / building / title / business / arrangement / authority records (proposed); §8 open. Implementation not authorised until map scale and ownership rules are approved | Rex (ownership); proposed |
+| 2026-10-29 | §6a: the five resolutions, the alignment refinement (owner/manager change never moves an institution's alignment), separate ids, ghosts kept apart, and the settlement-backend shift approved by Rex via paste; design set in Toolchain/settlement (pointer ../settlement/README.md) | Rex (via paste) |
