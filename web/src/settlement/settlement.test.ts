@@ -11,8 +11,8 @@ const PREFIXES = ['dist.', 'parcel.', 'bldg.', 'title.', 'lease.', 'txn.', 'acct
 
 function providers() {
   const p = stubProviders({
-    'salt-meat': { inputs: [{ good: 'meat', units: 1 }, { good: 'salt', units: 1 }], output: 'salt-meat', yield: 1, unitsPerFixtureDay: 10, labourPerUnit: 0.25 },
-    'smoked-meat': { inputs: [{ good: 'meat', units: 1 }], output: 'smoked-meat', yield: 1, unitsPerFixtureDay: 6, labourPerUnit: 0.25 },
+    'salt-meat': { inputs: [{ good: 'meat', units: 1 }, { good: 'salt', units: 1 }], output: 'salt-meat', yield: 1, unitsPerFixtureDay: 10, labourHoursPerUnit: 2.5 },
+    'smoked-meat': { inputs: [{ good: 'meat', units: 1 }], output: 'smoked-meat', yield: 1, unitsPerFixtureDay: 6, labourHoursPerUnit: 2.5 },
   })
   p.labour.pools['pool.housing'] = 5
   p.labour.pools['pool.builders'] = 1
@@ -31,7 +31,7 @@ function settlementDay(port: ReturnType<typeof loadPort>, step: number): Settlem
     const post = port.runner.run<string>({ type: 'addPost', biz: shop.businesses[0], role: 'labourer', wage: 1 })
     commands.push({ type: 'hire', post, holder: 'pool.housing' })
   }
-  if (step === 3) commands.push({ type: 'startProject', kind: 'renovate', target: shop.buildings[0], account: 'esfp-f', pool: 'pool.builders', labourDays: 1, plan: { addFixtures: ['smokehouse'] } })
+  if (step === 3) commands.push({ type: 'startProject', kind: 'renovate', target: shop.buildings[0], account: 'esfp-f', pool: 'pool.builders', labourHours: 10, plan: { addFixtures: ['smokehouse'] } })
   commands.push({ type: 'tick' })
   return commands
 }
@@ -78,6 +78,32 @@ describe('T1 bindings cover the institutions', () => {
   })
 })
 
+describe('T1b the inventory hook', () => {
+  it('a hook names every business inventory; without one the inv.<place> placeholder stays; T0 invariance holds', () => {
+    let n = 0
+    const port = loadPort(providers(), defaultConfig(), undefined, { inventoryOf: () => `inv.test.${n++}` })
+    const businesses = Object.values(port.bindings).flatMap((binding) => binding.businesses)
+    expect(businesses.length).toBeGreaterThan(0)
+    businesses.forEach((biz, i) => expect(port.runner.state.businesses[biz].inventory).toBe(`inv.test.${i}`))
+    expect(JSON.stringify(port.runner.state).includes('inv.port.')).toBe(false)
+    const plain = loadPort(providers())
+    for (const biz of Object.values(plain.bindings).flatMap((binding) => binding.businesses)) {
+      expect(plain.runner.state.businesses[biz].inventory).toMatch(/^inv\.port\./)
+    }
+    // the alignment walk beside a hooked port is byte-identical to one without the engine
+    const config = loadAlignmentConfig()
+    const route = random(7, config, 32).route
+    let bare = initialState(loadStarts(), config.thresholds, config.gates)
+    let beside = initialState(loadStarts(), config.thresholds, config.gates)
+    route.forEach((command, i) => {
+      for (const sc of settlementDay(port, i)) port.runner.run(sc)
+      bare = reduce(bare, currentCommand(bare, command), config).state
+      beside = reduce(beside, currentCommand(beside, command), config).state
+      expect(JSON.stringify(beside)).toBe(JSON.stringify(bare))
+    })
+  })
+})
+
 function alignmentStart() {
   const config = loadAlignmentConfig()
   return { config, state: initialState(loadStarts(), config.thresholds, config.gates) }
@@ -116,7 +142,7 @@ describe('A1 the acceptance scenario', () => {
     expect(r.state.businesses[biz].status).toBe('staffed')
     // 5 renovate
     p.materials.set('esfp-f', 'timber', 10)
-    const proj = r.run<string>({ type: 'startProject', kind: 'renovate', target: bldg, account: 'esfp-f', pool: 'pool.builders', wage: 1, labourDays: 2,
+    const proj = r.run<string>({ type: 'startProject', kind: 'renovate', target: bldg, account: 'esfp-f', pool: 'pool.builders', wage: 1, labourHours: 20,
       materials: [{ material: 'timber', units: 5 }],
       plan: { rooms: [{ id: 'back', name: 'back room', tiles: { x: 0, y: 0, w: 1, h: 1 }, use: 'smoke' }], addFixtures: ['smokehouse'],
         placements: [{ fixture: 'smokehouse', room: 'back', at: { x: 0, y: 0 } }] } })

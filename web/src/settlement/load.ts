@@ -33,7 +33,12 @@ export interface LoadedPort {
   events(): SettlementEvent[]
 }
 
-export function loadPort(providers: Providers = stubProviders(), config: SettlementConfig = defaultConfig(), raw: StartData = startData as StartData): LoadedPort {
+export interface LoadOptions {
+  /** The inventory a business draws on, by place and business id; absent, the placeholder `inv.<place>` stays. */
+  inventoryOf?: (place: string, biz: string) => string
+}
+
+export function loadPort(providers: Providers = stubProviders(), config: SettlementConfig = defaultConfig(), raw: StartData = startData as StartData, options: LoadOptions = {}): LoadedPort {
   const runner = new Runner(initialState('stl.port', 'the starting port'), config, providers)
   const size = raw.district.parcelSize
   const gap = raw.district.gap
@@ -61,8 +66,10 @@ export function loadPort(providers: Providers = stubProviders(), config: Settlem
         if (entry.business.lease) {
           binding.leases.push(runner.run<string>({ type: 'lease', title, tenant: entry.business.operator, rent: entry.business.lease.rent }))
         }
-        binding.businesses.push(runner.run<string>({ type: 'openBusiness', kind: entry.business.kind, premises: [{ bldg, rooms: rooms.map((room) => room.id) }],
-          operator: entry.business.operator, inventory: `inv.${entry.place}`, publicWorks: entry.business.publicWorks ?? false }))
+        const biz = runner.run<string>({ type: 'openBusiness', kind: entry.business.kind, premises: [{ bldg, rooms: rooms.map((room) => room.id) }],
+          operator: entry.business.operator, inventory: `inv.${entry.place}`, publicWorks: entry.business.publicWorks ?? false })
+        if (options.inventoryOf) runner.run({ type: 'setInventory', biz, inventory: options.inventoryOf(entry.place, biz) })
+        binding.businesses.push(biz)
       }
       if (entry.office) {
         binding.offices.push(runner.run<string>({ type: 'createOffice', name: entry.office.name, powers: entry.office.powers, seat: bldg }))

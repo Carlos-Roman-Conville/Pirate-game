@@ -41,3 +41,7 @@ research; classes the sources leave empty go to Rex.
 
 **2026-10-30, unit 2651:** `start.json` now carries `decayClass` and `exposure` per building from `STARTING_TOWN.md` Q1b; only the farmhouse and the ESTP's hut (palm-thatch, sheltered) decay, test V-D2.
 
+**2026-10-30, unit 2618:** the adapter follows the engine to person-hours (CONTRACTS s16): fixtures carry `labourHoursPerUnit` and `labourHours`, the labour stub is `StubLabourSupply`.
+`loadPort` takes `{ inventoryOf(place, biz) }` as a fourth argument and runs `setInventory` after each `openBusiness`; without it the `inv.<place>` placeholder stays (test T1b).
+Test I3 (`labour.test.ts`): over thirty days no pool is granted more hours than it supplied, and money is conserved; the economy golden passed unchanged, so it was not re-recorded.
+
