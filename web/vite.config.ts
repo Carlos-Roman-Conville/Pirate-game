@@ -11,7 +11,7 @@ export default defineConfig({
   server: {
     port: 5320,
     strictPort: true,
-    fs: { allow: ['..'] },   // the map data lives in ../data/pirate-ship/
+    fs: { allow: ['..', '../../../../Toolchain/realism'] },   // the map data lives in ../data/pirate-ship/; the shared realism engine in Toolchain
     proxy: {
       '/api': { target: 'http://localhost:5308', ws: true },   // ws: the online match socket
       '/img': { target: 'http://localhost:5308' },

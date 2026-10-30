@@ -116,6 +116,21 @@ explicit one-second steps, no evaporation below the boiling point, instantaneous
 with no walls to soak up heat (so it runs hot), U and h placeholders inside the real ranges (ENG-HT), and
 the body as one lumped mass. Nothing in it is a game rule. **(proposed)**
 
+### 5a. One engine, many games **(Rex, 2026-10-29)**
+
+Rex's decision (relayed from ChatGPT, 2026-10-29): `Toolchain/realism` is the authoritative shared engine.
+The pirate game integrates it as a local package dependency (`web/package.json`: `"@rex/realism":
+"file:../../../../Toolchain/realism"`), never a Vite alias to its source and never a copied tree, and imports
+only its public API (`src/index.ts`, the package's `exports`). All formulas, material definitions and
+simulation logic stay owned by the package; the game owns only the situation it hands in. The dashboard and
+the game consume the same scientific data, and other games use the package without depending on
+pirate-ship. First integration: `web/src/world/galleyStill.ts` wraps the still for a galley situation
+(altitude, air temperature, the tender's skill, minutes, days since the glass was checked) and returns what
+the game shows and journals; `galleyStill.test.ts` proves it inside the game (boiling 100 °C on deck and
+92.5 °C in the hills, distillate, conservation, a neglected glass caught against the expected boil). The
+dashboard's Simulation Laboratory will consume a browser bundle of the same package (belt task to follow
+once 2507 to 2509 land). **[model]**
+
 ## Sources
 
 `../SOURCES.md` keys ENG-*: standard thermodynamic constants (NIST Chemistry WebBook for Antoine

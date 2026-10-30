@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@rex/realism": "file:../../../../Toolchain/realism",
     "motion": "^13.4.4",
     "phaser": "^4.2.1",
     "react": "^19.2.8",
