@@ -113,8 +113,63 @@ political authority.
 7. The first milestone's brewery: there is no brewery in the town yet (the tavern is); add one, or make the slice
    from the butcher shop, the clinic, the farm and the town hall instead.
 
+## 6. Proposed resolutions of the collisions (outside AI, pasted by Rex 2026-10-29)
+
+Rex's words on the paste: "ChatGPT got the right idea about ownership; the game is evolving past what it was before
+so it'll need extensive updates." So the **ownership direction is Rex's**; the other five rows stay proposed until he
+says. Implementation is not authorised until the map scale and the ownership rules are approved (the paste's own
+condition, kept).
+
+| Collision | Resolution | Mark |
+|---|---|---|
+| One owner per place | Separate **property ownership**, **business operation** and **management**. A property has one legal owner but may hold several tenants or businesses. Ownership is not control: you can buy the butcher shop's building and leave the butcher operating as a tenant, or buy building and business and hire the butcher as manager, controlling renovations and production | **Rex** (direction, 2026-10-29); the exact arrangements proposed |
+| What counts as developed | Track **physical development** and **economic activity** separately: an impressive but abandoned brewery is developed physically, not economically | proposed |
+| Recruiting NPCs | Three arrangements: **resident**, **crew member**, **resident employee or manager**. Recruiting someone doesn't require removing them from town | proposed |
+| Mayor and town hall | Keep `port.townhall` and `sec.townhall`; the **mayor is a position of authority within the town hall**, not a competing locale | proposed |
+| Map scale | Replace the one-small-screen port with a **single continuous, expandable town map** divided into parcels and districts; the original locales become landmarks and activity centres, other businesses, homes, warehouses, workshops and public facilities fill parcels around them; seamless exploration and combat kept; starts small and run down, with room to grow | proposed |
+| Brewery missing | An **optional constructible facility**, not a mandatory starting locale | proposed |
+
+- **(proposed)** Staffing connects to the population simulation (`../world/POPULATION.md`): named NPCs are owners,
+  managers, specialists or key workers; ordinary residents fill the supporting positions, so a facility can employ
+  fifteen people without fifteen storylines. This ties population, employment, wages, food demand and growth.
+- **(proposed)** The next decision is the map scale; it determines buildings, parcels, roads, interiors and expansion.
+
+## 7. The parcel and property system, first design (proposed; keeper's shape on the resolutions above)
+
+Records, each with a stable id, in the `UPGRADES.md` style:
+
+| Record | Key | Fields | Note |
+|---|---|---|---|
+| Parcel | `parcel.<id>` | district, size (footprint), access (road, harbour), zoning (any / housing / industry / public), `buildings[]`, `vacant` | the land; never renamed; a place id (`port.*`) may point at one or more parcels |
+| Building | `bldg.<id>` | parcel, footprint, storeys, condition (ruined / poor / sound / fine), rooms[], `owner` | the structure; condition is the **physical** development axis |
+| Property title | `title.<bldg or parcel>` | `owner` (a character slug, `player`, `town`, or `none` = vacant), class (private / player / public / vacant), `tenants[]` with lease terms, transfer rules (sale, inheritance on death, seizure) | the legal layer; one owner, many tenants |
+| Business | `biz.<id>` | building(s), rooms used, `operator` (who runs it), `manager` (who directs it day to day), facility (an equipment id from `recipes.json`), staff[], hours, inventory, ledger | the **economic** development axis; `developed` for `port.align` is read from here or from the building, per Rex's answer to Open 2 |
+| Arrangement | `<slug>.arrangement` | resident / crew / resident employee / resident manager, plus the business | per named character; replaces "recruited takes them aboard" where Rex allows |
+| Authority | `port.mayor`, `port.council` | who holds the office; what it may direct (public titles, construction permits, taxes) | sits inside `port.townhall`; how the office is won: the `sec.townhall` contest or an election, open |
+
+- **(proposed)** Starting state: every current `port.*` place gets one parcel and one building; their titles are
+  private (the named owner) except the church, clinic, docks, fort and town hall, which are public; the rest of the
+  map is vacant parcels in districts (harbour, square, housing, farmland, the edge). Which starting businesses are
+  operating, and which exist unstaffed, is the audit's "essential institutions" question (§5, 6).
+- **(proposed)** The slot model keeps working: `<slot>.align`, `<slot>.pending` and the sector contests read the
+  **business's** operator (the character who shapes the institution), so a sold building whose operator stays
+  doesn't move the town's alignment; a change of operator does.
+- **(proposed)** The population simulation supplies unnamed workers as a pool per district; a business draws from it
+  by role and skill band; wages flow into `port.cash` and household demand.
+
+## 8. Open after the resolutions, Rex's
+
+1. Map scale: one continuous town; how many districts, and roughly how many parcels (a number to balance against
+   the twelve locales and the ~108 characters).
+2. The ownership rules in full: who may buy what, how inheritance works (the farm to the daughter is the precedent),
+   whether the town may seize, and whether a title can be lost in the siege.
+3. Which of the three arrangements each named character starts in, and whether recruiting to crew still freezes
+   their business (today's rule) or hands it to a manager.
+4. Whether `developed`, the alignment input, is the building's condition, the business's activity, or both.
+
 ## Change log
 
 | Date | Change | Mark |
 |---|---|---|
 | 2026-10-29 | File created: ChatGPT's facility / property / workforce proposal (pasted by Rex) laid against an audit of the economy data, the duties, the dock tilemap and the slot model; eleven collisions; seven questions for Rex. Nothing adopted | proposed |
+| 2026-10-29 | §6 six resolutions (ownership ≠ control is Rex's direction; the rest proposed); §7 parcel / building / title / business / arrangement / authority records (proposed); §8 open. Implementation not authorised until map scale and ownership rules are approved | Rex (ownership); proposed |
