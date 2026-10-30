@@ -101,6 +101,14 @@ describe('stats from the engine\'s outputs', () => {
   const props = engine.world.registry.component(engine.body).props
   props.sleep_debt = owed - overnight(0, 0, 0).debtH
   const w = engine.world, flesh = w.registry.component(engine.body)
+  // Explicit thirsty-sailor fixture (F-SE-11): the newer engine does not guarantee
+  // dehydration over P12's threshold after just one sedentary day without a drink.
+  const thirstCondition = data.pushes.find(p => p.row === 12)!.when.find(c => c.output === 'water_deficit_pct')!
+  if (!('gt' in thirstCondition)) throw new Error('P12 has no dehydration threshold')
+  const missingWaterKg = flesh.mass * thirstCondition.gt / 100
+  w.registry.addContent(flesh, 'water', 'liquid', -missingWaterKg)
+  props.waterDeficitKg = missingWaterKg
+  w.trace.record({ t: w.t, process: 'test', quantity: 'mass:water', from: engine.body, to: 'prior-loss', amount: missingWaterKg })
   const used = 1.25e-3 // kg: 1,250 mg of the 1,500 mg pool, traced as the engine traces a day's use
   w.registry.addContent(flesh, 'nutrient:vit_c', 'solid', -used)
   w.trace.record({ t: w.t, process: 'test', quantity: 'mass:nutrient:vit_c', from: engine.body, to: 'metabolism', amount: used, note: 'a long voyage on biscuit' })
@@ -139,7 +147,7 @@ describe('stats from the engine\'s outputs', () => {
     for (const c of [...sleep.channels, ...vitC.channels]) expect(body.visible_faces.rows.some(r => r[0] === c), c).toBe(true)
 
     const { pushes } = dayPushes(outputs)
-    // the sailor drank nothing all day, so the thirst push (over 2% of body mass) joins the sleep debt and scurvy pushes
+    // The explicitly dehydrated sailor drinks nothing; the thirst push joins sleep debt and scurvy.
     expect(Number(outputs.water_deficit_pct)).toBeGreaterThan(2)
     expect(pushes.map(p => [p.id, p.meter, p.delta]).sort()).toEqual([['P01', 'mood', -1], ['P12', 'mood', -2], ['P17', 'mood', -1]])
   })

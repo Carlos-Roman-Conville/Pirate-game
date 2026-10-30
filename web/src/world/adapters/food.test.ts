@@ -4,7 +4,7 @@ import economy from '../../../../data/pirate-ship/economy/goods.json'
 import data from '../../../../data/pirate-ship/world/food.json'
 import source from './food.ts?raw'
 import { foodGoods, foodItems, foodsOf, Inventory, issueRation, keepsOf, ration } from './food.ts'
-import { simulateDay, type GameCharacter } from './characters.ts'
+import { releaseDayTrace, simulateDay, type GameCharacter } from './characters.ts'
 
 const goodsById = new Set(economy.goods.map(g => g.id))
 const weekDays = data.week.days
@@ -135,6 +135,7 @@ describe('an inventory feeds people', () => {
         expect(out.outputs.intake_vit_c as number, `${p.slug} day ${day} vitamin C`).toBeGreaterThan(0)
         expect(out.outputs.intake_vit_c as number).toBeLessThan(eatenVitC)
         expect(out.failedChecks).toEqual([])
+        releaseDayTrace(p)
       }
     }
     const used: Record<string, number> = {}

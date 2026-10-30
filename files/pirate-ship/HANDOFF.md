@@ -21,6 +21,13 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
   files hold id plus game columns; `build-body-data.py` reads `E:/AI Programs/Toolchain/realism/data/library` and counts
   a missing library as a validation problem.
 
+### Settlement
+
+In `web/`: `node --experimental-strip-types src/world/settlement.run.ts` (Aug 1-30).
+Tests check 12 workers, balances, library bounds and pending crises under 60 s.
+Fixtures: `web/src/world/FIXTURES.md` (F-SE); full tests use `VITEST_MAX_WORKERS=1`.
+Water can run out without death; bleeding, fever coupling and fate stay unsupported.
+
 ## Next
 
 1. Phase 2 gate: Rex reads the simulator report and tunes the numbers (ALIGNMENT.md §8).

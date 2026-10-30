@@ -24,7 +24,13 @@ export interface GameCharacter {
 export interface Physique { male: boolean; ageY: number; heightCm: number; massKg: number; fatKg: number; waterKg: number }
 
 /** Where the character spends the day: the room's air. Fixture-backed until places exist (task 2535). */
-export interface Place { airC: number; volumeM3: number; ach: number }
+export interface Place {
+  airC: number; volumeM3: number; ach: number
+  /** Host weather from places.ts, sampled by clock hour; no climate formula here. */
+  conditions?: (hour: number) => { air_c: number; wbgt_c: number }
+  /** Optional observation after all body processes, used by settlement acceptance. */
+  observe?: (body: Component) => void
+}
 
 export interface DayReport {
   slug: string
@@ -114,10 +120,16 @@ export function simulateDay(character: GameCharacter, day: number, place: Place 
   const opts = { every: 1, clockH0: data.clock.dayStartH, dayStartH: data.clock.dayStartH }
   room.props.ach = place.ach
   world.env.outsideC = place.airC
+  if (!place.conditions) delete room.props.wbgt_c
 
   const sch = new Scheduler()
   sch.add({ name: 'circumstances', every: 1, step(w) {
     const hour = (opts.clockH0 + w.t / 3600) % 24
+    if (place.conditions) {
+      const weather = place.conditions(hour)
+      w.env.outsideC = weather.air_c
+      room.props.wbgt_c = weather.wbgt_c
+    }
     const now = schedule.find(e => (e.fromH < e.toH ? hour >= e.fromH && hour < e.toH : hour >= e.fromH || hour < e.toH))
     body.props.asleep = now?.sleepQuality !== undefined ? 1 : 0
   } })
@@ -125,6 +137,7 @@ export function simulateDay(character: GameCharacter, day: number, place: Place 
   sch.add(physiologyProcess('body', 'room', { ...opts, schedule }))
   sch.add(nutritionProcess('body', opts))
   sch.add(neurologyProcess('body', opts))
+  if (place.observe) sch.add({ name: 'observe', every: 1, step() { place.observe!(body) } })
   sch.run(world, DAY_S, data.clock.stepS)
 
   s.nextDay = day + 1
@@ -133,4 +146,19 @@ export function simulateDay(character: GameCharacter, day: number, place: Place 
   const failedChecks = world.trace.failed().slice(s.checkCursor)
   s.checkCursor += failedChecks.length
   return { slug: character.slug, day, outputs: { ...bodyOutputs(body) }, notes, failedChecks }
+}
+
+/** Start a new audit window after the caller has saved the day's ledger. Component state,
+ * clock, environment and graph persist; only trace storage and conservation baselines renew.
+ * This character loop has no process whose state depends on historical transfers.
+ */
+export function releaseDayTrace(character: GameCharacter): void {
+  const s = states.get(character)
+  if (!s) throw new Error('characters: no day to archive')
+  const previous = s.world, next = new World(previous.registry)
+  next.t = previous.t; next.env = previous.env; next.graph = previous.graph
+  for (const c of previous.conserved) {
+    if (c.substance) next.conserve(c.substance, [...c.components], c.tolerance)
+  }
+  s.world = next; s.noteCursor = 0; s.checkCursor = 0
 }

@@ -1,0 +1,66 @@
+{
+  "_about": "F-SE fixtures for acceptance task 2539; experiment circumstances, not adopted game rules. See web/src/world/FIXTURES.md.",
+  "days": 30,
+  "startMonth": "Aug",
+  "startDay": 1,
+  "seed": 2539,
+  "room": "tavern",
+  "climatePlace": "town-street",
+  "weatherSampleHours": 1,
+  "staffPerFacility": 4,
+  "skill": 50,
+  "workFromH": 12,
+  "workToH": 20,
+  "sleepFromH": 22,
+  "sleepToH": 6,
+  "shortSleepFromH": 2,
+  "restDuty": "Walking the deck",
+  "sleepDuty": "Sleep",
+  "facilities": [
+    {
+      "id": "port.shipyard",
+      "occupation": "cooper",
+      "recipe": "cooperage-slack-casks",
+      "equipment": []
+    },
+    {
+      "id": "port.warehouse",
+      "occupation": "carpenter",
+      "recipe": "carpentry-planks-and-boards",
+      "equipment": [
+        "saw-pit"
+      ]
+    },
+    {
+      "id": "port.bakery",
+      "occupation": "victualler-cook",
+      "recipe": "cooking-preserves-and-sugar-candy",
+      "equipment": []
+    }
+  ],
+  "recipeInputUnits": 120,
+  "spoilageProbe": {
+    "good": "bread",
+    "kg": 1
+  },
+  "wound": {
+    "day": 5,
+    "person": 0,
+    "kind": "thrust",
+    "location": "forearm",
+    "side": "left",
+    "open": true
+  },
+  "fever": {
+    "day": 9,
+    "person": 1,
+    "disease": "yellow_fever",
+    "dose": 1
+  },
+  "shortSleep": {
+    "fromDay": 15,
+    "toDay": 21,
+    "person": 2
+  },
+  "medicineSeed": 2
+}

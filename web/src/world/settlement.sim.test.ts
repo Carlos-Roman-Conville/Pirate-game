@@ -1,0 +1,117 @@
+import { beforeAll, describe, expect, it } from 'vitest'
+import { libraryTable, metOf, overnight, fatKcalPerKg } from '@rex/realism'
+import { activityOf, fixturePhysique } from './adapters/characters.ts'
+import { runSettlement, printSettlement, settlementFixture as f, settlementPlan, startDayOfYear } from './settlement.ts'
+
+let result: ReturnType<typeof runSettlement>
+let elapsedMs: number
+beforeAll(() => {
+  const start = performance.now()
+  result = runSettlement()
+  elapsedMs = performance.now() - start
+}, 60_000)
+
+describe('Port Royal settlement, thirty days', () => {
+  it('prints thirty dates from August 1, twelve people each, in under a minute', () => {
+    expect(elapsedMs).toBeLessThan(60_000)
+    expect(result.days).toHaveLength(30)
+    const lines: string[] = []
+    printSettlement(result, line => lines.push(line))
+    expect(lines).toHaveLength(30)
+    expect(JSON.parse(lines[0]!)).toMatchObject({ day: 1, date: 'Aug 1' })
+    expect(JSON.parse(lines[29]!)).toMatchObject({ day: 30, date: 'Aug 30' })
+    for (const [index, day] of result.days.entries()) {
+      expect(day.calendarDay).toBe(startDayOfYear + index)
+      expect(day.weather.month).toBe('Aug')
+      expect(day.people).toHaveLength(12)
+      expect(new Set(day.people.map(p => p.slug)).size).toBe(12)
+      expect(Object.keys(day.outputByFacility)).toHaveLength(f.facilities.length)
+    }
+  })
+
+  it('closes every good every day, including food, production inputs and spoilage', () => {
+    let previous = result.initialStock
+    for (const day of result.days) {
+      expect(day.before).toEqual(previous)
+      const ids = new Set([...Object.keys(day.before), ...Object.keys(day.stock), ...Object.keys(day.produced),
+        ...Object.keys(day.consumed), ...Object.keys(day.spoiled)])
+      for (const id of ids) {
+        expect((day.produced[id] ?? 0) - (day.consumed[id] ?? 0) - (day.spoiled[id] ?? 0), `${day.day}:${id}`)
+          .toBeCloseTo((day.stock[id] ?? 0) - (day.before[id] ?? 0), 8)
+        expect(day.stock[id] ?? 0).toBeGreaterThanOrEqual(-1e-10)
+      }
+      previous = day.stock
+    }
+    expect(result.days.some(d => Object.values(d.spoiled).some(n => n > 0))).toBe(true)
+    for (const facility of f.facilities) expect(result.days.some(d =>
+      Object.values(d.outputByFacility[facility.id]!).some(n => n > 0))).toBe(true)
+  })
+
+  it('closes each body energy and water independently, with engine checks active', () => {
+    for (const day of result.days) for (const person of day.people) {
+      const e = person.energy, w = person.water
+      expect(e.inKcal).toBeGreaterThan(0)
+      expect(e.outKcal).toBeGreaterThan(0)
+      expect(e.inKcal - e.outKcal).toBeCloseTo(e.storedKcal + e.unplacedKcal, 6)
+      expect(w.inKg).toBeGreaterThan(0)
+      expect(w.inKg - w.outKg).toBeCloseTo(w.endKg - w.startKg, 8)
+      expect(w.endKg).toBeGreaterThanOrEqual(0)
+      expect(person.failedChecks, `${day.day}:${person.slug}`).toEqual([])
+      expect(person.checks).toBeGreaterThan(0)
+      if (day.day > 1) expect(w.startKg).toBe(result.days[day.day - 2]!.people.find(p => p.slug === person.slug)!.water.endKg)
+    }
+  })
+
+  it('checks minute extrema and daily trajectories against library bounds and recovery', () => {
+    const debt = libraryTable('physiology', 'sleep_debt').map(r => Number(r['Alertness multiplier']))
+    const circadian = libraryTable('physiology', 'circadian').map(r => Number(r.Factor))
+    const fatRule = libraryTable('nutrition', 'body_composition').find(r => r.id === 'nutrition.body_composition.fat-mass')!
+    const fatFloor = Number(/floor ([\d.]+) kg/.exec(String(fatRule.Rule))![1])
+    const state = new Map<string, { fatigue: number; debt: number; kcal: number }>()
+    for (const day of result.days) for (const person of day.people) {
+      const previous = state.get(person.slug) ?? { fatigue: 0, debt: 0, kcal: 0 }
+      const plan = settlementPlan(person.occupation, person.sleepH < f.sleepToH)
+      const metHours = plan.reduce((n, b) => n + (b.toH - b.fromH + 24) % 24 * metOf(activityOf(b.duty)), 0)
+      const next = overnight(previous.debt, previous.fatigue + metHours, person.sleepH)
+      expect(person.outputs.fatigue_met_hours).toBeCloseTo(next.fatigueMetH, 6)
+      expect(person.outputs.sleep_debt).toBeCloseTo(next.debtH, 6)
+      expect(person.ranges.fatigue_met_hours!.min).toBeGreaterThanOrEqual(0)
+      expect(person.ranges.fatigue_met_hours!.max).toBeLessThanOrEqual(previous.fatigue + metHours + 1e-7)
+      expect(person.ranges.alertness!.min).toBeGreaterThanOrEqual(Math.min(...debt) * Math.min(...circadian))
+      expect(person.ranges.alertness!.max).toBeLessThanOrEqual(Math.max(...debt) * Math.max(...circadian))
+      expect(person.outputs.fat_kg).toBeGreaterThanOrEqual(fatFloor)
+      expect(person.massKg).toBeCloseTo(fixturePhysique.massKg - fixturePhysique.fatKg + Number(person.outputs.fat_kg), 8)
+      expect(person.ranges.mass_kg!.min).toBeGreaterThanOrEqual(fixturePhysique.massKg - fixturePhysique.fatKg + fatFloor)
+      // Library has no universal upper body-mass or MET-hour clamp. Bound gain by all food energy
+      // plus the initial glycogen energy (read from its reserve row), not an invented healthy range.
+      const energyRow = libraryTable('nutrition', 'nutrients').find(r => r.id === 'energy')!
+      const glycogenKcal = Number(/glycogen about [\d,]+ g = ([\d,]+) kcal/.exec(String(energyRow['Body reserve (full)']))![1]!.replaceAll(',', ''))
+      const kcal = previous.kcal + person.energy.inKcal
+      expect(person.ranges.mass_kg!.max).toBeLessThanOrEqual(fixturePhysique.massKg + (kcal + glycogenKcal) / fatKcalPerKg() + 1e-8)
+      state.set(person.slug, { fatigue: next.fatigueMetH, debt: next.debtH, kcal })
+    }
+  })
+
+  it('exercises all three hazards and leaves the seeded fatal-risk crisis unresolved', () => {
+    expect(result.days[f.wound.day - 1]!.people[f.wound.person]!.wounded).toHaveLength(1)
+    expect(result.days[f.fever.day - 1]!.hazards).toContain(`settler-${f.fever.person + 1}:fever-exposure:infected`)
+    expect(result.crises.length).toBeGreaterThan(0) // no vacuous no-deaths assertion
+    for (const day of result.days) for (const person of day.people) {
+      for (const crisis of person.crises) {
+        expect(crisis.resolved).toBeUndefined()
+        expect(day.crises.some(c => c.slug === person.slug && c.cause === crisis.cause && c.day === crisis.day)).toBe(true)
+      }
+      for (const sick of person.sick.filter(s => s.crisis)) {
+        expect(person.crises.some(c => c.cause === `disease:${sick.id}`)).toBe(true)
+      }
+    }
+    const patient = result.days[29]!.people[f.fever.person]!
+    expect(patient.sick.some(s => s.crisis)).toBe(true)
+    expect(patient.crises.every(c => c.resolved === undefined)).toBe(true)
+    const sleepy = result.days.filter(d => d.day >= f.shortSleep.fromDay && d.day <= f.shortSleep.toDay)
+    expect(sleepy).toHaveLength(7)
+    expect(sleepy.every(d => d.people[f.shortSleep.person]!.sleepH === f.sleepToH - f.shortSleepFromH)).toBe(true)
+    expect(sleepy[6]!.people[f.shortSleep.person]!.outputs.alertness).toBeLessThan(1)
+    expect(result.days[f.shortSleep.toDay]!.people[f.shortSleep.person]!.outputs.fatigue_met_hours).toBe(0)
+  })
+})

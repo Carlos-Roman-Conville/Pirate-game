@@ -3,7 +3,7 @@ import { metOf, overnight, sleepDebtRow, splitSleepQuality } from '@rex/realism'
 import physiology from '../../../../files/pirate-ship/body/data/physiology.json'
 import data from '../../../../data/pirate-ship/world/characters.json'
 import source from './characters.ts?raw'
-import { activityOf, mappedDuties, scheduleOf, simulateDay, type DutyBlock, type GameCharacter } from './characters.ts'
+import { activityOf, engineOf, fixturePlace, mappedDuties, releaseDayTrace, scheduleOf, simulateDay, type DutyBlock, type GameCharacter } from './characters.ts'
 
 // Four hours on, eight off, twice a day: watches 08 to 12 and 20 to 24; the off-watch hours sleep 12 to 16 and 00 to 04.
 const watchBill: DutyBlock[] = [
@@ -64,6 +64,39 @@ describe('a game character becomes an engine body', () => {
     expect(() => simulateDay(hand, 2)).toThrow(/day 1/)
     simulateDay(hand, 1)
     expect(() => simulateDay(hand, 1)).toThrow(/day 2/)
+  })
+
+  it('passes supplied climate to physiology and observes every completed minute', () => {
+    const hand = deckhand('climate', nightsAbed)
+    let observations = 0
+    const hours: number[] = []
+    const report = simulateDay(hand, 1, { ...fixturePlace,
+      conditions: hour => { hours.push(hour); return { air_c: fixturePlace.airC, wbgt_c: fixturePlace.airC } },
+      observe: () => { observations++ },
+    })
+    expect(observations).toBe(86400 / data.clock.stepS)
+    expect(hours[0]).toBe(data.clock.dayStartH)
+    expect(report.outputs.wbgt_c).toBe(fixturePlace.airC)
+    expect(report.failedChecks).toEqual([])
+    simulateDay(hand, 2)
+    expect(engineOf(hand).world.registry.component('room').props.wbgt_c).toBeUndefined()
+  })
+
+  it('rotating daily audits preserves the body, clock and all subsequent outputs', () => {
+    const retained = deckhand('retained', nightsAbed), archived = deckhand('archived', nightsAbed)
+    for (let day = 1; day <= 3; day++) {
+      const full = simulateDay(retained, day), bounded = simulateDay(archived, day)
+      expect(bounded.outputs).toEqual(full.outputs)
+      expect(bounded.failedChecks).toEqual(full.failedChecks)
+      const before = engineOf(archived)
+      releaseDayTrace(archived)
+      const after = engineOf(archived)
+      expect(after.world.t).toBe(before.world.t)
+      expect(after.nextDay).toBe(day + 1)
+      expect(after.world.registry).toBe(before.world.registry)
+      expect(after.world.trace.transfers).toEqual([])
+      expect(after.world.trace.checks).toEqual([])
+    }
   })
 
   it('holds no formula: no Math anywhere in the adapter', () => {

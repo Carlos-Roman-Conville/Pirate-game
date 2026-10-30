@@ -54,11 +54,10 @@ Decision for Rex (or a new met row from the engine): which row each of these tak
 
 ### What the engine does not return yet
 
-`simulateDay` returns the engine's trace notes for the day (deficiency stage changes and the like) and its failed
-conservation checks, untouched. The engine has no crisis record type yet (PHASES-4-5.md mentions "a death opens a crisis
-record" for 2539), so the report carries none; the adapter will pass them through when the engine exports them. The
-engine's `index.ts` also does not export `environment.ts`, so the place carries a constant air temperature; the
-diurnal curve and the WBGT process wait for that export.
+`simulateDay` returns the engine's trace notes and failed conservation checks. Environment and medicine are now
+exported: settlement acceptance (2539) supplies climate air/WBGT through `Place.conditions`, and calls `healDay`
+after the body day to collect crisis records. Existing callers without conditions retain F-CH-4 constant air.
+The engine still supplies no thrust bleed rate or automatic dehydration death; see F-MD-3/7 and F-SE below.
 
 ## Food and the inventory (`web/src/world/adapters/food.ts`, task 2534)
 
@@ -197,3 +196,79 @@ worst counts (BODY.md section 3: one wound pathway per formula). `places.ts` gai
 | F-MD-5 the medicine clock and seed | `characters.ts`'s scheduler runs no medicine process, and a character has no seed. | The caller runs `healDay` after `simulateDay`: one engine day of healing and course, with the healing factors the world holds, the medicine outputs put on the body. The state is made on first use with the caller's `seed` (the engine's default 1 gives every character the same draws). | Where the medicine clock runs in the day loop (settlement acceptance 2539) and who owns each character's seed. |
 | F-MD-6 treatment supplies | `treatments` `Supplies` lists goods in words ("lancet, basin", "drugs (row 48, 71, 122)"), and the economy has no instruments, quantities or doses. | Each supply is mapped to goods in `medicine.json` `supplies`; instruments (lancet, forceps, saw, needle) are the surgeon's chest and must be in the stock but are kept; a drug or dressing costs one unit (`unitsPerUse`, kg for a food good) of the first good the stock has. Fire, wood and pustule have no good: named in the report, never paid. A treatment the library says did not work is performed and paid. The skill is the row's number; a row naming "the knowledge" needs the treatment id in `Surgeon.knows` (GOODS.md 3f). | Doses and quantities, instruments as separate goods, goods for fire, wood and pustule, which drug goods serve "drugs", and where the knowledge of a treatment is learned. |
 | F-MD-7 crises | The fate systems (`balance/` items 28 to 30) do not exist in code. | A crisis the engine opens (a due disease death risk, an inoculation death) comes back as a `CrisisEvent` (slug, cause, day, risk, source, and the engine's own record). The adapter exports no way to resolve one and the case stays on the sick list; the fate side calls the engine's `resolveCrisis(medicineOf(c), event.record, ...)`. The engine opens no crisis for a fatal wound yet (head, chest: "usually fatal"): only diseases, inoculation and the air conditions. | The fate systems: what a crisis offers (rescue, the surgeon, resurrection by faction) and who decides. Whether wound deaths should open crises too (needs the engine). |
+
+## Settlement acceptance (`settlement.ts`, task 2539)
+
+The runnable fixture is `data/pirate-ship/world/settlement.json`. Run from `web/`:
+`node --experimental-strip-types src/world/settlement.run.ts`. It prints thirty JSON
+ledger lines, Aug 1 through Aug 30 (noon to noon, ending Aug 31 noon). The shell
+entry supplies JSON import attributes for the existing bundler adapters. No server.
+`npx vitest run src/world/settlement.sim.test.ts` checks the whole run.
+For the full suite on this shared machine, set `VITEST_MAX_WORKERS=1` (PowerShell:
+`$env:VITEST_MAX_WORKERS = '1'`) before `npx vitest run`. Unrestricted parallelism
+can push the existing twelve-person food-week test over its unchanged five-second
+limit when it competes with this acceptance run; one worker preserves every test
+and timeout. The standalone thirty-day program takes about 20-22 seconds.
+
+These are integration circumstances, not adopted town or economy rules. Existing
+F-CH, F-FD, F-PL, F-WK, F-ST and F-MD rows above still apply. This index completes
+the missing-system decisions for this experiment, grouped by system.
+
+### Staffing
+
+| Fixture | Stands in for | Value used | Rex's decision |
+|---|---|---|---|
+| F-SE-1 assignments | Crew staffing, facility capacity and role records | Twelve synthetic ids `settler-1` through `settler-12`; four coopers at `port.shipyard` making slack casks, four carpenters at `port.warehouse` making planks and boards, four cooks at `port.bakery` making preserves and sugar candy. Each has skill 50 in the recipe's skill and knows only that recipe. Occupation METs and conversion gates are the existing work adapter. | Actual roster, staffing/capacity, suitable workplaces, initial knowledge and skills. |
+| F-SE-2 timetable | Duty scheduling, sick leave and recovery | Work 12:00-20:00, sleep 22:00-06:00, remaining hours `Walking the deck` (light chores). Settler-3 sleeps 02:00-06:00 on days 15-21 and does light chores for the lost four hours; there is no watch/split-night penalty. Everyone continues assigned work even with sickness or a pending crisis. Wound working-part/rest modifiers keep medicine's defaults (false); there is no limb-to-task mapping. | Shifts, leisure activity, sick leave, stopping work at a crisis, wound use/rest policy. Eight-hour nights reset fatigue but do not repay accumulated sleep debt; extra sleep would be needed. |
+
+### Ownership
+
+| Fixture | Stands in for | Value used | Rex's decision |
+|---|---|---|---|
+| F-SE-3 property and common stock | Ownership, access, household provisioning | The existing slots' owners/developed flags are copied unchanged by `facilityAt`. One shared stock supplies every worker; production enters it. No alignment commands, ownership transfer or development prerequisite. | Property/access, who owns inputs/output, ration priorities and whether staff need recruitment/development. |
+
+### Wages
+
+| Fixture | Stands in for | Value used | Rex's decision |
+|---|---|---|---|
+| F-SE-4 payment | Money, contracts and prices | No wage transfers, purchases, sales, taxes or price conversion. Initial goods are an explicit endowment, not an unrecorded purchase. Non-food inventory retains F-WK abstract units. | Pay, prices, accounting currency, trade and payroll. |
+
+### Construction
+
+| Fixture | Stands in for | Value used | Rex's decision |
+|---|---|---|---|
+| F-SE-5 facilities | Building, equipment acquisition and capacity | Existing shipyard, warehouse and bakery slots; the warehouse is explicitly furnished with a saw-pit. Other selected recipes require no equipment. No building time/material cost, parcel simulation, fuel or wear beyond recipe inputs. F-WK-1/2 supply batch quantities/time/rate. | Construction, equipment location/cost, capacity, durability and recipe quantities/yields. |
+
+### Records, provisioning and environment
+
+| Fixture | Stands in for | Value used | Rex's decision |
+|---|---|---|---|
+| F-SE-6 bodies | Missing character body records | All twelve use F-CH-1/2/3: male, age 30, height 175 cm, mass 70 kg, fat 15 kg, water 40 kg; library nutrient pools start full. No substitutions from alignment attributes. | Per-character records and starting reserves. |
+| F-SE-7 stores and meals | Supply chain, appetite, meal timing and replenishment | At day 1 stock exactly thirty days of all twelve people's ration rows (weekly kg / the data's seven-day week); 120 units of each selected recipe input; additionally 1 kg bread to exercise spoilage. Issue the ration at noon in stable character order, consuming only unspoiled stock. No restocking, substitutions, purchases, drinks beyond ration food-water, or force-feeding beyond F-FD's prescribed ration. Perishable stores can expire and shortages are printed. Recipe outputs remain in the common stock; these recipes do not replenish the historical ration. | Initial inventory, resupply, food allocation, drinking water, meal times, appetite and shortage response. |
+| F-SE-8 location and climate | Port identity, housing, weather clocks and travel | Port Royal is the scenario label, with `town-street` climate/exposure and a separate `tavern` room per person from `roomFor` (the atmosphere table's volume/ACH). One-hour weather samples held over each hour, from Aug 1 noon through Aug 31 noon; seed 2539, no historical year. Samples after midnight use the next calendar day. The game climate's WBGT drives physiology and air temperature drives ventilation. Humidity contributes to WBGT; room vapour retains the engine's outside-air mixing-ratio default, and no room air-speed override is supplied. No shared-room crowding or walking between boxes. | Geographic port records, accommodation, workplace microclimate, occupancy, weather sampling and year. |
+| F-SE-9 hazards and fate | Combat, outbreak events, treatment and fate decisions | Day 5: settler-1 gets an open left-forearm thrust, with seeded engine depth/infection/healing. Day 9: settler-2 receives a scripted yellow-fever dose of 1 through `exposeAt` (not a claimed natural exposure probability). Medicine seeds start at 2 plus character index; seed 3 deliberately exercises a pending fatal-risk crisis. Engine healing advances once after each body's day. No treatment or crisis resolution; no person is removed. Changing the run seed offsets each medicine seed equally. | Actual hazards, exposure dose, surgeon response, clock ownership, fate/rescue decisions. |
+| F-SE-10 audit windows | Persistence and raw trace retention | Every minute runs the engine's conservation checks and records extrema. Each day's trace is summarized (body energy/water transfers, checks, goods, outputs, medicine snapshots) before replacing only the audit World with one using the same registry/components, clock, graph and environment. Conservation baselines restart at the measured contents; nutrition's cumulative state persists in body properties. No process using historical transfers is enabled in this character loop. | Save/replay format and raw audit retention. A future circulation integration must retain its cumulative blood-transfer ledger before using this rotation. |
+| F-SE-11 adapter regression setup | A known thirsty state in the existing stats integration test, independent of the library's changed sweat rate | Start the test sailor at the P12 `water_deficit_pct` trigger (2%, read from `world/stats.json`), remove that fraction of body water with a matching transfer trace, then run the unchanged day without drinks. Existing thirst, face, push and conservation assertions are unchanged. The food week test archives each daily trace only after its existing checks, using F-SE-10; its five-second timeout is unchanged. | No game decision: these are test preconditions and storage lifetime, not starting settlement conditions. |
+
+### What this acceptance can and cannot prove
+
+The tests check per-good daily production minus consumption minus spoilage against
+stock change, independent body energy and water balances, minute extrema plus daily
+library recovery/composition bounds, fixed hazards, a nonempty pending-crisis path,
+and completion in under sixty seconds. Library body mass has a fat floor and an
+energy-limited gain, not a universal healthy upper mass; whole-body MET-hour fatigue
+has recovery rules, not a fixed maximum. Tests use those rules and the library's
+sleep/circadian alertness bands instead of inventing ranges. This is whole-body
+fatigue, not limb muscular fatigue. New daily ledgers retain all twelve people and
+all pending crises; tests check that every sick case marked as a crisis has a
+record, and none is resolved to death or survival.
+
+In the checked run all twelve bodies eventually exhaust water and continue working; the ledger flags this explicitly. Day 14 opens settler-2's yellow-fever crisis, still unresolved on day 30. The extra bread spoils on day 6. Day-30 ration shortfalls can include floating-point dust (reported at full precision, not silently rounded away).
+
+A green bookkeeping gate is not a survival or economic validation. Missing wound
+blood-loss rates, limb-force/fatigue coupling, fever-to-physiology factors and fate
+rules stay unsupported. Circulation is not run by the character adapter, so
+`aerobic_today` remains unavailable (F-ST-1); no index is fabricated. The prescribed
+ration, ingredient yields, work rates, rooms and exposures remain fixtures. The
+library checkpoints' limitations still apply; depleted body water, if reached,
+is printed explicitly rather than silently called survival.
