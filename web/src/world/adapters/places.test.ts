@@ -121,7 +121,8 @@ describe('the weather state is drawn from the rows', () => {
     let same = 0, total = 0
     for (let s = 1; s <= 20; s++) for (let d = 2; d <= 365; d++) { total++; if (weatherState(d, s) === weatherState(d - 1, s)) same++ }
     expect(same / total).toBeGreaterThan(0.3)
-  })
+    // many seeds over a year of days: ~5 s under load, past vitest's 5000 ms default, so the limit is explicit (2644)
+  }, 30000)
 
   it('applies the hurricane row\'s period factor to years before its date', () => {
     const count = (year: number | undefined) => {
