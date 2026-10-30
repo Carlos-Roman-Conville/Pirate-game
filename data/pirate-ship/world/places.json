@@ -1,0 +1,26 @@
+{
+  "_about": "Places for web/src/world/adapters/places.ts (task 2535). Each place names the row of the game's tables it takes: `region` is a Place cell of files/pirate-ship/body/data/atmosphere.json `regions`, `terrain` an id of environment.json `exposure` (also the engine's environment.exposure table). `ach` picks one of a row's air-change states by a word of its label (null: the unlabelled one, else the first). No climate number is here: the stand-ins are F-PL-* in web/src/world/FIXTURES.md.",
+  "places": [
+    { "id": "open-deck", "label": "The open deck", "terrain": "open-deck-day", "region": "Open deck, beach, a street", "ach": null },
+    { "id": "aloft", "label": "Aloft", "terrain": "aloft", "region": "Open deck, beach, a street", "ach": null },
+    { "id": "hold", "label": "The hold", "terrain": "below-decks-under-way", "region": "The hold", "ach": "open" },
+    { "id": "gun-deck", "label": "The gun deck", "terrain": "below-decks-under-way", "region": "The gun deck in action", "ach": "open" },
+    { "id": "great-cabin", "label": "The great cabin", "terrain": "below-decks-under-way", "region": "A cabin, the great cabin", "ach": "open" },
+    { "id": "orlop", "label": "The orlop", "terrain": "below-decks-under-way", "region": "The orlop and the surgeon's cockpit", "ach": null },
+    { "id": "galley", "label": "The galley", "terrain": "the-galley", "region": null, "ach": null },
+    { "id": "beach", "label": "A coral beach", "terrain": "a-dry-coral-island-the-beach-careening", "region": "Open deck, beach, a street", "ach": null },
+    { "id": "swamp-anchorage", "label": "A swampy anchorage", "terrain": "a-swampy-anchorage-or-river-mouth-wet-season", "region": "Forest, swamp", "ach": null },
+    { "id": "rainforest", "label": "Rainforest hills", "terrain": "rainforest-hills", "region": "Forest, swamp", "ach": null },
+    { "id": "town-street", "label": "A plantation town street", "terrain": "a-plantation-town", "region": "Open deck, beach, a street", "ach": null },
+    { "id": "tavern", "label": "The tavern", "terrain": "the-tavern-the-brothel", "region": "A tavern, a room ashore", "ach": null }
+  ],
+  "scenarios": [
+    { "scenario": "The hold battened down with men in it (prisoners, a storm)", "place": "hold" },
+    { "scenario": "A charcoal brazier in a shut cabin on a cold night", "place": "great-cabin" },
+    { "scenario": "Opening a long-sealed hold or well", "place": "hold" },
+    { "scenario": "The gun deck in a long action", "place": "gun-deck" }
+  ],
+  "vessel": "brig",
+  "calendar": { "months": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], "monthDays": [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31] },
+  "diurnal": { "maxAtHour": 15, "minAt": "sunrise" }
+}

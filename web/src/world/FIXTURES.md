@@ -59,3 +59,19 @@ The table's calc columns against the engine's food rows (per man a day): biscuit
 520, pork 415 against 415, pease 551 against 550, oatmeal 492 against 490, butter 174 against 170, cheese 194 against 195;
 the day 5,169 against 5,160; protein 221.4 g against 222; the pease's vitamin C 3.24 mg against 3. All inside the table's
 rounding; none patched. The body keeps 2.59 mg of that vitamin C a day (the engine's absorption table, 80%).
+
+## Places and weather (`web/src/world/adapters/places.ts`, task 2535)
+
+Place-to-row maps are in `data/pirate-ship/world/places.json`; volumes and air changes are the game's
+`files/pirate-ship/body/data/atmosphere.json` (`regions`, `scenarios`), the climate, weather states, sun and exposure rows
+its `environment.json`. The engine's `environment.ts` is now exported, so the constant air of F-CH-4 can be replaced by
+`roomFor` and `conditionsAt`; wiring the character adapter to them is the settlement task (2539).
+
+| Fixture | Stands in for | Value used | Rex's decision |
+|---|---|---|---|
+| F-PL-1 which ship | The hold's row gives "a sloop 60; a brig 250; a ship 800" m3; the game has no ship size in code. | `vessel: "brig"` in the data file; `roomFor(place, { vessel })` overrides. | Which ship the player sails, so the hold takes its own volume. |
+| F-PL-2 ranges and states | A row that gives a range ("20 to 60" for the cabin) or several air-change states ("2 open, 0.2 battened"). | The middle of a range (cabin 40 m3). The state is a word of the label in the data file: hold, gun deck and cabin `open`; the rest their unlabelled or first state. A scenario takes the air changes its own row states. | Which state a place is in when occupied (hatches, ports, window), and the cabin's size. |
+| F-PL-3 places with no box | The table has no row for the galley, and gives open places ("Open deck, beach, a street", "Forest, swamp") no volume (`-`, ACH infinite). Cave, mine, well (`by the place`), fire (`fire-driven`), the laboratory and under water have no exposure row or no number. | `roomFor` returns null for these; the place still has its exposure terrain. Cave, laboratory, fire and under water are not mapped as places. | A volume and air changes for the galley; places for the cave, laboratory and fire when the map exists. |
+| F-PL-4 the day's curve | The climate table gives a day maximum and a night minimum, not the hours they fall at. | The engine's half-cosine; the minimum at sunrise (from the sun row's day length), the maximum at 15:00 (`diurnal.maxAtHour`). | The hours of the day's coldest and hottest moments. |
+| F-PL-5 months between the sun rows | The sun table names only Dec to Jan, Mar and Sep, Jun to Jul. | The other months interpolate linearly between the nearest named months, round the year (February 11.5 h, 25 min). | Rows for every month. |
+| F-PL-6 the weather draw | `weather_states` stay chances and weights (marked low confidence, placeholders). | A seeded chain from day 1 of the year: stay with the row's chance, else another state in proportion to the season's weights (the climate row's Season word, wet or dry). Wind is the middle of the state's knots; it rains where the Rain cell does not begin "none". The hurricane's `x0.25 before 1715` applies when `year` is passed. Humidity, air and sea temperature are the month's row, whatever the state; the state does not yet change them. | Whether a state changes the day's air and humidity (rain cools), the shower of "none or a passing shower", and the year to play. |
