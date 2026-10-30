@@ -2253,6 +2253,102 @@
         "https://www.leica-microsystems.com/science-lab/microscopy-basics/milestones-in-incident-light-fluorescence-microscopy; https://www.rms.org.uk/resource/j-s--ploem--web--pdf.html",
         "science",
         "2026-10-29"
+      ],
+      [
+        "EQ-PF-COKE",
+        "Web search (Grace's Guide Coalbrookdale Co / Abraham Darby; English Heritage Ironbridge; EBSCO coke smelting; Broseley journal)",
+        "Coalbrookdale furnace in blast 10 Jan 1709 (Darby I, ex Bristol copper smelting where coke was used); Grace's says 'first coke furnace' is not strictly correct but first in Europe to last; Smiles says charcoal at first, coke introduced gradually (sources disagree); Darby II expanded coke use from 1730",
+        "https://www.gracesguide.co.uk/Coalbrookdale_Co; https://www.english-heritage.org.uk/visit/places/iron-bridge/history; https://www.ebsco.com/research-starters/history/invention-coke-smelting",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-PF-MATCH",
+        "Web search (Stockton heritage, phillumeny.com, Sigmalive on John Walker; Wikipedia Match)",
+        "Walker, Stockton-on-Tees chemist, friction match 1826 (head of antimony sulfide, potassium chlorate, gum, starch), first sales 1827, unpatented; Sauria's 'congreves'; 1830s lucifers; tinderbox decline",
+        "https://heritage.stockton.gov.uk/articles/people/john-walker-inventor-of-the-friction-match; https://phillumeny.com/john-walker",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-PF-MILL",
+        "Web search (Britannica waterwheel engineering; arXiv 2104.08981 History of Prime Movers; Mills Archive factsheets; locallocalhistory.co.uk)",
+        "Medieval overshot wheel about 2 to 5 hp (1.5 to 3.7 kW); pre-industrial average 3.7 kW per wheel, 2200 h/yr; horse mill small beside overshot wheel and cheaper for light work; no source figure for windmill or gin output",
+        "https://britannica.com/technology/waterwheel-engineering; https://arxiv.org/pdf/2104.08981; https://www.locallocalhistory.co.uk/brit-land/power/page03.htm",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-PF-PLANTE",
+        "Web search (National MagLab Plante battery 1859; ETHW Gaston Plante; Wikipedia Lead-acid battery)",
+        "Plante 1859 first rechargeable cell, lead plates in sulfuric acid, nine cells shown to the Academie 1860; Gautherot 1801 secondary current; six cells make 12 V (so about 2 V per cell)",
+        "https://nationalmaglab.org/magnet-academy/history-of-electricity-magnetism/museum/plante-battery-1859/; https://ethw.org/Gaston_Plant%C3%A9; https://en.wikipedia.org/wiki/Lead%E2%80%93acid_battery",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-PF-GAS",
+        "Web search (National Gas Museum; The Chemical Engineer Old King Coal part 2; Grace's Guide Gas Lighting; Biggar Gasworks)",
+        "Winsor Pall Mall demonstration 1807; Gas Light and Coke Company Act 1810, charter and Westminster works 1812 to 1813 (sources differ); Murdoch favoured private plants; no 1812 calorific figure found",
+        "https://www.nationalgasmuseum.org.uk/?p=102; https://www.thechemicalengineer.com/features/old-king-coal-part-2-coal-gases/; https://gracesguide.co.uk/Gas_Lighting",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-PF-ENG",
+        "Web search (Deutz company history; Britannica Rudolf Diesel; engineering.com)",
+        "Otto four-stroke 1876 (Deutz); Diesel first working engine 1897 at Augsburg, 26.2 to 26.6 per cent efficiency, compression about 35 atm igniting kerosene; Benz 1886 not confirmed by the results",
+        "https://deutz.com/en/company/our-history/striking-heads; https://www.britannica.com/print/article/162711",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-PF-FIREPISTON",
+        "Web search (Wikipedia Fire piston; Fox 1969 paper; Univ. Bristol fire piston page; Britannica)",
+        "Southeast Asian origin, older than Austronesian settlement of Madagascar (c. 100 to 500 AD); European reinvention France 1802 (Mollet 1804), metal version patented in England 1807; whether Europe borrowed is debated; Ruffo 1745 claim unverified",
+        "https://en.wikipedia.org/wiki/Fire_piston; https://gwern.net/doc/technology/1969-fox.pdf; https://www.britannica.com/science/fire-piston",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-PF-FUEL",
+        "Web search (FAO Comparison of energy values; POPS toolkit Annex 28; Univ. Melbourne and SASRI bagasse; Leiden peat thesis; Australian National Maritime Museum whale oil lamps)",
+        "Heating values MJ/kg: coke 23 to 32 (FAO 28.4), hard coal 29.3, anthracite 31.4, dry wood 18 to 20, air-dried 15.5, charcoal about 30.8 (one study); bagasse dry about 19.3 to 19.4 MJ/kg, 45 to 53 per cent moisture as fired; peat the Dutch main fuel, coal four times peat per unit (one source); whale oil main lamp fuel 18th and 19th c, kerosene from about 1860; no flame temperatures found",
+        "https://www.fao.org/4/T0269e/t0269e0c.htm; https://toolkit.pops.int/Publish/Annexes/A_28_Annex28.html; https://austehc.unimelb.edu.au/tia/796.html; https://scholarlypublications.universiteitleiden.nl/access/item%3A4305617/view; https://collections.sea.museum/objects/42626/brass-whale-oil-lamp",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-PF-SOLAR",
+        "Web search (Wikipedia Solar desalination; UPC 2015 thesis on Chilean plants)",
+        "Charles Wilson's Las Salinas, Chile still 1872 (shallow wooden basins under glass; nationality disputed; one source says 1882); Chilean plants 1872 to 1907 first industrial-scale",
+        "https://en.wikipedia.org/wiki/Solar_desalination; https://www.tdx.cat/handle/10803/394057",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-PF-PEARL",
+        "Web search (ETHW Pearl Street Station 1882 milestone; Edison Illuminating Company)",
+        "Pearl Street, Manhattan, service from 4 Sep 1882, direct current, 59 customers at start, six 27-ton steam 'Jumbo' dynamos; Holborn Viaduct (London) earlier in 1882, temporary; voltage not found",
+        "https://ethw.org/Milestones:Pearl_Street_Station,_1882; https://en.wikipedia.org/wiki/Edison_Illuminating_Company",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-PF-LPG",
+        "Web search (Wikipedia Walter O. Snelling; Cenex history of propane)",
+        "Snelling identified propane in gasoline 1910; bottled liquefied gas reported NYT 31 Mar 1912; patent 1,056,845 in 1913; American Gasol Co; first recorded production 1922; sale price to Phillips single-source, not used",
+        "https://en.wikipedia.org/wiki/Walter_O._Snelling; https://www.cenex.com/expert-advice-and-insights/history-of-propane",
+        "history",
+        "2026-10-29"
+      ],
+      [
+        "EQ-PF-TINDER",
+        "Web search (Future Museum tinderbox; Science Museum Group; Wikipedia Tinderbox)",
+        "Tinderbox held flint, steel, char cloth and sulphur-tipped splints ('brimstones'); sparks are burning steel flakes; the process could take minutes and failed in damp; displaced by friction matches; no 17th-c household date found",
+        "https://www.futuremuseum.co.uk/collections/life-work/social-history/home-life/housekeeping/tinderbox; https://collection.sciencemuseumgroup.org.uk/objects/co159067/tinder-box",
+        "history",
+        "2026-10-29"
       ]
     ]
   }
