@@ -1829,6 +1829,206 @@
         "https://en.wikipedia.org/wiki/Crookes_tube",
         "science",
         "2026-10-29"
+      ],
+      [
+        "EQ-AN20-PHM",
+        "Wikipedia, pH meter",
+        "Beckman patent Oct 1934 (US 2,058,761, 'acidimeter'); glass membrane, Ag/AgCl reference; two-buffer calibration; +/-1400 mV; 1920s electrodes earlier",
+        "https://en.wikipedia.org/wiki/PH_meter",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-MS",
+        "Wikipedia, Mass spectrometry",
+        "Wien 1899; Thomson; Dempster 1918, Aston 1919; vacuum; 70 eV EI; 1 to 10 keV; resolution by analyser",
+        "https://en.wikipedia.org/wiki/Mass_spectrometry",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-GC",
+        "Wikipedia, Gas chromatography",
+        "Tswett 1903; Martin and Synge 1941; James and Martin 1951/1952; detectors; carrier gases; below 300 C analytes; 3% syringe accuracy",
+        "https://en.wikipedia.org/wiki/Gas_chromatography",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-NMR",
+        "Wikipedia, NMR spectroscopy",
+        "Rabi Nobel 1944; Purcell and Bloch late 1940s, Nobel 1952; 21.1 T = 900 MHz; liquid helium magnets; 2 to 50 mg",
+        "https://en.wikipedia.org/wiki/Nuclear_magnetic_resonance_spectroscopy",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-UVV",
+        "Wikipedia, UV-vis spectroscopy; DU spectrophotometer; The Scientist",
+        "Lamps (tungsten 300 to 2500 nm, deuterium 190 to 400 nm); detectors; 1 cm cuvette; Beckman DU introduced July 1941 from Model D with Howard Cary; over 30,000 made 1941 to 1976",
+        "https://en.wikipedia.org/wiki/Ultraviolet%E2%80%93visible_spectroscopy; https://en.wikipedia.org/wiki/DU_spectrophotometer; https://www.the-scientist.com/the-first-commercial-uv-vis-spectrometer-47756",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-IR",
+        "Wikipedia, Infrared spectroscopy",
+        "Mid-IR 4000 to 400 cm-1; FTIR interferometer; NaCl, KBr, CaF2 windows; mulls and pellets; page lacks Coblentz and first-commercial dates (open)",
+        "https://en.wikipedia.org/wiki/Infrared_spectroscopy",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-XRD",
+        "Wikipedia, X-ray crystallography",
+        "von Laue 1912; Bragg 1912 to 1913; Debye and Scherrer 1916, Hull 1917; crystal over 0.1 mm; monochromatic beam",
+        "https://en.wikipedia.org/wiki/X-ray_crystallography",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-EM",
+        "Wikipedia, Electron microscope",
+        "Knoll and Ruska 1931; Siemens commercial 1938, TEM 1939; 0.1 nm; 20 to 400 keV TEM; vacuum; stable building",
+        "https://en.wikipedia.org/wiki/Electron_microscope",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-GM",
+        "Wikipedia, Geiger-Muller tube",
+        "Geiger 1908; Geiger and Muller 1928; 400 to 600 V halogen, 900 to 1200 V organic quench; about 0.1 atm fill; dead time 50 to 100 us",
+        "https://en.wikipedia.org/wiki/Geiger%E2%80%93M%C3%BCller_tube",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-CLOUD",
+        "Wikipedia, Cloud chamber",
+        "C.T.R. Wilson 1911, Nobel 1927; expansion chamber with water vapour; Langsdorf diffusion chamber 1936, alcohol, below -26 C; dry ice",
+        "https://en.wikipedia.org/wiki/Cloud_chamber",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-OSC",
+        "Wikipedia, Oscilloscope",
+        "Braun tube 1897; Zenneck 1899; Zworykin sealed high-vacuum CRT 1931; bandwidth x rise time 0.35; tens of volts deflection",
+        "https://en.wikipedia.org/wiki/Oscilloscope",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-HPLC",
+        "Wikipedia, HPLC",
+        "Giddings and Huber 1960s predictions; 1970s early systems; 50 to 1400 bar; UHPLC to 120 MPa; columns 2.1 to 4.6 mm by 30 to 250 mm; detectors",
+        "https://en.wikipedia.org/wiki/High-performance_liquid_chromatography",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-AAS",
+        "Wikipedia, Atomic absorption spectroscopy",
+        "Walsh 1955 (CSIRO); air-acetylene about 2300 C; N2O-acetylene about 2700 C; hollow cathode lamp; flame mg/L, furnace ug/L",
+        "https://en.wikipedia.org/wiki/Atomic_absorption_spectroscopy",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-ELEC",
+        "Wikipedia, Electrophoresis",
+        "Gautherot 1801, Reuss 1809; Tiselius moving boundary 1937; zone/gel methods 1940s to 1960s; page gives no voltage or gel size (open)",
+        "https://en.wikipedia.org/wiki/Electrophoresis",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-UCEN",
+        "Wikipedia, Ultracentrifuge",
+        "Svedberg 1924 (7,000 g, 12,000 rpm); 1925 to 1926 100,000 g, Nobel 1926; Beams, Pickels vacuum 1935; Spinco Model L 1949; Al and Ti rotors",
+        "https://en.wikipedia.org/wiki/Ultracentrifuge",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-LASER",
+        "Wikipedia, Laser",
+        "Townes, Gordon, Zeiger maser 1953; Gould 1957; Schawlow and Townes 1958; Maiman ruby laser 16 May 1960, 694 nm, flashlamp, pulsed",
+        "https://en.wikipedia.org/wiki/Laser",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-HOOD",
+        "Wikipedia, Fume hood",
+        "1904 hood at Gdansk still works; Leeds rising sash 1923; Labconco c.1936; Weber 1943; face velocity 80 to 120 ft/min; widths 1000 to 2000 mm",
+        "https://en.wikipedia.org/wiki/Fume_hood",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-GLOVE",
+        "Wikipedia, Glovebox",
+        "Stainless steel, acrylic; argon or nitrogen; copper catalyst and molecular sieves; below 20 ppm O2 (open-source box); invention date not on page (open)",
+        "https://en.wikipedia.org/wiki/Glovebox",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-SCHL",
+        "Wikipedia, Schlenk line",
+        "Schlenk and Thal 1913; dual manifold; ground glass, taps; cold trap; copper(I) or manganese(II) oxide deoxygenation; 3 purge cycles",
+        "https://en.wikipedia.org/wiki/Schlenk_line",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-ROTA",
+        "Wikipedia, Rotary evaporator",
+        "Lyman Craig 1950; Buchi commercial 1957; DMF and DMSO boil below 50 C at 5 torr; research flasks a few litres, pilot 20 to 50 L",
+        "https://en.wikipedia.org/wiki/Rotary_evaporator",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-STIR",
+        "Wikipedia, Magnetic stirrer",
+        "Stringham US 1,242,493 (9 Oct 1917); Rosinger US 2,350,534 (1944, filed 1942); McLaughlin plastic bar late 1940s; PTFE bars; about 4 L or less",
+        "https://en.wikipedia.org/wiki/Magnetic_stirrer",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-MUFF",
+        "Wikipedia, Muffle furnace",
+        "Electric muffle designs followed high-temperature elements and electrification; high-temperature model 1,200 C; MoSi2 up to 1,800 C (citation needed on page); date open",
+        "https://en.wikipedia.org/wiki/Muffle_furnace",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-VAC",
+        "Wikipedia, Vacuum pump",
+        "Rotary vane oil pump 0.1 Pa; diffusion pump needs a backing pump; page gives no inventors",
+        "https://en.wikipedia.org/wiki/Vacuum_pump",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-DIFF",
+        "Wikipedia, Diffusion pump",
+        "Gaede 1915; Langmuir 1916; mercury, then oils; about 1e-12 bar; forepump near 1e-4 bar; cooled shell; cold trap",
+        "https://en.wikipedia.org/wiki/Diffusion_pump",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-AN20-GAEDE",
+        "Web search (epicsysinc.com, industrial-production.de, leybold.com founders page)",
+        "Gaede rotary mercury pump 1905 (Merano); oil-sealed rotary 1907 as forepump; Welch Micro-Deka 1934 oil seal between inlet and exhaust",
+        "https://epicsysinc.com/blog/vacuum-pumps/; https://www.leybold.com/en/about-us/our-founders/",
+        "science",
+        "2026-10-29"
       ]
     ]
   }
