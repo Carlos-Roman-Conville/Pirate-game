@@ -11,8 +11,8 @@ const PREFIXES = ['dist.', 'parcel.', 'bldg.', 'title.', 'lease.', 'txn.', 'acct
 
 function providers() {
   const p = stubProviders({
-    'salt-meat': { inputs: [{ good: 'meat', units: 1 }, { good: 'salt', units: 1 }], output: 'salt-meat', yield: 1 },
-    'smoked-meat': { inputs: [{ good: 'meat', units: 1 }], output: 'smoked-meat', yield: 1 },
+    'salt-meat': { inputs: [{ good: 'meat', units: 1 }, { good: 'salt', units: 1 }], output: 'salt-meat', yield: 1, unitsPerFixtureDay: 10, labourPerUnit: 0.25 },
+    'smoked-meat': { inputs: [{ good: 'meat', units: 1 }], output: 'smoked-meat', yield: 1, unitsPerFixtureDay: 6, labourPerUnit: 0.25 },
   })
   p.labour.pools['pool.housing'] = 5
   p.labour.pools['pool.builders'] = 1
@@ -107,8 +107,7 @@ describe('A1 the acceptance scenario', () => {
     const biz = shop.businesses[0]
     r.run({ type: 'assign', person: 'farm-son', kind: 'management', target: biz })
     r.run({ type: 'setLines', biz, lines: [
-      { recipe: 'salt-meat', equipment: ['salting-house'], unitsPerFixtureDay: 10, labourPerUnit: 0.25 },
-      { recipe: 'smoked-meat', equipment: ['smokehouse'], unitsPerFixtureDay: 6, labourPerUnit: 0.25 }] })
+      { recipe: 'salt-meat', equipment: ['salting-house'] }, { recipe: 'smoked-meat', equipment: ['smokehouse'] }] })
     r.run({ type: 'credit', holder: biz, amount: 100 }); r.tick()
     // 4 staff
     const p1 = r.run<string>({ type: 'addPost', biz, role: 'butcher', wage: 2 })
