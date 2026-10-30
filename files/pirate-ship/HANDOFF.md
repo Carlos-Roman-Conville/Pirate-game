@@ -1,4 +1,4 @@
-# Pirate Ship: handoff (2026-10-28, rewritten by task 2482)
+# Pirate Ship: handoff (rewritten 2026-10-29 by task 2514)
 
 Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or something is parked.
 
@@ -11,6 +11,8 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
   events, institutions, town, endings). No UI uses it yet. Numbers in `data/pirate-ship/alignment/`, placeholders.
   Simulator: `cd web && npx vitest run src/alignment/sim`; all four perfect towns reachable with gates on.
   ghostRule decided: every-pair-both-improve (Rex, task 2481).
+- Joining gates and develop conditions: `data/pirate-ship/alignment/gates.json` and `conditions.json`. INTP, ESTP,
+  ESFP and ISFJ are story-gated; the farm and the butcher shop need `supply bodies`.
 - Equipment catalogue (`body/data/equipment.json`, about 313 items): all researched and reconciled, with
   `conf_history` and `conf_capability` columns on every row; the state section is in `science/SCIENTIFIC_EQUIPMENT.md`.
   Build: `python body/build-body-data.py` (must print 0 validation problems). Open: navigation has no GOODS 3c
