@@ -154,7 +154,24 @@ pirate repo's pointer is [`../settlement/README.md`](../settlement/README.md). *
 test specs; no invented answers to the fourteen questions (configurable rules or explicit placeholders instead); the
 current town and alignment systems preserved, the backend introduced through adapters; the engine independent of
 pirate-ship with stable interfaces for the economy and realism engines; after the foundation passes, a report of
-which questions block the next phase. The settlement session is building it. §7 below is the first sketch it started from and is superseded where the two differ.
+which questions block the next phase.
+
+**Built (2026-10-29):** the engine foundation, `Toolchain/settlement` commits ae07c4c and 1592a6f (records, ledger,
+titles with transferable terms, leases, projects and layouts, businesses, posts, assignments, offices, the tick,
+stub providers; 23 tests green); the pirate adapter, pirate repo commit 2fad6d4 (`data/pirate-ship/settlement/
+start.json` seed rows, all proposed with placeholder geometry; `web/src/settlement/` load and bridge; the bridge
+never issues an alignment command; T0 invariance, T1, A1, A2 green, 278 web tests). `town/`, the alignment code and
+data, and the economy data untouched. Nothing pushed.
+
+**Blocking the next phase (Rex's; full text in `Toolchain/settlement/QUESTIONS.md`):**
+- Q1 footprint classes for the 16 places (small / medium / large / field / open), household size, undeveloped
+  reserve share. Rex already said: derive dimensions from real requirements, never a fixed size.
+- Q5 which places start with which of the 25 fixtures, and whether an idle fixture counts as "the settlement has it".
+- Q6 the starting title rows: who is private, who is `town`, who is `none`; which businesses start operating. Rex
+  already said: preserve the established owners; the player acquires by purchase, inheritance or agreement; not
+  everything is purchasable.
+- Q7 is `port.cash` the settlement treasury, or its own account (placeholder: its own).
+- Q10 post counts and production lines per starting business; wage and rent levels. §7 below is the first sketch it started from and is superseded where the two differ.
 
 ## 7. The parcel and property system, first design (proposed; keeper's shape on the resolutions above)
 
@@ -197,3 +214,4 @@ Records, each with a stable id, in the `UPGRADES.md` style:
 | 2026-10-29 | §6 six resolutions (ownership ≠ control is Rex's direction; the rest proposed); §7 parcel / building / title / business / arrangement / authority records (proposed); §8 open. Implementation not authorised until map scale and ownership rules are approved | Rex (ownership); proposed |
 | 2026-10-29 | §6a: the five resolutions, the alignment refinement (owner/manager change never moves an institution's alignment), separate ids, ghosts kept apart, and the settlement-backend shift approved by Rex via paste; design set in Toolchain/settlement (pointer ../settlement/README.md) | Rex (via paste) |
 | 2026-10-29 | Rex approved §6a as his direction and the implementation of the settlement engine foundation in Toolchain/settlement (adapters, placeholders for the 14 open questions, acceptance test A1); forwarded to the settlement session | Rex |
+| 2026-10-29 | Settlement engine foundation built (Toolchain/settlement 1592a6f, 23 tests) and the pirate adapter (2fad6d4, T0/T1/A1/A2 green); five questions block the next phase: Q1, Q5, Q6, Q7, Q10 | settlement session; questions Rex's |
