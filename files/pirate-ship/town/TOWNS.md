@@ -131,6 +131,7 @@ Each place has an id in backticks (`port.<place>`). The same id is reserved as t
 | `port.esfj_shop` | The ESFJ's rare-goods shop in town, or a stall in the port (which: open) | the ESFJ merchant | temporary: opens once you fund him, fails, then he joins your crew | Rex |
 | `port.townhall` | The town hall | the ESTJ and (tentatively) an ENFP compete for control | nothing else said yet | Rex (2026-10-28) |
 | `port.fort` | The old coastal fort | the old soldier goes there one day a week | "a great locale, love that idea" | Rex |
+| `port.cemetery` | The cemetery: burials, graves | residents open | the place and its customs are the town keeper's (`CULTURE.md` §2); parcels and grave capacity Settlement's, burial services Economy's, ghosts and transformations Story's | Rex (2026-10-30); place and residents open |
 | `port.soldier_house` | The old soldier's locked house | the old soldier | you can't get in; you could see her leave once a week toward the fort. Whether it still exists now she lives in the hut: open | Rex (2026-10-27); existence open |
 | | Docks barely maintained; a harbour of fishing boats, damaged sloops and vessels that shouldn't still sail | | look detail | proposed (outside AI, via STORY.md) |
 | | A notice board | | each port one small screen: dock, tavern with tables, shop, notice board (§4) | proposed |
@@ -242,3 +243,4 @@ they are in town.
 | 2026-10-28 | The town's alignment comes from its developed institutions; nine endings; perfect = every relevant institution in one alignment; institutions transform overnight after their owner returns (`ENDINGS.md`, `UPGRADES.md`) | Rex |
 | 2026-10-29 | Locales beyond the towns: underwater locations, a few dungeons (a pirate's cove, a great boss's hiding place; a kraken boss likely), minor locales; Caribbean legends and myths; mostly authored, procedural fills gaps; locale inventory table (shape proposed); bestiary keeper started | Rex |
 | 2026-10-29 | Bestiary keeper's candidate dungeons, minor locales and town-night creatures recorded as proposed; new `FACILITIES.md` (proposed, outside AI via Rex): facility / property / workforce layer, audited against the repo, nothing adopted | proposed |
+| 2026-10-30 | New place: the cemetery (`port.cemetery`); `CULTURE.md` opened for the starting port (starting beliefs, customs incl. burial, the economic and political arrangement, situation, context, practices; researched where sources exist) | Rex (the place, the file); values labelled |
