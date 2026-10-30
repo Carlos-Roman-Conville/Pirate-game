@@ -7632,7 +7632,7 @@ window.BODY_DATA = {
      "rare: gunsmiths in ports; a ship's gunner mends only simple faults",
      "low",
      "low",
-     "proposed (researched 2026-10-29; EQ-MET-9) reconciled 2026-10-29; no source covers gunsmith's tools in 1650 to 1730 (EQ-MET-9 is the cannon page; no web access in the 2510 session)"
+     "proposed (researched 2026-10-29; EQ-MET-9) reconciled 2026-10-29; searched: Moxon, Colonial Williamsburg, Royal Armouries and English gunmaker histories, probate inventories, no source covers 1650-1730 (EQ-MET-19)"
     ],
     [
      "glasshouse",
@@ -21987,6 +21987,14 @@ window.BODY_DATA = {
      "Pharmacy soft paper charta emporetica, 1728 Cyclopaedia",
      "https://en.wikipedia.org/wiki/Filter_paper",
      "history",
+     "2026-10-29"
+    ],
+    [
+     "EQ-MET-19",
+     "Searched 2026-10-29, nothing covers 1650-1730: (1) gunsmith tools 17th c. with Moxon, Mechanick Exercises (joiner, smith, turner and carpenter tools, no gunmaking); (2) Colonial Williamsburg gunsmith shop (18th-c. reconstruction; only date before 1730 is John Brush's shop of 1717, American Rifleman article, no tool list for the period); (3) Royal Armouries and English gunmakers (Bailey and Nie, Blackmore: trade history, no tools; PDF unreadable); (4) 17th-c. gunmaker probate inventories (none found); (5) Colonial Williamsburg 'Tools of the Trades' (403)",
+     "no source found for gunsmith's tools in 1650-1730; later or reconstructed shops show a forge, anvil, vise, hand files, a flywheel boring bench and a rifling machine",
+     "https://www.americanrifleman.org/content/making-the-american-rifle-at-colonial-williamsburg/",
+     "searched",
      "2026-10-29"
     ]
    ]
