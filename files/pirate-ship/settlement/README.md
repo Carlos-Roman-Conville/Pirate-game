@@ -28,3 +28,14 @@ Untouched: `../town/`, `web/src/alignment/`, `data/pirate-ship/alignment/`, the 
 `../town/FACILITIES.md` s7 are superseded by `PACKAGES.md` s2 only when Rex says so; the town keeper records what
 Rex decides. Questions that block the next phase are listed in `Toolchain/settlement/QUESTIONS.md` (Q1 for the
 map, Q6's rows for property sign-off, Q5 and Q10 for facilities and workforce).
+
+**Behaviour change coming (2026-10-30, documented ahead under Rex's "no silent change" rule).** Belt unit 2646
+(`Toolchain/settlement`, after the kernel's golden compare 2615) replaces the engine's unsourced building decay
+(about 850 days from new to ruined) with decay by material class (`Toolchain/settlement/VALIDATION.md` §4b,
+registry review R-2). This data gives no building a class yet, so **from 2646 on, no building in the port decays**:
+condition stays where `start.json` sets it until a repair, a renovation or a host command changes it. The thirty-day
+adapter results and the I2 golden change knowingly; the kernel keeper lists it as an intentional difference.
+Classed port buildings will not decay either until the `salt-wind` exposure factor has a source or Rex sets it
+(flagged by the registry keeper). Next: material classes for the starting buildings, from the town keeper's TWN
+research; classes the sources leave empty go to Rex.
+
