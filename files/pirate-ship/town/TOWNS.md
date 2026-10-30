@@ -77,6 +77,12 @@ generation, but most locales are authored**. Creatures, bosses and enemy classes
 - **(proposed)** A locale is one of three things for the engine: a **settlement** (develops, has reputation groups and
   slots), a **dungeon** (a boss, a clear state, maybe a respawn), or a **minor locale** (a landmark, a resource or a
   scene; no slots). Underwater is a setting any of the three can have, not a fourth kind.
+- **(proposed, the bestiary keeper, 2026-10-29)** Candidates from the legends, for Rex to pick from
+  (`../bestiary/BESTIARY.md`): dungeons: the kraken's lair (underwater or a sea lane), the lusca's blue hole
+  (Andros), Coaybay (the Taíno house of the dead, a cave), a drowned Abyssal Cult temple, a sunken Atlantean site,
+  a criminal gang's cove; minor locales: Hy-Brasil, Antillia, the Fountain of Youth (Bimini), El Dorado (Guiana);
+  town-night creatures with a town home: the Rolling Calf (the butcher shop), a bacá (the bigwig's warehouse),
+  duppies and jumbees (silk-cotton trees, a graveyard), obeah or bokor at the town's edge, a Moko Jumbie at the gate.
 - **(open, Rex's)** How many underwater locations, dungeons and minor locales; which legends each draws on; whether
   a cleared dungeon can become a settlement or a hideout of yours; what procedural generation fills (minor locales
   only, or dungeon layouts too).
@@ -235,3 +241,4 @@ they are in town.
 | 2026-10-28 | Withdrawn by Rex: the ghost rule for every pair (open again). Goal: a perfectly working town is reachable through a complicated set of choices; you can't recruit everyone | Rex |
 | 2026-10-28 | The town's alignment comes from its developed institutions; nine endings; perfect = every relevant institution in one alignment; institutions transform overnight after their owner returns (`ENDINGS.md`, `UPGRADES.md`) | Rex |
 | 2026-10-29 | Locales beyond the towns: underwater locations, a few dungeons (a pirate's cove, a great boss's hiding place; a kraken boss likely), minor locales; Caribbean legends and myths; mostly authored, procedural fills gaps; locale inventory table (shape proposed); bestiary keeper started | Rex |
+| 2026-10-29 | Bestiary keeper's candidate dungeons, minor locales and town-night creatures recorded as proposed; new `FACILITIES.md` (proposed, outside AI via Rex): facility / property / workforce layer, audited against the repo, nothing adopted | proposed |
