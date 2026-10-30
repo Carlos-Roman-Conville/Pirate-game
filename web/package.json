@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@rex/economy": "file:../../../../Toolchain/economy",
     "@rex/realism": "file:../../../../Toolchain/realism",
     "@rex/settlement": "file:../../../../Toolchain/settlement",
     "motion": "^13.4.4",
