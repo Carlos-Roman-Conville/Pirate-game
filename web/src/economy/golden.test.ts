@@ -46,7 +46,7 @@ describe('golden: the thirty-day run', () => {
       console.log('golden written')
       return
     }
-    const golden = readFileSync(FILE, 'utf8')
+    const golden = readFileSync(FILE, 'utf8').replace(/\r\n/g, '\n') // git may check the file out with CRLF
     if (golden !== text) {
       const where = firstDifference(JSON.parse(golden), JSON.parse(text), '$') ?? 'text differs, parsed values equal'
       expect.fail(`golden moved at ${where}`)
