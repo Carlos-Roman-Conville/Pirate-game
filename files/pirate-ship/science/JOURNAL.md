@@ -44,7 +44,7 @@ game's; this is its content rule.
 
 ## 2. The entry
 
-<!-- table:science.entry -->
+<!-- table:library/science.entry -->
 *A journal entry's fields (one shape for a chemical, a plant, a fish, a creature, a disease, a tool, a place)* (model; confidence high; source: ChatGPT's field list (outside AI) merged with Rex's: a blurb of what it does and what it is used for, when it was discovered and by whom. The entry separates what the player found from the historical reference that unlocks on identification; the five historical dates are kept apart because they differ and credit is often disputed.)
 
 | Field | Holds | Shown when | Mark |

@@ -138,7 +138,10 @@ merely imported; universal mechanisms and reference data separate from pirate co
 migration plan are `Toolchain/realism/MIGRATION.md`: three layers (universal engine, scientific data
 library, the game), a table-by-table dependency map of the 18 data files (the split is by column, keyed by
 id, never a file move), what stays game-specific by name, and seven phases, of which only one touches the
-game's data and does so once by a reviewed script. Nothing has moved yet; all tests pass. **[model]**
+game's data and does so once by a reviewed script. Phase 2 has run (2026-10-29): `body/data/*.json` now hold
+`id` plus the game's columns, the universal columns are in `Toolchain/realism/data/library/`, and
+`body/build-body-data.py` joins the two roots on `id` (column order in `body/data/_layout.json`) for the docs and
+`data.js` (`BODY_DATA.library` carries the raw library). **[model]**
 
 ## Sources
 

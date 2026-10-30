@@ -84,7 +84,7 @@ fatigue load (MET-hours).
 | Swimming | 8 | swimming, moderate | proposed |
 <!-- /table -->
 
-<!-- table:physiology.pal -->
+<!-- table:library/physiology.pal -->
 *Physical activity level (PAL) bands used for the day's total* (science; confidence high; source: FAO/WHO/UNU 2004 energy requirements; PAL bands 1.2 to 2.4. PHY-FAO)
 
 | Day type | PAL | What it looks like | Mark |
@@ -107,7 +107,7 @@ fatigue load (MET-hours).
 
 ## 1a. Ventilation demand (added 2026-10-29, the air layer)
 
-<!-- table:physiology.ventilation -->
+<!-- table:library/physiology.ventilation -->
 *Ventilation demand: how much air a body moves, and the drive* (science; confidence high; source: Minute ventilation about 6 L/min at rest rising near-linearly with oxygen demand to 100+ at maximal work; oxygen consumption 3.5 mL/kg/min per MET; the carbon dioxide drive doubles ventilation for each 5 mmHg rise in PaCO2 while the hypoxic drive wakes under about 60 mmHg PaO2 (standard respiratory physiology; PHY-VENT). The breathing drive itself is NEUROLOGY's (opioids and deep drink depress it).)
 
 | Quantity | Formula or value | Unit | Reads | Mark |
@@ -153,7 +153,7 @@ fatigue load (MET-hours).
   body, its ceiling 1.0 the genetic max; the simulator tunes the three numbers. The 42/7 constants are the
   TrainingPeaks convention, not a universal truth.
 
-<!-- table:physiology.banister -->
+<!-- table:library/physiology.banister -->
 *Cardiovascular fitness: the fitness-fatigue model constants* (model; confidence medium; source: Banister impulse-response model (Morton, Fitz-Clarke, Banister 1990): performance = base + k1*fitness - k2*fatigue, each an exponentially decaying sum of daily training loads. The 42-day / 7-day constants are the TrainingPeaks CTL/ATL convention, not a universal fit. PHY-BAN)
 
 | Parameter | Value | Unit | Mark |
@@ -208,7 +208,7 @@ storm, pain, drink), time of day. **Outputs:** `sleepDebt` (hours), `alertness` 
 | over 40 | 0.55 | equal to three nights without sleep: falls asleep standing; accident risk doubled | proposed |
 <!-- /table -->
 
-<!-- table:physiology.circadian -->
+<!-- table:library/physiology.circadian -->
 *Time-of-day alertness (the circadian factor)* (science; confidence high; source: Two-process model (Borbely 1982); maritime watch studies find sleepiness peaks on the night and early-morning watches (Akerstedt et al. 2013; Colquhoun 1988). PHY-WATCH)
 
 | Ship's time | Factor | Note | Mark |
@@ -261,7 +261,7 @@ acclimatisation days; hydration. **Outputs:** `coreTemp` (°C), `sweatRate` (L/h
   never fight; a full balance with clothing insulation (clo) and skin wettedness is the upgrade if the
   simulator finds the shadow too coarse (proposed, after the audit of 2026-10-29).
 
-<!-- table:physiology.wbgt_limits -->
+<!-- table:library/physiology.wbgt_limits -->
 *Heat stress: WBGT ceilings for continuous work (acclimatised), and the model's core-temperature drift* (science; confidence medium; source: NIOSH criteria (2016) and ACGIH TLVs as summarised by the US Navy heat-flag tables: light about 30 C, moderate about 28 C, heavy about 25 C WBGT for continuous acclimatised work; unacclimatised 1 to 2 C lower. PHY-WBGT)
 
 | Work class (MET) | WBGT ceiling, acclimatised (C) | Unacclimatised (C) | Model: core drift above ceiling (C per hour per C over) | Mark |
@@ -378,7 +378,7 @@ energy balance (`NUTRITION.md`), fever and blood loss (`MEDICINE.md`), muscular 
 
 ## 7. Recovery: the overnight tick
 
-<!-- table:physiology.recovery -->
+<!-- table:library/physiology.recovery -->
 *What a night's sleep restores (the overnight tick)* (model; confidence medium; source: Simplified from the subsystems: sleep repays debt hour for hour above need; muscle fatigue recovers by the 3CC R rate (MUSCULAR.md); glycogen refills from the day's carbohydrate (NUTRITION.md); wounds heal by phase (MEDICINE.md).)
 
 | Quantity | Overnight rule | Reads | Mark |
@@ -411,7 +411,7 @@ lower).
 - **[history]** Pirate crews were young: most of Roberts' men tried in 1722 were in their twenties
   (`../economy/GOODS.md` source J; the age list is in Johnson's trial record). An old sailor was forty.
 
-<!-- table:physiology.ageing -->
+<!-- table:library/physiology.ageing -->
 *Ageing curves the body uses (the maximum, not the current value)* (science; confidence medium; source: Grip strength pooled norms (Tomkinson et al. 2025, 2.4 million adults): peak at 30 to 39, faster decline from middle age; VO2max about -10% per decade from the late 20s; muscle mass -3 to -8% per decade after 30 with faster loss after 60 (sources disagree on the exact rate). PHY-AGE)
 
 | Attribute family | Rises until | Plateau | Falls after | Rate | Mark |
@@ -437,7 +437,7 @@ lower).
 
 ## 9. Acclimatisation and seasickness
 
-<!-- table:physiology.acclimatisation -->
+<!-- table:library/physiology.acclimatisation -->
 *Acclimatisation clocks* (science; confidence medium; source: Heat: plasma volume +9% after 6 days of exercise in humid heat, back to baseline about 25 days after stopping; full adaptation 10 to 14 days (PHY-HEATACC). Seasickness: 40% of 1,293 sailors affected, most mildly; 72% of cases in rough sea; incidence fell to 10% of its first-day value over 10 days at sea in cadets (PHY-SEA). Disease 'seasoning' is in MEDICINE.md.)
 
 | Adaptation | Time to gain | Time to lose | Effect | Mark |

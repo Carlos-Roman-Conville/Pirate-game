@@ -308,7 +308,7 @@ chances and clocks on §1–§4.
 
 ## 7. Healing
 
-<!-- table:medicine.healing -->
+<!-- table:library/medicine.healing -->
 *Healing clock modifiers* (model; confidence medium; source: Wound healing needs protein, vitamin C (collagen) and zinc; scurvy reopens old wounds (Lind, and modern collagen biology); age slows healing; infection resets the clock; rest speeds it. MED-HEAL)
 
 | Factor | Multiplier on healing time | Reads | Mark |

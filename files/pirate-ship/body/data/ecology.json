@@ -2,7 +2,8 @@
   "_about": "Tables for world/ECOLOGY.md. Stocks follow a Schaefer surplus-production model (logistic growth minus catch); parameters are illustrative per species class and a belt data task. Historical depletion from the Cayman turtle fishery and Barbados soil. mark: rex | proposed | open.",
   "stocks": {
     "title": "Fish, turtle and game stocks (Schaefer model parameters, per local ground)",
-    "kind": "model", "conf": "low",
+    "kind": "model",
+    "conf": "low",
     "source": "Schaefer 1954 surplus production: B(t+1) = B + r B (1 - B/K) - C; MSY = rK/4 at B = K/2 (FAO; ECO-SCHAEFER). r values are the keeper's reading of life history (fast for small pelagics, slow for turtles and sharks); K is per fishing ground in units of catch-days. Turtle depletion: the Cayman fishery was already in decline when permanent settlers arrived in the early 1700s; 1,200 to 1,400 turtles a year sold at Jamaica in 1787; the fleet moved to the Miskito Cays by the early 1800s (ECO-TURTLE). Fish species named are those period sailors caught from the rail (DUTIES.md: dolphin fish, bonito, shark, flying fish; FISHING.md).",
     "columns": ["Stock", "Where", "r (per year)", "K (catch-days per ground per year)", "MSY (calc)", "Recovery after half-depletion (years)", "Seasonality", "Period note", "Mark"],
     "rows": [
@@ -21,22 +22,24 @@
   },
   "depletion_rules": {
     "title": "Depletion and regeneration rules",
-    "kind": "model", "conf": "medium",
+    "kind": "model",
+    "conf": "medium",
     "source": "Logistic recovery is the Schaefer model's own; the catch-per-effort fall is the standard signal (CPUE proportional to B); the 'tragedy' row is the Cayman history. The fishing minigame's catch (FISHING.md stage 1, reading the water) is the visible face: fewer silhouettes.",
-    "columns": ["Rule", "Formula or statement", "Visible face", "Mark"],
+    "columns": ["id", "Visible face", "Mark"],
     "rows": [
-      ["Daily catch per fisher", "catch = q x effort x B / K (q from Fishing skill, FISHING.md stages); the minigame shows B/K as how many silhouettes appear", "'the fish are thin here'", "proposed"],
-      ["Overnight stock update", "B += r B (1 - B/K) / 365 - today's catch (all boats on the ground, aggregate for distant ones)", "-", "proposed"],
-      ["A ground is 'fished out'", "B under 0.2 K: catch x0.2, the port's fish price up (economy), the fisherman duty yields little", "the market; the fisherman's complaint", "proposed"],
-      ["Recovery", "logistic: from 0.2 K back to 0.8 K takes about 2.8/r years (reef fish 7 years, pelagics 3, turtles 56)", "the fish return if left", "proposed"],
-      ["Turtle crawls (GOODS.md row 60)", "live turtles kept in pens do not deplete further but do not breed; a crawl of N feeds N x 30 kg", "the pens at the harbour", "proposed"],
-      ["Nesting beaches", "taking turtles on the beach in nesting season takes breeding females: r x0.5 for that stock for a decade", "the beach empty next year", "proposed"],
-      ["Hunting pressure", "the same model for game; boucaniers on Hispaniola at MSY x3 drove cattle to near zero by 1700 (history)", "no hides at the French camps", "proposed"]
+      ["ecology.depletion_rules.daily-catch-per-fisher", "'the fish are thin here'", "proposed"],
+      ["ecology.depletion_rules.overnight-stock-update", "-", "proposed"],
+      ["ecology.depletion_rules.a-ground-is-fished-out", "the market; the fisherman's complaint", "proposed"],
+      ["ecology.depletion_rules.recovery", "the fish return if left", "proposed"],
+      ["ecology.depletion_rules.turtle-crawls-goods-md-row-60", "the pens at the harbour", "proposed"],
+      ["ecology.depletion_rules.nesting-beaches", "the beach empty next year", "proposed"],
+      ["ecology.depletion_rules.hunting-pressure", "no hides at the French camps", "proposed"]
     ]
   },
   "crops": {
     "title": "Crops: yields, seasons and soil",
-    "kind": "history", "conf": "medium",
+    "kind": "history",
+    "conf": "medium",
     "source": "Ligon 1657 on Barbados cane (planted in rows, 14 to 16 months to ripen; replanted from cuttings; cassava and potatoes as bread; plantains); modern tropical agronomy for cycle lengths; Barbados deforested and its soil exhausted within decades of 1640, with heavy manuring and cane-holing the response (ECO-SOIL). Yields are modern unimproved-tropical figures, not period measurements.",
     "columns": ["Crop", "Planting season", "Months to harvest", "Yield (t/ha, unimproved)", "Soil demand", "Labour (person-days/ha)", "Keeps", "Period note", "Mark"],
     "rows": [
@@ -57,21 +60,23 @@
   },
   "soil": {
     "title": "Soil fertility model",
-    "kind": "model", "conf": "low",
+    "kind": "model",
+    "conf": "low",
     "source": "A fertility index per field (0 to 1) drained by each crop's demand and restored by manure, fallow and legumes; Barbados exhaustion and the planters' manuring response are the historical anchor (ECO-SOIL). Numbers are placeholders.",
-    "columns": ["Rule", "Formula", "Visible face", "Mark"],
+    "columns": ["id", "Visible face", "Mark"],
     "rows": [
-      ["Fertility drain per harvest", "f -= demand (cane 0.06, tobacco 0.08, maize 0.03, cassava 0.01, pease -0.02 i.e. restores)", "'the cane comes up thin'", "proposed"],
-      ["Yield", "yield = max yield x (0.3 + 0.7 f) x rain factor x labour factor", "the harvest count", "proposed"],
-      ["Manure", "f += 0.03 per 10 t/ha of dung (cattle pens next to cane fields: the Barbados practice)", "the dung heap by the field", "proposed"],
-      ["Fallow", "f += 0.02 a year idle; +0.04 under bush", "the field left", "proposed"],
-      ["Deforestation", "clearing forest gives f = 0.9 for a new field but removes firewood for the mill and raises erosion: f -= 0.02 a year extra on slopes", "the bare hills; firewood bought (Barbados imported timber)", "proposed"],
-      ["Rain", "a dry year (under 60% of normal) halves yields; a hurricane destroys standing cane and plantains for a season", "the famine year", "proposed"]
+      ["ecology.soil.fertility-drain-per-harvest", "'the cane comes up thin'", "proposed"],
+      ["ecology.soil.yield", "the harvest count", "proposed"],
+      ["ecology.soil.manure", "the dung heap by the field", "proposed"],
+      ["ecology.soil.fallow", "the field left", "proposed"],
+      ["ecology.soil.deforestation", "the bare hills; firewood bought (Barbados imported timber)", "proposed"],
+      ["ecology.soil.rain", "the famine year", "proposed"]
     ]
   },
   "seasons": {
     "title": "The year's calendar for the world tick",
-    "kind": "history", "conf": "medium",
+    "kind": "history",
+    "conf": "medium",
     "source": "Dry season December to May, wet June to November; hurricane season June to November peaking August to October; turtle nesting May to September; the Spanish fleets sailed from Havana in spring and summer to avoid the hurricane months (period practice); sugar crop cut January to May in the dry season (Ligon).",
     "columns": ["Months", "Weather", "Sea", "Fishing and hunting", "Crops", "Disease (MEDICINE)", "Trade (economy)", "Mark"],
     "rows": [

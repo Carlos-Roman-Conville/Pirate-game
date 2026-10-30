@@ -18,7 +18,7 @@ is the period's instance of this catalogue and stays the economy's.
 
 ## 1. Capability roles
 
-<!-- table:equipment.roles -->
+<!-- table:library/equipment.roles -->
 *Capability roles: what a piece of equipment contributes to an apparatus* (model; confidence high; source: ChatGPT's component idea (outside AI), kept: a burner heats, a vessel holds, a condenser cools, a pump changes pressure, an instrument measures; the simulation decides what the assembly can do. Roles are the keeper's typing; each equipment record lists its roles with the numbers the role needs.)
 
 | Role | What it provides | Numbers the role carries | The process asks | Mark |
@@ -380,7 +380,7 @@ is the period's instance of this catalogue and stays the economy's.
 
 ## 3. Assembling an apparatus
 
-<!-- table:equipment.assembly -->
+<!-- table:library/equipment.assembly -->
 *Assembling an apparatus: how the engine decides what a set of equipment can do* (model; confidence medium; source: ChatGPT's six questions (outside AI), kept as the attempt pipeline; the keeper's rule that the apparatus's capability is the minimum over the roles the process needs. Skill moves the minigame's control, never the chemistry (Rex's recipe rule and knowledge rule, GOODS 3c and 3f).)
 
 | Step | Question | Reads | Fails how | Mark |
@@ -421,7 +421,7 @@ is the period's instance of this catalogue and stays the economy's.
 | Minigame primitives | the three properties map onto the reusable controls (phase 7 of the plan): control is what the temperature and pressure minigames fight; accuracy is what the measurement minigame reads; capability is the wall | PLAN 7 | - | proposed |
 <!-- /table -->
 
-<!-- table:equipment.confidence -->
+<!-- table:library/equipment.confidence -->
 *Two confidence ratings per item (the reconcile task adds the columns)* (model; confidence high; source: ChatGPT's point (outside AI), agreed: a documented invention date does not establish that a period instrument reached a modern specification. The catalogue therefore carries two ratings per row, added by the reconcile task: conf_history (the date, inventor and existence) and conf_capability (the numbers: temperature, pressure, precision, capacity).)
 
 | Rating | high | medium | low | Mark |

@@ -91,7 +91,7 @@ local side is here).
 
 ## 2. What each group carries
 
-<!-- table:muscular.values -->
+<!-- table:library/muscular.values -->
 *What each group carries (three values plus the stimulus store)* (model; confidence medium; source: ChatGPT's development / fatigue / condition triple with accumulated training stimulus (COMBAT.md 4b, proposed, outside AI), kept; units and ranges the keeper's.)
 
 | Value | Range | Unit | Changes by | Reads | Mark |
@@ -192,7 +192,7 @@ group; endurance time for a hold.
   closed form `MF(t) = MF₀·e^(−R·restMult·t)` over the night's seconds. Nothing in the family quotes F or
   R per minute. A rest day returns a group to near zero fatigue; a hard day leaves 0.2–0.4 by morning.
 
-<!-- table:muscular.fatigue_rates -->
+<!-- table:library/muscular.fatigue_rates -->
 *Three-compartment fatigue model (3CC): rates by joint* (science; confidence medium; source: Xia and Frey Law 2008 (J Biomech): muscle in resting, active, fatigued compartments; F = fatigue rate active to fatigued, R = recovery rate fatigued to resting, per second. Fitted values from Frey Law, Looft and Heitsman 2012: ankle F 0.00589 R 0.0182; shoulder F 0.00058 R 0.00168; a 2018 extension adds a rest multiplier. MUS-3CC)
 
 | Joint (groups) | F (per s) | R (per s) | Note | Mark |
@@ -205,7 +205,7 @@ group; endurance time for a hold.
 | Ankle (calves, tibialis) | 0.00589 | 0.0182 | fitted 2012 | proposed |
 <!-- /table -->
 
-<!-- table:muscular.endurance_time -->
+<!-- table:library/muscular.endurance_time -->
 *How long a hold lasts at a given effort (Rohmert-type endurance curve)* (science; confidence medium; source: Rohmert 1960 and later fits: endurance time falls steeply with %MVC; below about 15% MVC a hold is sustainable for a long time (the ergonomic design limit). Numbers here are the keeper's reading of general curves, not one study. MUS-ROH)
 
 | Effort (% of the group's max) | Endurance time (fresh) | Example | Mark |
@@ -227,7 +227,7 @@ group; endurance time for a hold.
 
 ## 5. Training and adaptation
 
-<!-- table:muscular.training -->
+<!-- table:library/muscular.training -->
 *Training, adaptation and disuse constants* (science; confidence medium; source: Protein 1.6 g/kg/day is the plateau for resistance-training gains (Morton et al. 2018 meta-analysis, BJSM; MUS-PROT). DOMS peaks 24 to 72 h and clears by 7 days (MUS-DOMS). Muscle protein synthesis stays raised 24 to 48 h after lifting (textbook). Supercompensation (gain after recovery) is the Banister logic applied per group. Detraining: strength holds for about 2 to 3 weeks then falls; muscle mass loss is faster than strength loss (textbook, medium). Novice gains are fast (10 to 30% strength in 8 to 12 weeks), trained gains slow.)
 
 | Constant | Value | Unit | Note | Mark |
@@ -272,7 +272,7 @@ activity** (tension, aerobic, practice), kept apart from the skills and from Ref
 from ChatGPT's notes (outside AI) with the keeper's agreement; the biology is established; **every number
 is a placeholder** (Rex's words: "numbers still placeholders").
 
-<!-- table:muscular.adaptation -->
+<!-- table:library/muscular.adaptation -->
 *The adaptation model: what lives at which level (Rex, 2026-10-29; structure from ChatGPT's notes, outside AI)* (science; confidence medium; source: Exercise physiology: hypertrophy from mechanical tension and protein accretion; mitochondrial biogenesis, capillarisation and enzyme changes from sustained aerobic demand; early strength gains largely neural (motor-unit recruitment, 4 to 8 weeks) and movement-specific; tendons remodel slowly (months) and tolerate repeated load by that remodelling (standard references: ACSM, McArdle Katch and Katch). The structure is ChatGPT's (outside AI), the keeper agreeing: two long-term states per muscle, tendons per joint, recruitment per movement pattern, three stimuli per activity. MUS-ADAPT)
 
 | Level | States | Changed by | Timescale | Feeds | Mark |
@@ -321,7 +321,7 @@ is a placeholder** (Rex's words: "numbers still placeholders").
 | Fine manipulation | L/R | the hand's learned control of its small muscles (ChatGPT, outside AI, 2026-10-29: Dexterity is the general fine-motor capability, this is the recruitment the hand has practised, the skill is the task's technique; a swordsman and a surgeon share Dexterity, not this) | hand, forearm_ext | needle, cards, a knot, a lancet, a lock; the off hand learns it after the dominant hand is lost without relearning the skill | per character | rex (the pattern, per side, 2026-10-29); proposed (the index) |
 <!-- /table -->
 
-<!-- table:muscular.tendons -->
+<!-- table:library/muscular.tendons -->
 *Tendons and joints: load tolerance* (model; confidence medium; source: Tendons adapt slower than muscle (months) so a fast-growing muscle can outrun its tendon: the overuse injuries of the injuries table. Rupture needs a load far over tolerance on a cold or fatigued tendon. The set and numbers are the keeper's placeholders.)
 
 | Tendon or joint | Spans | Tolerance index (0 to 100) | Common strain here | Raised by | Mark |

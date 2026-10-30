@@ -43,7 +43,7 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
 
 ## 1. The quantities
 
-<!-- table:circulation.quantities -->
+<!-- table:library/circulation.quantities -->
 *The blood: composition and transport quantities (ChatGPT's requirement 3)* (science; confidence high; source: Standard values: blood volume about 70 mL/kg (men) 65 (women); haematocrit about 45% red cells, 55% plasma; haemoglobin 13.5 to 17.5 g/dL men, 12 to 15.5 women; each gram carries 1.34 mL oxygen; arterial content about 20 mL/dL; resting cardiac output about 5 L/min (stroke volume 70 mL x 70 beats), maximum 20 to 25 in the trained; oxygen delivery DO2 = CO x CaO2 x 10, about 1,000 mL/min at rest; platelets 150 to 400 x10^9/L; sodium 135 to 145 mmol/L, potassium 3.5 to 5.0, calcium 2.2 to 2.6; glucose 4 to 6 mmol/L fasting; pH 7.35 to 7.45. CIR-DO2, CIR-ELEC)
 
 | Quantity | Normal (70 kg man) | Unit | Made or set by | Lost or moved by | What it drives | Mark |
@@ -82,7 +82,7 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
 
 ## 1a. Blood gases (added 2026-10-29, the air layer)
 
-<!-- table:circulation.blood_gas -->
+<!-- table:library/circulation.blood_gas -->
 *Blood gases: oxygen binding, carbon dioxide, carbon monoxide, acid-base* (science; confidence high; source: Severinghaus 1979: SaO2 = 1 / (1 + 23400 / (PaO2^3 + 150 PaO2)) (P50 about 26.8 mmHg at pH 7.4, 37 C; the curve shifts right with acidosis, fever and CO2, left with alkalosis, cold and carbon monoxide); carboxyhaemoglobin by the Coburn-Forster-Kane model, simplified here to a first-order approach to equilibrium with a 4 to 6 h half-life in air (CIR-SEV, CHM-CO); CO2 carried as bicarbonate, pH by Henderson-Hasselbalch (standard).)
 
 | Quantity | Formula or rule | Normal | Fails when | Mark |
@@ -105,7 +105,7 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
 
 ## 2. Bleeding (moved from `MEDICINE.md` §3)
 
-<!-- table:circulation.bleeding -->
+<!-- table:library/circulation.bleeding -->
 *Blood loss classes (moved here from MEDICINE.md; ATLS teaching values) and the sim's reading* (science; confidence high; source: ATLS classes of haemorrhagic shock (teaching values; the current manual gives trends). The class is read from cumulative loss as a fraction of blood volume; loss grows by the wound's rate x elapsed minutes x (2 - clotting), stops when bound or ligated. MED-ATLS)
 
 | Class | Loss (% of blood volume) | Loss for a 70 kg man (mL) | Signs | Pressure and perfusion (model) | Organ consequences (ANATOMY) | Death risk per hour at this loss, untreated (placeholder) | Mark |
@@ -201,7 +201,7 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
 
 ## 7. Regulation loops
 
-<!-- table:circulation.homeostasis -->
+<!-- table:library/circulation.homeostasis -->
 *Regulation loops the circulation runs (the feedback the audit asked for)* (science; confidence high; source: Baroreflex (pressure down: rate and resistance up within seconds), the kidney's long-term pressure and volume control (hours to days), the kidney's red-cell signal (days to weeks), glucose by insulin and glucagon (minutes), temperature by skin perfusion and sweat (PHYSIOLOGY), acid-base by breathing and kidneys. Each loop is a target, a sensor and a correction with a time constant; the organs that run them must have function for the loop to work.)
 
 | Loop | Target | Corrects by | Time constant | Fails when | Mark |

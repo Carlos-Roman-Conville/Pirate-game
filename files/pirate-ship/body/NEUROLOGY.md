@@ -71,7 +71,7 @@ docs at the tick and on events.
 
 ## 2. Baseline: the nervous system with nothing taken
 
-<!-- table:neurology.baseline -->
+<!-- table:library/neurology.baseline -->
 *Baseline, endogenous signalling: what the body and the day do to the systems with no substance taken* (science; confidence medium; source: ChatGPT's addition (outside AI), kept: the nervous system runs continuously; exercise, sleep loss, pain, fear, hunger and social experience all shift it. Mechanisms are textbook (exercise raises noradrenaline and endorphins; sleep loss raises adenosine and lowers prefrontal control; pain raises noradrenaline and engages the opioid system; fear is the noradrenaline and cortisol response; hunger raises orexin and ghrelin-driven drive). Sizes are placeholders. NEU-BASE)
 
 | Driver (from) | Systems moved (tone) | Circuit effect | Decays | Mark |
@@ -147,7 +147,7 @@ docs at the tick and on events.
 
 ## 4. Receptor dynamics: the four clocks
 
-<!-- table:neurology.receptor -->
+<!-- table:library/neurology.receptor -->
 *Receptor dynamics: occupancy, tolerance, dependence, withdrawal (the four clocks)* (science; confidence medium; source: Occupancy by a saturating function of concentration (Hill, n = 1); fast desensitisation in minutes and slow downregulation over days to weeks (tolerance), with recovery days to weeks after the drug stops (NEU-TOL: CB1 binding back to normal at 7 to 14 days; beta-receptor numbers 16 days; opioid desensitisation reverses in an hour, tolerance slowly). Withdrawal is the rebound of an adapted system without the drug: alcohol 6 to 24 h onset, seizures 24 to 48 h, delirium tremens 48 to 72 h in 3 to 5% with high untreated mortality (NEU-AW); opioids onset 6 to 12 h, peak 1 to 3 days, 5 to 10 days (NEU-OW); caffeine headache 12 to 24 h; nicotine hours.)
 
 | Clock | What it is | Formula (model) | Timescale | Mark |
@@ -200,7 +200,7 @@ docs at the tick and on events.
 
 ## 6. Interactions
 
-<!-- table:neurology.interactions -->
+<!-- table:library/neurology.interactions -->
 *Several substances at once, and substances on a shifted baseline* (science; confidence medium; source: Shared systems add at the tone level, not as separate penalties (ChatGPT's requirement, kept); where two depressants hit breathing the human data show a synergistic fall (oxycodone -28% ventilation, +19% more with 1 g/L ethanol, Anesthesiology 2017; NEU-INT). The combination rule is the keeper's.)
 
 | Rule | Formula or statement | Example | Mark |

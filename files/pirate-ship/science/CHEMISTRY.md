@@ -37,7 +37,7 @@ minigames, Rex's), **provenance** (`JOURNAL.md`). Nothing in the engine is decid
 
 ## 2. The substance schema
 
-<!-- table:chemistry.schema -->
+<!-- table:library/chemistry.schema -->
 *The substance schema (every substance, real or tagged, is one record of this shape)* (model; confidence high; source: ChatGPT's field list (outside AI), kept and typed; provenance tags per Rex (COMBAT 4d): the engine reads properties, never the tag.)
 
 | Field | Type and unit | Used by | Mark |
@@ -90,7 +90,7 @@ minigames, Rex's), **provenance** (`JOURNAL.md`). Nothing in the engine is decid
 
 ## 4. The reaction record
 
-<!-- table:chemistry.reaction_fields -->
+<!-- table:library/chemistry.reaction_fields -->
 *The reaction record (every reaction, period or not, is one record of this shape)* (model; confidence high; source: Thermodynamic possibility and kinetics kept apart (ChatGPT, kept); conditions as the roles an apparatus must supply (SCIENTIFIC_EQUIPMENT); 'unknown' as the engine's honest answer for a reaction it has no record of.)
 
 | Field | Type and unit | Used by | Mark |
@@ -130,16 +130,16 @@ minigames, Rex's), **provenance** (`JOURNAL.md`). Nothing in the engine is decid
 | co2 | Carbon dioxide | CO2 | 44 | gas | 1.5 | simple asphyxiant and respiratory driver | 1% drowsy; 3% headache, panting; 5% confusion; 8 to 10% unconscious; pools low | breathing, fires, fermentation (the brewer's vat), wells, volcanoes | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
 | co | Carbon monoxide | CO | 28 | gas | 0.97 | chemical asphyxiant (binds haemoglobin 200 x oxygen: carboxyhaemoglobin) | 200 ppm headache in 2 to 3 h; 800 ppm nausea and convulsions in 45 min; 1,600 ppm death in 30 min; COHb 10 to 20% headache, 20 to 30% drowsy and ataxic, 30 to 50% seizures, over 50% death; half-life 4 to 6 h in air | braziers, galley fires, the gun deck, any fire starved of air | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
 | h2o_v | Water vapour | H2O | 18 | gas | 0.6 | inert (displaces oxygen in the alveoli: the 47 mmHg) | none | humidity, breath, fires | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
-| h2s | Hydrogen sulphide | H2S | 34 | gas | 1.2 | chemical asphyxiant (cellular) and irritant; the nose fails at 100 ppm | 0.01 ppm rotten eggs; 10 ppm eye and airway irritation; 100 ppm olfactory fatigue, IDLH; 500 ppm collapse, death in 30 to 60 min; pools low | the bilge, rot, sulphur springs, powder smoke (trace) | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
-| so2 | Sulphur dioxide | SO2 | 64 | gas | 2.2 | irritant (airways, eyes) | 1 ppm smell; 5 ppm airway irritation; 20 ppm eyes stream, cough; 100 ppm IDLH; pools low | burning sulphur (stinkpots, the match), volcanoes, the brimstone cure | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
+| h2s | Hydrogen sulphide | H2S | 34.08 | gas | 1.2 | chemical asphyxiant (cellular) and irritant; the nose fails at 100 ppm | 0.01 ppm rotten eggs; 10 ppm eye and airway irritation; 100 ppm olfactory fatigue, IDLH; 500 ppm collapse, death in 30 to 60 min; pools low | the bilge, rot, sulphur springs, powder smoke (trace) | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
+| so2 | Sulphur dioxide | SO2 | 64.07 | gas | 2.2 | irritant (airways, eyes) | 1 ppm smell; 5 ppm airway irritation; 20 ppm eyes stream, cough; 100 ppm IDLH; pools low | burning sulphur (stinkpots, the match), volcanoes, the brimstone cure | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
 | smoke | Smoke particles (soot, tars) | C and tars | - | aerosol | - | irritant; heat; carries CO | eyes stream and sight falls (Eyesight x0.6 at 100 mg/m3); cough; inhalation injury at high density with heat | every fire; the gun deck | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
 | hg_v | Mercury vapour | Hg | 201 | gas from the liquid (vapour pressure 0.002 mmHg at 25 C) | 7 | systemic toxin (nerves, kidneys; NEUROLOGY burden) | chronic: a shut room with spilt mercury reaches 0.1 mg/m3; months to erethism and tremor | the pox cure, the apothecary, hatters later | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
-| ch4 | Methane (marsh gas) | CH4 | 16 | gas | 0.55 | simple asphyxiant; flammable 5 to 15% | none until oxygen is displaced; an explosion with a lamp | the bilge, swamps, mines | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
-| s | Sulphur (brimstone) | S8 | 256 | solid | - | fuel: burns to SO2 | - | the stinkpot, the match, the powder mill, the brimstone cure | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
+| ch4 | Methane (marsh gas) | CH4 | 16.04 | gas | 0.55 | simple asphyxiant; flammable 5 to 15% | none until oxygen is displaced; an explosion with a lamp | the bilge, swamps, mines | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
+| s | Sulphur (brimstone) | S8 | 256.52 | solid | - | fuel: burns to SO2 | - | the stinkpot, the match, the powder mill, the brimstone cure | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
 | c | Charcoal (carbon) | C | 12 | solid | - | fuel: burns to CO2, or CO when starved | - | the brazier, the galley, the powder mill, the smith | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
-| kno3 | Saltpetre (potassium nitrate) | KNO3 | 101 | solid | - | oxidiser (GOODS row 39) | - | the powder | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
+| kno3 | Saltpetre (potassium nitrate) | KNO3 | 101.1 | solid | - | oxidiser (GOODS row 39) | - | the powder | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
 | ethanol | Alcohol (spirit of wine) | C2H5OH | 46 | liquid (vapour pressure 59 mmHg) | 1.6 | neuroactive (NEUROLOGY row); flammable | the drink; its vapour in a still-house is a fire risk | rum, brandy, arrack | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
-| pb | Lead | Pb | 207 | solid (dissolves into rum and cider from still worms and pewter) | - | systemic toxin (the dry gripes; NEUROLOGY burden) | by ingestion (MEDICINE) | stills, pewter, shot | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
+| pb | Lead | Pb | 207.2 | solid (dissolves into rum and cider from still worms and pewter) | - | systemic toxin (the dry gripes; NEUROLOGY burden) | by ingestion (MEDICINE) | stills, pewter, shot | Historical | rex (the substance and its mechanism class, 2026-10-29); proposed (thresholds as placeholders) |
 | tagged | A tagged substance (template) | as written | as written | as written | as written | as written | its own thresholds | the story keeper's | Fantasy \| Science Fiction \| Mythological | **open** |
 <!-- /table -->
 
@@ -148,7 +148,7 @@ minigames, Rex's), **provenance** (`JOURNAL.md`). Nothing in the engine is decid
 
 | Id | Reaction | Reactants | Products | Conditions | Rate (placeholder) | Heat | Where | Mark |
 |---|---|---|---|---|---|---|---|---|
-| comb_c_full | Charcoal burning in plenty of air | C + O2 | CO2 + heat | ignition over 400 C; oxygen over 15% | by fuel surface and draught | 33 MJ/kg | the galley, the smith | rex (the reaction, 2026-10-29); proposed (rates) |
+| comb_c_full | Charcoal burning in plenty of air | C + O2 | CO2 | minimum temperature 400 C | complete | -393.51 kJ/mol | the galley, the smith | rex (the reaction, 2026-10-29); proposed (rates) |
 | comb_c_starved | Charcoal burning starved of air | 2 C + O2 | 2 CO + heat | oxygen under 15% or a shut space | the brazier in the cabin: 10 to 30% of carbon to CO | 10 MJ/kg | the brazier, a smouldering hold | rex (the reaction, 2026-10-29); proposed (rates) |
 | comb_wood | Wood and tar burning | wood + O2 | CO2, H2O, CO (10% if smoky), soot, tars, heat | ignition; spreads by heat | by surface | 15 MJ/kg | a ship on fire | rex (the reaction, 2026-10-29); proposed (rates) |
 | comb_s | Sulphur burning | S + O2 | SO2 + heat | ignition over 250 C | a stinkpot: 100 g in a minute | 9 MJ/kg | stinkpots, the match | rex (the reaction, 2026-10-29); proposed (rates) |

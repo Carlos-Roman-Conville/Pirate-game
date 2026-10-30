@@ -30,7 +30,7 @@ rule (Rex) this file extends to things nobody has named yet.
 
 ## 2. The states
 
-<!-- table:science.states -->
+<!-- table:library/science.states -->
 *Discovery states: from meeting a thing to understanding it* (model; confidence high; source: ChatGPT's four states (outside AI), kept; the keeper adds what moves an entry between them and what the player sees at each. The microbe is the model case: Leeuwenhoek saw animalcules in 1676 and nobody understood them until the 1860s.)
 
 | State | Meaning | Reached by | What the journal shows | What the engine lets you do | Mark |

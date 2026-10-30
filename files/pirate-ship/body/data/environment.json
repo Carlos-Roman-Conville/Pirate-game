@@ -2,7 +2,8 @@
   "_about": "Tables for world/ENVIRONMENT.md. Climate numbers are modern climatology (the 1650 to 1730 Caribbean sat in the Little Ice Age: cooler and, 1645 to 1715, with far fewer hurricanes). Weather generation is a model. mark: rex | proposed | open.",
   "climate": {
     "title": "Caribbean monthly climatology (Kingston-type lowland station; modern normals)",
-    "kind": "science", "conf": "medium",
+    "kind": "science",
+    "conf": "medium",
     "source": "FAO regional description (trade winds 24 to 32 km/h from the east, 13 to 17 knots; Montserrat 24.7 C February low to 27.2 C July high); CIMH Caribbean climatology (SST 27 to 30 C, highest September to October); UK Met Office for Kingston (750 mm a year, February about 15 mm, October the wettest at about 130 mm); hurricane season June to November, peak mid-August to late October (NHC). ENV-FAO, ENV-CIMH, ENV-MET",
     "columns": ["Month", "Air mean (C)", "Air day max (C)", "Night min (C)", "SST (C)", "Rain (mm)", "Rain days", "Humidity (%)", "Wind (knots, E to NE)", "Hurricane risk", "Season", "Mark"],
     "rows": [
@@ -22,7 +23,8 @@
   },
   "period_climate": {
     "title": "The period's climate: what was different in 1650 to 1730",
-    "kind": "history", "conf": "medium",
+    "kind": "history",
+    "conf": "medium",
     "source": "Hurricane frequency fell about 75% between 1645 and 1715 (the Maunder Minimum), from Spanish shipwreck records and Florida tree rings (Trouet et al. 2016, ENV-LIA); Bahamian blue-hole records show regional variation. Kentucky study: the Caribbean saw a lull in storms, epidemic disease and drought while Europe cooled (ENV-LIA2). A measured Caribbean temperature anomaly was not found; cooler by a fraction of a degree is the general Little Ice Age picture.",
     "columns": ["Factor", "Modern", "1650 to 1730", "Sim use", "Mark"],
     "rows": [
@@ -34,7 +36,8 @@
   },
   "weather_states": {
     "title": "Daily weather states and their effects (the generator)",
-    "kind": "model", "conf": "low",
+    "kind": "model",
+    "conf": "low",
     "source": "A per-day Markov chain by month: each state has a stay probability and transitions; the effects are the keeper's placeholders. Wind and current set the ship's speed with PIRATE.md 5a's daily speed formula.",
     "columns": ["State", "Wind (knots)", "Sea state", "Rain", "Cloud/sun", "Stay chance", "Dry-season weight", "Wet-season weight", "Effect on the ship", "Effect on the body", "Mark"],
     "rows": [
@@ -49,7 +52,8 @@
   },
   "currents": {
     "title": "Ocean currents the voyage loop uses",
-    "kind": "science", "conf": "medium",
+    "kind": "science",
+    "conf": "medium",
     "source": "Florida Current 1.8 m/s (about 3.5 knots) at its core, transport 30 Sv; the Caribbean Current reaches 60 to 70 cm/s (1.2 to 1.4 knots) along the Venezuelan, Colombian and Panamanian coasts, with a 1953 Navy survey reporting 'often exceeding one knot'; Antilles Current sluggish at the surface (about 10 cm/s); the Gulf Stream carries the Florida Current north then east. ENV-CUR",
     "columns": ["Current", "Where", "Direction", "Typical surface speed (knots)", "Sim use", "Mark"],
     "rows": [
@@ -64,26 +68,28 @@
   },
   "exposure": {
     "title": "Where a character is: the exposure the body reads",
-    "kind": "model", "conf": "medium",
+    "kind": "model",
+    "conf": "medium",
     "source": "WBGT estimated from air temperature, humidity and sun (the Australian Bureau of Meteorology approximation is the usual shortcut; shade and wind lower it); the mosquito and water multipliers are MEDICINE.md hygiene rows placed by terrain; the rest are the keeper's placeholders.",
-    "columns": ["Place / terrain", "Shade", "Wind felt", "WBGT vs open deck", "Wet", "Mosquito exposure", "Foul-water exposure", "Fall or accident hazard", "Mark"],
+    "columns": ["id", "Place / terrain", "Mosquito exposure", "Foul-water exposure", "Fall or accident hazard", "Mark"],
     "rows": [
-      ["Open deck, day", "none", "full", "+0", "spray", "x0.3 (at sea), x1 at anchor", "the casks", "x1", "proposed"],
-      ["Aloft", "none", "more", "-1 C", "spray, rain", "x0.3", "-", "x5 (falls); x10 in a gale", "proposed"],
-      ["Below decks, under way", "full", "none", "+3 C (crowding, the galley)", "damp", "x1 at anchor", "bilge x2", "x1 (a loose cask)", "proposed"],
-      ["The galley", "full", "none", "+6 C", "dry", "x1", "x1", "burns x3", "proposed"],
-      ["A swampy anchorage or river mouth (wet season)", "some", "little", "+1 C", "rain", "x4", "x3", "x1", "proposed"],
-      ["A dry coral island, the beach (careening)", "palms", "trades", "+2 C in the sun", "dry", "x1", "x1 (no fresh water: the casks)", "x2 (the ship on its side)", "proposed"],
-      ["Rainforest hills", "full", "none", "-2 C, humid", "wet", "x3", "x2 (streams)", "x2", "proposed"],
-      ["A plantation town", "buildings", "some", "+1 C", "dry season dry", "x2 wet season", "x2 (wells)", "x1", "proposed"],
-      ["The tavern, the brothel", "full", "none", "+2 C", "dry", "x1", "x1", "brawls x3; the pox (MEDICINE)", "proposed"],
-      ["The Guinea coast", "some", "little", "+2 C", "wet", "x6 (falciparum)", "x3", "x1", "proposed"],
-      ["North Atlantic winter", "none", "gale", "cold: PHYSIOLOGY cold rules", "soaked", "0", "x1", "x4", "proposed"]
+      ["environment.exposure.open-deck-day", "Open deck, day", "x0.3 (at sea), x1 at anchor", "the casks", "x1", "proposed"],
+      ["environment.exposure.aloft", "Aloft", "x0.3", "-", "x5 (falls); x10 in a gale", "proposed"],
+      ["environment.exposure.below-decks-under-way", "Below decks, under way", "x1 at anchor", "bilge x2", "x1 (a loose cask)", "proposed"],
+      ["environment.exposure.the-galley", "The galley", "x1", "x1", "burns x3", "proposed"],
+      ["environment.exposure.a-swampy-anchorage-or-river-mouth-wet-season", "A swampy anchorage or river mouth (wet season)", "x4", "x3", "x1", "proposed"],
+      ["environment.exposure.a-dry-coral-island-the-beach-careening", "A dry coral island, the beach (careening)", "x1", "x1 (no fresh water: the casks)", "x2 (the ship on its side)", "proposed"],
+      ["environment.exposure.rainforest-hills", "Rainforest hills", "x3", "x2 (streams)", "x2", "proposed"],
+      ["environment.exposure.a-plantation-town", "A plantation town", "x2 wet season", "x2 (wells)", "x1", "proposed"],
+      ["environment.exposure.the-tavern-the-brothel", "The tavern, the brothel", "x1", "x1", "brawls x3; the pox (MEDICINE)", "proposed"],
+      ["environment.exposure.the-guinea-coast", "The Guinea coast", "x6 (falciparum)", "x3", "x1", "proposed"],
+      ["environment.exposure.north-atlantic-winter", "North Atlantic winter", "0", "x1", "x4", "proposed"]
     ]
   },
   "sun": {
     "title": "Sun and daylight",
-    "kind": "science", "conf": "high",
+    "kind": "science",
+    "conf": "high",
     "source": "At 15 to 20 N day length runs from about 11 h (December) to 13 h (June); the sun is overhead twice a year; UV index at noon 11+ in summer (modern). Sunburn in untanned skin in 15 to 30 minutes at noon.",
     "columns": ["Month", "Daylight (h)", "Noon sun", "Sunburn time, untanned (min)", "Sim use", "Mark"],
     "rows": [

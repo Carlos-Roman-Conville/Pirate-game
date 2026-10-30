@@ -60,7 +60,7 @@ commands (`BALANCE.md` C5 item 23).
 
 ## 2. The settlement record
 
-<!-- table:population.cohorts -->
+<!-- table:library/population.cohorts -->
 *The settlement record: cohorts the aggregate model keeps* (model; confidence medium; source: A compact age-sex-role structure, updated daily for a visited town (the overnight tick) and in a batch for a distant one (the days elapsed). ChatGPT's three simulation levels (unvisited aggregate; discovered named characters tracked; active full detail) recorded in COMBAT.md 4e, proposed; kept.)
 
 | Field | Type | What it holds | Mark |
@@ -84,7 +84,7 @@ commands (`BALANCE.md` C5 item 23).
 
 ## 3. The aggregate daily update
 
-<!-- table:population.tick -->
+<!-- table:library/population.tick -->
 *The aggregate daily update* (model; confidence medium; source: Standard cohort-component demography reduced to daily rates; epidemic as a simple SIR-type pulse using MEDICINE.md catch and death rates; migration from the economy's prosperity and the town's reputation. Numbers placeholders.)
 
 | Step | Rule | Reads | Mark |

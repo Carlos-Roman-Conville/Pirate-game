@@ -30,7 +30,7 @@ reaction produces (`../science/CHEMISTRY.md`) nor what a dose does (`../body/`).
 
 ## 2. The box model (built first)
 
-<!-- table:gasdynamics.box_model -->
+<!-- table:library/gasdynamics.box_model -->
 *The box model (implemented first): one well-mixed volume per active region* (science; confidence high; source: Standard confined-space mass balance: V dC/dt = S - Q (C - C_out) - R, with Q the ventilation flow (ACH x V / 60), S the sources, R removal and reaction; steady state C = C_out + S / Q (NIOSH confined-space CO2 modelling; GAS-BOX). Worked example: two occupants in a 680 m3 space at 0.06 ACH settle near 1,500 ppm CO2.)
 
 | Rule | Formula | Example | Mark |
@@ -57,7 +57,7 @@ reaction produces (`../science/CHEMISTRY.md`) nor what a dose does (`../body/`).
 
 ## 3. Sources and sinks
 
-<!-- table:gasdynamics.sources_sinks -->
+<!-- table:library/gasdynamics.sources_sinks -->
 *Sources and sinks a region can have* (model; confidence medium; source: Each source is one of the other docs' outputs; the rates are placeholders.)
 
 | Source or sink | Species | Rate (placeholder) | From | Mark |
@@ -78,7 +78,7 @@ reaction produces (`../science/CHEMISTRY.md`) nor what a dose does (`../body/`).
 
 ## 4. The grid (deferred)
 
-<!-- table:gasdynamics.grid -->
+<!-- table:library/gasdynamics.grid -->
 *The grid model (deferred): transport on the combat map* (science; confidence medium; source: Advection-diffusion-reaction: dC/dt = -div(u C) + div(D grad C) + S - R, with u the wind field, D an effective turbulent diffusion; implemented later as a coarse cellular model on the combat grid (COMBAT 6's tiles) for releases that cross cells in seconds; the stability constraint (a cell's air must not cross more than one cell per step) sets the step. Not built; the interface is the units table.)
 
 | Element | Statement | Status | Mark |

@@ -30,7 +30,7 @@ carry only a food-sufficiency index (`../world/POPULATION.md`).
 **Inputs:** the day's meals (goods and quantities). **Outputs:** per nutrient a pool level and a day's
 intake; the deficiency clocks.
 
-<!-- table:nutrition.nutrients -->
+<!-- table:library/nutrition.nutrients -->
 *The nutrients the body tracks, with needs, reserves and what runs out first* (science; confidence high; source: DRIs: vitamin C 90 mg (men) 75 (women); thiamin 1.2/1.1 mg; niacin 16/14 mg NE; vitamin A 900/700 mcg RAE; iron 8 mg men, 18 women; sodium AI 1500 mg; potassium AI 3400/2600 mg; water 3.7/2.7 L total (US National Academies; NUT-DRI). Body pool and depletion: vitamin C pool about 1500 mg, signs under 300 mg, 4 to 12 weeks (NUT-SCURVY); thiamin stores small, deficiency detectable at about 6 weeks, fatal in as little as 3 (NUT-B1); niacin months (NUT-PELL); vitamin A liver stores 1 to 2 years; iron months; sodium and water days; glycogen about a day.)
 
 | Id | Nutrient | Unit | Daily need (man) | Daily need (woman) | Body reserve (full) | Days to deficiency signs with zero intake | Deficiency disease (MEDICINE.md) | Excess | Mark |
@@ -218,7 +218,7 @@ intake; the deficiency clocks.
 
 ## 2a. Absorption: what the body keeps
 
-<!-- table:nutrition.absorption -->
+<!-- table:library/nutrition.absorption -->
 *Absorption and bioavailability: what the body keeps of what it eats* (science; confidence medium; source: Standard nutrition science (NUT-DRI background; Hallberg on iron; the nixtamalisation literature on niacin). The multipliers are the keeper's reading of typical ranges; the model applies them to intake before the pool is filled. Added after the audit of 2026-10-29 (outside AI asked for it).)
 
 | Nutrient | Absorbed, typical | Raised by | Lowered by | Model rule | Mark |
@@ -283,7 +283,7 @@ intake; the deficiency clocks.
 
 ## 4. Energy balance and body composition
 
-<!-- table:nutrition.body_composition -->
+<!-- table:library/nutrition.body_composition -->
 *Body composition: how fat and lean mass move* (science; confidence high; source: 7,700 kcal per kg of fat (standard); energy density fat 9, carbohydrate and protein 4, alcohol 7 kcal/g; glycogen about 400 g in muscle and liver, lasts about a day of hard work; in starvation, death near 50 to 60% of starting body mass or when fat is exhausted and protein is the only fuel (NUT-STARVE). Lean mass follows MUSCULAR development.)
 
 | Quantity | Rule | Unit | Mark |

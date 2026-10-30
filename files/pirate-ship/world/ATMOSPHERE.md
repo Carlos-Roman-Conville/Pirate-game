@@ -81,7 +81,7 @@ or per combat turn (`GAS_DYNAMICS.md`); exposure is integrated per character pre
 
 ## 3. Local modifiers
 
-<!-- table:atmosphere.modifiers -->
+<!-- table:library/atmosphere.modifiers -->
 *Local modifiers a place applies to the baseline (ENVIRONMENT supplies the inputs)* (model; confidence medium; source: ChatGPT's layer B (outside AI), kept; the ventilation numbers are placeholders from building-ventilation practice (air changes per hour).)
 
 | Modifier | From | Changes | Placeholder values | Mark |

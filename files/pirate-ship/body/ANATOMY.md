@@ -78,7 +78,7 @@ absorption. No organ applies a penalty of its own: `BODY.md` reads organ functio
 
 ## 1a. The respiratory profile (added 2026-10-29, the air layer)
 
-<!-- table:anatomy.respiratory -->
+<!-- table:library/anatomy.respiratory -->
 *The respiratory profile (the lungs' interface to the air; per species)* (science; confidence medium; source: Gas transfer across the lung follows the partial-pressure gradient and the lung's diffusing capacity (Fick); ventilation, perfusion and diffusion each limit it (standard respiratory physiology, ATM-ALV). The profile fields are ChatGPT's list (outside AI), typed; the transfer formula is the model abstraction the brief names, not the full pulmonary equation.)
 
 | Field | Human default | Unit | Changed by | Mark |
@@ -130,7 +130,7 @@ absorption. No organ applies a penalty of its own: `BODY.md` reads organ functio
 
 ## 3. Damage versus function
 
-<!-- table:anatomy.damage_function -->
+<!-- table:library/anatomy.damage_function -->
 *Damage versus function (ChatGPT's distinction, kept as the rule)* (model; confidence high; source: An organ can work badly today without lasting harm (a hangover's liver, a dehydrated kidney, a concussed brain), and chronic damage lowers the ceiling for good (cirrhosis, a scarred heart, lost nephrons). Two numbers per organ and tissue: function (today, 0 to 1) and damage (lasting, 0 to 1), with function never above (1 - damage).)
 
 | Rule | Formula or statement | Example | Mark |
@@ -166,7 +166,7 @@ absorption. No organ applies a penalty of its own: `BODY.md` reads organ functio
 
 ## 4. Timescales
 
-<!-- table:anatomy.timescales -->
+<!-- table:library/anatomy.timescales -->
 *Timescales: what updates when* (model; confidence high; source: Heartbeats and nerve signals are never simulated (ChatGPT's point, kept); acute circulation per combat turn or per minute in an emergency; organ function at events and at the overnight tick; damage and vessel disease daily; species life stages yearly.)
 
 | Layer | Step | When | Mark |
