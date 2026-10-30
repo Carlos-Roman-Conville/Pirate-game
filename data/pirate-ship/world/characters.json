@@ -1,0 +1,29 @@
+{
+  "_about": "Adapter rows for web/src/world/adapters/characters.ts (Phase 5 adapter 1). Nothing here is science: the engine (@rex/realism) owns every formula and table. 'body' and 'place' are NAMED FIXTURES (web/src/world/FIXTURES.md): the game has no mass, age, sex, height or room yet. 'dutyActivity' maps the game's duty and action names (DUTIES.md; files/pirate-ship/body/data/physiology.json met rows) to the engine's activity ids; a duty with no row is unmapped on purpose (FIXTURES.md).",
+  "clock": { "dayStartH": 12, "stepS": 60 },
+  "body": { "male": 1, "ageY": 30, "heightCm": 175, "massKg": 70, "fatKg": 15, "waterKg": 40 },
+  "place": { "airC": 24, "volumeM3": 40, "ach": 2 },
+  "sleepDuty": "Sleep",
+  "watchDuties": ["Standing watch", "Lookout aloft"],
+  "dutyActivity": {
+    "Sleep": "physiology.met.sleeping",
+    "Standing watch": "physiology.met.standing-watch-still",
+    "Lookout aloft": "physiology.met.standing-watch-still",
+    "Walking the deck": "physiology.met.walking-the-deck-light-chores",
+    "Swabbing the deck": "physiology.met.swabbing-picking-oakum-mending-sail-seated",
+    "Picking oakum": "physiology.met.swabbing-picking-oakum-mending-sail-seated",
+    "Mending a torn sail": "physiology.met.swabbing-picking-oakum-mending-sail-seated",
+    "Helm": "physiology.met.helm-in-a-seaway",
+    "Cooking": "physiology.met.cooking-at-the-galley-fire",
+    "Fishing": "physiology.met.fishing-from-the-rail-handline",
+    "Patching and caulking": "physiology.met.carpentry-caulking-coopering",
+    "Coopering": "physiology.met.carpentry-caulking-coopering",
+    "Checking the rigging": "physiology.met.climbing-aloft-working-the-rigging",
+    "Pumping the bilge": "physiology.met.hauling-lines-the-capstan-pumping-the-bilge",
+    "Rowing the boat": "physiology.met.rowing-the-boat-hard",
+    "Smithing": "physiology.met.smithing",
+    "Swordplay": "physiology.met.swordplay-boarding-fight",
+    "Boarding fight": "physiology.met.swordplay-boarding-fight",
+    "Swimming": "physiology.met.swimming"
+  }
+}
