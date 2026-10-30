@@ -1637,6 +1637,198 @@
         "https://en.wikipedia.org/wiki/Test_tube",
         "science",
         "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-BESS",
+        "Wikipedia, Bessemer process",
+        "1855 patent, granted 1856; Kelly 1857 priority patent; Mushet spiegeleisen; converter heats 5 to 30 t; first Sheffield production 1858",
+        "https://en.wikipedia.org/wiki/Bessemer_process",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-OH",
+        "Wikipedia, Open-hearth furnace",
+        "Siemens regenerative furnace 1850s (fuel saving 70 to 80% claimed 1857); Martin steel 1865; 50 to 100 t furnaces",
+        "https://en.wikipedia.org/wiki/Open_hearth_furnace",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-CRUC",
+        "Wikipedia, Crucible steel",
+        "Huntsman 1740; clay crucibles, up to 12 per furnace; coke furnace to 1,600 C; about 15 kg per pot, 3 h; blister steel predecessor; wootz in India",
+        "https://en.wikipedia.org/wiki/Crucible_steel",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-EAF",
+        "Wikipedia, Electric arc furnace",
+        "Petrov arc 1803; Pinchon 1853; Siemens patents 1878 to 79; Readman 1888 to 89; Heroult commercial 1907; arc about 3,000 C, 1,800 C industrial; 1 to 400 t; 440 kWh/t",
+        "https://en.wikipedia.org/wiki/Electric_arc_furnace",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-HH",
+        "Wikipedia, Hall-Heroult process",
+        "Discovered 1886 (Hall and Heroult independently); Pittsburgh plant 1888; 940 to 980 C; under 5 V, 100 to 300 kA DC; carbon anodes and cathodes; cryolite",
+        "https://en.wikipedia.org/wiki/Hall%E2%80%93H%C3%A9roult_process",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-SOLV",
+        "Wikipedia, Solvay process",
+        "Solvay began 1861, Couillet plant 1864; Leblanc predecessor; limestone 950 to 1100 C; bicarbonate 160 to 230 C; 24 m tower; ammonia recovered",
+        "https://en.wikipedia.org/wiki/Solvay_process",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-LEB",
+        "Wikipedia, Leblanc process",
+        "Patented 1791, Saint-Denis plant; reverberatory furnace about 1000 C; salt cake, black ash; 1783 Academy prize; HCl byproduct",
+        "https://en.wikipedia.org/wiki/Leblanc_process",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-COFF",
+        "Wikipedia, Coffey still",
+        "Coffey patent 1830; Cellier-Blumenthal predecessor; steam at base; spirit above 90% ethanol; plates with valves and perforated trays; iron corroded early",
+        "https://en.wikipedia.org/wiki/Coffey_still",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-REFR",
+        "Wikipedia, Refrigeration",
+        "Cullen 1755 ether under pump; Franklin and Hadley 1758 to -14 C; Evans 1805; Perkins 1834; Harrison 1851; Carre 1859 ammonia absorption; Linde 1876",
+        "https://en.wikipedia.org/wiki/Refrigeration",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-VAC",
+        "Wikipedia, Vacuum flask",
+        "Dewar 1892 (brass, evacuated gap, later glass, silvered); liquid nitrogen 77 K",
+        "https://en.wikipedia.org/wiki/Vacuum_flask",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-AUTO",
+        "Wikipedia, Autoclave",
+        "Chamberland 1879; Papin digester 1679; steam 121 C at 1 atm gauge; 134 C 3 min",
+        "https://en.wikipedia.org/wiki/Autoclave",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-PAST",
+        "Wikipedia, Pasteurization",
+        "Pasteur 1864 at Arbois, wine 50 to 60 C; Spallanzani 1768; Appert 1795 to 1810; Soxhlet 1886; Chinese wine heating 1117; milk 63 C 30 min",
+        "https://en.wikipedia.org/wiki/Pasteurization",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-MICT",
+        "Wikipedia, Microtome",
+        "Hand razor sections before; Adams 1770 then Cummings; Prichard 1835 table model; Purkyne; His 1865; paraffin sections 2 to 50 um",
+        "https://en.wikipedia.org/wiki/Microtome",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-ACHR",
+        "Wikipedia, Achromatic lens",
+        "Hall secret achromatic doublet; Bass; Dollond patent 1758; crown and flint glass; Newton had denied correction possible",
+        "https://en.wikipedia.org/wiki/Achromatic_lens",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-PETR",
+        "Wikipedia, Petri dish",
+        "Petri 1887, assistant of Koch; Koch 1881 moist chamber predecessor; glass/borosilicate; 30 to 200 mm",
+        "https://en.wikipedia.org/wiki/Petri_dish",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-INCU",
+        "Wikipedia, Incubator (culture)",
+        "Egyptian and Chinese egg hatching; 19th c. bell jar with candle; simple heated boxes to 60 to 65 C; bacteria near 37 C; no d Arsonval date on page",
+        "https://en.wikipedia.org/wiki/Incubator_(culture)",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-CENT",
+        "Wikipedia, Centrifuge",
+        "Robins whirling arm; Antonin Prandtl dairy centrifuge 1864; Alexander Prandtl 1875 butterfat machine; RCF formula; hand-cranked 19th c. laboratory machine",
+        "https://en.wikipedia.org/wiki/Centrifuge",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-SPHY",
+        "Wikipedia, Sphygmomanometer",
+        "von Basch 1881; Riva-Rocci 1896; Cushing 1901; Korotkov 1905; mercury column in mmHg; Marey 1863; Mahomed 1872",
+        "https://en.wikipedia.org/wiki/Sphygmomanometer",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-THER",
+        "Wikipedia, Medical thermometer",
+        "Santorio 1612 to 1625; Allbutt 1866 to 67 six-inch thermometer, 5 min vs 20 min; Wunderlich 1868; maximum thermometer constriction; 35 to 42 C",
+        "https://en.wikipedia.org/wiki/Medical_thermometer",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-STET",
+        "Wikipedia, Stethoscope",
+        "Laennec 1816 wooden monaural tube, rolled paper; direct auscultation; Leared 1851 binaural; Cammann 1852",
+        "https://en.wikipedia.org/wiki/Stethoscope",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-HYPO",
+        "Wikipedia, Hypodermic needle",
+        "Wren 1656 injections with bladders and quills; Rynd 1844 (page date); Wood 1851 glass syringe; Pravaz silver needle; Hunter 1858 coined hypodermic",
+        "https://en.wikipedia.org/wiki/Hypodermic_needle",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-INHA",
+        "Wikipedia, Inhaler",
+        "Mudge inhaler 1778; the page gives no 1846 ether inhaler detail",
+        "https://en.wikipedia.org/wiki/Inhaler",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-ANTI",
+        "Wikipedia, Antiseptic",
+        "Lister 1867 paper; carbolic (phenol) used by French surgeons in 1860s; page lacks spray detail",
+        "https://en.wikipedia.org/wiki/Antiseptic",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-IND19MED-CROO",
+        "Wikipedia, Crookes tube",
+        "Geissler 1857; Hittorf 1869; Crookes 1869 to 1875; 1e-6 to 5e-8 atm; few kV to 100 kV; Ruhmkorff coil; platinum anode; Rontgen 8 Nov 1895",
+        "https://en.wikipedia.org/wiki/Crookes_tube",
+        "science",
+        "2026-10-29"
       ]
     ]
   }
