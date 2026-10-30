@@ -392,3 +392,31 @@ not the work itself. Nothing was downloaded.
 | ECON-SMI | Adam Smith, *Wealth of Nations* (1776), appendix on the herring bounty | two bushels of Scots salt assumed to cure a barrel of herring | https://tha.de/~harsch/anglica/Chronology/18thC/Smith/smi_w45a.html | history (late) | 2026-10-30 |
 | ECON-HOF | Hopewell Furnace NHS, charcoal making | a good collier made 35–40 bushels of charcoal a cord; a pit held about 30 cords | https://www.nps.gov/hofu/learn/historyculture/charcoal-making.htm | history (18th–19th c.) | 2026-10-30 |
 
+## Settlement sources (settlement keeper, 2026-10-30)
+
+`STARTING_TOWN.md` rows Q5, Q10, Q15 and Q7 cite these keys. "Search summary" means the figure came through a
+search engine's digest of the page, not a page opened in full; "opened" means the page was fetched and read.
+Nothing was downloaded.
+
+| Key | What | Gives | URL | Kind | Opened |
+|---|---|---|---|---|---|
+| STL-MOR | Richard B. Morris, "The Emergence of American Labor", ch. 1 (US Dept of Labor) | England 1700: unskilled 1s 2d, craftsman 2s a day; colonies double; Massachusetts 1630 wage caps | https://www.dol.gov/general/aboutdol/history/chapter1 | history | 2026-10-30 (search summary) |
+| STL-VOTH | H.-J. Voth, "Time and Work in Eighteenth-Century London", JEH 1998 | 11 working hours in a 12-hour day; 208 working days in the 1750s | https://www.jvoth.com/Time_and_Work_JEH.pdf | history | 2026-10-30 (search summary) |
+| STL-NAV | Customs of the Navy, "Recruiting and conditions of service" | able seaman 24s, ordinary 19s a month, c. 1660 to 1797 | https://readyayeready.com/tradition/customs-of-the-navy/2-recruiting-and-conditions-of-service.php | history (secondary) | 2026-10-30 (search summary) |
+| STL-NSURG | Wikipedia, Naval surgeon | surgeon's pay 30s a month (1620s) to £5 a month by 1700 | https://en.wikipedia.org/wiki/Naval_surgeon | history (secondary) | 2026-10-30 (search summary) |
+| STL-LILLY | Wikipedia, Christian Lilly | engineer at 10s a day by warrant of 4 Aug 1692; chief engineer at 20s | https://en.wikipedia.org/wiki/Christian_Lilly | history (secondary) | 2026-10-30 (search summary) |
+| STL-CUN | Frank Cundall, Historic Jamaica (1915), Gutenberg 70109 | 2,000 houses c. 1692, Blome 1672 rents "as if in London"; ministers' stipends 1681 and 1706 (pp. 13, 22–23); Hanson 1682 goldsmiths; council 1692 ships careening at the wharves; a lot by the breastwork £125 (1685) | https://www.gutenberg.org/files/70109/70109-h/70109-h.htm | history | 2026-10-30 (opened, first 200,000 characters) |
+| STL-PSJ | The Pirate Surgeon's Journal, "Jamaican provisioning" p. 2, quoting Taylor 1687 (ed. Buisseret 2010, pp. 217, 233), Blome 1672, Sloane 1707, Leslie 1741 | three daily markets at Port Royal; imported flour, bread and brandy dear; vintners and alehouse keepers; provision farms | https://piratesurgeon.com/pages/surgeon_pages/prov_jamaica2.html | history (secondary quoting primary) | 2026-10-30 (opened) |
+| STL-E | Exquemelin, Buccaneers of America (GOODS key E), ch. III and V | carpenter 100–150 and surgeon 200–250 pieces of eight a voyage; wound scale; salted boar sold to planters | https://www.gutenberg.org/ebooks/26690 | history | 2026-10-30 (opened) |
+| STL-J | Johnson, General History (GOODS key J), Phillips's articles as transcribed | carpenter, master, boatswain, gunner 1¼ shares; captain 1½ | https://www.futilitycloset.com/2016/06/30/ground-rules/ | history | 2026-10-30 (search summary) |
+| STL-INA | Institute of Nautical Archaeology, Port Royal harbour excavation | excavated cobbler, wood turner, butcher; pipe shop/tavern/cobbler complex; wills and probate inventories | https://nauticalarch.org/projects/port-royal-harbor-excavation/ | archaeology | 2026-10-30 (search summary) |
+| STL-EHS | Economic History Society, "The Royal Society and slavery in Jamaica, 1660 to 1714" | probate inventories 1674–1721: poor artisans to wealthy planters | https://ehs.org.uk/the-royal-society-and-slavery-in-jamaica-1660-to-1714/ | history | 2026-10-30 (search summary) |
+| STL-RUN | Runaway slaves in Jamaica (I): eighteenth century, UF Digital Collections | runaways described as carpenter, cooper: the trades existed | https://ufdcimages.uflib.ufl.edu/AA/00/02/11/44/00001/JamaicaRunawaySlaves-18thCentury.pdf | history | 2026-10-30 (search summary) |
+| STL-PHIL | Encyclopedia of Greater Philadelphia, "Artisans" | apprentice, journeyman, master; journeymen paid by the day or piece; masters split work into steps | https://philadelphiaencyclopedia.org/essays/artisans/ | history (secondary) | 2026-10-30 (search summary) |
+| STL-BAR | Barbados genealogy, "Slavery in the West Indies in the 18th century" (quoting Beckford) | jobbers hired by the day at 15d | https://barbadosgen.wordpress.com/internet/chronicle-barbados/terri-englands-reference-center/slavery-west-indies-18th-century/ | history (secondary) | 2026-10-30 (search summary) |
+| STL-JPR | jamaicaportroyal.com, "Thames Street: the merchant engine" | merchants' private wharves | https://jamaicaportroyal.com/wealth.html | history (secondary, unsourced) | 2026-10-30 (search summary) |
+| STL-KING | Parish Histories of Jamaica, "A history of Kingston" | parish vestry and custos; Kingston's corporation 1802 | https://www.parishhistoriesofjamaica.org/wp-content/uploads/2022/03/A-HISTORY-OF-KINGSTON-completed_compressed-1_compressed-1.pdf | history | standard reference; not opened |
+| STL-LAW | English law in Jamaica: primogeniture, dower, Statute of Distributions 1670 | intestacy rules | — | history | standard reference; not opened |
+| STL-PBB | Pawson and Buisseret, Port Royal, Jamaica (UWI Press) | has a list of craftsmen and tradesmen and a list of taverns before 1692 | https://www.uwipress.com/9789766400729/port-royal-jamaica/ | history | not opened; the place to get counts |
+| STL-DHP | Destination: History podcast, Port Royal | about 10,000 inhabitants in 1692 (secondary) | https://destinationhistorypod.com/episodes/portroyal | secondary | 2026-10-30 (opened) |
+| STL-CSP | csphistorical.com, "Life in New Providence, 1716–1717" | hovels and tents; merchants and brothels; 500–1,000 pirates | https://csphistorical.com/2015/07/26/the-strongest-man-carries-the-day-life-in-new-providence-1716-1717/ | history (secondary) | 2026-10-30 (search summary) |
