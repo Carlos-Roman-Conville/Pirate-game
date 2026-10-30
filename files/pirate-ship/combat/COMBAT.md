@@ -74,8 +74,22 @@ Battle Brothers (lasting injuries).
 
 ## 3. Resolving an attack
 
+- **(Rex, 2026-10-30)** **A hit is not binary and not a damage number.** Over the simultaneous turn's interval
+  (§2), the Reality & Species engine's contact-and-impact mechanics (its P2 subsystem, being planned) resolves
+  **where** the weapon or fist makes contact (the tip, middle or base of a blade; the knuckles, or a graze),
+  **how much** motion and energy transfer, and **how deep** it penetrates. The outcome is continuous: a miss, a
+  brush of clothing, shallow skin contact, substantial blade contact, a deflection off armour.
+- **(Rex, 2026-10-30)** Physical cases the contact covers: two weapons can **collide before either reaches a
+  target**; a defender **moving forward** changes the relative impact speed; a **fast attack can land before a
+  dodge completes**.
+- **(Rex, 2026-10-30)** **What combat consumes:** the **contact event**, and the anatomy and medicine consequences
+  that follow from it (tissue, wound geometry, bleeding, loss of function). Combat **never computes damage from a
+  weapon number.** The percentage to hit and the body-part odds below (Rex, 2026-10-29) are now the **reading of
+  a physical contact**, not dice of their own; the one exception Rex kept is the **dodge beyond the numbers** for
+  Intuition and Spatial Reasoning (§2).
 - **(Rex, 2026-10-29)** Each attack has a percentage chance to hit, and within that a chance of hitting any body
-  part. What it hits determines the damage and how the target can retaliate.
+  part. What it hits determines the damage and how the target can retaliate. (Read since 2026-10-30 as the
+  outcome of the contact above.)
 - **(Rex, 2026-10-29)** Damage varies by weapon type and the attacker's stats: a sword with high Swordsmanship
   hits weak points more often.
 - **(Rex, 2026-10-29)** A bullet is a critical wound, not a sliver of HP; a head shot can kill.
@@ -89,12 +103,26 @@ Battle Brothers (lasting injuries).
 - **(proposed, outside AI)** Elevation's two effects kept apart: seeing further and over cover; better firing
   angles and less enemy cover. Seeing a target never means being able to hit it.
 - **(open)** Hit-location odds per part by stance, cover, direction and weapon; what "weak points" are in data.
+  (Since 2026-10-30 these come out of the contact, so the open part is what combat shows the player and how skill
+  steers where contact lands.)
+- **(open)** How the contact event is shown to the player (a percentage before committing, a description after,
+  both). How skill (Swordsmanship, Spatial Reasoning for aiming) enters the contact: as the attacker's control of
+  where the strike goes, and through what interface. Whether firearms and thrown weapons resolve through the same
+  contact event (Rex's words named a sword or a fist; a bullet as a critical wound stands).
+- **(keeper)** Lanes: the contact event, penetration and the tissue consequences belong to the Reality & Species
+  keeper (mechanics P2; anatomy and medicine). Combat reads them through the interface (CMB-13, CMB-14) and owns
+  the rules that use them: the options, the dodge exception, footing, what the player sees.
 
 ## 4. The body: regional damage and wounds
 
 - **(Rex, 2026-10-29)** The body has parts; a hit to a part changes what the character can do. Hit the shooting
   arm and accuracy goes way down.
+- **(Rex, 2026-10-30)** What a hit does to a part comes from the **contact event's anatomy and medicine
+  consequences** (tissue reached, wound geometry, bleeding, loss of function), not from a weapon's damage number
+  (§3). The parts table and wound ladder below are read through that.
 - **(Rex, 2026-10-29)** HP increases, but only moderately.
+- **(open)** What HP is once damage is not a number: a separate survival measure, a summary of the wounds, or
+  dropped. (ChatGPT's proposal below already made regional damage the main measure and HP secondary.)
 - **(proposed, outside AI)** Parts and consequences:
 
 | Part | What a wound does |
@@ -111,8 +139,8 @@ Battle Brothers (lasting injuries).
 - **(proposed, outside AI)** HP derived from Constitution and Endurance (`STATS.md` attributes), not from a level.
 - **(keeper)** `STATS.md` §4 already says a lost eye halves Eyesight and a peg leg takes Agility: lasting wounds
   are already in the stat design; combat would be where they come from.
-- **(open)** Whether the player's crew can die in a fight, or only NPCs and enemies. This touches the town's fate
-  rule (alive / dead / ghost, `balance/BALANCE.md` item 4): the balance and town keepers' once Rex decides.
+- **(open, decided 2026-10-29)** ~~Whether the player's crew can die in a fight~~: they can (§4e). The town's
+  fate rule collision stays open (ISSUES CMB-1).
 - **(open)** Bleeding, fatigue and stamina as turn-by-turn conditions.
 
 ### 4a. The body's own stats: per limb (Rex, 2026-10-29)
@@ -471,6 +499,9 @@ whether what you intend happens.
 13. The muscular system (§4b): `MUSCULAR.md` and `NUTRITION.md` coming from ChatGPT, to be filed under `body/`
     (decided 2026-10-29); whose lane after filing; replaces per-limb Strength or computes it; the gym as a town
     place and a minigame.
+19. How the contact event is shown to the player; how skill steers where contact lands; whether firearms and
+    thrown weapons use the same contact event (§3).
+20. What HP is now that damage is not a number (§4).
 14. What combat reads from the body docs: fatigue, injury, hunger, thirst and deficiency as battle penalties;
     consumables in a fight (food boosts, rum, medicine).
 15. Sub-cubes per cube: 16 or 32 (§1, §2).
@@ -501,3 +532,4 @@ whether what you intend happens.
 | 2026-10-29 | Refinement: transformation as part of character endings (bring a character people → transformed → upgraded unit → their storyline advances within the alignment); the INTJ example; procedural generation needed; keepers messaged | Rex |
 | 2026-10-29 | `MUSCULAR.md` and `NUTRITION.md` to be written (via ChatGPT); nutrition as calories, macros, micros, water and salt with scurvy emergent; provenance tags (mythical, Triassic, sci-fi) on the item screen, never in battle | Rex |
 | 2026-10-30 | Turns redefined: everyone commits, the turn resolves simultaneously (replaces the initiative proposal); computed space (reach, sword and arm length) decides who lands first from reflexes, speed and reach; a dodge beyond the numbers for Intuition and Spatial Reasoning; options parry, dodge, attack-and-defend, reckless strike; steady-ground bonus and off-balance debuff; cubes with 16 or 32 sub-cubes, movement a distance from speed and leg length. Mechanics outputs read from Reality & Species (P2) | Rex (via the parent session) |
+| 2026-10-30 | A hit is not binary and not a damage number: Reality & Species' contact-and-impact mechanics (P2) resolves where contact lands, energy transferred and penetration over the turn's interval, with continuous outcomes (miss to armour deflection), weapon-on-weapon collisions, relative speed, a fast attack beating a dodge; combat consumes the contact event and its anatomy/medicine consequences; hit % and part odds become the reading of the contact; the Intuition/Ti dodge kept as the exception | Rex (via the parent session) |
