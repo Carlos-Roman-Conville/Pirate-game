@@ -83,7 +83,7 @@ reaction produces (`../science/CHEMISTRY.md`) nor what a dose does (`../body/`).
 
 | Element | Statement | Status | Mark |
 |---|---|---|---|
-| Cells | the combat map's tiles, each a small box with the units above; elevation and enclosure from the map (COMBAT 6: tile properties) | deferred | rex (the deferred grid and its rules, 2026-10-29); deferred |
+| Cells | the cells of a grid, each a small box with the units above; elevation and enclosure from the grid's own cell properties | deferred | rex (the deferred grid and its rules, 2026-10-29); deferred |
 | Advection | the wind (ENVIRONMENT) moves a cell's air downwind by u x step; indoors, the ventilation flow | deferred | rex (the deferred grid and its rules, 2026-10-29); deferred |
 | Diffusion and turbulent mixing | each step a cell shares a fraction with its neighbours (D x step / cell size squared) | deferred | rex (the deferred grid and its rules, 2026-10-29); deferred |
 | Buoyancy | hot and light gases move up a level (a deck) before spreading; heavy ones pool in hollows and the low tiles | deferred | rex (the deferred grid and its rules, 2026-10-29); deferred |

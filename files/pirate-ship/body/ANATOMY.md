@@ -196,6 +196,8 @@ absorption. No organ applies a penalty of its own: `BODY.md` reads organ functio
 | diet and absorption | NUTRITION 2a | grass: cellulose digested in the hindgut; no vitamin C need (makes its own) | fish; open | rex (the profile shape, 2026-10-29); proposed (the example values) |
 | muscle layout (MUSCULAR groups) | 31 groups | the equine set (a data task) | human plus swimming groups (open) | rex (the profile shape, 2026-10-29); proposed (the example values) |
 | lifespan and ageing curves | PHYSIOLOGY 8 | 25 to 30 years | open | rex (the profile shape, 2026-10-29); proposed (the example values) |
+| haemoglobin (g/dL) | circulation.quantities.haemoglobin | open | open | rex (the profile shape, 2026-10-29); proposed (the example values) |
+| maximal ventilation (L/min) | anatomy.respiratory.ventilation-capacity-maximal | open | open | rex (the profile shape, 2026-10-29); proposed (the example values) |
 | states of being | human | - | the profile is the state of being (BODY 6) | rex (the forms), proposed (the profile shape) |
 <!-- /table -->
 

@@ -1,5 +1,5 @@
 import { beforeAll, describe, expect, it } from 'vitest'
-import { libraryTable, metOf, overnight, fatKcalPerKg, bleedingClass, normalBloodVolume, libraryMeta } from '@rex/realism'
+import { libraryTable, metOf, overnight, fatKcalPerKg, bleedingClass, normalBloodVolume, bleedFactor } from '@rex/realism'
 import characterData from '../../../data/pirate-ship/world/characters.json'
 import { activityOf, fixturePhysique } from './adapters/characters.ts'
 import { runSettlement, printSettlement, settlementFixture as f, settlementPlan, startDayOfYear } from './settlement.ts'
@@ -136,7 +136,7 @@ describe('Port Royal settlement, thirty days', () => {
     expect(record).toMatchObject({ kind: 'crisis', body: 'body', risk: null, organ: IV })
     expect(record.source).toContain(IV)
     // F-MD-9 retired by 2570: circulation runs at the body's step, so the record opens within one step of the loss reaching the class
-    const factor = Number(/\(([\d.]+) - clotting\)/.exec(libraryMeta('circulation', 'bleeding').source)![1]) // the engine's `bleed`
+    const factor = bleedFactor() // the engine's `bleed` factor, by name
     const rateMlS = w.rateMlMin / 60 * (factor - w.clotting), baseline = normalBloodVolume(fixturePhysique.massKg, fixturePhysique.male)
     let reachS = 0
     while (bleedingClass(rateMlS * reachS, baseline).Class !== 'IV') reachS++

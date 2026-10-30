@@ -66,6 +66,8 @@ atherosclerosis index, damage) daily at the tick (`ANATOMY.md` §4).
 | pH and lactate | 7.40; under 2 | -; mmol/L | lungs (CO2) and kidneys | maximal work (lactate up: the burn, part of the Endurance pool's floor), shock, kidney failure | under 7.2 the heart weakens | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
 | White cells and inflammatory signals | 7; 0 | x10^9/L; index | marrow; infection and injury raise the signal | sepsis (exhausted), starvation, lead | MEDICINE's catch chances x (2 - immuneFunction); fever is the signal's face; chronic inflammation feeds the endothelium's damage | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
 | Blood lipids (cholesterol, fats) | normal | index | diet (NUTRITION fat and energy surplus), liver, age | - | the atherosclerosis index (events table) | rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders) |
+| Blood density | 1.06 | kg/L | plasma and cell composition (about 1.025 plasma, 1.09 red cells) | leaves the body mass with shed blood (haemorrhage) | the body mass lost per mL shed: mass kg = mL x density / 1000 | cited: whole blood density about 1,060 kg/m3 (Wikipedia, Blood; standard physiology texts) |
+| Maximal cardiac output | 20 | L/min | heart function (ANATOMY) at full demand | heart failure, low volume | aerobic_today: DO2 at this flow | sourced (2560): Magder 2022 gives 20-25 L/min for a typical young male; the lower end is entered, and the source does not say untrained |
 <!-- /table -->
 
 - **[science]** CIR-DO2, CIR-ELEC. The two formulas the file runs on:

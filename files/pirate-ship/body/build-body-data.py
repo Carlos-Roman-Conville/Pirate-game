@@ -73,8 +73,29 @@ def cell(v):
 
 # ---------------------------------------------------------------- the engine's own rows
 
+_SUBS = {}  # the engine's substance rows by id, set by load_engine (the Heat column reads molar masses from it)
+
+
 def _terms(items):
     return " + ".join((f"{i['coefficient']:g} " if i["coefficient"] != 1 else "") + i["substance"] for i in items)
+
+
+def _conditions(e):
+    parts = [f"minimum temperature {e['conditions']['minimumTemperatureC']} C"]
+    if "minO2" in e["conditions"]:
+        parts.append(f"oxygen over {e['conditions']['minO2'] * 100:g}%")  # the engine's minO2 column, a fraction of the vessel's gas
+    parts += [f"{k} {cell(v)}" for k, v in e["conditions"].items() if k not in ("note", "minimumTemperatureC", "minO2")]
+    return "; ".join(parts)
+
+
+def _heat(e, subs):
+    """kJ/mol as the engine states it; per kg of the first reactant (the engine's `heatPerKg`) when its molar mass is known."""
+    if e["heat"] is None:
+        return None
+    text = f"{e['heat'] / 1000:g} kJ/mol"
+    fuel = e["reactants"][0]
+    mm = subs.get(fuel["substance"], {}).get("molarMass")
+    return text if not mm else f"{text}; about {abs(e['heat']) / (fuel['coefficient'] * mm) / 1e6:.1f} MJ/kg"
 
 
 def _formula_terms(items, formulas):
@@ -82,17 +103,16 @@ def _formula_terms(items, formulas):
 
 
 ENGINE_OWNED = {
-    ("chemistry", "substances"): ("substances.json", "substances", {
+    ("chemistry", "substances"): ("substances.json", "rows", {
         "Formula": lambda e, f: e["formula"],
         "Molar mass": lambda e, f: None if e["molarMass"] is None else round(e["molarMass"] * 1000, 6),  # kg/mol -> g/mol
     }),
     ("chemistry", "reactions"): ("reactions.json", "reactions", {
         "Reactants": lambda e, f: _formula_terms(e["reactants"], f),
         "Products": lambda e, f: _formula_terms(e["products"], f),
-        "Conditions": lambda e, f: "; ".join(f"minimum temperature {v} C" if k == "minimumTemperatureC" else f"{k} {cell(v)}"
-                                             for k, v in e["conditions"].items() if k != "note"),
+        "Conditions": lambda e, f: _conditions(e),
         "Rate (placeholder)": lambda e, f: e["rate"]["kind"],
-        "Heat": lambda e, f: None if e["heat"] is None else f"{e['heat'] / 1000:g} kJ/mol",
+        "Heat": lambda e, f: _heat(e, _SUBS),
     }),
 }
 
@@ -106,6 +126,8 @@ def load_engine():
             out[key] = {e["id"]: e for e in read(p)[arr]}
     subs = out.get(("chemistry", "substances"), {})
     formulas = {i: e["formula"] for i, e in subs.items()}
+    _SUBS.clear()
+    _SUBS.update(subs)
     return out, formulas
 
 
@@ -262,7 +284,7 @@ def validate(data, lib=None):
             for r in t["rows"]:
                 if len(r) != n:
                     print(f"  {f}.{k}: row {str(r[0])[:40]!r} has {len(r)} cells, expected {n}", file=sys.stderr); bad += 1
-                if mi >= 0 and not any(str(r[mi]).lower().startswith(w) for w in ("rex", "proposed", "open", "history", "model", "science", "searched")):
+                if mi >= 0 and not any(str(r[mi]).lower().startswith(w) for w in ("rex", "proposed", "open", "history", "model", "science", "searched", "sourced", "cited")):
                     print(f"  {f}.{k}: row {str(r[0])[:40]!r} mark {r[mi]!r} not rex/proposed/open/history/model/science/searched", file=sys.stderr); bad += 1
                 if f.startswith("library/"):
                     if t["columns"][0] not in ("id", "Key") or r[0] in ids:

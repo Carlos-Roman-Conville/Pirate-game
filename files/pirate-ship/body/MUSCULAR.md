@@ -193,16 +193,16 @@ group; endurance time for a hold.
   R per minute. A rest day returns a group to near zero fatigue; a hard day leaves 0.2–0.4 by morning.
 
 <!-- table:library/muscular.fatigue_rates -->
-*Three-compartment fatigue model (3CC): rates by joint* (science; confidence medium; source: Xia and Frey Law 2008 (J Biomech): muscle in resting, active, fatigued compartments; F = fatigue rate active to fatigued, R = recovery rate fatigued to resting, per second. Fitted values from Frey Law, Looft and Heitsman 2012: ankle F 0.00589 R 0.0182; shoulder F 0.00058 R 0.00168; a 2018 extension adds a rest multiplier. MUS-3CC)
+*Three-compartment fatigue model (3CC): rates by joint* (science; confidence medium; source: Xia and Frey Law 2008 (J Biomech): muscle in resting, active, fatigued compartments; F = fatigue rate active to fatigued, R = recovery rate fatigued to resting, per second. Values copied from Frey Law, Looft and Heitsman 2012 Table 1 (PMC3397684, opened 2026-10-30, 2560); the paper states no units (1 Hz steps). The 2018 rest multiplier was not reached. MUS-3CC)
 
 | Joint (groups) | F (per s) | R (per s) | Note | Mark |
 |---|---|---|---|---|
-| Shoulder (deltoids, rotator cuff) | 0.00058 | 0.00168 | fitted 2012 | proposed |
-| Elbow (biceps, brachialis, triceps) | 0.0012 | 0.0036 | interpolated by the keeper between shoulder and ankle | proposed |
-| Grip (forearm, hand) | 0.0025 | 0.0075 | interpolated; grip tires fast and recovers fast | proposed |
-| Trunk (erectors, abs, obliques) | 0.001 | 0.003 | interpolated | proposed |
-| Hip and knee (glutes, quads, hamstrings) | 0.003 | 0.009 | interpolated | proposed |
-| Ankle (calves, tibialis) | 0.00589 | 0.0182 | fitted 2012 | proposed |
+| Shoulder (deltoids, rotator cuff) | 0.0182 | 0.00168 | Frey Law, Looft and Heitsman 2012 Table 1, Shoulder (2560) | sourced |
+| Elbow (biceps, brachialis, triceps) | 0.00912 | 0.00094 | Frey Law, Looft and Heitsman 2012 Table 1, Elbow (2560) | sourced |
+| Grip (forearm, hand) | 0.0098 | 0.00064 | Frey Law, Looft and Heitsman 2012 Table 1, Hand/Grip (2560) | sourced |
+| Trunk (erectors, abs, obliques) | 0.00755 | 0.00075 | Frey Law, Looft and Heitsman 2012 Table 1, Trunk (2560) | sourced |
+| Hip and knee (glutes, quads, hamstrings) | 0.015 | 0.00149 | Frey Law, Looft and Heitsman 2012 Table 1, Knee set; the paper has no hip set, so the hip groups use it (2560) | sourced |
+| Ankle (calves, tibialis) | 0.00589 | 0.00058 | Frey Law, Looft and Heitsman 2012 Table 1, Ankle (2560) | sourced |
 <!-- /table -->
 
 <!-- table:library/muscular.endurance_time -->

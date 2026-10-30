@@ -21,7 +21,9 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
 ### Settlement (task 2563 re-ran it on the engine of 2561/2562)
 
 In `web/`: `node --experimental-strip-types src/world/settlement.run.ts` (Aug 1-30, about 22 s; the sim test asserts under 60 s).
-Circulation runs every body step (F-MD-9 retired by 2570); the ledger's last line is peak resident memory (~340 MB, bound 1.5 GB).
+Circulation runs every body step (F-MD-9 retired); the ledger ends with peak memory.
+The sim test reads `bleedFactor()` from the engine. The body build's chemistry rows take "oxygen over 15%" (`minO2`) and
+"about 32.8 MJ/kg" from the engine; the rate "by fuel surface and draught" is the game's column in `chemistry.json` (2575).
 - Every path that can end a body opens an engine `Crisis`; `healDay` collects them before `releaseDayTrace` renews the trace.
   Day 12 settler-4's unbound chest wound (F-MD-8, host rate) reaches class IV and opens a crisis; nobody is declared dead.
 - Hydration: `workRate` multiplies by `work_capacity_hydration`. Everyone drinks hourly (F-CH-9) except the bakery cooks from

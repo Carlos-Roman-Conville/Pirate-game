@@ -56,6 +56,8 @@
       ["anatomy.species.rmr-formula", "open", "rex (the profile shape, 2026-10-29); proposed (the example values)"],
       ["anatomy.species.diet-and-absorption", "fish; open", "rex (the profile shape, 2026-10-29); proposed (the example values)"],
       ["anatomy.species.muscle-layout-muscular-groups", "human plus swimming groups (open)", "rex (the profile shape, 2026-10-29); proposed (the example values)"],
+      ["anatomy.species.haemoglobin-g-dl", "open", "rex (the profile shape, 2026-10-29); proposed (the example values)"],
+      ["anatomy.species.maximal-ventilation-l-min", "open", "rex (the profile shape, 2026-10-29); proposed (the example values)"],
       ["anatomy.species.lifespan-and-ageing-curves", "open", "rex (the profile shape, 2026-10-29); proposed (the example values)"],
       ["anatomy.species.states-of-being", "the profile is the state of being (BODY 6)", "rex (the forms), proposed (the profile shape)"]
     ]

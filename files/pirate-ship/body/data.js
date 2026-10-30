@@ -378,6 +378,20 @@ window.BODY_DATA = {
      "rex (the profile shape, 2026-10-29); proposed (the example values)"
     ],
     [
+     "haemoglobin (g/dL)",
+     "circulation.quantities.haemoglobin",
+     null,
+     "open",
+     "rex (the profile shape, 2026-10-29); proposed (the example values)"
+    ],
+    [
+     "maximal ventilation (L/min)",
+     "anatomy.respiratory.ventilation-capacity-maximal",
+     null,
+     "open",
+     "rex (the profile shape, 2026-10-29); proposed (the example values)"
+    ],
+    [
      "states of being",
      "human",
      "-",
@@ -1762,9 +1776,9 @@ window.BODY_DATA = {
      "Charcoal burning in plenty of air",
      "C + O2",
      "CO2",
-     "minimum temperature 400 C",
-     "complete",
-     "-393.51 kJ/mol",
+     "minimum temperature 400 C; oxygen over 15%",
+     "by fuel surface and draught (the game's rule; proposed)",
+     "-393.51 kJ/mol; about 32.8 MJ/kg",
      "the galley, the smith",
      "rex (the reaction, 2026-10-29); proposed (rates)"
     ],
@@ -1774,7 +1788,7 @@ window.BODY_DATA = {
      "2 C + O2",
      "2 CO + heat",
      "oxygen under 15% or a shut space",
-     "the brazier in the cabin: 10 to 30% of carbon to CO",
+     null,
      "10 MJ/kg",
      "the brazier, a smouldering hold",
      "rex (the reaction, 2026-10-29); proposed (rates)"
@@ -1785,7 +1799,7 @@ window.BODY_DATA = {
      "wood + O2",
      "CO2, H2O, CO (10% if smoky), soot, tars, heat",
      "ignition; spreads by heat",
-     "by surface",
+     null,
      "15 MJ/kg",
      "a ship on fire",
      "rex (the reaction, 2026-10-29); proposed (rates)"
@@ -1796,7 +1810,7 @@ window.BODY_DATA = {
      "S + O2",
      "SO2 + heat",
      "ignition over 250 C",
-     "a stinkpot: 100 g in a minute",
+     null,
      "9 MJ/kg",
      "stinkpots, the match",
      "rex (the reaction, 2026-10-29); proposed (rates)"
@@ -1807,7 +1821,7 @@ window.BODY_DATA = {
      "KNO3 + C + S (75:15:10)",
      "gases 43% (CO2, N2, CO, H2S trace, H2, CH4) 330 cm3/g; solids 56% (K2CO3, K2SO4, K2S); water 1%",
      "a spark, a match; confinement makes the bang",
-     "instant",
+     null,
      "3 MJ/kg",
      "the guns, the magazine, a grenade",
      "rex (the reaction, 2026-10-29); proposed (rates)"
@@ -1818,7 +1832,7 @@ window.BODY_DATA = {
      "sugars",
      "ethanol + CO2",
      "yeast, 20 to 30 C, days",
-     "a vat: 1 L CO2 per litre of wort over days (a shut brew-house pools CO2)",
+     null,
      "small",
      "GOODS brewing and distilling; a CO2 source for GAS_DYNAMICS",
      "rex (the reaction, 2026-10-29); proposed (rates)"
@@ -1829,7 +1843,7 @@ window.BODY_DATA = {
      "organic matter",
      "CH4, H2S, CO2",
      "wet, no air, warm",
-     "slow; by the cleanliness meter",
+     null,
      "-",
      "the bilge, the stores",
      "rex (the reaction, 2026-10-29); proposed (rates)"
@@ -1840,7 +1854,7 @@ window.BODY_DATA = {
      "HgO (red precipitate, an apothecary's good)",
      "Hg + O2",
      "heat over 500 C: a burning lens in sun, or a strong fire on a retort; collect over water or mercury",
-     "minutes",
+     null,
      "absorbs heat",
      "Priestley 1774 (Scheele 1771 to 72 unpublished); Lavoisier named it 1777. Every piece is within 1700's reach: a Time Anomaly if done",
      "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
@@ -1851,7 +1865,7 @@ window.BODY_DATA = {
      "Fe + 2 HCl",
      "FeCl2 + H2",
      "room temperature; collect over water (Hales 1727 trough, or any jar in a tub)",
-     "minutes",
+     null,
      "small",
      "Cavendish 1766 ('inflammable air'); Boyle made it in 1671 without knowing it: Historical as a phenomenon, anomaly as an identified element",
      "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
@@ -1862,7 +1876,7 @@ window.BODY_DATA = {
      "urine evaporated, charcoal, strong heat in a retort",
      "P4 (white phosphorus) + ...",
      "red heat (over 1,000 C) in a retort with a receiver under water; days of evaporation; about 60 buckets of urine per ounce",
-     "days",
+     null,
      "endothermic",
      "Brand 1669 (Hamburg): Historical for the period; the first element discovered by a known person",
      "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
@@ -1873,7 +1887,7 @@ window.BODY_DATA = {
      "NaCl + MnO2 + H2SO4",
      "Cl2 + MnSO4 + Na2SO4 + H2O",
      "gentle heat in a retort; the gas is heavy, green, deadly (an ATMOSPHERE scenario)",
-     "minutes",
+     null,
      "small",
      "Scheele 1774; bleaching (Berthollet 1785). All three reagents period goods: an anomaly within reach, and a laboratory accident waiting",
      "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
@@ -1884,7 +1898,7 @@ window.BODY_DATA = {
      "C2H5OH + H2SO4",
      "(C2H5)2O + H2O",
      "distil at 130 to 140 C; flammable vapour",
-     "hours",
+     null,
      "small",
      "Valerius Cordus 1540; the anaesthetic use 1846 (Morton): the substance Historical, its use an anomaly if a 1700 surgeon learns it (MEDICINE: surgery without pain)",
      "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
@@ -1895,7 +1909,7 @@ window.BODY_DATA = {
      "Zn + Cu + brine",
      "a current; ZnCl2 at the zinc",
      "stack 20 to 60 pairs; brine-soaked cloth or leather",
-     "runs for hours",
+     null,
      "-",
      "Volta 1800. Both metals are GOODS goods (voyage iron is iron; zinc arrives as spelter and in brass: open whether pure zinc is obtainable in 1700); an anomaly if someone knows the stack",
      "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
@@ -1906,7 +1920,7 @@ window.BODY_DATA = {
      "H2O + a current",
      "H2 + O2",
      "a pile (voltaic_pile); electrodes of gold, platinum or charcoal",
-     "hours",
+     null,
      "absorbs energy",
      "Nicholson and Carlisle 1800",
      "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
@@ -1917,7 +1931,7 @@ window.BODY_DATA = {
      "fat + lye (potash from wood ash)",
      "soap + glycerol",
      "boiling for hours",
-     "hours",
+     null,
      "small",
      "antiquity: Historical; the Castile soap of GOODS row 98",
      "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
@@ -1928,7 +1942,7 @@ window.BODY_DATA = {
      "Hg + HgCl2 (corrosive sublimate), or Hg + salt + vitriol",
      "Hg2Cl2",
      "sublimation in aludels, 400 C",
-     "hours",
+     null,
      "-",
      "the apothecary's purge, period; the pox cure's cousin",
      "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
@@ -1939,7 +1953,7 @@ window.BODY_DATA = {
      "KNO3 + H2SO4 (or green vitriol heated)",
      "HNO3 + KHSO4",
      "distil from a retort at 100 to 200 C; the fumes are deadly (NO2: an ATMOSPHERE species to add)",
-     "hours",
+     null,
      "-",
      "medieval; the assayer's parting acid (gold from silver): Historical",
      "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
@@ -1950,7 +1964,7 @@ window.BODY_DATA = {
      "whatever the player combines",
      "unknown",
      "whatever the apparatus reaches",
-     "-",
+     null,
      "-",
      "the engine answers 'unknown', records the attempt in the journal, and the belt adds the record if the chemistry is real",
      "rex (the reaction belongs in the database, 2026-10-29); proposed (rates, conditions as placeholders)"
@@ -1961,7 +1975,7 @@ window.BODY_DATA = {
      "by record",
      "by record",
      "temperature, pressure, catalyst, contact time",
-     "by record",
+     null,
      "by record",
      "GOODS recipes as the first list of what the engine must eventually express",
      "open (scope: whether recipes become reactions)"
@@ -2697,6 +2711,24 @@ window.BODY_DATA = {
      "-",
      "the atherosclerosis index (events table)",
      "rex (the quantity and what it drives, 2026-10-29); proposed (values as placeholders)"
+    ],
+    [
+     "Blood density",
+     "1.06",
+     "kg/L",
+     "plasma and cell composition (about 1.025 plasma, 1.09 red cells)",
+     "leaves the body mass with shed blood (haemorrhage)",
+     "the body mass lost per mL shed: mass kg = mL x density / 1000",
+     "cited: whole blood density about 1,060 kg/m3 (Wikipedia, Blood; standard physiology texts)"
+    ],
+    [
+     "Maximal cardiac output",
+     20,
+     "L/min",
+     "heart function (ANATOMY) at full demand",
+     "heart failure, low volume",
+     "aerobic_today: DO2 at this flow",
+     "sourced (2560): Magder 2022 gives 20-25 L/min for a typical young male; the lower end is entered, and the source does not say untrained"
     ]
    ]
   },
@@ -11407,7 +11439,7 @@ window.BODY_DATA = {
    "rows": [
     [
      "Cells",
-     "the combat map's tiles, each a small box with the units above; elevation and enclosure from the map (COMBAT 6: tile properties)",
+     "the cells of a grid, each a small box with the units above; elevation and enclosure from the grid's own cell properties",
      "deferred",
      "rex (the deferred grid and its rules, 2026-10-29); deferred"
     ],
@@ -11918,54 +11950,29 @@ window.BODY_DATA = {
    "conf": "high",
    "source": "ATLS classes of haemorrhagic shock (teaching values; the current manual gives trends). Blood volume about 70 mL/kg (standard). The class is read from the cumulative loss; the loss grows by the wound's rate x elapsed minutes (a combat turn's length is the combat keeper's), and stops when bound or when the surgeon ligates. The bleeding rates and the death risks are model placeholders, not clinical rates. MED-ATLS",
    "columns": [
-    "Class",
-    "Loss (% of blood volume)",
-    "Loss for a 70 kg man (mL)",
-    "Signs",
+    "id",
     "Sim: Endurance pool and Constitution",
-    "Model: bleeding rate of an open wound of this class (mL per minute, until bound)",
-    "Death risk per hour at this loss, untreated (model placeholder)",
     "Mark"
    ],
    "rows": [
     [
-     "I",
-     "up to 15",
-     "up to 750",
-     "pulse under 100; little change",
+     "medicine.bleeding.i",
      "pool x0.95",
-     "5 (a cut: stops on its own in 10 to 20 min)",
-     "0",
      "proposed"
     ],
     [
-     "II",
-     "15 to 30",
-     "750 to 1500",
-     "pulse 100 to 120; anxious; pale",
+     "medicine.bleeding.ii",
      "pool x0.8; Constitution x0.9",
-     "30 (a deep thrust)",
-     "1%",
      "proposed"
     ],
     [
-     "III",
-     "30 to 40",
-     "1500 to 2000",
-     "pulse 120 to 140; blood pressure falls; confused",
+     "medicine.bleeding.iii",
      "pool x0.5; Wits x0.7; collapse risk per turn",
-     "100 (a severed artery or a shattered limb)",
-     "10%",
      "proposed"
     ],
     [
-     "IV",
-     "over 40",
-     "over 2000",
-     "pulse over 140; lethargic; unconscious",
+     "medicine.bleeding.iv",
      "incapacitated; dying (COMBAT 4 wound ladder)",
-     "300 (a great vessel)",
-     "50%",
      "proposed"
     ]
    ]
@@ -12023,6 +12030,7 @@ window.BODY_DATA = {
    "kind": "history",
    "conf": "medium",
    "source": "Woodall, The Surgeon's Mate (1617); Moyle, Chirurgus Marinus (1693); the humoral tradition (bleeding, purging, emetics, sweating); Sydenham (laudanum, bark); Pare's ligature (1564); Petit's tourniquet (1718); inoculation 1721. MED-WOOD, MED-MOYLE, MED-HUM, MED-LIND",
+   "note": "No cited source gives a hygiene exposure multiplier (unswabbed days, lice, foul water, wet-season port) or a death risk with treatment; both stay unset (hygiene defaults to 1 in the engine). See flags/medicine.md.",
    "columns": [
     "Treatment",
     "Used for",
@@ -14158,7 +14166,7 @@ window.BODY_DATA = {
    "title": "Three-compartment fatigue model (3CC): rates by joint",
    "kind": "science",
    "conf": "medium",
-   "source": "Xia and Frey Law 2008 (J Biomech): muscle in resting, active, fatigued compartments; F = fatigue rate active to fatigued, R = recovery rate fatigued to resting, per second. Fitted values from Frey Law, Looft and Heitsman 2012: ankle F 0.00589 R 0.0182; shoulder F 0.00058 R 0.00168; a 2018 extension adds a rest multiplier. MUS-3CC",
+   "source": "Xia and Frey Law 2008 (J Biomech): muscle in resting, active, fatigued compartments; F = fatigue rate active to fatigued, R = recovery rate fatigued to resting, per second. Values copied from Frey Law, Looft and Heitsman 2012 Table 1 (PMC3397684, opened 2026-10-30, 2560); the paper states no units (1 Hz steps). The 2018 rest multiplier was not reached. MUS-3CC",
    "columns": [
     "Joint (groups)",
     "F (per s)",
@@ -14169,45 +14177,45 @@ window.BODY_DATA = {
    "rows": [
     [
      "Shoulder (deltoids, rotator cuff)",
-     0.00058,
+     0.0182,
      0.00168,
-     "fitted 2012",
-     "proposed"
+     "Frey Law, Looft and Heitsman 2012 Table 1, Shoulder (2560)",
+     "sourced"
     ],
     [
      "Elbow (biceps, brachialis, triceps)",
-     0.0012,
-     0.0036,
-     "interpolated by the keeper between shoulder and ankle",
-     "proposed"
+     0.00912,
+     0.00094,
+     "Frey Law, Looft and Heitsman 2012 Table 1, Elbow (2560)",
+     "sourced"
     ],
     [
      "Grip (forearm, hand)",
-     0.0025,
-     0.0075,
-     "interpolated; grip tires fast and recovers fast",
-     "proposed"
+     0.0098,
+     0.00064,
+     "Frey Law, Looft and Heitsman 2012 Table 1, Hand/Grip (2560)",
+     "sourced"
     ],
     [
      "Trunk (erectors, abs, obliques)",
-     0.001,
-     0.003,
-     "interpolated",
-     "proposed"
+     0.00755,
+     0.00075,
+     "Frey Law, Looft and Heitsman 2012 Table 1, Trunk (2560)",
+     "sourced"
     ],
     [
      "Hip and knee (glutes, quads, hamstrings)",
-     0.003,
-     0.009,
-     "interpolated",
-     "proposed"
+     0.015,
+     0.00149,
+     "Frey Law, Looft and Heitsman 2012 Table 1, Knee set; the paper has no hip set, so the hip groups use it (2560)",
+     "sourced"
     ],
     [
      "Ankle (calves, tibialis)",
      0.00589,
-     0.0182,
-     "fitted 2012",
-     "proposed"
+     0.00058,
+     "Frey Law, Looft and Heitsman 2012 Table 1, Ankle (2560)",
+     "sourced"
     ]
    ]
   },
@@ -21988,6 +21996,22 @@ window.BODY_DATA = {
      "https://en.wikipedia.org/wiki/Filter_paper",
      "history",
      "2026-10-29"
+    ],
+    [
+     "MUS-3CC-2012",
+     "Frey Law, Looft and Heitsman 2012, Table 1: optimal F and R per joint region (PMC3397684)",
+     "F and R for ankle, knee, trunk, shoulder, elbow, hand/grip; no hip set; no rest multiplier or adaptation coefficients",
+     "https://pmc.ncbi.nlm.nih.gov/articles/PMC3397684",
+     "science",
+     "2026-10-30"
+    ],
+    [
+     "CIR-QMAX",
+     "Magder 2022, Mechanical Limits of Cardiac Output at Maximal Aerobic Exercise, IntechOpen, Introduction",
+     "cardiac output rises from about 5 L/min at rest to 20-25 L/min in a typical young male",
+     "https://www.intechopen.com/chapters/81078",
+     "science",
+     "2026-10-30"
     ],
     [
      "EQ-MET-19",
