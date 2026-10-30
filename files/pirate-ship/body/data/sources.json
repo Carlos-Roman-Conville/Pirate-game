@@ -1477,6 +1477,166 @@
         "https://jimclifford.ca/early_encyclopedia_britannica/articles/1797/eb_3rd_1797_015528.html",
         "reference",
         "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-1",
+        "Wikipedia, Liebig condenser",
+        "Weigel 1771, Gadolin 1778, Poissonnier 1779, Goettling 1794, Liebig's glass-jacket version",
+        "https://en.wikipedia.org/wiki/Liebig_condenser",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-2",
+        "Wikipedia, Kipp's apparatus",
+        "Kipp c. 1844, three chambers, gases it makes",
+        "https://en.wikipedia.org/wiki/Kipp%27s_apparatus",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-3",
+        "Wikipedia, Bunsen burner",
+        "Bunsen, Desaga, Faraday's earlier burner, 1855 opening, coal gas",
+        "https://en.wikipedia.org/wiki/Bunsen_burner",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-4",
+        "Wikipedia, Kjeldahl method",
+        "Kjeldahl 1883, digestion 360 to 410 C, reagents, sensitivity",
+        "https://en.wikipedia.org/wiki/Kjeldahl_method",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-5",
+        "Wikipedia, Soxhlet extractor",
+        "Soxhlet 1879, Payen 1830s continuous extraction, thimble, chamber to solvent ratio",
+        "https://en.wikipedia.org/wiki/Soxhlet_extractor",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-6",
+        "Wikipedia, Erlenmeyer flask",
+        "Erlenmeyer 1860 (shown 1857), glass, volumes within about 5 percent",
+        "https://en.wikipedia.org/wiki/Erlenmeyer_flask",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-7",
+        "Wikipedia, Buchner funnel",
+        "Ernst Buechner 1888 citation, porcelain, suction filtration",
+        "https://en.wikipedia.org/wiki/B%C3%BCchner_funnel",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-8",
+        "Wikipedia, Davy lamp",
+        "Davy 1815, Clanny 1813, Stephenson, wire gauze, oil, flame-height methane test",
+        "https://en.wikipedia.org/wiki/Davy_lamp",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-9",
+        "Wikipedia, Daniell cell",
+        "Daniell 1836, 1.10 V, zinc and copper with porous pot",
+        "https://en.wikipedia.org/wiki/Daniell_cell",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-10",
+        "Wikipedia, Grove cell",
+        "Grove, about 1.9 V, zinc, platinum, nitric acid, NO2 fumes",
+        "https://en.wikipedia.org/wiki/Grove_cell",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-11",
+        "Wikipedia, Dynamo",
+        "Pixii 1832, Faraday disk 1831, Siemens and Wheatstone 1867, Gramme 1871",
+        "https://en.wikipedia.org/wiki/Dynamo",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-12",
+        "Wikipedia, Desiccator",
+        "construction, desiccants (quicklime, P2O5), vacuum type; no date given",
+        "https://en.wikipedia.org/wiki/Desiccator",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-13",
+        "Wikipedia, Polarimeter",
+        "1830s earliest, Nicol prisms, sodium D line 589.3 nm, +/- 0.05 degrees manual",
+        "https://en.wikipedia.org/wiki/Polarimeter",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-14",
+        "Wikipedia, Calorimeter",
+        "bomb calorimeter about 30 atm oxygen, steel bomb, 2 L water; Lavoisier and Laplace ice calorimeter 1782-83",
+        "https://en.wikipedia.org/wiki/Calorimeter",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-15",
+        "Wikipedia, Hofmann voltameter",
+        "Hofmann 1866, three glass tubes, platinum electrodes, acidulated water",
+        "https://en.wikipedia.org/wiki/Hofmann_voltameter",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-16",
+        "Wikipedia, Beckmann thermometer",
+        "Beckmann 1905, scale about 5 C, hundredths of a degree",
+        "https://en.wikipedia.org/wiki/Beckmann_thermometer",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-17",
+        "Wikipedia, Platinum",
+        "Sickingen 1772, Achard crucible 1784, Chabaneau 1786, melting point 1768 C, Ulloa 1748",
+        "https://en.wikipedia.org/wiki/Platinum",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-18",
+        "Wikipedia, Filter paper",
+        "charta emporetica in the 1728 Cyclopaedia, pore sizes 2 to 25 micrometres, ash-free grades",
+        "https://en.wikipedia.org/wiki/Filter_paper",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-19",
+        "Wikipedia, Analytical balance",
+        "Black mid-18th century, 0.1 mg resolution",
+        "https://en.wikipedia.org/wiki/Analytical_balance",
+        "science",
+        "2026-10-29"
+      ],
+      [
+        "EQ-CHEM19-20",
+        "Wikipedia, Test tube",
+        "10 to 20 mm wide, 50 to 200 mm long, borosilicate or fused quartz",
+        "https://en.wikipedia.org/wiki/Test_tube",
+        "science",
+        "2026-10-29"
       ]
     ]
   }
