@@ -141,4 +141,20 @@ Nothing was downloaded.
 | EQ-MEAS-GAUGE | Science Museum Group: Everard gauger's slide rule; Antiques Trade Gazette; Slide Rule Museum paper on gauging | Everard 1683 or 1684, the 1689 rule, Isaac Carver, the 1643 excise, the two-slide 12 in stock | https://collection.sciencemuseumgroup.org.uk/objects/co60705/everard-gaugers-slide-rule | history | 2026-10-29 |
 | EQ-MEAS-BOYLE | Boyle, Experiments and Considerations Touching Colours (1664, Project Gutenberg 14504); Hungarian analytical-chemistry history article (real.mtak.hu) | Experiment XLIX, syrup of violets turned red by acids; Jordan 1631 and Witty 1660 as earlier users | https://www.gutenberg.org/ebooks/14504 | history | 2026-10-29 |
 | EQ-MEAS-PROOF | Wikipedia: Alcohol proof; Difford's Guide on navy strength; Chowhound; sub13.net | gunpowder test described, 100 proof about 57 percent, Sikes law 1816 or 1818, Clarke dates in conflict | https://en.wikipedia.org/wiki/Alcohol_proof | history | 2026-10-29 |
+| EQ-OPT-MICRO | Wikipedia: Microscope | Janssen 1590 claim, Drebbel 1619, Hooke 1665, Leeuwenhoek up to 300x, 1676 | https://en.wikipedia.org/wiki/Microscope | history | 2026-10-29 |
+| EQ-OPT-TELE | Wikipedia: Telescope | Lipperhey 1608 patent, Galileo 1609, Newton 1668, priority disputes | https://en.wikipedia.org/wiki/Telescope | history | 2026-10-29 |
+| EQ-OPT-BURN | Wikipedia: Burning glass | Archimedes legend, Buffon, Sakkas 1973 | https://en.wikipedia.org/wiki/Burning_glass | history | 2026-10-29 |
+| EQ-OPT-PRISM | Wikipedia: Prism (optics) | prism kinds, glass, deck prisms | https://en.wikipedia.org/wiki/Prism_(optics) | history | 2026-10-29 |
+| EQ-OPT-CAMOBS | Wikipedia: Camera obscura | Ibn al-Haytham, Della Porta, Kepler, Drebbel, Huygens 1622 | https://en.wikipedia.org/wiki/Camera_obscura | history | 2026-10-29 |
+| EQ-OPT-LANT | Wikipedia: Magic lantern | Huygens about 1659, Kircher 1645 and 1671, lamps, slides, Savoyards | https://en.wikipedia.org/wiki/Magic_lantern | history | 2026-10-29 |
+| EQ-PRES-PUMP | Wikipedia: Air pump | Guericke 1649 or 1650, Hooke 1658, Hauksbee | https://en.wikipedia.org/wiki/Air_pump | history | 2026-10-29 |
+| EQ-PRES-PAPIN | Wikipedia: Denis Papin | digester 1679, safety valve, Royal Society | https://en.wikipedia.org/wiki/Denis_Papin | history | 2026-10-29 |
+| EQ-PRES-HEMI | Wikipedia: Magdeburg hemispheres | 1654, 1656, 50 cm copper, horses | https://en.wikipedia.org/wiki/Magdeburg_hemispheres | history | 2026-10-29 |
+| EQ-PRES-BARO | Wikipedia: Barometer | Torricelli 1643 or 1644, 760 mmHg, Hooke 1668 | https://en.wikipedia.org/wiki/Barometer | history | 2026-10-29 |
+| EQ-PRES-BOYLE | Wikipedia: Boyle's law | J-tube 1662, Hooke built, Mariotte 1679 | https://en.wikipedia.org/wiki/Boyle%27s_law | history | 2026-10-29 |
+| EQ-PRES-BELL | Wikipedia: Diving bell | Aristotle, Lorena 1535, Bendall 1642, Treileben, Halley 1691 | https://en.wikipedia.org/wiki/Diving_bell | history | 2026-10-29 |
+| EQ-ELEC-GEN | Wikipedia: Electrostatic generator | Guericke sulphur globe 1663, Newton, Hauksbee about 1706 | https://en.wikipedia.org/wiki/Electrostatic_generator | history | 2026-10-29 |
+| EQ-METEO-HYGRO | Wikipedia: Hygrometer | Leonardo 1480, Saussure 1783, 10 percent accuracy | https://en.wikipedia.org/wiki/Hygrometer | history | 2026-10-29 |
+| EQ-METEO-RAIN | Wikipedia: Rain gauge | Korea 1441, Wren 1662, Towneley 1677 | https://en.wikipedia.org/wiki/Rain_gauge | history | 2026-10-29 |
+| EQ-METEO-ANEMO | Wikipedia: Anemometer | Alberti 1450, Hooke 1663, Robinson 1845 or 1846 | https://en.wikipedia.org/wiki/Anemometer | history | 2026-10-29 |
 <!-- /table -->
