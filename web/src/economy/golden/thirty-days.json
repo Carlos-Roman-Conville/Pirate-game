@@ -7598,8 +7598,9 @@
     "buildings": {
       "bldg.0001": {
         "builtOn": 0,
-        "condition": 0.57,
+        "condition": 0.6,
         "demolishedOn": null,
+        "exposure": "salt-wind",
         "fixtures": [],
         "footprint": {
           "h": 8,
@@ -7631,8 +7632,10 @@
       },
       "bldg.0002": {
         "builtOn": 0,
-        "condition": 0.57,
+        "condition": 0.6,
+        "decayClass": "palm-thatch",
         "demolishedOn": null,
+        "exposure": "salt-wind",
         "fixtures": [
           "shipyard",
           "forge"
@@ -7667,8 +7670,9 @@
       },
       "bldg.0003": {
         "builtOn": 0,
-        "condition": 0.57,
+        "condition": 0.6,
         "demolishedOn": null,
+        "exposure": "salt-wind",
         "fixtures": [],
         "footprint": {
           "h": 8,
@@ -7700,8 +7704,10 @@
       },
       "bldg.0004": {
         "builtOn": 0,
-        "condition": 0.57,
+        "condition": 0.6,
+        "decayClass": "palm-thatch",
         "demolishedOn": null,
+        "exposure": "salt-wind",
         "fixtures": [
           "brewhouse"
         ],
@@ -7735,8 +7741,10 @@
       },
       "bldg.0005": {
         "builtOn": 0,
-        "condition": 0.57,
+        "condition": 0.6,
+        "decayClass": "palm-thatch",
         "demolishedOn": null,
+        "exposure": "salt-wind",
         "fixtures": [
           "salting-house"
         ],
@@ -7770,8 +7778,10 @@
       },
       "bldg.0006": {
         "builtOn": 0,
-        "condition": 0.57,
+        "condition": 0.5860273972602753,
+        "decayClass": "palm-thatch",
         "demolishedOn": null,
+        "exposure": "sheltered",
         "fixtures": [],
         "footprint": {
           "h": 8,
@@ -7803,8 +7813,10 @@
       },
       "bldg.0007": {
         "builtOn": 0,
-        "condition": 0.57,
+        "condition": 0.6,
+        "decayClass": "palm-thatch",
         "demolishedOn": null,
+        "exposure": "salt-wind",
         "fixtures": [
           "surgeon-s-chest"
         ],
@@ -7838,8 +7850,9 @@
       },
       "bldg.0008": {
         "builtOn": 0,
-        "condition": 0.57,
+        "condition": 0.6,
         "demolishedOn": null,
+        "exposure": "salt-wind",
         "fixtures": [],
         "footprint": {
           "h": 8,
@@ -7871,8 +7884,9 @@
       },
       "bldg.0009": {
         "builtOn": 0,
-        "condition": 0.33999999999999997,
+        "condition": 0.4,
         "demolishedOn": null,
+        "exposure": "salt-wind",
         "fixtures": [],
         "footprint": {
           "h": 8,
@@ -7904,8 +7918,10 @@
       },
       "bldg.0010": {
         "builtOn": 0,
-        "condition": 0.57,
+        "condition": 0.6,
+        "decayClass": "palm-thatch",
         "demolishedOn": null,
+        "exposure": "salt-wind",
         "fixtures": [
           "laboratory"
         ],
@@ -7939,8 +7955,10 @@
       },
       "bldg.0011": {
         "builtOn": 0,
-        "condition": 0.57,
+        "condition": 0.5860273972602753,
+        "decayClass": "palm-thatch",
         "demolishedOn": null,
+        "exposure": "sheltered",
         "fixtures": [],
         "footprint": {
           "h": 8,
@@ -7972,8 +7990,10 @@
       },
       "bldg.0012": {
         "builtOn": 0,
-        "condition": 0.57,
+        "condition": 0.6,
+        "decayClass": "palm-thatch",
         "demolishedOn": null,
+        "exposure": "salt-wind",
         "fixtures": [],
         "footprint": {
           "h": 8,
@@ -8005,8 +8025,9 @@
       },
       "bldg.0013": {
         "builtOn": 0,
-        "condition": 0.57,
+        "condition": 0.6,
         "demolishedOn": null,
+        "exposure": "salt-wind",
         "fixtures": [],
         "footprint": {
           "h": 8,
@@ -8038,8 +8059,9 @@
       },
       "bldg.0014": {
         "builtOn": 0,
-        "condition": 0.23999999999999994,
+        "condition": 0.3,
         "demolishedOn": null,
+        "exposure": "salt-wind",
         "fixtures": [],
         "footprint": {
           "h": 8,
@@ -8071,8 +8093,10 @@
       },
       "bldg.0015": {
         "builtOn": 0,
-        "condition": 0.57,
+        "condition": 0.6,
+        "decayClass": "palm-thatch",
         "demolishedOn": null,
+        "exposure": "salt-wind",
         "fixtures": [],
         "footprint": {
           "h": 8,

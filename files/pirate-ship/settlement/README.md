@@ -39,3 +39,5 @@ Classed port buildings will not decay either until the `salt-wind` exposure fact
 (flagged by the registry keeper). Next: material classes for the starting buildings, from the town keeper's TWN
 research; classes the sources leave empty go to Rex.
 
+**2026-10-30, unit 2651:** `start.json` now carries `decayClass` and `exposure` per building from `STARTING_TOWN.md` Q1b; only the farmhouse and the ESTP's hut (palm-thatch, sheltered) decay, test V-D2.
+

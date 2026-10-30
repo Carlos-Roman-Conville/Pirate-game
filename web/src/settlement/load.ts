@@ -14,7 +14,7 @@ interface StartPlace {
   holder: string
   class: string
   transferable: Transferable
-  building?: { fixtures: string[]; rooms?: { id: string; name: string; use: string }[]; condition?: number }
+  building?: { fixtures: string[]; rooms?: { id: string; name: string; use: string }[]; condition?: number; decayClass?: string | null; exposure?: string }
   business?: { kind: string; operator: string; publicWorks?: boolean; lease?: { rent: number } }
   office?: { name: string; powers: string[] }
 }
@@ -50,7 +50,8 @@ export function loadPort(providers: Providers = stubProviders(), config: Settlem
     if (entry.building) {
       const footprint = { x: i * (size + gap) + 1, y: 1, w: size - 2, h: size - 2 }
       const rooms: Room[] = (entry.building.rooms ?? [{ id: 'main', name: 'main', use: 'any' }]).map((room) => ({ ...room, tiles: footprint }))
-      const bldg = runner.run<string>({ type: 'addBuilding', parcel, footprint, condition: entry.building.condition ?? 0.6, rooms, fixtures: entry.building.fixtures })
+      const bldg = runner.run<string>({ type: 'addBuilding', parcel, footprint, condition: entry.building.condition ?? 0.6, rooms,
+        decayClass: entry.building.decayClass ?? undefined, exposure: entry.building.exposure, fixtures: entry.building.fixtures })
       binding.buildings.push(bldg)
       if (entry.holder !== 'none') {
         binding.titles.push(runner.run<string>({ type: 'grantTitle', subject: bldg, holder: entry.holder, class: entry.class, transferable: entry.transferable }))

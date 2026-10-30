@@ -1,7 +1,7 @@
 // TESTS.md T0, T1, A1, A2: the settlement engine beside the alignment engine, which it never touches.
 import { describe, expect, it } from 'vitest'
 import institutions from '../../../data/pirate-ship/alignment/institutions.json'
-import { hasFixture, holderOf, ledger, stubProviders, type Command as SettlementCommand } from '@rex/settlement'
+import { defaultConfig, hasFixture, holderOf, ledger, stubProviders, unvalidatedDecay, type Command as SettlementCommand } from '@rex/settlement'
 import { ending, initialState, loadAlignmentConfig, loadStarts, reduce, townPosition, type AlignmentState, type Command } from '../alignment'
 import { currentCommand } from '../alignment/sim/scenario'
 import { random } from '../alignment/sim/strategies'
@@ -181,5 +181,22 @@ describe('A2 a transfer reaches the story without touching alignment', () => {
     expect(() => port.runner.run({ type: 'sell', title: church.titles[1], buyer: 'player', price: 1 })).toThrow(/not for sale/)
     expect(port.runner.state.ledger.length).toBe(rows)
     expect(fold(port.events(), port.bindings).filter((hook) => hook.place === 'port.church')).toHaveLength(0)
+  })
+})
+
+describe('V-D2 only sourced classes decay', () => {
+  it('the engine lists the places Q1b leaves null or salt-wind, and over 365 ticks only the numbered class in a numbered exposure loses condition', () => {
+    const port = loadPort(providers())
+    const pending = unvalidatedDecay(port.runner.state, defaultConfig()).map((row) => placeOf(port.bindings, row.bldg)).sort()
+    expect(pending).toEqual(['port.docks', 'port.market', 'port.tavern', 'port.bakery', 'port.shipyard', 'port.clinic', 'port.church', 'port.warehouse',
+      'port.apothecary', 'port.townhall', 'port.fort', 'port.infp_house', 'port.soldier_house'].sort())
+    const before = new Map(Object.entries(port.bindings).filter(([, binding]) => binding.buildings.length > 0)
+      .map(([place, binding]) => [place, port.runner.state.buildings[binding.buildings[0]].condition] as const))
+    for (let day = 0; day < 365; day++) port.runner.tick()
+    for (const [place, condition] of before) {
+      const now = port.runner.state.buildings[port.bindings[place].buildings[0]].condition
+      if (place === 'port.farm' || place === 'port.estp_hut') expect(now, place).toBeLessThan(condition)
+      else expect(now, place).toBe(condition)
+    }
   })
 })
