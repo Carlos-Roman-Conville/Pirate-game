@@ -134,7 +134,7 @@ condition, kept).
   fifteen people without fifteen storylines. This ties population, employment, wages, food demand and growth.
 - **(proposed)** The next decision is the map scale; it determines buildings, parcels, roads, interiors and expansion.
 
-### 6a. Approved by paste (Rex, 2026-10-29, by pasting ChatGPT's approvals without comment; correct me if any is not yours)
+### 6a. Approved (Rex, 2026-10-29: "the architectural decisions recorded in FACILITIES.md §6a are approved as my direction")
 
 | Decision | Approved form | Mark |
 |---|---|---|
@@ -150,8 +150,11 @@ condition, kept).
 
 The backend design set lives in `E:/AI Programs/Toolchain/settlement/` (own repo: `SCOPE.md`, `DEPENDENCIES.md`,
 `PACKAGES.md`, `MIGRATION.md` (12 steps), `TESTS.md` (acceptance test A1), `QUESTIONS.md` (14 for Rex)); the
-pirate repo's pointer is [`../settlement/README.md`](../settlement/README.md). Code waits on Rex's approval of the
-plan. §7 below is the first sketch it started from and is superseded where the two differ.
+pirate repo's pointer is [`../settlement/README.md`](../settlement/README.md). **Rex approved implementation on 2026-10-29:** the foundation per `PACKAGES.md` and `MIGRATION.md` with the existing
+test specs; no invented answers to the fourteen questions (configurable rules or explicit placeholders instead); the
+current town and alignment systems preserved, the backend introduced through adapters; the engine independent of
+pirate-ship with stable interfaces for the economy and realism engines; after the foundation passes, a report of
+which questions block the next phase. The settlement session is building it. §7 below is the first sketch it started from and is superseded where the two differ.
 
 ## 7. The parcel and property system, first design (proposed; keeper's shape on the resolutions above)
 
@@ -193,3 +196,4 @@ Records, each with a stable id, in the `UPGRADES.md` style:
 | 2026-10-29 | File created: ChatGPT's facility / property / workforce proposal (pasted by Rex) laid against an audit of the economy data, the duties, the dock tilemap and the slot model; eleven collisions; seven questions for Rex. Nothing adopted | proposed |
 | 2026-10-29 | §6 six resolutions (ownership ≠ control is Rex's direction; the rest proposed); §7 parcel / building / title / business / arrangement / authority records (proposed); §8 open. Implementation not authorised until map scale and ownership rules are approved | Rex (ownership); proposed |
 | 2026-10-29 | §6a: the five resolutions, the alignment refinement (owner/manager change never moves an institution's alignment), separate ids, ghosts kept apart, and the settlement-backend shift approved by Rex via paste; design set in Toolchain/settlement (pointer ../settlement/README.md) | Rex (via paste) |
+| 2026-10-29 | Rex approved §6a as his direction and the implementation of the settlement engine foundation in Toolchain/settlement (adapters, placeholders for the 14 open questions, acceptance test A1); forwarded to the settlement session | Rex |
