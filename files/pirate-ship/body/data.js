@@ -19234,6 +19234,62 @@ window.BODY_DATA = {
      "https://epicsysinc.com/blog/vacuum-pumps/; https://www.leybold.com/en/about-us/our-founders/",
      "science",
      "2026-10-29"
+    ],
+    [
+     "ENG-CP",
+     "Engineering ToolBox, specific heat of common substances",
+     "c_p: water 4186, air 1005, copper 385, glass 840, iron 450 J/(kg K)",
+     "https://www.engineeringtoolbox.com/specific-heat-capacity-d_391.html",
+     "science",
+     "standard reference; not opened"
+    ],
+    [
+     "ENG-LAT",
+     "Engineering ToolBox, water heat of vaporisation vs temperature",
+     "L about 2501 kJ/kg at 0 C, 2257 at 100 C; linear fit 2501 - 2.37 T; sweat about 2.43 MJ/kg at skin temperature",
+     "https://www.engineeringtoolbox.com/water-properties-d_1573.html",
+     "science",
+     "standard reference; not opened"
+    ],
+    [
+     "ENG-ANT",
+     "NIST Chemistry WebBook, water, Antoine parameters (Bridgeman and Aldrich / Stull fits)",
+     "log10 p(mmHg) = 8.07131 - 1730.63/(233.426 + T), 1 to 100 C; boiling 100.0 C at 760 mmHg",
+     "https://webbook.nist.gov/cgi/cbook.cgi?ID=C7732185&Mask=4",
+     "science",
+     "standard reference; not opened"
+    ],
+    [
+     "ENG-HHV",
+     "Engineering ToolBox, higher calorific values of fuels",
+     "charcoal about 30 MJ/kg; dry wood 16; ethanol 26.8; carbon monoxide 10.1 MJ/kg",
+     "https://www.engineeringtoolbox.com/fuels-higher-calorific-values-d_169.html",
+     "science",
+     "standard reference; not opened"
+    ],
+    [
+     "ENG-STOICH",
+     "Molar masses (IUPAC) and the combustion equations C + O2 -> CO2, 2C + O2 -> 2CO",
+     "1 kg C needs 2.667 kg O2 and makes 3.667 kg CO2; starved, 1.333 kg O2 and 2.333 kg CO",
+     "https://iupac.qmul.ac.uk/AtWt/",
+     "science",
+     "standard reference; not opened"
+    ],
+    [
+     "ENG-HT",
+     "Engineering ToolBox, convective heat transfer coefficients",
+     "free convection in air about 5 to 25 W/(m2 K); boiling water to metal 500 to 10,000; the engine's U = 500 and h = 10 are first-build placeholders inside these ranges",
+     "https://www.engineeringtoolbox.com/convective-heat-transfer-d_430.html",
+     "science",
+     "standard reference; not opened"
+    ],
+    [
+     "ENG-GAS",
+     "NIST CODATA, molar gas constant",
+     "R = 8.314 J/(mol K); ideal gas pV = nRT; air molar mass 0.029 kg/mol",
+     "https://physics.nist.gov/cgi-bin/cuu/Value?r",
+     "science",
+     "standard reference; not opened"
     ]
    ]
   }

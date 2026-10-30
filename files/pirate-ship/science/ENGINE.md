@@ -97,6 +97,25 @@ boiling lower. It fails loudly through the trace if any process does not balance
 2. How the game imports it (local package, path alias, submodule).
 3. Which worker builds the rest (Codex for the solver and the grid; Composer for data wiring and tests).
 
+## 5. Built (2026-10-29): the first operational build
+
+The package lives at `E:/AI Programs/Toolchain/realism/` (its own git repository, `@rex/realism`, plain
+TypeScript, vitest). It holds the five services of §1 and the still-in-a-room scenario of §3
+(`src/lab/still.ts`), with every formula in `src/physics.ts` citing its ENG- source key. `npm test` runs
+12 checks and all pass: boiling at 100.0 °C at sea level and 92.5 °C at 2,256 m; distillate bounded by the
+net heat over the latent heat; the vessel's energy balance (sensible, latent, losses, the heat the vapour
+carries out) within 2 %; water and charcoal conserved on every one of the 14,400 steps with the trace
+naming every transfer; the room's oxygen falling and CO₂ rising from the fire, carbon monoxide when
+starved; the distiller sweating by PHYSIOLOGY.md §4's rate; a thermometer 60 days from calibration
+misreading while the physics runs on the true temperature; a novice's unsteady feed burning more charcoal
+per kilogram than a master's; wear on the hot vessel. A two-hour sea-level run at skill 60 (read with
+`npm run lab -- 0 60`): first boil at 30 min, 2.12 kg of distillate from 0.79 kg of charcoal, the room at
+60 °C and 10,900 ppm CO₂ with the door open, the distiller 3.2 % down on water. **[model]** Named
+simplifications of this build, each replaceable without touching the services: lumped temperatures,
+explicit one-second steps, no evaporation below the boiling point, instantaneous vapour transport, a room
+with no walls to soak up heat (so it runs hot), U and h placeholders inside the real ranges (ENG-HT), and
+the body as one lumped mass. Nothing in it is a game rule. **(proposed)**
+
 ## Sources
 
 `../SOURCES.md` keys ENG-*: standard thermodynamic constants (NIST Chemistry WebBook for Antoine
