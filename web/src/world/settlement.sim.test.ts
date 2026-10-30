@@ -71,9 +71,9 @@ describe('Port Royal settlement, thirty days', () => {
     const circadian = libraryTable('physiology', 'circadian').map(r => Number(r.Factor))
     const fatRule = libraryTable('nutrition', 'body_composition').find(r => r.id === 'nutrition.body_composition.fat-mass')!
     const fatFloor = Number(/floor ([\d.]+) kg/.exec(String(fatRule.Rule))![1])
-    const state = new Map<string, { fatigue: number; debt: number; kcal: number }>()
+    const state = new Map<string, { fatigue: number; debt: number; kcal: number; waterKg: number }>()
     for (const day of result.days) for (const person of day.people) {
-      const previous = state.get(person.slug) ?? { fatigue: 0, debt: 0, kcal: 0 }
+      const previous = state.get(person.slug) ?? { fatigue: 0, debt: 0, kcal: 0, waterKg: 0 }
       const plan = settlementPlan(person.occupation, person.sleepH < f.sleepToH)
       const metHours = plan.reduce((n, b) => n + (b.toH - b.fromH + 24) % 24 * metOf(activityOf(b.duty)), 0)
       const next = overnight(previous.debt, previous.fatigue + metHours, person.sleepH)
@@ -94,8 +94,11 @@ describe('Port Royal settlement, thirty days', () => {
       const energyRow = libraryTable('nutrition', 'nutrients').find(r => r.id === 'energy')!
       const glycogenKcal = Number(/glycogen about [\d,]+ g = ([\d,]+) kcal/.exec(String(energyRow['Body reserve (full)']))![1]!.replaceAll(',', ''))
       const kcal = previous.kcal + person.energy.inKcal
-      expect(person.ranges.mass_kg!.max).toBeLessThanOrEqual(fixturePhysique.massKg + (kcal + glycogenKcal) / fatKcalPerKg() + 1e-8)
-      state.set(person.slug, { fatigue: next.fatigueMetH, debt: next.debtH, kcal })
+      // Water drunk and eaten enters body mass the moment it is taken in (one body-water ledger), so the day's peak can
+      // carry all the water taken in up to that day, read from the run's own water ledger, not a constant (2686).
+      const waterKg = previous.waterKg + person.water.inKg
+      expect(person.ranges.mass_kg!.max).toBeLessThanOrEqual(fixturePhysique.massKg + (kcal + glycogenKcal) / fatKcalPerKg() + waterKg + 1e-8)
+      state.set(person.slug, { fatigue: next.fatigueMetH, debt: next.debtH, kcal, waterKg })
     }
   })
 
