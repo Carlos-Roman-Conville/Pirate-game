@@ -10,6 +10,7 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
 - Alignment (PLAN 11-15, spec `balance/ALIGNMENT.md`): `web/src/alignment/` reduces a command log. No UI uses it yet.
   Simulator: `cd web && npx vitest run src/alignment/sim`. ghostRule decided: every-pair-both-improve (Rex, 2481).
   Gates and conditions: `data/pirate-ship/alignment/gates.json`, `conditions.json`.
+  INTP, ESTP, ESFP and ISFJ are story-gated; the farm and the butcher shop need `supply bodies`.
 - Equipment catalogue (`body/data/equipment.json`, about 313 items) is researched and reconciled; see
   `science/SCIENTIFIC_EQUIPMENT.md`. Build: `python body/build-body-data.py` (0 validation problems). Open: navigation has no
   GOODS 3c skill; `tools_gunsmith` (`EQ-MET-19`) has no 1650-1730 source, `searched:` until a readable Roxburghe Holme or
@@ -41,11 +42,13 @@ Rex's to decide (not tasks):
   two simultaneous winners-only transformations; the no-previous diagonal tie.
 - Pull-in fairness numbers (FISHING.md stage 7) and the game's real name.
 - Wound bleed rates by kind (F-MD-3/8), a water supply (F-CH-9), fate rules for a crisis (F-MD-7).
-- `desktop:` fishing replay checks and progress-page edits live outside this repo.
+- `desktop:` fishing replay checks: HUD at zoom 2+, the snapping line, the bite sound, the phone-size screen.
+  Progress-page edits live outside this repo.
 
 ## Gotchas
 
-- The alignment engine is TypeScript under `web/src/alignment/`, not `engine/`.
+- The alignment engine is TypeScript under `web/src/alignment/`, not `engine/`; `endings.json` sits there, not in `data/`.
+- The diagonal tie cannot happen from today's starts.
 - The folder is `Games/RPG's/pirate-ship`: the apostrophe breaks unquoted Git Bash paths.
 - Every game's server is `Archive.Server.exe`: stop yours by path or preview_stop, never by name (ISSUES I-073).
 - Phaser 4.2.1 and vitest 5 are in the npm cache: `npm install --offline`.
