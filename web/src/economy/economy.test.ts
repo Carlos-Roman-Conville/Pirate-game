@@ -1,40 +1,11 @@
-// Toolchain/economy/TESTS.md I1 and I2: the economy engine behind the settlement engine's providers, in the pirate
-// port, with the alignment engine untouched (the settlement tests hold that guard). Every number here is a fixture:
-// recipe quantities, market numbers, wages and stock are not game data yet (GOODS.md "Open for Rex", Settlement Q10).
+// Toolchain/economy/TESTS.md I1, I1b and I2: the economy engine behind the settlement engine's providers, in the
+// pirate port, with the alignment engine untouched (the settlement tests hold that guard). The setup and the
+// thirty-day run are in ./fixture.ts, shared with the golden capture.
 import { describe, expect, it } from 'vitest'
-import { Runner as EconomyRunner, accounts, defaultConfig as economyDefaults, marketStock, producedLast, stubProviders as economyStubs, totalUnits, type EconomyConfig } from '@rex/economy'
-import { balanceOf, ledger, stubProviders as settlementStubs, totalMoney, type StubLabour } from '@rex/settlement'
-import { loadPort } from '../settlement'
-import { Aliases, economyProvidersOver, loadEconomy, runDay, settlementProvidersOver, settlementReader, type RecipeQuantities } from './index'
-
-/** Fixture quantities for the two recipes the butcher shop runs (the data has none yet). */
-const QUANTITIES: RecipeQuantities = {
-  'butchering-fresh-meat': { yield: 1, inputs: {}, inputsAny: [1], byproducts: { 'raw-hides': 0.2, tallow: 0.1 }, rates: { unitsPerFixtureDay: 10, labourPerUnit: 0.25 } },
-  'preserving-salt-fish': { yield: 1, inputs: { 'fresh-fish': 1, salt: 0.5 }, rates: { unitsPerFixtureDay: 8, labourPerUnit: 0.25 } },
-}
-
-function world(config: EconomyConfig = economyDefaults()) {
-  const econStubs = economyStubs()
-  const economy = loadEconomy(QUANTITIES, { providers: econStubs, config })
-  const loaded = structuredClone(economy.runner.state)
-  const aliases = new Aliases(economy.runner, economy.marketId)
-  const base = settlementStubs()
-  base.labour.pools['pool.housing'] = 5
-  const port = loadPort(settlementProvidersOver(economy.runner, aliases, economy.marketId, base))
-  economy.runner.providers = economyProvidersOver(port.runner, econStubs)
-  const reader = settlementReader(port.runner)
-  // the butcher shop: two lines, one butcher, a purse; its inputs land in the economy inventory behind its ref
-  const shop = port.bindings['port.bakery']
-  const biz = shop.businesses[0]
-  const r = port.runner
-  r.run({ type: 'setLines', biz, lines: [{ recipe: 'butchering-fresh-meat', equipment: [] }, { recipe: 'preserving-salt-fish', equipment: [] }] })
-  const post = r.run<string>({ type: 'addPost', biz, role: 'butcher', wage: 2 })
-  r.run({ type: 'hire', post, holder: 'esfp-f' })
-  r.run({ type: 'credit', holder: biz, amount: 100 })
-  const inv = aliases.resolve(r.state.businesses[biz].inventory, biz)
-  for (const [good, units] of [['cattle-and-hogs', 50], ['fresh-fish', 50], ['salt', 50]] as const) economy.runner.run({ type: 'addStock', inventory: inv, good, units })
-  return { economy, loaded, aliases, port, reader, biz, inv, econStubs }
-}
+import { Runner as EconomyRunner, accounts, marketStock, producedLast, stubProviders as economyStubs, totalUnits } from '@rex/economy'
+import { balanceOf, ledger, totalMoney, type StubLabour } from '@rex/settlement'
+import { thirtyDays, world } from './fixture'
+import { runDay } from './index'
 
 describe('I1 the port\'s butcher produces into an economy inventory through the material provider', () => {
   it('one settlement day: Q is Settlement\'s, the stock move is the economy\'s, and both agree', () => {
@@ -101,32 +72,19 @@ describe('I1b a project draws from its own inventory through the aliases (CONTRA
 
 describe('I2 thirty autonomous days of the port with both engines', () => {
   it('every day: days aligned, no negative stock, money conserved, prices finite, production agreed; the whole run replays', () => {
-    const config: EconomyConfig = { ...economyDefaults(), priceRule: { kind: 'shortage-linear', low: 0.7, high: 3 } }   // a fixture curve, not Rex's
-    const { economy, loaded, port, reader, biz, inv } = world(config)
-    const e = economy.runner
-    const s = port.runner
-    e.run({ type: 'setMarketGood', market: 'stl.port', good: 'fresh-meat', consumptionPerDay: 3, targetReserve: 20, basePrice: 2 })
-    e.run({ type: 'setMarketGood', market: 'stl.port', good: 'salt-fish', consumptionPerDay: 2, targetReserve: 10, basePrice: 3 })
-    s.run({ type: 'credit', holder: 'stl.port', amount: 1000 })                                 // the market's purse
-    const moneyAtStart = totalMoney(s.state)
-    const meatAtStart = totalUnits(e.state, 'cattle-and-hogs') + totalUnits(e.state, 'fresh-meat')
-    let soldDays = 0
-    for (let n = 0; n < 30; n++) {
-      // the host's policy (a fixture): the shop sells yesterday's finished goods to the market before the day begins
-      for (const good of ['fresh-meat', 'salt-fish']) {
-        const units = e.state.inventories[inv].stock[good] ?? 0
-        if (units > 0) { e.run({ type: 'sell', inventory: inv, good, units }); soldDays++ }
-      }
-      const day = runDay(s, e)
+    const run = thirtyDays((n, day, w) => {
+      const e = w.economy.runner
+      const s = w.port.runner
       expect(day).toBe(n)
       expect(e.state.day).toBe(s.state.settlement.day)
       for (const entry of Object.values(e.state.inventories)) for (const units of Object.values(entry.stock)) expect(units).toBeGreaterThan(0)
-      expect(totalMoney(s.state)).toBeCloseTo(moneyAtStart)
+      expect(totalMoney(s.state)).toBeCloseTo(w.moneyAtStart)
       for (const good of Object.values(e.state.markets['stl.port'].goods)) if (good.price !== null) expect(Number.isFinite(good.price)).toBe(true)
-      const lines = reader.production(biz, day)!
+      const lines = w.reader.production(w.biz, day)!
       expect(producedLast(e.state, 'stl.port', 'fresh-meat')).toBe(lines[0].q)
       expect(producedLast(e.state, 'stl.port', 'salt-fish')).toBe(lines[1].q)
-    }
+    })
+    const { e, s, biz, inv, loaded, meatAtStart, soldDays } = run
     expect(soldDays).toBeGreaterThan(10)
     // the inputs ran out part way: the shop is staffed but no longer producing, and said so through a status change
     expect(s.state.businesses[biz].status).toBe('staffed')
