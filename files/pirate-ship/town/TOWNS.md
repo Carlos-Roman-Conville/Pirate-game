@@ -52,6 +52,35 @@ town, its name changes here but its id does not.
 | | Ports between | | open |
 | | The true pirate port | top | Rex (that it exists); everything else open |
 
+## Locales beyond the towns (Rex, 2026-10-29)
+
+Rex's words: the town scope and the number of towns are updated (the balance keeper's run-downs, `../balance/
+ALIGNMENT.md` §10, still **pending** here until Rex says go); he still has to add **underwater locations, a few
+dungeons and minor locales**, and "do some slight balancing". A dungeon "could count as a pirate's cove or some other
+hiding place of a great boss". A **kraken boss** is likely. Everything should draw on **the Caribbean legends and
+myths** so it feels like an authentic pirate game, not hyper-realistic. Gaps may be filled by **procedural
+generation, but most locales are authored**. Creatures, bosses and enemy classes are the bestiary keeper's
+([`../bestiary/`](../bestiary/), started 2026-10-29); the journal that tags every item and creature by era is
+[`../science/JOURNAL.md`](../science/JOURNAL.md).
+
+### Locale inventory, for balancing (shape proposed; counts Rex's where marked)
+
+| Kind | Named so far | Count | Develops (four alignment forms, counts toward `port.align`)? | Mark |
+|---|---|---|---|---|
+| Town locales | twelve (church, clinic, farm, butcher shop, wilderness, shipyard, commerce, brothel, town hall, tavern, docks, fort) | 12 | yes for the nine sectors; docks, tavern, fort open | Rex (via the balance keeper, pending) |
+| Towns | the start port, the next town over, ports between, the true pirate port | ≥ 4 | per town, open | Rex |
+| Underwater locations | none yet | open | open (a kraken's lair is a dungeon, not a town) | Rex (kind) |
+| Dungeons: a pirate's cove, a great boss's hiding place | the kraken's (likely) | "a few" | no: cleared, not developed (proposed) | Rex (kind, count); the rest proposed |
+| Minor locales | none yet | open | no (proposed) | Rex (kind) |
+| Regions to liberate (Act II) | open; the world map is coming from Rex | open | per region, like the port's slots (pending) | Rex (via the balance keeper, pending) |
+
+- **(proposed)** A locale is one of three things for the engine: a **settlement** (develops, has reputation groups and
+  slots), a **dungeon** (a boss, a clear state, maybe a respawn), or a **minor locale** (a landmark, a resource or a
+  scene; no slots). Underwater is a setting any of the three can have, not a fourth kind.
+- **(open, Rex's)** How many underwater locations, dungeons and minor locales; which legends each draws on; whether
+  a cleared dungeon can become a settlement or a hideout of yours; what procedural generation fills (minor locales
+  only, or dungeon layouts too).
+
 ## `port`: the starting port
 
 **Name:** (open). **Always the same port** in every game, the game's Pelican Town (Rex, §4a).
@@ -205,3 +234,4 @@ they are in town.
 | 2026-10-28 | The ghost rule covers every competing pair, not only food (`UPGRADES.md`, Sectors) | Rex |
 | 2026-10-28 | Withdrawn by Rex: the ghost rule for every pair (open again). Goal: a perfectly working town is reachable through a complicated set of choices; you can't recruit everyone | Rex |
 | 2026-10-28 | The town's alignment comes from its developed institutions; nine endings; perfect = every relevant institution in one alignment; institutions transform overnight after their owner returns (`ENDINGS.md`, `UPGRADES.md`) | Rex |
+| 2026-10-29 | Locales beyond the towns: underwater locations, a few dungeons (a pirate's cove, a great boss's hiding place; a kraken boss likely), minor locales; Caribbean legends and myths; mostly authored, procedural fills gaps; locale inventory table (shape proposed); bestiary keeper started | Rex |
