@@ -7632,7 +7632,7 @@ window.BODY_DATA = {
      "rare: gunsmiths in ports; a ship's gunner mends only simple faults",
      "low",
      "low",
-     "proposed (researched 2026-10-29; EQ-MET-9) reconciled 2026-10-29; searched: Moxon, Colonial Williamsburg, Royal Armouries and English gunmaker histories, probate inventories; Holme 1688 and Diderot not yet read; no source covers 1650-1730 (EQ-MET-19)"
+     "searched: researched 2026-10-29 (EQ-MET-9), reconciled 2026-10-29; searched: Moxon, Colonial Williamsburg, Royal Armouries and English gunmaker histories, probate inventories, Holme 1688 metal workers chapter (no gunsmith), Diderot Arquebusier (catalogue records only); no source covers 1650-1730 (EQ-MET-19)"
     ],
     [
      "glasshouse",
@@ -21991,7 +21991,7 @@ window.BODY_DATA = {
     ],
     [
      "EQ-MET-19",
-     "Searched 2026-10-29, nothing covers 1650-1730: (1) gunsmith tools 17th c. with Moxon, Mechanick Exercises (joiner, smith, turner and carpenter tools, no gunmaking); (2) Colonial Williamsburg gunsmith shop (18th-c. reconstruction; only date before 1730 is John Brush's shop of 1717, American Rifleman article, no tool list for the period); (3) Royal Armouries and English gunmakers (Bailey and Nie, Blackmore: trade history, no tools; PDF unreadable); (4) 17th-c. gunmaker probate inventories (none found); (5) Colonial Williamsburg 'Tools of the Trades' (403); (6) Randle Holme, The Academy of Armory (1688), book III on trades and their tools, and the Diderot Encyclopedie 'Arquebusier' plates (1751-72, after the period, a note only): web access was denied this session, so neither was read and neither is cited",
+     "Searched 2026-10-29, nothing covers 1650-1730: (1) gunsmith tools 17th c. with Moxon, Mechanick Exercises (joiner, smith, turner and carpenter tools, no gunmaking); (2) Colonial Williamsburg gunsmith shop (18th-c. reconstruction; only date before 1730 is John Brush's shop of 1717, American Rifleman article, no tool list for the period); (3) Royal Armouries and English gunmakers (Bailey and Nie, Blackmore: trade history, no tools; PDF unreadable); (4) 17th-c. gunmaker probate inventories (none found); (5) Colonial Williamsburg 'Tools of the Trades' (403); (6) Randle Holme, The Academy of Armory (1688), book III: read the Metal Workers chapter (book III ch. 7, rholme.taths.org.uk transcription): it lists hammer, pincers, anvil, keys and household locks and names no gunsmith or firearm; a search of the transcription found no gunsmith page, and the 1688 printing stops at book III ch. 13, the rest being printed in 1905. Diderot Encyclopedie 'Arquebusier' (one double and five single plates, 1751-72, after the period, a note only): seen only in library and dealer catalogue records (the American Revolution Institute record returned 403), the plates were not opened, so no tool list is taken from them",
      "no source found for gunsmith's tools in 1650-1730; later or reconstructed shops show a forge, anvil, vise, hand files, a flywheel boring bench and a rifling machine",
      "https://www.americanrifleman.org/content/making-the-american-rifle-at-colonial-williamsburg/",
      "searched",

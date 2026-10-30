@@ -262,7 +262,7 @@ def validate(data, lib=None):
             for r in t["rows"]:
                 if len(r) != n:
                     print(f"  {f}.{k}: row {str(r[0])[:40]!r} has {len(r)} cells, expected {n}", file=sys.stderr); bad += 1
-                if mi >= 0 and not any(str(r[mi]).lower().startswith(w) for w in ("rex", "proposed", "open", "history", "model", "science")):
+                if mi >= 0 and not any(str(r[mi]).lower().startswith(w) for w in ("rex", "proposed", "open", "history", "model", "science", "searched")):
                     print(f"  {f}.{k}: row {str(r[0])[:40]!r} mark {r[mi]!r} not rex/proposed/open", file=sys.stderr); bad += 1
                 if f.startswith("library/"):
                     if t["columns"][0] not in ("id", "Key") or r[0] in ids:
