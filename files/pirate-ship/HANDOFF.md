@@ -12,7 +12,7 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
   Gates and conditions: `data/pirate-ship/alignment/gates.json`, `conditions.json`.
   INTP, ESTP, ESFP and ISFJ are story-gated; the farm and the butcher shop need `supply bodies`.
 - Equipment catalogue (`body/data/equipment.json`, about 313 items) is researched and reconciled; see
-  `science/SCIENTIFIC_EQUIPMENT.md`. Build: `python body/build-body-data.py` (0 validation problems). Open: navigation has no
+  `science/SCIENTIFIC_EQUIPMENT.md`. Build: `python body/build-body-data.py` (0 validation problems; `--check` writes nothing). Open: navigation has no
   GOODS 3c skill; `tools_gunsmith` (`EQ-MET-19`) has no 1650-1730 source, `searched:` until a readable Roxburghe Holme or
   Diderot plate is found.
 - Realism engine `@rex/realism` at `E:/AI Programs/Toolchain/realism`, outside this repo; the game's data files hold id plus
