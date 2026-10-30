@@ -131,6 +131,15 @@ the game shows and journals; `galleyStill.test.ts` proves it inside the game (bo
 dashboard's Simulation Laboratory will consume a browser bundle of the same package (belt task to follow
 once 2507 to 2509 land). **[model]**
 
+### 5b. Three layers, one home for every number **(Rex, 2026-10-29)**
+
+Rex (relayed from ChatGPT, 2026-10-29): the engine must be completely independent of pirate-ship, not
+merely imported; universal mechanisms and reference data separate from pirate content. The audit and the
+migration plan are `Toolchain/realism/MIGRATION.md`: three layers (universal engine, scientific data
+library, the game), a table-by-table dependency map of the 18 data files (the split is by column, keyed by
+id, never a file move), what stays game-specific by name, and seven phases, of which only one touches the
+game's data and does so once by a reviewed script. Nothing has moved yet; all tests pass. **[model]**
+
 ## Sources
 
 `../SOURCES.md` keys ENG-*: standard thermodynamic constants (NIST Chemistry WebBook for Antoine
