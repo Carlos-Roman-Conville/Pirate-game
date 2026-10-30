@@ -1,0 +1,2421 @@
+{
+  "_about": "Built from ENTRIES.md by build-bestiary.py; edit the table, not this file. Every entry is proposed unless status is 'Rex'. Labels are JOURNAL.md's eight.",
+  "entries": [
+    {
+      "id": "kraken",
+      "name": "The Kraken",
+      "kind": "creature",
+      "section": "A. Rex's named items",
+      "class": "colossal, cephalopod+aquatic/boss",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Norse and Scandinavian sailor lore; first full description Pontoppidan 1752, older tales behind it; the real animal behind it is the giant squid (*Architeuthis*)",
+      "home": "its lair: an underwater dungeon or a sea lane (open)",
+      "faction": null,
+      "role": "boss",
+      "status": "Rex",
+      "status_detail": "Rex (the boss, 2026-10-29); everything else proposed",
+      "source": "MAGNUS. Hooks (proposed): harpoons and the ship's guns for the arms; a severed arm regrows between phases; whale oil or a bait cask lures it to one side of the ship"
+    },
+    {
+      "id": "opia",
+      "name": "Opía (hupia), spirit of the dead",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "spectral/ambusher",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Taíno (Pané c. 1498): the dead leave Coaybay at night to eat guava and lie with the living; told from the living by having no navel",
+      "home": "guava groves and old cemetery grounds at night; bats are their form",
+      "faction": "ghost-fleet (if any)",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "PANE. Hook: check the navel (a Perception test) before trusting a stranger at night; bats in the trees are the tell"
+    },
+    {
+      "id": "maquetaurie-guayaba",
+      "name": "Maquetaurie Guayaba, lord of Coaybay",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "spectral/boss",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Taíno (Pané): lord of the house of the dead",
+      "home": "Coaybay, a dungeon under an island (a cave)",
+      "faction": "ghost-fleet (if any)",
+      "role": "boss or met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "PANE. A ruler of the dead who may be bargained with, like Baron Samedi"
+    },
+    {
+      "id": "guabancex",
+      "name": "Guabancex, lady of the hurricane",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "colossal/boss (never killed)",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Taíno: the goddess of the storm; the word *huracán* comes from this tradition",
+      "home": "the open sea in hurricane season (ECOLOGY §5: August to October)",
+      "faction": null,
+      "role": "boss (event)",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "PANE; Taíno zemí studies. Fought through her heralds; appeased with offerings (open)"
+    },
+    {
+      "id": "guataba",
+      "name": "Guataubá, herald of thunder",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "flyer/shooter",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Taíno: Guabancex's herald who announces the storm",
+      "home": "the storm front",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "PANE"
+    },
+    {
+      "id": "coatrisquie",
+      "name": "Coatrisquie, herald of the flood",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "serpent+aquatic/controller",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Taíno: Guabancex's herald who releases the waters",
+      "home": "flooded river mouths after a storm",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "PANE"
+    },
+    {
+      "id": "yucahu",
+      "name": "Yúcahu, lord of cassava and the sea",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Taíno: the supreme zemí, son of Atabey",
+      "home": "a zemí stone in a cave shrine",
+      "faction": null,
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "PANE. Not an enemy: a shrine that grants or withholds"
+    },
+    {
+      "id": "atabey",
+      "name": "Atabey, mother of waters",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Taíno: goddess of fresh water, fertility and the moon",
+      "home": "springs and rivers",
+      "faction": null,
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "PANE"
+    },
+    {
+      "id": "boinayel-marohu",
+      "name": "Boinayel and Márohu, the rain twins",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "spectral/support",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Taíno: the twins who bring and withhold rain",
+      "home": "cave shrines",
+      "faction": null,
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "PANE"
+    },
+    {
+      "id": "zemi-guardian",
+      "name": "A zemí guardian",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "construct/bruiser",
+      "provenance": [
+        "Mythological",
+        "Original Fiction"
+      ],
+      "provenance_note": "that it animates",
+      "period_or_tradition": "Taíno zemí figures (real objects); their waking is this world's own",
+      "home": "Taíno cave dungeons",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "PANE (the objects). Our invention that they move: marked as two labels"
+    },
+    {
+      "id": "ciguapa",
+      "name": "Ciguapa",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "humanoid/ambusher",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Dominican folklore (Hispaniola), first written 1866; a wild woman with backward feet and hair to the ground who lures men",
+      "home": "mountain forest; river banks at night",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Her tracks lead the wrong way (a tracking puzzle); caught only on a full-moon night with a black-and-white dog (folk rule)"
+    },
+    {
+      "id": "biembien",
+      "name": "Biembienes",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "humanoid/skirmisher (swarm when many)",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Dominican folklore: small wild forest people of the Bahoruco, descendants of maroons in the tale",
+      "home": "mountain caves",
+      "faction": null,
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Open: whether this one is used at all, since the legend is tied to maroon history"
+    },
+    {
+      "id": "galipote",
+      "name": "Galipote",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "humanoid/ambusher (shapeshifts to quadruped)",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Dominican folklore: a sorcerer who turns into an animal; immune to blades, hurt by prayer or a blessed weapon",
+      "home": "roads at night",
+      "faction": "devil-cult (if any)",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK"
+    },
+    {
+      "id": "baca",
+      "name": "Bacá",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "quadruped/hunter",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Dominican and Haitian folklore: a familiar demon bought from a sorcerer to guard property, paid in the owner's kin",
+      "home": "a rich man's land",
+      "faction": "criminal-pirates or devil-cult",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. A story hook: the bigwig's warehouse (town keeper's; not placed here)"
+    },
+    {
+      "id": "guije",
+      "name": "Güije (jigüe)",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "humanoid+aquatic/ambusher",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Cuban folklore: a small black river imp with long hair that drags bathers under",
+      "home": "Cuban river pools",
+      "faction": null,
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK"
+    },
+    {
+      "id": "madre-de-aguas",
+      "name": "Madre de Aguas",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "serpent+aquatic/boss",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Cuban folklore: a giant water serpent, thick as a palm, that guards a river or spring",
+      "home": "a Cuban river mouth; a settlement's water",
+      "faction": null,
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Killing it dries the water (balance question)"
+    },
+    {
+      "id": "chupacabra",
+      "name": "Chupacabra",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "quadruped/hunter",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "open: Time Anomaly",
+      "period_or_tradition": "Puerto Rican folklore first reported 1995; a goat-sucker",
+      "home": "goat pens on dry islands at night",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Out-of-period folklore: BESTIARY.md open item 4"
+    },
+    {
+      "id": "garadiablo",
+      "name": "Garadiablo",
+      "kind": "creature",
+      "section": "B. Taíno (Greater Antilles: Hispaniola, Cuba, Puerto Rico, Jamaica, Bahamas)",
+      "class": "humanoid+aquatic/bruiser",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Puerto Rican folklore: a swamp monster of Punta Santiago",
+      "home": "mangrove swamps",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK"
+    },
+    {
+      "id": "maboya",
+      "name": "Maboya (Mabouya)",
+      "kind": "creature",
+      "section": "C. Kalinago (Carib) and the mainland Caribs (Lesser Antilles, Guianas)",
+      "class": "spectral/controller",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Kalinago belief (Rochefort 1658, Breton 1665): the evil spirit who sends sickness, storms and eclipses; appeased, not worshipped",
+      "home": "the windward islands; sickrooms",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "ROCHEFORT. Hook: the bohique (shaman) or an offering; the sick crew mate's fever is its face"
+    },
+    {
+      "id": "kanaima",
+      "name": "Kanaima",
+      "kind": "creature",
+      "section": "C. Kalinago (Carib) and the mainland Caribs (Lesser Antilles, Guianas)",
+      "class": "humanoid/hunter",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Carib and Pemon peoples of the Guianas: a ritual killer who stalks a victim for days and must taste the corpse",
+      "home": "the Guiana coast and rivers; follows the party over the world map",
+      "faction": "criminal-pirates (if any)",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK (ethnographies of the Guianas). The hunter role's exemplar"
+    },
+    {
+      "id": "water-mama",
+      "name": "Water Mama (Watramama)",
+      "kind": "creature",
+      "section": "C. Kalinago (Carib) and the mainland Caribs (Lesser Antilles, Guianas)",
+      "class": "humanoid+aquatic/controller",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Guyanese and Surinamese folklore (Arawak and African roots): a river mermaid with a golden comb who drowns the greedy",
+      "home": "Guiana rivers",
+      "faction": "merfolk (if any)",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Shares the comb motif with River Mumma and Mama Dlo"
+    },
+    {
+      "id": "massacooramaan",
+      "name": "Massacooramaan",
+      "kind": "creature",
+      "section": "C. Kalinago (Carib) and the mainland Caribs (Lesser Antilles, Guianas)",
+      "class": "humanoid+aquatic/bruiser",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Guyanese folklore: a huge hairy man-beast that upsets boats on the rivers and eats the crew",
+      "home": "Guiana interior rivers",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK"
+    },
+    {
+      "id": "baccoo",
+      "name": "Baccoo",
+      "kind": "creature",
+      "section": "C. Kalinago (Carib) and the mainland Caribs (Lesser Antilles, Guianas)",
+      "class": "spectral/ritualist (bottled)",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Guyanese folklore: a short imp kept in a bottle, fed bananas and milk, that throws stones and grants wealth",
+      "home": "a merchant's house",
+      "faction": "criminal-pirates",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. A thing you steal or free rather than kill"
+    },
+    {
+      "id": "zombi",
+      "name": "Zombi",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "humanoid/bruiser",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Haitian Vodou folk belief: the dead raised and bound to work by a bokor; salt frees them. Written accounts from Moreau de Saint-Méry 1797 onward",
+      "home": "a bokor's plantation; raised in a fight",
+      "faction": "free-pirates (Rex: the free pirates give voodoo zombies, COMBAT §4e)",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed (the enemy); Rex (the zombie as a crew mate's resurrection form)",
+      "source": "MOREAU. Hook: salt on the tongue ends the binding (a non-lethal win)"
+    },
+    {
+      "id": "bokor",
+      "name": "Bokor",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "humanoid/ritualist",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Haitian Vodou: a sorcerer who serves the lwa \"with both hands\"",
+      "home": "a hounfour at the edge of a town",
+      "faction": "free-pirates or criminal-pirates",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "MOREAU"
+    },
+    {
+      "id": "loup-garou-haitian",
+      "name": "Lougawou",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "humanoid/ambusher (flyer by night)",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Haitian folklore: a shapeshifting witch who flies as a fireball and drinks children's blood (Moreau 1797 records loup-garou belief in Saint-Domingue)",
+      "home": "villages at night",
+      "faction": "devil-cult (if any)",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "MOREAU. Cousin of the soucouyant"
+    },
+    {
+      "id": "baron-samedi",
+      "name": "Baron Samedi",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Haitian Vodou: lwa of the dead and the cemetery; top hat, rum, obscenity",
+      "home": "the crossroads of the dead; the cemetery gate",
+      "faction": "ghost-fleet (if any; open)",
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Vodou tradition. A bargain, never a fight; a plausible gate for the ghost resurrection (story keeper's)"
+    },
+    {
+      "id": "maman-brigitte",
+      "name": "Maman Brigitte",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Haitian Vodou: Baron Samedi's consort, guardian of the first grave",
+      "home": "the first grave of any cemetery",
+      "faction": "ghost-fleet (if any)",
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Vodou tradition"
+    },
+    {
+      "id": "papa-legba",
+      "name": "Papa Legba",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Haitian Vodou: the gatekeeper lwa; opens the way",
+      "home": "every crossroads",
+      "faction": null,
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Vodou tradition. The journal's \"ask before you pass\" being"
+    },
+    {
+      "id": "agwe",
+      "name": "Agwé",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Haitian Vodou: lwa of the sea and of sailors; offerings floated on a raft",
+      "home": "the open sea",
+      "faction": "merfolk (if any)",
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Vodou tradition"
+    },
+    {
+      "id": "la-sirene",
+      "name": "La Sirène",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "humanoid+aquatic/controller (as a champion)",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Haitian Vodou: the mermaid lwa, Agwé's consort, a trumpet and a mirror",
+      "home": "the sea; a siren's rock",
+      "faction": "merfolk",
+      "role": "met (boss-tier champion open)",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Vodou tradition. The Merfolk faction's natural figurehead"
+    },
+    {
+      "id": "simbi",
+      "name": "Simbi",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "serpent+aquatic/support",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Haitian Vodou: water-serpent lwa of springs and rain",
+      "home": "springs",
+      "faction": null,
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Vodou tradition"
+    },
+    {
+      "id": "damballa",
+      "name": "Damballa",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Haitian Vodou: the great serpent lwa, the sky father",
+      "home": "temples",
+      "faction": null,
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Vodou tradition"
+    },
+    {
+      "id": "marinette",
+      "name": "Marinette",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "spectral/ritualist",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Haitian Vodou: a fierce Petwo lwa; folk tie her to the loup-garou",
+      "home": "the night fire",
+      "faction": "devil-cult (open)",
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Vodou tradition. Open: whether any Petwo lwa may be an antagonist"
+    },
+    {
+      "id": "yemaya",
+      "name": "Yemayá",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Afro-Cuban Santería (Yoruba root: Yemoja): mother of the sea",
+      "home": "the shoreline",
+      "faction": "merfolk (if any)",
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Santería tradition"
+    },
+    {
+      "id": "olokun",
+      "name": "Olokun",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Yoruba and Afro-Cuban tradition: ruler of the deep ocean, chained at the bottom",
+      "home": "the deep",
+      "faction": "abyssal-cult (open: a sleeping deep power the cult misreads)",
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Yoruba tradition. Open: whether to let the Abyssal Cult's \"ancient oceanic force\" echo a real deity at all; the keeper advises against conflating them"
+    },
+    {
+      "id": "nganga-spirit",
+      "name": "A nganga's spirit",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "spectral/ritualist",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Afro-Cuban Palo Monte: the spirit bound in a palero's cauldron",
+      "home": "a palero's house",
+      "faction": "criminal-pirates (if any)",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Palo tradition"
+    },
+    {
+      "id": "duppy",
+      "name": "Duppy",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "spectral/ambusher",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Jamaican folklore (Sloane 1707 and Long 1774 record the belief): the shadow of the dead that rises nine nights after death",
+      "home": "cottonwood trees, graveyards, the town at night",
+      "faction": "ghost-fleet",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "SLOANE. Hooks: a Bible, iron, salt; it counts things; call its name backwards"
+    },
+    {
+      "id": "rolling-calf",
+      "name": "Rolling Calf",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "quadruped/bruiser",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Jamaican folklore: a bull-calf duppy with fire eyes dragging a clanking chain; the ghost of a butcher or a wicked man",
+      "home": "country roads at night",
+      "faction": "ghost-fleet",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Hooks: whistling draws it; a tarred whip or a left-handed knife; a crossroads stops it. (Town note: a butcher's ghost fits the butcher-shop locale; told to the town keeper, not placed here)"
+    },
+    {
+      "id": "ol-higue",
+      "name": "Ol' Higue",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "spectral/ambusher (humanoid by day)",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Jamaican and Guyanese folklore: an old woman who sheds her skin, flies as a fireball and sucks blood",
+      "home": "a hut at the edge of town",
+      "faction": "devil-cult (if any)",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Hooks: salt the shed skin; spill rice she must count"
+    },
+    {
+      "id": "river-mumma",
+      "name": "River Mumma",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "humanoid+aquatic/controller",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Jamaican folklore: the river mother with a golden comb; the fish are her children; never fish her pool",
+      "home": "river sources",
+      "faction": "merfolk (if any)",
+      "role": "met or boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Hook: taking the comb curses; returning it blesses"
+    },
+    {
+      "id": "three-foot-horse",
+      "name": "Three-foot Horse",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "quadruped (three legs)/hunter",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Jamaican folklore: a three-legged duppy horse that runs down travellers but cannot enter shade",
+      "home": "moonlit roads",
+      "faction": "ghost-fleet",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Hook: stand in a tree's shadow"
+    },
+    {
+      "id": "whooping-boy",
+      "name": "Whooping Boy",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "spectral/skirmisher",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Jamaican folklore: a whooping ghost boy who rides the three-foot horse",
+      "home": "moonlit roads",
+      "faction": "ghost-fleet",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK"
+    },
+    {
+      "id": "obeah-man",
+      "name": "Obeah practitioner",
+      "kind": "creature",
+      "section": "D. Afro-Caribbean: Haitian Vodou, Afro-Cuban Santería and Palo, Jamaican obeah",
+      "class": "humanoid/ritualist",
+      "provenance": [
+        "Historical",
+        "Mythological"
+      ],
+      "provenance_note": "the powers",
+      "period_or_tradition": "Jamaican obeah, recorded by Sloane 1707 and prosecuted from 1760; a real practice, its spells folklore",
+      "home": "a town's edge",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "SLOANE. The person is historical, the effects folklore: two labels"
+    },
+    {
+      "id": "soucouyant",
+      "name": "Soucouyant",
+      "kind": "creature",
+      "section": "E. Eastern Caribbean folklore (Trinidad and Tobago, Barbados, the Windwards, the Bahamas)",
+      "class": "spectral/ambusher (fireball; humanoid by day)",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Trinidadian and Eastern Caribbean folklore (French Antillean roots: *soukougnan*): an old woman who sheds her skin at night and flies as a ball of fire to drink blood",
+      "home": "a hut; the night sky over a town",
+      "faction": "devil-cult (open)",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Hooks: salt or hot pepper in the skin; rice at the crossroads she must count till dawn; she is killed by the sun if kept from her skin"
+    },
+    {
+      "id": "la-diablesse",
+      "name": "La Diablesse",
+      "kind": "creature",
+      "section": "E. Eastern Caribbean folklore (Trinidad and Tobago, Barbados, the Windwards, the Bahamas)",
+      "class": "humanoid/controller",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Trinidadian and St Lucian folklore: a beautiful woman in a wide hat with one cow's hoof who leads men off cliffs",
+      "home": "forest paths and fêtes at night",
+      "faction": "devil-cult (open)",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Hooks: turn your clothes inside out; look for the hoof (Perception)"
+    },
+    {
+      "id": "douen",
+      "name": "Douen",
+      "kind": "creature",
+      "section": "E. Eastern Caribbean folklore (Trinidad and Tobago, Barbados, the Windwards, the Bahamas)",
+      "class": "swarm/ambusher (humanoid singly)",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Trinidadian folklore: the spirits of unbaptised children, faceless under straw hats, feet turned backwards; they call children into the forest by name",
+      "home": "forest edges",
+      "faction": null,
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Hooks: never answer your name called from the forest; a shoe sole-up"
+    },
+    {
+      "id": "lagahoo",
+      "name": "Lagahoo (Ligahoo)",
+      "kind": "creature",
+      "section": "E. Eastern Caribbean folklore (Trinidad and Tobago, Barbados, the Windwards, the Bahamas)",
+      "class": "humanoid/bruiser (shapeshifts)",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Trinidadian folklore (French *loup-garou*): a shapeshifter dragging a coffin and chains at midnight",
+      "home": "crossroads at midnight",
+      "faction": "devil-cult (open)",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Hook: beaten with a blessed stick nine days running (a questline, not a fight)"
+    },
+    {
+      "id": "papa-bois",
+      "name": "Papa Bois",
+      "kind": "creature",
+      "section": "E. Eastern Caribbean folklore (Trinidad and Tobago, Barbados, the Windwards, the Bahamas)",
+      "class": "humanoid (cloven feet)/support",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Trinidadian folklore: the father of the forest, protector of its animals; punishes the greedy hunter",
+      "home": "deep forest",
+      "faction": null,
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Hook: a rum offering; he may turn a hunter into a beast (a transformation hook for COMBAT §4e, story keeper's)"
+    },
+    {
+      "id": "mama-dlo",
+      "name": "Mama D'Leau (Mama Dlo)",
+      "kind": "creature",
+      "section": "E. Eastern Caribbean folklore (Trinidad and Tobago, Barbados, the Windwards, the Bahamas)",
+      "class": "serpent+aquatic/boss (humanoid above the waist)",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Trinidadian folklore: mother of the water, a woman with an anaconda's body; Papa Bois's companion; punishes polluters",
+      "home": "river pools and mangrove",
+      "faction": "merfolk (if any)",
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Hook: take off a shoe, turn it over and walk away backwards"
+    },
+    {
+      "id": "moko-jumbie",
+      "name": "Moko Jumbie",
+      "kind": "creature",
+      "section": "E. Eastern Caribbean folklore (Trinidad and Tobago, Barbados, the Windwards, the Bahamas)",
+      "class": "humanoid (tall)/support",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Trinidadian and West African tradition: the stilt-walking spirit guardian who sees evil coming",
+      "home": "carnival streets; a town's gate",
+      "faction": null,
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. A protector, not an enemy; could guard a town against duppies"
+    },
+    {
+      "id": "jumbee",
+      "name": "Jumbee",
+      "kind": "creature",
+      "section": "E. Eastern Caribbean folklore (Trinidad and Tobago, Barbados, the Windwards, the Bahamas)",
+      "class": "spectral/ambusher",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Eastern Caribbean umbrella word for a malevolent spirit of the dead (Barbados, Guyana, the Virgin Islands, Antigua)",
+      "home": "silk-cotton trees, the beach at night",
+      "faction": "ghost-fleet",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Hooks: a pile of sand or rice to count; cross a stream; shoes at the door"
+    },
+    {
+      "id": "heartman",
+      "name": "Heartman",
+      "kind": "creature",
+      "section": "E. Eastern Caribbean folklore (Trinidad and Tobago, Barbados, the Windwards, the Bahamas)",
+      "class": "humanoid/hunter",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Barbadian folklore: a man who cuts out children's hearts for the devil",
+      "home": "Bridgetown's back streets at night",
+      "faction": "criminal-pirates or devil-cult",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK"
+    },
+    {
+      "id": "steel-donkey",
+      "name": "Steel Donkey",
+      "kind": "creature",
+      "section": "E. Eastern Caribbean folklore (Trinidad and Tobago, Barbados, the Windwards, the Bahamas)",
+      "class": "quadruped/bruiser",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Barbadian folklore: a clanking iron-shod spectral donkey that rides the roads at night",
+      "home": "Barbados cane roads",
+      "faction": "ghost-fleet",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK"
+    },
+    {
+      "id": "chickcharney",
+      "name": "Chickcharney",
+      "kind": "creature",
+      "section": "E. Eastern Caribbean folklore (Trinidad and Tobago, Barbados, the Windwards, the Bahamas)",
+      "class": "flyer/skirmisher",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Bahamian folklore (Andros): a three-toed owl-like creature with red eyes that nests by tying pine tops together; curses those who mock it, blesses the kind. Its real root may be the extinct giant barn owl *Tyto pollens*",
+      "home": "Andros pine forest",
+      "faction": null,
+      "role": "elite or met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. Pairs with the Prehistoric owl below for the journal's educational side"
+    },
+    {
+      "id": "lusca",
+      "name": "Lusca",
+      "kind": "creature",
+      "section": "E. Eastern Caribbean folklore (Trinidad and Tobago, Barbados, the Windwards, the Bahamas)",
+      "class": "cephalopod+aquatic/boss (shark's head)",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Bahamian folklore: the half-shark half-octopus of the blue holes whose breathing is the tide",
+      "home": "Andros blue holes",
+      "faction": "abyssal-cult (open)",
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "FOLK. The blue hole breathes: the fight's water level changes on a timer"
+    },
+    {
+      "id": "bermuda-devils",
+      "name": "The devils of Bermuda",
+      "kind": "creature",
+      "section": "E. Eastern Caribbean folklore (Trinidad and Tobago, Barbados, the Windwards, the Bahamas)",
+      "class": "swarm/ambusher",
+      "provenance": [
+        "Historical",
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Spanish sailors called Bermuda the Isle of Devils for the night shrieks: the cahow (Bermuda petrel) and feral hogs, recorded by the Sea Venture survivors 1609",
+      "home": "Bermuda's reefs at night",
+      "faction": null,
+      "role": "fodder (and a journal reveal)",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Strachey 1610. A journal reveal: the \"devils\" identify as birds (Historical)"
+    },
+    {
+      "id": "davy-jones",
+      "name": "Davy Jones",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "spectral/boss or met",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "English sailor lore; first in print Defoe 1726 (Smollett 1751 gives the saucer eyes and three rows of teeth); Davy Jones's Locker is the sea bottom",
+      "home": "the sea floor; appears in a storm",
+      "faction": "ghost-fleet",
+      "role": "met or boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "DEFOE"
+    },
+    {
+      "id": "flying-dutchman",
+      "name": "The Flying Dutchman",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "colossal (ship)/boss",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Dutch and English sailor lore, written from 1790 (Barrington) with older tellings; a ghost ship that can never make port",
+      "home": "storm lanes off the capes",
+      "faction": "ghost-fleet",
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "sailor lore. The Ghost Fleet's flagship or rival (open)"
+    },
+    {
+      "id": "drowned-sailor",
+      "name": "Drowned sailor",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "spectral/fodder (bruiser)",
+      "provenance": [
+        "Original Fiction",
+        "Mythological"
+      ],
+      "provenance_note": "the drowned who walk",
+      "period_or_tradition": "sailor lore of the drowned who return; the Ghost Fleet's green spectres are this world's own (ALIGNMENT §10)",
+      "home": "the Ghost Fleet's ships; wrecks",
+      "faction": "ghost-fleet",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "sailor lore; the fleet is Rex's faction, its soldiers proposed"
+    },
+    {
+      "id": "mother-careys-chickens",
+      "name": "Mother Carey's chickens",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "swarm (flyer)/support",
+      "provenance": [
+        "Historical",
+        "Mythological"
+      ],
+      "provenance_note": "the omen",
+      "period_or_tradition": "storm petrels, which sailors held to be the souls of drowned sailors and heralds of storms; \"Mother Carey\" is *Mater Cara*",
+      "home": "the open sea before a storm",
+      "faction": null,
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "sailor lore. A journal entry that is a real bird with a folk meaning"
+    },
+    {
+      "id": "st-elmos-fire",
+      "name": "St Elmo's fire",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "-",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "the corona discharge on masts in a storm, taken by sailors as a saint's protection",
+      "home": "the masthead in a storm",
+      "faction": null,
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "sailor lore. A phenomenon entry (JOURNAL kind: phenomenon), not a creature; listed so the journal has it"
+    },
+    {
+      "id": "sea-serpent",
+      "name": "Sea serpent",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "serpent+aquatic/controller",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Scandinavian sailor lore and natural history: Olaus Magnus 1555; Hans Egede's 1734 sighting off Greenland",
+      "home": "cold lanes; the Sargasso edge",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "MAGNUS"
+    },
+    {
+      "id": "sea-monk",
+      "name": "Sea monk",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "humanoid+aquatic/ambusher",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Renaissance natural history: a fish shaped like a monk caught off Denmark 1546 (Rondelet, Belon); likely a squid or angelshark",
+      "home": "deep banks",
+      "faction": "abyssal-cult (open)",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "MAGNUS. Candidate \"fish person\" with a period pedigree"
+    },
+    {
+      "id": "mermaid-columbus",
+      "name": "Columbus's mermaids",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "humanoid+aquatic/met",
+      "provenance": [
+        "Historical",
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Columbus's journal, 9 January 1493: three mermaids off Hispaniola, \"not as beautiful as painted\"; they were manatees",
+      "home": "the Mosquito Coast lagoons",
+      "faction": "merfolk",
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "COLUMBUS. The journal's model entry: encountered as a mermaid, identified as a manatee"
+    },
+    {
+      "id": "siren",
+      "name": "Siren",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "humanoid+aquatic/controller",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Greek: the singers whose song wrecks ships (Homer, *Odyssey* XII); bird-women in the old telling, fish-tailed later",
+      "home": "a siren's rock in a strait",
+      "faction": "merfolk",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Greek tradition. Hook: wax in the ears (Hearing Fe drops to zero, so does the charm); a crew mate lashed to the mast"
+    },
+    {
+      "id": "triton",
+      "name": "Triton",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "humanoid+aquatic/bruiser",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Greek: Poseidon's son, the conch-blowing merman; the \"tritons\" are his kind",
+      "home": "merfolk shoals",
+      "faction": "merfolk",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Greek tradition. Rex's sub-label for the faction: \"Tritons / Sirens\""
+    },
+    {
+      "id": "scylla",
+      "name": "Scylla",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "colossal/boss",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Greek: the six-headed monster of the strait (*Odyssey* XII)",
+      "home": "a strait dungeon",
+      "faction": null,
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Greek tradition"
+    },
+    {
+      "id": "charybdis",
+      "name": "Charybdis",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Greek: the whirlpool that swallows the sea thrice a day",
+      "home": "the same strait",
+      "faction": null,
+      "role": "met (a hazard)",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Greek tradition. An environment hazard, not a unit"
+    },
+    {
+      "id": "hippocampus",
+      "name": "Hippocampus",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "quadruped+aquatic/skirmisher",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Greek: the fish-tailed horse of Poseidon's chariot",
+      "home": "merfolk waters",
+      "faction": "merfolk",
+      "role": "fodder (a mount)",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Greek tradition"
+    },
+    {
+      "id": "atlantean-ruin-guardian",
+      "name": "Atlantean warden",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "construct/boss",
+      "provenance": [
+        "Science Fiction",
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Atlantis is Plato's (*Timaeus*, *Critias*, c. 360 BC); the Machina are Rex's faction's sci-fi",
+      "home": "a sunken Atlantean site (an underwater dungeon)",
+      "faction": "atlantean",
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Plato; the faction is Rex's (ALIGNMENT §10)"
+    },
+    {
+      "id": "leviathan",
+      "name": "Leviathan",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "colossal+aquatic/boss",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Hebrew Bible (Job 41, Psalm 74, Isaiah 27): the sea monster of the deep",
+      "home": "the deep",
+      "faction": null,
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Hebrew tradition"
+    },
+    {
+      "id": "jonahs-fish",
+      "name": "The great fish",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "colossal+aquatic/met",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Hebrew Bible (Jonah 1–2): the fish that swallows a man for three days",
+      "home": "the open sea",
+      "faction": null,
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Hebrew tradition. A swallowed-whole set piece inside a boss (kraken or leviathan) is an alternative use"
+    },
+    {
+      "id": "hy-brasil",
+      "name": "Hy-Brasil",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Irish legend; on charts from 1325 to 1865, an island seen one day in seven",
+      "home": "west of Ireland; here, an Atlantic minor locale",
+      "faction": null,
+      "role": "met (a place)",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "charts. A place entry for the journal (kind: place); the town keeper's if it becomes a locale"
+    },
+    {
+      "id": "antillia",
+      "name": "Antillia, Isle of Seven Cities",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Iberian legend of seven bishops who fled the Moors in 714; on the 1424 Pizzigano chart; gave the Antilles their name",
+      "home": "an Atlantic minor locale",
+      "faction": "imperial (if any)",
+      "role": "met (a place)",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "charts. As Hy-Brasil"
+    },
+    {
+      "id": "fountain-of-youth",
+      "name": "The Fountain of Youth",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "the Bimini legend attached to Ponce de León (Oviedo 1535; Ponce's 1513 contract never names it)",
+      "home": "Bimini; a minor locale",
+      "faction": null,
+      "role": "met (a place)",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Oviedo. A place and an item, not a creature; listed for the journal"
+    },
+    {
+      "id": "el-dorado",
+      "name": "El Dorado",
+      "kind": "creature",
+      "section": "F. European sailor lore and classical myth",
+      "class": "-",
+      "provenance": [
+        "Mythological"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "the gilded man of the Muisca, pursued by Raleigh in Guiana (1595)",
+      "home": "the Guiana interior; a minor locale",
+      "faction": "imperial (if any)",
+      "role": "met (a place)",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Raleigh 1596"
+    },
+    {
+      "id": "lost-boy",
+      "name": "Lost Boy",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "humanoid/skirmisher",
+      "provenance": [
+        "Fantasy"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "J. M. Barrie, *Peter Pan* (1904 play, 1911 novel)",
+      "home": "Neverland's cove",
+      "faction": "lost-boys",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "BARRIE. Rex's faction name is \"Lost Boys / Peter Pan Pirates\""
+    },
+    {
+      "id": "tick-tock-crocodile",
+      "name": "The crocodile that swallowed a clock",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "quadruped+aquatic/hunter",
+      "provenance": [
+        "Fantasy",
+        "Historical"
+      ],
+      "provenance_note": "the animal",
+      "period_or_tradition": "Barrie 1904: the crocodile that ate Hook's hand and the clock; the animal is the American crocodile (Historical)",
+      "home": "Neverland's lagoon",
+      "faction": "lost-boys",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "BARRIE. Hook: you hear it coming (Hearing Fe)"
+    },
+    {
+      "id": "neverland-mermaid",
+      "name": "Neverland mermaid",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "humanoid+aquatic/controller",
+      "provenance": [
+        "Fantasy"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Barrie 1904: the mermaids' lagoon; they drown anyone who is not Peter",
+      "home": "the mermaids' lagoon",
+      "faction": "lost-boys or merfolk (open)",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "BARRIE"
+    },
+    {
+      "id": "hook-captain",
+      "name": "A hook-handed captain",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "humanoid/boss",
+      "provenance": [
+        "Fantasy"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Barrie 1904: Captain Hook",
+      "home": "the Jolly Roger at Neverland",
+      "faction": "lost-boys (antagonist) or criminal-pirates (open)",
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "BARRIE. Named use of Hook is Rex's call; the row is for the archetype"
+    },
+    {
+      "id": "deep-one",
+      "name": "Fish person (Deep One)",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "humanoid+aquatic/bruiser",
+      "provenance": [
+        "Fantasy"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "H. P. Lovecraft, \"The Shadow over Innsmouth\" (1931): the fish-frog people of the sea who breed with men",
+      "home": "the drowned temple; reefs off a cursed town",
+      "faction": "abyssal-cult",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed (the enemy); Rex (the fish person as a transformation state, COMBAT §4e)",
+      "source": "HPL. Rex: a Cthulhu cult turns a dead crew mate into a fish person"
+    },
+    {
+      "id": "abyssal-cultist",
+      "name": "Abyssal cultist",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "humanoid/ritualist",
+      "provenance": [
+        "Original Fiction"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Rex's Abyssal Cult (ALIGNMENT §10): awakening an ancient oceanic force",
+      "home": "a drowned temple; a cursed town's church",
+      "faction": "abyssal-cult",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "the faction is Rex's; the unit proposed"
+    },
+    {
+      "id": "shapeless-servitor",
+      "name": "Shapeless servitor",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "swarm (amorphous)/bruiser",
+      "provenance": [
+        "Fantasy"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Lovecraft's shoggoth (*At the Mountains of Madness*, 1936) as the type",
+      "home": "the temple's lowest level",
+      "faction": "abyssal-cult",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "HPL"
+    },
+    {
+      "id": "the-sleeper",
+      "name": "The sleeping thing under the sea",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "colossal+aquatic/boss (never fully fought)",
+      "provenance": [
+        "Fantasy",
+        "Original Fiction"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Lovecraft's sleeping god (\"The Call of Cthulhu\", 1928) echoed, not copied: the cult's goal",
+      "home": "the deep; the campaign's end",
+      "faction": "abyssal-cult",
+      "role": "boss (event)",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "HPL. The keeper proposes it is stopped from waking, never killed"
+    },
+    {
+      "id": "devil-cultist",
+      "name": "Devil cultist",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "humanoid/ritualist",
+      "provenance": [
+        "Original Fiction"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Rex's Devil Cult (ALIGNMENT §10)",
+      "home": "a hidden chapel",
+      "faction": "devil-cult",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "the faction is Rex's"
+    },
+    {
+      "id": "demon",
+      "name": "Demon",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "humanoid (horned)/bruiser",
+      "provenance": [
+        "Fantasy"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "JOURNAL.md §1 lists \"a demon's form\" under Fantasy; the Christian demonology behind the cult is the tradition",
+      "home": "the cult's chapel; a summoning circle",
+      "faction": "devil-cult",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed (the enemy); Rex (the demon as a transformation state)",
+      "source": "COMBAT §4e"
+    },
+    {
+      "id": "angel",
+      "name": "Angel",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "flyer (humanoid)/support",
+      "provenance": [
+        "Fantasy"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "JOURNAL.md §1 lists \"the angel's energy\" under Fantasy",
+      "home": "the Imperial church",
+      "faction": "imperial",
+      "role": "met (an ally form)",
+      "status": "proposed",
+      "status_detail": "proposed (as a unit); Rex (the angel as the Imperial resurrection form)",
+      "source": "COMBAT §4e"
+    },
+    {
+      "id": "machina-sentinel",
+      "name": "Machina sentinel",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "construct/shooter",
+      "provenance": [
+        "Science Fiction"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Rex's Atlantean Machina",
+      "home": "Atlantean sites",
+      "faction": "atlantean",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "the faction is Rex's"
+    },
+    {
+      "id": "machina-knight",
+      "name": "Machina knight",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "construct/bruiser",
+      "provenance": [
+        "Science Fiction"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Rex's Atlantean Machina",
+      "home": "Atlantean sites",
+      "faction": "atlantean",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "the faction is Rex's"
+    },
+    {
+      "id": "mecha-crew",
+      "name": "Mecha crew mate",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "construct/(as the person was)",
+      "provenance": [
+        "Science Fiction"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Rex: the Atlanteans rebuild a dead crew mate as a mecha AI",
+      "home": "the player's ship",
+      "faction": "atlantean",
+      "role": "met (an ally form)",
+      "status": "Rex",
+      "status_detail": "Rex (the form, COMBAT §4e); proposed (as a bestiary row)",
+      "source": "COMBAT §4e"
+    },
+    {
+      "id": "green-spectre",
+      "name": "Green spectre",
+      "kind": "creature",
+      "section": "G. Fiction the factions draw on (Fantasy, with author and year)",
+      "class": "spectral/skirmisher",
+      "provenance": [
+        "Original Fiction"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Rex's Ghost Fleet: green spectres bound by a betrayal (ALIGNMENT §10, ChatGPT's wording Rex kept)",
+      "home": "the Ghost Fleet",
+      "faction": "ghost-fleet",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "the faction is Rex's"
+    },
+    {
+      "id": "tyrannosaurus",
+      "name": "Tyrannosaurus rex",
+      "kind": "creature",
+      "section": "H. Prehistoric (real animals out of their time; Prehistoric + Time Anomaly, period named)",
+      "class": "quadruped (biped: head, body, two legs, two small arms)/bruiser",
+      "provenance": [
+        "Prehistoric",
+        "Time Anomaly"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Late Cretaceous, about 68 to 66 million years ago, western North America (Rex's example; \"Jurassic\" in his words, the journal would say Late Cretaceous)",
+      "home": "an anomaly island's interior",
+      "faction": null,
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "palaeontology (standard reference). Rex named the T. rex as the example of a tagged creature"
+    },
+    {
+      "id": "megalodon",
+      "name": "Megalodon",
+      "kind": "creature",
+      "section": "H. Prehistoric (real animals out of their time; Prehistoric + Time Anomaly, period named)",
+      "class": "quadruped+aquatic (shark plan: head, body, tail)/hunter",
+      "provenance": [
+        "Prehistoric",
+        "Time Anomaly"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Miocene to Pliocene, about 23 to 3.6 million years ago; its teeth are found in Caribbean deposits",
+      "home": "deep lanes; follows the ship",
+      "faction": null,
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "palaeontology. A Caribbean fossil, so an apt anomaly"
+    },
+    {
+      "id": "mosasaur",
+      "name": "Mosasaur",
+      "kind": "creature",
+      "section": "H. Prehistoric (real animals out of their time; Prehistoric + Time Anomaly, period named)",
+      "class": "serpent+aquatic/controller",
+      "provenance": [
+        "Prehistoric",
+        "Time Anomaly"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Late Cretaceous marine reptile, about 82 to 66 million years ago",
+      "home": "shallow seas and lagoons",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "palaeontology"
+    },
+    {
+      "id": "plesiosaur",
+      "name": "Plesiosaur",
+      "kind": "creature",
+      "section": "H. Prehistoric (real animals out of their time; Prehistoric + Time Anomaly, period named)",
+      "class": "quadruped+aquatic/skirmisher",
+      "provenance": [
+        "Prehistoric",
+        "Time Anomaly"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Jurassic to Cretaceous marine reptile, about 200 to 66 million years ago",
+      "home": "open water",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "palaeontology. The sea-serpent sightings' favourite explanation; a journal cross-reference"
+    },
+    {
+      "id": "liopleurodon",
+      "name": "Liopleurodon",
+      "kind": "creature",
+      "section": "H. Prehistoric (real animals out of their time; Prehistoric + Time Anomaly, period named)",
+      "class": "quadruped+aquatic/bruiser",
+      "provenance": [
+        "Prehistoric",
+        "Time Anomaly"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Middle to Late Jurassic pliosaur, about 166 to 155 million years ago",
+      "home": "deep lanes",
+      "faction": null,
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "palaeontology. Rex's \"Jurassic\" sea monster if he wants one"
+    },
+    {
+      "id": "deinosuchus",
+      "name": "Deinosuchus",
+      "kind": "creature",
+      "section": "H. Prehistoric (real animals out of their time; Prehistoric + Time Anomaly, period named)",
+      "class": "quadruped+aquatic/ambusher",
+      "provenance": [
+        "Prehistoric",
+        "Time Anomaly"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Late Cretaceous giant alligatoroid, about 82 to 73 million years ago",
+      "home": "mangrove and river mouths",
+      "faction": null,
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "palaeontology"
+    },
+    {
+      "id": "titanoboa",
+      "name": "Titanoboa",
+      "kind": "creature",
+      "section": "H. Prehistoric (real animals out of their time; Prehistoric + Time Anomaly, period named)",
+      "class": "serpent/controller",
+      "provenance": [
+        "Prehistoric",
+        "Time Anomaly"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Paleocene, about 60 to 58 million years ago, Colombia (Cerrejón)",
+      "home": "Guiana and Darién rivers",
+      "faction": null,
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "palaeontology. A Caribbean-basin fossil"
+    },
+    {
+      "id": "dunkleosteus",
+      "name": "Dunkleosteus",
+      "kind": "creature",
+      "section": "H. Prehistoric (real animals out of their time; Prehistoric + Time Anomaly, period named)",
+      "class": "quadruped+aquatic (fish plan)/bruiser",
+      "provenance": [
+        "Prehistoric",
+        "Time Anomaly"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Late Devonian, about 382 to 358 million years ago (the journal's own \"Devonian fish\" example)",
+      "home": "deep banks",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "palaeontology; JOURNAL §1 example"
+    },
+    {
+      "id": "archelon",
+      "name": "Archelon",
+      "kind": "creature",
+      "section": "H. Prehistoric (real animals out of their time; Prehistoric + Time Anomaly, period named)",
+      "class": "quadruped+aquatic/support (a mount)",
+      "provenance": [
+        "Prehistoric",
+        "Time Anomaly"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Late Cretaceous giant sea turtle, about 80 to 74 million years ago",
+      "home": "turtle grounds",
+      "faction": null,
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "palaeontology. A gentle anomaly beside the real green turtle (ECOLOGY)"
+    },
+    {
+      "id": "dimetrodon",
+      "name": "Dimetrodon",
+      "kind": "creature",
+      "section": "H. Prehistoric (real animals out of their time; Prehistoric + Time Anomaly, period named)",
+      "class": "quadruped/bruiser",
+      "provenance": [
+        "Prehistoric",
+        "Time Anomaly"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Early Permian synapsid, about 295 to 272 million years ago; not a dinosaur (the journal says so)",
+      "home": "dry scrub islands",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "palaeontology"
+    },
+    {
+      "id": "cuban-giant-owl",
+      "name": "Cuban giant owl (Ornimegalonyx)",
+      "kind": "creature",
+      "section": "H. Prehistoric (real animals out of their time; Prehistoric + Time Anomaly, period named)",
+      "class": "flyer (mostly ground)/hunter",
+      "provenance": [
+        "Prehistoric",
+        "Time Anomaly"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Pleistocene Cuba, extinct about 10,000 years ago; a metre tall, mostly flightless",
+      "home": "Cuban caves",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "palaeontology. A true Caribbean prehistoric animal"
+    },
+    {
+      "id": "megalocnus",
+      "name": "Cuban giant ground sloth (Megalocnus)",
+      "kind": "creature",
+      "section": "H. Prehistoric (real animals out of their time; Prehistoric + Time Anomaly, period named)",
+      "class": "quadruped/bruiser",
+      "provenance": [
+        "Prehistoric",
+        "Time Anomaly"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Pleistocene to early Holocene Cuba, extinct about 4,000 years ago",
+      "home": "Cuban forest",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "palaeontology"
+    },
+    {
+      "id": "caribbean-monk-seal",
+      "name": "Caribbean monk seal",
+      "kind": "creature",
+      "section": "H. Prehistoric (real animals out of their time; Prehistoric + Time Anomaly, period named)",
+      "class": "quadruped+aquatic/met",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "present in the period (Columbus's men killed eight in 1494); hunted to extinction, last seen 1952",
+      "home": "the cays",
+      "faction": null,
+      "role": "met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "zoology. Historical here, a lesson in the journal: alive in the game's time, gone in ours"
+    },
+    {
+      "id": "american-crocodile",
+      "name": "American crocodile",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "quadruped+aquatic/ambusher",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Caribbean coasts and estuaries; Sloane 1707 and Dampier describe them",
+      "home": "mangrove, river mouths",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "SLOANE; Dampier"
+    },
+    {
+      "id": "cuban-crocodile",
+      "name": "Cuban crocodile",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "quadruped+aquatic/bruiser",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Cuba's Zapata swamp; the most aggressive crocodile, known to leap",
+      "home": "Cuban swamps",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "zoology"
+    },
+    {
+      "id": "bull-shark",
+      "name": "Bull shark",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "quadruped+aquatic (shark plan)/hunter",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Caribbean coasts and rivers; the shark that follows ships and enters estuaries",
+      "home": "harbours, river mouths",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "ECOLOGY sharks row; Labat on sharks"
+    },
+    {
+      "id": "tiger-shark",
+      "name": "Tiger shark",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "quadruped+aquatic (shark plan)/hunter",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "reef and lagoon",
+      "home": "reefs",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "ECOLOGY"
+    },
+    {
+      "id": "giant-squid",
+      "name": "Giant squid (Architeuthis)",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "cephalopod+aquatic/controller",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "a real deep-sea animal, the kraken's root; adults to about 13 m",
+      "home": "the deep",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "zoology. The journal's cross-reference under the kraken"
+    },
+    {
+      "id": "moray-eel",
+      "name": "Green moray",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "serpent+aquatic/ambusher",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "reef crevices",
+      "home": "reefs",
+      "faction": null,
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "zoology"
+    },
+    {
+      "id": "portuguese-man-o-war",
+      "name": "Portuguese man o' war",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "swarm+aquatic/controller",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "a drifting colony with stinging tentacles; named for its sail",
+      "home": "surface waters",
+      "faction": null,
+      "role": "fodder (a hazard)",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "zoology"
+    },
+    {
+      "id": "sawfish",
+      "name": "Sawfish",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "quadruped+aquatic/bruiser",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Caribbean estuaries, common in the period",
+      "home": "estuaries",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "zoology"
+    },
+    {
+      "id": "goliath-grouper",
+      "name": "Goliath grouper",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "quadruped+aquatic/bruiser",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "reef and wreck",
+      "home": "wrecks",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "ECOLOGY reef fish"
+    },
+    {
+      "id": "wild-boar",
+      "name": "Wild boar",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "quadruped/bruiser",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "the boucaniers' game on Hispaniola (ECOLOGY)",
+      "home": "forest",
+      "faction": null,
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "ECOLOGY; Exquemelin 1678"
+    },
+    {
+      "id": "fer-de-lance",
+      "name": "Fer-de-lance",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "serpent/ambusher",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Martinique and St Lucia's pit viper; Labat 1722 writes of it",
+      "home": "cane fields and forest",
+      "faction": null,
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "LABAT"
+    },
+    {
+      "id": "boa-constrictor",
+      "name": "Boa",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "serpent/controller",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "the Lesser Antilles and the mainland",
+      "home": "forest",
+      "faction": null,
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "zoology"
+    },
+    {
+      "id": "vampire-bat",
+      "name": "Vampire bats",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "swarm (flyer)/ambusher",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Trinidad and the mainland; bite sleeping men and cattle; Oviedo describes the bites",
+      "home": "caves, camps at night",
+      "faction": null,
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Oviedo 1535. The opía's form in Taíno belief: a journal cross-reference"
+    },
+    {
+      "id": "land-crab-swarm",
+      "name": "Land crabs",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "swarm/skirmisher",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "the crab runs in the rains (ECOLOGY)",
+      "home": "beaches in the wet season",
+      "faction": null,
+      "role": "fodder (and food)",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "ECOLOGY"
+    },
+    {
+      "id": "feral-dog-pack",
+      "name": "Feral dogs",
+      "kind": "creature",
+      "section": "I. Period animals that fight (Historical; stocks are ECOLOGY's)",
+      "class": "quadruped (pack)/hunter",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "the Spanish dogs gone wild on Hispaniola, hunted with by the boucaniers",
+      "home": "savannas",
+      "faction": null,
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Exquemelin 1678"
+    },
+    {
+      "id": "pirate-boarder",
+      "name": "Boarder",
+      "kind": "creature",
+      "section": "J. People (Historical; the human enemies, by faction; the crew's own classes are COMBAT.md's)",
+      "class": "humanoid/bruiser",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Golden Age crews, 1650 to 1730",
+      "home": "any ship",
+      "faction": "free-pirates or criminal-pirates",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "GOS"
+    },
+    {
+      "id": "pirate-gunner",
+      "name": "Gunner",
+      "kind": "creature",
+      "section": "J. People (Historical; the human enemies, by faction; the crew's own classes are COMBAT.md's)",
+      "class": "humanoid/shooter",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "as above",
+      "home": "any ship",
+      "faction": "free-pirates or criminal-pirates",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "GOS"
+    },
+    {
+      "id": "pirate-captain",
+      "name": "Pirate captain",
+      "kind": "creature",
+      "section": "J. People (Historical; the human enemies, by faction; the crew's own classes are COMBAT.md's)",
+      "class": "humanoid/boss",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "as above; a named captain is the story keeper's",
+      "home": "a flagship",
+      "faction": "free-pirates or criminal-pirates",
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "GOS"
+    },
+    {
+      "id": "cutthroat",
+      "name": "Cutthroat",
+      "kind": "creature",
+      "section": "J. People (Historical; the human enemies, by faction; the crew's own classes are COMBAT.md's)",
+      "class": "humanoid/ambusher",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "the port's low life (TOWNS.md: the starting port)",
+      "home": "alleys at night",
+      "faction": "criminal-pirates",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "TOWNS.md (the port's character)"
+    },
+    {
+      "id": "gang-boss",
+      "name": "Gang boss",
+      "kind": "creature",
+      "section": "J. People (Historical; the human enemies, by faction; the crew's own classes are COMBAT.md's)",
+      "class": "humanoid/boss",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "a port gang's head",
+      "home": "a hideout dungeon (a pirate's cove)",
+      "faction": "criminal-pirates",
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Rex: a dungeon \"could count as a pirate's cove\""
+    },
+    {
+      "id": "marine",
+      "name": "Marine",
+      "kind": "creature",
+      "section": "J. People (Historical; the human enemies, by faction; the crew's own classes are COMBAT.md's)",
+      "class": "humanoid/shooter",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "Spanish, English and French marines of the period",
+      "home": "forts, men-of-war",
+      "faction": "imperial",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "period military history"
+    },
+    {
+      "id": "grenadier",
+      "name": "Grenadier",
+      "kind": "creature",
+      "section": "J. People (Historical; the human enemies, by faction; the crew's own classes are COMBAT.md's)",
+      "class": "humanoid/siege",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "grenadier companies from the 1670s",
+      "home": "forts",
+      "faction": "imperial",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "period military history"
+    },
+    {
+      "id": "inquisitor",
+      "name": "Inquisitor",
+      "kind": "creature",
+      "section": "J. People (Historical; the human enemies, by faction; the crew's own classes are COMBAT.md's)",
+      "class": "humanoid/ritualist",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "the Spanish Inquisition's Cartagena tribunal (1610) is real; its powers here are the Church's rites",
+      "home": "Cartagena; the Imperial church",
+      "faction": "imperial",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "history. The person historical; any miracle Fantasy per the journal"
+    },
+    {
+      "id": "admiral",
+      "name": "Admiral",
+      "kind": "creature",
+      "section": "J. People (Historical; the human enemies, by faction; the crew's own classes are COMBAT.md's)",
+      "class": "humanoid/boss",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "a flag officer of the Crown",
+      "home": "a flagship",
+      "faction": "imperial",
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "history"
+    },
+    {
+      "id": "militia",
+      "name": "Militia",
+      "kind": "creature",
+      "section": "J. People (Historical; the human enemies, by faction; the crew's own classes are COMBAT.md's)",
+      "class": "humanoid/skirmisher",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "island militias",
+      "home": "towns",
+      "faction": "imperial",
+      "role": "fodder",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "history"
+    },
+    {
+      "id": "boucanier",
+      "name": "Boucanier",
+      "kind": "creature",
+      "section": "J. People (Historical; the human enemies, by faction; the crew's own classes are COMBAT.md's)",
+      "class": "humanoid/shooter",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "the hunters of Hispaniola with their long guns and dogs (Exquemelin 1678)",
+      "home": "the savannas; Tortuga",
+      "faction": "free-pirates",
+      "role": "elite",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "Exquemelin"
+    },
+    {
+      "id": "maroon",
+      "name": "Maroon",
+      "kind": "creature",
+      "section": "J. People (Historical; the human enemies, by faction; the crew's own classes are COMBAT.md's)",
+      "class": "humanoid/ambusher",
+      "provenance": [
+        "Historical"
+      ],
+      "provenance_note": "",
+      "period_or_tradition": "the free communities of the mountains (Jamaica's Maroons fought the English 1655 to 1739)",
+      "home": "mountain forest",
+      "faction": "- (their own)",
+      "role": "elite or met",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "history. Open: whether they are ever enemies; the keeper advises allies or neutral"
+    },
+    {
+      "id": "blackbeard-ghost",
+      "name": "Blackbeard's ghost",
+      "kind": "creature",
+      "section": "J. People (Historical; the human enemies, by faction; the crew's own classes are COMBAT.md's)",
+      "class": "spectral/boss",
+      "provenance": [
+        "Mythological",
+        "Historical"
+      ],
+      "provenance_note": "the man",
+      "period_or_tradition": "Edward Teach, killed 1718 (Johnson 1724); folklore says the headless body swam round the ship and his light walks Ocracoke",
+      "home": "Ocracoke; a storm lane",
+      "faction": "ghost-fleet",
+      "role": "boss",
+      "status": "proposed",
+      "status_detail": "proposed",
+      "source": "GOS; North Carolina folklore"
+    }
+  ]
+}
