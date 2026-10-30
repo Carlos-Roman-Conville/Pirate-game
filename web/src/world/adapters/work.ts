@@ -5,6 +5,7 @@
  * FIXTURES.md explicitly supply those game placeholders (world/work.json), NOT physiology.
  * BODY.md's proposed work capacity needs unavailable per-limb outputs and fatigueDay;
  * we do not substitute fatigue_met_hours into that formula. Bodies/MET stay in characters.ts.
+ * Where the hydration row says work stops, the engine's `work_capacity_hydration` is 0 and so is the rate (the row's, not ours).
  */
 import type { BodyOutputs } from '@rex/realism'
 import recipes from '../../../../data/pirate-ship/economy/recipes.json'
@@ -119,7 +120,20 @@ export function workDuty(occupation: string): string {
   return duty
 }
 
-/** F-WK-2: linear skill and fatigue factors, multiplied by capped engine alertness.
+/** The engine's `work_capacity_hydration`: 1 where the water deficit's row stops nothing, 0 where it says work stops
+ * (incapacitated, death risk), null where the row gives no work figure (then it takes nothing from the rate). A body that
+ * has no such output at all throws: there is no silent "hydrated" default.
+ */
+export function hydrationCapacity(outputs: BodyOutputs): number {
+  const capacity = outputs.work_capacity_hydration
+  if (capacity === undefined) throw new Error('work: missing work_capacity_hydration output')
+  if (capacity === null) return 1
+  if (typeof capacity !== 'number') throw new Error('work: invalid work_capacity_hydration output')
+  nonnegative(capacity, 'hydration capacity')
+  return Math.min(1, capacity)
+}
+
+/** F-WK-2: linear skill and fatigue factors, multiplied by capped engine alertness and the engine's hydration work capacity.
  * Missing outputs disable production; there is no silent "healthy" default.
  */
 export function workRate(level: number, outputs: BodyOutputs): number {
@@ -129,7 +143,7 @@ export function workRate(level: number, outputs: BodyOutputs): number {
   nonnegative(fatigue, 'fatigue output'); nonnegative(alertness, 'alertness output')
   const r = fixture.rate
   return Math.max(r.floor, r.base + (level - r.skillReference) * r.skillPerLevel)
-    * Math.max(r.floor, r.base - fatigue * r.fatiguePerMetHour) * Math.min(r.alertnessCeiling, alertness)
+    * Math.max(r.floor, r.base - fatigue * r.fatiguePerMetHour) * Math.min(r.alertnessCeiling, alertness) * hydrationCapacity(outputs)
 }
 
 function prepare(worker: Worker, facility: WorkFacility, day: number) {
@@ -182,6 +196,7 @@ export function workDay(worker: Worker, facility: WorkFacility, inventory: WorkI
   for (const id of [...inputs, output]) inventory.validate(id, fixture.batch.inputQuantity)
   const body: DayReport = simulateDay(worker.character, day, place)
   const rate = workRate(level, body.outputs)
+  const stopped = hydrationCapacity(body.outputs) === 0 ? 'hydration' : null
   const spoiled = inventory.food.spoil(day)
   const capacity = hours / fixture.batch.hours * rate
   const batches = Math.min(capacity, ...Object.entries(required).map(([id, n]) => inventory.amount(id) / n))
@@ -189,5 +204,5 @@ export function workDay(worker: Worker, facility: WorkFacility, inventory: WorkI
   const produced = { [output]: fixture.batch.outputQuantity * batches }
   if (batches > 0) inventory.convert(recipe.id, day, consumed, produced)
   return { day, slug: worker.character.slug, facility: facility.id, recipe: recipe.id, duty,
-    activity: activityOf(duty), hours, rate, batches, consumed, produced, spoiled, body }
+    activity: activityOf(duty), hours, rate, stopped, batches, consumed, produced, spoiled, body }
 }

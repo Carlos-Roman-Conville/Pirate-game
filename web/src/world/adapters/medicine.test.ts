@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { advanceDays, bodyOutputs, createMedicine, diseaseCourse, expose } from '@rex/realism'
+import { advanceDays, bodyOutputs, createMedicine, crisesOf, diseaseCourse, expose, treat } from '@rex/realism'
 import medicine from '../../../../files/pirate-ship/body/data/medicine.json'
 import goods from '../../../../data/pirate-ship/economy/goods.json'
 import fixture from '../../../../data/pirate-ship/world/medicine.json'
@@ -7,11 +7,11 @@ import placesData from '../../../../data/pirate-ship/world/places.json'
 import source from './medicine.ts?raw'
 import * as adapter from './medicine.ts'
 import {
-  dipFactor, dipsOf, exposeAt, healDay, inflict, medicineOf, multiplierOf, placeDiseases, skillNeeded, suppliedFactors, treatmentIds,
-  treatPatient, woundRowFor, woundsOf, type CrisisEvent,
+  crisesHeld, dipFactor, dipsOf, engineVectorDose, exposeAt, healDay, inflict, medicineOf, multiplierOf, placeDiseases, skillNeeded,
+  suppliedFactors, treatmentIds, treatPatient, woundProcesses, woundRowFor, woundsOf, type CrisisEvent,
 } from './medicine.ts'
 import { capabilityToday } from './stats.ts'
-import { engineOf, type GameCharacter } from './characters.ts'
+import { engineOf, fixturePlace, releaseDayTrace, simulateDay, type GameCharacter } from './characters.ts'
 import { WorkInventory } from './work.ts'
 
 const person = (slug: string): GameCharacter => ({ slug, plan: [] })
@@ -204,6 +204,57 @@ describe('crises', () => {
     expect(healDay(c).outputs['medicine.crises']).toBe(1)
     expect(healDay(c).crises).toEqual([])
     expect(Object.keys(adapter).filter(k => /^(resolve|kill|die)|death/i.test(k))).toEqual([])
+  })
+
+  // The library has no thrust bleed rate (F-MD-3), so the rate and clotting are the host's, as in the engine's own bleeding test.
+  const bleeder = (slug: string, bound = false): GameCharacter => {
+    const c: GameCharacter = { slug, plan: [{ fromH: 0, toH: 24, duty: 'Walking the deck' }] }
+    const h = inflict(c, { location: 'chest', kind: 'thrust', depth: 1, open: true, infected: false, rateMlMin: 200, clotting: 0 })
+    if (bound) treat(medicineOf(c), 'tourniquet-and-ligature', { wound: h.wound.n })
+    return c
+  }
+  const IV = 'circulation.bleeding.iv'
+
+  it('a bleeding wound opens a crisis record before any death, once, across days', () => {
+    const c = bleeder('bleeding')
+    expect(woundProcesses(c)).toHaveLength(2)
+    const day1 = simulateDay(c, 1, { ...fixturePlace, processes: woundProcesses(c) })
+    expect(day1.failedChecks).toEqual([])
+    const { world, body } = engineOf(c)
+    expect(crisesOf(world, body).map(r => r.cause)).toEqual([IV])
+    expect(world.registry.component(body).props).not.toHaveProperty('dead') // the engine kills no one, and the adapter never declares it
+    const events = healDay(c).crises
+    expect(events).toHaveLength(1)
+    expect(events[0]).toMatchObject({ kind: 'crisis', slug: 'bleeding', cause: IV, day: null, risk: null })
+    expect(events[0]!.source).toContain(IV)
+    releaseDayTrace(c)
+    const day2 = simulateDay(c, 2, { ...fixturePlace, processes: woundProcesses(c) })
+    expect(day2.failedChecks).toEqual([]) // the blood ledger is carried across the renewed trace
+    // the same condition in the renewed trace is not a second crisis (this body drinks nothing, so water crises are its own)
+    expect(healDay(c).crises.filter(e => e.cause === IV)).toEqual([])
+    expect(crisesHeld(c).filter(r => r.cause === IV)).toHaveLength(1)
+  })
+
+  it('a wound bound at once loses no blood and opens no crisis; a body with no rate runs no extra process', () => {
+    const c = bleeder('bound', true)
+    simulateDay(c, 1, { ...fixturePlace, processes: woundProcesses(c) })
+    const { world, body } = engineOf(c)
+    expect(world.registry.component(body).props.blood_lost_ml).toBe(0)
+    expect(healDay(c).crises).toEqual([])
+    const plain = person('plain')
+    inflict(plain, { location: 'thigh', side: 'left', kind: 'shot' })
+    expect(woundProcesses(plain)).toEqual([])
+  })
+
+  it('reads the vector dose from an engine exposure row that states one, and keeps F-MD-4 where it is null', () => {
+    expect(engineVectorDose({ vector: 0.2 })).toBe(0.2)
+    expect(engineVectorDose({})).toBeNull()
+    expect(engineVectorDose({ vector: null })).toBeNull()
+    expect(() => engineVectorDose({ vector: 4 })).toThrow(/not a chance/)
+    // the library's exposure rows carry no vector value yet (2562, FLAGS.md): the fixture dose stands and the report says so
+    const natural = exposeAt(person('natural'), { place: 'swamp-anchorage', day: AUG, disease: 'yellow_fever' })
+    expect(natural).toMatchObject({ doseSource: 'F-MD-4', dose: fixture.baseDose * 4, engineVectorExposure: null })
+    expect(exposeAt(person('scripted'), { place: 'hold', day: AUG, disease: 'smallpox', dose: 1 }).doseSource).toBe('scripted')
   })
 })
 

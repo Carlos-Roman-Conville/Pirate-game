@@ -5,11 +5,11 @@ import calendar from '../../../data/pirate-ship/world/places.json'
 import foodData from '../../../data/pirate-ship/world/food.json'
 import characterData from '../../../data/pirate-ship/world/characters.json'
 import recipes from '../../../data/pirate-ship/economy/recipes.json'
-import { engineOf, releaseDayTrace, type DutyBlock, type GameCharacter, type Place } from './adapters/characters.ts'
+import { drinkingProcess, engineOf, releaseDayTrace, type DutyBlock, type GameCharacter, type Place } from './adapters/characters.ts'
 import { issueRation, ration, keepsOf } from './adapters/food.ts'
 import { conditionsAt, roomFor } from './adapters/places.ts'
 import { facilityAt, workDay, workDuty, WorkInventory, type Worker } from './adapters/work.ts'
-import { exposeAt, healDay, inflict, medicineOf, woundsOf, type Hit, type CrisisEvent } from './adapters/medicine.ts'
+import { crisesHeld, exposeAt, healDay, inflict, medicineOf, woundProcesses, woundsOf, type Hit, type CrisisEvent } from './adapters/medicine.ts'
 import { facesOf } from './adapters/stats.ts'
 
 type Amounts = Record<string, number>
@@ -91,6 +91,11 @@ export function runSettlement(seed = fixture.seed) {
       inflict(person, fixture.wound as Hit)
       hazards.push(`${person.slug}:thrust`)
     }
+    if (day === fixture.fatalWound.day) {
+      const person = people[fixture.fatalWound.person]!
+      inflict(person, fixture.fatalWound as Hit)
+      hazards.push(`${person.slug}:fatal-thrust`)
+    }
     if (day === fixture.fever.day) {
       const person = people[fixture.fever.person]!
       const exposure = exposeAt(person, { place: fixture.climatePlace, day: calendarDay,
@@ -104,7 +109,9 @@ export function runSettlement(seed = fixture.seed) {
     const personReports = workers.map((worker, index) => {
       const character = worker.character, observed = extrema()
       const facility = facilities[Math.floor(index / fixture.staffPerFacility)]!
-      const work = workDay(worker, facility, stock, day, { ...place, observe: observed.observe })
+      const dry = facility.id === fixture.water.dry.facility && day >= fixture.water.dry.fromDay
+      const work = workDay(worker, facility, stock, day,
+        { ...place, processes: [...(dry ? [] : [drinkingProcess(fixture.water.drinkEveryMin)]), ...woundProcesses(character)], observe: observed.observe })
       add(outputByFacility[facility.id] ??= {}, work.produced)
       const healing = healDay(character)
       allCrises.push(...healing.crises)
@@ -124,8 +131,11 @@ export function runSettlement(seed = fixture.seed) {
         ranges: observed.ranges, energy, water: { startKg: beforeBody.water, endKg: waterEnd, inKg: water.in, outKg: water.out },
         failedChecks: work.body.failedChecks, checks: world.trace.checks.length,
         sick: structuredClone(medicine.sick), wounded: structuredClone(woundsOf(character)),
-        crises: structuredClone(medicine.crises), faces: facesOf(outputs),
-        warnings: waterEnd === 0 ? ['Body water exhausted; library does not model dehydration death.'] : [] }
+        crises: structuredClone(crisesHeld(character)), faces: facesOf(outputs),
+        bloodLostMl: Number(world.registry.component(body).props.blood_lost_ml ?? 0), bloodLostKg: world.trace.outOf(body, 'mass:blood'),
+        waterDeficitKg: Number(world.registry.component(body).props.waterDeficitKg ?? 0),
+        workCapacity: outputs.work_capacity_hydration, workStopped: work.stopped, dead: world.registry.component(body).props.dead === 1,
+        warnings: waterEnd === 0 ? ['Body water exhausted; the engine opens a crisis at the hydration rows, the host resolves it.'] : [] }
       releaseDayTrace(character)
       return report
     })
@@ -139,7 +149,7 @@ export function runSettlement(seed = fixture.seed) {
       crises: structuredClone(allCrises) })
   }
   return { seed, initialStock, days, crises: structuredClone(allCrises),
-    limitations: ['No wound blood-loss rate or dehydration death model; no physiological survival claim.',
+    limitations: ['No library wound blood-loss rate (the fatal wound\'s is a host fixture, F-MD-8); the engine opens a crisis and never a death; no physiological survival claim.',
       'Production uses F-WK placeholders; fever does not yet supply a physiological fever factor.',
       'No circulation or limb-muscle process in characters.ts; aerobic_today remains unavailable.',
       `Unrestocked ration lots spoil by food.ts Keeps days (${ration.map(r => `${r.food.good}:${keepsOf(r.food.good!)}`).join(', ')}).`] }
@@ -152,6 +162,6 @@ export function printSettlement(result: ReturnType<typeof runSettlement>, write 
     outputByFacility: day.outputByFacility,
     people: day.people.map(p => ({ slug: p.slug, kcalIssued: p.kcalIssued, sleepH: p.sleepH, alertness: p.outputs.alertness,
       fatigue: p.outputs.fatigue_met_hours, massKg: p.massKg, energy: p.energy, water: p.water,
-      sick: p.sick, wounded: p.wounded, warnings: p.warnings })),
+      sick: p.sick, wounded: p.wounded, workCapacity: p.workCapacity, workStopped: p.workStopped, warnings: p.warnings })),
     hazards: day.hazards, shortages: day.shortages, crises: day.crises, limitations: result.limitations }))
 }

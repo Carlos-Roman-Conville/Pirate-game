@@ -19,9 +19,9 @@ function inventory(n = 10) {
   stock.stock(recipe.inputs[0]!, n, 1)
   return stock
 }
-function outputs(fatigue = 0, alertness = 1) {
+function outputs(fatigue = 0, alertness = 1, hydration: number | null = 1) {
   vi.spyOn(characters, 'simulateDay').mockReturnValue({ slug: 'cooper', day: 1,
-    outputs: { fatigue_met_hours: fatigue, alertness }, notes: [], failedChecks: [] })
+    outputs: { fatigue_met_hours: fatigue, alertness, work_capacity_hydration: hydration }, notes: [], failedChecks: [] })
 }
 afterEach(() => vi.restoreAllMocks())
 
@@ -48,15 +48,42 @@ describe('work joins bodies, institutions, recipes and inventory', () => {
     const r = fixture.rate
     expect(report.batches).toBeCloseTo((r.base + (75 - r.skillReference) * r.skillPerLevel)
       * (r.base - 25 * r.fatiguePerMetHour) * 0.8)
-    expect(report.batches).toBeLessThan(workRate(75, { fatigue_met_hours: 0, alertness: 1 }))
-    expect(workRate(75, { fatigue_met_hours: 1000, alertness: 1 })).toBe(0)
+    expect(report.batches).toBeLessThan(workRate(75, { fatigue_met_hours: 0, alertness: 1, work_capacity_hydration: 1 }))
+    expect(workRate(75, { fatigue_met_hours: 1000, alertness: 1, work_capacity_hydration: 1 })).toBe(0)
     expect(() => workRate(75, {})).toThrow(/missing/)
   })
 
+  it('follows the engine hydration work capacity: 0 stops the day, null takes nothing, no output throws', () => {
+    const open = { fatigue_met_hours: 0, alertness: 1 }
+    expect(workRate(50, { ...open, work_capacity_hydration: 1 })).toBe(1)
+    expect(workRate(50, { ...open, work_capacity_hydration: 0 })).toBe(0)
+    expect(workRate(50, { ...open, work_capacity_hydration: null })).toBe(1)
+    expect(() => workRate(50, open)).toThrow(/work_capacity_hydration/)
+    outputs(0, 1, 0)
+    const stock = inventory(), stopped = workDay(cooper(), facility(), stock, 1)
+    expect(stopped).toMatchObject({ rate: 0, batches: 0, stopped: 'hydration', produced: { [recipe.output!]: 0 } })
+    expect(stock.amount(recipe.inputs[0]!)).toBe(10)
+    expect(stock.ledger().recipes).toHaveLength(0)
+    outputs(0, 1, null)
+    expect(workDay(cooper(), facility(), inventory(), 1)).toMatchObject({ batches: 1, stopped: null })
+  })
+
+  it('a real cooper with nothing to drink is stopped by the engine\'s hydration row, and drinking keeps the day', () => {
+    const dry = workDay(cooper(), facility(), inventory(), 1)
+    expect(dry.body.outputs.work_capacity_hydration).toBe(0)
+    expect(dry).toMatchObject({ batches: 0, stopped: 'hydration' })
+    const drank = workDay(cooper(), facility(), inventory(), 1, { ...characters.fixturePlace, processes: [characters.drinkingProcess()] })
+    expect(drank.body.outputs.work_capacity_hydration).toBe(1)
+    expect(drank.batches).toBeGreaterThan(0)
+    expect(drank.body.failedChecks).toEqual([])
+  })
+
   it('a real tired cooper produces less, with the bodies and goods both closing', () => {
-    const rested = workDay(cooper(), facility(), inventory(), 1)
+    // a body with nothing to drink is stopped by the hydration row within the day (below), so both of these drink (F-CH-9)
+    const watered = { ...characters.fixturePlace, processes: [characters.drinkingProcess()] }
+    const rested = workDay(cooper(), facility(), inventory(), 1, { ...watered })
     const tiredStock = inventory()
-    const tired = workDay(cooper(false), facility(), tiredStock, 1)
+    const tired = workDay(cooper(false), facility(), tiredStock, 1, { ...watered })
     expect(tired.batches).toBeLessThan(rested.batches)
     expect(tired.body.outputs.fatigue_met_hours).toBeGreaterThan(rested.body.outputs.fatigue_met_hours as number)
     expect(tired.body.failedChecks).toEqual([])

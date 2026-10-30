@@ -51,6 +51,21 @@
     "side": "left",
     "open": true
   },
+  "water": {
+    "drinkEveryMin": 60,
+    "dry": { "facility": "port.bakery", "fromDay": 20 }
+  },
+  "fatalWound": {
+    "day": 12,
+    "person": 3,
+    "kind": "thrust",
+    "location": "chest",
+    "depth": 1,
+    "open": true,
+    "infected": false,
+    "rateMlMin": 200,
+    "clotting": 0
+  },
   "fever": {
     "day": 9,
     "person": 1,

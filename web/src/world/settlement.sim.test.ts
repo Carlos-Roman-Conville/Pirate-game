@@ -80,8 +80,11 @@ describe('Port Royal settlement, thirty days', () => {
       expect(person.ranges.alertness!.min).toBeGreaterThanOrEqual(Math.min(...debt) * Math.min(...circadian))
       expect(person.ranges.alertness!.max).toBeLessThanOrEqual(Math.max(...debt) * Math.max(...circadian))
       expect(person.outputs.fat_kg).toBeGreaterThanOrEqual(fatFloor)
-      expect(person.massKg).toBeCloseTo(fixturePhysique.massKg - fixturePhysique.fatKg + Number(person.outputs.fat_kg), 8)
-      expect(person.ranges.mass_kg!.min).toBeGreaterThanOrEqual(fixturePhysique.massKg - fixturePhysique.fatKg + fatFloor)
+      // Body mass is the fat, plus the water the body is short (nutrition's ledger, since the sweat model of 2540), less the blood
+      // shed at the library density (circulation's ledger); the pools stay full in this run, so glycogen adds nothing.
+      const lost = person.bloodLostKg + person.waterDeficitKg
+      expect(person.massKg).toBeCloseTo(fixturePhysique.massKg - fixturePhysique.fatKg + Number(person.outputs.fat_kg) - lost, 8)
+      expect(person.ranges.mass_kg!.min).toBeGreaterThanOrEqual(fixturePhysique.massKg - fixturePhysique.fatKg + fatFloor - lost - 1e-8)
       // Library has no universal upper body-mass or MET-hour clamp. Bound gain by all food energy
       // plus the initial glycogen energy (read from its reserve row), not an invented healthy range.
       const energyRow = libraryTable('nutrition', 'nutrients').find(r => r.id === 'energy')!
@@ -99,7 +102,7 @@ describe('Port Royal settlement, thirty days', () => {
     for (const day of result.days) for (const person of day.people) {
       for (const crisis of person.crises) {
         expect(crisis.resolved).toBeUndefined()
-        expect(day.crises.some(c => c.slug === person.slug && c.cause === crisis.cause && c.day === crisis.day)).toBe(true)
+        expect(day.crises.some(c => c.slug === person.slug && c.cause === crisis.cause && c.record.startedAt === crisis.startedAt)).toBe(true)
       }
       for (const sick of person.sick.filter(s => s.crisis)) {
         expect(person.crises.some(c => c.cause === `disease:${sick.id}`)).toBe(true)
@@ -113,5 +116,57 @@ describe('Port Royal settlement, thirty days', () => {
     expect(sleepy.every(d => d.people[f.shortSleep.person]!.sleepH === f.sleepToH - f.shortSleepFromH)).toBe(true)
     expect(sleepy[6]!.people[f.shortSleep.person]!.outputs.alertness).toBeLessThan(1)
     expect(result.days[f.shortSleep.toDay]!.people[f.shortSleep.person]!.outputs.fatigue_met_hours).toBe(0)
+  })
+
+  it('a seeded fatal wound ends in a crisis record on its own day, before any death, and bleeds the body', () => {
+    const IV = 'circulation.bleeding.iv', w = f.fatalWound, slug = `settler-${w.person + 1}`
+    const before = result.days[w.day - 2]!.people[w.person]!, on = result.days[w.day - 1]!.people[w.person]!
+    expect(before.crises.filter(c => c.cause === IV)).toEqual([])
+    expect(before.bloodLostMl).toBe(0)
+    expect(on.bloodLostMl).toBeGreaterThan(0)
+    expect(on.crises.filter(c => c.cause === IV)).toHaveLength(1)
+    expect(result.days[w.day - 1]!.hazards).toContain(`${slug}:fatal-thrust`)
+    expect(result.days[w.day - 2]!.crises.some(c => c.slug === slug && c.cause === IV)).toBe(false)
+    expect(result.days[w.day - 1]!.crises.filter(c => c.slug === slug && c.cause === IV)).toHaveLength(1)
+    const record = on.crises.find(c => c.cause === IV)!
+    expect(record).toMatchObject({ kind: 'crisis', body: 'body', risk: null, organ: IV })
+    expect(record.source).toContain(IV)
+    // the same condition the next day is not a second record, and the engine has declared nobody dead
+    for (const day of result.days.slice(w.day)) expect(day.people[w.person]!.crises.filter(c => c.cause === IV)).toHaveLength(1)
+    for (const day of result.days) for (const person of day.people) {
+      expect(person.dead).toBe(false)
+      expect(person.crises.every(c => c.resolved === undefined)).toBe(true)
+    }
+  })
+
+  it('lists every crisis record the engine opened, and follows the hydration row that stops work', () => {
+    const key = (slug: string, c: { cause: string; startedAt: number }) => `${slug}|${c.cause}|${c.startedAt}`
+    for (const day of result.days) {
+      const held = day.people.flatMap(p => p.crises.map(c => key(p.slug, c))).sort()
+      expect(day.crises.map(c => key(c.slug, c.record)).sort(), `day ${day.day}`).toEqual(held)
+    }
+    expect(result.crises.map(c => key(c.slug, c.record)).sort()).toEqual(result.days[29]!.crises.map(c => key(c.slug, c.record)).sort())
+    const causes = new Set(result.crises.map(c => c.cause))
+    for (const cause of ['circulation.bleeding.iv', 'disease:yellow_fever', 'physiology.hydration.6-to-10', 'physiology.hydration.over-10']) {
+      expect(causes.has(cause), cause).toBe(true)
+    }
+    // water: only the bakery's dry spell opens hydration records, each body's two bands once, and work stops on the engine's word
+    const dry = f.water.dry, hydration = result.crises.filter(c => c.cause.startsWith('physiology.hydration'))
+    const bakers = new Set(result.days[0]!.people.filter(p => p.facility === dry.facility).map(p => p.slug))
+    expect(bakers.size).toBe(f.staffPerFacility)
+    expect(hydration).toHaveLength(2 * bakers.size)
+    expect(hydration.every(c => bakers.has(c.slug))).toBe(true)
+    let stopped = 0
+    for (const day of result.days) for (const person of day.people) {
+      const is = day.crises.some(c => c.slug === person.slug && c.cause.startsWith('physiology.hydration'))
+      expect(person.workStopped === 'hydration', `${day.day}:${person.slug}`).toBe(is)
+      expect(person.workCapacity === 0, `${day.day}:${person.slug}`).toBe(is)
+      if (is) stopped++
+    }
+    expect(stopped).toBeGreaterThan(0)
+    // the bakery made bread-stuffs before its dry spell and nothing once its four were stopped
+    const made = (day: number) => Object.values(result.days[day - 1]!.outputByFacility[dry.facility]!).reduce((a, b) => a + b, 0)
+    expect(made(dry.fromDay - 1)).toBeGreaterThan(0)
+    for (let day = 30; day > 21; day--) expect(made(day), `day ${day}`).toBe(0)
   })
 })

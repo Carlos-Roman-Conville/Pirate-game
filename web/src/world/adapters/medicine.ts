@@ -5,18 +5,21 @@
  * here into factors and handed to stats.ts by name (its one wound pathway per formula: the worst dip counts, dips never
  * stack). Sickness is an exposure by place and season (`diseases` `How the sim catches it`, environment.json `exposure`),
  * handed to the engine by disease id and dose. The surgeon's action is a `treatments` row: the game checks the skill and pays
- * the supplies from the inventory, the engine's treatment decides the effect. A death risk that falls due comes back as a
- * crisis event for the fate systems; nothing here resolves one (balance/BALANCE.md item 32: every death opens a crisis first).
+ * the supplies from the inventory, the engine's treatment decides the effect. Every record the engine opens (a due disease or
+ * inoculation death, a bleed into the dying class, water exhaustion) comes back as a crisis event for the fate systems, read
+ * by the engine's own `Crisis` type; nothing here resolves one (balance/BALANCE.md item 32: every death opens a crisis first).
  * The stand-ins are F-MD-* in ../FIXTURES.md.
  */
 import {
-  advanceDays, bodyOutputs, createMedicine, expose, inflictWound, medicineOutputs, treat, worldHealingFactors,
-  type ExposureResult, type MedicineCrisis, type MedicineOptions, type MedicineState, type TreatmentResult, type Wound,
+  advanceDays, bleed, bodyOutputs, circulationProcess, createMedicine, crisesOf, exposure, exposureIds, expose, inflictWound,
+  medicineOutputs, treat, worldHealingFactors,
+  type Crisis, type ExposureResult, type MedicineOptions, type MedicineState, type Process, type TreatmentResult, type Wound,
   type WoundOptions,
 } from '@rex/realism'
 import medicine from '../../../../files/pirate-ship/body/data/medicine.json'
 import environment from '../../../../files/pirate-ship/body/data/environment.json'
 import data from '../../../../data/pirate-ship/world/medicine.json'
+import characterData from '../../../../data/pirate-ship/world/characters.json'
 import { conditionsAt, isWetSeason, places } from './places.ts'
 import { engineOf, type GameCharacter } from './characters.ts'
 import type { WorkInventory } from './work.ts'
@@ -65,23 +68,34 @@ export interface GameWound {
   dips: AppliedDip[]
 }
 
-/** A crisis the engine opened, for the fate systems. `record` is the engine's own object: resolving it is theirs (`resolveCrisis`). */
+/**
+ * A crisis the engine opened, for the fate systems. `record` is the engine's own object: resolving it is theirs
+ * (`resolveCrisis` for the medicine ones, `declareDeath` once the host decides). `day` is the course day of a disease crisis.
+ */
 export interface CrisisEvent {
   kind: 'crisis'
   slug: string
   cause: string
-  day: number
+  day: number | null
   risk: number | null
   source: string
-  record: MedicineCrisis
+  record: Crisis
 }
 
-interface Held { state: MedicineState; crisisCursor: number; wounds: GameWound[] }
+interface Held {
+  state: MedicineState
+  crisisCursor: number
+  wounds: GameWound[]
+  /** Records taken from the world's trace (bleeding, water): the trace is renewed each day, so they are kept here. */
+  traced: Crisis[]
+  /** Causes still open at the last sweep: the same condition in a renewed trace is not a new crisis. */
+  continuing: Set<string>
+}
 const held = new WeakMap<GameCharacter, Held>()
 
 function heldOf(c: GameCharacter, o: MedicineOptions = {}): Held {
   let h = held.get(c)
-  if (!h) { h = { state: createMedicine(BODY, o), crisisCursor: 0, wounds: [] }; held.set(c, h) }
+  if (!h) { h = { state: createMedicine(BODY, o), crisisCursor: 0, wounds: [], traced: [], continuing: new Set() }; held.set(c, h) }
   return h
 }
 
@@ -91,11 +105,28 @@ export function medicineOf(c: GameCharacter, o: MedicineOptions = {}): MedicineS
 /** The wounds this character has been given, healed ones included. */
 export function woundsOf(c: GameCharacter): GameWound[] { return [...heldOf(c).wounds] }
 
-function newCrises(c: GameCharacter): CrisisEvent[] {
+const eventOf = (c: GameCharacter, r: Crisis): CrisisEvent =>
+  ({ kind: 'crisis', slug: c.slug, cause: r.cause, day: r.day ?? null, risk: r.risk, source: r.source, record: r })
+
+/** Records new since the last call: the medicine state's own and, when the world's trace is read, the ones in it (see `Held.traced`). */
+function newCrises(c: GameCharacter, fromTrace = false): CrisisEvent[] {
   const h = heldOf(c), fresh = h.state.crises.slice(h.crisisCursor)
   h.crisisCursor = h.state.crises.length
-  return fresh.map(r => ({ kind: 'crisis', slug: c.slug, cause: r.cause, day: r.day, risk: r.risk, source: r.source, record: r }))
+  if (fromTrace) {
+    const { world, body } = engineOf(c), open = new Set<string>()
+    for (const r of crisesOf(world, body)) {
+      if (r.resolvedAt === undefined) open.add(r.cause)
+      if (h.traced.includes(r) || h.continuing.has(r.cause)) continue
+      h.traced.push(r)
+      fresh.push(r)
+    }
+    h.continuing = open
+  }
+  return fresh.map(r => eventOf(c, r))
 }
+
+/** Every crisis record the engine has opened for this character: the medicine state's and the ones taken from the trace. */
+export function crisesHeld(c: GameCharacter): Crisis[] { const h = heldOf(c); return [...h.state.crises, ...h.traced] }
 
 // ------------------------------------------------------------------------------------------------------------ what a wound dips
 
@@ -181,6 +212,9 @@ export interface Hit {
   variant?: string
   /** Force the infection outcome; otherwise the engine rolls the row's chance. */
   infected?: boolean
+  /** The host's blood-loss rate in mL/min and clotting (both or neither; F-MD-3, F-MD-8): without them the wound bleeds nothing. */
+  rateMlMin?: number
+  clotting?: number
 }
 
 function locationOf(name: string): string {
@@ -207,6 +241,8 @@ export function inflict(c: GameCharacter, hit: Hit): GameWound {
   if (hit.open !== undefined) o.open = hit.open
   if (hit.variant !== undefined) o.variant = hit.variant
   if (hit.infected !== undefined) o.infected = hit.infected
+  if (hit.rateMlMin !== undefined) o.rateMlMin = hit.rateMlMin
+  if (hit.clotting !== undefined) o.clotting = hit.clotting
   const wound = inflictWound(h.state, row, o)
   const dips = dipsOf(row).filter(d => reaches(d.scope, location) && (d.variant === null || d.variant === hit.variant)).map(d => ({
     location, side: data.limbs.includes(location) ? hit.side ?? null : null,
@@ -226,6 +262,25 @@ export function dipFactor(all: GameWound[], where: { location: string; side?: Si
   return lowest(all.filter(w => !w.wound.healed).flatMap(w => w.dips).filter(d =>
     d.factor !== null && d.location === where.location && (where.side === undefined || d.side === null || d.side === where.side) &&
     d.attributes.includes(attribute)).map(d => d.factor!))
+}
+
+/**
+ * The engine's processes for this character's bleeding, for `Place.processes` (characters.ts): every open wound that has a host
+ * rate bleeds through the engine's `bleed` (traced and checked there), and the engine's circulation turns the loss into the
+ * bleeding class and, at the class the library calls dying, into a crisis record. None while no wound has a rate, so a body
+ * that bleeds nothing runs exactly as before. The engine's `medicineProcess` also keeps the healing clock, which `healDay` does.
+ * Circulation reads its tables on every run (about 2.5 ms), so it runs every `circulationEveryS` seconds (F-MD-9): a crisis is
+ * recorded at the first run after the loss reaches the class, while the bleeding itself is taken every step.
+ */
+export function woundProcesses(c: GameCharacter): Process[] {
+  const { state } = heldOf(c)
+  if (!state.wounds.some(w => !w.healed && w.rateMlMin !== null)) return []
+  return [
+    { name: 'wound-bleeding', every: 1, step(world, dt) {
+      for (const w of state.wounds) if (!w.healed && w.rateMlMin !== null) bleed(world, state.body, w.rateMlMin, dt, w.clotting, w.bound)
+    } },
+    circulationProcess(state.body, { every: data.circulationEveryS / characterData.clock.stepS }),
+  ]
 }
 
 /**
@@ -268,6 +323,8 @@ export interface SicknessReport {
   multiplier: number | null
   baseDose: number
   dose: number
+  /** Where the dose came from: the engine's exposure row, the F-MD-4 fixture, or the caller's scripted dose. */
+  doseSource: 'engine' | 'F-MD-4' | 'scripted'
   /** The engine's own `vector_exposure` for the place (null while the library has no table: FLAGS.md). */
   engineVectorExposure: number | null
   /** The engine's answer; null when the game could not place the exposure. */
@@ -287,10 +344,24 @@ export function multiplierOf(cell: string, wetSeason: boolean, atAnchor = false)
   return /^0\b/.test(clause) ? 0 : null
 }
 
+/** The dose a library exposure row states in its `vector` value (a sourced chance in [0, 1]); null where the row has none. */
+export function engineVectorDose(row: Record<string, unknown>): number | null {
+  const v = row.vector
+  if (v === undefined || v === null) return null
+  if (typeof v !== 'number' || !Number.isFinite(v) || v < 0 || v > 1) throw new Error(`medicine: the exposure row's vector value ${String(v)} is not a chance in [0, 1]`)
+  return v
+}
+
+/** The engine's vector dose for a terrain, null while its exposure table has none (FLAGS.md: environment, vector exposure) or no such row. */
+function engineDoseAt(terrain: string): number | null {
+  return exposureIds().includes(terrain) ? engineVectorDose(exposure(terrain).row) : null
+}
+
 /**
- * Expose a character to a disease at a place on a day. The dose is the fixture's base dose times the place's exposure
- * multiplier (F-MD-4), and nothing in a dry season for a disease the game catches in the wet; the engine draws whether it
- * takes, and the incubation, course and fate of the case from its own rows.
+ * Expose a character to a disease at a place on a day. The dose is the engine's `vector` value for the place's terrain where
+ * its exposure row has one; where that is null (it is, while the library has no source: FLAGS.md) it is the fixture's base dose
+ * times the place's exposure multiplier (F-MD-4), and the report says which. Nothing in a dry season for a disease the game
+ * catches in the wet; the engine draws whether it takes, and the incubation, course and fate of the case from its own rows.
  */
 export function exposeAt(c: GameCharacter, req: ExposureRequest): SicknessReport {
   const row = diseases.rows.find(r => r[0] === req.disease)
@@ -300,7 +371,8 @@ export function exposeAt(c: GameCharacter, req: ExposureRequest): SicknessReport
   const wet = isWetSeason(req.day), h = heldOf(c)
   const report: SicknessReport = {
     disease: req.disease, place: req.place, season: wet ? 'wet' : 'dry', vector: null, multiplier: null, baseDose: data.baseDose,
-    dose: 0, engineVectorExposure: conditionsAt(req.place, req.day, data.conditionsHour, req.weatherSeed ?? 1).vector_exposure, result: null,
+    dose: 0, doseSource: req.dose === undefined ? 'F-MD-4' : 'scripted',
+    engineVectorExposure: conditionsAt(req.place, req.day, data.conditionsHour, req.weatherSeed ?? 1).vector_exposure, result: null,
     unsupported: null, crises: [],
   }
   let dose = req.dose
@@ -309,12 +381,14 @@ export function exposeAt(c: GameCharacter, req: ExposureRequest): SicknessReport
     if (!vector) { report.unsupported = `no place vector for ${req.disease}`; return report }
     const cell = exposures.rows.find(r => r[0] === place.terrain)
     if (!cell) throw new Error(`medicine: no exposure row "${place.terrain}"`)
+    const sourced = engineDoseAt(place.terrain)
     const mult = multiplierOf(cellOf(exposures, cell, vector), wet, req.atAnchor)
     report.vector = vector
     report.multiplier = mult
-    if (mult === null) { report.unsupported = `the exposure table gives no multiplier for ${vector} at ${req.place}`; return report }
+    if (sourced === null && mult === null) { report.unsupported = `the exposure table gives no multiplier for ${vector} at ${req.place}`; return report }
     const gated = /wet[- ]season/i.test(cellOf(diseases, row, 'How the sim catches it')) && !wet
-    dose = gated ? 0 : data.baseDose * mult
+    if (sourced !== null) report.doseSource = 'engine'
+    dose = gated ? 0 : sourced ?? data.baseDose * mult!
     if (dose > 1) dose = 1
   }
   report.dose = dose
@@ -336,7 +410,9 @@ export interface HealingDay { outputs: ReturnType<typeof medicineOutputs>; crise
 /**
  * One day for the sick and the wounded: wounds heal and diseases run on the engine's clocks, with the healing factors the body
  * already holds (vitamin C, energy balance, sleep debt: the engine reads them from the world). Run after the day's
- * `simulateDay`. The medicine outputs by library id are put on the body beside the others.
+ * `simulateDay` and before `releaseDayTrace`: the crisis records the day's processes opened in the world's trace (a bleed
+ * into the dying class, water exhaustion) are taken here, with the medicine ones. The medicine outputs by library id are put
+ * on the body beside the others.
  */
 export function healDay(c: GameCharacter): HealingDay {
   const h = heldOf(c), { world, body } = engineOf(c)
@@ -344,7 +420,7 @@ export function healDay(c: GameCharacter): HealingDay {
   advanceDays(h.state, 1, worldHealingFactors(world, body))
   const outputs = medicineOutputs(h.state)
   Object.assign(bodyOutputs(world.registry.component(body)), outputs)
-  return { outputs, crises: newCrises(c) }
+  return { outputs, crises: newCrises(c, true) }
 }
 
 // ------------------------------------------------------------------------------------------------------------ the surgeon

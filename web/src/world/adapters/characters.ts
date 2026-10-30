@@ -6,8 +6,8 @@
  */
 import {
   World, Scheduler, defaultRegistry, bodyOutputs, physiologyProcess, nutritionProcess, neurologyProcess, roomAirProcess,
-  airContents, stockPools, pooledNutrients, splitSleepQuality, airDensity, P_SEA_LEVEL, C_TO_K,
-  type Component, type BodyOutputs, type ScheduleEntry,
+  airContents, stockPools, pooledNutrients, splitSleepQuality, airDensity, ingest, P_SEA_LEVEL, C_TO_K,
+  type Component, type BodyOutputs, type ScheduleEntry, type Process, type Transfer,
 } from '@rex/realism'
 import data from '../../../../data/pirate-ship/world/characters.json'
 
@@ -28,6 +28,8 @@ export interface Place {
   airC: number; volumeM3: number; ach: number
   /** Host weather from places.ts, sampled by clock hour; no climate formula here. */
   conditions?: (hour: number) => { air_c: number; wbgt_c: number }
+  /** Engine processes the caller adds ahead of the body's own, in order (`drinkingProcess`; medicine.ts `woundProcesses`: bleeding and circulation). */
+  processes?: Process[]
   /** Optional observation after all body processes, used by settlement acceptance. */
   observe?: (body: Component) => void
 }
@@ -45,11 +47,24 @@ export interface DayReport {
 
 interface EngineBody { world: World; body: Component; nextDay: number; noteCursor: number; checkCursor: number }
 
+/** The id every character's engine body has. */
+const BODY = 'body'
 const states = new WeakMap<GameCharacter, EngineBody>()
 const DAY_S = 86400
 
 export const fixturePhysique: Physique = { ...data.body, male: data.body.male === 1 }
 export const fixturePlace: Place = { ...data.place }
+
+/**
+ * F-CH-9: drinking water. The game has no water supply, so a caller that wants a body to drink adds this to `Place.processes`:
+ * every `everyMin` minutes the body takes the water it is short, through the engine's `ingest` (traced). Nothing else drinks.
+ */
+export function drinkingProcess(everyMin = 60): Process {
+  return { name: 'drink-to-deficit', every: everyMin * 60 / data.clock.stepS, step(w) {
+    const kg = w.registry.component(BODY).props.waterDeficitKg ?? 0
+    if (kg > 0) ingest(w, BODY, { waterKg: kg }, 'drink')
+  } }
+}
 
 /** The engine activity id a duty or action name stands for; throws for a duty no met row names (FIXTURES.md lists them). */
 export function activityOf(duty: string): string {
@@ -134,6 +149,7 @@ export function simulateDay(character: GameCharacter, day: number, place: Place 
     body.props.asleep = now?.sleepQuality !== undefined ? 1 : 0
   } })
   sch.add(roomAirProcess('room'))
+  for (const process of place.processes ?? []) sch.add(process) // before the body's step, so its mass ledger sees what they did
   sch.add(physiologyProcess('body', 'room', { ...opts, schedule }))
   sch.add(nutritionProcess('body', opts))
   sch.add(neurologyProcess('body', opts))
@@ -150,12 +166,22 @@ export function simulateDay(character: GameCharacter, day: number, place: Place 
 
 /** Start a new audit window after the caller has saved the day's ledger. Component state,
  * clock, environment and graph persist; only trace storage and conservation baselines renew.
- * This character loop has no process whose state depends on historical transfers.
+ * The blood ledger is the one history a process reads back (circulation checks the volume against the transfers out of it),
+ * so those transfers are carried into the new trace (F-SE-10).
  */
+const BLOOD_LEDGER = new Set(['volume:blood', 'mass:haemoglobin', 'mass:blood'])
 export function releaseDayTrace(character: GameCharacter): void {
   const s = states.get(character)
   if (!s) throw new Error('characters: no day to archive')
   const previous = s.world, next = new World(previous.registry)
+  const carried = new Map<string, Transfer>() // one summed record per flow: circulation sums the trace on every run
+  for (const x of previous.trace.transfers) {
+    if (!BLOOD_LEDGER.has(x.quantity)) continue
+    const key = `${x.quantity}|${x.from}|${x.to}`, held = carried.get(key)
+    if (held) held.amount += x.amount
+    else carried.set(key, { ...x, process: 'carried', note: 'blood ledger of the days before' })
+  }
+  next.trace.transfers.push(...carried.values())
   next.t = previous.t; next.env = previous.env; next.graph = previous.graph
   for (const c of previous.conserved) {
     if (c.substance) next.conserve(c.substance, [...c.components], c.tolerance)
