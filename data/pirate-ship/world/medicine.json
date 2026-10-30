@@ -29,7 +29,6 @@
   "baseDose": 0.02,
   "conditionsHour": 12,
   "unitsPerUse": 1,
-  "circulationEveryS": 1800,
   "vectors": {
     "yellow_fever": "Mosquito exposure",
     "malaria_vivax": "Mosquito exposure",

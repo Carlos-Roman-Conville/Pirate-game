@@ -1,5 +1,6 @@
 import { beforeAll, describe, expect, it } from 'vitest'
-import { libraryTable, metOf, overnight, fatKcalPerKg } from '@rex/realism'
+import { libraryTable, metOf, overnight, fatKcalPerKg, bleedingClass, normalBloodVolume, libraryMeta } from '@rex/realism'
+import characterData from '../../../data/pirate-ship/world/characters.json'
 import { activityOf, fixturePhysique } from './adapters/characters.ts'
 import { runSettlement, printSettlement, settlementFixture as f, settlementPlan, startDayOfYear } from './settlement.ts'
 
@@ -17,7 +18,10 @@ describe('Port Royal settlement, thirty days', () => {
     expect(result.days).toHaveLength(30)
     const lines: string[] = []
     printSettlement(result, line => lines.push(line))
-    expect(lines).toHaveLength(30)
+    expect(lines).toHaveLength(31)
+    const peakMb = Number(/^peak resident memory (\d+) MB$/.exec(lines[30]!)?.[1])
+    expect(peakMb).toBeGreaterThan(0)
+    expect(peakMb).toBeLessThan(1536)
     expect(JSON.parse(lines[0]!)).toMatchObject({ day: 1, date: 'Aug 1' })
     expect(JSON.parse(lines[29]!)).toMatchObject({ day: 30, date: 'Aug 30' })
     for (const [index, day] of result.days.entries()) {
@@ -131,6 +135,15 @@ describe('Port Royal settlement, thirty days', () => {
     const record = on.crises.find(c => c.cause === IV)!
     expect(record).toMatchObject({ kind: 'crisis', body: 'body', risk: null, organ: IV })
     expect(record.source).toContain(IV)
+    // F-MD-9 retired by 2570: circulation runs at the body's step, so the record opens within one step of the loss reaching the class
+    const factor = Number(/\(([\d.]+) - clotting\)/.exec(libraryMeta('circulation', 'bleeding').source)![1]) // the engine's `bleed`
+    const rateMlS = w.rateMlMin / 60 * (factor - w.clotting), baseline = normalBloodVolume(fixturePhysique.massKg, fixturePhysique.male)
+    let reachS = 0
+    while (bleedingClass(rateMlS * reachS, baseline).Class !== 'IV') reachS++
+    // the step stamped t has bled through t + one step by the time circulation reads it
+    const lateS = record.startedAt - (w.day - 1) * 86400 + characterData.clock.stepS - reachS
+    expect(lateS).toBeGreaterThanOrEqual(0)
+    expect(lateS).toBeLessThanOrEqual(characterData.clock.stepS)
     // the same condition the next day is not a second record, and the engine has declared nobody dead
     for (const day of result.days.slice(w.day)) expect(day.people[w.person]!.crises.filter(c => c.cause === IV)).toHaveLength(1)
     for (const day of result.days) for (const person of day.people) {

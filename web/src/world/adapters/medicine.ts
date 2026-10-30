@@ -19,7 +19,6 @@ import {
 import medicine from '../../../../files/pirate-ship/body/data/medicine.json'
 import environment from '../../../../files/pirate-ship/body/data/environment.json'
 import data from '../../../../data/pirate-ship/world/medicine.json'
-import characterData from '../../../../data/pirate-ship/world/characters.json'
 import { conditionsAt, isWetSeason, places } from './places.ts'
 import { engineOf, type GameCharacter } from './characters.ts'
 import type { WorkInventory } from './work.ts'
@@ -269,8 +268,8 @@ export function dipFactor(all: GameWound[], where: { location: string; side?: Si
  * rate bleeds through the engine's `bleed` (traced and checked there), and the engine's circulation turns the loss into the
  * bleeding class and, at the class the library calls dying, into a crisis record. None while no wound has a rate, so a body
  * that bleeds nothing runs exactly as before. The engine's `medicineProcess` also keeps the healing clock, which `healDay` does.
- * Circulation reads its tables on every run (about 2.5 ms), so it runs every `circulationEveryS` seconds (F-MD-9): a crisis is
- * recorded at the first run after the loss reaches the class, while the bleeding itself is taken every step.
+ * Circulation runs at the body's own step (F-MD-9 retired by 2570): a crisis is recorded within one step of the loss
+ * reaching the class.
  */
 export function woundProcesses(c: GameCharacter): Process[] {
   const { state } = heldOf(c)
@@ -279,7 +278,7 @@ export function woundProcesses(c: GameCharacter): Process[] {
     { name: 'wound-bleeding', every: 1, step(world, dt) {
       for (const w of state.wounds) if (!w.healed && w.rateMlMin !== null) bleed(world, state.body, w.rateMlMin, dt, w.clotting, w.bound)
     } },
-    circulationProcess(state.body, { every: data.circulationEveryS / characterData.clock.stepS }),
+    circulationProcess(state.body, { every: 1 }),
   ]
 }
 

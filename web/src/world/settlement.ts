@@ -164,4 +164,5 @@ export function printSettlement(result: ReturnType<typeof runSettlement>, write 
       fatigue: p.outputs.fatigue_met_hours, massKg: p.massKg, energy: p.energy, water: p.water,
       sick: p.sick, wounded: p.wounded, workCapacity: p.workCapacity, workStopped: p.workStopped, warnings: p.warnings })),
     hazards: day.hazards, shortages: day.shortages, crises: day.crises, limitations: result.limitations }))
+  write(`peak resident memory ${Math.round(process.resourceUsage().maxRSS / 1024)} MB`)
 }

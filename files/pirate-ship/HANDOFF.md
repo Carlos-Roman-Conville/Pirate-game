@@ -20,13 +20,14 @@ Under 4 KB. Four headings, rewritten (not appended) when a unit finishes or some
 
 ### Settlement (task 2563 re-ran it on the engine of 2561/2562)
 
-In `web/`: `node --experimental-strip-types src/world/settlement.run.ts` (Aug 1-30, about 26 s; the sim test asserts under 60 s).
+In `web/`: `node --experimental-strip-types src/world/settlement.run.ts` (Aug 1-30, about 22 s; the sim test asserts under 60 s).
+Circulation runs every body step (F-MD-9 retired by 2570); the ledger's last line is peak resident memory (~340 MB, bound 1.5 GB).
 - Every path that can end a body opens an engine `Crisis`; `healDay` collects them before `releaseDayTrace` renews the trace.
   Day 12 settler-4's unbound chest wound (F-MD-8, host rate) reaches class IV and opens a crisis; nobody is declared dead.
 - Hydration: `workRate` multiplies by `work_capacity_hydration`. Everyone drinks hourly (F-CH-9) except the bakery cooks from
   day 20 (F-SE-12): two hydration crises each on day 21, the bakery stops.
 - 2562 found no vector source: `exposeAt` reads the engine's `vector` where a row has one, else F-MD-4 (`doseSource`).
-- Fixtures: `web/src/world/FIXTURES.md` (F-SE, F-MD-8/9, F-CH-9; retired rows say `retired by 2563`). P12 thirst needs two
+- Fixtures: `web/src/world/FIXTURES.md` (F-SE, F-MD-8, F-CH-9; retired rows say `retired by 2563` or `2570`). P12 thirst needs two
   dry days (F-SE-11, Rex).
 
 ## Next
