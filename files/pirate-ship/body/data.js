@@ -4062,7 +4062,7 @@ window.BODY_DATA = {
    ]
   },
   "catalogue": {
-   "title": "The equipment catalogue (seed; from antiquity to now; a belt research task to complete)",
+   "title": "The equipment catalogue (researched and reconciled 2026-10-29; from antiquity to now; expandable, 300 is not a maximum)",
    "kind": "history",
    "conf": "medium",
    "source": "Usual attributions (Wikipedia timelines of microscope technology and element discovery, Museo Galileo on the air pump, encyclopaedia entries on the barometer, histories of chemistry and alchemical apparatus; EQ-*). Dates vary by source and are the common ones; capabilities are the keeper's estimates from the apparatus's physics (a charcoal fire with bellows reaches about 1,200 C; a sand bath 300; a water bath 100) and are placeholders until researched per item. Period availability: 1650 to 1730, Atlantic.",
@@ -4084,6 +4084,8 @@ window.BODY_DATA = {
     "Skill (GOODS 3c)",
     "Enables",
     "1650 to 1730 availability",
+    "conf_history",
+    "conf_capability",
     "Mark"
    ],
    "rows": [
@@ -4105,7 +4107,9 @@ window.BODY_DATA = {
      "any",
      "grinding, mixing, trituration; bronze corrodes in acids (Wikipedia), so acids go in stone or porcelain",
      "common",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "balance_assay",
@@ -4125,7 +4129,9 @@ window.BODY_DATA = {
      "Precious Metalworking (assay)",
      "weighing the bead after cupellation; the check that two beads agree (Agricola); fineness and yield",
      "rare: needs an assayer or mint; none on small ships",
-     "proposed (researched 2026-10-29; EQ-MEAS-ASSAY; EQ-MEAS-WIKI)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MEAS-ASSAY; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "balance_lavoisier",
@@ -4145,27 +4151,31 @@ window.BODY_DATA = {
      "Natural philosophy",
      "weighing reactants and products to a milligram: the conservation of mass in the Lavoisier work (EQ-CHEM18-18)",
      "none (assay balances of the period weigh to about a grain; the 1788 instrument is not makeable; open for the exact figure)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-18)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM18-18) reconciled 2026-10-29"
     ],
     [
      "balance_analytical",
      "Analytical balance (electronic)",
      "measure",
      "measure (mass)",
-     "1940s to now",
-     "-",
-     "the precision balance",
-     "-",
+     "1945 to 1947 for the single-pan substitution analytical balance (Mettler, Switzerland: production 1946 per one source, first model early 1947 per another); the first fully electronic precision balance, Mettler PT1200, 1973 or 1974 (sources differ; 1,200 g capacity, 0.01 g sensitivity); an electronic balance reading 0.01 mg is later and its date is open (no page read)",
+     "Erhard Mettler (single-pan substitution balance); Mettler (PT1200); the 0.01 mg electronic form: open",
+     "the single-pan mechanical balance, which replaced the two-pan analytical balance (balance_oertling)",
+     "open (no source read for the construction)",
      "electric",
      "-",
      "-",
-     "0.01 mg",
-     "200 g",
+     "0.01 mg (a modern specification: the keeper's figure, no source read; the PT1200 read to 0.01 g)",
+     "200 g (the keeper's figure; the PT1200 held 1,200 g)",
      "mains power",
      "-",
-     "modern analysis",
+     "modern analysis (a modern instrument: nothing in 1650 to 1730 weighs like it) Reconciled: researched on the Mettler history; dates differ by source (1946 or 1947; 1973 or 1974) and are given.",
      "none (anomaly)",
-     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (every number and date to be verified by the lane)"
+     "medium",
+     "low",
+     "rex (the catalogue exists and this item belongs, 2026-10-29); proposed (researched 2026-10-29; EQ-MEAS-METTLER; every number to be verified by the lane) reconciled 2026-10-29"
     ],
     [
      "furnace_charcoal",
@@ -4185,7 +4195,9 @@ window.BODY_DATA = {
      "Smithing, Assaying, Alchemy (the chymist)",
      "melting copper (1085), silver (962), gold (1064), glass; not iron to liquid (1538) without a large blast (melting points are standard physics; 1,200 C is the keeper's estimate, no source gave a figure)",
      "common",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI, EQ-HEAT-ASSAY)"
+     "low",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI, EQ-HEAT-ASSAY) reconciled 2026-10-29"
     ],
     [
      "athanor",
@@ -4205,7 +4217,9 @@ window.BODY_DATA = {
      "Alchemy",
      "long digestions at steady heat (days to weeks); the source says only 'constant, durable temperature'; the 400 C and the precision are physics estimates, not sourced; one use shown is making nitric acid (aqua fortis) for assaying",
      "rare (the apothecary, the chymist)",
-     "proposed (researched 2026-10-29; EQ-HEAT-ATH)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-HEAT-ATH) reconciled 2026-10-29"
     ],
     [
      "bath_water",
@@ -4225,7 +4239,9 @@ window.BODY_DATA = {
      "any",
      "gentle digestion, drying, low distillation at no more than the boil (100 C is physics; the source says the modern bain-marie stays under 100 C and Mary's original could go above 100 C)",
      "common",
-     "proposed (researched 2026-10-29; EQ-HEAT-BATH)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-HEAT-BATH) reconciled 2026-10-29"
     ],
     [
      "bath_sand",
@@ -4245,7 +4261,9 @@ window.BODY_DATA = {
      "any",
      "even heat on all sides of a glass vessel without flame, fewer side reactions; the source gives no temperature (300 C is the keeper's estimate from the pan and the fire)",
      "common",
-     "proposed (researched 2026-10-29; EQ-HEAT-BATH)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-HEAT-BATH) reconciled 2026-10-29"
     ],
     [
      "lamp_spirit",
@@ -4263,9 +4281,11 @@ window.BODY_DATA = {
      "small vessels",
      "spirit",
      "any",
-     "small-scale heating; the source says the flame is limited to about 5 cm and cooler than a Bunsen burner (no figure; 500 C is an estimate)",
-     "common where spirit is (rum is no help: it is too weak and impure to burn clean; spirit of wine is the chymist's)",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI)"
+     "small-scale heating; the source says the flame is limited to about 5 cm and cooler than a Bunsen burner (no figure; 500 C is an estimate) Reconciled: availability set to none (anomaly) because the item is dated after 1730; the earlier forerunner named in the availability note is a different thing.",
+     "none (anomaly): the dated item is after 1730; common where spirit is (rum is no help: it is too weak and impure to burn clean; spirit of wine is the chymist's)",
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI) reconciled 2026-10-29"
     ],
     [
      "bunsen",
@@ -4285,7 +4305,9 @@ window.BODY_DATA = {
      "any",
      "clean steady flame without soot",
      "none (no gas supply; a spirit lamp or charcoal fire)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-3)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-CHEM19-3) reconciled 2026-10-29"
     ],
     [
      "lens_burning",
@@ -4305,7 +4327,9 @@ window.BODY_DATA = {
      "Lens-grinding",
      "heating without fuel or contamination (Priestley used one 1774 for oxygen from mercury calx, in a time-anomaly discovery within reach in 1700); 1,400 C is Tschirnhaus's mirror, Villette's melted pot-iron, silver and slate; Lavoisier later used a lens of 89 cm",
      "rare (a small lens common; a great lens none)",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI, EQ-HEAT-LENS)"
+     "high",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI, EQ-HEAT-LENS) reconciled 2026-10-29"
     ],
     [
      "crucible",
@@ -4325,7 +4349,9 @@ window.BODY_DATA = {
      "Smithing, Assaying",
      "melting metals and glass; brass cementation at about 900 C (Wikipedia); 1,600 C is the clay's limit (keeper physics estimate, not sourced)",
      "common (Hessian crucibles reached the New World)",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "cupel",
@@ -4345,7 +4371,9 @@ window.BODY_DATA = {
      "Assaying",
      "assaying silver and gold; refining; minting and mine assays",
      "common where there is an assayer",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "touchstone",
@@ -4365,7 +4393,9 @@ window.BODY_DATA = {
      "Precious Metalworking (assay)",
      "quick test of gold and silver alloys without melting; the acid test",
      "common",
-     "proposed (researched 2026-10-29; EQ-MEAS-ASSAY; EQ-MEAS-WIKI)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MEAS-ASSAY; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "alembic",
@@ -4385,7 +4415,9 @@ window.BODY_DATA = {
      "Distilling, Apothecary, Alchemy",
      "the head fits the cucurbit's mouth, takes the vapour and runs it down a sloping tube; distilling spirits, essential oils, acids; the upper limit is the glass or copper (keeper physics estimate, not sourced)",
      "common",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "retort",
@@ -4405,7 +4437,9 @@ window.BODY_DATA = {
      "Alchemy, Apothecary",
      "a spherical vessel with a long downward neck; dry distillation, mercury from cinnabar, phosphorus from urine (Brand 1669, early clay retorts per Wikipedia); 600 C is the keeper's estimate for clay/stoneware",
      "rare (the apothecary, the chymist)",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "pelican",
@@ -4425,7 +4459,9 @@ window.BODY_DATA = {
      "Alchemy",
      "repeated distillation without opening (digestion, reflux); the alchemical pelican has two curved side tubes returning the condensate to the body; no source gave a figure",
      "rare",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "aludel",
@@ -4445,7 +4481,9 @@ window.BODY_DATA = {
      "Alchemy",
      "sublimation: the lowest pot sits in the furnace, vapour rises and condenses as flowers in the head (Wikipedia); sal ammoniac, calomel, sulphur, arsenic; 600 C is the keeper's estimate",
      "rare",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "worm",
@@ -4465,7 +4503,9 @@ window.BODY_DATA = {
      "Distilling",
      "efficient condensing of the vapour from the lyne arm in a pot still (Wikipedia); the search for worms in 1650s Barbados stills found no source, so the plantation use is open",
      "common (every still)",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI, EQ-VESS-RUM)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI, EQ-VESS-RUM) reconciled 2026-10-29"
     ],
     [
      "still_pot",
@@ -4485,13 +4525,15 @@ window.BODY_DATA = {
      "Distilling",
      "rum, brandy, aqua vitae, spirit of wine for the apothecary; every Barbados plantation fired its own still",
      "common (every sugar plantation)",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI, EQ-VESS-RUM)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI, EQ-VESS-RUM) reconciled 2026-10-29"
     ],
     [
      "still_column",
      "Column still",
      "separate",
-     "vessel, distillation",
+     "vessel, separate",
      "1813 (Cellier-Blumenthal); Coffey patent 1830",
      "Aeneas Coffey (after Cellier-Blumenthal, Perrier, Fournier, Saint Marc)",
      "the pot still, Cellier-Blumenthal still",
@@ -4503,9 +4545,11 @@ window.BODY_DATA = {
      "continuous; open (no figure on the page)",
      "a steam supply (a boiler), continuous feed of wash, sheet metalwork and valves",
      "Distilling",
-     "strong spirit in one pass",
+     "strong spirit in one pass Reconciled: Roles retyped to the roles table ids (was \"vessel, distillation\").",
      "none: needs a steam boiler and plate-making; pot stills and alembics were the practice",
-     "proposed (researched 2026-10-29; EQ-IND19MED-COFF)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-IND19MED-COFF) reconciled 2026-10-29"
     ],
     [
      "condenser_liebig",
@@ -4525,7 +4569,9 @@ window.BODY_DATA = {
      "Chymistry, Distilling",
      "laboratory distillation; the vapour condenses on the cold inner wall (physics: needs a jacket below the boiling point)",
      "none (rubber hose and a glass jacket are 19th c.; a tin worm in a tub does the work)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-1)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM19-1) reconciled 2026-10-29"
     ],
     [
      "filter",
@@ -4545,7 +4591,9 @@ window.BODY_DATA = {
      "any",
      "clarifying liquors and tinctures, separating a precipitate from its liquid (capability from the physics of a mesh; no temperature limit but the cloth's, so none is claimed)",
      "common (cloth); rare (paper outside towns)",
-     "proposed (researched 2026-10-29; EQ-SEP-WIKI; EQ-SEP-FILT)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SEP-WIKI; EQ-SEP-FILT) reconciled 2026-10-29"
     ],
     [
      "crystallise",
@@ -4565,7 +4613,9 @@ window.BODY_DATA = {
      "Apothecary, Refining (saltpetre, sugar, salt)",
      "saltpetre refining (GOODS row 39), sugar, salts, alum; no source page gave details, the use is the keeper's",
      "common",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "thermoscope",
@@ -4585,7 +4635,9 @@ window.BODY_DATA = {
      "Apothecary",
      "comparing heat and cold, weather; no absolute scale",
      "rare: a philosophers' instrument",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "thermometer_fahrenheit",
@@ -4605,7 +4657,9 @@ window.BODY_DATA = {
      "Apothecary",
      "a repeatable scale; temperatures of baths and furnace work below 350 C",
      "none in the Atlantic colonies 1650 to 1730: Dutch and German instrument makers only",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "barometer",
@@ -4625,7 +4679,9 @@ window.BODY_DATA = {
      "Apothecary",
      "weather and altitude; proof the air has weight; vacuum above the column",
      "rare: a gentleman's instrument; unsuited to ships until gimbaled designs after 1750",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "air_pump",
@@ -4645,7 +4701,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "experiments on air (Boyle's law 1662), combustion in vacuum",
      "rare (the Royal Society; a few makers)",
-     "proposed (researched 2026-10-29; EQ-PRES-PUMP)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PRES-PUMP) reconciled 2026-10-29"
     ],
     [
      "digester",
@@ -4665,7 +4723,9 @@ window.BODY_DATA = {
      "Natural philosophy, Cooking",
      "cooking bones to jelly; reactions above the boiling point",
      "rare (shown to the Royal Society, Boyle present; a curiosity)",
-     "proposed (researched 2026-10-29; EQ-PRES-PAPIN)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PRES-PAPIN) reconciled 2026-10-29"
     ],
     [
      "pneumatic_trough",
@@ -4685,7 +4745,9 @@ window.BODY_DATA = {
      "Chymistry",
      "collecting gases insoluble in water (hydrogen, oxygen, nitrogen named in EQ-CHEM18-1); water-soluble gases need the mercury trough (EQ-CHEM18-1; GOODS 3c)",
      "none as a chemist's tool (1727 is the period's last year); a tub and inverted bottle were makeable in 1700 with common glass and water (physics, not sourced)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-1, EQ-CHEM18-12)"
+     "high",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-CHEM18-1, EQ-CHEM18-12) reconciled 2026-10-29"
     ],
     [
      "eudiometer",
@@ -4705,7 +4767,9 @@ window.BODY_DATA = {
      "Chymistry",
      "measuring how much of an air burns or is absorbed: gas composition (EQ-CHEM18-2; GOODS 3c)",
      "none (needs the electric spark and the pneumatic trough, neither in use 1650 to 1730)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-2)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM18-2) reconciled 2026-10-29"
     ],
     [
      "woulfe",
@@ -4723,9 +4787,11 @@ window.BODY_DATA = {
      "bottle sizes, open",
      "a gas source, tubes, luting, water or a washing liquid",
      "Chymistry",
-     "passing a gas through a liquid to wash or absorb it; the three-necked bottle stops suck-back (EQ-CHEM18-5)",
-     "rare: Glauber's earlier series of vessels existed in the 1650s; the named bottle did not (EQ-CHEM18-5)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-5)"
+     "passing a gas through a liquid to wash or absorb it; the three-necked bottle stops suck-back (EQ-CHEM18-5) Reconciled: availability set to none (anomaly) because the item is dated after 1730; the earlier forerunner named in the availability note is a different thing.",
+     "none (anomaly): the dated item is after 1730; rare: Glauber's earlier series of vessels existed in the 1650s; the named bottle did not (EQ-CHEM18-5)",
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM18-5) reconciled 2026-10-29"
     ],
     [
      "kipp",
@@ -4745,7 +4811,9 @@ window.BODY_DATA = {
      "Chymistry",
      "hydrogen, carbon dioxide, hydrogen sulphide, chlorine and others on demand; stops by itself when the stopcock is shut (a laboratory gas source for GAS_DYNAMICS)",
      "none (needs blown, ground and stoppered glass; the period fills a bladder or a bottle by hand)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-2)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM19-2) reconciled 2026-10-29"
     ],
     [
      "leyden",
@@ -4765,7 +4833,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "storing and releasing charge: sparks for the eudiometer, shocks (EQ-CHEM18-7; GOODS 3c)",
      "none (1745); a glass jar and a hand-rubbed globe existed, the jar's use did not (EQ-CHEM18-7)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-7)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-CHEM18-7) reconciled 2026-10-29"
     ],
     [
      "voltaic_pile",
@@ -4785,7 +4855,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "a continuous current: electrolysis of water 1800, Davy's elements 1807-08 (EQ-CHEM18-9)",
      "none (1799; zinc was a rare metal in the Atlantic trade in the period, open)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-9)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM18-9) reconciled 2026-10-29"
     ],
     [
      "electrolysis",
@@ -4805,7 +4877,9 @@ window.BODY_DATA = {
      "Chymistry",
      "splitting water; isolating the alkali metals; electroplating (1840)",
      "none (no current source)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-15; EQ-CHEM19-17; the date from the seed row)"
+     "high",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-CHEM19-15; EQ-CHEM19-17; the date from the seed row) reconciled 2026-10-29"
     ],
     [
      "microscope_compound",
@@ -4825,7 +4899,9 @@ window.BODY_DATA = {
      "Natural philosophy, Lens-grinding",
      "seeing insects, fibres, plant cells (Hooke named \"cells\" in Micrographia); no use for chemistry yield",
      "rare (London makers; Royal Society circle; Drebbel type seen in Rome 1624)",
-     "proposed (researched 2026-10-29; EQ-OPT-MICRO)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-OPT-MICRO) reconciled 2026-10-29"
     ],
     [
      "microscope_simple",
@@ -4845,13 +4921,15 @@ window.BODY_DATA = {
      "Lens-grinding",
      "animalcules seen 1676 (nobody knew what they meant until the 1860s: DISCOVERY identification vs understanding)",
      "rare (Leeuwenhoek did not sell his instruments)",
-     "proposed (researched 2026-10-29; EQ-OPT-MICRO)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-OPT-MICRO) reconciled 2026-10-29"
     ],
     [
      "microscope_achromatic",
      "Achromatic microscope",
      "light and optics",
-     "light, magnification",
+     "light and optics",
      "1830 (Lister); achromatic doublet by Hall (secret) and Dollond (patent 1758)",
      "Joseph Jackson Lister (microscope); Chester Moore Hall; John Dollond",
      "single-lens and compound microscopes; Newton held colour correction impossible",
@@ -4863,9 +4941,11 @@ window.BODY_DATA = {
      "-",
      "crown and flint glass pairs, lens-grinding, stage and mirror",
      "Lens-grinding",
-     "sharp colour-free view of cells and blood",
+     "sharp colour-free view of cells and blood Reconciled: Roles retyped to the roles table ids (was \"light, magnification\").",
      "none: achromats date from Hall and Dollond (about 1733 to 1758); Lister's microscope is 1830 (not on the fetched page)",
-     "proposed (researched 2026-10-29; EQ-IND19MED-ACHR)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-IND19MED-ACHR) reconciled 2026-10-29"
     ],
     [
      "telescope",
@@ -4885,7 +4965,9 @@ window.BODY_DATA = {
      "Navigation",
      "the lookout's glass; navigation; sighting ships and coasts",
      "common (ships carried them by the early 1700s; availability year is the keeper's reading, source gives none)",
-     "proposed (researched 2026-10-29; EQ-OPT-TELE)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-OPT-TELE) reconciled 2026-10-29"
     ],
     [
      "hydrometer",
@@ -4905,7 +4987,9 @@ window.BODY_DATA = {
      "Distilling, Apothecary",
      "strength of spirits and brines by floating depth; later the excise standard (Sikes legal 1818, sources say 1816)",
      "rare in the period: used by philosophers; the excise standard came after 1800",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI; EQ-MEAS-PROOF)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI; EQ-MEAS-PROOF) reconciled 2026-10-29"
     ],
     [
      "clock_pendulum",
@@ -4925,7 +5009,9 @@ window.BODY_DATA = {
      "Precious Metalworking",
      "exact time for experiments and fixed observation; longitude work on land",
      "rare: a few in great houses and colonial centres; none aboard",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "calorimeter",
@@ -4945,7 +5031,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "heat released in a chemical change, by the ice it melts (EQ-CHEM18-4)",
      "none (ice and a balance exist in the Atlantic in winter; the idea of latent heat is 1761)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-4)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM18-4) reconciled 2026-10-29"
     ],
     [
      "burette",
@@ -4965,7 +5053,9 @@ window.BODY_DATA = {
      "Chymistry",
      "titration: quantitative analysis (EQ-CHEM18-16)",
      "none (anomaly)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-16)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM18-16) reconciled 2026-10-29"
     ],
     [
      "spectroscope",
@@ -4985,13 +5075,15 @@ window.BODY_DATA = {
      "Chymistry",
      "identification of elements by line (caesium, rubidium 1860); DISCOVERY's identification jump",
      "none (a prism exists; a lined slit and a clean flame do not)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-3 for the flame; the date from the seed row, design open)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM19-3 for the flame; the date from the seed row, design open) reconciled 2026-10-29"
     ],
     [
      "centrifuge",
      "Centrifuge",
      "separate",
-     "handle, separation",
+     "handle, separate",
      "1864 (Antonin Prandtl dairy centrifuge); 1875 (Alexander Prandtl); Robins's whirling arm for drag (18th c.)",
      "Antonin and Alexander Prandtl; Benjamin Robins (whirling arm)",
      "the whirling arm; settling under gravity",
@@ -5003,15 +5095,17 @@ window.BODY_DATA = {
      "open",
      "a spindle, gears or belt, balanced tubes",
      "Natural philosophy",
-     "separating cream, blood cells and fine solids faster than settling",
+     "separating cream, blood cells and fine solids faster than settling Reconciled: Roles retyped to the roles table ids (was \"handle, separation\").",
      "none: settling and decanting only; the whirling arm is a later 18th c. device",
-     "proposed (researched 2026-10-29; EQ-IND19MED-CENT)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-IND19MED-CENT) reconciled 2026-10-29"
     ],
     [
      "autoclave",
      "Autoclave",
      "vessel",
-     "vessel, steam pressure",
+     "vessel, pressure",
      "1879 (Chamberland); Papin's steam digester 1679",
      "Charles Chamberland; Denis Papin (digester)",
      "Papin's digester",
@@ -5023,9 +5117,11 @@ window.BODY_DATA = {
      "stovetop size up to rooms",
      "heat source, sealed vessel, safety valve, pressure gauge",
      "Natural philosophy, Surgery",
-     "sterile instruments, dressings and media",
-     "rare: Papin's digester (1679) was known and could reach above 100 C; sterilising use unknown",
-     "proposed (researched 2026-10-29; EQ-IND19MED-AUTO)"
+     "sterile instruments, dressings and media Reconciled: availability set to none (anomaly) because the item is dated after 1730; the earlier forerunner named in the availability note is a different thing. Reconciled: Roles retyped to the roles table ids (was \"vessel, steam pressure\").",
+     "none (anomaly): the dated item is after 1730; rare: Papin's digester (1679) was known and could reach above 100 C; sterilising use unknown",
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-IND19MED-AUTO) reconciled 2026-10-29"
     ],
     [
      "stethoscope",
@@ -5045,7 +5141,9 @@ window.BODY_DATA = {
      "Surgery",
      "hearing heart and lung sounds; the surgeon's report sharpens",
      "none: any turner could make the tube, but the use dates from 1816",
-     "proposed (researched 2026-10-29; EQ-IND19MED-STET)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-IND19MED-STET) reconciled 2026-10-29"
     ],
     [
      "thermometer_clinical",
@@ -5063,15 +5161,17 @@ window.BODY_DATA = {
      "-",
      "a glass blower, mercury, a graduated scale",
      "Surgery, Glassmaking",
-     "fever diagnosis; healthy 36.3 to 37.5 C (Wunderlich)",
-     "rare: Santorio's thermoscope existed from 1612 to 1625 as a curiosity; no short quick thermometer",
-     "proposed (researched 2026-10-29; EQ-IND19MED-THER)"
+     "fever diagnosis; healthy 36.3 to 37.5 C (Wunderlich) Reconciled: availability set to none (anomaly) because the item is dated after 1730; the earlier forerunner named in the availability note is a different thing.",
+     "none (anomaly): the dated item is after 1730; rare: Santorio's thermoscope existed from 1612 to 1625 as a curiosity; no short quick thermometer",
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-IND19MED-THER) reconciled 2026-10-29"
     ],
     [
      "syringe",
      "Hypodermic syringe",
      "handle",
-     "handle, injection",
+     "handle",
      "1844 (Rynd, first injection; page) or 1851 (Wood's glass syringe, Pravaz); Wren injected dogs 1656",
      "Francis Rynd; Alexander Wood; Charles Pravaz; Charles Hunter coined hypodermic 1858",
      "Wren's bladder and quill (1656)",
@@ -5083,9 +5183,11 @@ window.BODY_DATA = {
      "open (page gives none)",
      "glass blowing, a hollow needle drawn from silver or steel, a drug solution",
      "Surgery, Apothecary",
-     "injecting drugs into the skin or vein",
-     "rare: Wren and Major injected animals and men with bladders and quills in the 1650s and 1660s; no hollow needle",
-     "proposed (researched 2026-10-29; EQ-IND19MED-HYPO)"
+     "injecting drugs into the skin or vein Reconciled: availability set to none (anomaly) because the item is dated after 1730; the earlier forerunner named in the availability note is a different thing. Reconciled: Roles retyped to the roles table ids (was \"handle, injection\").",
+     "none (anomaly): the dated item is after 1730; rare: Wren and Major injected animals and men with bladders and quills in the 1650s and 1660s; no hollow needle",
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-IND19MED-HYPO) reconciled 2026-10-29"
     ],
     [
      "davy_lamp",
@@ -5105,7 +5207,9 @@ window.BODY_DATA = {
      "Mining",
      "a flame safe in methane; a gas detector (GAS_DYNAMICS's lamp face)",
      "none (the candle that gutters is the period's; fine woven wire gauze is later)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-8)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM19-8) reconciled 2026-10-29"
     ],
     [
      "furnace_blast",
@@ -5125,7 +5229,9 @@ window.BODY_DATA = {
      "Smelting",
      "liquid pig iron for casting, or for the finery to refine to bar (EQ-MET-3)",
      "rare (none in the islands; colonial furnaces such as Principio 1723 are in GOODS row 130)",
-     "proposed (researched 2026-10-29; EQ-MET-1; EQ-MET-3)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-MET-1; EQ-MET-3) reconciled 2026-10-29"
     ],
     [
      "furnace_reverberatory",
@@ -5145,7 +5251,9 @@ window.BODY_DATA = {
      "Smelting, Glassmaking",
      "melting and smelting without the charge touching the fuel (copper, lead, tin, pig iron); the source gives no temperature (1,300 C is the keeper's estimate)",
      "rare (England and a few ironworks; none in the Caribbean)",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI) reconciled 2026-10-29"
     ],
     [
      "crucible_steel",
@@ -5165,7 +5273,9 @@ window.BODY_DATA = {
      "Smelting, Smithing",
      "homogeneous cast steel for blades, springs and instruments",
      "none in England (Huntsman 1740 is after 1730); Sheffield made only shear steel from Swedish iron, about 200 t a year; Indian wootz ingots were a trade curiosity (open how far they came)",
-     "proposed (researched 2026-10-29; EQ-IND19MED-CRUC)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-IND19MED-CRUC) reconciled 2026-10-29"
     ],
     [
      "bessemer",
@@ -5185,7 +5295,9 @@ window.BODY_DATA = {
      "Smelting",
      "steel in tonnes from pig iron",
      "none: needs a powerful blast engine and pig iron in tonnage; the Wikipedia page says steel before was costly and small-scale",
-     "proposed (researched 2026-10-29; EQ-IND19MED-BESS)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-IND19MED-BESS) reconciled 2026-10-29"
     ],
     [
      "furnace_electric",
@@ -5205,13 +5317,15 @@ window.BODY_DATA = {
      "Smelting",
      "steel, ferro-alloys, phosphorus",
      "none: no electric generator before the 19th century",
-     "proposed (researched 2026-10-29; EQ-IND19MED-EAF)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-IND19MED-EAF) reconciled 2026-10-29"
     ],
     [
      "refrigerator",
      "Mechanical refrigeration",
      "cold",
-     "vessel, refrigerant cycle",
+     "vessel, cold",
      "1834 (Perkins, first working closed vapour-compression); Cullen 1755 (page); Evans 1805; Harrison 1851; Carre 1859; Linde 1876",
      "Perkins; Harrison; Carre; Linde",
      "ice houses and evaporative cooling; Cullen, Franklin and Hadley",
@@ -5223,15 +5337,17 @@ window.BODY_DATA = {
      "open",
      "a pump or compressor, volatile liquid, a condenser coil, steam engine",
      "Natural philosophy",
-     "ice and cooled stores",
+     "ice and cooled stores Reconciled: Roles retyped to the roles table ids (was \"vessel, refrigerant cycle\").",
      "none: ice houses held natural ice; mechanical cooling dates from Cullen 1755",
-     "proposed (researched 2026-10-29; EQ-IND19MED-REFR)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-IND19MED-REFR) reconciled 2026-10-29"
     ],
     [
      "dewar",
      "Vacuum flask",
      "vessel",
-     "vessel, insulation",
+     "vessel",
      "1892",
      "James Dewar",
      "Dewar's double brass chamber for palladium heat measurements",
@@ -5243,9 +5359,11 @@ window.BODY_DATA = {
      "open (page gives none)",
      "an air pump, a glass blower, silvering",
      "Glassmaking",
-     "holding liquefied gases and keeping heat or cold for hours",
+     "holding liquefied gases and keeping heat or cold for hours Reconciled: Roles retyped to the roles table ids (was \"vessel, insulation\").",
      "none: the idea is 1892; the air pump and glassblowing existed",
-     "proposed (researched 2026-10-29; EQ-IND19MED-VAC)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-IND19MED-VAC) reconciled 2026-10-29"
     ],
     [
      "ph_meter",
@@ -5265,7 +5383,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "acidity as a number, not litmus's yes or no; no use in period without the glass electrode",
      "none (anomaly; litmus is period; no thin pH glass or valve amplifier)",
-     "proposed (researched 2026-10-29; EQ-AN20-PHM)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-AN20-PHM) reconciled 2026-10-29"
     ],
     [
      "mass_spec",
@@ -5285,7 +5405,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "exact molecular mass; identification of any substance: DISCOVERY's full identification",
      "none (anomaly; no vacuum pumps, valves or magnets)",
-     "proposed (researched 2026-10-29; EQ-AN20-MS)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-AN20-MS) reconciled 2026-10-29"
     ],
     [
      "gas_chromatograph",
@@ -5305,7 +5427,9 @@ window.BODY_DATA = {
      "Chymistry",
      "separation and identification of volatile mixtures; reads out a distillation's fractions in minutes",
      "none (anomaly; no detectors, no gas cylinders)",
-     "proposed (researched 2026-10-29; EQ-AN20-GC)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-AN20-GC) reconciled 2026-10-29"
     ],
     [
      "nmr",
@@ -5325,7 +5449,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "structure of organic molecules without destroying the sample",
      "none (anomaly; no superconductors, no radio electronics)",
-     "proposed (researched 2026-10-29; EQ-AN20-NMR)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-AN20-NMR) reconciled 2026-10-29"
     ],
     [
      "pcr",
@@ -5345,7 +5471,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "copying a DNA fragment a million-fold; identification of a species or strain from a trace",
      "none (anomaly; needs a thermostable enzyme, oligonucleotide primers and electric temperature control)",
-     "proposed (researched 2026-10-29; EQ-BM20-PCR)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-BM20-PCR) reconciled 2026-10-29"
     ],
     [
      "sequencer",
@@ -5365,7 +5493,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "species identified by sequence (ECOLOGY's tagged creatures named); a genome read",
      "none (anomaly; requires fluorescent chemistry, lasers and computers)",
-     "proposed (researched 2026-10-29; EQ-BM20-SEQ)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-BM20-SEQ) reconciled 2026-10-29"
     ],
     [
      "tagged",
@@ -5385,7 +5515,9 @@ window.BODY_DATA = {
      "as written",
      "its roles' numbers decide what it enables; CHEMISTRY.md is not rewritten for it (Rex)",
      "by the story",
-     "rex (the plug), open (the rows)"
+     "open",
+     "open",
+     "rex (the plug), open (the rows) reconciled 2026-10-29"
     ],
     [
      "hearth",
@@ -5405,7 +5537,9 @@ window.BODY_DATA = {
      "any",
      "boiling, roasting, warm digestion beside the fire; the temperature is the physics of a free wood fire (about 600 to 900 C), not a source figure; no source gave one",
      "common (every house and galley hearth)",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI)"
+     "low",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI) reconciled 2026-10-29"
     ],
     [
      "bellows",
@@ -5425,7 +5559,9 @@ window.BODY_DATA = {
      "Smithing, Smelting",
      "raises burn rate and heat of a charcoal fire; the source gives no temperature (the physics: charcoal with a blast to about 1,200 to 1,500 C); water-driven bellows make larger, hotter furnaces",
      "common (hand bellows in every forge and galley; water-driven in ironworks)",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI) reconciled 2026-10-29"
     ],
     [
      "furnace_wind",
@@ -5445,7 +5581,9 @@ window.BODY_DATA = {
      "Smelting, Smithing",
      "iron blooms and the heat of a small furnace without bellows; the source gives no temperature (1,200 C is a physics estimate); Sri Lankan trials made high-carbon steel",
      "rare (the alchemist's wind furnace is a stack of brick; no source places one on a ship or in a Caribbean town)",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI) reconciled 2026-10-29"
     ],
     [
      "furnace_assay",
@@ -5465,7 +5603,9 @@ window.BODY_DATA = {
      "Assaying",
      "heating a sample in air, shielded from ash and charcoal, while heat reaches it through the muffle; the sources give no muffle temperature (litharge is liquid over about 890 C; silver melts at 960 C, so 1,000 C is a physics floor)",
      "rare (the assayer and the mint; a ship's goldsmith could improvise)",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI, EQ-HEAT-ASSAY)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI, EQ-HEAT-ASSAY) reconciled 2026-10-29"
     ],
     [
      "furnace_cupelling",
@@ -5485,7 +5625,9 @@ window.BODY_DATA = {
      "Assaying, Smelting",
      "separating silver and gold from base metals: lead oxide (liquid over 888 C) soaks into the cupel; the alloy is melted at 960 to 1,000 C in air (Wikipedia, Cupellation)",
      "common in the assay office, rare elsewhere",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI, EQ-HEAT-ASSAY)"
+     "high",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI, EQ-HEAT-ASSAY) reconciled 2026-10-29"
     ],
     [
      "bath_ash",
@@ -5505,7 +5647,9 @@ window.BODY_DATA = {
      "any",
      "a gentler dry heat than sand, because ash insulates; the source gives only the name; 250 C and the comparison are physics estimates",
      "common (ash is free)",
-     "proposed (researched 2026-10-29; EQ-HEAT-BATH)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-HEAT-BATH) reconciled 2026-10-29"
     ],
     [
      "bath_dung",
@@ -5525,7 +5669,9 @@ window.BODY_DATA = {
      "Alchemy",
      "digestion and fermentation at a low, constant warmth for weeks; the sources give no temperature (about 40 to 60 C is the physics of composting dung)",
      "rare (needs horses; few on a ship or in a small island port)",
-     "proposed (researched 2026-10-29; EQ-HEAT-DUNG)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-HEAT-DUNG) reconciled 2026-10-29"
     ],
     [
      "lamp_oil",
@@ -5545,7 +5691,9 @@ window.BODY_DATA = {
      "any",
      "light, and a small flame for heating a flask; the source gives no flame temperature (400 C at a vessel is an estimate)",
      "common (fish and whale oil)",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI) reconciled 2026-10-29"
     ],
     [
      "candle",
@@ -5565,7 +5713,9 @@ window.BODY_DATA = {
      "any",
      "light and a very small heat; a candle flame averages about 1,000 C (outer veil about 1,400 C, blue base about 800 C: Wikipedia, Candle), but little heat reaches a vessel; beeswax is costly, a luxury by the 16th c.",
      "common (tallow); rare (wax)",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI) reconciled 2026-10-29"
     ],
     [
      "kiln_lime",
@@ -5585,7 +5735,9 @@ window.BODY_DATA = {
      "Masonry, Lime burning",
      "calcining limestone or coral to quicklime above 900 C (about 1,000 C usual: Historic England; Wikipedia, Lime kiln); a clamp batch takes about a week",
      "common (islands burn coral or shell lime for mortar and sugar-boiling)",
-     "proposed (researched 2026-10-29; EQ-HEAT-LIME)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-HEAT-LIME) reconciled 2026-10-29"
     ],
     [
      "kiln_pottery",
@@ -5605,7 +5757,9 @@ window.BODY_DATA = {
      "Pottery, Masonry",
      "firing earthenware (the source: Neolithic kilns above 900 C; Chinese dragon kilns 1,300 C or more for porcelain; bottle kilns about 1,400 C): a 1650 to 1730 Atlantic earthenware kiln reaches about 1,000 C (physics estimate for wood)",
      "common in European and some colonial towns, rare in small ports",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI) reconciled 2026-10-29"
     ],
     [
      "oven_baker",
@@ -5625,7 +5779,9 @@ window.BODY_DATA = {
      "Baking, Cooking",
      "steady dry heat for bread, drying, baking; the source gives no temperature (about 200 to 300 C is the baker's craft, not sourced)",
      "common in towns, rare on a plantation; none on a ship",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI) reconciled 2026-10-29"
     ],
     [
      "forge_smith",
@@ -5645,7 +5801,9 @@ window.BODY_DATA = {
      "Blacksmithing",
      "heating iron to forging and welding heat; the smith controls the fire by air, fuel volume and fire shape (the source gives no temperature; forge-welding is about 1,300 C, physics)",
      "common (every town; a ship's smith has a small forge)",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI)"
+     "low",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI) reconciled 2026-10-29"
     ],
     [
      "blowpipe",
@@ -5663,9 +5821,11 @@ window.BODY_DATA = {
      "a bead of a milligram",
      "a lamp or candle, charcoal block, lungs",
      "Goldsmithing, Assaying",
-     "soldering and melting a small bead; mineral testing from about 1738; the source gives no temperature (a blown candle or lamp flame reaches about 1,300 C: estimate)",
+     "soldering and melting a small bead; mineral testing from about 1738; the source gives no temperature (a blown candle or lamp flame reaches about 1,300 C: estimate) Reconciled: availability checked against the date: the jeweller's blowpipe is old (common stands); the analytical use is dated 1738 and is covered by blowpipe_analysis (none (anomaly)).",
      "common (goldsmiths); rare (analytical use before 1738: none)",
-     "proposed (researched 2026-10-29; EQ-HEAT-WIKI)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-HEAT-WIKI) reconciled 2026-10-29"
     ],
     [
      "cucurbit",
@@ -5685,7 +5845,9 @@ window.BODY_DATA = {
      "Distilling, Apothecary, Alchemy",
      "the still pot of the alembic: holds the liquid heated by the flame (Wikipedia); the heat limit is the material (keeper physics estimate, not sourced)",
      "common",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "retort_tubulated",
@@ -5705,7 +5867,9 @@ window.BODY_DATA = {
      "Alchemy, Apothecary",
      "adding liquid (acid onto a salt) without lifting the vessel; the Wikipedia page is silent on it: date and use open; 400 C is a glass physics estimate",
      "rare (the chymist)",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "receiver",
@@ -5725,7 +5889,9 @@ window.BODY_DATA = {
      "Distilling, Alchemy",
      "collects the condensed liquid from the alembic or retort (Wikipedia); cooled in water for volatile spirits (keeper physics estimate, not sourced)",
      "common",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "matrass",
@@ -5745,7 +5911,9 @@ window.BODY_DATA = {
      "Alchemy, Apothecary",
      "a round flask with a long straight neck for digestion and extraction; used with a head for distillation; no source found beyond the name, shape is the keeper's description",
      "rare (the chymist)",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "phial",
@@ -5765,7 +5933,9 @@ window.BODY_DATA = {
      "Apothecary",
      "holds medicines, tinctures and samples; the Greek phiale names the alembic's receiver (Wikipedia); no temperature use",
      "common",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "low",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "flask_florence",
@@ -5785,7 +5955,9 @@ window.BODY_DATA = {
      "Apothecary, Alchemy",
      "a rounded body, long neck, flat base, for even heating, boiling, distillation and swirling (Wikipedia); 250 C is the keeper's estimate for soda glass, the page gives none",
      "rare (the chymist; the wine fiasco is common)",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "dish_evaporating",
@@ -5805,7 +5977,9 @@ window.BODY_DATA = {
      "Apothecary",
      "evaporates solvent, usually water, to leave a concentrate or crystals (Wikipedia); limit is the material (keeper physics estimate, not sourced)",
      "common",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "pot_earthenware",
@@ -5825,7 +5999,9 @@ window.BODY_DATA = {
      "any",
      "storing, boiling, fermenting; aludel pots and many lutes are earthen; 600 C is a clay estimate (keeper physics estimate, not sourced)",
      "common",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "bottle_glass",
@@ -5845,7 +6021,9 @@ window.BODY_DATA = {
      "Brewing, Apothecary",
      "stronger bottles for wine and spirits, shipping liquids, cellaring; the thicker coal-fired glass was the advance; 100 C and 1 atm are the keeper's figures",
      "common (England, Atlantic ports)",
-     "proposed (researched 2026-10-29; EQ-VESS-GLASS)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-VESS-GLASS) reconciled 2026-10-29"
     ],
     [
      "lute",
@@ -5865,7 +6043,9 @@ window.BODY_DATA = {
      "Alchemy, Apothecary, Distilling",
      "seals joints between retort and receiver against vapour (fat lute against acid vapours, lime lute against spirituous); a soft lute can blow off as a safety valve (Wikipedia)",
      "common",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "descensory",
@@ -5885,7 +6065,9 @@ window.BODY_DATA = {
      "Alchemy",
      "distillation downward: the vessel is heated above and the product runs down into a vessel below; the Wikipedia aludel page does not mention it (checked); details from EQ-ALCH, 500 C is the keeper's estimate",
      "rare",
-     "proposed (researched 2026-10-29; EQ-VESS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-VESS-WIKI) reconciled 2026-10-29"
     ],
     [
      "sieve",
@@ -5905,7 +6087,9 @@ window.BODY_DATA = {
      "any",
      "dry separation of powders by grain size: pounded charcoal, saltpetre, drugs (capability from the physics of a mesh)",
      "common (every kitchen and apothecary)",
-     "proposed (researched 2026-10-29; EQ-SEP-WIKI)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SEP-WIKI) reconciled 2026-10-29"
     ],
     [
      "strainer",
@@ -5925,7 +6109,9 @@ window.BODY_DATA = {
      "any",
      "removing coarse solids from juices, syrups and infusions; wringing out an herb (capability from the physics of cloth)",
      "common",
-     "proposed (researched 2026-10-29; EQ-SEP-WIKI; EQ-SEP-FILT)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SEP-WIKI; EQ-SEP-FILT) reconciled 2026-10-29"
     ],
     [
      "decant",
@@ -5945,7 +6131,9 @@ window.BODY_DATA = {
      "any",
      "pouring clear liquid off a sediment; separating immiscible liquids by pouring (capability from the physics of density)",
      "common",
-     "proposed (researched 2026-10-29; EQ-SEP-WIKI)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SEP-WIKI) reconciled 2026-10-29"
     ],
     [
      "settling_tank",
@@ -5965,7 +6153,9 @@ window.BODY_DATA = {
      "any",
      "clarifying wine, brine and liquors by sedimentation (capability from the physics of sedimentation)",
      "common",
-     "proposed (researched 2026-10-29; EQ-SEP-WIKI)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SEP-WIKI) reconciled 2026-10-29"
     ],
     [
      "press_screw",
@@ -5985,7 +6175,9 @@ window.BODY_DATA = {
      "Apothecary, Cooking",
      "expressing oils, juices, cider and wine; the same press serves printing",
      "common in European towns; rare in the islands outside a plantation",
-     "proposed (researched 2026-10-29; EQ-SEP-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SEP-WIKI) reconciled 2026-10-29"
     ],
     [
      "press_wine",
@@ -6005,7 +6197,9 @@ window.BODY_DATA = {
      "Brewing, Apothecary",
      "wine, cider and verjuice; the pressed juice for fermenting or distilling",
      "rare in the islands (the Madeiras and Azores are the Atlantic exception, not in the fetched sources; open)",
-     "proposed (researched 2026-10-29; EQ-SEP-WIKI)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SEP-WIKI) reconciled 2026-10-29"
     ],
     [
      "sublimation",
@@ -6025,7 +6219,9 @@ window.BODY_DATA = {
      "Alchemy, Distilling",
      "purifying volatile solids by driving them off and condensing them; the temperatures are physics, not a period claim",
      "rare (the chymist's laboratory)",
-     "proposed (researched 2026-10-29; EQ-SEP-WIKI)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SEP-WIKI) reconciled 2026-10-29"
     ],
     [
      "cohobation",
@@ -6045,7 +6241,9 @@ window.BODY_DATA = {
      "Distilling, Alchemy",
      "pouring the distillate back on the residue; the period believed it deepened the product, the physics says it does not (the equipment allows it; the result is the keeper's choice)",
      "rare (the chymist; the still is common, the pelican is not)",
-     "proposed (researched 2026-10-29; EQ-SEP-COHOB)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SEP-COHOB) reconciled 2026-10-29"
     ],
     [
      "head_moors",
@@ -6065,7 +6263,9 @@ window.BODY_DATA = {
      "Distilling",
      "condensing vapour better than a bare head; the Science Museum example is a Tunisian copper still dated 1750-1880, a late example",
      "rare (a coppersmith's or chymist's work; the worm still is the common one)",
-     "proposed (researched 2026-10-29; EQ-SEP-ALEMB)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SEP-ALEMB) reconciled 2026-10-29"
     ],
     [
      "boiling_train",
@@ -6085,7 +6285,9 @@ window.BODY_DATA = {
      "Refining (saltpetre, sugar, salt)",
      "boiling cane juice down to a thick syrup that sets as sugar, with lime clarifying; rum and molasses are by-products",
      "common (every sugar plantation)",
-     "proposed (researched 2026-10-29; EQ-SEP-WIKI; EQ-SEP-SUGAR)"
+     "high",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-SEP-WIKI; EQ-SEP-SUGAR) reconciled 2026-10-29"
     ],
     [
      "mill_cattle",
@@ -6105,7 +6307,9 @@ window.BODY_DATA = {
      "Masonry, Lime burning",
      "crushing cane to juice, the first step of sugar; the cattle mill is the cheap mill of the islands, the windmill the better",
      "common (every sugar plantation; windmills as well)",
-     "proposed (researched 2026-10-29; EQ-SEP-WIKI; EQ-SEP-SUGAR)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SEP-WIKI; EQ-SEP-SUGAR) reconciled 2026-10-29"
     ],
     [
      "curing_pots",
@@ -6125,7 +6329,9 @@ window.BODY_DATA = {
      "Pottery, Masonry",
      "draining molasses from the sugar to give whiter loaves (the clay-wash detail is not in the sources found; open)",
      "common (every sugar plantation)",
-     "proposed (researched 2026-10-29; EQ-SEP-SUGAR)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SEP-SUGAR) reconciled 2026-10-29"
     ],
     [
      "salt_pans",
@@ -6145,7 +6351,9 @@ window.BODY_DATA = {
      "Refining (saltpetre, sugar, salt)",
      "salt for curing fish and meat, the Newfoundland cod trade, and chemistry; cheap high-volume salt",
      "common (Turks Islands, Bahamas and Bermuda traders; Caribbean salinas)",
-     "proposed (researched 2026-10-29; EQ-SEP-SALT; EQ-SEP-WIKI)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SEP-SALT; EQ-SEP-WIKI) reconciled 2026-10-29"
     ],
     [
      "saltpetre_vats",
@@ -6165,7 +6373,9 @@ window.BODY_DATA = {
      "Apothecary, Refining (saltpetre, sugar, salt)",
      "potassium nitrate for gunpowder: leach the nitre earth, add ash to precipitate calcium and magnesium carbonates, boil, crystallise",
      "rare (England and Europe; none in the islands)",
-     "proposed (researched 2026-10-29; EQ-SEP-WIKI)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-SEP-WIKI) reconciled 2026-10-29"
     ],
     [
      "vat_fermenting",
@@ -6185,7 +6395,9 @@ window.BODY_DATA = {
      "Brewing, Apothecary",
      "fermenting wort, wine and cider to alcohol, the raw wash for the still",
      "common (every brewhouse and plantation distillery)",
-     "proposed (researched 2026-10-29; EQ-SEP-BREW)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-SEP-BREW) reconciled 2026-10-29"
     ],
     [
      "copper_brewing",
@@ -6205,7 +6417,9 @@ window.BODY_DATA = {
      "Brewing, Smithing",
      "boiling wort with hops and heating the liquor for the mash; usable as a large general boiler",
      "common (England, Atlantic ports)",
-     "proposed (researched 2026-10-29; EQ-SEP-BREW)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-SEP-BREW) reconciled 2026-10-29"
     ],
     [
      "mash_tun",
@@ -6225,7 +6439,9 @@ window.BODY_DATA = {
      "Brewing",
      "converting malt starch to sugar and draining the sweet wort; the temperature range is a modern figure",
      "common (England, Atlantic ports)",
-     "proposed (researched 2026-10-29; EQ-SEP-WIKI; EQ-SEP-BREW)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-SEP-WIKI; EQ-SEP-BREW) reconciled 2026-10-29"
     ],
     [
      "balance_trade",
@@ -6245,7 +6461,9 @@ window.BODY_DATA = {
      "any",
      "weighing goods for sale; the base of every recipe by weight",
      "common: until the 17th c. nearly all scales were beam balances (Wikipedia); every merchant and ship's chandler used one",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "weights_set",
@@ -6265,7 +6483,9 @@ window.BODY_DATA = {
      "any",
      "fixes every weighing; a different standard makes different weights",
      "common (trade weights, standardized by governments for centuries); fine assay sets rare",
-     "proposed (researched 2026-10-29; EQ-MEAS-ASSAY; EQ-MEAS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MEAS-ASSAY; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "thermometer_reaumur",
@@ -6285,7 +6505,9 @@ window.BODY_DATA = {
      "Apothecary",
      "a scale in a French academy; 0 to 80 between freezing and boiling water (general knowledge, not fetched: open)",
      "none: 1730 is the end of the window; a French academy instrument",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "sandglass",
@@ -6305,7 +6527,9 @@ window.BODY_DATA = {
      "any",
      "timing watches at sea, the log and sermons; reaction times; Magellan carried 18",
      "common: standard on every ship",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "watch",
@@ -6325,7 +6549,9 @@ window.BODY_DATA = {
      "any",
      "portable time; no longitude at sea until the chronometer",
      "rare: gentlemen, captains and rich prizes",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "litmus",
@@ -6345,7 +6571,9 @@ window.BODY_DATA = {
      "Dye Making, Apothecary",
      "separating acids from alkalis; part of the knowledge from Boyle 1664",
      "rare: dyers' lichens (orchil) traded; the test is a philosopher's",
-     "proposed (researched 2026-10-29; EQ-MEAS-BOYLE; EQ-MEAS-WIKI)"
+     "high",
+     "high",
+     "proposed (researched 2026-10-29; EQ-MEAS-BOYLE; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "quadrant",
@@ -6365,7 +6593,9 @@ window.BODY_DATA = {
      "Navigation (STATS.md; not in the GOODS 3c list)",
      "latitude from Polaris or the noon Sun",
      "common",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "backstaff",
@@ -6385,7 +6615,9 @@ window.BODY_DATA = {
      "Navigation (STATS.md; not in the GOODS 3c list)",
      "noon latitude without staring at the Sun; standard until the Hadley 1731 octant",
      "common among English-trained masters 1650 to 1730",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "astrolabe",
@@ -6405,7 +6637,9 @@ window.BODY_DATA = {
      "Navigation (STATS.md; not in the GOODS 3c list)",
      "latitude at sea; replaced by the backstaff",
      "rare by 1650; fading, used by Iberian pilots",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "log_line",
@@ -6425,7 +6659,9 @@ window.BODY_DATA = {
      "Navigation (STATS.md; not in the GOODS 3c list)",
      "speed in knots for dead reckoning",
      "common after about 1600",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "lead_line",
@@ -6445,7 +6681,9 @@ window.BODY_DATA = {
      "Shipwrighting",
      "depth and bottom type for pilotage and anchoring",
      "common: every ship",
-     "proposed (researched 2026-10-29; EQ-MEAS-WIKI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "gauging_rod",
@@ -6465,7 +6703,9 @@ window.BODY_DATA = {
      "Cooperage",
      "volume and ullage of a cask for the duty on ales, wines and spirits",
      "rare: the exciseman's tool; the 1684 rule is after 1650 and the colonies had few gaugers",
-     "proposed (researched 2026-10-29; EQ-MEAS-GAUGE)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MEAS-GAUGE) reconciled 2026-10-29"
     ],
     [
      "proof_powder",
@@ -6485,7 +6725,9 @@ window.BODY_DATA = {
      "Distilling",
      "proves rum and brandy; ignition means at least proof; the test whose basis is saltpetre dissolving more readily in water than in alcohol",
      "common: sailors and traders",
-     "proposed (researched 2026-10-29; EQ-MEAS-PROOF; EQ-MEAS-WIKI)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-MEAS-PROOF; EQ-MEAS-WIKI) reconciled 2026-10-29"
     ],
     [
      "acid_parting",
@@ -6505,7 +6747,9 @@ window.BODY_DATA = {
      "Precious Metalworking (assay)",
      "gold parted from silver; assay of fineness; sulfuric parting (affination) is later and its start date is open",
      "rare: assayers and mints; chemical works",
-     "proposed (researched 2026-10-29; EQ-MEAS-ASSAY)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MEAS-ASSAY) reconciled 2026-10-29"
     ],
     [
      "mirror_burning",
@@ -6525,7 +6769,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "igniting tinder or wood, melting small metal samples; 1973 Sakkas test lit a ship at 160 ft with about 60 mirrors",
      "rare (a curiosity; Tschirnhaus and Villette dates not found)",
-     "proposed (researched 2026-10-29; EQ-OPT-BURN)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-OPT-BURN) reconciled 2026-10-29"
     ],
     [
      "prism",
@@ -6545,7 +6791,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "splits white light into colours (Wikipedia: Prism (optics)); deck prisms lit the decks below on sailing ships",
      "common (glass; deck prisms on ships)",
-     "proposed (researched 2026-10-29; EQ-OPT-PRISM)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-OPT-PRISM) reconciled 2026-10-29"
     ],
     [
      "camera_obscura",
@@ -6565,7 +6813,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "drawing landscapes, painting; viewing eclipses",
      "rare (painters and natural philosophers)",
-     "proposed (researched 2026-10-29; EQ-OPT-CAMOBS)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-OPT-CAMOBS) reconciled 2026-10-29"
     ],
     [
      "magic_lantern",
@@ -6585,7 +6835,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "projected images, shows",
      "rare (a small circle around Huygens before 1671; showmen common after 1730)",
-     "proposed (researched 2026-10-29; EQ-OPT-LANT)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-OPT-LANT) reconciled 2026-10-29"
     ],
     [
      "machine_hauksbee",
@@ -6605,7 +6857,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "static charge, sparks; no chemical use in the period",
      "rare (Royal Society demonstrations)",
-     "proposed (researched 2026-10-29; EQ-ELEC-GEN)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-ELEC-GEN) reconciled 2026-10-29"
     ],
     [
      "globe_guericke",
@@ -6625,7 +6879,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "attraction of light bodies; Wikipedia says it may not have been rotated and was not meant to make electricity",
      "none (no sign of it on the Atlantic)",
-     "proposed (researched 2026-10-29; EQ-ELEC-GEN)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-ELEC-GEN) reconciled 2026-10-29"
     ],
     [
      "hemispheres_magdeburg",
@@ -6645,7 +6901,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "showing air pressure: 30 horses at Regensburg could not part them; 16 in 1656; 24 in 1663",
      "none (a demonstration piece)",
-     "proposed (researched 2026-10-29; EQ-PRES-HEMI)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-PRES-HEMI) reconciled 2026-10-29"
     ],
     [
      "tube_torricelli",
@@ -6665,7 +6923,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "air pressure, the vacuum above the column; Hooke's marine barometer shown 1668",
      "rare (a few instruments)",
-     "proposed (researched 2026-10-29; EQ-PRES-BARO)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-PRES-BARO) reconciled 2026-10-29"
     ],
     [
      "tube_boyle_j",
@@ -6685,7 +6945,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "pressure and volume of a gas are inversely proportional (Boyle's law)",
      "rare (the Royal Society)",
-     "proposed (researched 2026-10-29; EQ-PRES-BOYLE)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PRES-BOYLE) reconciled 2026-10-29"
     ],
     [
      "hygrometer",
@@ -6705,7 +6967,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "damp or dry air, cargo and powder care",
      "rare (not a common instrument)",
-     "proposed (researched 2026-10-29; EQ-METEO-HYGRO)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-METEO-HYGRO) reconciled 2026-10-29"
     ],
     [
      "rain_gauge",
@@ -6725,7 +6989,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "rainfall records",
      "rare (Royal Society circle; ships not)",
-     "proposed (researched 2026-10-29; EQ-METEO-RAIN)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-METEO-RAIN) reconciled 2026-10-29"
     ],
     [
      "anemometer",
@@ -6745,7 +7011,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "wind force",
      "rare",
-     "proposed (researched 2026-10-29; EQ-METEO-ANEMO)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-METEO-ANEMO) reconciled 2026-10-29"
     ],
     [
      "diving_bell",
@@ -6765,7 +7033,9 @@ window.BODY_DATA = {
      "Natural philosophy, Swimming",
      "working under water; salvage; air lasted 1 to 2 hours in 1535 bell",
      "rare (salvage firms, a few ports)",
-     "proposed (researched 2026-10-29; EQ-PRES-BELL)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PRES-BELL) reconciled 2026-10-29"
     ],
     [
      "vacuum_receiver",
@@ -6785,7 +7055,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "experiments in vacuum: combustion, sound, animals",
      "rare (as the pump)",
-     "proposed (researched 2026-10-29; EQ-PRES-PUMP)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PRES-PUMP) reconciled 2026-10-29"
     ],
     [
      "saw_amputation",
@@ -6805,7 +7077,9 @@ window.BODY_DATA = {
      "Surgery",
      "amputation of a shattered limb, the commonest major operation after a fight",
      "common: carried in every surgeon's chest (Woodall 1617; EQ-SURG-3)",
-     "proposed (researched 2026-10-29; EQ-SURG-3)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-3) reconciled 2026-10-29"
     ],
     [
      "knife_amputation",
@@ -6825,7 +7099,9 @@ window.BODY_DATA = {
      "Surgery",
      "cutting flesh down to the bone before the saw; scalpel work in any operation",
      "common: knives are the cheapest instruments in the chest (EQ-SURG-3)",
-     "proposed (researched 2026-10-29; EQ-SURG-3)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-3) reconciled 2026-10-29"
     ],
     [
      "tourniquet_stick",
@@ -6845,7 +7121,9 @@ window.BODY_DATA = {
      "Surgery",
      "amputation with far less blood lost; a stopped bleed on a mangled limb",
      "common: a cord and a stick are anywhere (EQ-SURG-1)",
-     "proposed (researched 2026-10-29; EQ-SURG-1)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-1) reconciled 2026-10-29"
     ],
     [
      "tourniquet_petit",
@@ -6865,7 +7143,9 @@ window.BODY_DATA = {
      "Surgery",
      "a limb held bloodless for a whole amputation by one hand",
      "rare: made in Paris from 1718; spread to ships open (no source on the Atlantic spread; EQ-SURG-1)",
-     "proposed (researched 2026-10-29; EQ-SURG-1)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-1) reconciled 2026-10-29"
     ],
     [
      "trepan",
@@ -6885,7 +7165,9 @@ window.BODY_DATA = {
      "Surgery",
      "lifting a depressed or fractured skull; about 80 percent survival in the 16th and 17th c. (Wikipedia summary, not a controlled figure)",
      "common: in the sea chest (EQ-SURG-3, EQ-SURG-8)",
-     "proposed (researched 2026-10-29; EQ-SURG-3, EQ-SURG-8)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-3, EQ-SURG-8) reconciled 2026-10-29"
     ],
     [
      "forceps_bullet",
@@ -6905,7 +7187,9 @@ window.BODY_DATA = {
      "Surgery",
      "taking out a musket ball, a splinter or an arrow head",
      "common: in the sea chest (EQ-SURG-3)",
-     "proposed (researched 2026-10-29; EQ-SURG-3)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-3) reconciled 2026-10-29"
     ],
     [
      "cautery_iron",
@@ -6925,7 +7209,9 @@ window.BODY_DATA = {
      "Surgery, Smithing",
      "a seared stump; closing a bleed when a ligature will not hold",
      "common: a fire and an iron (EQ-SURG-3 lists cauteries in the chest)",
-     "proposed (researched 2026-10-29; EQ-SURG-3)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-SURG-3) reconciled 2026-10-29"
     ],
     [
      "lancet",
@@ -6945,7 +7231,9 @@ window.BODY_DATA = {
      "Surgery",
      "opening a vein for the bleeding Galenic medicine ordered for most illnesses (Harvey 1628 disproved its basis; the practice carried on)",
      "common: in every chest (EQ-SURG-3, EQ-SURG-8)",
-     "proposed (researched 2026-10-29; EQ-SURG-3, EQ-SURG-8)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-3, EQ-SURG-8) reconciled 2026-10-29"
     ],
     [
      "cupping_glass",
@@ -6965,7 +7253,9 @@ window.BODY_DATA = {
      "Surgery, Glassmaking",
      "dry cupping (a blister) and wet cupping (blood drawn)",
      "common: Woodall's chest held cupping glasses (EQ-SURG-3, EQ-SURG-8)",
-     "proposed (researched 2026-10-29; EQ-SURG-3, EQ-SURG-8)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-SURG-3, EQ-SURG-8) reconciled 2026-10-29"
     ],
     [
      "leech",
@@ -6985,7 +7275,9 @@ window.BODY_DATA = {
      "Surgery",
      "a gentle local bleed where a cup or lancet cannot go; the one apparatus that is alive and spoils",
      "rare at sea (they die on a long voyage, the keeper's reading); common in a port by a fen (EQ-SURG-9: use peaked in the 17th and 18th c. and stock ran short)",
-     "proposed (researched 2026-10-29; EQ-SURG-9)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-9) reconciled 2026-10-29"
     ],
     [
      "clyster",
@@ -7005,7 +7297,9 @@ window.BODY_DATA = {
      "Surgery, Apothecary",
      "a clyster to purge or feed; a syringe for washing wounds (not the 1853 hypodermic)",
      "common: a sea chest carries one (EQ-SURG-8)",
-     "proposed (researched 2026-10-29; EQ-SURG-8)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-8) reconciled 2026-10-29"
     ],
     [
      "splint",
@@ -7025,7 +7319,9 @@ window.BODY_DATA = {
      "Surgery",
      "a set limb; a bound wound; a dressing",
      "common: linen and wood are everywhere (EQ-SURG-3)",
-     "proposed (researched 2026-10-29; EQ-SURG-3)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-3) reconciled 2026-10-29"
     ],
     [
      "forceps_obstetric",
@@ -7045,7 +7341,9 @@ window.BODY_DATA = {
      "Surgery",
      "a stuck labour ended alive",
      "rare: a Chamberlen family secret for about two centuries; none on a ship (EQ-SURG-2: sources disagree on when it came out)",
-     "proposed (researched 2026-10-29; EQ-SURG-2)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-2) reconciled 2026-10-29"
     ],
     [
      "spectacles",
@@ -7065,13 +7363,15 @@ window.BODY_DATA = {
      "Lens-grinding",
      "reading and close work for the old; the surgeon who can see to stitch",
      "common: sold in every port town (the keeper's reading; EQ-SURG-4 for the dates)",
-     "proposed (researched 2026-10-29; EQ-SURG-4)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-4) reconciled 2026-10-29"
     ],
     [
      "pill_tile",
      "Pill tile and pill machine",
      "preparation",
-     "preparation (make pills)",
+     "handle (make pills)",
      "pill tile: surviving examples c. 1665 (heart-shaped, polychrome) and c. 1705 to 40 (Fitzwilliam); pill machine: Germany about 1750 (museum sources; slightly earlier possible); Wirz's improvement patented 1867",
      "-",
      "the mortar and the hand-rolled pill",
@@ -7083,15 +7383,17 @@ window.BODY_DATA = {
      "a batch of pills at a time",
      "a pill mass from the mortar; a spatula; skill",
      "Apothecary",
-     "pills of an even dose; the tile is in period, the machine is not (about 1750)",
+     "pills of an even dose; the tile is in period, the machine is not (about 1750) Reconciled: Roles retyped to the roles table ids (was \"preparation (make pills)\").",
      "common (the tile, by about 1665); none (the machine, before about 1750) (EQ-SURG-5)",
-     "proposed (researched 2026-10-29; EQ-SURG-5)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-5) reconciled 2026-10-29"
     ],
     [
      "spatula",
      "Apothecary's spatulas",
      "preparation",
-     "preparation (mix and spread)",
+     "handle (mix and spread)",
      "antiquity; always in the apothecary's kit",
      "-",
      "the knife blade and the horn spoon",
@@ -7103,9 +7405,11 @@ window.BODY_DATA = {
      "-",
      "a mortar or a tile; a plaster or ointment to spread",
      "Apothecary",
-     "mixing ointments and plasters; cutting and rolling pills on a tile (EQ-SURG-5)",
+     "mixing ointments and plasters; cutting and rolling pills on a tile (EQ-SURG-5) Reconciled: Roles retyped to the roles table ids (was \"preparation (mix and spread)\").",
      "common: the cheapest tool of the trade (EQ-SURG-5)",
-     "proposed (researched 2026-10-29; EQ-SURG-5)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-5) reconciled 2026-10-29"
     ],
     [
      "bowl_bleeding",
@@ -7125,7 +7429,9 @@ window.BODY_DATA = {
      "Surgery",
      "catching and judging the blood drawn",
      "common: blood porringers are in the chest (EQ-SURG-3)",
-     "proposed (researched 2026-10-29; EQ-SURG-3)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-3) reconciled 2026-10-29"
     ],
     [
      "urinal_glass",
@@ -7145,7 +7451,9 @@ window.BODY_DATA = {
      "Surgery, Glassmaking",
      "the colour and cloud of urine read as a sign of the humours; diagnosis by it alone was forbidden by the 1600s (EQ-SURG-6)",
      "common: the matula is the physician's symbol; a ship's surgeon rarely uses one (EQ-SURG-6)",
-     "proposed (researched 2026-10-29; EQ-SURG-6)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-6) reconciled 2026-10-29"
     ],
     [
      "tub_sweating",
@@ -7165,7 +7473,9 @@ window.BODY_DATA = {
      "Surgery, Apothecary",
      "the mercury sweating cure for the pox, the era's ordinary treatment; the heat, not the mercury, may have cured (EQ-SURG-7)",
      "common in a port town; none on a ship (the keeper's reading; EQ-SURG-7)",
-     "proposed (researched 2026-10-29; EQ-SURG-7)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SURG-7) reconciled 2026-10-29"
     ],
     [
      "chest_surgeon",
@@ -7185,7 +7495,9 @@ window.BODY_DATA = {
      "Surgery, Apothecary",
      "every instrument above in one box: the set that makes a ship's surgeon",
      "common: standard on an East India Company or Royal Navy ship; a pirate ship has one only if it takes it (EQ-SURG-3)",
-     "proposed (researched 2026-10-29; EQ-SURG-3)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-SURG-3) reconciled 2026-10-29"
     ],
     [
      "bloomery",
@@ -7205,7 +7517,9 @@ window.BODY_DATA = {
      "Smelting",
      "wrought iron straight from ore, no liquid iron; the hammer must squeeze the slag out",
      "rare: West Midlands bloomeries ran past 1580 and the last English one about 1770 (EQ-MET-2); Catalan forges lasted to the mid-19th c.; none in the islands",
-     "proposed (researched 2026-10-29; EQ-MET-2; EQ-MET-3)"
+     "high",
+     "high",
+     "proposed (researched 2026-10-29; EQ-MET-2; EQ-MET-3) reconciled 2026-10-29"
     ],
     [
      "forge_finery",
@@ -7225,7 +7539,9 @@ window.BODY_DATA = {
      "Smithing, Smelting",
      "pig iron turned to forgeable wrought bar iron (EQ-MET-4); the step between the blast furnace and the smith",
      "rare: bar iron came mostly from English, Swedish and colonial forges; none on a ship",
-     "proposed (researched 2026-10-29; EQ-MET-3; EQ-MET-4)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-3; EQ-MET-4) reconciled 2026-10-29"
     ],
     [
      "hammer_tilt",
@@ -7245,7 +7561,9 @@ window.BODY_DATA = {
      "Smithing",
      "working a bloom or bar to iron faster than a man can; drawing out bar",
      "rare: ironworks only; none at sea or in the islands",
-     "proposed (researched 2026-10-29; EQ-MET-4)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-4) reconciled 2026-10-29"
     ],
     [
      "mill_slitting",
@@ -7265,7 +7583,9 @@ window.BODY_DATA = {
      "Smithing",
      "flat bar rolled and slit into nail rod, for nails, hoops and tools (EQ-MET-5)",
      "rare: a few English mills, some in the colonies after 1700; none at sea",
-     "proposed (researched 2026-10-29; EQ-MET-5)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-5) reconciled 2026-10-29"
     ],
     [
      "wire_drawing",
@@ -7285,7 +7605,9 @@ window.BODY_DATA = {
      "Smithing",
      "iron, brass and gold wire: needles, cards, strings, chain (EQ-MET-6 gives the process, not the uses)",
      "rare: wire-drawers in towns; none at sea",
-     "proposed (researched 2026-10-29; EQ-MET-6)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-6) reconciled 2026-10-29"
     ],
     [
      "press_mint",
@@ -7305,7 +7627,9 @@ window.BODY_DATA = {
      "Precious Metalworking",
      "milled coin with an edge inscription, hard to clip; hammered money stayed legal to 1695 (EQ-MET-7)",
      "rare: the Royal Mint and a few colonial mints; none at sea",
-     "proposed (researched 2026-10-29; EQ-MET-7)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-7) reconciled 2026-10-29"
     ],
     [
      "foundry_cannon",
@@ -7325,7 +7649,9 @@ window.BODY_DATA = {
      "Smelting, Smithing",
      "bronze and iron guns for ships and forts; proof by firing (EQ-MET-9)",
      "rare: Woolwich, the Weald and the Dutch and Swedish founders; none at sea or in the islands",
-     "proposed (researched 2026-10-29; EQ-MET-8; EQ-MET-9)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-MET-8; EQ-MET-9) reconciled 2026-10-29"
     ],
     [
      "mill_boring",
@@ -7345,7 +7671,9 @@ window.BODY_DATA = {
      "Smithing",
      "guns cast solid and bored: truer bores; it falls after the 1650-1730 window (EQ-MET-8)",
      "none: the Verbruggen mill is 1770 (The Hague 1750s), after 1730; hollow-cast guns were finished in vertical borers",
-     "proposed (researched 2026-10-29; EQ-MET-8)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-8) reconciled 2026-10-29"
     ],
     [
      "anvil",
@@ -7365,7 +7693,9 @@ window.BODY_DATA = {
      "Smithing",
      "forging, shaping hot iron; the hard face saves blow energy (EQ-MET-10)",
      "common: every smithy; a ship's armourer or shore party used one",
-     "proposed (researched 2026-10-29; EQ-MET-10)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-10) reconciled 2026-10-29"
     ],
     [
      "tools_gunsmith",
@@ -7385,7 +7715,9 @@ window.BODY_DATA = {
      "Smithing (gunsmithing*)",
      "making and repairing musket locks and barrels (not sourced in this batch; open)",
      "rare: gunsmiths in ports; a ship's gunner mends only simple faults",
-     "proposed (researched 2026-10-29; EQ-MET-9)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-9) reconciled 2026-10-29"
     ],
     [
      "glasshouse",
@@ -7405,7 +7737,9 @@ window.BODY_DATA = {
      "Glassmaking",
      "bottles, window glass, flasks and retorts for the lab",
      "rare: Bristol, London and Newcastle; none at sea or in the islands",
-     "proposed (researched 2026-10-29; EQ-MET-11)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-11) reconciled 2026-10-29"
     ],
     [
      "tannery_pit",
@@ -7425,7 +7759,9 @@ window.BODY_DATA = {
      "Tanning",
      "hides into leather, long and cheap in labour (EQ-MET-15)",
      "common: tanneries on shore; none at sea",
-     "proposed (researched 2026-10-29; EQ-MET-15)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-MET-15) reconciled 2026-10-29"
     ],
     [
      "vat_dye",
@@ -7445,7 +7781,9 @@ window.BODY_DATA = {
      "open (dyeing is not in GOODS 3c)",
      "blue dye: indigo is insoluble, reduced in the vat, and turns blue in air (EQ-MET-16)",
      "rare: plantations in the Carolinas and Caribbean; Indian indigo in ports",
-     "proposed (researched 2026-10-29; EQ-MET-16)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-16) reconciled 2026-10-29"
     ],
     [
      "mill_powder_stamp",
@@ -7465,7 +7803,9 @@ window.BODY_DATA = {
      "Powder making*",
      "gunpowder meal, stamped; replaced by edge-runner mills in the 1730s at the St Martha site (EQ-MET-12)",
      "rare: English powder mills (Faversham, Waltham Abbey); none at sea",
-     "proposed (researched 2026-10-29; EQ-MET-12; EQ-MET-13)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-12; EQ-MET-13) reconciled 2026-10-29"
     ],
     [
      "mill_incorporating",
@@ -7485,7 +7825,9 @@ window.BODY_DATA = {
      "Powder making*",
      "a kneaded, pressed cake (EQ-MET-13)",
      "rare: just coming in at the end of the window; stamp mills the common type",
-     "proposed (researched 2026-10-29; EQ-MET-12; EQ-MET-13)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-12; EQ-MET-13) reconciled 2026-10-29"
     ],
     [
      "corning",
@@ -7505,7 +7847,9 @@ window.BODY_DATA = {
      "Powder making*",
      "grained powder of graded size (EQ-MET-12)",
      "rare: done at the mill; ships took barrelled grained powder",
-     "proposed (researched 2026-10-29; EQ-MET-12; EQ-MET-13)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-12; EQ-MET-13) reconciled 2026-10-29"
     ],
     [
      "ropewalk",
@@ -7525,7 +7869,9 @@ window.BODY_DATA = {
      "Ropemaking*",
      "cordage, cables and rigging (EQ-MET-14)",
      "common: every naval yard and large port; a pirate ship takes rope, not makes it",
-     "proposed (researched 2026-10-29; EQ-MET-14)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-MET-14) reconciled 2026-10-29"
     ],
     [
      "loom",
@@ -7545,7 +7891,9 @@ window.BODY_DATA = {
      "Weaving*",
      "linen, woollen cloth, canvas and sailcloth (GOODS rows 33, 46)",
      "common: weavers in every port; none aboard",
-     "proposed (researched 2026-10-29; EQ-MET-17)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-MET-17) reconciled 2026-10-29"
     ],
     [
      "cooper_tools",
@@ -7565,7 +7913,9 @@ window.BODY_DATA = {
      "Cooperage",
      "tight casks for liquids and slack casks for dry goods (EQ-MET-18; GOODS 3c)",
      "common: ships carried a cooper's tools for casks",
-     "proposed (researched 2026-10-29; EQ-MET-18)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-MET-18) reconciled 2026-10-29"
     ],
     [
      "trough_mercury",
@@ -7583,9 +7933,11 @@ window.BODY_DATA = {
      "a few hundred mL of gas in a small trough; mercury is 13.6 times as dense as water, so a deep trough is heavy (physics, not sourced)",
      "mercury (a pound or more), glass bottles; mercury vapour is toxic (EQ-CHEM18-1)",
      "Chymistry",
-     "collecting water-soluble gases such as those that dissolve in water (EQ-CHEM18-1; GOODS 3c); a closed liquid for the eudiometer's spark",
-     "rare: mercury was held by apothecaries and assayers and quicksilver came from Almaden and Idria; no chemist used it as a trough liquid (open: no source found for the date of first use)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-1)"
+     "collecting water-soluble gases such as those that dissolve in water (EQ-CHEM18-1; GOODS 3c); a closed liquid for the eudiometer's spark Reconciled: availability set to none (anomaly) because the item is dated after 1730; the earlier forerunner named in the availability note is a different thing.",
+     "none (anomaly): the dated item is after 1730; rare: mercury was held by apothecaries and assayers and quicksilver came from Almaden and Idria; no chemist used it as a trough liquid (open: no source found for the date of first use)",
+     "low",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-CHEM18-1) reconciled 2026-10-29"
     ],
     [
      "gasometer",
@@ -7605,7 +7957,9 @@ window.BODY_DATA = {
      "Chymistry",
      "holding and weighing a gas at a known volume (EQ-CHEM18-3)",
      "none (1789)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-3)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-CHEM18-3) reconciled 2026-10-29"
     ],
     [
      "thermometer_celsius",
@@ -7625,7 +7979,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "a fixed 0 and 100 point scale, so readings compare between workshops (EQ-CHEM18-6)",
      "none as a named scale; spirit thermometers existed from the 1650s but with no agreed scale (open)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-6)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-CHEM18-6) reconciled 2026-10-29"
     ],
     [
      "machine_ramsden",
@@ -7643,9 +7999,11 @@ window.BODY_DATA = {
      "plate 8 inches in 1768 (Banks), later about 0.5 m (EQ-CHEM18-8)",
      "a glass plate, a cushion, a conductor, a dry room",
      "Natural philosophy",
-     "a steady charge to fill Leyden jars and fire the eudiometer's spark (EQ-CHEM18-8; GOODS 3c)",
-     "rare: Guericke's globe c. 1663 and Hauksbee's globe c. 1706 existed (the plate machine did not; EQ-CHEM18-8)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-8)"
+     "a steady charge to fill Leyden jars and fire the eudiometer's spark (EQ-CHEM18-8; GOODS 3c) Reconciled: availability set to none (anomaly) because the item is dated after 1730; the earlier forerunner named in the availability note is a different thing.",
+     "none (anomaly): the dated item is after 1730; rare: Guericke's globe c. 1663 and Hauksbee's globe c. 1706 existed (the plate machine did not; EQ-CHEM18-8)",
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM18-8) reconciled 2026-10-29"
     ],
     [
      "bell_jar_combustion",
@@ -7665,7 +8023,9 @@ window.BODY_DATA = {
      "Chymistry",
      "burning a metal or phosphorus in a known volume of air to measure what it absorbs (GOODS 3c; the page for this is not among the sources searched, open)",
      "none (needs the mercury trough and a balance of the 1780s)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-1)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM18-1) reconciled 2026-10-29"
     ],
     [
      "blowpipe_analysis",
@@ -7683,9 +8043,11 @@ window.BODY_DATA = {
      "milligrams of ore",
      "a flame, charcoal, fluxes, a trained breath",
      "Assaying",
-     "telling minerals apart by how they fuse (EQ-CHEM18-10)",
-     "rare: the jeweller's blowpipe was common; the mineral kit was not (EQ-CHEM18-10)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-10)"
+     "telling minerals apart by how they fuse (EQ-CHEM18-10) Reconciled: availability set to none (anomaly) because the item is dated after 1730; the earlier forerunner named in the availability note is a different thing.",
+     "none (anomaly): the dated item is after 1730; rare: the jeweller's blowpipe was common; the mineral kit was not (EQ-CHEM18-10)",
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-CHEM18-10) reconciled 2026-10-29"
     ],
     [
      "balance_black",
@@ -7703,9 +8065,11 @@ window.BODY_DATA = {
      "open",
      "standard weights, a draught-free table",
      "Natural philosophy",
-     "weighing the limestone and its fixed air (CO2) to show a mass is lost (EQ-CHEM18-11)",
-     "rare: a good goldsmith's or assayer's balance existed; this fineness did not (open)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-11)"
+     "weighing the limestone and its fixed air (CO2) to show a mass is lost (EQ-CHEM18-11) Reconciled: availability set to none (anomaly) because the item is dated after 1730; the earlier forerunner named in the availability note is a different thing.",
+     "none (anomaly): the dated item is after 1730; rare: a good goldsmith's or assayer's balance existed; this fineness did not (open)",
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM18-11) reconciled 2026-10-29"
     ],
     [
      "ventilator_hales",
@@ -7725,7 +8089,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "fresh air to a ship's lower decks against bad air and dry rot (EQ-CHEM18-12)",
      "none (1740s)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-12)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-CHEM18-12) reconciled 2026-10-29"
     ],
     [
      "engine_newcomen",
@@ -7745,7 +8111,9 @@ window.BODY_DATA = {
      "Smithing",
      "raising water from a flooded mine (EQ-CHEM18-13)",
      "rare: first built 1712, after the period's start; Savery's 1698 pump was common only in a few mines (EQ-CHEM18-13)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-13)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-CHEM18-13) reconciled 2026-10-29"
     ],
     [
      "engine_watt",
@@ -7765,7 +8133,9 @@ window.BODY_DATA = {
      "Smithing",
      "about 75% less fuel than Newcomen; rotary drive from 1781 (EQ-CHEM18-14)",
      "none (1769 to 1776)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-14)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM18-14) reconciled 2026-10-29"
     ],
     [
      "lamp_argand",
@@ -7785,7 +8155,9 @@ window.BODY_DATA = {
      "Glassmaking",
      "a bright steady light, and a flame that burns clean and hot enough for a table blowpipe (the last is the keeper's, open)",
      "none (1780); whale oil and the oil lamp were common (EQ-CHEM18-15)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-15)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM18-15) reconciled 2026-10-29"
     ],
     [
      "areometer_baume",
@@ -7805,7 +8177,9 @@ window.BODY_DATA = {
      "Apothecary",
      "strength of acids, brines and spirits (EQ-CHEM18-17)",
      "none (1768); simple hydrometers existed (open)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-17)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM18-17) reconciled 2026-10-29"
     ],
     [
      "still_laboratory_glass",
@@ -7825,7 +8199,9 @@ window.BODY_DATA = {
      "Distilling",
      "distilling acids and spirits without a metal taste; pelican for reflux (EQ-CHEM18-19)",
      "common: glass retorts, alembics and pelicans were in use (EQ-CHEM18-19)",
-     "proposed (researched 2026-10-29; EQ-CHEM18-19)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-CHEM18-19) reconciled 2026-10-29"
     ],
     [
      "kjeldahl",
@@ -7845,7 +8221,9 @@ window.BODY_DATA = {
      "Chymistry",
      "protein by nitrogen (ammonia distilled into a measured acid and titrated)",
      "none (needs oil of vitriol in quantity, a standard acid and titration)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-4)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM19-4) reconciled 2026-10-29"
     ],
     [
      "soxhlet",
@@ -7865,7 +8243,9 @@ window.BODY_DATA = {
      "Chymistry, Distilling",
      "extracting fat or oils by recycled solvent over hours or days",
      "none (needs blown glass, a condenser and a siphon tube; the period infuses or presses)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-5; EQ-CHEM19-1)"
+     "high",
+     "high",
+     "proposed (researched 2026-10-29; EQ-CHEM19-5; EQ-CHEM19-1) reconciled 2026-10-29"
     ],
     [
      "flask_erlenmeyer",
@@ -7885,7 +8265,9 @@ window.BODY_DATA = {
      "any",
      "mixing, titrating and heating without splashing; the narrow neck takes a stopper",
      "none (blown glass flasks exist; the flat-bottom conical form does not)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-6; EQ-CHEM19-20)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM19-6; EQ-CHEM19-20) reconciled 2026-10-29"
     ],
     [
      "funnel_buchner",
@@ -7905,7 +8287,9 @@ window.BODY_DATA = {
      "Chymistry",
      "fast filtration and partial drying of crystals",
      "none (needs a vacuum; the air pump of the period is a rare philosopher's instrument)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-7; EQ-CHEM19-18)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM19-7; EQ-CHEM19-18) reconciled 2026-10-29"
     ],
     [
      "paper_filter",
@@ -7925,7 +8309,9 @@ window.BODY_DATA = {
      "Apothecary, Chymistry",
      "clarifying liquids; ash-free grades make gravimetric analysis possible",
      "common (charta emporetica is soft paper sold for the apothecary's filter; ash-free paper is later)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-18)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-CHEM19-18) reconciled 2026-10-29"
     ],
     [
      "cell_daniell",
@@ -7945,7 +8331,9 @@ window.BODY_DATA = {
      "Chymistry",
      "a steady current for electrolysis and telegraphs",
      "none (no Volta pile before 1800)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-9)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM19-9) reconciled 2026-10-29"
     ],
     [
      "cell_grove",
@@ -7965,7 +8353,9 @@ window.BODY_DATA = {
      "Chymistry",
      "a stronger current than Daniell's",
      "none (no cells; platinum is a Spanish curiosity)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-10; EQ-CHEM19-17)"
+     "low",
+     "high",
+     "proposed (researched 2026-10-29; EQ-CHEM19-10; EQ-CHEM19-17) reconciled 2026-10-29"
     ],
     [
      "dynamo",
@@ -7985,7 +8375,9 @@ window.BODY_DATA = {
      "Smithing",
      "a current without a chemical cell",
      "none (needs insulated wire and Faraday's induction of 1831)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-11)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM19-11) reconciled 2026-10-29"
     ],
     [
      "desiccator",
@@ -8005,7 +8397,9 @@ window.BODY_DATA = {
      "Chymistry",
      "drying and keeping hygroscopic samples dry",
      "rare (a jar of quicklime does the work; ground glass is 19th c.)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-12)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM19-12) reconciled 2026-10-29"
     ],
     [
      "balance_oertling",
@@ -8023,9 +8417,11 @@ window.BODY_DATA = {
      "open",
      "a level bench, a set of weights, a glass case",
      "Assaying, Chymistry",
-     "weighing to the tenth of a milligram",
-     "rare (the assayer's balance weighs finer than the apothecary's; no case or agate knife edge)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-19)"
+     "weighing to the tenth of a milligram Reconciled: availability set to none (anomaly) because the item is dated after 1730; the earlier forerunner named in the availability note is a different thing.",
+     "none (anomaly): the dated item is after 1730; rare (the assayer's balance weighs finer than the apothecary's; no case or agate knife edge)",
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM19-19) reconciled 2026-10-29"
     ],
     [
      "polarimeter",
@@ -8045,7 +8441,9 @@ window.BODY_DATA = {
      "Chymistry",
      "sugar and chiral compounds by their rotation",
      "none (no Nicol prisms; Iceland spar a curiosity, Malus is 1808)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-13)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-CHEM19-13) reconciled 2026-10-29"
     ],
     [
      "bomb_calorimeter",
@@ -8065,7 +8463,9 @@ window.BODY_DATA = {
      "Chymistry",
      "heats of combustion",
      "none (no pressure-tight bomb, no electricity)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-14)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM19-14) reconciled 2026-10-29"
     ],
     [
      "voltameter_hofmann",
@@ -8085,7 +8485,9 @@ window.BODY_DATA = {
      "Chymistry",
      "splitting water and measuring the two gases",
      "none (no current source before 1800)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-15)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-CHEM19-15) reconciled 2026-10-29"
     ],
     [
      "thermometer_beckmann",
@@ -8105,7 +8507,9 @@ window.BODY_DATA = {
      "Chymistry",
      "freezing and boiling point shifts for molecular weights",
      "none (only the ordinary thermometer exists)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-16)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-CHEM19-16) reconciled 2026-10-29"
     ],
     [
      "crucible_platinum",
@@ -8125,7 +8529,9 @@ window.BODY_DATA = {
      "Precious Metalworking, Assaying",
      "high-temperature ignition without a contaminating vessel",
      "none (platina from Colombia was known by Ulloa 1748 but unworkable; Achard's crucible is 1784)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-17)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-CHEM19-17) reconciled 2026-10-29"
     ],
     [
      "test_tube",
@@ -8145,7 +8551,9 @@ window.BODY_DATA = {
      "any",
      "small reactions in a flame; boiling",
      "rare (glass vials are common; the thin heat-proof tube is later)",
-     "proposed (researched 2026-10-29; EQ-CHEM19-20)"
+     "low",
+     "high",
+     "proposed (researched 2026-10-29; EQ-CHEM19-20) reconciled 2026-10-29"
     ],
     [
      "furnace_open_hearth",
@@ -8165,13 +8573,15 @@ window.BODY_DATA = {
      "Smelting",
      "steel from scrap and pig iron with controllable chemistry",
      "none: needs regenerative brickwork and gas firing",
-     "proposed (researched 2026-10-29; EQ-IND19MED-OH)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-IND19MED-OH) reconciled 2026-10-29"
     ],
     [
      "hall_heroult",
      "Hall-Heroult cell (aluminium)",
      "separate",
-     "electrolysis, vessel",
+     "power, vessel",
      "1886 (Hall and Heroult independently); first large plant Pittsburgh 1888",
      "Charles Martin Hall; Paul Heroult",
      "heating the ore with sodium or potassium in vacuum, dearer than gold early in the 19th c.",
@@ -8183,15 +8593,17 @@ window.BODY_DATA = {
      "open (no cell output on the page)",
      "alumina, cryolite flux (with aluminium fluoride), heavy DC supply, carbon",
      "Smelting",
-     "aluminium metal",
+     "aluminium metal Reconciled: Roles retyped to the roles table ids (was \"electrolysis, vessel\").",
      "none: aluminium was unknown as a metal and there was no DC source of that size",
-     "proposed (researched 2026-10-29; EQ-IND19MED-HH)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-IND19MED-HH) reconciled 2026-10-29"
     ],
     [
      "solvay",
      "Solvay process plant",
      "separate",
-     "heat, vessel, gas absorption",
+     "heat, vessel, separate",
      "1861 (Solvay began); Couillet plant 1864; earlier 1811 (Fresnel) and 1834 (Dyar and Hemming) attempts",
      "Ernest Solvay",
      "Leblanc process",
@@ -8203,9 +8615,11 @@ window.BODY_DATA = {
      "open (page gives no output)",
      "brine, limestone, ammonia (recycled), coal, a tall absorption tower",
      "Chymistry",
-     "soda ash from salt and chalk without the Leblanc waste",
+     "soda ash from salt and chalk without the Leblanc waste Reconciled: Roles retyped to the roles table ids (was \"heat, vessel, gas absorption\").",
      "none: needs ammonia in quantity and an industrial plant",
-     "proposed (researched 2026-10-29; EQ-IND19MED-SOLV)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-IND19MED-SOLV) reconciled 2026-10-29"
     ],
     [
      "leblanc",
@@ -8225,7 +8639,9 @@ window.BODY_DATA = {
      "Chymistry",
      "soda ash for glass and soap; hydrochloric acid gas as a waste",
      "none: the process is 1791; the Wikipedia page puts Scheele's sulphuric step in 1772",
-     "proposed (researched 2026-10-29; EQ-IND19MED-LEB)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-IND19MED-LEB) reconciled 2026-10-29"
     ],
     [
      "pasteuriser",
@@ -8243,15 +8659,17 @@ window.BODY_DATA = {
      "a batch of bottles",
      "water bath, a thermometer, sealed bottles",
      "Brewing, Cooking",
-     "keeping wine and milk without spoilage",
-     "rare: heating wine is old in Asia; no Atlantic practice found, and the method rests on germ theory",
-     "proposed (researched 2026-10-29; EQ-IND19MED-PAST)"
+     "keeping wine and milk without spoilage Reconciled: availability set to none (anomaly) because the item is dated after 1730; the earlier forerunner named in the availability note is a different thing.",
+     "none (anomaly): the dated item is after 1730; rare: heating wine is old in Asia; no Atlantic practice found, and the method rests on germ theory",
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-IND19MED-PAST) reconciled 2026-10-29"
     ],
     [
      "microtome",
      "Microtome",
      "measure",
-     "handle, cutting, preparation",
+     "handle",
      "1770 (Adams, then Cummings); Prichard 1835; His 1865; Purkyne (no date on page)",
      "George Adams Jr.; Cummings; Purkyne",
      "razor-blade hand sections",
@@ -8263,15 +8681,17 @@ window.BODY_DATA = {
      "a few mm of tissue",
      "razor-sharp blade, steady stage, embedding wax, stains",
      "Natural philosophy, Surgery",
-     "thin sections for the microscope",
-     "rare: razor sections by hand; no mechanical microtome (first 1770 per page)",
-     "proposed (researched 2026-10-29; EQ-IND19MED-MICT)"
+     "thin sections for the microscope Reconciled: availability set to none (anomaly) because the item is dated after 1730; the earlier forerunner named in the availability note is a different thing. Reconciled: Roles retyped to the roles table ids (was \"handle, cutting, preparation\").",
+     "none (anomaly): the dated item is after 1730; rare: razor sections by hand; no mechanical microtome (first 1770 per page)",
+     "low",
+     "high",
+     "proposed (researched 2026-10-29; EQ-IND19MED-MICT) reconciled 2026-10-29"
     ],
     [
      "petri_dish",
      "Petri dish",
      "vessel",
-     "vessel, culture",
+     "vessel",
      "1887 (Petri published); Koch's moist chamber 1881",
      "Julius Richard Petri (Koch's assistant)",
      "Koch's glass slide of agar in a dish",
@@ -8283,9 +8703,11 @@ window.BODY_DATA = {
      "a few mm of agar in a 30 to 200 mm dish",
      "agar, nutrient broth, sterile glass, a lid",
      "Glassmaking",
-     "culture plates for bacteria and moulds",
+     "culture plates for bacteria and moulds Reconciled: Roles retyped to the roles table ids (was \"vessel, culture\").",
      "none: needs agar and germ theory",
-     "proposed (researched 2026-10-29; EQ-IND19MED-PETR)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-IND19MED-PETR) reconciled 2026-10-29"
     ],
     [
      "incubator",
@@ -8303,9 +8725,11 @@ window.BODY_DATA = {
      "open",
      "a heat source, a thermometer, an insulated box, a regulator",
      "Natural philosophy",
-     "warm cultures near body temperature",
-     "rare: egg ovens existed; regulated cultures did not",
-     "proposed (researched 2026-10-29; EQ-IND19MED-INCU)"
+     "warm cultures near body temperature Reconciled: availability set to none (anomaly) because the item is dated after 1730; the earlier forerunner named in the availability note is a different thing.",
+     "none (anomaly): the dated item is after 1730; rare: egg ovens existed; regulated cultures did not",
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-IND19MED-INCU) reconciled 2026-10-29"
     ],
     [
      "sphygmomanometer",
@@ -8325,13 +8749,15 @@ window.BODY_DATA = {
      "Surgery",
      "blood pressure reading",
      "none: no cuff or rubber; Hales 1733 is after 1730 and not on the page",
-     "proposed (researched 2026-10-29; EQ-IND19MED-SPHY)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-IND19MED-SPHY) reconciled 2026-10-29"
     ],
     [
      "inhaler_anaesthesia",
      "Anaesthesia inhaler (1846)",
      "handle",
-     "handle, vapour delivery",
+     "handle, atmosphere",
      "1846 (ether, Morton); the fetched inhaler page gives only Mudge 1778",
      "William Morton (open: not on the fetched page)",
      "Mudge's inhaler of 1778",
@@ -8343,15 +8769,17 @@ window.BODY_DATA = {
      "open",
      "ether or chloroform, a glass flask, valves and a mouthpiece",
      "Surgery, Apothecary",
-     "surgery without pain",
+     "surgery without pain Reconciled: Roles retyped to the roles table ids (was \"handle, vapour delivery\").",
      "none: anaesthesia by vapour is 1846",
-     "proposed (researched 2026-10-29; EQ-IND19MED-INHA)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-IND19MED-INHA) reconciled 2026-10-29"
     ],
     [
      "spray_carbolic",
      "Carbolic spray (Lister)",
      "handle",
-     "handle, spray",
+     "handle, atmosphere",
      "1867 (Lister's paper); French surgeons used carbolic in the 1860s",
      "Joseph Lister",
      "washing the wound",
@@ -8363,15 +8791,17 @@ window.BODY_DATA = {
      "open",
      "phenol (carbolic acid), a spray nozzle",
      "Surgery, Apothecary",
-     "antiseptic surgery, fewer infections",
+     "antiseptic surgery, fewer infections Reconciled: Roles retyped to the roles table ids (was \"handle, spray\").",
      "none: no phenol and no germ theory",
-     "proposed (researched 2026-10-29; EQ-IND19MED-ANTI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-IND19MED-ANTI) reconciled 2026-10-29"
     ],
     [
      "tube_xray",
      "X-ray tube",
      "light and optics",
-     "vessel, radiation",
+     "vessel, light and optics",
      "1895 (Rontgen with a Crookes tube, 8 November); Crookes tube 1869 to 1875; Geissler 1857",
      "Wilhelm Rontgen; William Crookes",
      "Crookes tube, Geissler tube",
@@ -8383,9 +8813,11 @@ window.BODY_DATA = {
      "open",
      "a high-vacuum air pump, an induction coil and battery, a photographic plate or screen",
      "Natural philosophy",
-     "shadow pictures of bone and metal",
+     "shadow pictures of bone and metal Reconciled: Roles retyped to the roles table ids (was \"vessel, radiation\").",
      "none: needs a high vacuum and an induction coil",
-     "proposed (researched 2026-10-29; EQ-IND19MED-CROO)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-IND19MED-CROO) reconciled 2026-10-29"
     ],
     [
      "spectrophotometer_uv",
@@ -8405,7 +8837,9 @@ window.BODY_DATA = {
      "Natural philosophy, Lens-grinding",
      "concentration of a coloured or UV-absorbing solute from a number",
      "none (anomaly; no electric lamps, no photocells; the eye and colour comparison are period)",
-     "proposed (researched 2026-10-29; EQ-AN20-UVV)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-AN20-UVV) reconciled 2026-10-29"
     ],
     [
      "spectrometer_ir",
@@ -8425,7 +8859,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "fingerprint of functional groups; identifies an unknown by its bonds",
      "none (anomaly; no IR detectors, no electricity)",
-     "proposed (researched 2026-10-29; EQ-AN20-IR)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-AN20-IR) reconciled 2026-10-29"
     ],
     [
      "xrd",
@@ -8445,7 +8881,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "atomic structure of a crystalline solid",
      "none (anomaly; no X-rays before 1895)",
-     "proposed (researched 2026-10-29; EQ-AN20-XRD)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-AN20-XRD) reconciled 2026-10-29"
     ],
     [
      "microscope_electron",
@@ -8465,7 +8903,9 @@ window.BODY_DATA = {
      "Natural philosophy, Lens-grinding",
      "viruses, crystal lattices, particle shape; nothing a 1650 to 1730 chymist could use",
      "none (anomaly; no electron beam, no vacuum column)",
-     "proposed (researched 2026-10-29; EQ-AN20-EM)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-AN20-EM) reconciled 2026-10-29"
     ],
     [
      "geiger",
@@ -8485,7 +8925,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "detects ionising radiation; no radioactive material is known in period",
      "none (anomaly; radioactivity unknown until 1896)",
-     "proposed (researched 2026-10-29; EQ-AN20-GM)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-AN20-GM) reconciled 2026-10-29"
     ],
     [
      "cloud_chamber",
@@ -8505,7 +8947,9 @@ window.BODY_DATA = {
      "Natural philosophy, Glassmaking",
      "shows ionising particle tracks",
      "none (anomaly; no use before radioactivity; glass and alcohol alone existed)",
-     "proposed (researched 2026-10-29; EQ-AN20-CLOUD)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-AN20-CLOUD) reconciled 2026-10-29"
     ],
     [
      "oscilloscope",
@@ -8525,7 +8969,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "shows a voltage against time",
      "none (anomaly; no electricity to measure)",
-     "proposed (researched 2026-10-29; EQ-AN20-OSC)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-AN20-OSC) reconciled 2026-10-29"
     ],
     [
      "hplc",
@@ -8545,7 +8991,9 @@ window.BODY_DATA = {
      "Chymistry",
      "separation and quantity of non-volatile mixtures",
      "none (anomaly; no pump of that pressure, no packings)",
-     "proposed (researched 2026-10-29; EQ-AN20-HPLC)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-AN20-HPLC) reconciled 2026-10-29"
     ],
     [
      "aas",
@@ -8565,7 +9013,9 @@ window.BODY_DATA = {
      "Assaying, Chymistry",
      "amount of one metal in a solution",
      "none (anomaly; no hollow cathode lamps, no acetylene)",
-     "proposed (researched 2026-10-29; EQ-AN20-AAS)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-AN20-AAS) reconciled 2026-10-29"
     ],
     [
      "electrophoresis",
@@ -8585,7 +9035,9 @@ window.BODY_DATA = {
      "Chymistry",
      "separates charged molecules by size and charge",
      "none (anomaly; no DC supply; the 1801 effect was seen with a voltaic pile)",
-     "proposed (researched 2026-10-29; EQ-AN20-ELEC)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-AN20-ELEC) reconciled 2026-10-29"
     ],
     [
      "ultracentrifuge",
@@ -8605,7 +9057,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "sedimentation of proteins, colloids and fine particles",
      "none (anomaly; no motors, no vacuum)",
-     "proposed (researched 2026-10-29; EQ-AN20-UCEN)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-AN20-UCEN) reconciled 2026-10-29"
     ],
     [
      "laser",
@@ -8625,7 +9079,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "coherent light for cutting, ranging, spectroscopy",
      "none (anomaly; no flashlamps, no synthetic ruby)",
-     "proposed (researched 2026-10-29; EQ-AN20-LASER)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-AN20-LASER) reconciled 2026-10-29"
     ],
     [
      "fume_hood",
@@ -8645,7 +9101,9 @@ window.BODY_DATA = {
      "any",
      "safe work with fumes, vapours and dusts",
      "none (period: work outdoors or at a chimney; keeper's note)",
-     "proposed (researched 2026-10-29; EQ-AN20-HOOD)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-AN20-HOOD) reconciled 2026-10-29"
     ],
     [
      "glovebox",
@@ -8665,7 +9123,9 @@ window.BODY_DATA = {
      "Chymistry",
      "handling air- and water-sensitive substances; handling hazardous ones",
      "none (anomaly; no pure argon, no purifier)",
-     "proposed (researched 2026-10-29; EQ-AN20-GLOVE)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-AN20-GLOVE) reconciled 2026-10-29"
     ],
     [
      "schlenk_line",
@@ -8685,7 +9145,9 @@ window.BODY_DATA = {
      "Glassmaking, Chymistry",
      "air-free synthesis and filtration",
      "none (anomaly; no vacuum pump, no inert gas supply)",
-     "proposed (researched 2026-10-29; EQ-AN20-SCHL)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-AN20-SCHL) reconciled 2026-10-29"
     ],
     [
      "rotavap",
@@ -8705,7 +9167,9 @@ window.BODY_DATA = {
      "Distilling, Glassmaking",
      "gentle removal of solvent from a product",
      "none (anomaly; no vacuum pump or electric motor)",
-     "proposed (researched 2026-10-29; EQ-AN20-ROTA)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-AN20-ROTA) reconciled 2026-10-29"
     ],
     [
      "stirrer_hotplate",
@@ -8725,7 +9189,9 @@ window.BODY_DATA = {
      "Glassmaking",
      "stirring and heating with no seal to leak",
      "none (anomaly; no electric hotplate, no coated magnet)",
-     "proposed (researched 2026-10-29; EQ-AN20-STIR)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-AN20-STIR) reconciled 2026-10-29"
     ],
     [
      "furnace_muffle_modern",
@@ -8745,7 +9211,9 @@ window.BODY_DATA = {
      "Smelting, Assaying",
      "clean controlled heat for ashing, assay, annealing",
      "none (anomaly; no electricity; the fuel-fired assay muffle is rare)",
-     "proposed (researched 2026-10-29; EQ-AN20-MUFF)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-AN20-MUFF) reconciled 2026-10-29"
     ],
     [
      "pump_vacuum_rotary",
@@ -8765,7 +9233,9 @@ window.BODY_DATA = {
      "Smithing",
      "rough vacuum, a forepump for the diffusion pump",
      "none (anomaly; period air pumps were hand pistons, see pump_air)",
-     "proposed (researched 2026-10-29; EQ-AN20-VAC, EQ-AN20-GAEDE)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-AN20-VAC, EQ-AN20-GAEDE) reconciled 2026-10-29"
     ],
     [
      "pump_diffusion",
@@ -8785,7 +9255,9 @@ window.BODY_DATA = {
      "Smithing, Glassmaking",
      "high vacuum for tubes, mass spectrometers, electron microscopes",
      "none (anomaly; no forepump, no vacuum seal)",
-     "proposed (researched 2026-10-29; EQ-AN20-DIFF, EQ-AN20-GAEDE)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-AN20-DIFF, EQ-AN20-GAEDE) reconciled 2026-10-29"
     ],
     [
      "hood_laminar",
@@ -8805,7 +9277,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "sterile handling of cultures and media without a glove box; not safe for pathogens",
      "none (anomaly; HEPA media and blowers do not exist)",
-     "proposed (researched 2026-10-29; EQ-BM20-LAM)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-BM20-LAM) reconciled 2026-10-29"
     ],
     [
      "incubator_co2",
@@ -8825,7 +9299,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "warm humid CO2 air so mammalian cell cultures keep their pH",
      "none (anomaly; no CO2 cylinder, no sensor, no thermostat; a warm room only)",
-     "proposed (researched 2026-10-29; EQ-BM20-INC)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-BM20-INC) reconciled 2026-10-29"
     ],
     [
      "flow_cytometer",
@@ -8845,7 +9321,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "counting and sorting cells by size and fluorescent label",
      "none (anomaly; needs lasers, electronics and fluorescent labels)",
-     "proposed (researched 2026-10-29; EQ-BM20-FCM)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-BM20-FCM) reconciled 2026-10-29"
     ],
     [
      "plate_reader",
@@ -8865,7 +9343,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "many assays at once (absorbance, fluorescence, luminescence)",
      "none (anomaly; plastic moulding, photodetectors and electronics)",
-     "proposed (researched 2026-10-29; EQ-BM20-PLT)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-BM20-PLT) reconciled 2026-10-29"
     ],
     [
      "mri",
@@ -8885,7 +9365,9 @@ window.BODY_DATA = {
      "Surgery",
      "soft tissue shown inside the body without cutting",
      "none (anomaly; superconducting magnets, liquid helium and computers)",
-     "proposed (researched 2026-10-29; EQ-BM20-MRI)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-BM20-MRI) reconciled 2026-10-29"
     ],
     [
      "ct",
@@ -8905,7 +9387,9 @@ window.BODY_DATA = {
      "Surgery",
      "cross-sections of the body; brain tumours seen without opening",
      "none (anomaly; X-ray tubes, detectors and computers)",
-     "proposed (researched 2026-10-29; EQ-BM20-CT)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-BM20-CT) reconciled 2026-10-29"
     ],
     [
      "ultrasound",
@@ -8925,7 +9409,9 @@ window.BODY_DATA = {
      "Surgery",
      "a baby or an organ seen without cutting",
      "none (anomaly; piezoelectric crystals, valves or transistors and display tubes)",
-     "proposed (researched 2026-10-29; EQ-BM20-US)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-BM20-US) reconciled 2026-10-29"
     ],
     [
      "ecg",
@@ -8945,7 +9431,9 @@ window.BODY_DATA = {
      "Physic",
      "heartbeat shape recorded; arrhythmia diagnosed",
      "none (anomaly; needs a quartz string, strong magnet and electronic amplification)",
-     "proposed (researched 2026-10-29; EQ-BM20-ECG)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-BM20-ECG) reconciled 2026-10-29"
     ],
     [
      "defibrillator",
@@ -8965,7 +9453,9 @@ window.BODY_DATA = {
      "Surgery",
      "a stopped or fibrillating heart restarted",
      "none (anomaly; capacitors, transformers and electricity)",
-     "proposed (researched 2026-10-29; EQ-BM20-DEF)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-BM20-DEF) reconciled 2026-10-29"
     ],
     [
      "ventilator",
@@ -8985,7 +9475,9 @@ window.BODY_DATA = {
      "Physic",
      "breathing kept up for a patient who cannot",
      "none (anomaly; only bellows resuscitation; no pumps or compressed gas)",
-     "proposed (researched 2026-10-29; EQ-BM20-VENT)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-BM20-VENT) reconciled 2026-10-29"
     ],
     [
      "dialysis",
@@ -9005,7 +9497,9 @@ window.BODY_DATA = {
      "Physic",
      "kidney failure bridged by filtering blood",
      "none (anomaly; cellophane, heparin and pumps do not exist)",
-     "proposed (researched 2026-10-29; EQ-BM20-DIAL)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-BM20-DIAL) reconciled 2026-10-29"
     ],
     [
      "blood_gas_analyser",
@@ -9025,7 +9519,9 @@ window.BODY_DATA = {
      "Physic",
      "oxygen and carbon dioxide tension and pH of arterial blood",
      "none (anomaly; membranes, electrodes and amplifiers)",
-     "proposed (researched 2026-10-29; EQ-BM20-BGA)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-BM20-BGA) reconciled 2026-10-29"
     ],
     [
      "pulse_oximeter",
@@ -9045,7 +9541,9 @@ window.BODY_DATA = {
      "Physic",
      "blood oxygen saturation read without a sample",
      "none (anomaly; LEDs, photodiodes and electronics)",
-     "proposed (researched 2026-10-29; EQ-BM20-OXI)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-BM20-OXI) reconciled 2026-10-29"
     ],
     [
      "glucose_meter",
@@ -9065,7 +9563,9 @@ window.BODY_DATA = {
      "Physic",
      "blood sugar checked",
      "none (anomaly; enzyme strips and electronics)",
-     "proposed (researched 2026-10-29; EQ-BM20-GLU)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-BM20-GLU) reconciled 2026-10-29"
     ],
     [
      "fermenter",
@@ -9085,7 +9585,9 @@ window.BODY_DATA = {
      "Apothecary",
      "antibiotic produced in bulk",
      "none (anomaly; no sterile aeration or strain selection)",
-     "proposed (researched 2026-10-29; EQ-BM20-FERM)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-BM20-FERM) reconciled 2026-10-29"
     ],
     [
      "flask_culture",
@@ -9105,7 +9607,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "cells kept growing in vitro",
      "none (anomaly; glass flasks existed but not sterile media or incubators)",
-     "proposed (researched 2026-10-29; EQ-BM20-FLASK)"
+     "low",
+     "high",
+     "proposed (researched 2026-10-29; EQ-BM20-FLASK) reconciled 2026-10-29"
     ],
     [
      "freezer_cryogenic",
@@ -9125,7 +9629,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "cells and sperm stored for years",
      "none (anomaly; no liquefied air and no dewars)",
-     "proposed (researched 2026-10-29; EQ-BM20-CRYO)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-BM20-CRYO) reconciled 2026-10-29"
     ],
     [
      "cabinet_biosafety",
@@ -9145,7 +9651,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "pathogens handled with protection to worker, product and environment",
      "none (anomaly; no HEPA or blowers)",
-     "proposed (researched 2026-10-29; EQ-BM20-BSC)"
+     "low",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-BM20-BSC) reconciled 2026-10-29"
     ],
     [
      "microscope_fluorescence",
@@ -9165,7 +9673,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "labelled cells seen against a dark field",
      "none (anomaly; no mercury lamps or dichroic filters)",
-     "proposed (researched 2026-10-29; EQ-BM20-FLM)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-BM20-FLM) reconciled 2026-10-29"
     ],
     [
      "power_hand",
@@ -9185,7 +9695,9 @@ window.BODY_DATA = {
      "Smithing",
      "turning a lathe, working bellows or a pump by hand",
      "common (every shop and ship; labour, EQ-PF-MILL for the contrast with mills)",
-     "proposed (researched 2026-10-29; EQ-PF-MILL)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-MILL) reconciled 2026-10-29"
     ],
     [
      "gin_horse",
@@ -9205,7 +9717,9 @@ window.BODY_DATA = {
      "Smithing",
      "grinding, pumping or hoisting where there is no stream or wind",
      "common (cheap for light work, EQ-PF-MILL)",
-     "proposed (researched 2026-10-29; EQ-PF-MILL)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-MILL) reconciled 2026-10-29"
     ],
     [
      "wheel_water",
@@ -9225,7 +9739,9 @@ window.BODY_DATA = {
      "Masonry",
      "stamping mills, forge bellows and hammers, grinding, saw frames, pumps",
      "common (mills on every English and Dutch stream; EQ-PF-MILL)",
-     "proposed (researched 2026-10-29; EQ-PF-MILL)"
+     "low",
+     "high",
+     "proposed (researched 2026-10-29; EQ-PF-MILL) reconciled 2026-10-29"
     ],
     [
      "windmill",
@@ -9245,7 +9761,9 @@ window.BODY_DATA = {
      "Shipwrighting",
      "grinding, draining polders, sawing, stamping",
      "common (Dutch and English coasts; period detail open in the results, EQ-PF-MILL)",
-     "proposed (researched 2026-10-29; EQ-PF-MILL)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-MILL) reconciled 2026-10-29"
     ],
     [
      "fuel_charcoal",
@@ -9265,7 +9783,9 @@ window.BODY_DATA = {
      "Smelting",
      "furnaces, forges, assay and chymical fires",
      "common (the standard furnace fuel; EQ-PF-FUEL, EQ-PF-COKE)",
-     "proposed (researched 2026-10-29; EQ-PF-FUEL; EQ-PF-COKE)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-FUEL; EQ-PF-COKE) reconciled 2026-10-29"
     ],
     [
      "fuel_wood",
@@ -9285,7 +9805,9 @@ window.BODY_DATA = {
      "any",
      "cooking, boiling, baking, low furnace work",
      "common",
-     "proposed (researched 2026-10-29; EQ-PF-FUEL)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-FUEL) reconciled 2026-10-29"
     ],
     [
      "fuel_peat",
@@ -9305,7 +9827,9 @@ window.BODY_DATA = {
      "any",
      "domestic and light industrial heat where wood and coal are short",
      "common in the Netherlands, Ireland and Scotland; rare elsewhere (EQ-PF-FUEL)",
-     "proposed (researched 2026-10-29; EQ-PF-FUEL)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-FUEL) reconciled 2026-10-29"
     ],
     [
      "fuel_coal",
@@ -9325,7 +9849,9 @@ window.BODY_DATA = {
      "Mining",
      "domestic heat, brewing, lime and glass; raw coal taints smelts",
      "common in Britain by sea-coal; rare in the colonies (EQ-PF-FUEL; EQ-PF-COKE)",
-     "proposed (researched 2026-10-29; EQ-PF-FUEL; EQ-PF-COKE)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-FUEL; EQ-PF-COKE) reconciled 2026-10-29"
     ],
     [
      "fuel_coke",
@@ -9345,7 +9871,9 @@ window.BODY_DATA = {
      "Smelting",
      "blast-furnace iron, malting, copper smelting",
      "rare (Coalbrookdale and a few copper and malt works; Darby's coke did not spread at once, EQ-PF-COKE)",
-     "proposed (researched 2026-10-29; EQ-PF-COKE; EQ-PF-FUEL)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-COKE; EQ-PF-FUEL) reconciled 2026-10-29"
     ],
     [
      "fuel_bagasse",
@@ -9365,13 +9893,15 @@ window.BODY_DATA = {
      "Refining (saltpetre, sugar, salt)",
      "boiling-house fires of a sugar works",
      "common in the sugar islands (inferred from the mill; period source open, EQ-PF-FUEL)",
-     "proposed (researched 2026-10-29; EQ-PF-FUEL)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-FUEL) reconciled 2026-10-29"
     ],
     [
      "fuel_whale_oil",
      "Whale oil",
      "heat",
-     "heat (fuel); light",
+     "heat (fuel); light and optics",
      "18th and 19th c lamp fuel; exact date open (EQ-PF-FUEL)",
      "open",
      "tallow, vegetable oils",
@@ -9383,9 +9913,11 @@ window.BODY_DATA = {
      "MJ/kg open",
      "a whaler, try-works, a lamp",
      "any",
-     "lamp light on ship and shore; spermaceti candles",
+     "lamp light on ship and shore; spermaceti candles Reconciled: Roles retyped to the roles table ids (was \"heat (fuel); light\").",
      "common in New England and on whalers; costly (EQ-PF-FUEL)",
-     "proposed (researched 2026-10-29; EQ-PF-FUEL)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-FUEL) reconciled 2026-10-29"
     ],
     [
      "fuel_spirit",
@@ -9405,13 +9937,15 @@ window.BODY_DATA = {
      "Distilling",
      "a clean, smokeless flame for small digestions and blow lamps",
      "common (spirit of wine was in every chymist's shop; the lamp use is open in the results)",
-     "proposed (researched 2026-10-29; EQ-PF-FUEL)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-FUEL) reconciled 2026-10-29"
     ],
     [
      "gas_town",
      "Town gas (1812)",
      "heat",
-     "heat (fuel gas); light",
+     "heat (fuel gas); light and optics",
      "Winsor demonstration 1807; company Act 1810; charter and Westminster works 1812 to 1813 (EQ-PF-GAS)",
      "Frederick Albert Winsor; William Murdoch (private plants)",
      "coal tar and oil lamps",
@@ -9423,9 +9957,11 @@ window.BODY_DATA = {
      "open (no 1812 figure found)",
      "a gasworks, a gasholder, mains",
      "Smelting",
-     "a steady flame for the bench; street light",
+     "a steady flame for the bench; street light Reconciled: Roles retyped to the roles table ids (was \"heat (fuel gas); light\").",
      "none (about a century after the window; EQ-PF-GAS)",
-     "proposed (researched 2026-10-29; EQ-PF-GAS)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-GAS) reconciled 2026-10-29"
     ],
     [
      "battery_lead_acid",
@@ -9445,7 +9981,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "a rechargeable steady current for electrolysis and lamps",
      "none (no pile before 1800, EQ-PF-PLANTE)",
-     "proposed (researched 2026-10-29; EQ-PF-PLANTE)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-PF-PLANTE) reconciled 2026-10-29"
     ],
     [
      "mains_electricity",
@@ -9465,7 +10003,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "electric light, motors, electrolysis on a large scale",
      "none (EQ-PF-PEARL)",
-     "proposed (researched 2026-10-29; EQ-PF-PEARL)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-PEARL) reconciled 2026-10-29"
     ],
     [
      "engine_petrol",
@@ -9485,7 +10025,9 @@ window.BODY_DATA = {
      "Smithing",
      "motive power on a bench",
      "none (EQ-PF-ENG)",
-     "proposed (researched 2026-10-29; EQ-PF-ENG)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-ENG) reconciled 2026-10-29"
     ],
     [
      "engine_diesel",
@@ -9505,7 +10047,9 @@ window.BODY_DATA = {
      "Smithing",
      "power from a liquid fuel",
      "none (EQ-PF-ENG)",
-     "proposed (researched 2026-10-29; EQ-PF-ENG)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-PF-ENG) reconciled 2026-10-29"
     ],
     [
      "gas_bottled",
@@ -9525,7 +10069,9 @@ window.BODY_DATA = {
      "any",
      "a steady portable flame",
      "none (petroleum refining; EQ-PF-LPG)",
-     "proposed (researched 2026-10-29; EQ-PF-LPG)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-LPG) reconciled 2026-10-29"
     ],
     [
      "tinderbox",
@@ -9545,7 +10091,9 @@ window.BODY_DATA = {
      "any",
      "lighting any fire",
      "common (EQ-PF-TINDER)",
-     "proposed (researched 2026-10-29; EQ-PF-TINDER)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-TINDER) reconciled 2026-10-29"
     ],
     [
      "match_friction",
@@ -9565,7 +10113,9 @@ window.BODY_DATA = {
      "Apothecary",
      "lighting fires instantly",
      "none (invented 1826, EQ-PF-MATCH)",
-     "proposed (researched 2026-10-29; EQ-PF-MATCH)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-MATCH) reconciled 2026-10-29"
     ],
     [
      "fire_piston",
@@ -9585,13 +10135,15 @@ window.BODY_DATA = {
      "any",
      "lighting a fire",
      "none (no European fire pistons before 1802; EQ-PF-FIREPISTON)",
-     "proposed (researched 2026-10-29; EQ-PF-FIREPISTON)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-PF-FIREPISTON) reconciled 2026-10-29"
     ],
     [
      "still_solar",
      "Solar still",
      "heat",
-     "heat (solar); distillation",
+     "heat (solar); separate",
      "1872 Charles Wilson, Las Salinas, Chile (one source: 1882; EQ-PF-SOLAR)",
      "Charles Wilson",
      "none",
@@ -9603,9 +10155,11 @@ window.BODY_DATA = {
      "low; shallow basins (EQ-PF-SOLAR)",
      "sun, glass, a basin",
      "Glassmaking",
-     "fresh water from brine",
+     "fresh water from brine Reconciled: Roles retyped to the roles table ids (was \"heat (solar); distillation\").",
      "none (no earlier recorded still in the results; EQ-PF-SOLAR)",
-     "proposed (researched 2026-10-29; EQ-PF-SOLAR)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-PF-SOLAR) reconciled 2026-10-29"
     ],
     [
      "cross_staff",
@@ -9625,7 +10179,9 @@ window.BODY_DATA = {
      "Navigation (STATS.md; not in the GOODS 3c list)",
      "noon or Pole Star latitude; superseded first by the backstaff (Davis 1594), then the octant",
      "common but declining: still carried 1650 to 1730 next to the backstaff, which English masters preferred",
-     "proposed (researched 2026-10-29; EQ-SF-CROSS)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SF-CROSS) reconciled 2026-10-29"
     ],
     [
      "octant",
@@ -9645,7 +10201,9 @@ window.BODY_DATA = {
      "Navigation (STATS.md; not in the GOODS 3c list)",
      "altitude of the Sun or a star with the back to neither: latitude; cheaper than a brass sextant; lunar distances need the sextant",
      "none before 1731 (outside the period's 1650 to 1730 window by one year); common after 1731",
-     "proposed (researched 2026-10-29; EQ-SF-OCT)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-SF-OCT) reconciled 2026-10-29"
     ],
     [
      "sextant",
@@ -9665,7 +10223,9 @@ window.BODY_DATA = {
      "Navigation (STATS.md; not in the GOODS 3c list)",
      "latitude, and with a chronometer or lunar tables and the Nautical Almanac, longitude",
      "none 1650 to 1730 (invented 1731 on); date 1757 in the task list is Campbell's first sextant for the navy (not verified here, open)",
-     "proposed (researched 2026-10-29; EQ-SF-SEX)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-SF-SEX) reconciled 2026-10-29"
     ],
     [
      "chronometer",
@@ -9685,7 +10245,9 @@ window.BODY_DATA = {
      "Precious Metalworking (keeper's pick: watchmaking is not in the 3c list)",
      "longitude by comparing local noon to the time at the home port",
      "none 1650 to 1730; first working sea chronometer 1761; the 1714 Longitude Act prize existed (Wikipedia)",
-     "proposed (researched 2026-10-29; EQ-SF-CHRON)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SF-CHRON) reconciled 2026-10-29"
     ],
     [
      "compass_mariner",
@@ -9705,7 +10267,9 @@ window.BODY_DATA = {
      "Navigation (STATS.md; not in the GOODS 3c list)",
      "heading for dead reckoning; the base of every course; variation observed at sea (Halley chart 1701 from this)",
      "common: every ship",
-     "proposed (researched 2026-10-29; EQ-SF-COMP)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-SF-COMP) reconciled 2026-10-29"
     ],
     [
      "traverse_board",
@@ -9725,7 +10289,9 @@ window.BODY_DATA = {
      "any",
      "dead reckoning record that crew who cannot write can keep; the master copies to the log",
      "common on ships 1650 to 1730 (keeper's reading from the 17th c. Plymouth reference in Wikipedia's links; no 1650 to 1730 source opened, open)",
-     "proposed (researched 2026-10-29; EQ-SF-TRAV)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SF-TRAV) reconciled 2026-10-29"
     ],
     [
      "chart_sea",
@@ -9745,7 +10311,9 @@ window.BODY_DATA = {
      "Navigation (STATS.md; not in the GOODS 3c list)",
      "coasting, pilotage, courses between ports",
      "common: Dutch and English printed charts; portolans survive but are decorative and rare after 1650 (keeper's reading; open)",
-     "proposed (researched 2026-10-29; EQ-SF-PORT)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SF-PORT) reconciled 2026-10-29"
     ],
     [
      "chain_surveyor",
@@ -9765,7 +10333,9 @@ window.BODY_DATA = {
      "any",
      "land measure, plot areas; the chain and link were statutory units in England by the 1670s",
      "rare in the colonies: used by English surveyors, none by the crew (keeper's reading; open)",
-     "proposed (researched 2026-10-29; EQ-SF-GUNT)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-SF-GUNT) reconciled 2026-10-29"
     ],
     [
      "theodolite",
@@ -9785,7 +10355,9 @@ window.BODY_DATA = {
      "any",
      "triangulation for maps and boundaries",
      "rare: English surveyors in the colonies might have a circumferentor; a theodolite with a telescope only after 1725 (keeper's reading; open)",
-     "proposed (researched 2026-10-29; EQ-SF-THEO)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SF-THEO) reconciled 2026-10-29"
     ],
     [
      "jar_collecting",
@@ -9805,7 +10377,9 @@ window.BODY_DATA = {
      "Apothecary",
      "wet storage of fish, reptiles, fruit and insects; a specimen that arrives alive-looking",
      "common as a thing, rare as a collector's habit: any ship has rum and bottles; labels and method are the collectors' knowledge (keeper's reading; open)",
-     "proposed (researched 2026-10-29; EQ-SF-PET, EQ-SF-SLOANE)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SF-PET, EQ-SF-SLOANE) reconciled 2026-10-29"
     ],
     [
      "press_herbarium",
@@ -9825,7 +10399,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "specimens that last: Sloane's seven bound volumes from Jamaica 1687 to 1689 (NHM)",
      "common among collectors, rare among crews 1650 to 1730 (keeper's reading; open)",
-     "proposed (researched 2026-10-29; EQ-SF-HERB, EQ-SF-SLOANE)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SF-HERB, EQ-SF-SLOANE) reconciled 2026-10-29"
     ],
     [
      "net_insect",
@@ -9845,7 +10421,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "small flying insects; butterflies kept in a pocket-book (Petiver, per the Trinity Hall news item)",
      "open: no net is in the sources; fine gauze was dear",
-     "proposed (researched 2026-10-29; EQ-SF-PET)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SF-PET) reconciled 2026-10-29"
     ],
     [
      "furnace_portable",
@@ -9865,7 +10443,9 @@ window.BODY_DATA = {
      "Smelting",
      "small assays at a camp; melting small lots",
      "common (forge or brazier); a true assay furnace only on a ship with a smith (keeper's reading; open)",
-     "proposed (researched 2026-10-29; EQ-SF-ASSAY)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-SF-ASSAY) reconciled 2026-10-29"
     ],
     [
      "kit_assay_field",
@@ -9885,7 +10465,9 @@ window.BODY_DATA = {
      "Assaying",
      "a gold or silver estimate in the field; bead tests for minerals after 1738",
      "rare 1650 to 1730: the touchstone is common, the portable blowpipe kit appears about 1738 on (Wikipedia)",
-     "proposed (researched 2026-10-29; EQ-SF-ASSAY)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-SF-ASSAY) reconciled 2026-10-29"
     ],
     [
      "barometer_portable",
@@ -9905,7 +10487,9 @@ window.BODY_DATA = {
      "Natural philosophy",
      "storms forecast at sea; heights; Lapérouse praised the forecast but found the mercury inconsistent (Wikipedia)",
      "rare: the instrument exists and is tested at sea in 1698 to 1700, not routine (Wikipedia)",
-     "proposed (researched 2026-10-29; EQ-SF-BARO)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SF-BARO) reconciled 2026-10-29"
     ],
     [
      "sounding_machine",
@@ -9925,13 +10509,15 @@ window.BODY_DATA = {
      "Shipwrighting",
      "depth beyond the leadsman's reach (open: no period number found)",
      "none in practice 1650 to 1730: Hooke's device remained a Royal Society proposal; the lead line serves every ship",
-     "proposed (researched 2026-10-29; EQ-SF-SOUND)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-SF-SOUND) reconciled 2026-10-29"
     ],
     [
      "lantern_horn",
      "Horn lantern",
      "heat",
-     "light (candle)",
+     "light and optics (candle)",
      "medieval: horn lanterns before glass; 'lantern jaw' of 1361 describes one (Wikipedia)",
      "-",
      "open flame, torch",
@@ -9943,9 +10529,11 @@ window.BODY_DATA = {
      "one candle",
      "tallow or wax candles; below-deck lanterns required by one pirate code (Wikipedia)",
      "Waxworking",
-     "light on deck or below without a glass that breaks; signals",
+     "light on deck or below without a glass that breaks; signals Reconciled: Roles retyped to the roles table ids (was \"light (candle)\").",
      "common: every ship",
-     "proposed (researched 2026-10-29; EQ-SF-LANT)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SF-LANT) reconciled 2026-10-29"
     ],
     [
      "clock_candle",
@@ -9965,7 +10553,9 @@ window.BODY_DATA = {
      "Waxworking",
      "night hours in the cabin",
      "none in the sources for 1650 to 1730; sandglasses and watches did the job (open)",
-     "proposed (researched 2026-10-29; EQ-SF-CANDLE)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-SF-CANDLE) reconciled 2026-10-29"
     ],
     [
      "level_spirit",
@@ -9985,7 +10575,9 @@ window.BODY_DATA = {
      "Glassmaking",
      "level surveying, mounting an instrument",
      "rare 1650 to 1730: the plumb-line level is the common form",
-     "proposed (researched 2026-10-29; EQ-SF-LEVEL)"
+     "medium",
+     "high",
+     "proposed (researched 2026-10-29; EQ-SF-LEVEL) reconciled 2026-10-29"
     ],
     [
      "globe",
@@ -10005,7 +10597,9 @@ window.BODY_DATA = {
      "any",
      "teaching navigation; the shape of the sea routes",
      "rare on ships, common in a master's or merchant's house in the Netherlands and England (keeper's reading; open)",
-     "proposed (researched 2026-10-29; EQ-SF-GLOBE)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-SF-GLOBE) reconciled 2026-10-29"
     ],
     [
      "lab_chymist",
@@ -10025,7 +10619,9 @@ window.BODY_DATA = {
      "Chymistry (Apothecary draws on it)",
      "the facility every Lemery-type recipe names: calcination, distillation, sublimation, digestion, filtration, preparation of chemical medicines; a recipe's temperature ceiling is the best furnace in the room",
      "rare: a shop of apothecaries and chymists in the larger ports (Port Royal, Boston, Charleston by the early 1700s); none on a ship; a surgeon's chest holds a few vessels only (Campbell 1747: chymists are generally apothecaries)",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT; EQ-LEM-WIKI)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT; EQ-LEM-WIKI) reconciled 2026-10-29"
     ],
     [
      "furnace_lemery_digestive",
@@ -10045,7 +10641,9 @@ window.BODY_DATA = {
      "Chymistry",
      "digestion and circulation: long gentle heats of tinctures, extracts, plant material; the bath for vase_circulation",
      "rare: a chymist's or apothecary's shop; none on ships",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT) reconciled 2026-10-29"
     ],
     [
      "furnace_lemery_reverberatory",
@@ -10065,7 +10663,9 @@ window.BODY_DATA = {
      "Chymistry, Distilling",
      "distillation by retort with the helm cooled (Lemery p. 49); calcination; the common furnace of the chymist's laboratory; the ceiling for the strong-fire recipes",
      "rare: a chymist, apothecary or assayer's workshop; none on ships",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT; EQ-LEM-REVERB)"
+     "high",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT; EQ-LEM-REVERB) reconciled 2026-10-29"
     ],
     [
      "furnace_lemery_muffle",
@@ -10085,7 +10685,9 @@ window.BODY_DATA = {
      "Assaying, Chymistry",
      "cupellation and calcination with the fuel kept off the work; roasting without smoke touching the substance; assay of precious metal",
      "rare: an assayer's or goldsmith's shop; none on ships",
-     "proposed (researched 2026-10-29; EQ-LEM-MUFF; EQ-LEM-TEXT)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-LEM-MUFF; EQ-LEM-TEXT) reconciled 2026-10-29"
     ],
     [
      "still_cold",
@@ -10105,7 +10707,9 @@ window.BODY_DATA = {
      "Distilling, Chymistry",
      "distillation with the vapour condensed at once: spirits, waters and essential oils with less loss than the air-cooled alembic",
      "rare: a distiller or apothecary; some on sugar plantations (rum) in a larger form; none on ships",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT) reconciled 2026-10-29"
     ],
     [
      "pot_calcining",
@@ -10125,7 +10729,9 @@ window.BODY_DATA = {
      "Chymistry",
      "calcination: driving off water and volatile parts, burning to a calx, purifying a substance of soot (Lemery p. 32)",
      "common: potters supply them; used where there is a furnace",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT) reconciled 2026-10-29"
     ],
     [
      "glass_sublimation",
@@ -10145,7 +10751,9 @@ window.BODY_DATA = {
      "Chymistry, Glassmaking",
      "sublimation: sal ammoniac, flowers of sulphur, calomel type products rising to the cool top",
      "rare: glass from the Venetian and later English glasshouses; a chymist's shop",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT) reconciled 2026-10-29"
     ],
     [
      "funnel_glass",
@@ -10165,7 +10773,9 @@ window.BODY_DATA = {
      "Chymistry, Glassmaking",
      "pouring into narrow necks; holding the filter over the receiver",
      "rare: glass; common in tin or copper",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT) reconciled 2026-10-29"
     ],
     [
      "filter_flannel",
@@ -10185,7 +10795,9 @@ window.BODY_DATA = {
      "Apothecary, Chymistry",
      "clarifying liquors and syrups; separating a precipitate; washing a precipitate",
      "common: woollens are in any port",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT; EQ-LEM-FILT; EQ-LEM-FPAPER)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT; EQ-LEM-FILT; EQ-LEM-FPAPER) reconciled 2026-10-29"
     ],
     [
      "measure_glass",
@@ -10205,7 +10817,9 @@ window.BODY_DATA = {
      "Apothecary",
      "compounding by volume rather than weight; repeating a preparation's quantities",
      "rare: glass; common pewter measures in any tavern or shop",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT) reconciled 2026-10-29"
     ],
     [
      "balneum_mariae",
@@ -10225,7 +10839,9 @@ window.BODY_DATA = {
      "Chymistry, Distilling, Apothecary",
      "gentle distillation and infusion of herbs and aromatic plants without scorching; digestion; cooking drugs",
      "common: any kettle and fire; the apothecary uses it",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT; EQ-LEM-BAIN)"
+     "high",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT; EQ-LEM-BAIN) reconciled 2026-10-29"
     ],
     [
      "vase_circulation",
@@ -10245,7 +10861,9 @@ window.BODY_DATA = {
      "Chymistry, Alchemy",
      "circulation: vapours rise, condense and fall back for weeks; extracting a tincture or essence",
      "rare: glass; a chymist's shop",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT)"
+     "medium",
+     "low",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT) reconciled 2026-10-29"
     ],
     [
      "iron_pan",
@@ -10265,13 +10883,15 @@ window.BODY_DATA = {
      "Chymistry, Smithing",
      "roasting, evaporating, fusing and drying powders; a bath when set over sand",
      "common: ironmongers and ships' galleys",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT)"
+     "medium",
+     "medium",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT) reconciled 2026-10-29"
     ],
     [
      "stone_grinding",
      "Grinding stone (levigation)",
      "preparation",
-     "handle, preparation",
+     "handle",
      "ancient (the porphyry slab and muller); Lemery p. 63 lists glass, stone and marble mortars; levigation date: open",
      "-",
      "the mortar and pestle (mortar)",
@@ -10283,9 +10903,11 @@ window.BODY_DATA = {
      "a slab of 20 to 60 cm (keeper's estimate)",
      "water or spirit to wet; a muller",
      "Apothecary, Chymistry",
-     "levigation: grinding hard bodies to an impalpable powder with liquid; metals, pigments, precipitates",
+     "levigation: grinding hard bodies to an impalpable powder with liquid; metals, pigments, precipitates Reconciled: Roles retyped to the roles table ids (was \"handle, preparation\").",
      "rare: a stone slab is a chymist's or painter's tool; none on ships",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT) reconciled 2026-10-29"
     ],
     [
      "sieve_hair",
@@ -10305,7 +10927,9 @@ window.BODY_DATA = {
      "Apothecary, Chymistry",
      "sifting powders: a uniform grade before mixing; sifted ash for lute",
      "common: cloth and hair are everywhere",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT; EQ-LEM-SIEVE)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT; EQ-LEM-SIEVE) reconciled 2026-10-29"
     ],
     [
      "press_apothecary",
@@ -10325,7 +10949,9 @@ window.BODY_DATA = {
      "Apothecary",
      "expressing juices, oils and syrups from plants and seeds; separating a tincture from the dregs",
      "rare: apothecaries and plantations; none on ships",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT) reconciled 2026-10-29"
     ],
     [
      "cabinet_drug",
@@ -10345,7 +10971,9 @@ window.BODY_DATA = {
      "Apothecary",
      "stores the shop's stock of simples and chemical preparations; the cabinet is the facility that holds a stock of stored medicines",
      "rare: apothecaries' shops; a ship's medicine chest holds a few jars (Campbell, Blackbeard's chest)",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT)"
+     "low",
+     "low",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT) reconciled 2026-10-29"
     ],
     [
      "book_recipe",
@@ -10365,7 +10993,9 @@ window.BODY_DATA = {
      "Chymistry, Apothecary",
      "knowledge of the operations: the foreign or learned recipes in GOODS 3f; the book alone makes nothing without the laboratory",
      "rare: printed in Paris 1675 and London 1677; a physician or ship's surgeon may own one; none otherwise",
-     "proposed (researched 2026-10-29; EQ-LEM-TEXT; EQ-LEM-WIKI)"
+     "high",
+     "low",
+     "proposed (researched 2026-10-29; EQ-LEM-TEXT; EQ-LEM-WIKI) reconciled 2026-10-29"
     ]
    ]
   },
@@ -19732,6 +20362,14 @@ window.BODY_DATA = {
      "Wikipedia: Thermometer; Barometer; Hourglass; Pendulum clock; Backstaff; Mariner's astrolabe; Chip log; Sounding line; Touchstone; Hydrometer; Litmus; Quadrant; Pocket watch; Balance spring; Weighing scale",
      "dates, credits, materials and limits for the thermoscope to the Reaumur thermometer, the barometer, the sandglass, the pendulum clock, the watch, the navigation instruments, the log, the lead, the touchstone, the hydrometer, litmus and the balance",
      "https://en.wikipedia.org/wiki/Thermometer",
+     "history",
+     "2026-10-29"
+    ],
+    [
+     "EQ-MEAS-METTLER",
+     "Mettler-Toledo company histories (University of Toronto archive copy; company-histories.com); Actualite Chimique 2024 (Societe Chimique de France); Lab Manager: Evolution of the Analytical Lab Balance",
+     "Erhard Mettler's single-pan substitution balance (1945 firm, production 1946 or first model 1947, sources differ) and the PT1200, the first fully electronic precision balance (1973 or 1974, 1,200 g, 0.01 g sensitivity); no source read for a 0.01 mg electronic balance",
+     "https://www.labmanager.com/evolution-of-the-analytical-lab-balance-20022",
      "history",
      "2026-10-29"
     ],

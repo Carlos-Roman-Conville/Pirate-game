@@ -951,6 +951,14 @@
         "2026-10-29"
       ],
       [
+        "EQ-MEAS-METTLER",
+        "Mettler-Toledo company histories (University of Toronto archive copy; company-histories.com); Actualite Chimique 2024 (Societe Chimique de France); Lab Manager: Evolution of the Analytical Lab Balance",
+        "Erhard Mettler's single-pan substitution balance (1945 firm, production 1946 or first model 1947, sources differ) and the PT1200, the first fully electronic precision balance (1973 or 1974, 1,200 g, 0.01 g sensitivity); no source read for a 0.01 mg electronic balance",
+        "https://www.labmanager.com/evolution-of-the-analytical-lab-balance-20022",
+        "history",
+        "2026-10-29"
+      ],
+      [
         "EQ-MEAS-ASSAY",
         "Agricola, De re metallica Book VII (Hoover translation, via e-rara and Utrecht); Wikipedia: Gold parting; Touchstone; search results on Probierbuchlein, Pseudo-Geber, Biringuccio",
         "the three assay balances, troy-grain conversions, nitric parting history, quartation and inquartation, salt cementation",
@@ -1113,7 +1121,7 @@
       [
         "EQ-SURG-1",
         "Tourniquets for the control of traumatic hemorrhage: a review of the literature (PMC); Account of a New Tourniquet",
-        "Morel 1674 at Besançon (stick and strap); Petit 1718 screw tourniquet and the word tourniquet; priority doubts",
+        "Morel 1674 at Besan\u00e7on (stick and strap); Petit 1718 screw tourniquet and the word tourniquet; priority doubts",
         "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2151059/",
         "history",
         "2026-10-29"
