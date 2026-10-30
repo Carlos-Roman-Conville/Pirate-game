@@ -331,4 +331,12 @@ Nothing was downloaded.
 | EQ-SF-CANDLE | Wikipedia Candle clock | You Jiangu 520; Alfred; al-Jazari 1206; 20 minutes a mark; horn lantern case | https://en.wikipedia.org/wiki/Candle_clock | history | 2026-10-29 |
 | EQ-SF-LEVEL | Wikipedia Spirit level | Thevenot before 1661; alcohol preferred; 0.005 degree; common by 1700 | https://en.wikipedia.org/wiki/Spirit_level | history | 2026-10-29 |
 | EQ-SF-GLOBE | Wikipedia Globe | Crates; Behaim 1492; paper gores on a sphere | https://en.wikipedia.org/wiki/Globe | history | 2026-10-29 |
+| EQ-LEM-TEXT | Lemery, Cours de chymie (sourcelibrary.org OCR of the English translation) | Furnaces and vessels chapter: reverberatory furnace the most common (p. 47), cooled helm (p. 55), Mary's bath (p. 58), matrass uses and vessel of encounter (p. 61), glass funnels and mortars (p. 63), lutes (p. 70); no temperatures | https://sourcelibrary.org/book/a-course-of-chymistry-lemery | primary text | 2026-10-29 |
+| EQ-LEM-WIKI | Wikipedia Nicolas Lemery | Cours de chymie 1675; 13 editions; English 1698 3rd ed.; lecture room and pharmacy | https://en.wikipedia.org/wiki/Nicolas_Lemery | history | 2026-10-29 |
+| EQ-LEM-BAIN | Wikipedia Bain-marie | Zosimos credits Mary the Jewess, about 300 AD; Ulstad 1528; 100 C limit | https://en.wikipedia.org/wiki/Bain-marie | history | 2026-10-29 |
+| EQ-LEM-MUFF | Wikipedia Muffle furnace | Muffle isolates work from fuel; historic muffle kilns 750 to 950 C; modern 1200 C | https://en.wikipedia.org/wiki/Muffle_furnace | history | 2026-10-29 |
+| EQ-LEM-REVERB | Wikipedia Reverberatory furnace | Medieval bell casting; Biringuccio; Clerke Bristol 1678; coal fuel | https://en.wikipedia.org/wiki/Reverberatory_furnace | history | 2026-10-29 |
+| EQ-LEM-SIEVE | Wikipedia Sieve | Sieve mesh and rim materials; no date | https://en.wikipedia.org/wiki/Sieve | history | 2026-10-29 |
+| EQ-LEM-FILT | Wikipedia Filtration | Gravity filtration through a glass funnel; no history dates | https://en.wikipedia.org/wiki/Filtration | history | 2026-10-29 |
+| EQ-LEM-FPAPER | Wikipedia Filter paper | Pharmacy soft paper charta emporetica, 1728 Cyclopaedia | https://en.wikipedia.org/wiki/Filter_paper | history | 2026-10-29 |
 <!-- /table -->
