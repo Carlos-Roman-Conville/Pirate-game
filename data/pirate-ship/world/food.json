@@ -1,0 +1,16 @@
+{
+  "_about": "Numbers and mappings for web/src/world/adapters/food.ts (Phase 5 adapter 2). The food rows, the Keeps column and the ration come from files/pirate-ship/body/data/nutrition.json; the goods from data/pirate-ship/economy/goods.json; this file holds only what neither carries. Fixtures are listed in web/src/world/FIXTURES.md (F-FD-*).",
+  "week": { "days": 7, "source": "the ration table's own column: 'Per week'" },
+  "units": {
+    "lb": { "kg": 0.45359237, "source": "avoirdupois pound, exact since the international yard and pound agreement of 1959; the ration table counts in lb" },
+    "oz": { "kg": 0.028349523125, "source": "1/16 lb, the avoirdupois ounce" }
+  },
+  "goodOverrides": [
+    {
+      "food": "salt-pork-as-issued",
+      "good": "salt-beef-and-pork",
+      "mark": "proposed",
+      "why": "The food row names GOODS row 23, which has no engine good; the good 'Salt beef and pork' (row 22) is the salted meat the recipes make. Rex confirms (F-FD-2)."
+    }
+  ]
+}

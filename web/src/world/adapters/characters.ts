@@ -88,13 +88,24 @@ function start(c: GameCharacter, place: Place): EngineBody {
   return { world, body, nextDay: 1, noteCursor: 0, checkCursor: 0 }
 }
 
+function stateOf(character: GameCharacter, place: Place): EngineBody {
+  let s = states.get(character)
+  if (!s) { s = start(character, place); states.set(character, s) }
+  return s
+}
+
+/** The engine side of a character, started on first use: the other adapters (food, wounds) act on this world and body. `nextDay` is the day simulateDay will run. */
+export function engineOf(character: GameCharacter, place: Place = fixturePlace): { world: World; body: string; nextDay: number } {
+  const s = stateOf(character, place)
+  return { world: s.world, body: s.body.id, nextDay: s.nextDay }
+}
+
 /**
  * Run one day (the nautical day from the data's dayStartH) of this character in this place: physiology, nutrition and
  * neurology, in the engine's declared order. Days run in sequence from 1; the body carries over.
  */
 export function simulateDay(character: GameCharacter, day: number, place: Place = fixturePlace): DayReport {
-  let s = states.get(character)
-  if (!s) { s = start(character, place); states.set(character, s) }
+  const s = stateOf(character, place)
   if (day !== s.nextDay) throw new Error(`characters: ${character.slug} is at day ${s.nextDay}, not ${day}`)
   const { world, body } = s
   const room = world.registry.component('room')
