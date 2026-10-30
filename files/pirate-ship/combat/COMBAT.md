@@ -25,6 +25,11 @@ Battle Brothers (lasting injuries).
 - **(Rex, 2026-10-29)** Grid-based, Baldur's Gate feel: a wide variety of options, and deadly.
 - **(Rex, 2026-10-29)** **One map.** The map you walk on and the combat map are the same; walking into combat is
   seamless, as in BG3. (`PIRATE.md` §8 and §10 had proposed the same square tiles; the tile shape itself: open.)
+- **(Rex, 2026-10-30)** **The grid is cubes, and each cube holds sub-cubes** (16 or 32: open), so movement is
+  multi-directional and never just cube to cube. Each square is a distance; how far a character moves in a turn is
+  a distance calculation from speed, leg length "and such", so a slower character falls behind because they can
+  cover only so many sub-cubes. (This settles the tile shape above: cubes, not squares.) The numbers come from the
+  Reality & Species keeper's mechanics layer (§2, interface); the rule for using them is combat's.
 - **(Rex, 2026-10-26)** Combat is the spice, not the meal; gambling pays the bills (`PIRATE.md` §1).
 - **(Rex, 2026-10-28)** Where fights come from: the town attacked at ~15–25% of the story; an attack at sea stops
   the voyage dots and starts a battle; later, the siege and the Act II campaign (`balance/ALIGNMENT.md` §10).
@@ -32,15 +37,39 @@ Battle Brothers (lasting injuries).
 - **(proposed, outside AI)** Combat starting does not reveal every enemy; the undetected stay hidden until seen or
   until they move (§6). A fight against two can become a fight against six.
 
-## 2. Turns and reactions
+## 2. Turns: committed, then resolved together (Rex, 2026-10-30)
 
+- **(Rex, 2026-10-30)** **Still turn-based, but turn-based redefined: all characters commit their intended actions
+  before the turn resolves; the turn resolves simultaneously.** This replaces ChatGPT's individual-initiative
+  proposal below; simultaneous was its "later experiment" and is now the design.
+- **(Rex, 2026-10-30)** **Space is computed, so a contested action is a calculation.** The game knows how long a
+  sword is, the arm's length, the reach of a swing. When a character is told to attack and the target chooses to
+  move, the game works out whether the attacker is physically fast enough to land before the target is out of
+  reach, from the two characters' **reflexes, speed and reach**.
+- **(Rex, 2026-10-30)** **A dodge beyond the numbers.** Characters with certain stats can dodge even when the
+  numbers say the attacker could theoretically hit them: **Intuition** (Ni), and **Spatial Reasoning** (Ti), which
+  inherently knows how to move the body out of the line (§6a).
+- **(Rex, 2026-10-30)** **Options each turn:** **parry**, **dodge**, **attack-and-defend**, or a **straight attack**
+  (a reckless strike).
+- **(Rex, 2026-10-30)** **Footing.** A character who isn't moving gets a **steady-ground bonus**; moving up close and
+  attacking in the same turn gives an **off-balance debuff**.
 - **(Rex, 2026-10-29)** Likes the reaction: a target that moves into a **prepared shot** gets hit before finishing
   the move. Position then matters on the enemy's turn too, and speed decides whether the mover beats the shot.
-- **(proposed, outside AI)** Individual-initiative turns first (speed sets the order), with **reactions, counters,
-  interrupts and defensive stances** giving the duel feel; simultaneous planned actions only as a later
-  experiment. ChatGPT's reasoning: cheaper to build and judge.
-- **(open)** Rex hasn't said the structure is settled. Also open: how many actions a turn (move + act? action
-  points?), and whether a prepared shot costs the whole turn as in XCOM.
+- **(keeper)** The cost side of these options is Rex's pool rule (§6a): **Endurance is the pool, Efficiency sets
+  what each action spends, every action keeps a floor cost.** What parry, dodge, attack-and-defend, the reckless
+  strike and movement each cost is still open (Open 6).
+- **(keeper)** What combat reads and what it owns: reach, limb and swing length, and movement speed from leg
+  length are outputs of the Reality & Species keeper's mechanics layer (`Toolchain/realism`, P2), consumed as an
+  interface; the rules that use them (who lands first, the dodge, footing, sub-cubes per turn) are combat's.
+- **(open)** 16 or 32 sub-cubes per cube. The exact dodge rule for Intuition and Spatial Reasoning (a chance, a
+  threshold, what it costs). How speed and leg length become sub-cubes per turn. Where the prepared shot sits
+  under simultaneous resolution, and whether it costs the whole turn as in XCOM. Whether a move and an action can
+  share one turn beyond the off-balance case.
+- **(open, keeper)** §6a's flinch ladder (Rex, 2026-10-29) was described in initiative terms ("waits one, two or
+  three more units' turns"); how a delayed turn reads when turns resolve together is Rex's to say.
+- **(proposed, outside AI, superseded 2026-10-30)** Individual-initiative turns first (speed sets the order), with
+  reactions, counters, interrupts and defensive stances giving the duel feel; simultaneous planned actions only as
+  a later experiment. ChatGPT's reasoning: cheaper to build and judge.
 - **(keeper)** Reactions make the enemy AI read lanes, not just targets; the engine task should know that.
 
 ## 3. Resolving an attack
@@ -424,15 +453,16 @@ whether what you intend happens.
 ## Open for Rex
 
 1. Combat levels: yes or no; if no, what HP grows with.
-2. Turn structure: settle on initiative turns with reactions, or keep simultaneous on the table.
-3. Actions per turn; what a prepared shot costs.
+2. ~~Turn structure~~ decided: all commit, then the turn resolves simultaneously (Rex, 2026-10-30, §2).
+3. Actions per turn beyond the four options (parry, dodge, attack-and-defend, reckless strike); where the prepared
+   shot sits under simultaneous resolution and what it costs.
 4. Targeting: automatic parts, called shots, or both.
 5. Death for the player's crew: **they can die (decided 2026-10-29, §4e)**; still open: the wound ladder, when a
    wound becomes a death in a fight, and what each resurrected form does on the grid.
 6. What sets Intuition; which strikes do poise damage and how Poise maps to flinch levels; the point costs per
    action and how the Endurance pool recovers (Te → Efficiency, and pool vs spend, decided 2026-10-29).
 7. Light and elevation as map properties (ChatGPT) or stats.
-8. Grid shape (square proposed); the team limit and what unlocks more units; the enemy's unit count; how the
+8. Grid shape: cubes with sub-cubes (Rex, 2026-10-30); still open: the team limit and what unlocks more units; the enemy's unit count; how the
    small scale converts to the tactical scale.
 9. Who owns combat balance (encounter difficulty, unit numbers): `balance/BALANCE.md` item 14 says not balance.
 10. Ammunition and powder kinds: which exist and what each does in a fight.
@@ -443,6 +473,11 @@ whether what you intend happens.
     place and a minigame.
 14. What combat reads from the body docs: fatigue, injury, hunger, thirst and deficiency as battle penalties;
     consumables in a fight (food boosts, rum, medicine).
+15. Sub-cubes per cube: 16 or 32 (§1, §2).
+16. The exact dodge rule for Intuition (Ni) and Spatial Reasoning (Ti) when the numbers say the hit lands (§2).
+17. How speed and leg length give sub-cubes per turn (the inputs come from Reality & Species' mechanics layer, P2;
+    the rule is combat's).
+18. The flinch ladder's "delayed turn" under simultaneous resolution (§2, §6a).
 11. ~~Where the attribute table lives~~ decided: `STATS.md` (Rex, 2026-10-29); the five new attributes written
     there the same day on Rex's say.
 
@@ -465,3 +500,4 @@ whether what you intend happens.
 | 2026-10-29 | Death and resurrection by faction: a dead crew mate can be brought back through the alignment faction you choose (mecha AI, ghost, voodoo zombie, angel, merfolk's form open), frozen at death, storyline ended, stronger form; states of being by who did it (fish person, demon, missing); butterfly deaths; game modes as an option; collision with the ghost rule flagged to town/balance/story | Rex |
 | 2026-10-29 | Refinement: transformation as part of character endings (bring a character people → transformed → upgraded unit → their storyline advances within the alignment); the INTJ example; procedural generation needed; keepers messaged | Rex |
 | 2026-10-29 | `MUSCULAR.md` and `NUTRITION.md` to be written (via ChatGPT); nutrition as calories, macros, micros, water and salt with scurvy emergent; provenance tags (mythical, Triassic, sci-fi) on the item screen, never in battle | Rex |
+| 2026-10-30 | Turns redefined: everyone commits, the turn resolves simultaneously (replaces the initiative proposal); computed space (reach, sword and arm length) decides who lands first from reflexes, speed and reach; a dodge beyond the numbers for Intuition and Spatial Reasoning; options parry, dodge, attack-and-defend, reckless strike; steady-ground bonus and off-balance debuff; cubes with 16 or 32 sub-cubes, movement a distance from speed and leg length. Mechanics outputs read from Reality & Species (P2) | Rex (via the parent session) |
