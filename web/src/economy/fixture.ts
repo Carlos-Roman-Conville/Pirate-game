@@ -64,8 +64,8 @@ const GOODS = ['fresh-meat', 'salt-fish'] as const
  * market before the day begins; then Settlement ticks, then the economy (`runDay`). `onDay` runs after each day,
  * where I2 makes its per-day checks.
  */
-export function thirtyDays(onDay?: (n: number, day: number, w: World & { moneyAtStart: number }) => void, days = 30) {
-  const w = world(THIRTY_DAY_CONFIG)
+export function thirtyDays(onDay?: (n: number, day: number, w: World & { moneyAtStart: number }) => void, days = 30, config: EconomyConfig = THIRTY_DAY_CONFIG) {
+  const w = world(config)
   const e = w.economy.runner
   const s = w.port.runner
   e.run({ type: 'setMarketGood', market: 'stl.port', good: 'fresh-meat', consumptionPerDay: 3, targetReserve: 20, basePrice: 2 })

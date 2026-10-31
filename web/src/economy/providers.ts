@@ -4,7 +4,7 @@
  * the economy's LedgerProvider implemented from the settlement runner (§3: money has one home, Settlement's ledger),
  * the SettlementReader over settlement state (§4b), and the day order (§9). Neither engine imports the other.
  */
-import { Runner as EconomyRunner, availableUnits, price, type LabourRow, type LabourSupply, type LedgerProvider, type LedgerRow, type Providers as EconomyProviders, type SettlementReader } from '@rex/economy'
+import { Runner as EconomyRunner, availableUnits, price, wageQuote, type LabourRow, type LabourSupply, type LedgerProvider, type LedgerRow, type Providers as EconomyProviders, type SettlementReader } from '@rex/economy'
 import { Runner as SettlementRunner, balanceOf, hasFixture, ledger, stubProviders as settlementStubs, type MaterialProvider, type PriceProvider, type Providers as SettlementProviders } from '@rex/settlement'
 
 /**
@@ -148,12 +148,41 @@ export function economyProvidersOver(settlement: SettlementRunner, base: Economy
 }
 
 /**
+ * CONTRACTS §16 "Wages": under a wage rule that applies pressure the economy's quote sets the level and Settlement's
+ * `pay` executes it, with `setWage` the only channel. A role's sources are the pools the labour knows plus the named
+ * holders of its posts; a named holder offers the hours of the posts they hold, not the unbounded default.
+ * Under `posted-median` nothing is issued, so mixed wages stay as posted (ECON-13).
+ */
+function setWages(settlement: SettlementRunner, economy: EconomyRunner, labour: LabourSupply, day: number): void {
+  if (economy.config.wageRule.kind === 'posted-median') return
+  const market = settlement.state.settlement.id
+  const reader = settlementReader(settlement)
+  const posts = reader.posts(market)
+  const pools = Object.keys((labour as Partial<PortLabour>).pools ?? {})
+  for (const role of [...new Set(posts.map((post) => post.role))].sort()) {
+    const rolePosts = posts.filter((post) => post.role === role)
+    const holders = [...new Set(rolePosts.flatMap((post) => post.filledBy ? [post.filledBy] : []))].sort()
+    const held = (holder: string) => rolePosts.filter((post) => post.filledBy === holder).reduce((sum, post) => sum + post.hours, 0)
+    const bounded: LabourSupply = { ...labour, hours: (source, r, d) => {
+      const hours = labour.hours(source, r, d)
+      return Number.isFinite(hours) ? hours : Math.min(hours, held(source))
+    } }
+    const { quote } = wageQuote(economy.config, reader, bounded, market, role, day, [...pools, ...holders])
+    if (quote === null || !Number.isFinite(quote)) continue
+    for (const post of rolePosts) if (post.wage !== quote) settlement.run({ type: 'setWage', post: post.id, wage: quote })
+  }
+}
+
+/**
  * CONTRACTS §9: one day. The host calls settlement.tick while settlement.day === N (it increments at the end), then
  * economy.tick(N); the reader is read in between by whoever needs it. Returns N. Throws if the two days disagree.
+ * Before the tick the wage quote is passed on through `setWage` when the economy's rule applies pressure (§16);
+ * `options.labour` is the shared labour interface, the economy's own when omitted.
  */
-export function runDay(settlement: SettlementRunner, economy: EconomyRunner): number {
+export function runDay(settlement: SettlementRunner, economy: EconomyRunner, options: { labour?: LabourSupply } = {}): number {
   const day = settlement.state.settlement.day
   if (economy.state.day !== day) throw new Error(`day mismatch: settlement ${day}, economy ${economy.state.day}`)
+  setWages(settlement, economy, options.labour ?? economy.providers.labour, day)
   settlement.tick()
   economy.run({ type: 'tick' })
   return day

@@ -4,7 +4,7 @@
 import { describe, expect, it } from 'vitest'
 import { Runner as EconomyRunner, accounts, marketStock, producedLast, stubProviders as economyStubs, totalUnits } from '@rex/economy'
 import { balanceOf, ledger, totalMoney } from '@rex/settlement'
-import { thirtyDays, world } from './fixture'
+import { THIRTY_DAY_CONFIG, thirtyDays, world } from './fixture'
 import { runDay, type PortLabour } from './index'
 
 describe('I1 the port\'s butcher produces into an economy inventory through the material provider', () => {
@@ -119,5 +119,45 @@ describe('I1c the material queries are pure (CONTRACTS §17)', () => {
     expect(economy.runner.log.length).toBe(logged)
     expect(materials.take('inv.port.unseen', 'salt', 1)).toBe(0)
     expect(economy.runner.log.length).toBeGreaterThan(logged)
+  })
+})
+
+describe('I4 the wage quote reaches Post.wage through setWage only (CONTRACTS §16)', () => {
+  it('I4a the default rule issues no setWage and the ledger stays as it is', () => {
+    const { s } = thirtyDays()
+    expect(s.log.filter((command) => command.type === 'setWage')).toEqual([])
+    expect(ledger(s.state, { kind: 'wage' }).every((row) => row.amount === 2)).toBe(true)
+  })
+
+  it('I4b a pressure rule with a pool too small for the posts: every wage change follows a setWage and the ledger pays Post.wage', () => {
+    const config = { ...THIRTY_DAY_CONFIG, wageRule: { kind: 'ratio', elasticity: 0.5, floor: 0.5, ceiling: 2 } } as const
+    const wageOf: Record<string, number>[] = []
+    const run = thirtyDays((n, _day, w) => {
+      const r = w.port.runner
+      if (n === 0) {
+        // two unfilled butcher posts and one person in the pool: demand outruns supply
+        for (let i = 0; i < 2; i++) r.run({ type: 'addPost', biz: w.biz, role: 'butcher', wage: 2 })
+        ;(r.providers.labour as PortLabour).pools['pool.housing'] = { persons: 1 }
+      }
+      wageOf.push(Object.fromEntries(Object.values(r.state.posts).map((post) => [post.id, post.wage])))
+    }, 30, config)
+    const { s } = run
+    const sets = s.log.filter((command) => command.type === 'setWage')
+    expect(sets.length).toBeGreaterThan(0)
+    // a post's wage moves between two days only if a setWage for it was logged (the day's wages step reads Post.wage)
+    let moved = 0
+    for (const id of Object.keys(wageOf[wageOf.length - 1])) {
+      let moves = 0
+      for (let d = 1; d < wageOf.length; d++) if (id in wageOf[d - 1] && wageOf[d][id] !== wageOf[d - 1][id]) moves++
+      expect(moves).toBeLessThanOrEqual(sets.filter((c) => c.type === 'setWage' && c.post === id).length)
+      moved += moves
+    }
+    expect(moved).toBeGreaterThan(0)
+    // each day's wage rows are the post's wage at that day's wages step
+    const butcher = Object.values(s.state.posts).find((post) => post.filledBy === 'esfp-f')!.id
+    const rows = ledger(s.state, { kind: 'wage', to: 'esfp-f' })
+    expect(rows.length).toBeGreaterThan(0)
+    for (const row of rows) expect(row.amount).toBeCloseTo(wageOf[row.day][butcher])
+    expect(totalMoney(s.state)).toBeCloseTo(run.moneyAtStart)
   })
 })
