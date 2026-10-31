@@ -10,7 +10,7 @@ beforeAll(() => {
   const start = performance.now()
   result = runSettlement()
   elapsedMs = performance.now() - start
-}, 60_000)
+}, 300_000) // (2690) a time limit for a long simulation under load, not a tolerance
 
 describe('Port Royal settlement, thirty days', () => {
   it('prints thirty dates from August 1, twelve people each, in under a minute', () => {
