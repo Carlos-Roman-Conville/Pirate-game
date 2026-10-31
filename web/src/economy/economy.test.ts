@@ -9,11 +9,12 @@ import { runDay, type PortLabour } from './index'
 
 describe('I1 the port\'s butcher produces into an economy inventory through the material provider', () => {
   it('one settlement day: Q is Settlement\'s, the stock move is the economy\'s, and both agree', () => {
-    const { economy, loaded, aliases, port, reader, biz, inv } = world()
+    const { economy, loaded, port, reader, biz, inv } = world()
     expect(economy.counts.goods).toBeGreaterThan(200)
     expect(economy.counts.recipes).toBe(2)
     expect(economy.unquantified.length).toBeGreaterThan(200)
-    expect(aliases.entries()).toEqual([['inv.port.bakery', inv]])
+    expect(economy.runner.state.inventories[inv]).toMatchObject({ holder: biz })
+    expect(port.runner.state.businesses[biz].inventory).toBe(inv)
     const logged = economy.runner.log.length
     runDay(port.runner, economy.runner)
     // one butcher, ten hours, 2.5 person-hours a unit: four units of meat, then no labour left for the fish line
@@ -29,7 +30,7 @@ describe('I1 the port\'s butcher produces into an economy inventory through the 
     const again = EconomyRunner.replay(economy.runner.log, economy.runner.config, economyStubs(), loaded)
     expect(JSON.stringify(again.state)).toBe(JSON.stringify(economy.runner.state))
     // the reader sees the settlement; another market sees nothing
-    expect(reader.businesses('stl.port').find((b) => b.id === biz)).toMatchObject({ inventory: 'inv.port.bakery', status: 'producing', open: true })
+    expect(reader.businesses('stl.port').find((b) => b.id === biz)).toMatchObject({ inventory: inv, status: 'producing', open: true })
     expect(reader.posts('stl.port').filter((p) => p.biz === biz)).toHaveLength(1)
     expect(reader.businesses('elsewhere')).toEqual([])
     expect(reader.hasFixture('stl.port', 'salting-house')).toBe(true)
@@ -51,20 +52,19 @@ describe('I1 the port\'s butcher produces into an economy inventory through the 
   })
 })
 
-describe('I1b a project draws from its own inventory through the aliases (CONTRACTS §15, DUP-44)', () => {
+describe('I1b a project draws from its own inventory through its own economy inventory (CONTRACTS §15, DUP-44)', () => {
   it('materials come from the project\'s inventory ref, wages from its account, and the account is never an inventory', () => {
-    const { economy, aliases, port } = world()
+    const { economy, port } = world()
     const r = port.runner
     ;(r.providers.labour as PortLabour).pools['pool.builders'] = { persons: 1 }
-    const store = aliases.resolve('inv.project.store', 'esfp-f')
+    const store = economy.runner.run({ type: 'openInventory', holder: 'esfp-f', market: economy.marketId }).minted!
     economy.runner.run({ type: 'addStock', inventory: store, good: 'lumber', units: 10 })
     r.run({ type: 'credit', holder: 'esfp-f', amount: 10 })
     const proj = r.run<string>({ type: 'startProject', kind: 'renovate', target: port.bindings['port.bakery'].buildings[0], account: 'esfp-f',
-      inventory: 'inv.project.store', pool: 'pool.builders', wage: 1, labourHours: 10, materials: [{ material: 'lumber', units: 5 }], plan: { addFixtures: ['smokehouse'] } })
+      inventory: store, pool: 'pool.builders', wage: 1, labourHours: 10, materials: [{ material: 'lumber', units: 5 }], plan: { addFixtures: ['smokehouse'] } })
     runDay(r, economy.runner)
     expect(r.state.projects[proj].status).toBe('done')
     expect(economy.runner.state.inventories[store].stock.lumber).toBe(5)
-    expect(aliases.has('esfp-f')).toBe(false)
     // the project's wage is one row from its account (the cook also earns her butcher post's wage that day)
     expect(ledger(r.state, { kind: 'wage', subject: proj }).map((row) => [row.from, row.amount])).toEqual([['esfp-f', 1]])
   })
@@ -106,18 +106,19 @@ describe('I2 thirty autonomous days of the port with both engines', () => {
 })
 
 describe('I1c the material queries are pure (CONTRACTS §17)', () => {
-  it('available and have on an unseen inventory ref mint nothing and change no state; produce and take still open it', () => {
-    const { economy, port } = world()
+  it('available and have on an inventory change no state and log nothing; an unknown id throws as the economy does', () => {
+    const { economy, port, inv } = world()
     const materials = port.runner.providers.materials
     const before = JSON.stringify(economy.runner.state)
     const logged = economy.runner.log.length
-    expect(materials.available('inv.port.unseen', 'preserving-salt-fish')).toBe(0)
-    expect(materials.available('inv.port.unseen', 'butchering-fresh-meat')).toBe(0)
-    expect(materials.have('inv.port.unseen', 'salt')).toBe(0)
+    expect(materials.available(inv, 'preserving-salt-fish')).toBe(50)
+    expect(materials.have(inv, 'salt')).toBe(50)
     expect(materials.rates('preserving-salt-fish')).toEqual(materials.rates('preserving-salt-fish'))
+    expect(() => materials.available('inv.port.unseen', 'preserving-salt-fish')).toThrow(/unknown inventory/)
+    expect(() => materials.have('inv.port.unseen', 'salt')).toThrow(/unknown inventory/)
     expect(JSON.stringify(economy.runner.state)).toBe(before)
     expect(economy.runner.log.length).toBe(logged)
-    expect(materials.take('inv.port.unseen', 'salt', 1)).toBe(0)
+    expect(materials.take(inv, 'salt', 1)).toBe(1)
     expect(economy.runner.log.length).toBeGreaterThan(logged)
   })
 })

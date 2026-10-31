@@ -7,53 +7,19 @@
 import { Runner as EconomyRunner, availableUnits, price, wageQuote, type LabourRow, type LabourSupply, type LedgerProvider, type LedgerRow, type Providers as EconomyProviders, type SettlementReader } from '@rex/economy'
 import { Runner as SettlementRunner, balanceOf, hasFixture, ledger, stubProviders as settlementStubs, type MaterialProvider, type PriceProvider, type Providers as SettlementProviders } from '@rex/settlement'
 
-/**
- * Settlement's loader hands each business a placeholder inventory ref (`inv.port.<place>`, load.ts) until it asks
- * the economy for one (CONTRACTS §2). Until then the alias table maps each ref to an economy inventory minted on
- * first use, so neither loader changes. A ref that is already an economy inventory id passes through.
- */
-export class Aliases {
-  private readonly table = new Map<string, string>()
-  private readonly economy: EconomyRunner
-  private readonly marketId: string
-  constructor(economy: EconomyRunner, marketId: string) { this.economy = economy; this.marketId = marketId }
-  /** The economy inventory behind a settlement ref, opened for `holder` on first use. */
-  resolve(ref: string, holder = ref): string {
-    if (ref in this.economy.state.inventories) return ref
-    let id = this.table.get(ref)
-    if (!id) {
-      id = this.economy.run({ type: 'openInventory', holder, market: this.marketId }).minted!
-      this.table.set(ref, id)
-    }
-    return id
-  }
-  /** The economy inventory behind a ref without minting one (queries must be pure, CONTRACTS §17); null if unseen. */
-  peek(ref: string): string | null {
-    if (ref in this.economy.state.inventories) return ref
-    return this.table.get(ref) ?? null
-  }
-  has(ref: string): boolean { return ref in this.economy.state.inventories || this.table.has(ref) }
-  entries(): [string, string][] { return [...this.table.entries()] }
-}
-
 /** CONTRACTS §4a: Settlement's MaterialProvider from the economy; every call is a logged economy command. */
-export function economyMaterials(economy: EconomyRunner, aliases: Aliases): MaterialProvider {
+export function economyMaterials(economy: EconomyRunner): MaterialProvider {
   return {
-    // Queries read without minting (pure, CONTRACTS §17): an unseen ref is an empty inventory, which allows a recipe
-    // with no inputs without limit and nothing else. Only produce and take mint an inventory for a new ref.
-    available: (inventory, recipe) => {
-      const id = aliases.peek(inventory)
-      if (id) return availableUnits(economy.state, id, recipe)
-      const def = economy.state.recipes[recipe]
-      if (!def) throw new Error(`unknown recipe: ${recipe}`)
-      return def.inputs.some((q) => q.units > 0) || def.inputsAny.some((g) => g.units > 0) ? 0 : Number.POSITIVE_INFINITY
-    },
-    produce: (inventory, recipe, units) => { economy.run({ type: 'produce', inventory: aliases.resolve(inventory), recipe, units }) },
+    // Inventory ids are economy ids (Settlement's loader opens them through `inventoryOf`, CONTRACTS §15); an unknown
+    // id throws as the economy does.
+    available: (inventory, recipe) => availableUnits(economy.state, inventory, recipe),
+    produce: (inventory, recipe, units) => { economy.run({ type: 'produce', inventory, recipe, units }) },
     have: (inventory, material) => {
-      const id = aliases.peek(inventory)
-      return id ? economy.state.inventories[id].stock[material] ?? 0 : 0
+      const inv = economy.state.inventories[inventory]
+      if (!inv) throw new Error(`unknown inventory: ${inventory}`)
+      return inv.stock[material] ?? 0
     },
-    take: (inventory, material, units) => economy.run({ type: 'take', inventory: aliases.resolve(inventory), good: material, units }).taken ?? 0,
+    take: (inventory, material, units) => economy.run({ type: 'take', inventory, good: material, units }).taken ?? 0,
     rates: (recipe) => {
       const def = economy.state.recipes[recipe]
       if (!def) throw new Error(`unknown recipe: ${recipe}`)
@@ -137,8 +103,8 @@ export function portLabour(pools: Record<string, { persons: number }>, hoursPerD
 
 /** Settlement's full provider set with the economy behind materials and prices; labour (`portLabour`) and utilities
  *  stay the host's. */
-export function settlementProvidersOver(economy: EconomyRunner, aliases: Aliases, marketId: string, base: SettlementProviders = settlementStubs(), labour?: LabourSupply): SettlementProviders {
-  return { ...base, ...(labour ? { labour } : {}), materials: economyMaterials(economy, aliases), prices: economyPrices(economy, marketId) }
+export function settlementProvidersOver(economy: EconomyRunner, marketId: string, base: SettlementProviders = settlementStubs(), labour?: LabourSupply): SettlementProviders {
+  return { ...base, ...(labour ? { labour } : {}), materials: economyMaterials(economy), prices: economyPrices(economy, marketId) }
 }
 
 /** The economy's provider set with Settlement behind the ledger; population and transport stay the host's, labour

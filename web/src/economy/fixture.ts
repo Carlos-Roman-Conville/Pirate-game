@@ -7,7 +7,7 @@
 import { defaultConfig as economyDefaults, marketStock, stubProviders as economyStubs, totalUnits, type EconomyConfig } from '@rex/economy'
 import { balanceOf, stubProviders as settlementStubs, totalMoney } from '@rex/settlement'
 import { loadPort } from '../settlement'
-import { Aliases, economyProvidersOver, loadEconomy, portLabour, runDay, settlementProvidersOver, settlementReader, type RecipeQuantities } from './index'
+import { economyProvidersOver, loadEconomy, portLabour, runDay, settlementProvidersOver, settlementReader, type RecipeQuantities } from './index'
 
 /** Fixture quantities for the two recipes the butcher shop runs (the data has none yet). */
 export const QUANTITIES: RecipeQuantities = {
@@ -19,13 +19,14 @@ export function world(config: EconomyConfig = economyDefaults()) {
   const econStubs = economyStubs()
   const economy = loadEconomy(QUANTITIES, { providers: econStubs, config })
   const loaded = structuredClone(economy.runner.state)
-  const aliases = new Aliases(economy.runner, economy.marketId)
   const base = settlementStubs()
   const labour = portLabour({ 'pool.housing': { persons: 5 } })
-  const port = loadPort(settlementProvidersOver(economy.runner, aliases, economy.marketId, base, labour))
+  const port = loadPort(settlementProvidersOver(economy.runner, economy.marketId, base, labour), undefined, undefined, {
+    inventoryOf: (_place, biz) => economy.runner.run({ type: 'openInventory', holder: biz, market: economy.marketId }).minted!,
+  })
   economy.runner.providers = economyProvidersOver(port.runner, econStubs, labour)
   const reader = settlementReader(port.runner)
-  // the butcher shop: two lines, one butcher, a purse; its inputs land in the economy inventory behind its ref
+  // the butcher shop: two lines, one butcher, a purse; its inputs land in the inventory Settlement holds on it
   const shop = port.bindings['port.bakery']
   const biz = shop.businesses[0]
   const r = port.runner
@@ -33,9 +34,9 @@ export function world(config: EconomyConfig = economyDefaults()) {
   const post = r.run<string>({ type: 'addPost', biz, role: 'butcher', wage: 2 })
   r.run({ type: 'hire', post, holder: 'esfp-f' })
   r.run({ type: 'credit', holder: biz, amount: 100 })
-  const inv = aliases.resolve(r.state.businesses[biz].inventory, biz)
+  const inv = r.state.businesses[biz].inventory
   for (const [good, units] of [['cattle-and-hogs', 50], ['fresh-fish', 50], ['salt', 50]] as const) economy.runner.run({ type: 'addStock', inventory: inv, good, units })
-  return { economy, loaded, aliases, port, reader, biz, inv, econStubs }
+  return { economy, loaded, port, reader, biz, inv, econStubs }
 }
 
 /** I2's price curve: a fixture curve, not Rex's. */

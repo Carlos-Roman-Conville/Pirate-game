@@ -1,7 +1,7 @@
 {
   "economy": {
     "counters": {
-      "inv": 2
+      "inv": 12
     },
     "day": 30,
     "goods": {
@@ -1808,14 +1808,74 @@
         }
       },
       "inv.0002": {
-        "holder": "biz.0005",
+        "holder": "biz.0001",
         "id": "inv.0002",
+        "market": "stl.port",
+        "stock": {}
+      },
+      "inv.0003": {
+        "holder": "biz.0002",
+        "id": "inv.0003",
+        "market": "stl.port",
+        "stock": {}
+      },
+      "inv.0004": {
+        "holder": "biz.0003",
+        "id": "inv.0004",
+        "market": "stl.port",
+        "stock": {}
+      },
+      "inv.0005": {
+        "holder": "biz.0004",
+        "id": "inv.0005",
+        "market": "stl.port",
+        "stock": {}
+      },
+      "inv.0006": {
+        "holder": "biz.0005",
+        "id": "inv.0006",
         "market": "stl.port",
         "stock": {
           "raw-hides": 10,
           "salt": 25,
           "tallow": 5
         }
+      },
+      "inv.0007": {
+        "holder": "biz.0006",
+        "id": "inv.0007",
+        "market": "stl.port",
+        "stock": {}
+      },
+      "inv.0008": {
+        "holder": "biz.0007",
+        "id": "inv.0008",
+        "market": "stl.port",
+        "stock": {}
+      },
+      "inv.0009": {
+        "holder": "biz.0008",
+        "id": "inv.0009",
+        "market": "stl.port",
+        "stock": {}
+      },
+      "inv.0010": {
+        "holder": "biz.0009",
+        "id": "inv.0010",
+        "market": "stl.port",
+        "stock": {}
+      },
+      "inv.0011": {
+        "holder": "biz.0010",
+        "id": "inv.0011",
+        "market": "stl.port",
+        "stock": {}
+      },
+      "inv.0012": {
+        "holder": "biz.0011",
+        "id": "inv.0012",
+        "market": "stl.port",
+        "stock": {}
       }
     },
     "markets": {
@@ -1952,29 +2012,89 @@
   },
   "events": [
     {
-      "holder": "biz.0005",
+      "holder": "biz.0001",
       "inventory": "inv.0002",
+      "market": "stl.port",
+      "type": "inventoryOpened"
+    },
+    {
+      "holder": "biz.0002",
+      "inventory": "inv.0003",
+      "market": "stl.port",
+      "type": "inventoryOpened"
+    },
+    {
+      "holder": "biz.0003",
+      "inventory": "inv.0004",
+      "market": "stl.port",
+      "type": "inventoryOpened"
+    },
+    {
+      "holder": "biz.0004",
+      "inventory": "inv.0005",
+      "market": "stl.port",
+      "type": "inventoryOpened"
+    },
+    {
+      "holder": "biz.0005",
+      "inventory": "inv.0006",
+      "market": "stl.port",
+      "type": "inventoryOpened"
+    },
+    {
+      "holder": "biz.0006",
+      "inventory": "inv.0007",
+      "market": "stl.port",
+      "type": "inventoryOpened"
+    },
+    {
+      "holder": "biz.0007",
+      "inventory": "inv.0008",
+      "market": "stl.port",
+      "type": "inventoryOpened"
+    },
+    {
+      "holder": "biz.0008",
+      "inventory": "inv.0009",
+      "market": "stl.port",
+      "type": "inventoryOpened"
+    },
+    {
+      "holder": "biz.0009",
+      "inventory": "inv.0010",
+      "market": "stl.port",
+      "type": "inventoryOpened"
+    },
+    {
+      "holder": "biz.0010",
+      "inventory": "inv.0011",
+      "market": "stl.port",
+      "type": "inventoryOpened"
+    },
+    {
+      "holder": "biz.0011",
+      "inventory": "inv.0012",
       "market": "stl.port",
       "type": "inventoryOpened"
     },
     {
       "delta": 50,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "add",
       "type": "stockChanged"
     },
     {
       "delta": 50,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "add",
       "type": "stockChanged"
     },
     {
       "delta": 50,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "add",
       "type": "stockChanged"
     },
@@ -1991,33 +2111,33 @@
     {
       "delta": -4,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "inputAny:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.8,
       "good": "raw-hides",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.4,
       "good": "tallow",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "fresh-meat",
       "outputUnits": 4,
       "recipe": "butchering-fresh-meat",
@@ -2075,7 +2195,7 @@
     {
       "delta": -4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -2089,7 +2209,7 @@
     {
       "amount": 24,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 6,
       "txn": "txn.0036",
@@ -2099,33 +2219,33 @@
     {
       "delta": -4,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "inputAny:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.8,
       "good": "raw-hides",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.4,
       "good": "tallow",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "fresh-meat",
       "outputUnits": 4,
       "recipe": "butchering-fresh-meat",
@@ -2183,7 +2303,7 @@
     {
       "delta": -4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -2197,7 +2317,7 @@
     {
       "amount": 23.08,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 5.77,
       "txn": "txn.0038",
@@ -2207,33 +2327,33 @@
     {
       "delta": -4,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "inputAny:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.8,
       "good": "raw-hides",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.4,
       "good": "tallow",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "fresh-meat",
       "outputUnits": 4,
       "recipe": "butchering-fresh-meat",
@@ -2291,7 +2411,7 @@
     {
       "delta": -4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -2305,7 +2425,7 @@
     {
       "amount": 22.159999999999997,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 5.539999999999999,
       "txn": "txn.0040",
@@ -2315,33 +2435,33 @@
     {
       "delta": -4,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "inputAny:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.8,
       "good": "raw-hides",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.4,
       "good": "tallow",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "fresh-meat",
       "outputUnits": 4,
       "recipe": "butchering-fresh-meat",
@@ -2399,7 +2519,7 @@
     {
       "delta": -4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -2413,7 +2533,7 @@
     {
       "amount": 21.24,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 5.31,
       "txn": "txn.0042",
@@ -2423,33 +2543,33 @@
     {
       "delta": -4,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "inputAny:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.8,
       "good": "raw-hides",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.4,
       "good": "tallow",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "fresh-meat",
       "outputUnits": 4,
       "recipe": "butchering-fresh-meat",
@@ -2507,7 +2627,7 @@
     {
       "delta": -4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -2521,7 +2641,7 @@
     {
       "amount": 20.32,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 5.08,
       "txn": "txn.0044",
@@ -2531,33 +2651,33 @@
     {
       "delta": -4,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "inputAny:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.8,
       "good": "raw-hides",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.4,
       "good": "tallow",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "fresh-meat",
       "outputUnits": 4,
       "recipe": "butchering-fresh-meat",
@@ -2615,7 +2735,7 @@
     {
       "delta": -4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -2629,7 +2749,7 @@
     {
       "amount": 19.4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 4.85,
       "txn": "txn.0046",
@@ -2639,33 +2759,33 @@
     {
       "delta": -4,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "inputAny:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.8,
       "good": "raw-hides",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.4,
       "good": "tallow",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "fresh-meat",
       "outputUnits": 4,
       "recipe": "butchering-fresh-meat",
@@ -2723,7 +2843,7 @@
     {
       "delta": -4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -2737,7 +2857,7 @@
     {
       "amount": 18.479999999999997,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 4.619999999999999,
       "txn": "txn.0048",
@@ -2747,33 +2867,33 @@
     {
       "delta": -4,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "inputAny:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.8,
       "good": "raw-hides",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.4,
       "good": "tallow",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "fresh-meat",
       "outputUnits": 4,
       "recipe": "butchering-fresh-meat",
@@ -2831,7 +2951,7 @@
     {
       "delta": -4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -2845,7 +2965,7 @@
     {
       "amount": 17.56,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 4.39,
       "txn": "txn.0050",
@@ -2855,33 +2975,33 @@
     {
       "delta": -4,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "inputAny:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.8,
       "good": "raw-hides",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.4,
       "good": "tallow",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "fresh-meat",
       "outputUnits": 4,
       "recipe": "butchering-fresh-meat",
@@ -2939,7 +3059,7 @@
     {
       "delta": -4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -2953,7 +3073,7 @@
     {
       "amount": 16.64,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 4.16,
       "txn": "txn.0052",
@@ -2963,33 +3083,33 @@
     {
       "delta": -4,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "inputAny:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.8,
       "good": "raw-hides",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.4,
       "good": "tallow",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "fresh-meat",
       "outputUnits": 4,
       "recipe": "butchering-fresh-meat",
@@ -3047,7 +3167,7 @@
     {
       "delta": -4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -3061,7 +3181,7 @@
     {
       "amount": 15.719999999999999,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 3.9299999999999997,
       "txn": "txn.0054",
@@ -3071,33 +3191,33 @@
     {
       "delta": -4,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "inputAny:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.8,
       "good": "raw-hides",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.4,
       "good": "tallow",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "fresh-meat",
       "outputUnits": 4,
       "recipe": "butchering-fresh-meat",
@@ -3155,7 +3275,7 @@
     {
       "delta": -4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -3169,7 +3289,7 @@
     {
       "amount": 14.799999999999999,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 3.6999999999999997,
       "txn": "txn.0056",
@@ -3179,33 +3299,33 @@
     {
       "delta": -4,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "inputAny:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.8,
       "good": "raw-hides",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.4,
       "good": "tallow",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "fresh-meat",
       "outputUnits": 4,
       "recipe": "butchering-fresh-meat",
@@ -3263,7 +3383,7 @@
     {
       "delta": -4,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -3277,7 +3397,7 @@
     {
       "amount": 13.879999999999999,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 3.4699999999999998,
       "txn": "txn.0058",
@@ -3287,33 +3407,33 @@
     {
       "delta": -2,
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "inputAny:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 2,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.4,
       "good": "raw-hides",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
       "delta": 0.2,
       "good": "tallow",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "byproduct:butchering-fresh-meat",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "fresh-meat",
       "outputUnits": 2,
       "recipe": "butchering-fresh-meat",
@@ -3323,26 +3443,26 @@
     {
       "delta": -2,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": -1,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": 2,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "salt-fish",
       "outputUnits": 2,
       "recipe": "preserving-salt-fish",
@@ -3400,7 +3520,7 @@
     {
       "delta": -2,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -3414,7 +3534,7 @@
     {
       "amount": 6.4799999999999995,
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 3.2399999999999998,
       "txn": "txn.0060",
@@ -3424,7 +3544,7 @@
     {
       "delta": -2,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -3438,7 +3558,7 @@
     {
       "amount": 18,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 9,
       "txn": "txn.0061",
@@ -3448,26 +3568,26 @@
     {
       "delta": -4,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": -2,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "salt-fish",
       "outputUnits": 4,
       "recipe": "preserving-salt-fish",
@@ -3532,7 +3652,7 @@
     {
       "delta": -4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -3546,7 +3666,7 @@
     {
       "amount": 36,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 9,
       "txn": "txn.0063",
@@ -3556,26 +3676,26 @@
     {
       "delta": -4,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": -2,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "salt-fish",
       "outputUnits": 4,
       "recipe": "preserving-salt-fish",
@@ -3647,7 +3767,7 @@
     {
       "delta": -4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -3661,7 +3781,7 @@
     {
       "amount": 30.48,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 7.62,
       "txn": "txn.0065",
@@ -3671,26 +3791,26 @@
     {
       "delta": -4,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": -2,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "salt-fish",
       "outputUnits": 4,
       "recipe": "preserving-salt-fish",
@@ -3762,7 +3882,7 @@
     {
       "delta": -4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -3776,7 +3896,7 @@
     {
       "amount": 24.96,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 6.24,
       "txn": "txn.0067",
@@ -3786,26 +3906,26 @@
     {
       "delta": -4,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": -2,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "salt-fish",
       "outputUnits": 4,
       "recipe": "preserving-salt-fish",
@@ -3877,7 +3997,7 @@
     {
       "delta": -4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -3891,7 +4011,7 @@
     {
       "amount": 19.439999999999998,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 4.859999999999999,
       "txn": "txn.0069",
@@ -3901,26 +4021,26 @@
     {
       "delta": -4,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": -2,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "salt-fish",
       "outputUnits": 4,
       "recipe": "preserving-salt-fish",
@@ -3992,7 +4112,7 @@
     {
       "delta": -4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -4006,7 +4126,7 @@
     {
       "amount": 13.919999999999996,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 3.479999999999999,
       "txn": "txn.0071",
@@ -4016,26 +4136,26 @@
     {
       "delta": -4,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": -2,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "salt-fish",
       "outputUnits": 4,
       "recipe": "preserving-salt-fish",
@@ -4085,7 +4205,7 @@
     {
       "delta": -4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -4099,7 +4219,7 @@
     {
       "amount": 8.399999999999999,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 2.0999999999999996,
       "txn": "txn.0073",
@@ -4109,26 +4229,26 @@
     {
       "delta": -4,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": -2,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "salt-fish",
       "outputUnits": 4,
       "recipe": "preserving-salt-fish",
@@ -4171,7 +4291,7 @@
     {
       "delta": -4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -4185,7 +4305,7 @@
     {
       "amount": 8.399999999999999,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 2.0999999999999996,
       "txn": "txn.0075",
@@ -4195,26 +4315,26 @@
     {
       "delta": -4,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": -2,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "salt-fish",
       "outputUnits": 4,
       "recipe": "preserving-salt-fish",
@@ -4257,7 +4377,7 @@
     {
       "delta": -4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -4271,7 +4391,7 @@
     {
       "amount": 8.399999999999999,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 2.0999999999999996,
       "txn": "txn.0077",
@@ -4281,26 +4401,26 @@
     {
       "delta": -4,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": -2,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "salt-fish",
       "outputUnits": 4,
       "recipe": "preserving-salt-fish",
@@ -4343,7 +4463,7 @@
     {
       "delta": -4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -4357,7 +4477,7 @@
     {
       "amount": 8.399999999999999,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 2.0999999999999996,
       "txn": "txn.0079",
@@ -4367,26 +4487,26 @@
     {
       "delta": -4,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": -2,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "salt-fish",
       "outputUnits": 4,
       "recipe": "preserving-salt-fish",
@@ -4429,7 +4549,7 @@
     {
       "delta": -4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -4443,7 +4563,7 @@
     {
       "amount": 8.399999999999999,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 2.0999999999999996,
       "txn": "txn.0081",
@@ -4453,26 +4573,26 @@
     {
       "delta": -4,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": -2,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "salt-fish",
       "outputUnits": 4,
       "recipe": "preserving-salt-fish",
@@ -4515,7 +4635,7 @@
     {
       "delta": -4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -4529,7 +4649,7 @@
     {
       "amount": 8.399999999999999,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 2.0999999999999996,
       "txn": "txn.0083",
@@ -4539,26 +4659,26 @@
     {
       "delta": -4,
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": -2,
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "input:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
       "delta": 4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "produce:preserving-salt-fish",
       "type": "stockChanged"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "output": "salt-fish",
       "outputUnits": 4,
       "recipe": "preserving-salt-fish",
@@ -4601,7 +4721,7 @@
     {
       "delta": -4,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "reason": "sell",
       "type": "stockChanged"
     },
@@ -4615,7 +4735,7 @@
     {
       "amount": 8.399999999999999,
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "market": "stl.port",
       "price": 2.0999999999999996,
       "txn": "txn.0085",
@@ -5782,25 +5902,75 @@
   ],
   "log": [
     {
+      "holder": "biz.0001",
+      "market": "stl.port",
+      "type": "openInventory"
+    },
+    {
+      "holder": "biz.0002",
+      "market": "stl.port",
+      "type": "openInventory"
+    },
+    {
+      "holder": "biz.0003",
+      "market": "stl.port",
+      "type": "openInventory"
+    },
+    {
+      "holder": "biz.0004",
+      "market": "stl.port",
+      "type": "openInventory"
+    },
+    {
       "holder": "biz.0005",
       "market": "stl.port",
       "type": "openInventory"
     },
     {
+      "holder": "biz.0006",
+      "market": "stl.port",
+      "type": "openInventory"
+    },
+    {
+      "holder": "biz.0007",
+      "market": "stl.port",
+      "type": "openInventory"
+    },
+    {
+      "holder": "biz.0008",
+      "market": "stl.port",
+      "type": "openInventory"
+    },
+    {
+      "holder": "biz.0009",
+      "market": "stl.port",
+      "type": "openInventory"
+    },
+    {
+      "holder": "biz.0010",
+      "market": "stl.port",
+      "type": "openInventory"
+    },
+    {
+      "holder": "biz.0011",
+      "market": "stl.port",
+      "type": "openInventory"
+    },
+    {
       "good": "cattle-and-hogs",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "addStock",
       "units": 50
     },
     {
       "good": "fresh-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "addStock",
       "units": 50
     },
     {
       "good": "salt",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "addStock",
       "units": 50
     },
@@ -5821,7 +5991,7 @@
       "type": "setMarketGood"
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "butchering-fresh-meat",
       "type": "produce",
       "units": 4
@@ -5831,12 +6001,12 @@
     },
     {
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "butchering-fresh-meat",
       "type": "produce",
       "units": 4
@@ -5846,12 +6016,12 @@
     },
     {
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "butchering-fresh-meat",
       "type": "produce",
       "units": 4
@@ -5861,12 +6031,12 @@
     },
     {
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "butchering-fresh-meat",
       "type": "produce",
       "units": 4
@@ -5876,12 +6046,12 @@
     },
     {
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "butchering-fresh-meat",
       "type": "produce",
       "units": 4
@@ -5891,12 +6061,12 @@
     },
     {
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "butchering-fresh-meat",
       "type": "produce",
       "units": 4
@@ -5906,12 +6076,12 @@
     },
     {
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "butchering-fresh-meat",
       "type": "produce",
       "units": 4
@@ -5921,12 +6091,12 @@
     },
     {
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "butchering-fresh-meat",
       "type": "produce",
       "units": 4
@@ -5936,12 +6106,12 @@
     },
     {
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "butchering-fresh-meat",
       "type": "produce",
       "units": 4
@@ -5951,12 +6121,12 @@
     },
     {
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "butchering-fresh-meat",
       "type": "produce",
       "units": 4
@@ -5966,12 +6136,12 @@
     },
     {
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "butchering-fresh-meat",
       "type": "produce",
       "units": 4
@@ -5981,12 +6151,12 @@
     },
     {
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "butchering-fresh-meat",
       "type": "produce",
       "units": 4
@@ -5996,18 +6166,18 @@
     },
     {
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "butchering-fresh-meat",
       "type": "produce",
       "units": 2
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "preserving-salt-fish",
       "type": "produce",
       "units": 2
@@ -6017,18 +6187,18 @@
     },
     {
       "good": "fresh-meat",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 2
     },
     {
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 2
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "preserving-salt-fish",
       "type": "produce",
       "units": 4
@@ -6038,12 +6208,12 @@
     },
     {
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "preserving-salt-fish",
       "type": "produce",
       "units": 4
@@ -6053,12 +6223,12 @@
     },
     {
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "preserving-salt-fish",
       "type": "produce",
       "units": 4
@@ -6068,12 +6238,12 @@
     },
     {
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "preserving-salt-fish",
       "type": "produce",
       "units": 4
@@ -6083,12 +6253,12 @@
     },
     {
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "preserving-salt-fish",
       "type": "produce",
       "units": 4
@@ -6098,12 +6268,12 @@
     },
     {
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "preserving-salt-fish",
       "type": "produce",
       "units": 4
@@ -6113,12 +6283,12 @@
     },
     {
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "preserving-salt-fish",
       "type": "produce",
       "units": 4
@@ -6128,12 +6298,12 @@
     },
     {
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "preserving-salt-fish",
       "type": "produce",
       "units": 4
@@ -6143,12 +6313,12 @@
     },
     {
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "preserving-salt-fish",
       "type": "produce",
       "units": 4
@@ -6158,12 +6328,12 @@
     },
     {
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "preserving-salt-fish",
       "type": "produce",
       "units": 4
@@ -6173,12 +6343,12 @@
     },
     {
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "preserving-salt-fish",
       "type": "produce",
       "units": 4
@@ -6188,12 +6358,12 @@
     },
     {
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
     {
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "recipe": "preserving-salt-fish",
       "type": "produce",
       "units": 4
@@ -6203,7 +6373,7 @@
     },
     {
       "good": "salt-fish",
-      "inventory": "inv.0002",
+      "inventory": "inv.0006",
       "type": "sell",
       "units": 4
     },
@@ -8131,7 +8301,7 @@
       "biz.0001": {
         "account": "acct.0002",
         "id": "biz.0001",
-        "inventory": "inv.port.docks",
+        "inventory": "inv.0002",
         "kind": "docks",
         "lines": [],
         "manager": null,
@@ -8152,7 +8322,7 @@
       "biz.0002": {
         "account": "acct.0003",
         "id": "biz.0002",
-        "inventory": "inv.port.shipyard",
+        "inventory": "inv.0003",
         "kind": "shipyard",
         "lines": [],
         "manager": null,
@@ -8173,7 +8343,7 @@
       "biz.0003": {
         "account": "acct.0004",
         "id": "biz.0003",
-        "inventory": "inv.port.market",
+        "inventory": "inv.0004",
         "kind": "market",
         "lines": [],
         "manager": null,
@@ -8194,7 +8364,7 @@
       "biz.0004": {
         "account": "acct.0005",
         "id": "biz.0004",
-        "inventory": "inv.port.tavern",
+        "inventory": "inv.0005",
         "kind": "tavern",
         "lines": [],
         "manager": null,
@@ -8215,7 +8385,7 @@
       "biz.0005": {
         "account": "acct.0006",
         "id": "biz.0005",
-        "inventory": "inv.port.bakery",
+        "inventory": "inv.0006",
         "kind": "butcher",
         "lines": [
           {
@@ -8247,7 +8417,7 @@
       "biz.0006": {
         "account": "acct.0007",
         "id": "biz.0006",
-        "inventory": "inv.port.farm",
+        "inventory": "inv.0007",
         "kind": "farm",
         "lines": [],
         "manager": null,
@@ -8268,7 +8438,7 @@
       "biz.0007": {
         "account": "acct.0008",
         "id": "biz.0007",
-        "inventory": "inv.port.clinic",
+        "inventory": "inv.0008",
         "kind": "clinic",
         "lines": [],
         "manager": null,
@@ -8289,7 +8459,7 @@
       "biz.0008": {
         "account": "acct.0009",
         "id": "biz.0008",
-        "inventory": "inv.port.church",
+        "inventory": "inv.0009",
         "kind": "church",
         "lines": [],
         "manager": null,
@@ -8310,7 +8480,7 @@
       "biz.0009": {
         "account": "acct.0010",
         "id": "biz.0009",
-        "inventory": "inv.port.warehouse",
+        "inventory": "inv.0010",
         "kind": "warehouse",
         "lines": [],
         "manager": null,
@@ -8331,7 +8501,7 @@
       "biz.0010": {
         "account": "acct.0011",
         "id": "biz.0010",
-        "inventory": "inv.port.apothecary",
+        "inventory": "inv.0011",
         "kind": "apothecary",
         "lines": [],
         "manager": null,
@@ -8352,7 +8522,7 @@
       "biz.0011": {
         "account": "acct.0012",
         "id": "biz.0011",
-        "inventory": "inv.port.townhall",
+        "inventory": "inv.0012",
         "kind": "town-hall",
         "lines": [],
         "manager": null,
