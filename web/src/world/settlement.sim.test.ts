@@ -172,7 +172,8 @@ describe('Port Royal settlement, thirty days', () => {
     const bakers = new Set(result.days[0]!.people.filter(p => p.facility === dry.facility).map(p => p.slug))
     expect(bakers.size).toBe(f.staffPerFacility)
     expect(hydration.every(c => bakers.has(c.slug))).toBe(true)
-    const engineCount = result.days[29]!.people.reduce((n, p) => n + p.crises.filter(c => c.cause.startsWith('physiology.hydration')).length, 0)
+    // reads the engine's records (every settler's crisis records in the world trace), not the report the adapter built (round 49 fix 2)
+    const engineCount = result.engineCrises.filter(c => c.cause.startsWith('physiology.hydration')).length
     expect(hydration).toHaveLength(engineCount)
     for (const slug of bakers) for (const band of ['physiology.hydration.6-to-10', 'physiology.hydration.over-10']) {
       const own = hydration.filter(c => c.slug === slug && c.cause === band).map(c => c.record).sort((a, b) => a.startedAt - b.startedAt)
