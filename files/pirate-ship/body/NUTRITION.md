@@ -327,8 +327,11 @@ intake; the deficiency clocks.
   *Appetite*: the wish to eat this food now, 0 to 1 per meal offered: hunger x palatability x state. Palatability: a
   hot meal 1.0, fresh meat 1.0, biscuit and salt horse for the 30th day 0.6, spoiled food 0.3, a favourite 1.2, a
   hated one 0.5 (per character, the story keeper's); raised by the cook's skill (STATS Cooking: +0.1 at 30, +0.3 at
-  70). State: fever x0.3, drunk x0.7, seasick x0.2, grief x0.6. *Eating rule*: a crew mate eats the meal if appetite over 0.3, or if hunger over 0.8 whatever the appetite; what is eaten fills fullness and intake; what is refused goes
-  back to the stores or over the side. In the simulation these reach the body only as what was eaten. (2730)
+  70; the skilled cook makes the same stores eaten, so consumption, mood and hearts toward the cook follow). State:
+  fever x0.3, drunk x0.7, seasick x0.2, grief x0.6. A man full but wanting pudding is appetite over fullness; a man
+  hungry but off his food is hunger without appetite. *Eating rule*: a crew mate eats the meal if appetite over 0.3,
+  or if hunger over 0.8 whatever the appetite; what is eaten fills fullness and intake; what is refused goes back to
+  the stores or over the side. In the simulation these reach the body only as what was eaten. (2730)
 - **Mark:** **(Rex)** that energy and fat are simulated; **(proposed)** the rules.
 
 ## 5. Deficiency clocks
