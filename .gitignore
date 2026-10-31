@@ -39,3 +39,4 @@ data/**/assets/*
 
 # belt gate output (Gates send long output here, _agent/WORK.template.md)
 .gate.log
+.p0.log
