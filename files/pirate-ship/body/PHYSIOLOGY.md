@@ -137,8 +137,8 @@ fatigue load (MET-hours).
   PHY-BAN).
 - **[model] Banister fitness–fatigue (proposed):**
 
-      fitness(t) = Σ_i load_i · e^(−(t−i)/τ_fit)        τ_fit = 42 days
-      fatigue(t) = Σ_i load_i · e^(−(t−i)/τ_fat)        τ_fat = 7 days
+      fitness(t) = Σ_i load_i · e^(−(t−i)/τ_fit)        τ from the physiology.banister table
+      fatigue(t) = Σ_i load_i · e^(−(t−i)/τ_fat)        τ from the physiology.banister table
       aerobic_today = ceiling(age, sex, genetics) × clamp(0.6 + k1·fitness − k2·fatigue, 0.6, 1.0)
 
   `ceiling` is the hidden genetic max of `STATS.md` Endurance for this character, scaled by the ageing curve
@@ -146,13 +146,10 @@ fatigue load (MET-hours).
   (`CIRCULATION.md` §1): Banister fitness sets the maximal output, the heart's function and damage cap it
   (`ANATOMY.md`), haemoglobin and lung saturation scale it. So anaemia, heart failure and lung disease
   lower endurance through this one number.** **Calibration (proposed):** `load_i` is the day's MET-hours above 2 MET divided by 8, so an ordinary
-  sea day scores about 1.0, a hard day 2.0, a sick day 0; with τ 42 and 7 the steady-state sums are then
-  about 42 and 7 for a daily load of 1 (a long run of ordinary days settles the clamp at the untrained floor,
-  a run of hard days nearer the genetic ceiling once fatigue decays, a month idle back to the floor). The
+  sea day scores about 1.0, a hard day 2.0, a sick day 0; the steady-state sums follow the table's τ (a long run of ordinary days settles the clamp near its floor, a run of hard days nearer the genetic ceiling once fatigue decays, a month idle back to the floor; whether the clamp saturates with the table's constants is open for Rex, realism flag (2635) open). The
   simulator's k1, k2, τ_fit, τ_fat, and the training-factor clamp's floor, ceiling and normalisation are the
   `physiology.banister` table's rows (cited there); the clamp floor, ceiling and normalisation rows are marked
-  estimate. The 42/7 constants in the formula above are the TrainingPeaks convention, not a universal truth.
-  The clamp is documented in `Toolchain/realism/gears/aerobic-training-clamp.md`. (2637)
+  estimate. The clamp is documented in `Toolchain/realism/gears/aerobic-training-clamp.md`. (2637) (2753)
 
 <!-- table:library/physiology.banister -->
 *Cardiovascular fitness: the fitness-fatigue model constants* (model; confidence medium; source: Banister impulse-response model (Morton, Fitz-Clarke, Banister 1990): performance = base + k1*fitness - k2*fatigue, each an exponentially decaying sum of daily training loads. Constants: Busso et al. 1991 mean of 8 subjects, as reprinted in Ceddia, Bondell, Taylor 2025 (https://arxiv.org/html/2505.20859, Section 3, Figure 2 caption): 'P0 = 104.8, k1 = 0.048, k2 = 0.117, tau1 = 38, tau2 = 1.9, taken from Table 3, mean values of 8 subjects'. They are per-athlete fits in the study's own training units, not MET-hours. PHY-BAN)
@@ -480,7 +477,7 @@ lower).
 2. The watch roster: a player choice, or set by the quartermaster?
 3. Whether the Endurance pool shows as a bar in a fight ("wind"), given hidden stats.
 4. Whether characters age during play (the curves in §8 assume years pass), and whether children exist.
-5. The placeholder rates (drift per hour, the 42/7 constants, the debt table) are for the simulator to tune;
+5. The placeholder rates (drift per hour, the Banister constants (now the realism table's Busso 1991 set, DUP-18), the debt table) are for the simulator to tune;
    none is a rule until Rex keeps it.
 
 ## Sources
