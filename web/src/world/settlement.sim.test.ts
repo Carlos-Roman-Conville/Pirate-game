@@ -166,12 +166,19 @@ describe('Port Royal settlement, thirty days', () => {
     for (const cause of ['circulation.bleeding.iv', 'disease:yellow_fever', 'physiology.hydration.6-to-10', 'physiology.hydration.over-10']) {
       expect(causes.has(cause), cause).toBe(true)
     }
-    // water: only the bakery's dry spell opens hydration records, each body's two bands once, and work stops on the engine's word
+    // water: only the bakery's dry spell opens hydration records, a record is one episode (a band entered, then left) so a body
+    // that dries again after drinking has another, and work stops on the engine's word
     const dry = f.water.dry, hydration = result.crises.filter(c => c.cause.startsWith('physiology.hydration'))
     const bakers = new Set(result.days[0]!.people.filter(p => p.facility === dry.facility).map(p => p.slug))
     expect(bakers.size).toBe(f.staffPerFacility)
-    expect(hydration).toHaveLength(2 * bakers.size)
     expect(hydration.every(c => bakers.has(c.slug))).toBe(true)
+    const engineCount = result.days[29]!.people.reduce((n, p) => n + p.crises.filter(c => c.cause.startsWith('physiology.hydration')).length, 0)
+    expect(hydration).toHaveLength(engineCount)
+    for (const slug of bakers) for (const band of ['physiology.hydration.6-to-10', 'physiology.hydration.over-10']) {
+      const own = hydration.filter(c => c.slug === slug && c.cause === band).map(c => c.record).sort((a, b) => a.startedAt - b.startedAt)
+      expect(own.length, `${slug} ${band}`).toBeGreaterThanOrEqual(1)
+      for (let i = 1; i < own.length; i++) expect(own[i]!.startedAt, `${slug} ${band} #${i}`).toBeGreaterThanOrEqual(own[i - 1]!.resolvedAt!)
+    }
     let stopped = 0
     for (const day of result.days) for (const person of day.people) {
       const is = day.crises.some(c => c.slug === person.slug && c.cause.startsWith('physiology.hydration'))

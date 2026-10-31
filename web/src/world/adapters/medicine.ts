@@ -86,14 +86,12 @@ interface Held {
   wounds: GameWound[]
   /** Records already handed out as events; the world's trace holds them all (the engine's `flushMedicineCrises` puts the medicine ones there). */
   seen: Set<Crisis>
-  /** Causes of the process crises (not the medicine state's) already handed out. */
-  causes: Set<string>
 }
 const held = new WeakMap<GameCharacter, Held>()
 
 function heldOf(c: GameCharacter, o: MedicineOptions = {}): Held {
   let h = held.get(c)
-  if (!h) { h = { state: createMedicine(BODY, o), wounds: [], seen: new Set(), causes: new Set() }; held.set(c, h) }
+  if (!h) { h = { state: createMedicine(BODY, o), wounds: [], seen: new Set() }; held.set(c, h) }
   return h
 }
 
@@ -113,10 +111,12 @@ function newCrises(c: GameCharacter): CrisisEvent[] {
   const fresh: Crisis[] = []
   for (const r of crisesOf(world, body)) {
     if (h.seen.has(r)) continue
-    // a process crisis (bleeding, water) the engine opens again as the condition moves between its bands is the same condition, not a new crisis
-    if (!h.state.crises.includes(r) && h.causes.has(r.cause)) { world.trace.crises.splice(world.trace.crises.indexOf(r), 1); continue }
+    // A record is one episode (the engine keeps one open record per body and cause and stamps `resolvedAt` when the condition
+    // ends), so a process crisis (bleeding, water) opened again after its record resolved is a new episode and a new event. Only
+    // a record of a cause still open (no `resolvedAt`) is the same episode; it is not handed out twice. The game never removes
+    // a record from the trace: the engine's cause-of-death ledger relies on them.
+    if (!h.state.crises.includes(r) && [...h.seen].some(s => s !== r && s.cause === r.cause && s.resolvedAt === undefined && !h.state.crises.includes(s))) continue
     h.seen.add(r)
-    if (!h.state.crises.includes(r)) h.causes.add(r.cause)
     fresh.push(r)
   }
   return fresh.map(r => eventOf(c, r))

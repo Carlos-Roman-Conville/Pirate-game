@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { advanceDays, bodyOutputs, createMedicine, crisesOf, diseaseCourse, expose, treat } from '@rex/realism'
+import { advanceDays, bodyOutputs, createMedicine, crisesOf, diseaseCourse, expose, trackCrisis, treat } from '@rex/realism'
 import medicine from '../../../../files/pirate-ship/body/data/medicine.json'
 import goods from '../../../../data/pirate-ship/economy/goods.json'
 import fixture from '../../../../data/pirate-ship/world/medicine.json'
@@ -233,6 +233,32 @@ describe('crises', () => {
     // the same condition in the renewed trace is not a second crisis (this body drinks nothing, so water crises are its own)
     expect(healDay(c).crises.filter(e => e.cause === IV)).toEqual([])
     expect(crisesHeld(c).filter(r => r.cause === IV)).toHaveLength(1)
+  })
+
+  it('a crisis reopened after it resolved is a new episode and a new record; one still open is not handed out twice', () => {
+    const c = bleeder('reopened')
+    simulateDay(c, 1, { ...fixturePlace, processes: [] })
+    const { world, body } = engineOf(c)
+    const detail = { source: 'test episode' }
+    trackCrisis(world, body, IV, true, detail)
+    expect(healDay(c).crises.filter(e => e.cause === IV)).toHaveLength(1)
+    // still open on a later look: the same episode
+    trackCrisis(world, body, IV, true, detail)
+    expect(healDay(c).crises.filter(e => e.cause === IV)).toEqual([])
+    // the condition ends, and days later starts again
+    world.t += 86400
+    trackCrisis(world, body, IV, false, detail)
+    expect(healDay(c).crises.filter(e => e.cause === IV)).toEqual([])
+    world.t += 3 * 86400
+    trackCrisis(world, body, IV, true, detail)
+    const again = healDay(c).crises.filter(e => e.cause === IV)
+    expect(again).toHaveLength(1)
+    const held = crisesHeld(c).filter(r => r.cause === IV)
+    expect(held).toHaveLength(2)
+    expect(held[0]!.resolvedAt).toBeDefined()
+    expect(held[1]!.resolvedAt).toBeUndefined()
+    expect(held[1]!.startedAt).toBeGreaterThanOrEqual(held[0]!.resolvedAt!)
+    expect(again[0]!.record).toBe(held[1])
   })
 
   it('a wound bound at once loses no blood and opens no crisis; a body with no rate runs no extra process', () => {
