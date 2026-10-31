@@ -11,7 +11,7 @@ export default defineConfig({
   server: {
     port: 5320,
     strictPort: true,
-    fs: { allow: ['..', '../../../../Toolchain/realism', '../../../../Toolchain/settlement', '../../../../Toolchain/economy'] },   // the map data lives in ../data/pirate-ship/; the shared realism, settlement and economy engines in Toolchain
+    fs: { allow: ['..', '../../../../Toolchain/realism', '../../../../Toolchain/settlement', '../../../../Toolchain/economy', '../../../../Toolchain/kernel'] },   // the map data lives in ../data/pirate-ship/; the shared realism, settlement, economy and kernel packages live in Toolchain
     proxy: {
       '/api': { target: 'http://localhost:5308', ws: true },   // ws: the online match socket
       '/img': { target: 'http://localhost:5308' },
