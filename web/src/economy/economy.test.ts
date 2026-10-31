@@ -104,3 +104,20 @@ describe('I2 thirty autonomous days of the port with both engines', () => {
     expect(JSON.stringify(again.state)).toBe(JSON.stringify(e.state))
   })
 })
+
+describe('I1c the material queries are pure (CONTRACTS §17)', () => {
+  it('available and have on an unseen inventory ref mint nothing and change no state; produce and take still open it', () => {
+    const { economy, port } = world()
+    const materials = port.runner.providers.materials
+    const before = JSON.stringify(economy.runner.state)
+    const logged = economy.runner.log.length
+    expect(materials.available('inv.port.unseen', 'preserving-salt-fish')).toBe(0)
+    expect(materials.available('inv.port.unseen', 'butchering-fresh-meat')).toBe(0)
+    expect(materials.have('inv.port.unseen', 'salt')).toBe(0)
+    expect(materials.rates('preserving-salt-fish')).toEqual(materials.rates('preserving-salt-fish'))
+    expect(JSON.stringify(economy.runner.state)).toBe(before)
+    expect(economy.runner.log.length).toBe(logged)
+    expect(materials.take('inv.port.unseen', 'salt', 1)).toBe(0)
+    expect(economy.runner.log.length).toBeGreaterThan(logged)
+  })
+})

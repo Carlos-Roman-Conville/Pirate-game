@@ -27,6 +27,11 @@ export class Aliases {
     }
     return id
   }
+  /** The economy inventory behind a ref without minting one (queries must be pure, CONTRACTS §17); null if unseen. */
+  peek(ref: string): string | null {
+    if (ref in this.economy.state.inventories) return ref
+    return this.table.get(ref) ?? null
+  }
   has(ref: string): boolean { return ref in this.economy.state.inventories || this.table.has(ref) }
   entries(): [string, string][] { return [...this.table.entries()] }
 }
@@ -34,9 +39,20 @@ export class Aliases {
 /** CONTRACTS §4a: Settlement's MaterialProvider from the economy; every call is a logged economy command. */
 export function economyMaterials(economy: EconomyRunner, aliases: Aliases): MaterialProvider {
   return {
-    available: (inventory, recipe) => availableUnits(economy.state, aliases.resolve(inventory), recipe),
+    // Queries read without minting (pure, CONTRACTS §17): an unseen ref is an empty inventory, which allows a recipe
+    // with no inputs without limit and nothing else. Only produce and take mint an inventory for a new ref.
+    available: (inventory, recipe) => {
+      const id = aliases.peek(inventory)
+      if (id) return availableUnits(economy.state, id, recipe)
+      const def = economy.state.recipes[recipe]
+      if (!def) throw new Error(`unknown recipe: ${recipe}`)
+      return def.inputs.some((q) => q.units > 0) || def.inputsAny.some((g) => g.units > 0) ? 0 : Number.POSITIVE_INFINITY
+    },
     produce: (inventory, recipe, units) => { economy.run({ type: 'produce', inventory: aliases.resolve(inventory), recipe, units }) },
-    have: (inventory, material) => economy.state.inventories[aliases.resolve(inventory)].stock[material] ?? 0,
+    have: (inventory, material) => {
+      const id = aliases.peek(inventory)
+      return id ? economy.state.inventories[id].stock[material] ?? 0 : 0
+    },
     take: (inventory, material, units) => economy.run({ type: 'take', inventory: aliases.resolve(inventory), good: material, units }).taken ?? 0,
     rates: (recipe) => {
       const def = economy.state.recipes[recipe]
