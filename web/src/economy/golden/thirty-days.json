@@ -1906,7 +1906,7 @@
         "minLevel": 0,
         "output": "fresh-meat",
         "rates": {
-          "labourPerUnit": 0.25,
+          "labourHoursPerUnit": 2.5,
           "unitsPerFixtureDay": 10
         },
         "skill": "butchering",
@@ -1932,7 +1932,7 @@
         "minLevel": 0,
         "output": "salt-fish",
         "rates": {
-          "labourPerUnit": 0.25,
+          "labourHoursPerUnit": 2.5,
           "unitsPerFixtureDay": 8
         },
         "skill": "preserving",

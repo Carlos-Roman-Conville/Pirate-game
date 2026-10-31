@@ -4,7 +4,7 @@
  * the economy's LedgerProvider implemented from the settlement runner (§3: money has one home, Settlement's ledger),
  * the SettlementReader over settlement state (§4b), and the day order (§9). Neither engine imports the other.
  */
-import { Runner as EconomyRunner, availableUnits, price, type LedgerProvider, type LedgerRow, type Providers as EconomyProviders, type SettlementReader } from '@rex/economy'
+import { Runner as EconomyRunner, availableUnits, price, type LabourRow, type LabourSupply, type LedgerProvider, type LedgerRow, type Providers as EconomyProviders, type SettlementReader } from '@rex/economy'
 import { Runner as SettlementRunner, balanceOf, hasFixture, ledger, stubProviders as settlementStubs, type MaterialProvider, type PriceProvider, type Providers as SettlementProviders } from '@rex/settlement'
 
 /**
@@ -57,12 +57,8 @@ export function economyMaterials(economy: EconomyRunner, aliases: Aliases): Mate
     rates: (recipe) => {
       const def = economy.state.recipes[recipe]
       if (!def) throw new Error(`unknown recipe: ${recipe}`)
-      // CONTRACTS §16, during the switch to person-hours: both fields, each derived from the other when only one is
-      // stored (the economy keeps rates as given). Settlement reads labourPerUnit until its unit 2617.
-      const perDay = economy.config.legacyHoursPerWorkerDay
-      const hours = def.rates.labourHoursPerUnit ?? def.rates.labourPerUnit! * perDay
-      const rates = { unitsPerFixtureDay: def.rates.unitsPerFixtureDay, labourPerUnit: def.rates.labourPerUnit ?? hours / perDay, labourHoursPerUnit: hours }
-      return rates
+      // CONTRACTS §16: person-hours per unit, as stored.
+      return { unitsPerFixtureDay: def.rates.unitsPerFixtureDay, labourHoursPerUnit: def.rates.labourHoursPerUnit! }
     },
   }
 }
@@ -106,15 +102,49 @@ export function settlementReader(settlement: SettlementRunner, options: { active
   }
 }
 
-/** Settlement's full provider set with the economy behind materials and prices; labour and utilities stay the host's
- *  (stubs here until a population model and realism supply them). */
-export function settlementProvidersOver(economy: EconomyRunner, aliases: Aliases, marketId: string, base: SettlementProviders = settlementStubs()): SettlementProviders {
-  return { ...base, materials: economyMaterials(economy, aliases), prices: economyPrices(economy, marketId) }
+/**
+ * CONTRACTS §16: the one labour interface, the same object for both engines. A host table of pools (persons each) and
+ * Settlement's `hoursPerDay` (10 today, SET-12): a pool offers persons × hoursPerDay person-hours a day, less what it
+ * has granted that day. A named person has no finite schedule here; `away` lists who is aboard, dead or gone.
+ */
+export interface PortLabour extends LabourSupply {
+  pools: Record<string, { persons: number }>
+  away: Set<string>
+  factors: Record<string, number>
 }
 
-/** The economy's provider set with Settlement behind the ledger; population, labour supply and transport stay the host's. */
-export function economyProvidersOver(settlement: SettlementRunner, base: EconomyProviders): EconomyProviders {
-  return { ...base, ledger: settlementLedger(settlement) }
+export function portLabour(pools: Record<string, { persons: number }>, hoursPerDay = 10): PortLabour {
+  const grants: { day: number; pool: string; hours: number }[] = []
+  const labour: PortLabour = {
+    pools, away: new Set(), factors: {},
+    supply: (): LabourRow[] => Object.keys(pools).sort().map((pool) => ({ category: pool, persons: pools[pool].persons, personHours: pools[pool].persons * hoursPerDay })),
+    available: (person) => !labour.away.has(person),
+    hours: (source, _role, day) => {
+      if (!labour.available(source, day)) return 0
+      if (!Object.hasOwn(pools, source)) return source.startsWith('pool.') ? 0 : Number.POSITIVE_INFINITY
+      const granted = grants.filter((g) => g.day === day && g.pool === source).reduce((sum, g) => sum + g.hours, 0)
+      return Math.max(0, pools[source].persons * hoursPerDay - granted)
+    },
+    draw: (pool, role, _requires, wantedHours, day) => {
+      const hours = Object.hasOwn(pools, pool) ? Math.max(0, Math.min(wantedHours, labour.hours(pool, role, day))) : 0
+      if (hours > 0) grants.push({ day, pool, hours })
+      return hours
+    },
+    productivity: (holder) => labour.factors[holder] ?? 1,
+  }
+  return labour
+}
+
+/** Settlement's full provider set with the economy behind materials and prices; labour (`portLabour`) and utilities
+ *  stay the host's. */
+export function settlementProvidersOver(economy: EconomyRunner, aliases: Aliases, marketId: string, base: SettlementProviders = settlementStubs(), labour?: LabourSupply): SettlementProviders {
+  return { ...base, ...(labour ? { labour } : {}), materials: economyMaterials(economy, aliases), prices: economyPrices(economy, marketId) }
+}
+
+/** The economy's provider set with Settlement behind the ledger; population and transport stay the host's, labour
+ *  is the shared `portLabour` when given. */
+export function economyProvidersOver(settlement: SettlementRunner, base: EconomyProviders, labour?: LabourSupply): EconomyProviders {
+  return { ...base, ...(labour ? { labour } : {}), ledger: settlementLedger(settlement) }
 }
 
 /**

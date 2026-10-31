@@ -7,12 +7,12 @@
 import { defaultConfig as economyDefaults, marketStock, stubProviders as economyStubs, totalUnits, type EconomyConfig } from '@rex/economy'
 import { balanceOf, stubProviders as settlementStubs, totalMoney } from '@rex/settlement'
 import { loadPort } from '../settlement'
-import { Aliases, economyProvidersOver, loadEconomy, runDay, settlementProvidersOver, settlementReader, type RecipeQuantities } from './index'
+import { Aliases, economyProvidersOver, loadEconomy, portLabour, runDay, settlementProvidersOver, settlementReader, type RecipeQuantities } from './index'
 
 /** Fixture quantities for the two recipes the butcher shop runs (the data has none yet). */
 export const QUANTITIES: RecipeQuantities = {
-  'butchering-fresh-meat': { yield: 1, inputs: {}, inputsAny: [1], byproducts: { 'raw-hides': 0.2, tallow: 0.1 }, rates: { unitsPerFixtureDay: 10, labourPerUnit: 0.25 } },
-  'preserving-salt-fish': { yield: 1, inputs: { 'fresh-fish': 1, salt: 0.5 }, rates: { unitsPerFixtureDay: 8, labourPerUnit: 0.25 } },
+  'butchering-fresh-meat': { yield: 1, inputs: {}, inputsAny: [1], byproducts: { 'raw-hides': 0.2, tallow: 0.1 }, rates: { unitsPerFixtureDay: 10, labourHoursPerUnit: 2.5 } },
+  'preserving-salt-fish': { yield: 1, inputs: { 'fresh-fish': 1, salt: 0.5 }, rates: { unitsPerFixtureDay: 8, labourHoursPerUnit: 2.5 } },
 }
 
 export function world(config: EconomyConfig = economyDefaults()) {
@@ -21,9 +21,9 @@ export function world(config: EconomyConfig = economyDefaults()) {
   const loaded = structuredClone(economy.runner.state)
   const aliases = new Aliases(economy.runner, economy.marketId)
   const base = settlementStubs()
-  base.labour.pools['pool.housing'] = 5
-  const port = loadPort(settlementProvidersOver(economy.runner, aliases, economy.marketId, base))
-  economy.runner.providers = economyProvidersOver(port.runner, econStubs)
+  const labour = portLabour({ 'pool.housing': { persons: 5 } })
+  const port = loadPort(settlementProvidersOver(economy.runner, aliases, economy.marketId, base, labour))
+  economy.runner.providers = economyProvidersOver(port.runner, econStubs, labour)
   const reader = settlementReader(port.runner)
   // the butcher shop: two lines, one butcher, a purse; its inputs land in the economy inventory behind its ref
   const shop = port.bindings['port.bakery']

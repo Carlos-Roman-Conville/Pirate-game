@@ -1,5 +1,5 @@
 // Golden capture of the thirty-day run (I2, via ./fixture.ts): adopting the kernel must not silently change a result.
-// The first run writes golden/thirty-days.json; later runs compare byte for byte and name the first differing path.
+// The first run (or GOLDEN_WRITE=1) writes golden/thirty-days.json; later runs compare byte for byte and name the first differing path.
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
@@ -40,7 +40,7 @@ describe('golden: the thirty-day run', () => {
       events: run.e.events,
       rows: run.rows,
     }), null, 2) + '\n'
-    if (!existsSync(FILE)) {
+    if (!existsSync(FILE) || process.env.GOLDEN_WRITE) {
       mkdirSync(dirname(FILE), { recursive: true })
       writeFileSync(FILE, text)
       console.log('golden written')

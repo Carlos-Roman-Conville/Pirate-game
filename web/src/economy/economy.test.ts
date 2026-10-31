@@ -3,9 +3,9 @@
 // thirty-day run are in ./fixture.ts, shared with the golden capture.
 import { describe, expect, it } from 'vitest'
 import { Runner as EconomyRunner, accounts, marketStock, producedLast, stubProviders as economyStubs, totalUnits } from '@rex/economy'
-import { balanceOf, ledger, totalMoney, type StubLabour } from '@rex/settlement'
+import { balanceOf, ledger, totalMoney } from '@rex/settlement'
 import { thirtyDays, world } from './fixture'
-import { runDay } from './index'
+import { runDay, type PortLabour } from './index'
 
 describe('I1 the port\'s butcher produces into an economy inventory through the material provider', () => {
   it('one settlement day: Q is Settlement\'s, the stock move is the economy\'s, and both agree', () => {
@@ -16,7 +16,7 @@ describe('I1 the port\'s butcher produces into an economy inventory through the 
     expect(aliases.entries()).toEqual([['inv.port.bakery', inv]])
     const logged = economy.runner.log.length
     runDay(port.runner, economy.runner)
-    // one butcher, ten hours, 0.25 worker-days a unit: four units of meat, then no labour left for the fish line
+    // one butcher, ten hours, 2.5 person-hours a unit: four units of meat, then no labour left for the fish line
     expect(port.runner.state.production[biz]!.lines).toMatchObject([{ recipe: 'butchering-fresh-meat', q: 4 }, { recipe: 'preserving-salt-fish', q: 0 }])
     expect(reader.production(biz, 0)).toEqual([{ recipe: 'butchering-fresh-meat', q: 4 }, { recipe: 'preserving-salt-fish', q: 0 }])
     expect(reader.production(biz, 1)).toBeNull()
@@ -55,7 +55,7 @@ describe('I1b a project draws from its own inventory through the aliases (CONTRA
   it('materials come from the project\'s inventory ref, wages from its account, and the account is never an inventory', () => {
     const { economy, aliases, port } = world()
     const r = port.runner
-    ;(r.providers.labour as StubLabour).pools['pool.builders'] = 1
+    ;(r.providers.labour as PortLabour).pools['pool.builders'] = { persons: 1 }
     const store = aliases.resolve('inv.project.store', 'esfp-f')
     economy.runner.run({ type: 'addStock', inventory: store, good: 'lumber', units: 10 })
     r.run({ type: 'credit', holder: 'esfp-f', amount: 10 })
