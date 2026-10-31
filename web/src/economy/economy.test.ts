@@ -60,7 +60,7 @@ describe('I1b a project draws from its own inventory through the aliases (CONTRA
     economy.runner.run({ type: 'addStock', inventory: store, good: 'lumber', units: 10 })
     r.run({ type: 'credit', holder: 'esfp-f', amount: 10 })
     const proj = r.run<string>({ type: 'startProject', kind: 'renovate', target: port.bindings['port.bakery'].buildings[0], account: 'esfp-f',
-      inventory: 'inv.project.store', pool: 'pool.builders', wage: 1, labourDays: 1, materials: [{ material: 'lumber', units: 5 }], plan: { addFixtures: ['smokehouse'] } })
+      inventory: 'inv.project.store', pool: 'pool.builders', wage: 1, labourHours: 10, materials: [{ material: 'lumber', units: 5 }], plan: { addFixtures: ['smokehouse'] } })
     runDay(r, economy.runner)
     expect(r.state.projects[proj].status).toBe('done')
     expect(economy.runner.state.inventories[store].stock.lumber).toBe(5)
