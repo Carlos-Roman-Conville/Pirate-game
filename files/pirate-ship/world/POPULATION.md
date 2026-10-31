@@ -74,7 +74,7 @@ commands (`BALANCE.md` C5 item 23).
 | health | 0 to 1 | mean body condition of the pool (food sufficiency, epidemic state) | proposed |
 | food_days | number | stores against need (ECOLOGY and the economy) | proposed |
 | epidemic | disease id or none, with day | the current outbreak (MEDICINE parameters) | proposed |
-| labour | person-days per day | = adults x health x (1 - sick share) | proposed |
+| labour | person*h | = sum of adult categories: cohort x health x (1 - living symptomatic cohort share) x host hoursPerDay | proposed (Reality, 2026-10-30, group 10) |
 | occupations | map | how many farmers, fishers, smiths, sailors (GOODS.md 3d labels) the pool supplies | proposed |
 <!-- /table -->
 
@@ -91,12 +91,12 @@ commands (`BALANCE.md` C5 item 23).
 |---|---|---|---|
 | Births | children += adults_f x birth_rate/365 x health | rates table | proposed |
 | Deaths, background | each cohort -= n x death_rate/365 x (2 - health) ; elders x2 | rates, health | proposed |
-| Epidemic | on outbreak: sick share rises by the disease's catch rate x (1 - seasoned_share) daily for its course; deaths = sick x the disease's untreated risk; survivors join seasoned_share (yellow fever, smallpox) | MEDICINE.md diseases | proposed |
+| Epidemic | on outbreak: new cases daily = remaining members of the initial resident pool not yet caught and not initially seasoned x the host's catch rate, through the row's maximum course day; each exposure batch follows MEDICINE's uniform integer incubation and course days, with fatal crises uniform over each drawn course; deaths and recoveries are their expectations, and living ill cases determine sick share; survivors join seasoned_share for lifelong immunity (yellow fever, smallpox) | MEDICINE.md diseases | proposed (Reality, 2026-10-30, group 14: the expected value of MEDICINE's individual course) |
 | Ageing | children -> adults at 15 (1/5475 a day), adults -> elders at 50 | - | proposed |
 | Food | food_days -= 1; if under 0: health -= 0.02 a day; births x0.5; deaths x1.5 (famine) | ECOLOGY, economy | proposed |
 | Migration in | transient += arrivals (ships in port x crew share ashore); adults += settlers (prosperity x reputation x 0.001 a day) | economy, town reputation | proposed |
 | Migration out | adults -= leavers (fear of fever x epidemic; the dying port's pressure: Rex, everyone thinking of abandoning the port) | town state | proposed |
-| Labour supply | labour = adults x health x (1 - sick); the town's places draw workers from it; a place with no labour stalls (an input to the economy, not a fate) | cohorts | proposed |
+| Labour supply | personHours = cohort x health x (1 - living symptomatic cohort share) x host hoursPerDay; pools sum their categories in person*h and grants cannot exceed daily pool capacity | cohorts | proposed (Reality, 2026-10-30, group 10) |
 | Recruit pool refresh | the unnamed candidates (merc, hire) a port offers are drawn from transient and adults by occupation; named characters are never drawn or removed here | PIRATE.md 7b | proposed |
 <!-- /table -->
 

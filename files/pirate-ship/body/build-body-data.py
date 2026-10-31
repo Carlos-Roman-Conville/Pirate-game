@@ -270,6 +270,10 @@ def render_docs(data, lib, game, moved, layout, problems, write=True):
 
 VALID_KIND = {"science", "history", "model", "fiction", "reference"}
 VALID_CONF = {"high", "medium", "low"}
+# Row marks. "researched" and "estimate" are the platform's value labels (Toolchain/ENGINES.md:20-21, which
+# Toolchain/realism/PHASES-6-PLUS.md:9-11 maps onto library rows); the realism library writes them.
+VALID_MARK = ("rex", "proposed", "open", "history", "model", "science", "searched", "sourced", "cited",
+              "researched", "estimate")
 
 
 def validate(data, lib=None):
@@ -287,8 +291,8 @@ def validate(data, lib=None):
             for r in t["rows"]:
                 if len(r) != n:
                     print(f"  {f}.{k}: row {str(r[0])[:40]!r} has {len(r)} cells, expected {n}", file=sys.stderr); bad += 1
-                if mi >= 0 and not any(str(r[mi]).lower().startswith(w) for w in ("rex", "proposed", "open", "history", "model", "science", "searched", "sourced", "cited")):
-                    print(f"  {f}.{k}: row {str(r[0])[:40]!r} mark {r[mi]!r} not rex/proposed/open/history/model/science/searched/sourced/cited", file=sys.stderr); bad += 1
+                if mi >= 0 and not any(str(r[mi]).lower().startswith(w) for w in VALID_MARK):
+                    print(f"  {f}.{k}: row {str(r[0])[:40]!r} mark {r[mi]!r} not {'/'.join(VALID_MARK)}", file=sys.stderr); bad += 1
                 if f.startswith("library/"):
                     if t["columns"][0] not in ("id", "Key") or r[0] in ids:
                         print(f"  {f}.{k}: id column missing or id {r[0]!r} repeats", file=sys.stderr); bad += 1
