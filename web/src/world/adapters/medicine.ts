@@ -11,7 +11,7 @@
  * The stand-ins are F-MD-* in ../FIXTURES.md.
  */
 import {
-  advanceDays, bleed, bodyOutputs, circulationProcess, createMedicine, crisesOf, exposure, exposureIds, expose, inflictWound,
+  advanceDays, bleed, bodyOutputs, circulationProcess, createMedicine, crisesOf, exposure, exposureIds, expose, flushMedicineCrises, inflictWound,
   medicineOutputs, treat, worldHealingFactors,
   type Crisis, type ExposureResult, type MedicineOptions, type MedicineState, type Process, type TreatmentResult, type Wound,
   type WoundOptions,
@@ -83,18 +83,17 @@ export interface CrisisEvent {
 
 interface Held {
   state: MedicineState
-  crisisCursor: number
   wounds: GameWound[]
-  /** Records taken from the world's trace (bleeding, water): the trace is renewed each day, so they are kept here. */
-  traced: Crisis[]
-  /** Causes still open at the last sweep: the same condition in a renewed trace is not a new crisis. */
-  continuing: Set<string>
+  /** Records already handed out as events; the world's trace holds them all (the engine's `flushMedicineCrises` puts the medicine ones there). */
+  seen: Set<Crisis>
+  /** Causes of the process crises (not the medicine state's) already handed out. */
+  causes: Set<string>
 }
 const held = new WeakMap<GameCharacter, Held>()
 
 function heldOf(c: GameCharacter, o: MedicineOptions = {}): Held {
   let h = held.get(c)
-  if (!h) { h = { state: createMedicine(BODY, o), crisisCursor: 0, wounds: [], traced: [], continuing: new Set() }; held.set(c, h) }
+  if (!h) { h = { state: createMedicine(BODY, o), wounds: [], seen: new Set(), causes: new Set() }; held.set(c, h) }
   return h
 }
 
@@ -107,25 +106,24 @@ export function woundsOf(c: GameCharacter): GameWound[] { return [...heldOf(c).w
 const eventOf = (c: GameCharacter, r: Crisis): CrisisEvent =>
   ({ kind: 'crisis', slug: c.slug, cause: r.cause, day: r.day ?? null, risk: r.risk, source: r.source, record: r })
 
-/** Records new since the last call: the medicine state's own and, when the world's trace is read, the ones in it (see `Held.traced`). */
-function newCrises(c: GameCharacter, fromTrace = false): CrisisEvent[] {
-  const h = heldOf(c), fresh = h.state.crises.slice(h.crisisCursor)
-  h.crisisCursor = h.state.crises.length
-  if (fromTrace) {
-    const { world, body } = engineOf(c), open = new Set<string>()
-    for (const r of crisesOf(world, body)) {
-      if (r.resolvedAt === undefined) open.add(r.cause)
-      if (h.traced.includes(r) || h.continuing.has(r.cause)) continue
-      h.traced.push(r)
-      fresh.push(r)
-    }
-    h.continuing = open
+/** The medicine state's crises go into the world's trace (the engine's flush), then the trace is read: records new since the last call. */
+function newCrises(c: GameCharacter): CrisisEvent[] {
+  const h = heldOf(c), { world, body } = engineOf(c)
+  flushMedicineCrises(world, h.state)
+  const fresh: Crisis[] = []
+  for (const r of crisesOf(world, body)) {
+    if (h.seen.has(r)) continue
+    // a process crisis (bleeding, water) the engine opens again as the condition moves between its bands is the same condition, not a new crisis
+    if (!h.state.crises.includes(r) && h.causes.has(r.cause)) { world.trace.crises.splice(world.trace.crises.indexOf(r), 1); continue }
+    h.seen.add(r)
+    if (!h.state.crises.includes(r)) h.causes.add(r.cause)
+    fresh.push(r)
   }
   return fresh.map(r => eventOf(c, r))
 }
 
-/** Every crisis record the engine has opened for this character: the medicine state's and the ones taken from the trace. */
-export function crisesHeld(c: GameCharacter): Crisis[] { const h = heldOf(c); return [...h.state.crises, ...h.traced] }
+/** Every crisis record the engine has opened for this character: the world's trace, read only. */
+export function crisesHeld(c: GameCharacter): Crisis[] { const { world, body } = engineOf(c); return [...crisesOf(world, body)] }
 
 // ------------------------------------------------------------------------------------------------------------ what a wound dips
 
@@ -416,10 +414,11 @@ export interface HealingDay { outputs: ReturnType<typeof medicineOutputs>; crise
 export function healDay(c: GameCharacter): HealingDay {
   const h = heldOf(c), { world, body } = engineOf(c)
   if (body !== h.state.body) throw new Error(`medicine: ${c.slug}'s body is "${body}", not "${h.state.body}"`)
+  flushMedicineCrises(world, h.state) // binds the state's clock to the world's before it advances
   advanceDays(h.state, 1, worldHealingFactors(world, body))
   const outputs = medicineOutputs(h.state)
   Object.assign(bodyOutputs(world.registry.component(body)), outputs)
-  return { outputs, crises: newCrises(c, true) }
+  return { outputs, crises: newCrises(c) }
 }
 
 // ------------------------------------------------------------------------------------------------------------ the surgeon

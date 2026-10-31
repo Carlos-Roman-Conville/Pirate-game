@@ -157,7 +157,7 @@ function factorValue(name: string, f: FactorSpec, outputs: BodyOutputs, ctx: Con
     value = value === null ? v : f.combine === 'min' ? (v < value ? v : value) : value * v
   }
   if (value === null) return null
-  if (f.perKg) {
+  if (f.perKg) { // aerobic_today is mL O2/min; per kg it is mL O2/kg/min, computed here on every read and never stored
     if (!isNumber(ctx.massKg) || ctx.massKg <= 0) return null
     value = value / ctx.massKg
   }

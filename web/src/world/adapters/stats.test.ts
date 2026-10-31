@@ -15,6 +15,7 @@ import {
   attributesOf, capabilitiesToday, capabilityRows, capabilityToday, dayPushes, facesNotExpressible, facesOf, factorsOf,
   inexpressiblePushes, notComputed, pathwayClashes, pathwaysOf, pushOutputs, tokenOf, unsupportedFactors,
 } from './stats.ts'
+import { workRate } from './work.ts'
 
 const awake: DutyBlock[] = [{ fromH: 0, toH: 24, duty: 'Standing watch' }]
 const specs = data.capabilities as { row: string; attr: string; ceiling?: string; factors: (string | { factor: string; only: string[] })[]; unapplied?: Record<string, string> }[]
@@ -166,6 +167,8 @@ describe('stats from the engine\'s outputs', () => {
     const mass = characters.body.massKg, aerobic = 40 * mass
     const pool = capabilityToday('Endurance pool now', 12, { ...outputs, aerobic_today: aerobic }, { massKg: mass })
     expect(pool.factors.aerobicIndex).toBe(1)
+    // derived when read, never stored: a new aerobic_today changes the index at once
+    expect(capabilityToday('Endurance pool now', 12, { ...outputs, aerobic_today: aerobic * 0.5 }, { massKg: mass }).factors.aerobicIndex).toBe(0.5)
     expect(pool.factors.hydrationFactor).toBe(outputs.endurance_hydration)
     expect(pool.factors.glycogenFactor).toBe(outputs.glycogen_factor)
     expect(pool.factors.heatFactor).toBe(outputs.work_capacity_heat)
@@ -175,6 +178,33 @@ describe('stats from the engine\'s outputs', () => {
     // without the engine's aerobic_today or the body's mass the ceiling is not guessed
     expect(capabilityToday('Endurance pool ceiling', 12, outputs, { massKg: mass }).missing).toEqual(['aerobicIndex'])
     expect(capabilityToday('Endurance pool ceiling', 12, { ...outputs, aerobic_today: aerobic }).missing).toEqual(['aerobicIndex'])
+  })
+
+  it('the adapter keeps no fatigue counter of its own', () => {
+    // every exported state object after a simulated day: the day's report, the medicine outputs, the capability rows and the pushes
+    const medicineState = createMedicine('body')
+    const states = {
+      characters: report, work: workRate(75, outputs), medicine: medicineOutputs(medicineState),
+      stats: { capabilities: capabilitiesToday({ 'Strength_attr(limb)': 10, Endurance_attr: 12, Nerve_attr: 9 }, outputs, { massKg: characters.body.massKg }), pushes: dayPushes(outputs) },
+    }
+    // a factor the engine does not supply is named in `missing` and counts as 1: a slot, not a counter
+    for (const row of Object.values(states.stats.capabilities)) {
+      for (const name of row.missing) delete (row.factors as Record<string, unknown>)[name]
+    }
+    const found: string[] = []
+    const walk = (value: unknown, path: string) => {
+      if (value === null || typeof value !== 'object') return
+      for (const [key, v] of Object.entries(value)) {
+        if (/fatigue/i.test(key)) {
+          // the engine's own output, copied: the key is its id and the value is its number
+          if (key !== 'fatigue_met_hours' || v !== outputs.fatigue_met_hours) found.push(`${path}.${key}`)
+        }
+        walk(v, `${path}.${key}`)
+      }
+    }
+    for (const [name, state] of Object.entries(states)) walk(state, name)
+    expect(found).toEqual([])
+    expect(typeof outputs.fatigue_met_hours).toBe('number')
   })
 
   it('every factor with engine outputs reads ids the engine writes', () => {

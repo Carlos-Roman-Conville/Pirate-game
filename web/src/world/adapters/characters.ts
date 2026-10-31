@@ -182,6 +182,7 @@ export function releaseDayTrace(character: GameCharacter): void {
     else carried.set(key, { ...x, process: 'carried', note: 'blood ledger of the days before' })
   }
   next.trace.transfers.push(...carried.values())
+  next.trace.crises.push(...previous.trace.crises) // crisis records stay verbatim: the trace is where they are held
   next.t = previous.t; next.env = previous.env; next.graph = previous.graph
   for (const c of previous.conserved) {
     if (c.substance) next.conserve(c.substance, [...c.components], c.tolerance)
