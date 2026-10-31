@@ -162,7 +162,9 @@ absorption. No organ applies a penalty of its own: `BODY.md` reads organ functio
 - **[model] (proposed)** death comes only from: brain function under 0.2 for over 10 minutes (no oxygen,
   no glucose, pressure, heat over 42 °C); heart output under 0.2 for over 5 minutes; both lungs under
   0.2 for over 5 minutes; liver or kidney function under 0.1 for days (toxins); or a bleed past class IV.
-  Everything short of those is a crisis with the three other outcomes on the table.
+  Everything short of those is a crisis with the three other outcomes on the table. Organ crisis function
+  floors are rows of the `crisis_floors` library table and are documented in
+  `Toolchain/realism/gears/anatomy-crisis-floors.md`.
 
 ## 4. Timescales
 

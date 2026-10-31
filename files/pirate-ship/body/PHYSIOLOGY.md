@@ -147,21 +147,26 @@ fatigue load (MET-hours).
   (`ANATOMY.md`), haemoglobin and lung saturation scale it. So anaemia, heart failure and lung disease
   lower endurance through this one number.** **Calibration (proposed):** `load_i` is the day's MET-hours above 2 MET divided by 8, so an ordinary
   sea day scores about 1.0, a hard day 2.0, a sick day 0; with τ 42 and 7 the steady-state sums are then
-  about 42 and 7 for a daily load of 1, so the multiplier is normalised as `k1 = 0.4/42` and `k2 = 0.4/7`
-  (a long run of ordinary days settles the clamp at about 0.6 + 0.4 − 0.4 = 0.6 of ceiling, a run of hard
-  days nearer 1.0 once fatigue decays, a month idle back to 0.6). The clamp's floor 0.6 is the untrained
-  body, its ceiling 1.0 the genetic max; the simulator tunes the three numbers. The 42/7 constants are the
-  TrainingPeaks convention, not a universal truth.
+  about 42 and 7 for a daily load of 1 (a long run of ordinary days settles the clamp at the untrained floor,
+  a run of hard days nearer the genetic ceiling once fatigue decays, a month idle back to the floor). The
+  simulator's k1, k2, τ_fit, τ_fat, and the training-factor clamp's floor, ceiling and normalisation are the
+  `physiology.banister` table's rows (cited there); the clamp floor, ceiling and normalisation rows are marked
+  estimate. The 42/7 constants in the formula above are the TrainingPeaks convention, not a universal truth.
+  The clamp is documented in `Toolchain/realism/gears/aerobic-training-clamp.md`. (2637)
 
 <!-- table:library/physiology.banister -->
-*Cardiovascular fitness: the fitness-fatigue model constants* (model; confidence medium; source: Banister impulse-response model (Morton, Fitz-Clarke, Banister 1990): performance = base + k1*fitness - k2*fatigue, each an exponentially decaying sum of daily training loads. The 42-day / 7-day constants are the TrainingPeaks CTL/ATL convention, not a universal fit. PHY-BAN)
+*Cardiovascular fitness: the fitness-fatigue model constants* (model; confidence medium; source: Banister impulse-response model (Morton, Fitz-Clarke, Banister 1990): performance = base + k1*fitness - k2*fatigue, each an exponentially decaying sum of daily training loads. Constants: Busso et al. 1991 mean of 8 subjects, as reprinted in Ceddia, Bondell, Taylor 2025 (https://arxiv.org/html/2505.20859, Section 3, Figure 2 caption): 'P0 = 104.8, k1 = 0.048, k2 = 0.117, tau1 = 38, tau2 = 1.9, taken from Table 3, mean values of 8 subjects'. They are per-athlete fits in the study's own training units, not MET-hours. PHY-BAN)
 
 | Parameter | Value | Unit | Mark |
 |---|---|---|---|
-| tau_fitness | 42 | days | proposed |
-| tau_fatigue | 7 | days | proposed |
-| k1 (fitness gain) | 1 | ratio | proposed |
-| k2 (fatigue weight) | 1.3 | ratio | proposed |
+| tau_fitness | 38 | days | researched |
+| tau_fatigue | 1.9 | days | researched |
+| k1 (fitness gain) | 0.048 | ratio | researched |
+| k2 (fatigue weight) | 0.117 | ratio | researched |
+| Training factor baseline and lower clamp | 0.6 | fraction | estimate |
+| Training factor upper clamp | 1 | fraction | estimate |
+| Fitness normalisation: use the current k1 unchanged | physiology.banister.k1-fitness-gain | coefficient row reference | estimate |
+| Fatigue normalisation: use the current k2 unchanged | physiology.banister.k2-fatigue-weight | coefficient row reference | estimate |
 | Daily load | sum of MET-hours above 2 MET | MET-h | proposed |
 | Age decline of the ceiling | 10 | % per decade from the late 20s (sedentary); 5 to 7 trained | proposed |
 <!-- /table -->
