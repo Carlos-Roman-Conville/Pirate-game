@@ -244,6 +244,8 @@ Battle Brothers (lasting injuries).
   the economy's and the balance keeper's. What combat owns of it: how fatigue, injury, hunger, thirst and
   deficiency read as battle penalties, and what consumables do in a fight.
 
+The engine's statement of this lives in Toolchain/realism/gears/muscular-state-model.md (2769).
+
 ### 4c. Nutrition (Rex, 2026-10-29; `NUTRITION.md`, not combat's to own)
 
 - **(Rex, 2026-10-29)** Simulate satiation, fat gain "and all that": every food gets **calories, macro- and
@@ -356,6 +358,8 @@ carry into their docs.
   guarantee, the sacrifice pricing), story keeper (what each form is, the merfolk's form, who kidnaps). Combat
   owns only: a crew mate can die in a fight (settles the first half of open item 5), and what a resurrected
   form does on the grid (mecha upgrades, a ghost's physical limits): open.
+
+The engine's statement of this lives in Toolchain/realism/gears/population-simulation-levels.md (2769).
 
 ## 5. Progression: skill, not levels
 

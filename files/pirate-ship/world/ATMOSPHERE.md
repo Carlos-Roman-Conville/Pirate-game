@@ -79,6 +79,8 @@ or per combat turn (`GAS_DYNAMICS.md`); exposure is integrated per character pre
 - **[model]** In this game altitude barely moves (the Blue Mountains at 2,256 m give a day's mild
   breathlessness); the table is for the engine's other worlds and for the reusable species profile.
 
+The engine's statement of this lives in Toolchain/realism/gears/altitude-inspired-oxygen.md (2769).
+
 ## 3. Local modifiers
 
 <!-- table:library/atmosphere.modifiers -->

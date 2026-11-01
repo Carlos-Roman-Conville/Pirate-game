@@ -176,6 +176,8 @@ fatigue load (MET-hours).
 - **Mark:** **(proposed)**. Open for Rex: whether Endurance's genetic range is the ceiling here (it is the
   simplest reading of `STATS.md` §1).
 
+The engine's statement of this lives in Toolchain/realism/gears/aerobic-training-clamp.md (2769).
+
 ## 3. Sleep and the watches
 
 **Inputs:** hours slept (per night, from the watch roster and events), sleep quality (hammock vs deck, a
@@ -293,6 +295,8 @@ acclimatisation days; hydration. **Outputs:** `coreTemp` (°C), `sweatRate` (L/h
 - **Visible face:** men stripped to the waist in the rigging; "Give him water and shade" from the surgeon;
   a crew mate who faints at the capstan at noon; the quartermaster's water count going up.
 - **Mark:** thresholds **[science]**; the drift rule **(proposed)** with placeholder rates.
+
+The engine's statement of this lives in Toolchain/realism/gears/core-temperature-drift.md (2769).
 
 ## 5. Thermoregulation: cold, wet and the water
 

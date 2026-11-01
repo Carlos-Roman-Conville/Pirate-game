@@ -438,6 +438,8 @@ is the period's instance of this catalogue and stays the economy's.
   Wear and calibration tie the laboratory to the ship's maintenance loop (`../PIRATE.md` §5a, Rex's
   keeps-and-if-skipped design) and let a bad instrument mislead the journal.
 
+The engine's statement of this lives in Toolchain/realism/gears/equipment-condition.md (2769).
+
 ## Open for Rex
 
 1. ~~Keep, cut, or stamp the roles and the pipeline~~ stamped (Rex, 2026-10-29); entries and numbers placeholders.

@@ -155,6 +155,8 @@ combat keeper's open item 6.
 - **(Rex)** The overnight rule itself (the town transforms when the player sleeps; the morning opens with
   events). **(proposed)** the order.
 
+The engine's statement of this lives in Toolchain/realism/gears/process-order.md (2769).
+
 ## 5. The chains
 
 <!-- table:body.chains -->

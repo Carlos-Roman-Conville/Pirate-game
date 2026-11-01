@@ -166,6 +166,8 @@ absorption. No organ applies a penalty of its own: `BODY.md` reads organ functio
   floors are rows of the `crisis_floors` library table and are documented in
   `Toolchain/realism/gears/anatomy-crisis-floors.md`.
 
+The engine's statement of this lives in Toolchain/realism/gears/anatomy-crisis-floors.md (2769).
+
 ## 4. Timescales
 
 <!-- table:library/anatomy.timescales -->
