@@ -4,7 +4,7 @@
  * the economy's LedgerProvider implemented from the settlement runner (§3: money has one home, Settlement's ledger),
  * the SettlementReader over settlement state (§4b), and the day order (§9). Neither engine imports the other.
  */
-import { Runner as EconomyRunner, availableUnits, price, wageQuote, type LabourRow, type LabourSupply, type LedgerProvider, type LedgerRow, type Providers as EconomyProviders, type SettlementReader } from '@rex/economy'
+import { Runner as EconomyRunner, availableUnits, currencyProvider, price, wageQuote, type LabourRow, type LabourSupply, type LedgerProvider, type LedgerRow, type Providers as EconomyProviders, type SettlementReader } from '@rex/economy'
 import { Runner as SettlementRunner, balanceOf, hasFixture, ledger, stubProviders as settlementStubs, type MaterialProvider, type PriceProvider, type Providers as SettlementProviders } from '@rex/settlement'
 
 type SettlementGoodsLedger = NonNullable<NonNullable<Parameters<SettlementRunner['run']>[1]>['goods']>
@@ -53,7 +53,12 @@ export function economyPrices(economy: EconomyRunner, marketId: string): PricePr
 /** CONTRACTS §3: the economy's LedgerProvider over Settlement's accounts, one implementation (§13e). */
 export function settlementLedger(settlement: SettlementRunner): LedgerProvider {
   return {
-    balance: (holder) => balanceOf(settlement.state, holder),
+    balance: (holder, currency = 'money') => balanceOf(settlement.state, holder, currency),
+    exchange: (legs, kind, subject, note = '', goods?) =>
+      settlement.run<string[]>(
+        { type: 'pay', kind, subject, note, legs: { money: legs.money, ...(legs.goods ? { goods: legs.goods } : {}) } },
+        goods ? { goods } : undefined,
+      ),
     transfer: (from, to, amount, kind, subject, note = '', goods?: LedgerTransferGoods) =>
       goods
         ? settlement.run<string>(
@@ -119,7 +124,8 @@ export function portLabour(pools: Record<string, { persons: number }>, hoursPerD
 /** Settlement's full provider set with the economy behind materials and prices; labour (`portLabour`) and utilities
  *  stay the host's. */
 export function settlementProvidersOver(economy: EconomyRunner, marketId: string, base: SettlementProviders = settlementStubs(), labour?: LabourSupply): SettlementProviders {
-  return { ...base, ...(labour ? { labour } : {}), materials: economyMaterials(economy), prices: economyPrices(economy, marketId) }
+  return { ...base, ...(labour ? { labour } : {}), materials: economyMaterials(economy), prices: economyPrices(economy, marketId),
+    currencies: currencyProvider(() => economy.state) }
 }
 
 /** The economy's provider set with Settlement behind the ledger; population and transport stay the host's, labour

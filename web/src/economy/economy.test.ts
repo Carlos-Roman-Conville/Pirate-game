@@ -205,6 +205,90 @@ describe('settlementLedger goods', () => {
   })
 })
 
+describe('settlementLedger currencies', () => {
+  it('balance(holder, pieces) reads the pieces balance, and is 0 for one never moved', () => {
+    const { economy, port, biz } = world()
+    economy.runner.run({ type: 'defineCurrency', currency: { id: 'pieces' } })
+    const ledgerProv = economy.runner.providers.ledger
+    expect(ledgerProv.balance('nobody', 'pieces')).toBe(0)
+    expect(ledgerProv.balance(biz, 'pieces')).toBe(0)
+    port.runner.run({ type: 'credit', holder: biz, amount: 12, currency: 'pieces', process: 'test.fund' })
+    expect(ledgerProv.balance(biz, 'pieces')).toBe(12)
+  })
+
+  it('exchange with one money leg, one pieces leg and one goods leg moves all three in one call, and returns two row ids sharing a batch', () => {
+    const { economy, port, biz } = world()
+    economy.runner.run({ type: 'defineCurrency', currency: { id: 'pieces' } })
+    const goods = stubGoodsLedger()
+    const ledgerProv = economy.runner.providers.ledger
+    port.runner.run({ type: 'credit', holder: biz, amount: 20, currency: 'pieces', process: 'test.fund' })
+    const moneyBeforeBiz = balanceOf(port.runner.state, biz)
+    const moneyBeforePayee = balanceOf(port.runner.state, 'esfp-f')
+    const piecesBefore = ledgerProv.balance(biz, 'pieces')
+    const stockBefore = goods.stock()
+    const logged = port.runner.log.length
+    const ids = ledgerProv.exchange!(
+      {
+        money: [
+          { from: biz, to: 'esfp-f', currency: 'money', amount: 5 },
+          { from: biz, to: 'esfp-f', currency: 'pieces', amount: 3 },
+        ],
+        goods: [{ from: 'stall', to: 'bag', good: 'fish', units: 2 }],
+      },
+      'purchase', 'fish', 'market', goods.ledger,
+    )
+    expect(ids).toHaveLength(2)
+    expect(new Set(ids).size).toBe(2)
+    const rows = port.runner.state.ledger.filter((row) => ids.includes(row.id))
+    expect(rows).toHaveLength(2)
+    expect(rows.every((row) => row.batch === ids[0])).toBe(true)
+    expect(balanceOf(port.runner.state, biz)).toBe(moneyBeforeBiz - 5)
+    expect(balanceOf(port.runner.state, 'esfp-f')).toBe(moneyBeforePayee + 5)
+    expect(ledgerProv.balance(biz, 'pieces')).toBe(piecesBefore - 3)
+    expect(ledgerProv.balance('esfp-f', 'pieces')).toBe(3)
+    expect(goods.stock()).toEqual({ stall: { fish: 8 }, bag: { fish: 2 } })
+    expect(goods.stock().stall.fish + goods.stock().bag.fish).toBe(stockBefore.stall.fish + stockBefore.bag.fish)
+    expect(port.runner.log.length).toBe(logged + 1)
+    const cmd = port.runner.log[port.runner.log.length - 1]
+    expect(cmd.type).toBe('pay')
+    expect(JSON.parse(JSON.stringify(cmd))).toEqual({
+      type: 'pay', kind: 'purchase', subject: 'fish', note: 'market',
+      legs: {
+        money: [
+          { from: biz, to: 'esfp-f', currency: 'money', amount: 5 },
+          { from: biz, to: 'esfp-f', currency: 'pieces', amount: 3 },
+        ],
+        goods: [{ from: 'stall', to: 'bag', good: 'fish', units: 2 }],
+      },
+    })
+  })
+
+  it('exchange with goods only (barter) returns [] and moves the goods; with stock short it throws, and both balances and the stub stock are unchanged', () => {
+    const { economy, port, biz } = world()
+    economy.runner.run({ type: 'defineCurrency', currency: { id: 'pieces' } })
+    const goods = stubGoodsLedger()
+    const ledgerProv = economy.runner.providers.ledger
+    port.runner.run({ type: 'credit', holder: biz, amount: 10, currency: 'pieces', process: 'test.fund' })
+    const ids = ledgerProv.exchange!(
+      { money: [], goods: [{ from: 'stall', to: 'bag', good: 'fish', units: 1 }] },
+      'barter', null, '', goods.ledger,
+    )
+    expect(ids).toEqual([])
+    expect(goods.stock()).toEqual({ stall: { fish: 9 }, bag: { fish: 1 } })
+    const accounts = structuredClone(port.runner.state.accounts)
+    const ledgerSnap = structuredClone(port.runner.state.ledger)
+    const stock = goods.stock()
+    expect(() => ledgerProv.exchange!(
+      { money: [], goods: [{ from: 'stall', to: 'bag', good: 'fish', units: 11 }] },
+      'barter', null, '', goods.ledger,
+    )).toThrow('insufficient stock')
+    expect(port.runner.state.accounts).toEqual(accounts)
+    expect(port.runner.state.ledger).toEqual(ledgerSnap)
+    expect(goods.stock()).toEqual(stock)
+    expect(ledgerProv.balance(biz, 'pieces')).toBe(10)
+  })
+})
+
 describe('I4 the wage quote reaches Post.wage through setWage only (CONTRACTS §16)', () => {
   it('I4a the default rule issues no setWage and the ledger stays as it is', () => {
     const { s } = thirtyDays()

@@ -89,8 +89,8 @@ Columns:
 
 | # | Good | Kind | Origin → destination | Package | Spoils | Value | Type | Sources |
 |---|---|---|---|---|---|---|---|---|
-| 49 | Silver (bars, plate, pieces of eight) | raw / coin | Potosí → Panama → Portobelo by mule → Spain on the galleons. Plate valued "ten pieces of eight to a pound" (Exquemelin) | open | no | about 9 million pesos a year passed this way around 1600 (early) | specialty (proposed), or money (Open for Rex) | WHF, E |
-| 50 | Gold, gold dust, coin (moidores) | raw / coin | Brazil → Portugal (Roberts took 40,000 moidores); gold dust from West Africa | open | no | open | money (Open for Rex) | J |
+| 49 | Silver (bars, plate, pieces of eight) | raw / coin | Potosí → Panama → Portobelo by mule → Spain on the galleons. Plate valued "ten pieces of eight to a pound" (Exquemelin) | open | no | about 9 million pesos a year passed this way around 1600 (early) | specialty (proposed); money where accepted (Rex 2026-11-01) | WHF, E |
+| 50 | Gold, gold dust, coin (moidores) | raw / coin | Brazil → Portugal (Roberts took 40,000 moidores); gold dust from West Africa | open | no | open | a good; money where accepted (Rex 2026-11-01) | J |
 | 51 | Cochineal | raw dye (insect) | Oaxaca → Veracruz → Havana → Spain on the flota, 250,000–300,000 lb a year by 1600 (early); bought by Dutch dyers; second only to silver in value | open | open | 18s–45s/lb in London (1714–29); 9–18 guilders per Amsterdam lb (1650–1728). Colonial price: open | specialty (proposed) | COC, WHF, TR, PO |
 | 52 | Pearls | raw | Taken from a Dutch pearl vessel, worth "above 100,000 pieces of eight" (Exquemelin) | open | no | see Origin | specialty (proposed) | E |
 
@@ -193,12 +193,12 @@ its own URL per row.
 | 110 | Irish provisions: salt beef and pork, butter, tallow, hides | raw / preserved | Europe: Cork → the English and French islands, the navy; allowed direct by the 1663 Act; the Cattle Act 1667 pushed Ireland from live cattle to barrelled beef | barrel, firkin | salted | open | base (proposed) | EU |
 | 111 | Bahia tobacco in rolls | manufactured (rolled, molasses-coated leaf) | Brazil: the Recôncavo → Salvador → the Mina coast (lower grades, 15–20,000 three-arroba rolls) and Lisbon (the best); about 25,000 rolls a year 1700–10 | roll of about 8 arrobas | keeps | an 8-arroba roll 12$124 réis at Lisbon | specialty (proposed) | SB, AF |
 | 112 | Brazilwood | raw dyewood | Brazil: the coast → Lisbon; a crown monopoly | log | no | open | specialty (proposed) | SB |
-| 113 | Brazilian gold and the moidore | raw → coin | Brazil: Minas Gerais (found 1693/95) → Rio, Bahia → Lisbon → England; fintas 25–37 arrobas a year 1714–24; "800 metric tons" officially in the 18th century | bag, chest | no | moidore about 27s in England (30s in Ireland); Roberts took 40,000 (J) | money (Open for Rex) | SB, EU, J |
+| 113 | Brazilian gold and the moidore | raw → coin | Brazil: Minas Gerais (found 1693/95) → Rio, Bahia → Lisbon → England; fintas 25–37 arrobas a year 1714–24; "800 metric tons" officially in the 18th century | bag, chest | no | moidore about 27s in England (30s in Ireland); Roberts took 40,000 (J) | a good; money where accepted (Rex 2026-11-01) | SB, EU, J |
 | 114 | Diamonds (Brazil, from 1729) | raw | Brazil: Serro do Frio → Lisbon → Amsterdam, London; a crown monopoly | — | no | open | specialty (proposed); the end of the period | SB, EU |
 | 115 | Cachaça (aguardente) | manufactured (cane spirit) | Brazil: Bahia, Rio → Angola and Mina as trade liquor; coastwise | pipe, barrel | no | open | base (proposed) | SB |
 | 116 | Manioc flour (farinha) | manufactured (milled) | Brazil: coastwise and to Angola | bushel | keeps | 640 réis a bushel, São Paulo 1703 | base (proposed) | SB |
-| 117 | Mexican silver pesos | coin | Spanish America: the Mexico mint, 4,160,000 pesos a year 1665–1700 → Veracruz → Havana → Cadiz; Peru's silver by mule to Portobelo ("about 24,000,000 of pieces-of-eight", Dampier) | chest, bar, "wedge" | no | the piece of eight 4s 6d intrinsic, 4s 3d at the exchangers (Newton 1711) | money (Open for Rex) | SB, EU |
-| 118 | Gold of New Granada and Darien | raw (dust, bars) | Spanish America: the Chocó, Darien's rivers → Cartagena, Panama → Spain; output "at a very low level around 1675" | dish, bag | no | open | money (Open for Rex) | SB |
+| 117 | Mexican silver pesos | coin | Spanish America: the Mexico mint, 4,160,000 pesos a year 1665–1700 → Veracruz → Havana → Cadiz; Peru's silver by mule to Portobelo ("about 24,000,000 of pieces-of-eight", Dampier) | chest, bar, "wedge" | no | the piece of eight 4s 6d intrinsic, 4s 3d at the exchangers (Newton 1711) | a good; money where accepted (Rex 2026-11-01) | SB, EU |
+| 118 | Gold of New Granada and Darien | raw (dust, bars) | Spanish America: the Chocó, Darien's rivers → Cartagena, Panama → Spain; output "at a very low level around 1675" | dish, bag | no | open | a good; money where accepted (Rex 2026-11-01) | SB |
 | 119 | Emeralds (Muzo) | raw stones | Spanish America: Muzo → Cartagena → Seville, and on to Mughal India | — | no | open | specialty (proposed) | SB |
 | 120 | Caracas cacao in detail | raw | Spanish America: La Guaira, Tucacas → Veracruz (New Spain ate most of it), Cadiz; by contraband → Curaçao → Amsterdam | fanega of 110 lb | open | 6–8 pesos a fanega at source, about 100 in Europe | cultural (proposed; row 11) | SB |
 | 121 | Verina and Cuban tobacco; Seville snuff | raw → manufactured | Spanish America: Verina "reputed the best in the world" (Dampier); Havana → the Seville snuff factory (1687); contraband to English and Dutch ships | leaf; snuff in jars | keeps | open | specialty (proposed) | SB |
@@ -1090,8 +1090,7 @@ High Court of Admiralty depositions (HCA 1); Rediker, Earle, Cordingly.
 
 1. **The trade in enslaved people.** It was central to the real trade, and Part 1e records it as fact. Rex decides
    whether the game includes it, leaves it out, or refers to it some other way. No Type is proposed.
-2. **Money or goods?** Silver, gold, gold dust and coin: are they a good with stock and a price, or the currency
-   itself? Pearls likewise.
+2. **Money or goods?** Closed by Rex 2026-11-01: money is a role an asset gets through acceptance and exchange, never a property of silver, gold, coin or pearls; whether a society treats them as money depends on that society (ENGINES.md, 2026-11-01; Toolchain/economy CONTRACTS §22).
 3. **How fine-grained?** For example, three sugar grades or one sugar; one salt meat or beef and pork; separate
    dyewoods or one "dyewood".
 4. **Raw versus manufactured pairs.** Kept apart here, as asked: iron / iron tools, muscovado / loaf sugar, molasses /
