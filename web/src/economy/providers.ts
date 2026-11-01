@@ -7,6 +7,15 @@
 import { Runner as EconomyRunner, availableUnits, price, wageQuote, type LabourRow, type LabourSupply, type LedgerProvider, type LedgerRow, type Providers as EconomyProviders, type SettlementReader } from '@rex/economy'
 import { Runner as SettlementRunner, balanceOf, hasFixture, ledger, stubProviders as settlementStubs, type MaterialProvider, type PriceProvider, type Providers as SettlementProviders } from '@rex/settlement'
 
+type SettlementGoodsLedger = NonNullable<NonNullable<Parameters<SettlementRunner['run']>[1]>['goods']>
+export type LedgerTransferGoods = {
+  ledger: SettlementGoodsLedger
+  from: string
+  to: string
+  good: string
+  units: number
+}
+
 /** CONTRACTS §4a: Settlement's MaterialProvider from the economy; every call is a logged economy command. */
 export function economyMaterials(economy: EconomyRunner): MaterialProvider {
   return {
@@ -45,7 +54,13 @@ export function economyPrices(economy: EconomyRunner, marketId: string): PricePr
 export function settlementLedger(settlement: SettlementRunner): LedgerProvider {
   return {
     balance: (holder) => balanceOf(settlement.state, holder),
-    transfer: (from, to, amount, kind, subject, note = '') => settlement.run<string>({ type: 'pay', from, to, amount, kind, subject, note }),
+    transfer: (from, to, amount, kind, subject, note = '', goods?: LedgerTransferGoods) =>
+      goods
+        ? settlement.run<string>(
+            { type: 'pay', from, to, amount, kind, subject, note, goods: { from: goods.from, to: goods.to, good: goods.good, units: goods.units } },
+            { goods: goods.ledger },
+          )
+        : settlement.run<string>({ type: 'pay', from, to, amount, kind, subject, note }),
     rows: (holder, fromDay, toDay): LedgerRow[] => ledger(settlement.state, { holder, fromDay, toDay }),
   }
 }

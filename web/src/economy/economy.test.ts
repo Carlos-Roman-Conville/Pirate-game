@@ -1,11 +1,16 @@
 // Toolchain/economy/TESTS.md I1, I1b and I2: the economy engine behind the settlement engine's providers, in the
 // pirate port, with the alignment engine untouched (the settlement tests hold that guard). The setup and the
 // thirty-day run are in ./fixture.ts, shared with the golden capture.
-import { describe, expect, it } from 'vitest'
+import { describe, expect, it, vi } from 'vitest'
 import { Runner as EconomyRunner, accounts, marketStock, producedLast, stubProviders as economyStubs, totalUnits } from '@rex/economy'
 import { balanceOf, ledger, totalMoney } from '@rex/settlement'
 import { THIRTY_DAY_CONFIG, thirtyDays, world } from './fixture'
 import { runDay, type PortLabour } from './index'
+import type { LedgerTransferGoods } from './providers'
+
+type LedgerTransfer = (
+  from: string, to: string, amount: number, kind: string, subject: string | null, note?: string, goods?: LedgerTransferGoods,
+) => string
 
 describe('I1 the port\'s butcher produces into an economy inventory through the material provider', () => {
   it('one settlement day: Q is Settlement\'s, the stock move is the economy\'s, and both agree', () => {
@@ -120,6 +125,83 @@ describe('I1c the material queries are pure (CONTRACTS §17)', () => {
     expect(economy.runner.log.length).toBe(logged)
     expect(materials.take(inv, 'salt', 1)).toBe(1)
     expect(economy.runner.log.length).toBeGreaterThan(logged)
+  })
+})
+
+function stubGoodsLedger(initial: Record<string, Record<string, number>> = { stall: { fish: 10 }, bag: { fish: 0 } }) {
+  let stock = structuredClone(initial)
+  const check = (account: string, good: string) => {
+    if (!stock[account] || !(good in stock[account])) throw new Error('unknown inventory or good')
+    return stock[account]
+  }
+  const apply = vi.fn((account: string, good: string, delta: number) => {
+    const row = check(account, good)
+    if (row[good] + delta < 0) throw new Error('insufficient stock')
+    row[good] += delta
+  })
+  const ledger = {
+    id: 'test.goods',
+    unit(account: string, good: string) { check(account, good); return 'count' as const },
+    apply,
+    snapshot() { return structuredClone(stock) },
+    restore(snapshot: typeof stock) { stock = structuredClone(snapshot) },
+  }
+  return { ledger, stock: () => structuredClone(stock) }
+}
+
+describe('settlementLedger goods', () => {
+  it('with goods, one transfer moves money and stock and logs plain goods data only', () => {
+    const { economy, port, biz } = world()
+    const goods = stubGoodsLedger()
+    const ledgerProv = economy.runner.providers.ledger
+    const payerBefore = balanceOf(port.runner.state, biz)
+    const payeeBefore = balanceOf(port.runner.state, 'esfp-f')
+    const stockBefore = goods.stock()
+    const logged = port.runner.log.length
+    const transfer = ledgerProv.transfer as LedgerTransfer
+    const txn = transfer(biz, 'esfp-f', 5, 'purchase', 'fish', 'market', {
+      ledger: goods.ledger, from: 'stall', to: 'bag', good: 'fish', units: 3,
+    })
+    expect(txn).toMatch(/^txn\./)
+    expect(balanceOf(port.runner.state, biz)).toBe(payerBefore - 5)
+    expect(balanceOf(port.runner.state, 'esfp-f')).toBe(payeeBefore + 5)
+    expect(goods.stock()).toEqual({ stall: { fish: 7 }, bag: { fish: 3 } })
+    expect(goods.stock().stall.fish + goods.stock().bag.fish).toBe(stockBefore.stall.fish + stockBefore.bag.fish)
+    const cmd = port.runner.log[port.runner.log.length - 1]
+    expect(cmd.type).toBe('pay')
+    expect(JSON.parse(JSON.stringify(cmd))).toEqual({
+      type: 'pay', from: biz, to: 'esfp-f', amount: 5, kind: 'purchase', subject: 'fish', note: 'market',
+      goods: { from: 'stall', to: 'bag', good: 'fish', units: 3 },
+    })
+    expect(port.runner.log.length).toBe(logged + 1)
+  })
+
+  it('with insufficient stock, transfer throws and settlement balances and stub stock stay unchanged', () => {
+    const { economy, port, biz } = world()
+    const goods = stubGoodsLedger()
+    const ledgerProv = economy.runner.providers.ledger
+    const balances = structuredClone(port.runner.state.accounts)
+    const stock = goods.stock()
+    const transfer = ledgerProv.transfer as LedgerTransfer
+    expect(() => transfer(biz, 'esfp-f', 5, 'purchase', 'fish', 'market', {
+      ledger: goods.ledger, from: 'stall', to: 'bag', good: 'fish', units: 11,
+    })).toThrow('insufficient stock')
+    expect(port.runner.state.accounts).toEqual(balances)
+    expect(goods.stock()).toEqual(stock)
+  })
+
+  it('without goods, transfer matches a direct pay (txn shape and balances)', () => {
+    const { economy: economy2, port: port2, biz: biz2 } = world()
+    const txn = economy2.runner.providers.ledger.transfer(biz2, 'esfp-f', 5, 'dividend', null, 'test')
+    expect(txn).toMatch(/^txn\./)
+    const { port, biz } = world()
+    const direct = port.runner.run<string>({ type: 'pay', from: biz, to: 'esfp-f', amount: 5, kind: 'dividend', subject: null, note: 'test' })
+    expect(txn.length).toBe(direct.length)
+    expect(balanceOf(port2.runner.state, biz2)).toBe(balanceOf(port.runner.state, biz))
+    expect(balanceOf(port2.runner.state, 'esfp-f')).toBe(balanceOf(port.runner.state, 'esfp-f'))
+    const cmd = port2.runner.log[port2.runner.log.length - 1]
+    expect(JSON.parse(JSON.stringify(cmd))).toEqual({ type: 'pay', from: biz2, to: 'esfp-f', amount: 5, kind: 'dividend', subject: null, note: 'test' })
+    expect('goods' in cmd).toBe(false)
   })
 })
 
