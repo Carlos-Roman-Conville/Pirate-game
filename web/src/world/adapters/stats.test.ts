@@ -175,8 +175,10 @@ describe('stats from the engine\'s outputs', () => {
     expect(pool.value).toBeCloseTo(12 * Number(pool.factors.alertness) * Number(outputs.endurance_hydration) * Number(outputs.glycogen_factor) * Number(outputs.work_capacity_heat), 9)
     expect(pool.missing).toEqual(['fatigueDay', 'feverFactor', 'bloodFactor'])
     expect(capabilityToday('Endurance pool ceiling', 12, { ...outputs, aerobic_today: aerobic * 0.5 }, { massKg: mass }).value).toBeCloseTo(6, 9)
-    // without the engine's aerobic_today or the body's mass the ceiling is not guessed
-    expect(capabilityToday('Endurance pool ceiling', 12, outputs, { massKg: mass }).missing).toEqual(['aerobicIndex'])
+    const ceiling = capabilityToday('Endurance pool ceiling', 12, outputs, { massKg: mass })
+    expect(ceiling.missing).toEqual([])
+    expect(ceiling.factors.aerobicIndex).toBeCloseTo(Number(outputs.aerobic_today) / mass / data.factors.aerobicIndex.divideBy, 12)
+    // Without the body's mass the ceiling is not guessed.
     expect(capabilityToday('Endurance pool ceiling', 12, { ...outputs, aerobic_today: aerobic }).missing).toEqual(['aerobicIndex'])
   })
 

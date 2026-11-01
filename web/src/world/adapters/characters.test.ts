@@ -1,5 +1,7 @@
 import { describe, expect, it } from 'vitest'
-import { metOf, overnight, sleepDebtRow, splitSleepQuality } from '@rex/realism'
+import { aerobicToday, bodyBanisterDay, bodyTrainingFactor, metOf, overnight, sleepDebtRow, splitSleepQuality } from '@rex/realism'
+import statsData from '../../../../data/pirate-ship/world/stats.json'
+import { capabilityToday } from './stats.ts'
 import physiology from '../../../../files/pirate-ship/body/data/physiology.json'
 import data from '../../../../data/pirate-ship/world/characters.json'
 import source from './characters.ts?raw'
@@ -18,6 +20,29 @@ const nightsAbed: DutyBlock[] = [
 const deckhand = (slug: string, plan: DutyBlock[]): GameCharacter => ({ slug, plan })
 
 describe('a game character becomes an engine body', () => {
+  it('Banister to adapter (2755): reads daily oxygen delivery and per-kg capability from the engine', () => {
+    const hand = deckhand('training', nightsAbed)
+    const { world, body } = engineOf(hand)
+    expect(aerobicToday(world, body)).toBeNull() // breathing has not supplied blood gases yet
+    const factors: number[] = [], aerobic: number[] = []
+    for (let day = 1; day <= 30; day++) {
+      // Exercise the engine's daily training API; the adapter owns no training formula.
+      bodyBanisterDay(world, body, metOf(activityOf('Pumping the bilge')), 0)
+      const report = simulateDay(hand, day)
+      const expected = aerobicToday(world, body)
+      expect(expected).not.toBeNull()
+      expect(report.outputs.aerobic_today).toBe(expected)
+      factors.push(bodyTrainingFactor(world, body))
+      aerobic.push(expected!)
+      const massKg = world.registry.component(body).mass
+      const ceiling = capabilityToday('Endurance pool ceiling', 12, report.outputs, { massKg })
+      expect(ceiling.factors.aerobicIndex).toBeCloseTo(expected! / massKg / statsData.factors.aerobicIndex.divideBy, 12)
+      expect(ceiling.missing).toEqual([])
+    }
+    expect(factors.at(-1)!).toBeGreaterThan(factors[0]!)
+    expect(aerobic.at(-1)!).toBeGreaterThan(aerobic[0]!)
+  }, 60_000)
+
   it('maps every duty name to a met row of the game\'s adapter table', () => {
     const rows = new Map(physiology.met.rows.map(r => [r[0], r[1]]))
     expect(mappedDuties().length).toBeGreaterThan(10)

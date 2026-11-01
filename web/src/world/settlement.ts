@@ -151,7 +151,7 @@ export function runSettlement(seed = fixture.seed) {
   return { seed, initialStock, days, crises: structuredClone(allCrises), engineCrises: people.flatMap(crisesHeld),
     limitations: ['No library wound blood-loss rate (the fatal wound\'s is a host fixture, F-MD-8); the engine opens a crisis and never a death; no physiological survival claim.',
       'Production uses F-WK placeholders; fever does not yet supply a physiological fever factor.',
-      'No circulation or limb-muscle process in characters.ts; aerobic_today remains unavailable.',
+      'No limb-muscle process in characters.ts.',
       `Unrestocked ration lots spoil by food.ts Keeps days (${ration.map(r => `${r.food.good}:${keepsOf(r.food.good!)}`).join(', ')}).`] }
 }
 

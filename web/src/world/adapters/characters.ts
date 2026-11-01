@@ -7,6 +7,7 @@
 import {
   World, Scheduler, defaultRegistry, bodyOutputs, physiologyProcess, nutritionProcess, neurologyProcess, roomAirProcess,
   airContents, stockPools, pooledNutrients, splitSleepQuality, airDensity, ingest, P_SEA_LEVEL, C_TO_K, carryRecords,
+  initialiseCirculation, breathingProcess, aerobicToday,
   type Component, type BodyOutputs, type ScheduleEntry, type Process, type Transfer,
 } from '@rex/realism'
 import data from '../../../../data/pirate-ship/world/characters.json'
@@ -103,6 +104,7 @@ function start(c: GameCharacter, place: Place): EngineBody {
   room.contents = airContents(place.volumeM3, P_SEA_LEVEL, place.airC)
   world.registry.addComponent(body)
   world.registry.addComponent(room)
+  initialiseCirculation(world, body.id)
   stockPools(world, 'body')
   world.conserve('water', ['body', 'room'], data.start.conserveTolKg)
   for (const id of pooledNutrients()) world.conserve(`nutrient:${id}`, ['body'], data.start.conserveTolKg)
@@ -151,6 +153,7 @@ export function simulateDay(character: GameCharacter, day: number, place: Place 
   sch.add(roomAirProcess('room'))
   for (const process of place.processes ?? []) sch.add(process) // before the body's step, so its mass ledger sees what they did
   sch.add(physiologyProcess('body', 'room', { ...opts, schedule }))
+  sch.add(breathingProcess('body', 'room', { every: opts.every }))
   sch.add(nutritionProcess('body', opts))
   sch.add(neurologyProcess('body', opts))
   if (place.observe) sch.add({ name: 'observe', every: 1, step() { place.observe!(body) } })
@@ -161,7 +164,7 @@ export function simulateDay(character: GameCharacter, day: number, place: Place 
   s.noteCursor = world.trace.notes.length
   const failedChecks = world.trace.failed().slice(s.checkCursor)
   s.checkCursor += failedChecks.length
-  return { slug: character.slug, day, outputs: { ...bodyOutputs(body) }, notes, failedChecks }
+  return { slug: character.slug, day, outputs: { ...bodyOutputs(body), aerobic_today: aerobicToday(world, body.id) }, notes, failedChecks }
 }
 
 /** Start a new audit window after the caller has saved the day's ledger. Component state,
