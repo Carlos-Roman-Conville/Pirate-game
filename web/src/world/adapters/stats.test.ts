@@ -261,19 +261,20 @@ describe('the faces', () => {
 
   it('shows the symptoms of an ill man, the wound\'s face and the pain band the medicine engine reports', () => {
     const s = createMedicine('body', { seed: 7 })
-    expect(expose(s, 'scurvy', 1, { incubationDays: 0 }).infected).toBe(true)
+    // scurvy is a diagnosis over collagen since realism 2723, not an exposure (2872)
+    expect(expose(s, 'typhus', 1, { incubationDays: 0 }).infected).toBe(true)
     inflictWound(s, 'cut-incised', { severity: 0.5 })
     const out = medicineOutputs(s)
     const faces = facesOf(out)
-    const scurvy = medicine.diseases.rows.find(r => r[0] === 'scurvy')![3]
+    const typhus = medicine.diseases.rows.find(r => r[0] === 'typhus')![3]
     const cut = medicine.wounds.rows.find(r => r[0] === 'medicine.wounds.cut-incised')![3]
-    expect(faces.find(f => f.id === 'scurvy')!.text).toBe(scurvy)
+    expect(faces.find(f => f.id === 'typhus')!.text).toBe(typhus)
     expect(faces.find(f => f.id === 'medicine.wounds.cut-incised')!.text).toBe(cut)
     for (const f of faces) expect(f.channels).toContain("The surgeon's morning report")
     // incubating shows nothing yet
     const s2 = createMedicine('body', { seed: 7 })
-    expose(s2, 'scurvy', 1, { incubationDays: 3 })
-    expect(facesOf(medicineOutputs(s2)).some(f => f.id === 'scurvy')).toBe(false)
+    expose(s2, 'typhus', 1, { incubationDays: 3 })
+    expect(facesOf(medicineOutputs(s2)).some(f => f.id === 'typhus')).toBe(false)
   })
 
   it('shows the haemorrhage face for bleeding class II to IV and none for class I', () => {
