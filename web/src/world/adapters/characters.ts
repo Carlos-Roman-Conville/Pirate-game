@@ -6,7 +6,7 @@
  */
 import {
   World, Scheduler, defaultRegistry, bodyOutputs, physiologyProcess, nutritionProcess, neurologyProcess, roomAirProcess,
-  airContents, stockPools, pooledNutrients, splitSleepQuality, airDensity, ingest, P_SEA_LEVEL, C_TO_K,
+  airContents, stockPools, pooledNutrients, splitSleepQuality, airDensity, ingest, P_SEA_LEVEL, C_TO_K, carryRecords,
   type Component, type BodyOutputs, type ScheduleEntry, type Process, type Transfer,
 } from '@rex/realism'
 import data from '../../../../data/pirate-ship/world/characters.json'
@@ -182,7 +182,7 @@ export function releaseDayTrace(character: GameCharacter): void {
     else carried.set(key, { ...x, process: 'carried', note: 'blood ledger of the days before' })
   }
   next.trace.transfers.push(...carried.values())
-  next.trace.crises.push(...previous.trace.crises) // crisis records stay verbatim: the trace is where they are held
+  carryRecords(next, previous) // audit records stay verbatim: the trace is where they are held
   next.t = previous.t; next.env = previous.env; next.graph = previous.graph
   for (const c of previous.conserved) {
     if (c.substance) next.conserve(c.substance, [...c.components], c.tolerance)
